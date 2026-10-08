@@ -1,18 +1,3 @@
-.md-main-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 2.1fr) minmax(235px, 1fr);
-  gap: 20px;
-  margin-bottom: 21px;
-}
-.md-map-panel,
-.md-arrival-panel,
-.md-performance,
-.md-table-panel {
-  background: var(--md-panel);
-  border: 1px solid var(--md-line);
-  border-radius: 5px;
-  overflow: hidden;
-}
 .md-panel-heading {
   display: flex;
   justify-content: space-between;
@@ -31,80 +16,153 @@
   color: var(--md-muted);
   margin-top: 7px;
 }
-.md-live {
+.md-port-caption {
+  position: absolute;
+  top: 22px;
+  left: 24px;
+  right: 24px;
+  z-index: 2;
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  align-items: flex-start;
+  pointer-events: none;
+}
+.md-port-caption > div {
+  padding: 13px 16px;
+  border: 1px solid #5d738844;
+  background: #172437ed;
+  border-radius: 8px;
+  box-shadow: 0 5px 16px #07131c33;
+}
+.md-port-caption > div > span {
   display: flex;
   align-items: center;
   gap: 7px;
-  color: #9de2ac;
-  font-size: 8px;
-  white-space: nowrap;
+  font-size: 9px;
+  color: #9ab0c3;
+  letter-spacing: 0.08em;
 }
-.md-map {
-  position: relative;
-  padding: 13px 0 0;
-  min-height: 235px;
-  background: #112232;
-}
-.md-map > svg {
-  width: 100%;
-  display: block;
-}
-.md-map-route {
-  position: absolute;
-  top: 18px;
-  left: 22px;
-  padding: 10px 12px;
-  background: #152537db;
-  border: 1px solid #58d8dc20;
-  border-radius: 4px;
-}
-.md-map-route > span {
-  display: block;
-  color: var(--md-muted);
-  font-size: 7px;
-  margin-bottom: 7px;
-}
-.md-map-route > strong {
+.md-port-caption h2 {
   display: flex;
-  gap: 10px;
   align-items: center;
-  font:
-    8px "Caleb Mono",
-    "IBM Plex Mono",
-    monospace;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  margin: 9px 0 0;
+}
+.md-port-caption h2 small {
+  font-size: 10px;
+  color: #81b6c8;
   font-weight: 400;
-  color: var(--md-cyan);
+  letter-spacing: 0.04em;
 }
-.md-map-route > small {
-  font-size: 7px;
-  color: var(--md-muted);
-  display: block;
-  margin-top: 7px;
+.md-map-badge {
+  padding: 9px 12px;
+  border: 1px solid #52738b44;
+  border-radius: 6px;
+  background: #14283a;
+  color: #9ebccc;
+  font-size: 10px;
 }
-.md-map-footer {
-  border-top: 1px solid var(--md-line);
-  padding: 12px 20px;
+.md-planning-point:focus-visible circle:first-child {
+  stroke: #fff;
+  stroke-width: 4;
+}
+.md-map-tools {
+  position: absolute;
+  right: 24px;
+  top: 105px;
+  z-index: 3;
+  display: grid;
+  border: 1px solid #60798f66;
+  border-radius: 7px;
+  background: #182b3ee8;
+  box-shadow: 0 8px 16px #08172444;
+  overflow: hidden;
+}
+.md-map-tools button {
+  display: grid;
+  place-items: center;
+  min-height: 42px;
+  width: 42px;
+  background: transparent;
+  color: #c8dbe7;
+  border: 0;
+}
+.md-map-tools button + button {
+  border-top: 1px solid #556d822b;
+}
+.md-map-tools button:hover {
+  background: #2d475e;
+}
+.md-map-tools button:disabled {
+  opacity: 0.4;
+}
+.md-map-coordinate {
+  position: absolute;
+  top: 122px;
+  left: 24px;
+  display: grid;
+  gap: 6px;
+  font:
+    10px "Caleb Mono",
+    monospace;
+  color: #a4bfcc;
+}
+.md-map-coordinate > span {
+  color: #58d8dc;
+}
+.md-map-legend {
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  bottom: 241px;
   display: flex;
-  align-items: center;
-  gap: 20px;
-  font-size: 7px;
-  color: var(--md-muted);
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 9px;
+  color: #a2bdca;
+  z-index: 2;
 }
-.md-map-footer > span {
+.md-map-legend > span {
   display: flex;
   align-items: center;
   gap: 6px;
 }
-.md-map-footer > span:last-child {
-  margin-left: auto;
-}
-.md-cyan-dot,
-.md-gray-dot {
-  width: 4px;
-  height: 4px;
+.md-map-legend i {
+  width: 5px;
+  height: 5px;
+  background: #67dce0;
   border-radius: 50%;
-  background: var(--md-cyan);
 }
-.md-gray-dot {
-  background: #567286;
+.md-plan-focus {
+  display: flex;
+  gap: 12px;
+  position: absolute;
+  right: 84px;
+  top: 112px;
+  padding: 12px;
+  width: 234px;
+  background: #192b3ce8;
+  border: 1px solid #56778d44;
+  border-radius: 7px;
+  color: #77cfd5;
+}
+.md-plan-focus > svg {
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+.md-plan-focus strong {
+  color: #d2e4ec;
+  font-size: 11px;
+  font-weight: 500;
+}
+.md-plan-focus p {
+  font-size: 10px;
+  line-height: 1.55;
+  color: #9eb7c9;
+  margin: 5px 0 0;
 }
