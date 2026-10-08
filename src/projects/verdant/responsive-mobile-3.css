@@ -1,0 +1,58 @@
+@media (max-width: 650px) {
+  .ve-conversation select {
+    font-size: 13px;
+  }
+  .ve-footer {
+    padding: 29px 5% 22px;
+  }
+  .ve-footer-word {
+    font-size: 19.5vw;
+    letter-spacing: -1.8vw;
+    margin-bottom: 26px;
+  }
+  .ve-footer-word > span {
+    font-size: 10px;
+    top: 8px;
+  }
+  .ve-footer-bottom {
+    font-size: 7px;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .ve-footer-bottom > span {
+    order: 3;
+    width: 100%;
+  }
+  .ve-footer-bottom > a {
+    margin-left: auto;
+  }
+  .ve-footer-bottom .brand-logo svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+@media (max-width: 900px) {
+  .ve-header-contact,
+  .ve-footer-bottom > a {
+    min-height: 44px;
+  }
+}
+@media (max-width: 650px) {
+  .ve-hero-landscape {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .ve-landscape-photo,
+  .ve-landscape-note,
+  .ve-landscape-note h2 {
+    min-width: 0;
+  }
+  .ve-landscape-note {
+    grid-template-columns: minmax(0, 1fr) 50px;
+  }
+  .ve-landscape-note h2 br {
+    display: initial;
+  }
+  .ve-project-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
