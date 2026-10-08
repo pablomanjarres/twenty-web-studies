@@ -60,3 +60,102 @@
   color: #f8f7f2;
   font-size: 12px;
 }
+.archive-look-strip {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  background: #f5f4ef;
+  padding: 22px 3.5%;
+  min-height: 112px;
+  border-top: 1px solid #969083;
+}
+.archive-look-picker {
+  display: flex;
+  gap: 14px;
+}
+.archive-look-picker button {
+  display: flex;
+  gap: 17px;
+  align-items: center;
+  padding: 0 20px 0 0;
+  border: 0;
+  border-right: 1px solid #c4bfb4;
+  background: transparent;
+  text-align: left;
+  position: relative;
+}
+.archive-look-picker button:last-child {
+  border-right: 0;
+}
+.archive-look-picker img {
+  width: 70px;
+  height: 66px;
+  object-fit: cover;
+  object-position: 80% center;
+  filter: grayscale(1);
+}
+.archive-look-picker button[aria-pressed="true"] img {
+  filter: none;
+}
+.archive-look-picker button[aria-pressed="true"]::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 70px;
+  height: 2px;
+  background: #9b273e;
+}
+.archive-look-picker small {
+  font:
+    8px "IBM Plex Mono",
+    monospace;
+  color: #92877a;
+}
+.archive-look-picker b {
+  display: block;
+  font-weight: 400;
+  font-size: 13px;
+  margin-top: 8px;
+}
+.archive-look-picker button > span {
+  color: #982b3b;
+  font-size: 9px;
+  margin-left: 20px;
+}
+.archive-look-caption {
+  display: grid;
+  grid-template-columns: 35px 1fr;
+  align-self: center;
+  gap: 6px 20px;
+}
+.archive-look-caption > span {
+  font:
+    8px "IBM Plex Mono",
+    monospace;
+  grid-row: span 2;
+  padding-top: 3px;
+  color: #958d80;
+}
+.archive-look-caption p {
+  font-size: 14px;
+  margin: 0;
+}
+.archive-look-caption small {
+  font-size: 9px;
+  color: #968d7e;
+}
+@keyframes archive-frame {
+  from {
+    opacity: 0.35;
+    transform: scale(1.018);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
