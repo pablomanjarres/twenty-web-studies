@@ -1,0 +1,83 @@
+@media (max-width: 700px) {
+  .soundroom-v3 {
+    display: block;
+  }
+  .soundroom-v3 .sr3-navigation {
+    height: 65px;
+    display: flex;
+    flex-direction: row;
+    padding: 0 20px;
+    border-right: 0;
+    border-bottom: 1px solid #30322e;
+    gap: 15px;
+  }
+  .soundroom-v3 .sr3-brand-button {
+    width: 32px;
+    height: 36px;
+  }
+  .soundroom-v3 .sr3-navigation nav {
+    margin: 0 0 0 auto;
+    display: flex;
+    gap: 8px;
+  }
+  .soundroom-v3 .sr3-navigation nav button {
+    height: 35px;
+    width: 35px;
+    border-radius: 9px;
+  }
+  .soundroom-v3 .sr3-navigation nav button > svg {
+    width: 17px;
+    height: 17px;
+  }
+  .soundroom-v3 .sr3-navigation nav button > span {
+    left: auto;
+    right: 0;
+    top: 45px;
+  }
+  .soundroom-v3 .sr3-nav-bottom {
+    display: none;
+  }
+  .soundroom-v3 .sr3-app {
+    min-height: calc(100vh - 65px);
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .soundroom-v3 .sr3-content {
+    padding: 0 20px;
+  }
+  .soundroom-v3 .sr3-header {
+    height: 85px;
+    gap: 8px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 31px;
+    align-content: center;
+    row-gap: 15px;
+  }
+  .soundroom-v3 .sr3-header nav {
+    gap: 18px;
+    grid-column: 1/-1;
+    grid-row: 1;
+  }
+  .soundroom-v3 .sr3-header nav button {
+    font-size: 11px;
+    padding: 4px 0 9px;
+  }
+  .soundroom-v3 .sr3-header label {
+    margin: 0;
+    grid-column: 1;
+    grid-row: 2;
+    font-size: 11px;
+  }
+  .soundroom-v3 .sr3-header input {
+    width: 100%;
+    font-size: 11px;
+  }
+  .soundroom-v3 .sr3-listener {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .soundroom-v3 .sr3-listener i {
+    width: 23px;
+    height: 23px;
+    font-size: 9px;
+  }
+}
