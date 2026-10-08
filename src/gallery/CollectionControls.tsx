@@ -1,20 +1,14 @@
 import { Search, X } from "lucide-react";
-const groups = [
-  "All projects",
-  "Landing pages",
-  "Dashboards",
-  "Shops",
-  "Editorial",
-];
+import { collectionGroups, type CollectionGroup } from "./projectGroups";
 export function CollectionControls({
   group,
   query,
   setGroup,
   setQuery,
 }: {
-  group: string;
+  group: CollectionGroup;
   query: string;
-  setGroup: (value: string) => void;
+  setGroup: (value: CollectionGroup) => void;
   setQuery: (value: string) => void;
 }) {
   return (
@@ -24,7 +18,7 @@ export function CollectionControls({
         role="group"
         aria-label="Filter projects"
       >
-        {groups.map((item) => (
+        {collectionGroups.map((item) => (
           <button
             key={item}
             className={group === item ? "is-active" : ""}
