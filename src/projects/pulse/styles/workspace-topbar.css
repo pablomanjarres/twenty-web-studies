@@ -1,0 +1,105 @@
+.pulse-topbar {
+  height: 83px;
+  background: white;
+  border-bottom: 1px solid #e8ede7;
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  padding: 0 40px;
+  position: relative;
+}
+.pulse-topbar > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.pulse-topbar .brand-logo {
+  font-family: "Outfit", sans-serif;
+  font-size: 29px;
+  color: #176b63;
+  gap: 8px;
+}
+.pulse-topbar .brand-logo > span {
+  font-weight: 500;
+}
+.pulse-topbar .brand-logo svg {
+  width: 27px;
+}
+.pulse-topbar > div:first-child > span:not(.brand-logo) {
+  color: #adb9b1;
+  font-size: 10px;
+  border-left: 1px solid #dfe8df;
+  padding-left: 23px;
+}
+.pulse-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+  color: #9baba2;
+}
+.pulse-search input {
+  font-size: 10px;
+  min-width: 190px;
+  background: transparent;
+  border: 0;
+  color: #243b3a;
+}
+.pulse-search input::placeholder {
+  color: #a6b5ab;
+}
+.pulse-topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.pulse-topbar-actions button {
+  position: relative;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  color: #7e9588;
+}
+.pulse-topbar-actions button > i {
+  position: absolute;
+  top: 0;
+  right: 1px;
+  width: 4px;
+  height: 4px;
+  background: #d79273;
+  border-radius: 50%;
+}
+.pulse-topbar-actions > img {
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  border-radius: 50%;
+  object-position: 50% 18%;
+}
+.pulse-topbar-actions > span {
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #7b9184;
+}
+.pulse-notice {
+  position: absolute;
+  top: 70px;
+  right: 40px;
+  max-width: 280px;
+  padding: 22px;
+  background: white;
+  box-shadow: 0 10px 40px #176b6325;
+  border: 1px solid #e3ebe5;
+  border-radius: 10px;
+  z-index: 3;
+}
+.pulse-notice strong {
+  font-size: 12px;
+}
+.pulse-notice p {
+  font-size: 10px;
+  line-height: 1.6;
+  color: #819588;
+}
