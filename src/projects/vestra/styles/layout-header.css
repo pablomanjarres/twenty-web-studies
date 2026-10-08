@@ -1,0 +1,45 @@
+.vestra {
+  background: #f4f0e6;
+  color: #203c31;
+  font-family: "DM Sans", sans-serif;
+}
+.vestra a {
+  text-decoration: none;
+}
+.vestra-header nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+.vestra-header {
+  height: 88px;
+  background: #203c31;
+  color: #f4f0e6;
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.vestra-header .brand-logo {
+  font-family: "The Foriene", "Cormorant Garamond", serif;
+  font-size: 34px;
+  gap: 10px;
+}
+.vestra-header .brand-logo > span {
+  font-weight: 400;
+}
+.vestra-header nav {
+  display: flex;
+  gap: 35px;
+  font-size: 11px;
+  color: #d7dbd0;
+}
+.vestra-book-link {
+  font-size: 11px;
+  display: flex;
+  gap: 25px;
+  border-bottom: 1px solid #9da99b;
+  padding-bottom: 8px;
+  min-height: 44px;
+  align-items: center;
+}
