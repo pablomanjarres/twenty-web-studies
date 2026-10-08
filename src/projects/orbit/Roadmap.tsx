@@ -40,13 +40,14 @@ export function Roadmap({
         {tasks.slice(0, 5).map((task) => (
           <div className="ov3-roadmap-row" key={task.id}>
             <button
+              className={task.days === 1 ? "is-short" : undefined}
               style={{
                 left: `${(task.start / 7) * 100}%`,
                 width: `${(task.days / 7) * 100}%`,
                 background: stageColors[task.kind],
               }}
               onClick={() => onSelect(task.id)}
-              aria-label={`Open ${task.title}`}
+              aria-label={`Open ${task.title}, ${progress(task)}% complete, ${task.owner}`}
             >
               <span>
                 {task.kind}

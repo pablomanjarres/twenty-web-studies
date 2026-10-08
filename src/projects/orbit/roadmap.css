@@ -91,6 +91,17 @@
 .orbit-v3 .ov3-roadmap-row svg {
   flex: none;
 }
+.orbit-v3 .ov3-roadmap-row button.is-short {
+  padding: 0 8px;
+  gap: 4px;
+}
+.orbit-v3 .ov3-roadmap-row button.is-short small,
+.orbit-v3 .ov3-roadmap-row button.is-short > svg {
+  display: none;
+}
+.orbit-v3 .ov3-roadmap-row button.is-short img {
+  flex: none;
+}
 .orbit-v3 .ov3-bar-progress {
   position: absolute;
   z-index: -1;
