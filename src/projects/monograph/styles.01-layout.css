@@ -1,0 +1,172 @@
+.monograph {
+  background: #f7f5ef;
+  color: #202321;
+  font-family: "DM Sans", sans-serif;
+  min-height: 100vh;
+}
+
+.monograph a {
+  text-decoration: none;
+}
+
+.monograph button {
+  border: 0;
+  background: none;
+  color: inherit;
+}
+
+.monograph-page {
+  max-width: 1600px;
+  margin: auto;
+  padding: 0 54px;
+}
+
+.monograph-header {
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #d5d5cc;
+  font-size: 12px;
+}
+
+.monograph-header .brand-logo {
+  font-size: 20px;
+  color: #182a63;
+}
+
+.monograph-header > span {
+  color: #656862;
+}
+
+.monograph-issue-link {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.monograph-dateline {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  padding-top: 24px;
+}
+
+.monograph-masthead h1 {
+  font:
+    400 clamp(84px, 16vw, 253px)/1.13 "Commune",
+    "DM Serif Display",
+    serif;
+  letter-spacing: -0.065em;
+  margin: -8px 0 -3px;
+  text-align: center;
+  color: #182a63;
+}
+
+.monograph-masthead nav {
+  display: flex;
+  gap: 44px;
+  border-top: 1px solid #202321;
+  border-bottom: 1px solid #202321;
+  padding: 18px 0;
+  font-size: 12px;
+}
+
+.monograph-masthead nav > span {
+  margin-left: auto;
+  color: #777a74;
+}
+
+.monograph-cover {
+  display: grid;
+  grid-template-columns: 1.45fr 1fr;
+  gap: 58px;
+  padding: 36px 0 54px;
+}
+
+.monograph-cover-image {
+  position: relative;
+  min-width: 0;
+}
+
+.monograph-cover-image > img {
+  width: 100%;
+  height: 555px;
+  object-fit: cover;
+  object-position: center 67%;
+}
+
+.monograph-caption {
+  display: block;
+  font-size: 10px;
+  color: #777a74;
+  margin-top: 12px;
+}
+
+.monograph-image-index {
+  position: absolute;
+  left: 22px;
+  right: 22px;
+  top: 22px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #182a63;
+}
+
+.monograph-image-index > span {
+  background: #f7f5ef;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 24px;
+}
+
+.monograph-cover-copy {
+  padding-top: 4px;
+}
+
+.monograph-story-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #656862;
+}
+
+.monograph-cover-copy h2 {
+  font:
+    400 clamp(47px, 5.35vw, 85px)/0.98 "Commune",
+    "DM Serif Display",
+    serif;
+  letter-spacing: -0.055em;
+  margin: 38px 0 25px;
+  color: #182a63;
+}
+
+.monograph-cover-copy > p {
+  font-size: 14px;
+  line-height: 1.75;
+  max-width: 345px;
+}
+
+.monograph-text-link {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  width: max-content;
+  margin: 28px 0;
+  border-bottom: 1px solid #182a63;
+  padding-bottom: 9px;
+  font-size: 13px;
+}
+
+.monograph-byline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 32px 0 0;
+  font-size: 11px;
+  line-height: 1.65;
+}
