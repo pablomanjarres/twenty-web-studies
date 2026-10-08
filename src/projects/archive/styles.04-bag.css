@@ -1,26 +1,67 @@
+.archive-bag-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  background: #18171380;
+  display: flex;
+  justify-content: end;
+}
+.archive-bag-panel {
+  width: min(470px, 100%);
+  height: 100svh;
+  overflow-y: auto;
+  background: #f5f4ef;
+  padding: 34px;
+  box-shadow: -15px 0 60px #15141120;
+}
+.archive-bag-panel > header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-bottom: 1px solid #bcb5a8;
+  padding-bottom: 25px;
+}
+.archive-bag-panel h2 {
+  font:
+    400 39px "Sublime",
+    sans-serif;
+  margin: 0;
+}
+.archive-bag-panel button {
+  border: 1px solid #bcb5a8;
+  min-height: 44px;
+  min-width: 44px;
+  background: transparent;
+}
+.archive-bag-panel > header button {
+  border: 0;
+  display: grid;
+  place-items: center;
+}
 .archive-bag-row {
   display: flex;
   align-items: center;
   gap: 20px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #c3bdaf;
   padding: 22px 0;
 }
 
 .archive-bag-row > img {
   width: 77px;
   height: 100px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .archive-bag-row > div {
   display: flex;
   flex-direction: column;
   gap: 9px;
-  font-size: 11px;
+  font-size: 12px;
 }
 
 .archive-bag-row small {
-  font-size: 9px;
+  font-size: 11px;
   color: #8b8b87;
 }
 
@@ -43,7 +84,7 @@
   background: #080808;
   color: #fff;
   width: 100%;
-  font-size: 11px;
+  font-size: 12px;
   padding: 18px;
 }
 
@@ -51,78 +92,4 @@
   font-size: 14px;
   line-height: 1.9;
   padding: 40px 0;
-}
-
-@media (max-width: 1000px) {
-  .archive-header {
-    padding: 0 30px;
-    gap: 30px;
-  }
-  .archive-header nav {
-    gap: 24px;
-  }
-  .archive-utility {
-    padding: 10px 30px;
-  }
-  .archive-hero {
-    padding: 0 30px;
-  }
-  .archive-hero-title h1 {
-    font-size: 18vw;
-  }
-  .archive-hero-title > div {
-    min-width: 205px;
-  }
-  .archive-campaign-main {
-    height: 430px;
-  }
-  .archive-campaign-caption {
-    font-size: 36px;
-    left: 18px;
-    right: 18px;
-  }
-  .archive-campaign-side span {
-    font-size: 43px;
-  }
-  .archive-shop {
-    padding: 55px 30px;
-  }
-  .archive-product-grid {
-    gap: 12px;
-  }
-  .archive-product-image {
-    height: 270px;
-  }
-  .archive-product-title {
-    flex-direction: column;
-    gap: 7px;
-  }
-  .archive-product-title h3 {
-    font-size: 10px;
-  }
-  .archive-product > p {
-    font-size: 8px;
-  }
-  .archive-story-photo > img {
-    height: 500px;
-  }
-  .archive-story {
-    min-height: 500px;
-  }
-  .archive-story-copy {
-    padding: 50px 38px 30px;
-  }
-  .archive-story-copy h2 {
-    font-size: 85px;
-  }
-  .archive-story-copy p {
-    font-size: 10px;
-  }
-  .archive-story-rule {
-    flex-wrap: wrap;
-    margin-top: 32px;
-  }
-  .archive-footer {
-    padding: 45px 30px 20px;
-  }
 }
