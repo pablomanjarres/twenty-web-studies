@@ -1,10 +1,6 @@
-@import "./hero.css";
-@import "./approaches.css";
-@import "./project.css";
-@import "./current.css";
-@import "./conversation.css";
-@import "./footer.css";
-@import "./responsive-wide.css";
-@import "./responsive-mobile-1.css";
-@import "./responsive-mobile-2.css";
-@import "./responsive-mobile-3.css";
+@import "./layout.css";
+@import "./sheet.css";
+@import "./controls.css";
+@import "./diagram.css";
+@import "./field.css";
+@import "./responsive.css";

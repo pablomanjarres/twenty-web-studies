@@ -1,19 +1,31 @@
-import { Header, Hero } from "./HeaderHero";
-import { Approaches } from "./Approaches";
-import { BiggerPicture } from "./BiggerPicture";
-import { Conversation } from "./Conversation";
-import { Footer } from "./Footer";
+import { BrandLogo } from "../../shared/BrandLogo";
+import { brand } from "./brand";
+import { SystemSheet } from "./SystemSheet";
+import { FieldProjects } from "./FieldProjects";
 import "./styles.css";
-
 export default function Page() {
   return (
-    <main className="verdant-page">
-      <Header />
-      <Hero />
-      <Approaches />
-      <BiggerPicture />
-      <Conversation />
-      <Footer />
+    <main className="verdant">
+      <header className="vd-header">
+        <a href="#system" aria-label="Verdant home">
+          <BrandLogo brand={brand} />
+        </a>
+        <span>
+          <i /> ILLUSTRATIVE ENERGY SYSTEM
+        </span>
+        <nav aria-label="Energy navigation">
+          <a href="#field">In the field</a>
+          <a href="#connection">Plan a connection ↗</a>
+        </nav>
+      </header>
+      <SystemSheet />
+      <FieldProjects />
+      <footer className="vd-footer">
+        <BrandLogo brand={brand} />
+        <p>A better current, from the ground up.</p>
+        <a href="#system">Explore the system ↑</a>
+        <span>© 2026 Verdant</span>
+      </footer>
     </main>
   );
 }
