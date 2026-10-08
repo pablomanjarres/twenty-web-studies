@@ -1,0 +1,129 @@
+.soundroom-v3 {
+  --sr3-surface: #111211;
+  --sr3-ink: #f3f1e9;
+  --sr3-muted: #818a92;
+  --sr3-orange: #ff8a32;
+  --sr3-plum: #211d2b;
+  --focus-color: #ff8a32;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 88px minmax(0, 1fr);
+  background: var(--sr3-surface);
+  color: var(--sr3-ink);
+  font:
+    13px "DM Sans",
+    sans-serif;
+}
+.soundroom-v3 button {
+  color: inherit;
+  border: 0;
+  background: none;
+}
+.soundroom-v3 h1,
+.soundroom-v3 h2,
+.soundroom-v3 h3,
+.soundroom-v3 p {
+  margin: 0;
+}
+.soundroom-v3 h1,
+.soundroom-v3 h2,
+.soundroom-v3 h3 {
+  font-family: "Sora", sans-serif;
+  font-weight: 500;
+}
+.soundroom-v3 h2 {
+  font-size: 18px;
+  letter-spacing: -0.5px;
+}
+.soundroom-v3 .sr3-app {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 305px;
+  grid-template-rows: minmax(0, 1fr) auto;
+  min-height: 100vh;
+}
+.soundroom-v3 .sr3-content {
+  padding: 0 42px;
+  min-width: 0;
+}
+.soundroom-v3 .sr3-header {
+  height: 97px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.soundroom-v3 .sr3-header nav {
+  display: flex;
+  gap: 27px;
+}
+.soundroom-v3 .sr3-header nav button {
+  font-size: 12px;
+  position: relative;
+  white-space: nowrap;
+  color: #7c7f78;
+  padding: 10px 0;
+}
+.soundroom-v3 .sr3-header nav button[aria-current="page"] {
+  color: #efece4;
+}
+.soundroom-v3 .sr3-header nav button[aria-current="page"]::after {
+  content: "";
+  height: 3px;
+  width: 18px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: var(--sr3-orange);
+  border-radius: 2px;
+}
+.soundroom-v3 .sr3-header label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+  color: #6e746f;
+}
+.soundroom-v3 .sr3-header input {
+  background: transparent;
+  border: 0;
+  width: 144px;
+  font-size: 11px;
+  color: #cccac0;
+}
+.soundroom-v3 .sr3-header input::placeholder {
+  color: #666e66;
+}
+.soundroom-v3 .sr3-listener {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #848b82;
+}
+.soundroom-v3 .sr3-listener i {
+  font-style: normal;
+  display: grid;
+  place-items: center;
+  background: #35312c;
+  color: #c9b591;
+  font-size: 11px;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+}
+.soundroom-v3 .sr3-status {
+  padding: 17px 0 18px;
+  font-size: 9px;
+  color: #666c62;
+  letter-spacing: 0.2px;
+}
+.soundroom-v3 .sr3-empty {
+  padding: 50px 0;
+}
+.soundroom-v3 .sr3-empty h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.soundroom-v3 .sr3-empty p {
+  color: #8a9084;
+  font-size: 12px;
+}
