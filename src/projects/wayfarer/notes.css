@@ -1,0 +1,96 @@
+.wf-notes {
+  padding: 95px 38px;
+  display: grid;
+  grid-template-columns: 0.9fr 1.05fr 1fr;
+  gap: 42px;
+  align-items: center;
+}
+.wf-note-title > span,
+.wf-guide span {
+  font:
+    10px "IBM Plex Mono",
+    monospace;
+  letter-spacing: 0.12em;
+}
+.wf-note-title h2,
+.wf-guide h2 {
+  font:
+    400 44px/1.08 "Bricolage Grotesque",
+    sans-serif;
+  letter-spacing: -0.04em;
+  margin: 22px 0;
+}
+.wf-note-title p {
+  font-size: 12px;
+  line-height: 1.9;
+}
+.wf-notes > figure img {
+  height: 340px;
+  width: 100%;
+  object-fit: cover;
+}
+.wf-notes > figure figcaption {
+  font:
+    8px "IBM Plex Mono",
+    monospace;
+  margin-top: 14px;
+  letter-spacing: 0.05em;
+}
+.wf-note-index details {
+  border-top: 1px solid var(--wf-line);
+  padding: 20px 0;
+}
+.wf-note-index details:last-child {
+  border-bottom: 1px solid var(--wf-line);
+}
+.wf-note-index summary {
+  list-style: none;
+  display: flex;
+  align-items: start;
+  gap: 13px;
+  cursor: pointer;
+}
+.wf-note-index summary > span {
+  font:
+    11px "IBM Plex Mono",
+    monospace;
+  margin-top: 3px;
+}
+.wf-note-index h3 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.wf-note-index summary svg {
+  flex: none;
+  margin-top: 3px;
+}
+.wf-note-index details p {
+  font-size: 12px;
+  line-height: 1.9;
+  margin: 15px 0 0 30px;
+}
+.wf-guide {
+  display: grid;
+  grid-template-columns: 80px 1.2fr 1fr;
+  gap: 30px;
+  align-items: center;
+  background: #dcecf4;
+  padding: 60px 5%;
+}
+.wf-guide p {
+  font-size: 14px;
+  line-height: 1.9;
+  max-width: 390px;
+}
+.wf-guide a {
+  grid-column: 3;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-decoration: none;
+  font-size: 13px;
+}
+.wf-guide h2 {
+  margin-bottom: 0;
+}
