@@ -1,37 +1,40 @@
-import { Plus } from "lucide-react";
-import { BrandLogo } from "../../shared/BrandLogo";
-import { brand } from "./brand";
-
-export function Studio() {
+import { ArrowUpRight } from "lucide-react";
+export function Studio({ onBrief }: { onBrief: () => void }) {
   return (
-    <section className="og-studio" id="og-studio">
-      <div className="og-studio-symbol">
-        <BrandLogo brand={brand} symbolOnly />
-        <span>Different by design.</span>
-      </div>
+    <section className="fg-studio" id="studio">
+      <span>
+        A SMALL STUDIO.
+        <br />
+        NO SMALL THINKING.
+      </span>
       <div>
         <h2>
-          A good fit for
+          Good work starts
           <br />
-          the misfits.
+          with a little friction.
         </h2>
         <p>
-          For the people building something with a point of view. We ask better
-          questions, pull ideas apart and make the pieces into something worth
-          noticing.
+          The question that makes you pause. The detail you can’t quite place.
+          The idea that opens another door. We make identities and digital
+          experiences that give ambitious people a clear, unmistakable presence.
         </p>
-        <div className="og-services">
-          {[
-            "A clear position",
-            "An identity with character",
-            "A website that feels like you",
-          ].map((item) => (
-            <div key={item}>
-              <Plus size={18} />
-              {item}
-            </div>
-          ))}
-        </div>
+        <p>
+          Strategy with substance. Design with a pulse. A collaborative process
+          that leaves room for the unexpected.
+        </p>
+        <button onClick={onBrief}>
+          Let’s make something stick. <ArrowUpRight size={25} />
+        </button>
+      </div>
+      <div className="fg-principles">
+        {[
+          "01 / Start with a better question.",
+          "02 / Keep the idea in the work.",
+          "03 / Make room for the unexpected.",
+          "04 / Finish what matters.",
+        ].map((s) => (
+          <p key={s}>{s}</p>
+        ))}
       </div>
     </section>
   );
