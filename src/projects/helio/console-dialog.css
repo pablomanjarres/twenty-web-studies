@@ -1,0 +1,96 @@
+.hc-dialog-backdrop {
+  position: fixed;
+  inset: 0;
+  background: #13213a80;
+  backdrop-filter: blur(4px);
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+}
+.hc-deploy-dialog {
+  width: 640px;
+  max-width: 100%;
+  max-height: calc(100svh - 50px);
+  overflow: auto;
+  background: #fff;
+  border: 1px solid #d8e0ed;
+  border-radius: 13px;
+  box-shadow: 0 25px 100px #0d193950;
+  scrollbar-width: thin;
+}
+.hc-deploy-dialog > header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 25px;
+  border-bottom: 1px solid #e8ecf3;
+}
+.hc-deploy-dialog > header > div > span {
+  font-size: 10px;
+  color: #9ca8bf;
+}
+.hc-deploy-dialog > header h2 {
+  font:
+    500 21px "Space Grotesk",
+    sans-serif;
+  letter-spacing: -0.035em;
+  margin: 6px 0 0;
+  color: #465470;
+}
+.hc-deploy-dialog > header button {
+  border: 0;
+  background: #f2f5fa;
+  border-radius: 5px;
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  color: #8594ac !important;
+}
+.hc-deploy-config {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  padding: 20px 25px;
+}
+.hc-deploy-config label {
+  display: grid;
+  gap: 7px;
+  font-size: 10px;
+  color: #8a98b0;
+}
+.hc-deploy-config select {
+  min-width: 0;
+  padding: 9px 11px;
+  border: 1px solid #dfe5ef;
+  background: #f8fafe;
+  border-radius: 5px;
+  color: #687b9d;
+  font-size: 11px;
+}
+.hc-deploy-dialog .helio-build-trace {
+  background: #151e2d;
+  color: #d3dff4;
+}
+.hc-deploy-dialog .helio-build-trace h3 {
+  font:
+    500 22px "Space Grotesk",
+    sans-serif;
+  letter-spacing: -0.04em;
+  margin: 12px 0;
+}
+.hc-deploy-dialog .helio-build-trace > header {
+  padding-top: 16px;
+}
+.hc-deploy-dialog .helio-events {
+  padding-top: 12px;
+}
+.hc-deploy-dialog .helio-events > div {
+  padding: 11px 0;
+  min-height: 60px;
+}
+.hc-deploy-dialog .helio-run-row button {
+  color: #fff;
+}
