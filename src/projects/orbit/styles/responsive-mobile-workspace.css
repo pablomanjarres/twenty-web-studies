@@ -1,0 +1,154 @@
+@media (max-width: 700px) {
+  .orbit-projects {
+    margin-top: 26px;
+  }
+  .orbit-project-grid {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+  .orbit-project {
+    padding: 20px;
+  }
+  .orbit-project-top > span:first-child {
+    width: 38px;
+    height: 38px;
+  }
+  .orbit-project-category {
+    display: block;
+    font-size: 8px;
+  }
+  .orbit-project h3 {
+    font-size: 16px;
+    margin-top: 18px;
+  }
+  .orbit-project > p {
+    font-size: 9px;
+  }
+  .orbit-project-progress-label {
+    font-size: 9px;
+    margin-top: 18px;
+  }
+  .orbit-project-bottom {
+    margin-top: 16px;
+  }
+  .orbit-project-task-count {
+    font-size: 8px;
+  }
+  .orbit-project-bottom > span {
+    font-size: 9px;
+  }
+  .orbit-avatar-stack .orbit-avatar {
+    width: 26px;
+    height: 26px;
+  }
+  .orbit-table-labels {
+    display: none;
+  }
+  .orbit-task-row {
+    grid-template-columns: minmax(0, 1fr) 52px;
+    gap: 12px;
+    padding: 16px 14px;
+  }
+  .orbit-task-row p {
+    font-size: 9px;
+  }
+  .orbit-task-row p small {
+    font-size: 7px;
+  }
+  .orbit-task-row > span:nth-child(2) {
+    display: none;
+  }
+  .orbit-task-row > .orbit-avatar {
+    display: none;
+  }
+  .orbit-task-row .orbit-priority {
+    margin-left: auto;
+  }
+  .orbit-content-secondary {
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+  .orbit-calendar,
+  .orbit-weekly,
+  .orbit-activity {
+    padding: 22px;
+  }
+  .orbit-calendar-grid {
+    gap: 8px 6px;
+  }
+  .orbit-calendar-grid > span {
+    min-height: 31px;
+    font-size: 10px;
+  }
+  .orbit-calendar-grid .orbit-day-name {
+    font-size: 9px;
+  }
+  .orbit-today-meeting > div {
+    display: flex;
+  }
+  .orbit-today-meeting a {
+    margin: 0;
+    font-size: 9px;
+  }
+  .orbit-today-meeting h3 {
+    font-size: 12px;
+  }
+  .orbit-today-meeting p {
+    font-size: 9px;
+  }
+  .orbit-today-meeting > span {
+    font-size: 9px;
+  }
+  .orbit-today-meeting {
+    padding: 19px 16px;
+  }
+  .orbit-content-secondary h2 {
+    font-size: 13px !important;
+  }
+  .orbit-weekly > p {
+    font-size: 10px;
+  }
+  .orbit-chart-legend {
+    font-size: 9px;
+  }
+  .orbit-activity p {
+    font-size: 10px;
+  }
+  .orbit-activity p small {
+    font-size: 8px;
+  }
+  .orbit-activity .orbit-avatar {
+    width: 30px;
+    height: 30px;
+  }
+  .orbit-bottom-note {
+    font-size: 7px;
+    gap: 15px;
+  }
+  .orbit-notifications {
+    right: 20px;
+    top: 54px;
+  }
+}
+
+@media (max-width: 700px) {
+  .orbit-bell {
+    min-width: 44px;
+    min-height: 44px;
+  }
+  .orbit-task-row button {
+    min-width: 36px;
+    min-height: 36px;
+  }
+  .orbit-sidebar nav > a {
+    min-height: 44px;
+    min-width: 36px;
+  }
+  .orbit-section-heading select {
+    min-height: 36px;
+  }
+  .orbit-bell i {
+    top: 11px;
+    right: 13px;
+  }
+}
