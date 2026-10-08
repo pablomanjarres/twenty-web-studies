@@ -1,0 +1,122 @@
+.md-movement-card {
+  width: 100%;
+  margin-bottom: 10px;
+  text-align: left;
+  display: block;
+  padding: 13px 12px;
+  border: 1px solid #42566b55;
+  border-radius: 8px;
+  background: #1a293b;
+  color: #d1dfeb;
+}
+.md-movement-card:hover {
+  border-color: #708ba677;
+}
+.md-movement-card[aria-pressed="true"] {
+  background: linear-gradient(125deg, #294865, #27394f);
+  border-color: #69afb770;
+  box-shadow: 0 4px 16px #08121b33;
+}
+.md-movement-card-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.md-movement-card-heading > b {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+.md-movement-card-heading > span {
+  font-size: 9px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border-radius: 4px;
+  background: #73aeb01a;
+  color: #a7dcda;
+  padding: 4px 5px;
+}
+.md-movement-card-heading > span i {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: currentColor;
+}
+.md-movement-card-heading > span[data-status="At customs"],
+.md-movement-card-heading > span[data-status="Scheduled"] {
+  color: #f2c998;
+  background: #f2c99813;
+}
+.md-movement-carrier {
+  display: flex;
+  position: relative;
+  align-items: center;
+  min-height: 65px;
+  gap: 8px;
+}
+.md-movement-carrier > div {
+  min-width: 0;
+  z-index: 1;
+}
+.md-movement-carrier strong {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  max-width: 115px;
+}
+.md-movement-carrier small {
+  display: block;
+  font-size: 10px;
+  color: #a0b5c9;
+  margin-top: 5px;
+}
+.md-vehicle-study {
+  width: 126px;
+  flex-shrink: 0;
+}
+.md-movement-carrier > .md-vehicle-study {
+  width: 112px;
+  position: absolute;
+  right: -5px;
+  top: 10px;
+}
+.md-movement-endpoints {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 0 10px;
+  border-bottom: 1px solid #8095aa26;
+}
+.md-movement-endpoints > div {
+  display: grid;
+  gap: 4px;
+}
+.md-movement-endpoints > div:last-child {
+  text-align: right;
+}
+.md-movement-endpoints small {
+  font-size: 9px;
+  color: #9bb1c5;
+}
+.md-movement-endpoints strong {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+}
+.md-movement-endpoints > svg {
+  color: #86cdd3;
+}
+.md-movement-card > footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 6px;
+  margin-top: 10px;
+  font-size: 10px;
+  color: #a5becf;
+}
+.md-movement-card > footer b {
+  color: #b6e5e5;
+  font-weight: 400;
+}
