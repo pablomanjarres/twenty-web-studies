@@ -1,4 +1,52 @@
-
+.archive-shop {
+  padding: 80px 3.5% 90px;
+}
+.archive-shop-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+.archive-shop-heading > span {
+  font:
+    8px "IBM Plex Mono",
+    monospace;
+  color: #857a6b;
+}
+.archive-shop-heading h2 {
+  font:
+    400 43px "Sublime",
+    sans-serif;
+  margin: 0;
+  letter-spacing: -0.015em;
+}
+.archive-filters {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  border-top: 1px solid #c0b8aa;
+  margin: 35px 0;
+  padding-top: 20px;
+}
+.archive-filters button {
+  border: 0;
+  border-bottom: 1px solid transparent;
+  background: transparent;
+  color: #8e8271;
+  padding: 9px 0;
+  font-size: 11px;
+}
+.archive-filters button[aria-pressed="true"] {
+  border-color: #9b273e;
+  color: #161511;
+}
+.archive-filters > span {
+  margin-left: auto;
+  font:
+    8px "IBM Plex Mono",
+    monospace;
+  color: #918575;
+}
 .archive-product-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -38,6 +86,47 @@
     monospace;
   color: #897e6d;
   text-transform: uppercase;
+}
+.archive-product-image > button {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  width: 33px;
+  height: 33px;
+  display: grid;
+  place-items: center;
+  background: #f5f4ef;
+  border: 1px solid #b3aa9a;
+}
+.archive-product-title {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin: 18px 0 8px;
+}
+.archive-product-title h3 {
+  font-size: 12px;
+  font-weight: 500;
+  margin: 0;
+}
+.archive-product-title > span {
+  font:
+    10px "IBM Plex Mono",
+    monospace;
+}
+.archive-product p {
+  font-size: 10px;
+  color: #918471;
+  margin: 0;
+}
+.archive-product-size {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 22px;
+  border-top: 1px solid #c2baac;
+  padding-top: 14px;
+  font-size: 9px;
 }
 .archive-product-size label {
   display: flex;
