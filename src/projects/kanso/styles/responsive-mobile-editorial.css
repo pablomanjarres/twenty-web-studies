@@ -1,0 +1,97 @@
+@media (max-width: 700px) {
+  .kanso-story {
+    grid-template-columns: 1fr;
+  }
+  .kanso-story > img {
+    height: 350px;
+  }
+  .kanso-story > div {
+    padding: 45px 24px;
+  }
+  .kanso-story h2 {
+    font-size: 42px;
+  }
+  .kanso-story p {
+    font-size: 11px;
+    max-width: none;
+  }
+  .kanso-care {
+    grid-template-columns: 1fr;
+    padding: 45px 24px;
+    gap: 30px;
+  }
+  .kanso-care article {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    column-gap: 15px;
+    text-align: left;
+  }
+  .kanso-care article > svg {
+    grid-row: 1/3;
+    align-self: start;
+    margin-top: 4px;
+  }
+  .kanso-care h3 {
+    font-size: 26px;
+    margin: 0 0 8px;
+  }
+  .kanso-care p {
+    max-width: none;
+    margin: 0;
+  }
+  .kanso-newsletter {
+    grid-template-columns: 1fr;
+    padding: 45px 24px;
+    gap: 30px;
+  }
+  .kanso-newsletter h2 {
+    font-size: 37px;
+    margin-top: 17px;
+  }
+  .kanso-newsletter p {
+    font-size: 10px;
+    margin-top: 0;
+  }
+  .kanso-footer {
+    padding: 40px 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+  }
+  .kanso-footer > p {
+    font-size: 22px;
+    margin: 0;
+    text-align: right;
+  }
+  .kanso-footer > a {
+    grid-column: 1/-1;
+    font-size: 9px;
+    margin-top: 5px;
+  }
+  .kanso-bag-panel {
+    padding: 30px 24px;
+  }
+  .kanso-bag-panel h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 700px) {
+  .kanso-filters button,
+  .kanso-bag,
+  .kanso-newsletter button {
+    min-height: 44px;
+  }
+  .kanso-product-image > button {
+    width: 44px;
+    height: 44px;
+  }
+  .kanso-bag-panel > div:first-child > button,
+  .kanso-bag-items article > button {
+    min-width: 44px;
+    min-height: 44px;
+  }
+  .kanso-newsletter button {
+    min-width: 44px;
+  }
+}

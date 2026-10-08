@@ -1,0 +1,97 @@
+.kanso-newsletter {
+  padding: 70px 8%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 95px;
+  align-items: center;
+  background: #f1e5db;
+}
+.kanso-newsletter > div > span {
+  font-size: 10px;
+  color: #957252;
+}
+.kanso-newsletter h2 {
+  font-size: 43px;
+  margin: 20px 0 0;
+}
+.kanso-newsletter p {
+  font-size: 10px;
+  color: #957252;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+.kanso-newsletter form {
+  display: flex;
+  border-bottom: 1px solid #bca38b;
+  padding-bottom: 11px;
+  gap: 15px;
+}
+.kanso-newsletter input {
+  background: transparent;
+  border: 0;
+  flex: 1;
+  min-width: 0;
+  font-size: 12px;
+  color: #7c6252;
+}
+.kanso-newsletter input::placeholder {
+  color: #a08264;
+}
+.kanso-newsletter button {
+  background: transparent;
+  border: 0;
+  color: #886c56;
+  padding: 0;
+}
+.kanso-email-label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+.kanso-newsletter-status {
+  display: block;
+  font-size: 9px !important;
+  color: #957960 !important;
+  margin-top: 14px;
+}
+.kanso-footer {
+  padding: 48px 5% 38px;
+  background: #543c34;
+  color: #eadbd0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+}
+.kanso-footer > div {
+  display: grid;
+  gap: 13px;
+}
+.kanso-footer .brand-logo {
+  font-family: "Commune", serif;
+  font-size: 43px;
+  color: #f2e6dd;
+}
+.kanso-footer .brand-logo > span {
+  font-weight: 400;
+}
+.kanso-footer > div > span {
+  font-size: 8px;
+  color: #bca390;
+}
+.kanso-footer > p {
+  font-family: "Commune", serif;
+  font-size: 27px;
+  line-height: 1.3;
+  letter-spacing: -0.03em;
+  color: #dac4b2;
+}
+.kanso-footer > a {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  font-size: 9px;
+  color: #c7ab94;
+}
