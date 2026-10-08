@@ -1,0 +1,168 @@
+.bloom-path-steps > .complete > span {
+  background: #e5edd7;
+  color: #809769;
+}
+
+.bloom-path-steps > .current > span {
+  background: #d9e7ac;
+  color: #617951;
+}
+
+.bloom-path-steps b {
+  font-size: 9px;
+  font-weight: 500;
+}
+
+.bloom-path-steps small {
+  display: block;
+  font-size: 7px;
+  color: #a0aa97;
+  margin-top: 4px;
+}
+
+.bloom-path-steps button {
+  background: none;
+  border: 1px solid #e5eadc;
+  border-radius: 6px;
+  padding: 7px 10px;
+  font-size: 8px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-left: auto;
+}
+
+.bloom-footer-note {
+  font-size: 8px;
+  color: #a6ad9f;
+  text-align: center;
+  margin: 25px 0 12px;
+}
+
+.bloom-right {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+  min-width: 0;
+}
+
+.bloom-calendar,
+.bloom-learning-chart {
+  background: #fff;
+  border: 1px solid #e9ece4;
+  border-radius: 15px;
+  padding: 22px 18px;
+}
+
+.bloom-calendar .bloom-section-heading > svg {
+  color: #a7b29d;
+}
+
+.bloom-calendar-month {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 27px 0 18px;
+  font-size: 10px;
+}
+
+.bloom-calendar-month > div {
+  display: flex;
+  gap: 9px;
+}
+
+.bloom-calendar-month button {
+  border: 0;
+  background: none;
+  color: #a7b29d;
+  padding: 0;
+}
+
+.bloom-week {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+  margin-bottom: 26px;
+}
+
+.bloom-week button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 0 7px;
+  border: 0;
+  background: none;
+  border-radius: 8px;
+}
+
+.bloom-week button > span {
+  font-size: 7px;
+  color: #a7b29d;
+}
+
+.bloom-week button > b {
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.bloom-week button > i {
+  height: 3px;
+  width: 3px;
+  border-radius: 50%;
+  background: #c3cdb6;
+}
+
+.bloom-week button.active {
+  background: #ddeba7;
+}
+
+.bloom-week button.active > span {
+  color: #6e825a;
+}
+
+.bloom-week button.active > i {
+  background: #81976b;
+}
+
+.bloom-day-label {
+  font-size: 9px;
+  color: #8b968a;
+}
+
+.bloom-event {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  padding: 15px 12px;
+  border-radius: 9px;
+  margin-top: 13px;
+}
+
+.bloom-event.peach {
+  background: #fbf0e9;
+  border-left: 3px solid #edc1a6;
+}
+
+.bloom-event.lavender {
+  background: #f2eef9;
+  border-left: 3px solid #d1c1ed;
+}
+
+.bloom-event > span {
+  font-size: 8px;
+  color: #ac9989;
+  padding-top: 2px;
+}
+
+.bloom-event h3 {
+  font-size: 9px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.bloom-event p {
+  font-size: 7px;
+  color: #ae9f96;
+  margin: 6px 0;
+}
