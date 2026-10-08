@@ -1,167 +1,96 @@
 .aether-account {
-  background: var(--paper);
+  padding: 95px 4.5% 80px;
+  background: #f2f0e8;
   color: var(--ink);
-  padding: 100px max(58px, calc((100vw - 1204px) / 2));
+}
+.aether-account > header {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 70px;
+  grid-template-columns: 1fr 1.4fr 1fr;
+  align-items: end;
+  gap: 45px;
+  margin-bottom: 65px;
 }
-.aether-section-kicker {
-  font-size: 12px;
-  color: #77786d;
-}
-.aether h2 {
-  font-family: "Manrope", sans-serif;
-  font-weight: 500;
-  letter-spacing: -0.055em;
-  line-height: 1.12;
-  font-size: 45px;
-  margin: 22px 0;
+.aether-account h2 {
+  font-size: 52px;
+  margin: 0;
 }
 .aether-account p {
   font-size: 14px;
-  max-width: 390px;
-  line-height: 1.7;
-  color: #74756b;
+  line-height: 1.65;
+  margin: 0;
+  color: #676c5e;
+  max-width: 310px;
 }
-.aether-account ul {
-  list-style: none;
-  padding: 0;
-  margin-top: 28px;
-  display: grid;
-  gap: 12px;
-  font-size: 12px;
-}
-.aether-account li {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.aether-account .aether-section-kicker {
+  color: #727565;
+  align-self: start;
+  margin-top: 10px;
 }
 .aether-account-preview {
-  align-self: center;
-  background: #fff;
-  padding: 26px;
-  border-radius: 14px;
-  box-shadow: 0 15px 60px #2323150d;
+  border-top: 1px solid #161614;
 }
 .aether-preview-top {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-bottom: 36px;
-}
-.aether-preview-top .brand-logo {
-  font-size: 20px;
-}
-.aether-preview-top > span {
-  display: flex;
-  gap: 10px;
-  align-items: center;
+  padding: 17px 0 32px;
+  font-family: "IBM Plex Mono", monospace;
   font-size: 10px;
 }
-.aether-profile-dot {
-  background: #e8dbc9;
-  width: 27px;
-  height: 27px;
-  border-radius: 50%;
+.aether-preview-top > span:last-child {
+  color: #707669;
+}
+.aether-ledger-labels,
+.aether-ledger > button {
   display: grid;
-  place-items: center;
-  font-size: 8px;
-}
-.aether-balance-row {
-  display: flex;
-  justify-content: space-between;
+  grid-template-columns: 2.3fr 1.2fr 1fr 0.7fr;
+  gap: 20px;
   align-items: center;
-  font-size: 11px;
-  color: #777;
 }
-.aether-currency-tabs {
-  display: flex;
-  gap: 3px;
-  background: #f5f4ed;
-  padding: 4px;
-  border-radius: 5px;
+.aether-ledger-labels {
+  font:
+    10px "IBM Plex Mono",
+    monospace;
+  color: #7c8072;
+  padding: 0 18px 15px;
 }
-.aether-currency-tabs button {
-  font-size: 9px;
-  padding: 4px 8px;
-  border: 0;
+.aether-ledger > button {
+  width: 100%;
+  padding: 24px 18px;
+  text-align: left;
   background: transparent;
-  border-radius: 3px;
+  border: 0;
+  border-top: 1px solid #c5c8b8;
+  color: var(--ink);
 }
-.aether-currency-tabs button[aria-pressed="true"] {
-  background: #161614;
-  color: white;
+.aether-ledger > button[aria-pressed="true"] {
+  background: #e4e7d8;
 }
-.aether-balance {
-  display: block;
-  font-size: 40px;
-  letter-spacing: -0.06em;
-  margin: 10px 0 26px;
-  font-weight: 500;
+.aether-ledger > button:hover {
+  background: #e8eadd;
 }
-.aether-spaces {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-}
-.aether-spaces > div {
-  background: #f2f3ea;
-  border-radius: 7px;
-  padding: 15px;
-  position: relative;
-  overflow: hidden;
-}
-.aether-spaces > div:nth-child(2) {
-  background: #f7e4da;
-}
-.aether-spaces span {
-  font-size: 10px;
-  display: block;
-}
-.aether-spaces strong {
-  display: block;
-  font-size: 18px;
-  font-weight: 500;
-  margin: 13px 0 8px;
-}
-.aether-spaces i {
-  display: block;
-  height: 3px;
-  background: #839674;
-  border-radius: 100px;
-}
-.aether-spaces > div:nth-child(2) i {
-  background: #c8896a;
-}
-.aether-transaction {
+.aether-ledger > button > div {
   display: flex;
-  gap: 10px;
   align-items: center;
-  border-top: 1px solid #eee;
-  margin-top: 25px;
-  padding-top: 20px;
+  gap: 20px;
 }
-.aether-transaction-icon {
-  background: #f3f2ed;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
+.aether-client-mark {
+  width: 42px;
+  height: 42px;
   display: grid;
   place-items: center;
+  border: 1px solid #9ba18d;
+  font:
+    11px "IBM Plex Mono",
+    monospace;
 }
-.aether-transaction > div {
-  font-size: 11px;
-}
-.aether-transaction strong {
+.aether-ledger b {
   display: block;
-  font-weight: 400;
-  font-size: 9px;
-  margin-top: 5px;
-  color: #888;
-}
-.aether-transaction b {
-  margin-left: auto;
-  font-size: 12px;
+  font-size: 17px;
   font-weight: 500;
+}
+.aether-ledger small {
+  display: block;
+  font-size: 11px;
+  color: #737a65;
+  margin-top: 5px;
 }
