@@ -1,0 +1,190 @@
+@media (max-width: 1050px) {
+  .sp-header {
+    gap: 25px;
+  }
+  .sp-header > span {
+    display: none;
+  }
+  .sp-environment {
+    min-height: 635px;
+  }
+  .sp-booking {
+    width: 320px;
+    margin: 28px 24px 28px auto;
+    padding: 23px;
+  }
+  .sp-scene-title {
+    left: 25px;
+    top: 30px;
+  }
+  .sp-scene-title h1 {
+    font-size: 50px;
+  }
+  .sp-scene-title p {
+    max-width: 170px;
+    line-height: 1.6;
+  }
+  .sp-court-caption {
+    left: 25px;
+    gap: 15px;
+    flex-direction: column;
+    align-items: start;
+    max-width: 190px;
+  }
+  .sp-club-strip {
+    font-size: 10px;
+  }
+  .sp-club h2 {
+    font-size: 42px;
+  }
+}
+@media (max-width: 650px) {
+  .sp-court-stage {
+    padding: 0 14px;
+  }
+  .sp-header {
+    min-height: 72px;
+    gap: 15px;
+  }
+  .sp-header > a {
+    font-size: 23px;
+  }
+  .sp-header nav {
+    gap: 14px;
+    font-size: 10px;
+  }
+  .sp-header nav a:last-child {
+    display: none;
+  }
+  .sp-environment {
+    min-height: 0;
+    padding-top: 320px;
+    color: white;
+    border: 0;
+  }
+  .sp-environment > img {
+    height: 350px;
+    object-position: 30% center;
+  }
+  .sp-environment:before {
+    height: 350px;
+    background: linear-gradient(180deg, #19152d44, transparent 60%);
+  }
+  .sp-scene-title {
+    left: 18px;
+    top: 22px;
+  }
+  .sp-scene-title > span {
+    font-size: 8px;
+  }
+  .sp-scene-title h1 {
+    font-size: 39px;
+    margin-top: 9px;
+  }
+  .sp-scene-title p {
+    display: none;
+  }
+  .sp-court-caption {
+    display: none;
+  }
+  .sp-booking {
+    width: auto;
+    margin: 0 10px;
+    padding: 23px;
+    box-shadow: 0 5px 25px #19152d33;
+  }
+  .sp-booking-heading {
+    padding-bottom: 15px;
+  }
+  .sp-booking-heading h2 {
+    font-size: 24px;
+  }
+  .sp-booking-days {
+    margin-top: 15px;
+  }
+  .sp-court-select {
+    margin-top: 15px;
+  }
+  .sp-times {
+    margin-top: 15px;
+  }
+  .sp-duration {
+    margin-top: 14px;
+    padding-bottom: 12px;
+  }
+  .sp-total {
+    padding: 14px 0;
+  }
+  .sp-club-strip {
+    padding: 20px 10px;
+    gap: 15px;
+  }
+  .sp-club-strip > span:first-child {
+    font-size: 12px;
+  }
+  .sp-club-strip > span:nth-child(2) {
+    display: none;
+  }
+  .sp-availability {
+    padding: 45px 22px;
+  }
+  .sp-section-head {
+    align-items: start;
+    gap: 15px;
+    flex-direction: column;
+    margin-bottom: 25px;
+  }
+  .sp-section-head h2 {
+    font-size: 32px;
+  }
+  .sp-section-head > p {
+    font-size: 11px;
+  }
+  .sp-availability .sp-section-head > p > span {
+    justify-content: start;
+  }
+  .sp-matches {
+    padding: 45px 22px;
+  }
+  .sp-fixtures article {
+    grid-template-columns: 65px 1fr 25px;
+    gap: 15px;
+    padding: 23px 0;
+  }
+  .sp-fixtures article > span {
+    display: none;
+  }
+  .sp-fixtures h3 {
+    font-size: 19px;
+  }
+  .sp-fixtures p {
+    font-size: 10px;
+  }
+  .sp-fixture-date strong {
+    font-size: 25px;
+  }
+  .sp-club {
+    padding: 50px 25px;
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+  .sp-court-drawing {
+    width: 72%;
+    height: 250px;
+    margin: 0 auto;
+  }
+  .sp-club h2 {
+    font-size: 42px;
+  }
+  .sp-footer {
+    flex-wrap: wrap;
+    padding: 28px 25px;
+  }
+  .sp-footer p {
+    order: 3;
+    width: 100%;
+  }
+  .sp-footer > span {
+    margin-left: auto;
+  }
+}
