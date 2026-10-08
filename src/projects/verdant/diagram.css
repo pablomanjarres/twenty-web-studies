@@ -1,0 +1,140 @@
+.vd-flow-diagram {
+  height: clamp(520px, calc(100svh - 315px), 680px);
+  position: relative;
+  overflow: hidden;
+}
+.vd-flow-lines {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.vd-node {
+  position: absolute;
+  background: transparent;
+  border: 1px solid transparent;
+  text-align: left;
+  color: var(--vd-ink);
+  padding: 0;
+  display: block;
+  border-radius: 3px;
+}
+.vd-node:hover,
+.vd-node[aria-pressed="true"] {
+  border-color: #81917450;
+  background: #f9f8ed80;
+}
+.vd-node > svg {
+  display: block;
+  width: 100%;
+  height: 190px;
+}
+.vd-node > span,
+.vd-node > div > span {
+  display: block;
+  font-size: 10px;
+}
+.vd-node > strong,
+.vd-node > div > strong {
+  display: block;
+  font:
+    400 22px "IBM Plex Mono",
+    monospace;
+  letter-spacing: -0.06em;
+  margin-top: 5px;
+}
+.vd-node strong small {
+  font-size: 10px;
+  letter-spacing: 0;
+}
+.vd-source {
+  left: 4%;
+  top: 8%;
+  width: 23%;
+  padding: 6px 12px 12px;
+}
+.vd-inverter {
+  left: 36%;
+  top: 22%;
+  width: 18%;
+  padding: 6px 8px 12px;
+}
+.vd-inverter > svg {
+  height: 155px;
+}
+.vd-inverter > small {
+  display: block;
+  font:
+    7px "IBM Plex Mono",
+    monospace;
+  margin-top: 7px;
+}
+.vd-home {
+  right: 4%;
+  top: 5%;
+  width: 24%;
+  padding: 6px 13px 12px;
+}
+.vd-battery {
+  right: 10%;
+  bottom: 14px;
+  width: 31%;
+  display: flex;
+  align-items: center;
+  padding: 2px 7px;
+}
+.vd-battery > svg {
+  height: 160px;
+  width: 55%;
+}
+.vd-battery > div {
+  padding: 0 8px;
+  width: 45%;
+}
+.vd-battery > div > strong {
+  font-size: 19px;
+}
+.vd-battery strong small {
+  display: block;
+  font-size: 8px;
+  margin-top: 4px;
+}
+.vd-battery > div > small {
+  display: block;
+  font:
+    8px "IBM Plex Mono",
+    monospace;
+  margin-top: 7px;
+}
+.vd-grid-export {
+  position: absolute;
+  bottom: 38px;
+  left: 18%;
+  display: grid;
+  gap: 6px;
+  min-width: 100px;
+}
+.vd-grid-export > span {
+  font:
+    7px "IBM Plex Mono",
+    monospace;
+  letter-spacing: 0.08em;
+}
+.vd-grid-export strong {
+  font:
+    14px "IBM Plex Mono",
+    monospace;
+  font-weight: 400;
+}
+.vd-grid-export i {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  border: 1px solid var(--vd-line);
+  left: -47px;
+  top: 0;
+  background:
+    repeating-linear-gradient(90deg, transparent 0 7px, #a7b396 7px 8px),
+    repeating-linear-gradient(0deg, transparent 0 7px, #a7b396 7px 8px);
+}
