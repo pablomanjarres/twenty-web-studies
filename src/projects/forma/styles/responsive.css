@@ -1,0 +1,162 @@
+@media (max-width: 1000px) {
+  .forma-hero-heading > div {
+    gap: 24px;
+  }
+  .forma-hero-image {
+    height: 460px;
+  }
+  .forma-practice {
+    gap: 50px;
+  }
+  .forma-practice h2 {
+    font-size: 54px;
+  }
+  .forma-practice-intro {
+    font-size: 19px;
+  }
+}
+@media (max-width: 700px) {
+  .forma-header {
+    height: 78px;
+    padding: 0 24px;
+  }
+  .forma-header nav {
+    gap: 20px;
+    font-size: 10px;
+  }
+  .forma-header nav a:nth-child(2) {
+    display: none;
+  }
+  .forma-header nav a:last-child {
+    gap: 7px;
+  }
+  .forma-header .brand-logo {
+    font-size: 17px;
+    gap: 5px;
+  }
+  .forma-header .brand-logo svg {
+    width: 22px;
+  }
+  .forma-hero {
+    padding: 0 24px;
+  }
+  .forma-hero-heading {
+    padding: 34px 0 30px;
+    display: block;
+  }
+  .forma h1 {
+    font-size: 58px;
+  }
+  .forma-hero-heading > div {
+    justify-content: space-between;
+    margin-top: 27px;
+  }
+  .forma-hero-heading p {
+    font-size: 11px;
+  }
+  .forma-round-link {
+    width: 44px;
+    height: 44px;
+  }
+  .forma-hero-image {
+    height: 410px;
+  }
+  .forma-hero-image > img {
+    object-position: 42% center;
+  }
+  .forma-hero-image figcaption {
+    left: 18px;
+    right: 18px;
+    bottom: 19px;
+    gap: 15px;
+  }
+  .forma-hero-image figcaption strong {
+    font-size: 17px;
+  }
+  .forma-hero-image figcaption > span {
+    display: none;
+  }
+  .forma-caption {
+    font-size: 9px;
+    line-height: 1.5;
+    gap: 20px;
+  }
+  .forma-caption > span:last-child {
+    max-width: 95px;
+    text-align: right;
+  }
+  .forma-projects {
+    padding: 55px 24px;
+  }
+  .forma-section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .forma h2 {
+    font-size: 36px;
+  }
+  .forma-filters {
+    gap: 0;
+  }
+  .forma-filters button {
+    padding: 8px 12px;
+    font-size: 10px;
+  }
+  .forma-project-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+  .forma-project-card:nth-child(2) {
+    padding: 0;
+  }
+  .forma-project-card img,
+  .forma-project-card:nth-child(2) img {
+    height: 290px;
+  }
+  .forma-practice {
+    grid-template-columns: 1fr;
+    padding: 50px 24px;
+    gap: 35px;
+  }
+  .forma-practice h2 {
+    font-size: 49px;
+  }
+  .forma-practice-intro {
+    font-size: 19px;
+  }
+  .forma-contact {
+    padding: 50px 24px 25px;
+  }
+  .forma-contact-title {
+    font-size: 43px;
+    gap: 10px;
+    padding-bottom: 35px;
+  }
+  .forma-contact-title svg {
+    width: 36px;
+    height: 36px;
+  }
+  .forma-contact-bottom {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .forma-contact-bottom p {
+    margin-left: auto;
+    margin-right: 0;
+  }
+  .forma-contact-bottom > span {
+    width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .forma-filters button {
+    min-height: 44px;
+  }
+  .forma-header nav a {
+    min-height: 44px;
+    align-items: center;
+    display: inline-flex;
+  }
+}
