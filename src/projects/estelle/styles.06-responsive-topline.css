@@ -1,0 +1,116 @@
+@media (max-width: 650px) {
+  .estelle-topline {
+    font-size: 7px;
+    padding: 8px;
+  }
+  .estelle-header {
+    height: 85px;
+    padding: 0 21px;
+  }
+  .estelle-header nav {
+    font-size: 8px;
+  }
+  .estelle-header nav > a:last-child {
+    display: none;
+  }
+  .estelle-header .brand-logo {
+    font-size: 28px;
+    gap: 6px;
+  }
+  .estelle-header .brand-logo svg {
+    width: 24px;
+    height: 24px;
+  }
+  .estelle-header-right {
+    gap: 18px;
+    font-size: 8px;
+  }
+  .estelle-header-right > a:first-child {
+    display: none;
+  }
+  .estelle-hero {
+    height: 675px;
+  }
+  .estelle-campaign {
+    height: 100%;
+    object-position: 62% center;
+    filter: brightness(0.9);
+  }
+  .estelle-hero:after {
+    background:
+      linear-gradient(180deg, #211419d9, transparent 83%),
+      linear-gradient(90deg, #21141970, transparent 65%);
+  }
+  .estelle-hero-copy {
+    left: 27px;
+    top: 53px;
+  }
+  .estelle-hero-copy > span {
+    font-size: 8px;
+  }
+  .estelle-hero h1 {
+    font-size: 56px;
+    margin: 27px 0 20px;
+  }
+  .estelle-hero-copy > p {
+    font-size: 10px;
+    line-height: 1.9;
+  }
+  .estelle-hero .estelle-link {
+    margin-top: 26px;
+    font-size: 9px;
+    gap: 33px;
+  }
+  .estelle-hero-bottom {
+    left: 23px;
+    right: 23px;
+    bottom: 24px;
+    font-size: 7px;
+  }
+  .estelle-hero-bottom > span:last-child {
+    display: none;
+  }
+  .estelle-collection {
+    padding: 54px 24px;
+  }
+  .estelle-collection-intro h2 {
+    font-size: 40px;
+  }
+  .estelle-collection-intro > span {
+    font-size: 8px;
+  }
+  .estelle-collection-intro p {
+    font-size: 10px;
+  }
+  .estelle-collection-tabs {
+    gap: 18px;
+    flex-wrap: wrap;
+    margin: 26px 0;
+  }
+  .estelle-collection-tabs button {
+    font-size: 8px;
+  }
+  .estelle-pieces {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 29px 15px;
+  }
+  .estelle-piece-photo {
+    height: 240px;
+  }
+  .estelle-piece-title h3 {
+    font-size: 20px;
+  }
+  .estelle-piece-title > span {
+    font-size: 8px;
+  }
+  .estelle-piece > p {
+    font-size: 7px;
+    margin-top: 8px;
+  }
+  .estelle-save {
+    right: 8px;
+    top: 8px;
+    width: 26px;
+    height: 26px;
+  }
+}
