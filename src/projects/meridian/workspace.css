@@ -1,0 +1,88 @@
+.md-workspace {
+  min-width: 0;
+}
+.md-header {
+  height: 69px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 31px;
+  border-bottom: 1px solid var(--md-line);
+}
+.md-breadcrumb {
+  display: flex;
+  gap: 11px;
+  align-items: center;
+  font-size: 10px;
+  color: var(--md-muted);
+}
+.md-breadcrumb > span {
+  color: #c3d0db;
+}
+.md-header-tools {
+  display: flex;
+  gap: 26px;
+  align-items: center;
+}
+.md-header-tools > span {
+  font-size: 8px;
+  color: var(--md-muted);
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.md-header-tools > span > i,
+.md-live > i {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #9de2ac;
+  box-shadow: 0 0 7px #9de2ac40;
+}
+.md-header-tools > button {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--md-cyan);
+  color: var(--md-bg);
+  border: 0;
+  border-radius: 4px;
+  padding: 10px 12px;
+  font-size: 10px;
+  font-weight: 600;
+}
+.md-header-tools > button:hover {
+  background: #84e6e9;
+}
+.md-content {
+  padding: 30px 31px 19px;
+}
+.md-page-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.md-page-heading h1 {
+  font-size: 29px;
+  letter-spacing: -1px;
+  margin-top: 11px;
+}
+.md-page-heading p {
+  font-size: 10px;
+  color: var(--md-muted);
+  margin: 9px 0 0;
+}
+.md-date {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  color: #b8c7d2;
+  font-size: 9px;
+  border: 1px solid var(--md-line);
+  padding: 10px 12px;
+  border-radius: 4px;
+}
+.md-date > svg:first-child {
+  color: var(--md-muted);
+}
