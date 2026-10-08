@@ -1,0 +1,55 @@
+@media (max-width: 600px) {
+  .pv-visit-facts {
+    font-size: 12px;
+  }
+  .pv-patient-sheet h3 {
+    font-size: 16px;
+  }
+  .pv-patient-sheet dl > div {
+    font-size: 11px;
+  }
+  .pv-note-label {
+    font-size: 11px;
+  }
+  .pv-note-label textarea {
+    font-size: 13px;
+    min-height: 125px;
+  }
+  .pv-save-note {
+    font-size: 12px;
+    padding: 13px;
+  }
+  .pv-patient-sheet > p {
+    font-size: 11px;
+  }
+  .pv-patients {
+    padding: 15px;
+  }
+  .pv-patient-labels {
+    display: none;
+  }
+  .pv-patients > button {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 19px 0;
+  }
+  .pv-patients > button > span:not(:first-child) {
+    padding-left: 50px;
+    font-size: 11px;
+    color: #92a095;
+  }
+  .pv-records {
+    display: block;
+  }
+  .pv-records > div:last-child {
+    padding: 25px 5px;
+  }
+  .pv-new-dialog {
+    border-radius: 17px 17px 0 0;
+    padding: 35px 25px;
+  }
+  .pv-new-dialog .pv-new {
+    font-size: 13px;
+    border-radius: 6px;
+  }
+}
