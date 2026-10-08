@@ -3,11 +3,11 @@ export const brand: Brand = {
   slug: "sprinto",
   name: "sprinto",
   category: "Padel club",
-  tagline: "Make your next move.",
+  tagline: "Meet you at the net.",
   purpose:
     "An energetic urban padel club that makes it easy to book a court, find a game, and make movement part of everyday life.",
   description:
-    "Sprinto brings the energy of the court into a digital club experience. Built for an urban padel community, the identity combines electric violet, sharp chartreuse, and condensed display typography with an expressive ball-in-motion symbol. The website puts play first: an immediate court view, a compact booking interaction, and clear paths into coaching and social matches. Oversized headlines and diagonal graphic details communicate speed, while the layout stays practical enough to organize a real session. Its purpose is to remove the small obstacles between wanting to play and stepping onto the court, making the club feel open, social, and full of momentum.",
+    "Sprinto is an urban padel club built around getting people onto the court. A warm playing environment fills the opening screen, with a compact date, court and time selector anchored directly within it. Electric violet and chartreuse give the club a clear athletic identity without hiding the practical booking details. An exposed availability board makes open sessions easy to scan, while ruled fixture rows introduce weekly social matches and coaching. The ball-in-motion symbol captures the rhythm of a rally. Condensed club typography, direct pricing and large selected states bring the energy of padel into an approachable experience for new players and regulars alike.",
   colors: [
     {
       name: "Violet",
@@ -50,5 +50,5 @@ export const brand: Brand = {
     "Club",
   ],
   artDirection:
-    "A violet-and-chartreuse sports identity, condensed oversized type, cropped court photography, and a compact lime booking card.",
+    "A photographic padel environment with an integrated cream booking stack, hard-edged chartreuse confirmation, compact Anton club identity, exposed court timetables and ruled social-match fixtures.",
 };

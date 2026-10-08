@@ -1,27 +1,26 @@
-import { Header } from "./components/Header";
-import { Hero } from "./components/Hero";
-import { Courts } from "./components/Courts";
-import { Play } from "./components/Play";
-import { Club } from "./components/Club";
-import { Footer } from "./components/Footer";
+import { useState } from "react";
+import { HeroCourt } from "./HeroCourt";
+import { Availability } from "./Availability";
+import { ClubNotes } from "./ClubNotes";
+import { type BookingState, initialBooking, normalizeBooking } from "./data";
 import "./styles.css";
-
 export default function Page() {
+  const [booking, setBooking] = useState<BookingState>(initialBooking);
+  const [confirmed, setConfirmed] = useState(false);
+  function update(patch: Partial<BookingState>) {
+    setBooking((previous) => normalizeBooking({ ...previous, ...patch }));
+    setConfirmed(false);
+  }
   return (
     <main className="sprinto">
-      <Header />
-      <Hero />
-      <div className="sprinto-ticker">
-        <span>PADEL IS FOR EVERYONE</span>
-        <i>✳</i>
-        <span>MORE RALLIES. MORE GOOD DAYS.</span>
-        <i>✳</i>
-        <span>FIND YOUR PEOPLE</span>
-      </div>
-      <Courts />
-      <Play />
-      <Club />
-      <Footer />
+      <HeroCourt
+        booking={booking}
+        update={update}
+        confirmed={confirmed}
+        confirm={() => setConfirmed(true)}
+      />
+      <Availability booking={booking} update={update} />
+      <ClubNotes />
     </main>
   );
 }
