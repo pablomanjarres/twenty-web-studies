@@ -1,81 +1,78 @@
-import { ArrowUpRight, Plus } from "lucide-react";
+import { ArrowDownRight, Plus } from "lucide-react";
 import { BrandLogo } from "../../shared/BrandLogo";
 import { brand } from "./brand";
-import { image } from "./data";
-
+import { image, looks } from "./data";
 export function Header({ count, onBag }: { count: number; onBag: () => void }) {
   return (
-    <>
-      <div className="archive-utility">
-        <span>Selected pieces. Considered choices.</span>
-        <span>Complimentary delivery over £150</span>
-      </div>
-      <header className="archive-header">
-        <a href="#archive-top">
-          <BrandLogo brand={brand} />
-        </a>
-        <nav aria-label="Archive navigation">
-          <a href="#archive-shop">New arrivals</a>
-          <a href="#archive-shop">Shop the edit</a>
-          <a href="#archive-story">Our perspective</a>
-        </nav>
-        <button onClick={onBag} className="archive-bag">
-          Bag <span>({count})</span>
-          <Plus size={15} />
-        </button>
-      </header>
-    </>
+    <header className="archive-header">
+      <a href="#archive-top" aria-label="Archive home">
+        <BrandLogo brand={brand} symbolOnly />
+      </a>
+      <span>INDEPENDENT BY INSTINCT</span>
+      <nav aria-label="Archive navigation">
+        <a href="#archive-shop">Collection</a>
+        <a href="#archive-story">Perspective</a>
+      </nav>
+      <button onClick={onBag} className="archive-bag">
+        Bag ({count})<Plus size={14} />
+      </button>
+    </header>
   );
 }
-
-export function Hero() {
+export function Hero({
+  look,
+  onLook,
+  onShop,
+}: {
+  look: number;
+  onLook: (index: number) => void;
+  onShop: () => void;
+}) {
+  const selected = looks[look];
   return (
     <section className="archive-hero">
-      <div className="archive-hero-title">
-        <h1>New forms.</h1>
-        <div>
-          <span>Collection 06 / Autumn 2026</span>
-          <p>
-            A new season.
-            <br />A different point of view.
-          </p>
-          <a href="#archive-shop">
-            Explore the collection <ArrowUpRight size={17} />
-          </a>
-        </div>
+      <div className="archive-campaign-image">
+        <img
+          key={selected.image}
+          src={image(selected.image)}
+          alt={`Archive ${selected.name}: a sculptural tailored silhouette in a quiet architectural setting`}
+          fetchPriority="high"
+        />
       </div>
-      <div className="archive-campaign">
-        <div className="archive-campaign-main">
-          <img
-            src={image("campaign")}
-            alt="Fashion editorial featuring a tailored coat in the city"
-          />
-          <div className="archive-campaign-caption">
-            <span>Shape your everyday.</span>
-            <a href="#archive-shop" aria-label="Shop the new collection">
-              <ArrowUpRight size={29} />
-            </a>
-          </div>
-        </div>
-        <div className="archive-campaign-side">
-          <img
-            src={image("look")}
-            alt="Expressive streetwear silhouette with a cropped hooded jacket"
-          />
-          <div>
-            <span>
-              For the way
-              <br />
-              you move.
-            </span>
-            <small>The everyday edit / 2026</small>
-          </div>
-        </div>
+      <h1 className="archive-edge-identity">ARCHIVE</h1>
+      <div className="archive-season-label">
+        <span>COLLECTION 06 / AUTUMN 2026</span>
+        <p>
+          New forms.
+          <br />
+          Lasting presence.
+        </p>
       </div>
-      <div className="archive-hero-bottom">
-        <span>Individual by instinct.</span>
-        <span>Designed to stay in rotation.</span>
-        <a href="#archive-shop">Discover what’s new ↓</a>
+      <a className="archive-shop-look" href="#archive-shop" onClick={onShop}>
+        Shop this look <ArrowDownRight size={20} />
+      </a>
+      <div className="archive-look-strip">
+        <div className="archive-look-picker" aria-label="Campaign looks">
+          {looks.map((item, index) => (
+            <button
+              key={item.name}
+              aria-pressed={index === look}
+              onClick={() => onLook(index)}
+            >
+              <img src={image(item.image)} alt="" />
+              <div>
+                <small>LOOK / 0{index + 1}</small>
+                <b>{item.name}</b>
+              </div>
+              <span>{index === look ? "●" : "○"}</span>
+            </button>
+          ))}
+        </div>
+        <div className="archive-look-caption" aria-live="polite">
+          <span>0{look + 1} / 02</span>
+          <p>{selected.caption}</p>
+          <small>Selected pieces. A personal vocabulary.</small>
+        </div>
       </div>
     </section>
   );
