@@ -1,0 +1,65 @@
+.cinder-page {
+  --ci-brick: #9f3429;
+  --ci-paper: #f5edd9;
+  --ci-butter: #eec76a;
+  --ci-ink: #38271f;
+  color: var(--ci-ink);
+  background: var(--ci-paper);
+  font-family: "DM Sans", sans-serif;
+}
+.cinder-page a {
+  color: inherit;
+  text-decoration: none;
+}
+.cinder-page button,
+.cinder-page select {
+  cursor: pointer;
+}
+.cinder-page h1,
+.cinder-page h2,
+.cinder-page h3 {
+  font-family: "Grindela", "Fraunces", serif;
+  font-weight: 400;
+  margin: 0;
+}
+.cinder-page p {
+  line-height: 1.65;
+}
+.ci-header {
+  height: 94px;
+  padding: 0 5.5%;
+  background: var(--ci-brick);
+  color: var(--ci-paper);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #f5edd93d;
+}
+.ci-header .brand-logo {
+  font-family: "Grindela", serif;
+  font-size: 29px;
+  letter-spacing: -1.5px;
+}
+.ci-header .brand-logo svg {
+  width: 30px;
+  height: 35px;
+}
+.ci-header nav {
+  display: flex;
+  gap: 34px;
+  font-size: 13px;
+}
+.ci-header nav a:hover {
+  color: var(--ci-butter);
+}
+.ci-basket-button {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--ci-paper);
+  border: 1px solid #f5edd966;
+  border-radius: 3px;
+  background: transparent;
+  padding: 11px 15px;
+  font-size: 12px;
+}
