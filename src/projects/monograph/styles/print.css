@@ -1,0 +1,97 @@
+.monograph-print {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 105px;
+  padding: 65px 45px 85px;
+  background: #ebe8de;
+  margin: 0 -32px;
+  scroll-margin-top: 20px;
+}
+.monograph-paper-cover {
+  max-width: 310px;
+  width: 100%;
+  padding: 19px;
+  background: var(--mono-paper);
+  box-shadow: 5px 12px 16px #24242217;
+  transform: rotate(-6deg);
+  margin: auto;
+}
+.monograph-paper-cover > span {
+  display: block;
+  font-family: "The Foriene", serif;
+  font-size: 31px;
+  letter-spacing: -0.02em;
+  margin-bottom: 28px;
+}
+.monograph-paper-cover > img {
+  height: 280px;
+  width: 100%;
+  object-fit: cover;
+}
+.monograph-paper-cover > div {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 26px;
+  align-items: end;
+}
+.monograph-paper-cover > div span:first-child {
+  font-family: "The Foriene", serif;
+  font-size: 52px;
+}
+.monograph-paper-cover > div span:last-child {
+  font-size: 10px;
+  line-height: 1.5;
+}
+.monograph-print-copy h2 {
+  font-size: 49px;
+  line-height: 1.04;
+  letter-spacing: -0.035em;
+  margin: 21px 0;
+}
+.monograph-print-copy > p {
+  font-size: 13px;
+  line-height: 1.9;
+  max-width: 32em;
+}
+.monograph-print dl {
+  margin: 27px 0;
+}
+.monograph-print dl div {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 15px;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--mono-rule);
+  font-size: 10px;
+}
+.monograph-print dd {
+  margin: 0;
+}
+.monograph-print form label {
+  display: block;
+  font-size: 11px;
+  margin-bottom: 14px;
+}
+.monograph-print form > div {
+  display: flex;
+  border-bottom: 1px solid var(--mono-ink);
+}
+.monograph-print input {
+  background: transparent;
+  border: 0;
+  padding: 12px 0;
+  min-width: 0;
+  flex: 1;
+  font-size: 12px;
+}
+.monograph-print form button {
+  border: 0;
+  background: transparent;
+  padding: 8px 14px;
+  font-size: 25px;
+}
+.monograph-print form p {
+  font-size: 9px;
+  padding-top: 11px;
+  min-height: 25px;
+}
