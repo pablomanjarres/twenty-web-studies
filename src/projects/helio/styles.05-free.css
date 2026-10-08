@@ -1,0 +1,131 @@
+.helio-free strong small {
+  font:
+    10px "DM Sans",
+    sans-serif;
+  color: #8a8e97;
+}
+
+.helio-free ul {
+  list-style: none;
+  padding: 0;
+  margin: 25px 0;
+  font-size: 11px;
+  line-height: 2.8;
+}
+
+.helio-free li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.helio-free li svg {
+  color: #234afb;
+}
+
+.helio-footer {
+  max-width: 1450px;
+  padding: 30px 60px;
+  margin: auto;
+  border-top: 1px solid #e6e8ed;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  font-size: 10px;
+  color: #8a8e97;
+}
+
+.helio-footer .brand-logo {
+  font-size: 21px;
+  color: #17191c;
+}
+
+.helio-footer .brand-logo svg {
+  color: #234afb;
+  width: 28px;
+  height: 28px;
+}
+
+.helio-footer > a {
+  margin-left: auto;
+}
+
+.helio-footer small {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 9px;
+}
+
+@media (max-width: 1000px) {
+  .helio-header {
+    padding: 0 30px;
+    gap: 35px;
+  }
+  .helio-header nav {
+    gap: 20px;
+  }
+  .helio-hero {
+    padding: 45px 30px;
+    gap: 0;
+  }
+  .helio-hero h1 {
+    font-size: 62px;
+  }
+  .helio-hero-copy > p {
+    font-size: 14px;
+  }
+  .helio-actions {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 17px;
+  }
+  .helio-orbit {
+    height: 470px;
+  }
+  .helio-globe {
+    width: 215px;
+    height: 215px;
+    left: calc(50% - 100px);
+    top: 126px;
+  }
+  .helio-platform {
+    padding: 0 30px 55px;
+  }
+  .helio-trusted > div {
+    gap: 40px;
+  }
+  .helio-build {
+    padding: 55px 30px;
+  }
+  .helio-feature-grid article {
+    padding: 25px 20px;
+  }
+  .helio-pricing {
+    padding: 60px 50px;
+    gap: 50px;
+  }
+  .helio-footer {
+    padding: 28px 30px;
+  }
+  .helio-footer > span {
+    display: none;
+  }
+  .helio-console {
+    grid-template-columns: 45px 1.1fr 1fr;
+  }
+  .helio-deploy-panel {
+    padding: 20px 18px;
+  }
+  .helio-code pre {
+    font-size: 10px;
+  }
+  .helio-code-tabs button {
+    padding: 14px 6px;
+    font-size: 9px;
+  }
+  .helio-hero-proof {
+    gap: 12px;
+    font-size: 8px;
+  }
+}
