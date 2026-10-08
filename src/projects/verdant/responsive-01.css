@@ -1,0 +1,88 @@
+@media (max-width: 1050px) {
+  .vd-header > span {
+    display: none;
+  }
+  .vd-header {
+    inset: 24px 28px auto;
+  }
+  .vd-system {
+    padding: 155px 24px 0;
+  }
+  .vd-operating-notes {
+    left: 28px;
+  }
+  .vd-operating-notes h1 {
+    font-size: 17px;
+  }
+  .vd-source-legend {
+    right: 28px;
+  }
+  .vd-source-legend > span {
+    display: none;
+  }
+  .vd-source-legend button {
+    padding: 0 13px;
+    min-height: 44px;
+  }
+  .vd-flow-diagram {
+    height: clamp(520px, calc(100svh - 305px), 680px);
+  }
+  .vd-node > svg {
+    height: 155px;
+  }
+  .vd-inverter > svg {
+    height: 140px;
+  }
+  .vd-node-caption {
+    gap: 17px;
+  }
+  .vd-node-caption > span {
+    min-width: 125px;
+    font-size: 7px;
+  }
+  .vd-balance-note {
+    min-width: 84px;
+  }
+  .vd-balance-note strong {
+    font-size: 21px;
+  }
+  .vd-system-bottom > span:last-child {
+    display: none;
+  }
+  .vd-node > strong {
+    font-size: 19px;
+  }
+  .vd-node > span,
+  .vd-node > div > span {
+    font-size: 9px;
+  }
+  .vd-battery {
+    width: 34%;
+    right: 4%;
+    bottom: 25px;
+  }
+  .vd-battery > svg {
+    height: 145px;
+  }
+  .vd-battery > div > strong {
+    font-size: 16px;
+  }
+  .vd-grid-export {
+    left: 17%;
+    bottom: 50px;
+  }
+  .vd-field {
+    gap: 35px 5%;
+  }
+  .vd-project-ledger summary {
+    grid-template-columns: 55px 1fr 60px 20px;
+    gap: 10px;
+  }
+  .vd-project-ledger h3 {
+    font-size: 14px;
+  }
+  .vd-connection {
+    gap: 9%;
+    padding: 60px 7%;
+  }
+}
