@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { ArrowRight, Plus, Check } from "lucide-react";
-import { image, products } from "./data";
+import { image, catalogFor, categories, products } from "./data";
 
 export function ProductCard({
   product,
@@ -13,7 +13,9 @@ export function ProductCard({
   const [added, setAdded] = useState(false);
   return (
     <article className="archive-product">
-      <div className="archive-product-image">
+      <div
+        className={`archive-product-image archive-product-${product.imageMode}`}
+      >
         <img src={image(product.image)} alt={product.name} />
         <span>
           {product.category === "Accessories" ? "Curated" : "New arrival"}
@@ -21,7 +23,10 @@ export function ProductCard({
         <button
           aria-label={"Add " + product.name + " to bag"}
           onClick={() => {
-            onAdd(product.id, size);
+            onAdd(
+              product.id,
+              product.category === "Accessories" ? "One size" : size,
+            );
             setAdded(true);
           }}
         >
@@ -55,7 +60,10 @@ export function ProductCard({
         )}
         <button
           onClick={() => {
-            onAdd(product.id, size);
+            onAdd(
+              product.id,
+              product.category === "Accessories" ? "One size" : size,
+            );
             setAdded(true);
           }}
         >
@@ -66,42 +74,41 @@ export function ProductCard({
   );
 }
 
-export function Shop({ onAdd }: { onAdd: (id: string, size: string) => void }) {
-  const [category, setCategory] = useState("All pieces");
+export function Shop({
+  look,
+  category,
+  onCategory,
+  onAdd,
+}: {
+  look: number;
+  category: string;
+  onCategory: (value: string) => void;
+  onAdd: (id: string, size: string) => void;
+}) {
+  const visible = catalogFor(category, look);
   return (
     <section className="archive-shop" id="archive-shop">
       <div className="archive-shop-heading">
-        <h2>The current edit.</h2>
-        <span>Good pieces, no excess.</span>
+        <span>THE CURRENT EDIT / 06</span>
+        <h2>Pieces worth keeping.</h2>
+        <span>FOUR FORMS. YOUR WAY.</span>
       </div>
       <div className="archive-filters" aria-label="Product categories">
-        {["All pieces", "Outerwear", "Essentials", "Accessories"].map(
-          (item) => (
-            <button
-              key={item}
-              className={category === item ? "active" : ""}
-              aria-pressed={category === item}
-              onClick={() => setCategory(item)}
-            >
-              {item}
-            </button>
-          ),
-        )}
-        <span>
-          {
-            products.filter(
-              (p) => category === "All pieces" || p.category === category,
-            ).length
-          }{" "}
-          pieces
-        </span>
+        {categories.map((item) => (
+          <button
+            key={item}
+            aria-pressed={category === item}
+            onClick={() => onCategory(item)}
+          >
+            {item}
+          </button>
+        ))}
+        <span>{visible.length} pieces</span>
       </div>
       <div className="archive-product-grid">
-        {products
-          .filter((p) => category === "All pieces" || p.category === category)
-          .map((product) => (
-            <ProductCard key={product.id} product={product} onAdd={onAdd} />
-          ))}
+        {visible.map((product) => (
+          <ProductCard key={product.id} product={product} onAdd={onAdd} />
+        ))}
       </div>
     </section>
   );
