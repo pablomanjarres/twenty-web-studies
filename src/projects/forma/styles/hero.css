@@ -1,100 +1,144 @@
-.forma-hero {
-  padding: 0 5.5%;
-}
-.forma-hero-heading {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  padding: 47px 0 40px;
-}
-.forma h1,
-.forma h2 {
-  font-family: "Manrope", sans-serif;
-  letter-spacing: -0.055em;
-  font-weight: 400;
-}
-.forma h1 {
-  font-size: clamp(50px, 6.3vw, 92px);
-  line-height: 1.04;
-  margin: 0;
-}
-.forma-hero-heading > div {
-  display: flex;
-  align-items: flex-end;
-  gap: 80px;
-}
-.forma-hero-heading p {
-  font-size: 13px;
-  line-height: 1.65;
-  color: #626359;
-  margin: 0 0 4px;
-}
-.forma-round-link {
-  height: 56px;
-  width: 56px;
-  border: 1px solid #aaaa9f;
-  border-radius: 50%;
+.forma-archive {
   display: grid;
-  place-items: center;
+  grid-template-columns: minmax(0, 1fr) 205px;
+  gap: 32px;
+  padding: 27px 3.5% 0;
 }
-.forma-hero-image {
-  height: 575px;
-  margin: 0;
+.forma-selected-project figure {
   position: relative;
-  overflow: hidden;
+  margin: 0;
 }
-.forma-hero-image > img {
+.forma-selected-project figure > img {
   width: 100%;
-  height: 100%;
+  height: calc(100svh - 196px);
+  min-height: 440px;
+  max-height: 760px;
   object-fit: cover;
-  object-position: center 64%;
+  animation: forma-reveal 0.7s ease-out both;
 }
-.forma-hero-image:after {
-  content: "";
-  inset: 45% 0 0;
+.forma-selected-project figcaption {
   position: absolute;
-  background: linear-gradient(transparent, #1b2116a1);
-}
-.forma-hero-image figcaption {
-  position: absolute;
-  bottom: 29px;
-  left: 35px;
-  right: 35px;
+  bottom: 0;
+  left: 0;
+  right: 0;
   display: flex;
-  align-items: flex-end;
-  gap: 40px;
-  color: white;
-  z-index: 1;
+  justify-content: space-between;
+  padding: 16px 20px;
+  color: #fff;
+  background: linear-gradient(transparent, #1d241c9e);
+  font:
+    8px "IBM Plex Mono",
+    monospace;
 }
-.forma-hero-image figcaption > div {
-  flex: 1;
+.forma-project-name {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 0;
+  border-bottom: 1px solid #9b9e92;
 }
-.forma-hero-image figcaption > div > span {
+.forma-project-name h1 {
+  font:
+    500 clamp(30px, 3.2vw, 46px)/1.08 "Manrope",
+    sans-serif;
+  letter-spacing: -0.055em;
+  margin: 0;
+}
+.forma-project-name > div {
+  display: grid;
+  gap: 6px;
+  font:
+    8px "IBM Plex Mono",
+    monospace;
+  color: #737967;
+  margin-left: auto;
+}
+.forma-project-name > a {
+  padding: 10px 0 10px 15px;
+}
+.forma-index-title {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0 22px;
+  font:
+    9px "IBM Plex Mono",
+    monospace;
+  border-bottom: 1px solid #aeb3a3;
+}
+.forma-project-index > button {
+  width: 100%;
+  background: transparent;
+  color: #282824;
+  padding: 23px 0;
+  text-align: left;
+  border: 0;
+  border-bottom: 1px solid #aeb3a3;
+  position: relative;
+}
+.forma-project-index > button > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font:
+    8px "IBM Plex Mono",
+    monospace;
+  color: #8d9481;
+}
+.forma-project-index b {
+  font:
+    500 18px/1.3 "Manrope",
+    sans-serif;
+  display: block;
+  margin: 14px 0 7px;
+  letter-spacing: -0.04em;
+  max-width: 150px;
+}
+.forma-project-index small {
   display: block;
   font-size: 10px;
-  margin-bottom: 9px;
+  color: #7c8370;
 }
-.forma-hero-image figcaption strong {
-  font-size: 22px;
-  font-weight: 400;
-  letter-spacing: -0.03em;
+.forma-project-index img {
+  width: 72px;
+  height: 57px;
+  object-fit: cover;
+  margin-top: 17px;
+  opacity: 0.48;
+  transition: opacity 0.25s;
 }
-.forma-hero-image figcaption > span {
-  font-size: 11px;
+.forma-project-index > button[aria-pressed="true"] img {
+  opacity: 1;
 }
-.forma-hero-image figcaption > a {
-  height: 40px;
-  width: 40px;
-  border: 1px solid #ffffff70;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
+.forma-project-index > button[aria-pressed="true"]::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  background: #657558;
+  position: absolute;
+  right: 1px;
+  bottom: 30px;
 }
-.forma-caption {
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid #d7d5cc;
-  padding: 19px 0;
+.forma-project-index > button[aria-pressed="true"] b {
+  color: #5b6c4f;
+}
+.forma-index-note {
+  margin-top: 45px;
+}
+.forma-index-note > span {
+  font:
+    8px "IBM Plex Mono",
+    monospace;
+  color: #89917a;
+}
+.forma-index-note p {
+  font:
+    400 24px/1.2 "Manrope",
+    sans-serif;
+  letter-spacing: -0.04em;
+  margin: 15px 0 23px;
+}
+.forma-index-note a {
   font-size: 10px;
-  color: #727368;
+  color: #757d69;
 }
