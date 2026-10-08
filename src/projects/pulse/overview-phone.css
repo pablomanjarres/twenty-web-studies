@@ -1,0 +1,176 @@
+@media (max-width: 700px) {
+  .pulse-v2 {
+    padding: 14px 14px 0;
+  }
+  .pv-nav {
+    height: auto;
+    min-height: 110px;
+    padding: 16px 14px 9px;
+    gap: 13px;
+    flex-wrap: wrap;
+    border-radius: 21px;
+  }
+  .pv-nav .brand-logo {
+    font-size: 23px;
+  }
+  .pv-clinic {
+    display: flex;
+    margin-left: auto;
+  }
+  .pv-clinic > span {
+    display: none;
+  }
+  .pv-clinic img {
+    width: 29px;
+    height: 29px;
+  }
+  .pv-nav nav {
+    order: 3;
+    width: 100%;
+    gap: 0;
+    padding: 3px;
+    margin: 0;
+    justify-content: space-between;
+  }
+  .pv-nav nav button {
+    padding: 11px 8px;
+    font-size: 10px;
+    gap: 5px;
+    min-height: 40px;
+  }
+  .pv-nav nav button svg {
+    width: 12px;
+  }
+  .pv-heading {
+    padding: 25px 4px 22px;
+    flex-wrap: wrap;
+    gap: 17px;
+  }
+  .pv-heading p {
+    font-size: 9px;
+    margin-bottom: 6px;
+    letter-spacing: 0;
+  }
+  .pv-heading h1 {
+    font-size: 27px;
+    max-width: none;
+  }
+  .pv-heading-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .pv-heading-actions > span {
+    font-size: 9px;
+    padding: 11px 13px;
+  }
+  .pv-new {
+    font-size: 10px;
+    padding: 12px 15px;
+    border-radius: 25px;
+    min-height: 44px;
+  }
+  .pv-new svg {
+    width: 15px;
+    height: 15px;
+  }
+  .pv-overview {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 15px;
+  }
+  .pv-overview-stats {
+    grid-column: 1;
+    grid-row: auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+  .pv-summary-card {
+    grid-column: 1 / 3;
+    padding: 17px;
+  }
+  .pv-mini-chart {
+    height: 70px;
+    gap: 8px;
+  }
+  .pv-compact-stat {
+    padding: 13px;
+    gap: 7px;
+    border-radius: 18px;
+  }
+  .pv-compact-stat:last-of-type {
+    grid-column: 1 / 3;
+  }
+  .pv-compact-stat:last-of-type > small {
+    display: block;
+    max-width: none;
+  }
+  .pv-stat-icon {
+    width: 34px;
+    height: 34px;
+  }
+  .pv-compact-stat p {
+    font-size: 8px;
+  }
+  .pv-compact-stat strong {
+    font-size: 22px;
+  }
+  .pv-care-feature {
+    display: none;
+  }
+  .pv-practice-chart,
+  .pv-upcoming,
+  .pv-ledger {
+    grid-column: 1;
+    grid-row: auto;
+  }
+  .pv-white-card {
+    padding: 20px 17px;
+  }
+  .pv-practice-chart {
+    height: 367px;
+  }
+  .pv-chart-toolbar strong {
+    font-size: 28px;
+  }
+  .pv-chart-toolbar > div:first-child {
+    flex-direction: column;
+    gap: 5px;
+  }
+  .pv-chart-bars {
+    gap: 12px;
+  }
+  .pv-chart-caption > span {
+    display: none;
+  }
+  .pv-bar-chart {
+    margin-top: 29px;
+    height: 202px;
+  }
+  .pv-upcoming-list {
+    gap: 13px;
+  }
+  .pv-upcoming-visit {
+    padding: 12px;
+  }
+  .pv-upcoming-visit strong {
+    font-size: 12px;
+  }
+  .pv-upcoming-visit small {
+    font-size: 9px;
+  }
+  .pv-upcoming-row > span {
+    font-size: 11px;
+    width: 40px;
+  }
+  .pv-day-pills strong {
+    width: 36px;
+    height: 36px;
+  }
+  .pv-day-pills button {
+    min-height: 51px;
+  }
+  .pv-calendar-link {
+    min-height: 44px;
+    font-size: 11px;
+  }
+}
