@@ -1,0 +1,58 @@
+.soundroom-v3 .sr3-artwork {
+  aspect-ratio: 1;
+  position: relative;
+  overflow: hidden;
+  background: var(--sr3-cover);
+  color: var(--sr3-cover-ink);
+  border-radius: 6px;
+  isolation: isolate;
+}
+.soundroom-v3 .sr3-artwork svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.95;
+}
+.soundroom-v3 .sr3-artwork::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, #ffffff15, transparent 40%, #00000012);
+  pointer-events: none;
+}
+.soundroom-v3 .sr3-cover-label {
+  position: absolute;
+  top: 9%;
+  left: 10%;
+  right: 10%;
+  font:
+    5px "IBM Plex Mono",
+    monospace;
+  display: flex;
+  justify-content: space-between;
+  letter-spacing: 0.5px;
+}
+.soundroom-v3 .sr3-cover-label small {
+  font-size: 4px;
+}
+.soundroom-v3 .sr3-artwork > strong {
+  position: absolute;
+  bottom: 8%;
+  left: 9%;
+  right: 5%;
+  font:
+    500 24px/0.9 "Grand Mighty",
+    sans-serif;
+  letter-spacing: -0.8px;
+}
+.soundroom-v3 .sr3-artwork.is-compact .sr3-cover-label,
+.soundroom-v3 .sr3-artwork.is-compact > strong {
+  display: none;
+}
+.soundroom-v3 .sr3-artwork-2 svg {
+  transform: rotate(-15deg) scale(1.2);
+}
+.soundroom-v3 .sr3-artwork-3 svg {
+  transform: scale(1.05);
+}
