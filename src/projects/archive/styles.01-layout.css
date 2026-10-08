@@ -97,6 +97,7 @@
     "Bebas Neue",
     sans-serif;
   text-transform: uppercase;
+  overflow-wrap: anywhere;
   letter-spacing: -0.035em;
   margin: 0;
 }
