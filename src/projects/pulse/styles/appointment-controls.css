@@ -1,0 +1,103 @@
+.pulse-care-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 302px;
+  gap: 25px;
+}
+.pulse-appointments {
+  background: white;
+  border: 1px solid #e5ece5;
+  border-radius: 11px;
+  padding: 24px;
+  min-width: 0;
+}
+.pulse-section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+.pulse h2 {
+  font-size: 17px;
+  margin: 0;
+}
+.pulse-section-heading > div > span {
+  font-size: 9px;
+  color: #718570;
+  display: block;
+  margin-top: 5px;
+}
+.pulse-outline-button {
+  background: white;
+  border: 1px solid #dbe5db;
+  border-radius: 5px;
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  font-size: 8px;
+  padding: 8px 10px;
+  color: #899c8d !important;
+}
+.pulse-date-strip {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  padding: 22px 0;
+  border-bottom: 1px solid #ebf0e9;
+}
+.pulse-date-strip button {
+  position: relative;
+  background: #fafcf9;
+  border: 0;
+  border-radius: 7px;
+  padding: 11px 5px 15px;
+  color: #8da18f;
+  font-size: 9px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+}
+.pulse-date-strip button strong {
+  font-family: "Outfit", sans-serif;
+  font-size: 21px;
+  font-weight: 400;
+  color: #6f8675;
+}
+.pulse-date-strip button.selected {
+  background: #176b63;
+  color: #c0d9cb;
+}
+.pulse-date-strip button.selected strong {
+  color: white;
+}
+.pulse-date-strip i {
+  width: 3px;
+  height: 3px;
+  position: absolute;
+  bottom: 7px;
+  background: #a8c1ad;
+  border-radius: 50%;
+}
+.pulse-appointment-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 18px 0 7px;
+}
+.pulse-appointment-toolbar > span {
+  font-size: 10px;
+  color: #6e8674;
+}
+.pulse-appointment-toolbar small {
+  font-size: 8px;
+  color: #adb9ad;
+  margin-left: 6px;
+}
+.pulse-appointment-toolbar select {
+  border: 1px solid #e1e9df;
+  background: white;
+  font-size: 8px;
+  color: #90a08e;
+  padding: 7px;
+  border-radius: 4px;
+}
