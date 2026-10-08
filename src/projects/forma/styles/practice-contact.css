@@ -1,92 +1,91 @@
 .forma-practice {
-  border-top: 1px solid #d7d5cc;
+  border-top: 1px solid #c5c9ba;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 100px;
-  padding: 85px 5.5%;
-  background: #e7e6dc;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 90px;
+  padding: 75px 3.5%;
+  background: #e9eadf;
 }
 .forma-practice > div > span {
-  font-size: 11px;
-  color: #6b6d60;
+  font:
+    9px "IBM Plex Mono",
+    monospace;
+  color: #7f886f;
 }
 .forma-practice h2 {
-  font-size: 65px;
-  line-height: 1.06;
-  margin-top: 28px;
+  font-size: 45px;
+  margin-top: 25px;
 }
 .forma-practice-intro {
-  font-family: "Manrope", sans-serif;
-  font-size: 22px;
-  line-height: 1.5;
-  letter-spacing: -0.03em;
-  margin: 0 0 35px;
-  max-width: 450px;
+  font-size: 17px;
+  line-height: 1.7;
+  letter-spacing: -0.025em;
+  max-width: 460px;
+  margin: 0 0 30px;
 }
 .forma-values article {
-  border-top: 1px solid #bfbfb2;
+  border-top: 1px solid #b0b8a1;
   padding: 20px 0;
 }
 .forma-values button {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
+  color: #505d43;
   border: 0;
-  padding: 0;
   background: transparent;
-  font-size: 13px;
+  padding: 5px 0;
+  font-size: 12px;
   text-align: left;
-  color: #282824;
 }
 .forma-values p {
-  font-size: 12px;
-  color: #777a6e;
+  font-size: 11px;
+  color: #7d896d;
   line-height: 1.8;
-  max-width: 380px;
-  margin-bottom: 0;
+  max-width: 430px;
 }
 .forma-contact {
-  padding: 70px 5.5% 30px;
-  background: #282824;
-  color: #f0eee8;
+  padding: 60px 3.5% 30px;
+  background: #f5f4ef;
+  border-top: 1px solid #c5c9ba;
 }
 .forma-contact > span {
-  font-size: 12px;
-  color: #b4b5a8;
+  font:
+    9px "IBM Plex Mono",
+    monospace;
+  color: #868e78;
 }
 .forma-contact-title {
-  font-family: "Manrope", sans-serif;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  font-size: clamp(40px, 7vw, 96px);
-  letter-spacing: -0.06em;
-  border-bottom: 1px solid #515248;
-  padding: 25px 0 50px;
+  gap: 40px;
+  font:
+    500 40px "Manrope",
+    sans-serif;
+  letter-spacing: -0.04em;
+  padding: 22px 0 45px;
+  border-bottom: 1px solid #bdc4ae;
 }
 .forma-contact-title svg {
-  width: 65px;
-  height: 65px;
-  stroke-width: 1;
+  width: 28px;
+  height: 28px;
+  stroke-width: 1.4;
 }
 .forma-contact-bottom {
   display: flex;
-  justify-content: space-between;
+  gap: 40px;
   align-items: center;
-  padding-top: 28px;
+  justify-content: space-between;
+  padding-top: 25px;
 }
 .forma-contact-bottom .brand-logo {
   font-size: 21px;
 }
-.forma-contact-bottom p {
-  font-size: 10px;
-  color: #b0b1a2;
-  line-height: 1.6;
-  margin-left: auto;
-  margin-right: 100px;
-}
+.forma-contact-bottom p,
 .forma-contact-bottom > span {
-  font-size: 10px;
-  color: #b0b1a2;
+  color: #7e896f;
+  font:
+    9px/1.8 "IBM Plex Mono",
+    monospace;
 }
