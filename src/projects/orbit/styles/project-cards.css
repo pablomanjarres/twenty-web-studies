@@ -1,0 +1,150 @@
+.orbit-projects {
+  margin-top: 30px;
+}
+.orbit-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 17px;
+  gap: 10px;
+}
+.orbit h2 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 13px;
+  letter-spacing: -0.025em;
+  font-weight: 600;
+  margin: 0;
+}
+.orbit-section-heading h2 > span {
+  margin-left: 6px;
+  background: #eee7f8;
+  color: #9a79c1;
+  font-size: 8px;
+  padding: 3px 5px;
+  border-radius: 4px;
+}
+.orbit-section-heading select {
+  font-size: 8px;
+  color: #81718f;
+  background: white;
+  border: 1px solid #e5deef;
+  border-radius: 5px;
+  padding: 7px 9px;
+}
+.orbit-section-heading > span {
+  font-size: 8px;
+  color: #837391;
+}
+.orbit-project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+.orbit-project {
+  background: white;
+  border: 1px solid #eee9f5;
+  border-radius: 9px;
+  padding: 17px 15px;
+  min-width: 0;
+  position: relative;
+}
+.orbit-project-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.orbit-project-top > span:first-child {
+  height: 33px;
+  width: 33px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  font-size: 24px;
+}
+.orbit-project-category {
+  font-size: 7px;
+  color: #998aa9;
+  background: #f7f3fb;
+  padding: 4px 6px;
+  border-radius: 4px;
+}
+.orbit-project-top > button {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  margin-left: auto;
+  color: #a99db4;
+}
+.orbit-project h3 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 12px;
+  letter-spacing: -0.03em;
+  margin: 20px 0 6px;
+  font-weight: 600;
+}
+.orbit-project > p {
+  font-size: 8px;
+  color: #837391;
+  margin: 0;
+}
+.orbit-project-progress-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 8px;
+  color: #837391;
+  margin-top: 22px;
+}
+.orbit-project-progress-label strong {
+  font-weight: 400;
+  color: #8c7d9d;
+}
+.orbit-progress-track {
+  height: 4px;
+  border-radius: 100px;
+  background: #f0ecf6;
+  margin-top: 8px;
+  overflow: hidden;
+}
+.orbit-progress-track > i {
+  display: block;
+  height: 100%;
+  border-radius: 100px;
+}
+.orbit-project-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 19px;
+}
+.orbit-avatar-stack {
+  display: flex;
+  padding-left: 5px;
+}
+.orbit-avatar-stack .orbit-avatar {
+  width: 23px;
+  height: 23px;
+  border: 2px solid white;
+  margin-left: -5px;
+}
+.orbit-project-bottom > span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 8px;
+  color: #837391;
+}
+.orbit-project-task-count {
+  font-size: 7px;
+  color: #927da3;
+  display: block;
+  margin-top: 8px;
+}
+.orbit-empty {
+  grid-column: 1/-1;
+  padding: 30px;
+  background: white;
+  border: 1px solid #eee9f5;
+  border-radius: 8px;
+  color: #81718f;
+  font-size: 12px;
+}
