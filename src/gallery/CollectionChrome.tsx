@@ -11,7 +11,7 @@ export function CollectionChromeHeader() {
       <nav aria-label="Collection navigation">
         <a href="#projects">The collection</a>
         <a
-          href="https://github.com/pablomanjarres/twenty-web-studies"
+          href="https://github.com/pablomanjarres/twenty-web-studies/tree/collection"
           target="_blank"
           rel="noreferrer"
         >
