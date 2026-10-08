@@ -1,0 +1,96 @@
+.bv-welcome-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 195px;
+  gap: 18px;
+}
+.bv-learning-invitation {
+  min-height: 224px;
+  padding: 28px;
+  background: #f3e5e7;
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+}
+.bv-learning-invitation > div {
+  position: relative;
+  z-index: 1;
+  width: 65%;
+}
+.bv-learning-invitation > img {
+  position: absolute;
+  height: 265px;
+  width: 300px;
+  object-fit: contain;
+  right: -35px;
+  top: -7px;
+  transform: rotate(-6deg);
+}
+.bv-learning-invitation div > span {
+  font-size: 7px;
+  letter-spacing: 1.3px;
+  color: #a28b90;
+}
+.bv-learning-invitation h2 {
+  font-weight: 500;
+  font-size: 27px;
+  line-height: 1.17;
+  letter-spacing: -1px;
+  margin: 13px 0 10px;
+}
+.bv-learning-invitation p {
+  font-size: 10px;
+  color: #99878d;
+  margin: 0 0 21px;
+}
+.bv-learning-invitation button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 10px;
+  padding: 11px 15px;
+  border: 0;
+  border-radius: 22px;
+  background: #344431;
+  color: white;
+}
+.bv-certificate {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 22px;
+  border: 1px solid #edf0e5;
+  background: white;
+  border-radius: 24px;
+  text-align: left;
+}
+.bv-certificate > i {
+  display: grid;
+  place-items: center;
+  background: var(--bv-lime);
+  color: #6d8744;
+  width: 53px;
+  height: 53px;
+  border-radius: 50%;
+  margin-bottom: 16px;
+}
+.bv-certificate > strong {
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+}
+.bv-certificate > span {
+  font-size: 10px;
+  color: #99a38e;
+  line-height: 1.7;
+  margin-top: 9px;
+}
+.bv-certificate > small {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: auto;
+  padding-top: 15px;
+  font-size: 9px;
+  color: #8b9d78;
+}
