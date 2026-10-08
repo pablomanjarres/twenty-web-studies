@@ -1,0 +1,62 @@
+@media (max-width: 700px) {
+  .kit-intro {
+    padding: 45px 0;
+  }
+  .kit-intro h1 {
+    font-size: 80px;
+  }
+  .kit-story {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .kit-section-heading {
+    flex-direction: column;
+    gap: 18px;
+  }
+  .kit-logo-grid,
+  .kit-type-grid {
+    grid-template-columns: 1fr;
+  }
+  .kit-specimen {
+    height: 220px;
+  }
+  .kit-specimen > .brand-logo {
+    font-size: 36px;
+  }
+  .kit-symbol-row {
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .kit-symbol-row > p {
+    max-width: none;
+    width: 100%;
+    margin: 5px 0 0;
+  }
+  .kit-colors {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 20px;
+  }
+  .kit-colors > div > div {
+    height: 110px;
+  }
+  .kit-type-grid {
+    gap: 15px;
+  }
+  .kit-type-grid p {
+    font-size: 35px;
+  }
+  .kit-download {
+    padding: 25px;
+    flex-direction: column;
+    align-items: start;
+  }
+  .kit-download > div:last-child {
+    width: 100%;
+  }
+  .kit-footer {
+    align-items: center;
+  }
+  .kit-footer .brand-logo {
+    font-size: 14px;
+  }
+}
