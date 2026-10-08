@@ -26,20 +26,21 @@ export function useDialog<T extends HTMLElement>(onClose: () => void) {
       const elements = focusable();
       const first = elements[0];
       const last = elements[elements.length - 1];
+      const focusIsListed = elements.some(
+        (element) => element === document.activeElement,
+      );
       if (!first) {
         event.preventDefault();
         surface.current?.focus();
       } else if (
         event.shiftKey &&
-        (document.activeElement === first ||
-          !surface.current?.contains(document.activeElement))
+        (document.activeElement === first || !focusIsListed)
       ) {
         event.preventDefault();
         last.focus();
       } else if (
         !event.shiftKey &&
-        (document.activeElement === last ||
-          !surface.current?.contains(document.activeElement))
+        (document.activeElement === last || !focusIsListed)
       ) {
         event.preventDefault();
         first.focus();
