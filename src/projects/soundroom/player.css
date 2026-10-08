@@ -1,0 +1,116 @@
+.soundroom-v3 .sr3-player {
+  grid-column: 1/-1;
+  background: #181a18;
+  border-top: 1px solid #2a2d27;
+  display: grid;
+  grid-template-columns: 230px minmax(0, 1fr) 220px;
+  align-items: center;
+  gap: 30px;
+  padding: 18px 35px;
+  position: sticky;
+  bottom: 0;
+  z-index: 20;
+}
+.soundroom-v3 .sr3-now-playing {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-width: 0;
+}
+.soundroom-v3 .sr3-now-playing .sr3-artwork {
+  width: 43px;
+  flex: none;
+}
+.soundroom-v3 .sr3-now-playing > span {
+  min-width: 0;
+  flex: 1;
+}
+.soundroom-v3 .sr3-now-playing strong {
+  display: block;
+  font-weight: 500;
+  font-size: 11px;
+  color: #d5dcca;
+}
+.soundroom-v3 .sr3-now-playing small {
+  display: block;
+  color: #748469;
+  font-size: 9px;
+  margin-top: 5px;
+}
+.soundroom-v3 .sr3-now-playing > button {
+  color: #7c8b71;
+  padding: 7px;
+}
+.soundroom-v3 .sr3-now-playing > button[aria-pressed="true"] {
+  color: #e8a05d;
+}
+.soundroom-v3 .sr3-player-center {
+  min-width: 0;
+  max-width: 500px;
+  width: 100%;
+  justify-self: center;
+}
+.soundroom-v3 .sr3-player-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 21px;
+}
+.soundroom-v3 .sr3-player-buttons > button {
+  color: #acb89e;
+  padding: 5px;
+}
+.soundroom-v3 .sr3-player-buttons > .sr3-player-play {
+  background: #f4963d;
+  color: #30271b;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+.soundroom-v3 .sr3-seek {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 11px;
+}
+.soundroom-v3 .sr3-seek > span {
+  font:
+    8px "IBM Plex Mono",
+    monospace;
+  color: #6d7d61;
+  min-width: 24px;
+}
+.soundroom-v3 .sr3-player input[type="range"] {
+  accent-color: #eba04d;
+  height: 3px;
+  min-width: 0;
+  margin: 0;
+  cursor: pointer;
+}
+.soundroom-v3 .sr3-seek > input {
+  width: 100%;
+}
+.soundroom-v3 .sr3-volume {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: flex-end;
+  color: #738966;
+}
+.soundroom-v3 .sr3-volume > button {
+  color: #a5b899;
+  padding: 7px;
+}
+.soundroom-v3 .sr3-volume > input {
+  width: 78px;
+}
+.soundroom-v3 .sr3-volume > span {
+  font:
+    7px "IBM Plex Mono",
+    monospace;
+  color: #5a7050;
+  letter-spacing: 1px;
+  margin-left: 9px;
+}
