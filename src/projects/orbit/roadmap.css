@@ -1,0 +1,122 @@
+.orbit-v3 .ov3-roadmap {
+  background: white;
+  border-radius: 18px;
+  padding: 25px 24px 15px;
+  min-width: 0;
+}
+.orbit-v3 .ov3-roadmap .ov3-section-heading > div span {
+  display: block;
+  font-size: 11px;
+  margin-top: 6px;
+  color: #91958f;
+}
+.orbit-v3 .ov3-roadmap .ov3-section-note {
+  font-size: 9px;
+  letter-spacing: 0.8px;
+  white-space: nowrap;
+}
+.orbit-v3 .ov3-roadmap-days {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  margin: 25px 0 13px;
+  color: #9da099;
+  font-size: 10px;
+  text-align: center;
+}
+.orbit-v3 .ov3-roadmap-days .is-today {
+  color: #6d4af1;
+  font-weight: 600;
+}
+.orbit-v3 .ov3-roadmap-track {
+  position: relative;
+  padding: 6px 0 9px;
+}
+.orbit-v3 .ov3-day-lines {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  pointer-events: none;
+}
+.orbit-v3 .ov3-day-lines i {
+  border-left: 1px solid #f0f0eb;
+}
+.orbit-v3 .ov3-day-lines i.is-today {
+  background: #f4f0ff;
+  border-left: 1px dashed #b09ae9;
+}
+.orbit-v3 .ov3-roadmap-row {
+  height: 47px;
+  position: relative;
+}
+.orbit-v3 .ov3-roadmap-row button {
+  position: absolute;
+  top: 4px;
+  height: 35px;
+  border-radius: 22px;
+  color: white;
+  text-align: left;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  padding: 0 12px;
+  min-width: 86px;
+  isolation: isolate;
+  overflow: hidden;
+  box-shadow: 0 3px 8px #35342b0c;
+  transition: transform 0.2s;
+}
+.orbit-v3 .ov3-roadmap-row button:hover {
+  transform: translateY(-2px);
+}
+.orbit-v3 .ov3-roadmap-row button > span {
+  font-weight: 550;
+  font-size: 11px;
+  white-space: nowrap;
+}
+.orbit-v3 .ov3-roadmap-row small {
+  font-weight: 400;
+  margin-left: 6px;
+  opacity: 0.8;
+  font-size: 9px;
+}
+.orbit-v3 .ov3-roadmap-row img {
+  height: 26px;
+  width: 26px;
+  object-fit: cover;
+  border: 2px solid #ffffff90;
+  border-radius: 50%;
+  margin-left: auto;
+}
+.orbit-v3 .ov3-roadmap-row svg {
+  flex: none;
+}
+.orbit-v3 .ov3-bar-progress {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: #ffffff13;
+}
+.orbit-v3 .ov3-roadmap footer {
+  border-top: 1px solid #f0f0eb;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 12px;
+  margin-top: 4px;
+  color: #a1a49d;
+  font-size: 9px;
+}
+.orbit-v3 .ov3-roadmap footer > span:first-child {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #8d78b9;
+}
+.orbit-v3 .ov3-roadmap footer i {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #9c7bdc;
+}
