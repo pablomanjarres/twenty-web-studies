@@ -1,0 +1,146 @@
+.offgrid-page {
+  --og-blue: #1743e8;
+  --og-yellow: #ffd348;
+  --og-paper: #f7f4eb;
+  background: var(--og-blue);
+  color: var(--og-paper);
+  font-family: "DM Sans", sans-serif;
+  line-height: 1.4;
+}
+.offgrid-page a {
+  text-decoration: none;
+}
+.offgrid-page button,
+.offgrid-page select {
+  color: inherit;
+}
+.offgrid-page h1,
+.offgrid-page h2,
+.offgrid-page h3 {
+  margin: 0;
+}
+.offgrid-page h1,
+.offgrid-page h2 {
+  font-family: Tahoe, "Archivo Black", sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 0.93;
+}
+.og-header {
+  padding: 29px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(247, 244, 235, 0.35);
+}
+.og-header .brand-logo > span {
+  font-size: 29px;
+  letter-spacing: -0.065em;
+}
+.og-header nav {
+  display: flex;
+  gap: 35px;
+  font-size: 12px;
+}
+.og-start {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  font-size: 12px;
+}
+.og-hero {
+  padding: 28px 5% 36px;
+  overflow: hidden;
+}
+.og-hero-intro {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+}
+.og-hero-intro > span:last-child {
+  margin-top: 7px;
+}
+.og-title {
+  position: relative;
+  min-height: 540px;
+  padding-top: 54px;
+}
+.og-title h1 {
+  position: relative;
+  z-index: 2;
+  color: var(--og-yellow);
+  font-size: clamp(105px, 12.1vw, 193px);
+  width: 75%;
+  pointer-events: none;
+}
+.og-hero-collage {
+  position: absolute;
+  right: 4%;
+  top: 56px;
+  width: 34%;
+  height: 436px;
+  transform: rotate(7deg);
+}
+.og-hero-collage > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 32%;
+  border: 9px solid var(--og-paper);
+}
+.og-paper-tag {
+  position: absolute;
+  top: 8%;
+  right: -20%;
+  z-index: 3;
+  background: var(--og-paper);
+  color: #171717;
+  padding: 19px 22px;
+  font-size: 23px;
+  font-weight: 500;
+  transform: rotate(-14deg);
+  box-shadow: 3px 5px 0 #171717;
+}
+.og-spark {
+  position: absolute;
+  bottom: -40px;
+  left: -32px;
+  color: #f04d35;
+  width: 120px;
+  height: 120px;
+  z-index: 4;
+  transform: rotate(-7deg);
+}
+.og-image-caption {
+  display: block;
+  padding-top: 7px;
+  font-size: 10px;
+  text-align: right;
+}
+.og-hero-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+  z-index: 5;
+  gap: 25px;
+  padding-top: 20px;
+}
+.og-hero-foot p {
+  font-size: 20px;
+  letter-spacing: -0.03em;
+  line-height: 1.3;
+  margin: 0;
+}
+.og-hero-foot > a {
+  font-size: 11px;
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  border-bottom: 1px solid var(--og-paper);
+  padding: 10px 0;
+}
+.og-coordinate {
+  font-size: 10px;
+  text-align: right;
+}
