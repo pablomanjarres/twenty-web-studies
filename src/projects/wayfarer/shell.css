@@ -1,0 +1,129 @@
+.wayfarer-page {
+  --wf-navy: #162b3a;
+  --wf-sky: #dcecf4;
+  color: var(--wf-navy);
+  background: #f8faf6;
+  font-family: Manrope, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.wayfarer-page a {
+  text-decoration: none;
+}
+.wayfarer-page button {
+  color: inherit;
+}
+.wayfarer-page h1,
+.wayfarer-page h2,
+.wayfarer-page h3 {
+  margin: 0;
+  font-family: Sora, sans-serif;
+  letter-spacing: -0.065em;
+  line-height: 1.08;
+}
+.wf-header {
+  height: 92px;
+  padding: 0 4.5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  background: var(--wf-sky);
+}
+.wf-header .brand-logo > span {
+  font-family: Sora, sans-serif;
+  font-size: 27px;
+  letter-spacing: -0.06em;
+}
+.wf-header nav {
+  display: flex;
+  gap: 36px;
+}
+.wf-header nav a {
+  font-size: 13px;
+  font-weight: 600;
+}
+.wf-nav-cta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-bottom: 1px solid var(--wf-navy);
+  padding-bottom: 7px;
+  font-size: 12px;
+  font-weight: 700;
+}
+.wf-hero {
+  height: 680px;
+  min-height: 560px;
+  position: relative;
+  color: white;
+  overflow: hidden;
+}
+.wf-hero-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 58%;
+}
+.wf-hero-shade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(8, 26, 36, 0.45), transparent 80%),
+    linear-gradient(0deg, rgba(8, 26, 36, 0.55), transparent 35%);
+}
+.wf-hero-meta {
+  position: absolute;
+  left: 4.5%;
+  right: 4.5%;
+  top: 30px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+}
+.wf-hero-meta span,
+.wf-hero-bottom span {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.wf-hero-copy {
+  position: absolute;
+  left: 8%;
+  top: 135px;
+}
+.wf-hero-copy h1 {
+  font-size: clamp(72px, 7.8vw, 125px);
+  font-weight: 500;
+  letter-spacing: -0.085em;
+}
+.wf-hero-copy p {
+  font-size: 16px;
+  margin: 27px 0 21px;
+  line-height: 1.55;
+}
+.wf-round-link {
+  height: 48px;
+  width: 48px;
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+.wf-round-link:hover {
+  background: white;
+  color: var(--wf-navy);
+}
+.wf-hero-bottom {
+  position: absolute;
+  bottom: 25px;
+  left: 4.5%;
+  right: 4.5%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+}
+.wf-hero-bottom .wf-scroll-note {
+  font-size: 12px;
+}
