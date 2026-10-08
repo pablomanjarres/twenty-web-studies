@@ -1,0 +1,116 @@
+@media (max-width: 620px) {
+  .bloom-event {
+    padding: 10px 8px;
+    gap: 6px;
+    display: block;
+  }
+  .bloom-event > span {
+    font-size: 6px;
+    display: block;
+    margin-bottom: 6px;
+  }
+  .bloom-event h3 {
+    font-size: 7px;
+  }
+  .bloom-event p {
+    font-size: 5px;
+  }
+  .bloom-event div > span {
+    font-size: 5px;
+  }
+  .bloom-learning-chart .bloom-section-heading > span {
+    display: none;
+  }
+  .bloom-chart-number {
+    display: block;
+    margin: 22px 0;
+  }
+  .bloom-chart-number > b {
+    font-size: 26px;
+    display: block;
+    margin-bottom: 8px;
+  }
+  .bloom-chart-number small {
+    font-size: 7px;
+  }
+  .bloom-chart-number > span {
+    font-size: 6px;
+  }
+  .bloom-chart-bars {
+    gap: 6px;
+    height: 120px;
+  }
+  .bloom-chart-bars small {
+    font-size: 6px;
+  }
+  .bloom-notification {
+    right: 20px;
+    top: 57px;
+  }
+  .bloom-lesson h2 {
+    font-size: 23px;
+  }
+  .bloom-lesson p {
+    font-size: 10px;
+  }
+  .bloom-lesson > svg {
+    height: 170px;
+  }
+}
+
+@media (max-width: 620px) {
+  .bloom-right {
+    grid-template-columns: 1fr;
+  }
+  .bloom-calendar,
+  .bloom-learning-chart {
+    padding: 22px;
+  }
+  .bloom-calendar .bloom-section-heading h2,
+  .bloom-learning-chart .bloom-section-heading h2 {
+    font-size: 13px;
+  }
+  .bloom-calendar-month {
+    font-size: 11px;
+  }
+  .bloom-week button {
+    gap: 10px;
+    padding: 9px 0;
+  }
+  .bloom-week button > span {
+    font-size: 9px;
+  }
+  .bloom-week button > b {
+    font-size: 12px;
+  }
+  .bloom-day-label {
+    font-size: 10px;
+  }
+  .bloom-event {
+    display: flex;
+    gap: 12px;
+    padding: 15px 12px;
+  }
+  .bloom-event > span {
+    font-size: 10px;
+  }
+  .bloom-event h3 {
+    font-size: 11px;
+  }
+  .bloom-event p,
+  .bloom-event div > span {
+    font-size: 9px;
+  }
+  .bloom-chart-number {
+    display: flex;
+  }
+  .bloom-chart-number small,
+  .bloom-chart-number > span,
+  .bloom-chart-bars small {
+    font-size: 9px;
+  }
+  .bloom-learning-chart .bloom-section-heading > span {
+    display: block;
+    font-size: 9px;
+  }
+}
