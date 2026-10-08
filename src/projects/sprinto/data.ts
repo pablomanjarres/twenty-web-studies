@@ -1,44 +1,70 @@
-import { Clock3, Users, Zap } from "lucide-react";
-
-export const asset = (name: string) =>
-  `${import.meta.env.BASE_URL}images/sprinto/${name}.jpg`;
+export const rallyImage = `${import.meta.env.BASE_URL}images/sprinto/rally-v2.png`;
 export const courts = [
-  {
-    name: "The Social Club",
-    area: "Downtown",
-    distance: "1.2 km",
-    surface: "Panoramic courts",
-    times: ["17:00", "18:30", "20:00"],
-  },
-  {
-    name: "Riverside Courts",
-    area: "Riverside",
-    distance: "3.4 km",
-    surface: "Outdoor courts",
-    times: ["16:30", "18:00", "19:30"],
-  },
-  {
-    name: "The Night Shift",
-    area: "Downtown",
-    distance: "2.1 km",
-    surface: "Indoor courts",
-    times: ["18:00", "19:30", "21:00"],
-  },
+  { name: "Court 01", kind: "Outdoor · panoramic", price: 32 },
+  { name: "Court 02", kind: "Outdoor · panoramic", price: 32 },
+  { name: "Court 03", kind: "Covered · all-weather", price: 38 },
+  { name: "Court 04", kind: "Covered · all-weather", price: 38 },
 ];
-export const ways = [
+export const days = [
+  { day: "Mon", date: "12" },
+  { day: "Tue", date: "13" },
+  { day: "Wed", date: "14" },
+  { day: "Thu", date: "15" },
+  { day: "Fri", date: "16" },
+];
+export const times = [
+  "08:00",
+  "10:00",
+  "12:00",
+  "14:00",
+  "16:00",
+  "18:00",
+  "20:00",
+];
+export const isAvailable = (court: number, time: string, day: number) =>
+  !((court + times.indexOf(time) + day) % 5 === 0);
+export type BookingState = {
+  day: number;
+  court: number;
+  time: string;
+  duration: number;
+};
+export function normalizeBooking(booking: BookingState): BookingState {
+  if (isAvailable(booking.court, booking.time, booking.day)) return booking;
+  const time = times.find((candidate) =>
+    isAvailable(booking.court, candidate, booking.day),
+  )!;
+  return { ...booking, time };
+}
+export const initialBooking = normalizeBooking({
+  day: 0,
+  court: 0,
+  time: "18:00",
+  duration: 90,
+});
+export const fixtures = [
   {
-    icon: Users,
-    title: "FIND YOUR PEOPLE.",
-    copy: "Join an open game. Meet your next doubles partner. Everyone’s invited.",
+    date: "15 OCT",
+    time: "19:00",
+    name: "After-work social",
+    level: "All levels",
+    spaces: "8 places",
+    format: "Mix-in doubles",
   },
   {
-    icon: Zap,
-    title: "GET A LITTLE BETTER.",
-    copy: "A first lesson or a sharper backhand. Our coaches meet you where you are.",
+    date: "17 OCT",
+    time: "10:00",
+    name: "Saturday ladder",
+    level: "Intermediate",
+    spaces: "4 places",
+    format: "Club competition",
   },
   {
-    icon: Clock3,
-    title: "MAKE IT A HABIT.",
-    copy: "A weekly slot, a familiar crew, and something good to look forward to.",
+    date: "18 OCT",
+    time: "09:00",
+    name: "First-time rally",
+    level: "Beginners",
+    spaces: "6 places",
+    format: "Coach-led session",
   },
 ];
