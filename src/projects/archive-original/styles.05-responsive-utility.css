@@ -1,0 +1,116 @@
+@media (max-width: 650px) {
+  .archive-original-utility {
+    padding: 9px 20px;
+    font-size: 7px;
+  }
+  .archive-original-utility > span:first-child {
+    display: none;
+  }
+  .archive-original-utility > span:last-child {
+    margin: auto;
+  }
+  .archive-original-header {
+    height: 76px;
+    padding: 0 20px;
+    gap: 20px;
+  }
+  .archive-original-header nav {
+    display: none;
+  }
+  .archive-original-header .brand-logo {
+    font-size: 30px;
+  }
+  .archive-original-hero {
+    padding: 0 20px;
+  }
+  .archive-original-hero-title {
+    display: block;
+    padding-top: 10px;
+  }
+  .archive-original-hero-title h1 {
+    font-size: 26vw;
+  }
+  .archive-original-hero-title > div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0 20px;
+    gap: 12px;
+  }
+  .archive-original-hero-title > div > span {
+    font-size: 8px;
+    width: 100%;
+  }
+  .archive-original-hero-title p {
+    font-size: 11px;
+    margin: 0;
+  }
+  .archive-original-hero-title a {
+    font-size: 8px;
+    gap: 8px;
+  }
+  .archive-original-campaign {
+    grid-template-columns: 1.3fr 1fr;
+    gap: 7px;
+  }
+  .archive-original-campaign-main {
+    height: 360px;
+  }
+  .archive-original-campaign-caption {
+    font-size: 24px;
+    left: 12px;
+    right: 12px;
+    bottom: 14px;
+  }
+  .archive-original-campaign-caption > a {
+    width: 30px;
+    height: 30px;
+  }
+  .archive-original-campaign-caption > a > svg {
+    width: 20px;
+  }
+  .archive-original-campaign-caption > span {
+    max-width: 95px;
+  }
+  .archive-original-campaign-side > div {
+    left: 12px;
+    bottom: 20px;
+  }
+  .archive-original-campaign-side span {
+    font-size: 34px;
+  }
+  .archive-original-campaign-side small {
+    font-size: 7px;
+    max-width: 100px;
+    line-height: 1.6;
+  }
+  .archive-original-hero-bottom {
+    font-size: 7px;
+    gap: 15px;
+  }
+  .archive-original-hero-bottom > span:nth-child(2) {
+    display: none;
+  }
+  .archive-original-shop {
+    padding: 45px 20px;
+  }
+  .archive-original-shop-heading h2 {
+    font-size: 44px;
+  }
+  .archive-original-shop-heading > span {
+    font-size: 8px;
+    width: 70px;
+    line-height: 1.6;
+    text-align: right;
+  }
+  .archive-original-filters {
+    gap: 7px;
+    flex-wrap: wrap;
+    margin: 22px 0;
+  }
+  .archive-original-filters button {
+    font-size: 8px;
+    padding: 8px 10px;
+  }
+}
