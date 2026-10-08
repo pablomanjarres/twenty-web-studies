@@ -1,148 +1,41 @@
 @media (max-width: 900px) {
-  .wf-header {
-    height: 78px;
-  }
-  .wf-header nav {
-    gap: 20px;
-  }
-  .wf-nav-cta {
-    display: none;
-  }
-  .wf-hero {
-    height: 620px;
-  }
-  .wf-hero-copy {
-    left: 6%;
-    top: 155px;
-  }
-  .wf-section-heading h2 {
-    font-size: 45px;
-  }
-  .wf-journey-photo {
-    height: 260px;
-  }
-  .wf-journal-copy {
-    padding: 55px 9%;
-  }
-  .wf-journal-copy h2 {
-    font-size: 35px;
-  }
 }
 @media (max-width: 600px) {
-  .wf-header {
-    padding: 0 6%;
-    height: 78px;
-    gap: 10px;
-  }
-  .wf-header .brand-logo > span {
-    font-size: 23px;
-  }
-  .wf-header .brand-logo svg {
-    width: 25px;
-  }
-  .wf-header nav {
-    gap: 16px;
-  }
-  .wf-header nav a {
-    font-size: 11px;
-  }
-  .wf-header nav a:last-child {
-    display: none;
-  }
-  .wf-hero {
-    height: 620px;
-  }
-  .wf-hero-meta {
-    left: 6%;
-    right: 6%;
-    font-size: 9px;
-  }
-  .wf-hero-meta span:last-child {
-    display: none;
-  }
-  .wf-hero-copy h1 {
-    font-size: 72px;
-  }
-  .wf-hero-copy p {
-    font-size: 14px;
-  }
-  .wf-hero-bottom {
-    left: 6%;
-    right: 6%;
-    font-size: 9px;
-  }
-  .wf-hero-bottom > span:nth-child(2) {
-    display: none;
-  }
-  .wf-index {
-    padding: 58px 6%;
-  }
-  .wf-section-heading {
-    display: block;
-  }
-  .wf-section-heading h2 {
-    font-size: 44px;
-  }
-  .wf-section-heading p {
-    margin-top: 22px;
-    max-width: 300px;
-  }
-  .wf-filters {
-    gap: 7px;
-    flex-wrap: wrap;
-  }
-  .wf-filters button {
-    padding: 8px 12px;
-  }
-  .wf-filters > span {
-    width: 100%;
-    margin-top: 10px;
-  }
-  .wf-journey-grid {
-    grid-template-columns: 1fr;
-    gap: 35px;
-  }
-  .wf-journey-photo {
-    height: 360px;
-  }
-  .wf-journey h3 {
-    font-size: 27px;
-  }
-  .wf-journal {
-    grid-template-columns: 1fr;
-  }
-  .wf-journal-image {
-    height: 340px;
-  }
-  .wf-journal-copy {
-    padding: 48px 8%;
-  }
-  .wf-journal-copy h2 {
-    font-size: 39px;
-  }
-  .wf-footer {
-    align-items: flex-start;
-    flex-direction: column;
-    padding: 45px 8%;
-  }
-  .wf-footer > p {
-    margin: 0;
-  }
 }
 
 @media (max-width: 900px) {
-  .wf-header nav a {
-    display: flex;
-    align-items: center;
-    min-height: 44px;
+}@media (max-width: 1100px) {
+  .wf-header > span {
+    display: none;
   }
-  .wf-filters button,
-  .wf-journal-copy summary {
-    min-height: 44px;
+  .wf-atlas-grid {
+    grid-template-columns: minmax(0, 1fr) 310px;
   }
-  .wf-footer > a {
-    min-height: 44px;
-    display: flex;
-    align-items: center;
+  .wf-itinerary {
+    padding: 24px 21px;
+  }
+  .wf-postcard {
+    width: 190px;
+    left: 25px;
+  }
+  .wf-postcard img {
+    height: 130px;
+  }
+  .wf-route-key {
+    display: none;
+  }
+  .wf-notes {
+    gap: 24px;
+  }
+  .wf-note-title h2,
+  .wf-guide h2 {
+    font-size: 36px;
+  }
+  .wf-route-tabs button {
+    padding: 16px 12px;
+    gap: 5px 8px;
+  }
+  .wf-route-tabs strong {
+    font-size: 12px;
   }
 }
