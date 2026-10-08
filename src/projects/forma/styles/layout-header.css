@@ -1,0 +1,37 @@
+.forma {
+  background: #f0eee8;
+  color: #282824;
+  font-family: "DM Sans", sans-serif;
+}
+.forma a {
+  text-decoration: none;
+}
+.forma-header {
+  height: 98px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5.5%;
+  border-bottom: 1px solid #d7d5cc;
+}
+.forma-header .brand-logo {
+  font-size: 22px;
+  letter-spacing: 0.05em;
+  gap: 10px;
+}
+.forma-header .brand-logo > span {
+  letter-spacing: 0.04em;
+  font-weight: 600;
+}
+.forma-header .brand-logo svg {
+  width: 26px;
+}
+.forma-header nav {
+  display: flex;
+  gap: 44px;
+  font-size: 12px;
+}
+.forma-header nav a:last-child {
+  display: flex;
+  gap: 25px;
+}
