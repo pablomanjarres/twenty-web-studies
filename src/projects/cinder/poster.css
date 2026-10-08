@@ -1,0 +1,122 @@
+.cinder-roast-poster {
+  height: 610px;
+  background: var(--cinder-brick);
+  color: var(--cinder-cream);
+  position: relative;
+  overflow: hidden;
+}
+.cinder-poster-title {
+  position: absolute;
+  top: 53px;
+  left: 6%;
+  width: 30%;
+  z-index: 2;
+}
+.cinder-poster-title h1 {
+  font-size: 68px;
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+  margin: 18px 0 23px;
+  max-width: 330px;
+}
+.cinder-poster-title p {
+  font-size: 12px;
+  max-width: 225px;
+  line-height: 1.75;
+}
+.cinder-main-package {
+  position: absolute;
+  object-fit: contain;
+  width: 590px;
+  height: 590px;
+  left: 50%;
+  top: -1px;
+  transform: translateX(-50%) rotate(-8deg);
+  filter: drop-shadow(20px 27px 12px #4b150f40);
+  z-index: 1;
+}
+.cinder-origin-label {
+  position: absolute;
+  left: 6%;
+  bottom: 50px;
+  z-index: 2;
+}
+.cinder-origin-label strong {
+  font-family: "Grindela", serif;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 1.15;
+  display: block;
+  margin: 15px 0 13px;
+}
+.cinder-origin-label > span:last-child {
+  font-size: 10px;
+}
+.cinder-tasting {
+  position: absolute;
+  right: 9%;
+  top: 57%;
+  width: 20%;
+  z-index: 2;
+}
+.cinder-tasting > .cinder-label {
+  margin-bottom: 15px;
+}
+.cinder-tasting > span:not(.cinder-label) {
+  font-family: "Grindela", serif;
+  font-size: 31px;
+  display: block;
+  line-height: 1.3;
+}
+.cinder-variants {
+  position: absolute;
+  top: 38px;
+  right: 4%;
+  display: flex;
+  gap: 9px;
+  z-index: 3;
+}
+.cinder-variants button {
+  width: 57px;
+  padding: 0;
+  opacity: 0.55;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+.cinder-variants button[aria-pressed="true"] {
+  opacity: 1;
+  transform: translateY(-7px);
+}
+.cinder-variants img {
+  display: block;
+  object-fit: contain;
+  width: 57px;
+  height: 80px;
+}
+.cinder-variants span {
+  display: block;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 8px;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 5px;
+}
+.cinder-variants button[aria-pressed="true"] span {
+  border-bottom-color: var(--cinder-cream);
+}
+.cinder-poster-floor {
+  position: absolute;
+  right: 4%;
+  bottom: 30px;
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 8px;
+  line-height: 1.6;
+}
+
+.cinder-poster-facts {
+  display: contents;
+}
