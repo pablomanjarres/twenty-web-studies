@@ -1,4 +1,8 @@
-@import "./styles.01-layout.css";
-@import "./styles.02-byline.css";
-@import "./styles.03-printed.css";
-@import "./styles.04-responsive-page.css";
+@import "./styles/base.css";
+@import "./styles/rail.css";
+@import "./styles/wall.css";
+@import "./styles/essay-archive.css";
+@import "./styles/print.css";
+@import "./styles/reading.css";
+@import "./styles/responsive-layout.css";
+@import "./styles/responsive-reading.css";
