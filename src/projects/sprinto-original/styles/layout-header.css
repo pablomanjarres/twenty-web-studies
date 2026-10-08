@@ -1,0 +1,40 @@
+.sprinto-original {
+  background: #f2f0f7;
+  color: #19152d;
+  font-family: "DM Sans", sans-serif;
+}
+.sprinto-original a {
+  text-decoration: none;
+}
+.sprinto-original-header {
+  background: #6535f4;
+  color: white;
+  height: 91px;
+  padding: 0 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ffffff25;
+}
+.sprinto-original-header .brand-logo {
+  font-size: 28px;
+  gap: 9px;
+}
+.sprinto-original-header .brand-logo > span {
+  font-weight: 600;
+  letter-spacing: -0.06em;
+}
+.sprinto-original-header nav {
+  display: flex;
+  gap: 36px;
+  font-size: 12px;
+}
+.sprinto-original-nav-button {
+  border: 1px solid #ffffff60;
+  padding: 12px 18px;
+  border-radius: 5px;
+  font-size: 12px;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
