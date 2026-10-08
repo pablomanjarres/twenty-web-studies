@@ -1,5 +1,6 @@
 import { Clock, ChevronRight, Check } from "lucide-react";
 import { clinicians, days, timeLabel, type Visit } from "./data";
+import { countLabel, countNoun } from "./countLabel";
 function Appointment({
   visit,
   selected,
@@ -126,12 +127,13 @@ export function Schedule({
         <div className="pv-schedule-bottom">
           <Clock size={12} />
           <span>Leave room for a good conversation.</span>
-          <span>{appointments.length} visits in this view</span>
+          <span>{countLabel(appointments.length, "visit")} in this view</span>
         </div>
       </div>
       <div className="pv-agenda">
         <div className="pv-agenda-label">
-          {view === "day" ? `${days[day].name}'s visits` : "This week's visits"}
+          {view === "day" ? `${days[day].name}'s` : "This week's"}{" "}
+          {countNoun(appointments.length, "visit")}
           <span>{appointments.length}</span>
         </div>
         {[...appointments]
