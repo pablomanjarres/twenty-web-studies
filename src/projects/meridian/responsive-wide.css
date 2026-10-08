@@ -1,179 +1,49 @@
 @media (min-width: 1550px) {
-  .md-content {
-    max-width: 1500px;
-    margin: 0 auto;
-  }
-  .md-stat-value > strong {
-    font-size: 32px;
-  }
-  .md-map {
-    min-height: 275px;
-  }
-  .md-arrival-route {
-    gap: 12px;
-  }
-  .md-arrival-data > div {
-    padding: 15px 0;
-  }
-  .md-arrival-note {
-    padding-top: 22px;
-  }
 }
 @media (max-width: 1150px) {
-  .meridian-page {
-    grid-template-columns: 172px minmax(0, 1fr);
-  }
-  .md-sidebar {
-    padding: 27px 14px 20px;
-  }
-  .md-logo .brand-logo {
-    font-size: 18px;
-  }
-  .md-logo .brand-logo svg {
-    width: 24px;
-  }
-  .md-content {
-    padding: 25px 22px 18px;
-  }
-  .md-header {
-    padding: 0 22px;
-  }
-  .md-stat {
-    padding: 15px 12px;
-  }
-  .md-stat-value > strong {
-    font-size: 24px;
-  }
-  .md-stat-value > svg {
-    width: 50px;
-  }
-  .md-stat-change small {
-    display: none;
-  }
-  .md-main-grid {
-    grid-template-columns: minmax(0, 1.9fr) minmax(218px, 1fr);
-    gap: 15px;
-  }
-  .md-map {
-    min-height: 235px;
-    display: flex;
-    align-items: center;
-  }
-  .md-performance {
-    padding: 14px;
-    gap: 10px;
-  }
-  .md-performance-number {
-    width: 68px;
-  }
-  .md-performance-bars {
-    gap: 7px;
-  }
-  .md-performance-bars i {
-    width: 8px;
-  }
-  .md-arrival-reference {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-  .md-arrival-route {
-    padding: 0 15px;
-  }
-  .md-arrival-data {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-  .md-progress-heading {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-  .md-progress {
-    margin: 0 15px;
-  }
-  .md-arrival-note {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-  .md-table-scroll th,
-  .md-table-scroll td {
-    padding-left: 14px;
-    padding-right: 14px;
-  }
-  .md-header-tools > span {
-    display: none;
-  }
-  .md-workspace-footer > span:last-child {
-    max-width: 65%;
-    text-align: right;
-    line-height: 1.5;
-  }
 }
 @media (max-width: 850px) {
-  .meridian-page {
-    grid-template-columns: 1fr;
+}@media (max-width: 1250px) {
+  .md-command-bar > a {
+    width: 285px;
   }
-  .md-sidebar {
-    padding: 16px 22px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 30px;
-    border-bottom: 1px solid var(--md-line);
-  }
-  .md-logo {
-    margin-bottom: 0;
-    flex: none;
-  }
-  .md-sidebar > .md-sidebar-label,
-  .md-side-divider,
-  .md-network-port,
-  .md-sidebar-footer {
+  .md-command-title {
     display: none;
   }
-  .md-sidebar nav {
-    flex-direction: row;
-    gap: 6px;
-    margin: 0;
-    margin-left: auto;
+  .md-control-room {
+    grid-template-columns: 60px 258px minmax(0, 1fr);
   }
-  .md-sidebar nav > a {
-    font-size: 0;
-    gap: 0;
-    padding: 10px;
-  }
-  .md-sidebar nav > a > span {
-    display: none;
-  }
-  .md-header {
-    height: 59px;
-  }
-  .md-content {
-    padding-top: 23px;
-  }
-  .md-main-grid {
-    grid-template-columns: minmax(0, 1.9fr) minmax(220px, 1fr);
-  }
-  .md-stats-grid {
+  .md-operations-docks {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
     gap: 10px;
   }
-  .md-stat-label {
-    font-size: 8px;
+  .md-load-dock,
+  .md-event-dock {
+    padding: 13px;
   }
-  .md-stat-value {
-    gap: 7px;
+  .md-port-caption {
+    left: 16px;
+    right: 16px;
   }
-  .md-stat-value > svg {
-    width: 42px;
+  .md-map-tools {
+    right: 16px;
   }
-  .md-table-header {
-    padding: 16px;
+  .md-plan-focus {
+    right: 72px;
+    width: 218px;
   }
-  .md-map-footer {
-    font-size: 6px;
-    gap: 10px;
+  .md-load-identity > .md-vehicle-study {
+    width: 104px;
   }
-  .md-map-route {
-    left: 15px;
-    top: 12px;
+  .md-load-facts {
+    gap: 8px;
+  }
+  .md-load-facts b {
+    font-size: 10px;
+  }
+  .md-event-dock h3 {
+    font-size: 14px;
   }
 }
