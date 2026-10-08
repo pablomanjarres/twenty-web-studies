@@ -1,0 +1,189 @@
+.orbit-v3 {
+  --ov3-ink: #242629;
+  --ov3-purple: #6d4af1;
+  --ov3-muted: #7b7f82;
+  --ov3-paper: #f4f4f0;
+  --ov3-line: #e1e2db;
+  --focus-color: #6d4af1;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 198px minmax(0, 1fr);
+  background: var(--ov3-paper);
+  color: var(--ov3-ink);
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+}
+.orbit-v3 button {
+  border: 0;
+  background: none;
+  color: inherit;
+}
+.orbit-v3 input,
+.orbit-v3 textarea,
+.orbit-v3 select {
+  color: inherit;
+}
+.orbit-v3 h1,
+.orbit-v3 h2,
+.orbit-v3 h3,
+.orbit-v3 p {
+  margin: 0;
+}
+.orbit-v3 h1,
+.orbit-v3 h2,
+.orbit-v3 h3 {
+  font-family: "Manrope", sans-serif;
+}
+.orbit-v3 h2 {
+  font-size: 17px;
+  letter-spacing: -0.5px;
+  font-weight: 650;
+}
+.orbit-v3 .ov3-main {
+  padding: 0 30px;
+  min-width: 0;
+}
+.orbit-v3 .ov3-topbar {
+  height: 76px;
+  border-bottom: 1px solid var(--ov3-line);
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+.orbit-v3 .ov3-topbar > span {
+  font-size: 12px;
+  color: #5f6569;
+}
+.orbit-v3 .ov3-topbar > span i {
+  margin: 0 12px;
+  color: #b3b7b5;
+  font-style: normal;
+}
+.orbit-v3 .ov3-topbar label {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #949997;
+}
+.orbit-v3 .ov3-topbar input {
+  border: 0;
+  background: none;
+  outline-offset: 3px;
+  width: 169px;
+  font-size: 12px;
+}
+.orbit-v3 .ov3-avatars {
+  display: flex;
+  padding-right: 3px;
+}
+.orbit-v3 .ov3-avatars img {
+  height: 29px;
+  width: 29px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--ov3-paper);
+  margin-right: -5px;
+}
+.orbit-v3 .ov3-page-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 31px 0 28px;
+  gap: 18px;
+}
+.orbit-v3 .ov3-page-heading p {
+  font-size: 10px;
+  letter-spacing: 1.2px;
+  color: #8a8e8d;
+  margin-bottom: 9px;
+}
+.orbit-v3 .ov3-page-heading h1 {
+  font-size: 29px;
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: -1.2px;
+}
+.orbit-v3 .ov3-page-heading > div > span {
+  display: block;
+  color: #818684;
+  margin-top: 9px;
+  font-size: 12px;
+}
+.orbit-v3 .ov3-page-heading > div > span i {
+  font-style: normal;
+  margin: 0 7px;
+  color: #b6b9b4;
+}
+.orbit-v3 .ov3-page-heading > div:last-child {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+.orbit-v3 .ov3-date {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #747975;
+  font-size: 11px;
+}
+.orbit-v3 .ov3-add {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: #242629;
+  color: white;
+  border-radius: 9px;
+  padding: 13px 16px;
+  font-weight: 600;
+}
+.orbit-v3 .ov3-overview-top {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 288px;
+  gap: 20px;
+  align-items: stretch;
+}
+.orbit-v3 .ov3-overview-bottom {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 288px;
+  gap: 20px;
+  align-items: start;
+}
+.orbit-v3 .ov3-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.orbit-v3 .ov3-section-heading span {
+  color: #919692;
+  font-size: 10px;
+  letter-spacing: 0.2px;
+}
+.orbit-v3 .ov3-page-footer {
+  display: flex;
+  justify-content: space-between;
+  color: #90958f;
+  padding: 23px 0 26px;
+  font-size: 10px;
+}
+.orbit-v3 .ov3-page-footer span:first-child {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.orbit-v3 .ov3-page-footer i {
+  width: 5px;
+  height: 5px;
+  background: #77a68f;
+  border-radius: 50%;
+}
+.orbit-v3 .ov3-empty {
+  padding: 30px 20px;
+  color: #6f746f;
+  font-size: 13px;
+}
+
+.orbit-v3 .ov3-avatar-group {
+  display: flex;
+}
