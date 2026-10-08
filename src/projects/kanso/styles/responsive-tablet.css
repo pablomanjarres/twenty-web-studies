@@ -1,0 +1,29 @@
+@media (max-width: 1000px) {
+  .kanso-hero {
+    min-height: 590px;
+  }
+  .kanso-hero-copy {
+    padding: 55px 0;
+  }
+  .kanso h1 {
+    font-size: 66px;
+  }
+  .kanso-product-image > img {
+    height: 295px;
+  }
+  .kanso-product-title h3 {
+    font-size: 22px;
+  }
+  .kanso-story > img {
+    height: 570px;
+  }
+  .kanso-story > div {
+    padding: 50px 10%;
+  }
+  .kanso-story h2 {
+    font-size: 44px;
+  }
+  .kanso-newsletter {
+    gap: 60px;
+  }
+}
