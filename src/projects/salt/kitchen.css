@@ -1,0 +1,84 @@
+.sl-kitchen {
+  padding: 45px 7% 75px;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 50px 8%;
+  align-items: center;
+}
+.sl-kitchen > figure {
+  grid-column: 1/-1;
+  position: relative;
+}
+.sl-kitchen > figure img {
+  height: 370px;
+  width: 100%;
+  object-fit: cover;
+}
+.sl-kitchen > figure figcaption {
+  position: absolute;
+  left: 25px;
+  bottom: 25px;
+  color: white;
+  font:
+    10px "IBM Plex Mono",
+    monospace;
+  letter-spacing: 0.08em;
+  text-shadow: 0 1px 5px #183445;
+}
+.sl-kitchen-story > span {
+  font:
+    9px "IBM Plex Mono",
+    monospace;
+  letter-spacing: 0.09em;
+}
+.sl-kitchen-story h2 {
+  font:
+    400 44px/1.12 "Tahoe",
+    "Fraunces",
+    serif;
+  letter-spacing: -0.04em;
+  margin: 23px 0;
+  color: var(--sl-red);
+}
+.sl-kitchen-story p {
+  font-size: 13px;
+  line-height: 1.9;
+  max-width: 465px;
+}
+.sl-kitchen-story a {
+  font-size: 12px;
+  display: inline-flex;
+  gap: 40px;
+  text-decoration: none;
+  border-bottom: 1px solid var(--sl-line);
+  padding-bottom: 10px;
+  margin-top: 27px;
+  align-items: center;
+}
+.sl-catch-note {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  column-gap: 25px;
+  align-items: center;
+}
+.sl-catch-note img {
+  width: 130px;
+  height: 175px;
+  object-fit: cover;
+  grid-row: span 2;
+  transform: rotate(5deg);
+}
+.sl-catch-note > span {
+  font:
+    9px "IBM Plex Mono",
+    monospace;
+  align-self: end;
+  letter-spacing: 0.06em;
+}
+.sl-catch-note p {
+  font:
+    400 26px/1.2 "Instrument Serif",
+    serif;
+  align-self: start;
+  margin-top: 13px;
+}
