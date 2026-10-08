@@ -1,0 +1,143 @@
+.hc-sidebar {
+  background: #fff;
+  border-right: 1px solid #e2e6ed;
+  display: flex;
+  flex-direction: column;
+  padding: 0 18px 14px;
+  min-width: 0;
+}
+.hc-logo {
+  height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  margin: 0 -3px 21px;
+  color: #374059;
+}
+.hc-logo .brand-logo {
+  font:
+    650 25px "Space Grotesk",
+    sans-serif;
+  letter-spacing: -0.055em;
+  color: #253450;
+  gap: 9px;
+}
+.hc-logo > .lucide {
+  color: #adb3c1;
+}
+.hc-team {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 8px;
+  border: 1px solid #e4e8ef;
+  border-radius: 7px;
+}
+.hc-team > span {
+  width: 30px;
+  height: 30px;
+  flex: none;
+  border: 1px solid #dee4f6;
+  border-radius: 7px;
+  background: #eef1ff;
+  color: #536fbd;
+  display: grid;
+  place-items: center;
+  font:
+    550 19px "Space Grotesk",
+    sans-serif;
+}
+.hc-team > div {
+  flex: 1;
+  min-width: 0;
+}
+.hc-team strong {
+  display: block;
+  font-size: 11px;
+  font-weight: 550;
+  white-space: nowrap;
+}
+.hc-team small {
+  display: block;
+  font-size: 9px;
+  color: #969eaf;
+  margin-top: 4px;
+}
+.hc-team > .lucide {
+  color: #afb6c5;
+}
+.hc-project-label {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 10px 12px;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: #a0a8b9;
+}
+.hc-project-label > span {
+  font-size: 8px;
+  letter-spacing: 0;
+}
+.hc-project {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 11px 10px;
+  background: #f8f9fc;
+  border: 1px solid #e6e9f1;
+  border-radius: 6px;
+  color: #4c5872;
+}
+.hc-project strong {
+  font-size: 11px;
+  font-weight: 550;
+}
+.hc-project > span {
+  font-size: 9px;
+  color: #abb2c2;
+  margin-left: auto;
+}
+.hc-sidebar nav {
+  display: grid;
+  gap: 4px;
+  margin: 16px 0 27px;
+}
+.hc-sidebar nav button {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  background: transparent;
+  border: 0;
+  border-radius: 6px;
+  padding: 11px 12px;
+  font-size: 12px;
+  color: #8b94a7;
+  text-align: left;
+}
+.hc-sidebar nav button[aria-pressed="true"] {
+  background: #eef2ff;
+  color: #3458ee;
+  font-weight: 550;
+}
+.hc-sidebar nav small {
+  font-size: 9px;
+  margin-left: auto;
+  color: #aab3c8;
+}
+.hc-resource-label {
+  margin: 0 10px 13px;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: #a0a8b9;
+}
+.hc-resource {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 11px 12px;
+  color: #8b94a7;
+  font-size: 12px;
+}
