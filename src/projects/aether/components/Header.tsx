@@ -11,7 +11,7 @@ export function Header() {
       <nav aria-label="Main navigation">
         <a href="#account">The account</a>
         <a href="#features">Why aether</a>
-        <a href="#pricing">Pricing</a>
+        <a href="#start">Start here</a>
       </nav>
       <a className="aether-header-cta" href="#account">
         Meet your account <ArrowUpRight size={17} />

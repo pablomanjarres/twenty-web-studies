@@ -1,7 +1,8 @@
 .aether {
-  --ink: #161614;
-  --paper: #f5f3eb;
-  --orange: #ff6b35;
+  --ink: #11120f;
+  --paper: #f2f0e8;
+  --orange: #ff713d;
+  --focus-color: var(--orange);
   color: var(--paper);
   background: var(--ink);
   font-family: "DM Sans", sans-serif;
@@ -10,31 +11,59 @@
   text-decoration: none;
 }
 .aether-header {
-  height: 100px;
-  max-width: 1320px;
-  padding: 0 58px;
-  margin: auto;
+  height: 86px;
+  padding: 0 4.5%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 1px solid #ffffff17;
 }
 .aether-header .brand-logo {
   font-size: 29px;
 }
 .aether-header nav {
   display: flex;
-  gap: 36px;
-  font-size: 14px;
+  gap: 32px;
+  margin-left: auto;
+  margin-right: 38px;
+  font-size: 12px;
 }
 .aether-header nav a {
-  color: #cecec7;
+  color: #c5c7bb;
 }
 .aether-header-cta {
   display: flex;
   align-items: center;
-  gap: 22px;
-  border: 1px solid #55564e;
-  border-radius: 100px;
-  padding: 13px 19px;
+  gap: 25px;
+  padding: 12px 0;
+  border-bottom: 1px solid #9a9c90;
+  font-size: 12px;
+}
+.aether-button {
+  background: var(--orange);
+  color: var(--ink);
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 17px 19px;
   font-size: 13px;
+  font-weight: 600;
+  clip-path: polygon(0 0, calc(100% - 9px) 0, 100% 9px, 100% 100%, 0 100%);
+}
+.aether-button:hover {
+  background: #ffa47e;
+}
+.aether-note,
+.aether-section-kicker {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.045em;
+  color: #a5a797;
+}
+.aether h2 {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.055em;
+  line-height: 1.1;
 }
