@@ -1,0 +1,168 @@
+.estelle {
+  --plum: #211419;
+  --gold: #d5be98;
+  background: var(--plum);
+  color: #f3ece0;
+  font-family: "Manrope", sans-serif;
+  min-height: 100vh;
+}
+
+.estelle a {
+  text-decoration: none;
+}
+
+.estelle button {
+  color: inherit;
+}
+
+.estelle-topline {
+  text-align: center;
+  font-size: 8px;
+  color: #a69993;
+  background: #1b1115;
+  letter-spacing: 0.025em;
+  padding: 9px;
+}
+
+.estelle-header {
+  max-width: 1600px;
+  margin: auto;
+  height: 102px;
+  padding: 0 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ffffff13;
+  position: relative;
+}
+
+.estelle-header nav {
+  display: flex;
+  gap: 35px;
+  font-size: 10px;
+  color: #c8b8a7;
+}
+
+.estelle-header-brand {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.estelle-header .brand-logo {
+  font:
+    36px "The Foriene",
+    "Cormorant Garamond",
+    serif;
+  color: var(--gold);
+  gap: 9px;
+}
+
+.estelle-header .brand-logo > span {
+  font-weight: 400;
+  letter-spacing: 0.06em;
+}
+
+.estelle-header .brand-logo svg {
+  width: 31px;
+  height: 31px;
+}
+
+.estelle-header-right {
+  display: flex;
+  gap: 35px;
+  align-items: center;
+  color: #c8b8a7;
+  font-size: 10px;
+}
+
+.estelle-header-right > a:last-child {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.estelle-header-right > a:last-child > span {
+  font-size: 8px;
+}
+
+.estelle-hero {
+  position: relative;
+  height: 670px;
+  max-width: 1800px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.estelle-campaign {
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-position: center 68%;
+}
+
+.estelle-hero:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #211419aa 0, transparent 55%);
+  pointer-events: none;
+}
+
+.estelle-hero-copy {
+  position: absolute;
+  top: 130px;
+  left: max(65px, calc((100% - 1320px) / 2));
+  z-index: 1;
+}
+
+.estelle-hero-copy > span {
+  font-size: 10px;
+  color: #bcaa93;
+  letter-spacing: 0.055em;
+}
+
+.estelle-hero h1 {
+  font:
+    400 clamp(52px, 5.65vw, 87px)/1.04 "The Foriene",
+    "Cormorant Garamond",
+    serif;
+  letter-spacing: -0.045em;
+  color: #f3ece0;
+  margin: 31px 0 24px;
+}
+
+.estelle-hero-copy > p {
+  font-size: 12px;
+  line-height: 1.9;
+  color: #b7a99e;
+}
+
+.estelle-link {
+  display: flex;
+  align-items: center;
+  gap: 43px;
+  border-bottom: 1px solid #d5be986b;
+  padding-bottom: 11px;
+  width: max-content;
+  font-size: 10px;
+  color: var(--gold);
+}
+
+.estelle-hero .estelle-link {
+  margin-top: 39px;
+}
+
+.estelle-hero-bottom {
+  position: absolute;
+  bottom: 29px;
+  left: 60px;
+  right: 60px;
+  display: flex;
+  justify-content: space-between;
+  color: #b5a291;
+  font-size: 8px;
+  z-index: 1;
+}
