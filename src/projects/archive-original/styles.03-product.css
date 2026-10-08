@@ -1,0 +1,168 @@
+.archive-original-product-size label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.archive-original-product-size select {
+  font-size: 8px;
+  border: 0;
+  background: white;
+  padding: 3px;
+  color: #080808;
+}
+
+.archive-original-product-size button {
+  font-size: 8px;
+  border: 0;
+  background: none;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  padding: 4px 0;
+}
+
+.archive-original-story {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  background: #eeeeeb;
+  max-width: 1600px;
+  margin: auto;
+  min-height: 550px;
+}
+
+.archive-original-story-photo > img {
+  height: 550px;
+  width: 100%;
+  object-fit: cover;
+  filter: grayscale(1);
+  object-position: 40% 25%;
+}
+
+.archive-original-story-copy {
+  padding: 62px 65px 35px;
+}
+
+.archive-original-story-copy > span {
+  font-size: 9px;
+  color: #8b8b87;
+}
+
+.archive-original-story-copy h2 {
+  font:
+    400 97px/0.94 "Sublime",
+    sans-serif;
+  text-transform: uppercase;
+  letter-spacing: -0.03em;
+  overflow-wrap: anywhere;
+  margin: 35px 0 26px;
+}
+
+.archive-original-story-copy p {
+  font-size: 11px;
+  line-height: 1.9;
+  margin: 0;
+}
+
+.archive-original-story-copy > a {
+  display: flex;
+  align-items: center;
+  gap: 33px;
+  width: max-content;
+  border-bottom: 1px solid #080808;
+  padding-bottom: 9px;
+  font-size: 10px;
+  margin-top: 32px;
+}
+
+.archive-original-story-rule {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 42px;
+  padding-top: 18px;
+  border-top: 1px solid #bfc0bb;
+  color: #777;
+  font-size: 8px;
+}
+
+.archive-original-footer {
+  max-width: 1600px;
+  margin: auto;
+  padding: 55px 48px 24px;
+}
+
+.archive-original-footer > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 9px;
+}
+
+.archive-original-footer > div > span {
+  font-size: 12px;
+}
+
+.archive-original-footer > div > small {
+  color: #8b8b87;
+  font-size: 8px;
+}
+
+.archive-original-footer > p {
+  font:
+    400 clamp(120px, 23vw, 365px)/1 "Sublime",
+    sans-serif;
+  text-transform: uppercase;
+  letter-spacing: -0.025em;
+  margin: 23px 0 0;
+  overflow-wrap: anywhere;
+  text-align: center;
+}
+
+.archive-original-footer > div:last-child {
+  border-top: 1px solid #080808;
+  padding-top: 15px;
+}
+
+.archive-original-footer > div:last-child span {
+  font-size: 8px;
+  color: #8b8b87;
+}
+
+.archive-original-bag-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  background: #0006;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.archive-original-bag-panel {
+  width: min(470px, 100%);
+  background: #fff;
+  padding: 35px;
+  overflow: auto;
+  box-shadow: -10px 0 40px #0002;
+}
+
+.archive-original-bag-panel > header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #080808;
+  padding-bottom: 20px;
+}
+
+.archive-original-bag-panel h2 {
+  font:
+    400 60px "Sublime",
+    sans-serif;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.archive-original-bag-panel button {
+  border: 0;
+  background: none;
+}
