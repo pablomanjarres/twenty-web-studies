@@ -1,0 +1,118 @@
+.ci-coffee-section {
+  padding: 100px 5.5% 85px;
+}
+.ci-section-intro {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  align-items: end;
+  margin-bottom: 42px;
+}
+.ci-section-intro h2 {
+  font-size: 55px;
+  line-height: 1.08;
+  letter-spacing: -2px;
+  margin-top: 20px;
+}
+.ci-section-intro > p {
+  font-size: 13px;
+  margin: 0 3% 5px 0;
+}
+.ci-coffee-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+.ci-product-art {
+  height: 338px;
+  background: #e9dfc6;
+  position: relative;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  overflow: hidden;
+}
+.ci-coffee-card:nth-child(2) .ci-product-art {
+  background: #e8ddcf;
+}
+.ci-coffee-card:nth-child(3) .ci-product-art {
+  background: #e0e0c7;
+}
+.ci-product-art > span:first-child {
+  position: absolute;
+  left: 17px;
+  top: 18px;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+}
+.ci-product-number {
+  position: absolute;
+  right: 17px;
+  top: 17px;
+  font-size: 12px;
+  font-family: "Grindela";
+}
+.ci-coffee-bag {
+  height: 304px;
+  width: auto;
+  filter: drop-shadow(12px 16px 12px #38271f18);
+  transition: transform 0.2s;
+}
+.ci-coffee-card:hover .ci-coffee-bag {
+  transform: rotate(-3deg) translateY(-4px);
+}
+.ci-product-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 22px;
+  gap: 10px;
+}
+.ci-product-heading h3 {
+  font-size: 28px;
+  letter-spacing: -0.7px;
+}
+.ci-product-heading > span {
+  font-size: 14px;
+}
+.ci-product-origin {
+  font-size: 11px;
+  margin-top: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.9px;
+  opacity: 0.7;
+}
+.ci-coffee-card > p {
+  font-size: 12px;
+  margin: 15px 0 22px;
+}
+.ci-product-controls {
+  display: flex;
+  border: 1px solid #38271f40;
+  align-items: stretch;
+}
+.ci-product-controls select {
+  width: 47%;
+  padding: 14px 8px;
+  background: transparent;
+  border: 0;
+  color: var(--ci-ink);
+  font-size: 10px;
+  border-right: 1px solid #38271f40;
+}
+.ci-product-controls button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  width: 53%;
+  padding: 13px 8px;
+  border: 0;
+  background: var(--ci-ink);
+  color: var(--ci-paper);
+  font-size: 10px;
+}
+.ci-product-controls button:hover {
+  background: var(--ci-brick);
+}
