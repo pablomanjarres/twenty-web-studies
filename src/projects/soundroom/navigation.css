@@ -1,0 +1,78 @@
+.soundroom-v3 .sr3-navigation {
+  background: #1b1d20;
+  border-right: 1px solid #25282a;
+  padding: 28px 0 23px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.soundroom-v3 .sr3-brand-button {
+  height: 40px;
+  width: 40px;
+  display: grid;
+  place-items: center;
+  color: #e2dfd5;
+}
+.soundroom-v3 .sr3-brand-button svg {
+  width: 28px;
+  height: 28px;
+}
+.soundroom-v3 .sr3-navigation nav {
+  margin-top: 86px;
+  display: grid;
+  gap: 17px;
+}
+.soundroom-v3 .sr3-navigation nav button {
+  position: relative;
+  height: 43px;
+  width: 43px;
+  display: grid;
+  place-items: center;
+  border-radius: 11px;
+  color: #737d84;
+}
+.soundroom-v3 .sr3-navigation nav button[aria-current="page"] {
+  color: #1c2020;
+  background: #ff9b43;
+  box-shadow: 0 7px 20px #d76e2430;
+}
+.soundroom-v3 .sr3-navigation nav button > i {
+  position: absolute;
+  height: 5px;
+  width: 5px;
+  top: 8px;
+  right: 7px;
+  background: #bcaede;
+  border-radius: 50%;
+}
+.soundroom-v3 .sr3-navigation nav button > span {
+  display: none;
+  position: absolute;
+  left: 53px;
+  background: #363538;
+  color: #e8e3de;
+  border-radius: 5px;
+  font-size: 11px;
+  white-space: nowrap;
+  padding: 8px 11px;
+  z-index: 15;
+}
+.soundroom-v3 .sr3-navigation nav button:hover > span,
+.soundroom-v3 .sr3-navigation nav button:focus-visible > span {
+  display: block;
+}
+.soundroom-v3 .sr3-nav-bottom {
+  margin-top: auto;
+  padding-top: 40px;
+  display: grid;
+  justify-items: center;
+  gap: 35px;
+  color: #59636a;
+}
+.soundroom-v3 .sr3-nav-bottom span {
+  font:
+    9px/1.8 "IBM Plex Mono",
+    monospace;
+  text-align: center;
+  letter-spacing: 1.5px;
+}
