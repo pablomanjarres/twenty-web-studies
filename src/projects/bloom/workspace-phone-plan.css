@@ -1,0 +1,117 @@
+@media (max-width: 600px) {
+  .bv-timetable {
+    padding: 21px 17px;
+  }
+  .bv-timetable-scroll {
+    overflow-x: auto;
+    margin-top: 3px;
+  }
+  .bv-timetable-grid {
+    min-width: 565px;
+    gap: 8px;
+  }
+  .bv-timetable-grid.is-day {
+    min-width: 0;
+  }
+  .bv-planned-lesson {
+    min-height: 98px;
+    padding: 12px 10px;
+  }
+  .bv-planned-lesson > span i {
+    display: block;
+  }
+  .bv-time-day {
+    min-height: 70px;
+  }
+  .bv-time-view button {
+    min-height: 35px;
+    padding: 8px 10px;
+  }
+  .bv-time-column .bv-planned-lesson > span i {
+    font-size: 5px;
+  }
+  .bv-plan-foot {
+    font-size: 7px;
+  }
+  .bv-learning-side {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 15px;
+  }
+  .bv-month-card {
+    padding: 23px;
+  }
+  .bv-month-grid button {
+    min-height: 34px;
+  }
+  .bv-day-plan button {
+    min-height: 44px;
+  }
+  .bv-study-activity {
+    min-height: 280px;
+  }
+  .bv-study-bars {
+    height: 122px;
+  }
+  .bv-course-lessons {
+    padding: 21px 17px;
+  }
+  .bv-course-lessons .bv-section-heading > span {
+    display: none;
+  }
+  .bv-course-lessons .bv-section-heading p {
+    font-size: 9px;
+    line-height: 1.8;
+  }
+  .bv-lesson-row {
+    gap: 10px;
+  }
+  .bv-lesson-row p {
+    display: none;
+  }
+  .bv-lesson-row strong {
+    font-size: 11px;
+  }
+  .bv-row-duration {
+    font-size: 8px;
+    gap: 3px;
+  }
+  .bv-row-duration svg {
+    display: none;
+  }
+  .bv-lesson-number {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+  }
+  .bv-overlay {
+    padding: 0;
+    align-items: flex-end;
+  }
+  .bv-course-dialog,
+  .bv-practice-dialog {
+    padding: 33px 24px;
+    max-height: 92vh;
+    border-radius: 24px 24px 0 0;
+  }
+  .bv-dialog-close {
+    width: 44px;
+    height: 44px;
+    top: 10px;
+    right: 10px;
+  }
+  .bv-course-dialog h2,
+  .bv-practice-dialog h2 {
+    font-size: 28px;
+  }
+  .bv-color-options {
+    flex-wrap: wrap;
+  }
+  .bv-color-options button {
+    min-width: 85px;
+    min-height: 44px;
+    font-size: 9px;
+  }
+  .bv-notice-options button {
+    min-height: 44px;
+  }
+}
