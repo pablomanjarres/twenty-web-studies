@@ -1,0 +1,175 @@
+@media (max-width: 1000px) {
+  .vestra-booking {
+    left: 5%;
+    right: 5%;
+  }
+  .vestra-booking label {
+    padding: 4px 14px;
+  }
+  .vestra-stay {
+    gap: 40px;
+  }
+  .vestra-stay-copy {
+    padding: 0;
+  }
+  .vestra-stay-copy h2 {
+    font-size: 53px;
+  }
+  .vestra-experience-grid {
+    gap: 35px;
+  }
+  .vestra-footer > a {
+    font-size: 20px;
+  }
+}
+@media (max-width: 700px) {
+  .vestra-header {
+    height: 80px;
+    padding: 0 24px;
+  }
+  .vestra-header nav {
+    display: none;
+  }
+  .vestra-header .brand-logo {
+    font-size: 30px;
+    gap: 7px;
+  }
+  .vestra-book-link {
+    font-size: 10px;
+    gap: 12px;
+  }
+  .vestra-hero {
+    height: 660px;
+    margin-bottom: 190px;
+  }
+  .vestra-panorama {
+    object-position: 53% center;
+  }
+  .vestra-hero-content {
+    top: 77px;
+  }
+  .vestra h1 {
+    font-size: 73px;
+  }
+  .vestra-hero-content p {
+    font-size: 11px;
+  }
+  .vestra-hero-bottom {
+    bottom: 50px;
+    left: 24px;
+    right: 24px;
+    font-size: 8px;
+    gap: 20px;
+  }
+  .vestra-booking {
+    bottom: -165px;
+    left: 24px;
+    right: 24px;
+    grid-template-columns: 1fr 1fr;
+    padding: 17px;
+    gap: 20px 0;
+  }
+  .vestra-booking label {
+    padding: 0 10px;
+  }
+  .vestra-booking label:nth-child(2) {
+    border: 0;
+  }
+  .vestra-booking label:nth-child(3) {
+    border: 0;
+  }
+  .vestra-booking input,
+  .vestra-booking select {
+    font-size: 11px;
+  }
+  .vestra-booking button {
+    font-size: 10px;
+    padding: 15px 12px;
+    margin: 0;
+    gap: 12px;
+  }
+  .vestra-availability {
+    right: 24px;
+    left: 24px;
+    bottom: 35px;
+    max-width: none;
+  }
+  .vestra-intro {
+    padding: 40px 24px 55px;
+  }
+  .vestra h2 {
+    font-size: 36px;
+  }
+  .vestra-intro h2 br {
+    display: none;
+  }
+  .vestra-intro > p {
+    font-size: 11px;
+  }
+  .vestra-stay {
+    grid-template-columns: 1fr;
+    margin: 0 24px 55px;
+    gap: 34px;
+  }
+  .vestra-stay-photo img {
+    height: 400px;
+  }
+  .vestra-stay-copy h2 {
+    font-size: 48px;
+    line-height: 1.06;
+  }
+  .vestra-stay-copy > p {
+    max-width: none;
+  }
+  .vestra-experiences {
+    padding: 45px 24px;
+  }
+  .vestra-experience-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 25px;
+  }
+  .vestra-experience-heading h2 {
+    font-size: 38px;
+  }
+  .vestra-experience-heading > p {
+    margin: 0;
+  }
+  .vestra-experience-grid {
+    grid-template-columns: 1fr;
+    gap: 23px;
+  }
+  .vestra-experience-grid article {
+    position: relative;
+    padding-left: 48px;
+  }
+  .vestra-experience-grid svg {
+    position: absolute;
+    left: 0;
+    top: 26px;
+  }
+  .vestra-experience-grid h3 {
+    font-size: 25px;
+    margin: 0 0 8px;
+  }
+  .vestra-experience-grid p {
+    margin: 0;
+  }
+  .vestra-footer {
+    padding: 40px 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+  }
+  .vestra-footer > p {
+    text-align: right;
+  }
+  .vestra-footer > a {
+    grid-column: 1/-1;
+    font-size: 24px;
+  }
+  .vestra-footer > span {
+    grid-column: 1/-1;
+  }
+}
