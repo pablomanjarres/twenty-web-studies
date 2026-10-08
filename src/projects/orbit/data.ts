@@ -1,74 +1,63 @@
-export const asset = (id: number) =>
+export type TaskStatus = "To do" | "In progress" | "Review" | "Done";
+export type Task = {
+  id: number;
+  title: string;
+  kind: string;
+  status: TaskStatus;
+  owner: string;
+  avatar: number;
+  due: string;
+  start: number;
+  days: number;
+  hours: number;
+  description: string;
+  checks: string[];
+  checked: number[];
+  note: string;
+};
+export const avatar = (id: number) =>
   `${import.meta.env.BASE_URL}images/orbit/avatar-${id}.jpg`;
-export const projects = [
-  {
-    name: "Brand refresh",
-    client: "Luma Studio",
-    category: "Design",
-    progress: 72,
-    tasks: "18 / 25 tasks",
-    date: "Oct 18",
-    color: "#e8dff8",
-    ink: "#8563b5",
-    icon: "✳",
-    team: [1, 2, 3],
-  },
-  {
-    name: "Website launch",
-    client: "Maison & Co.",
-    category: "Development",
-    progress: 48,
-    tasks: "12 / 25 tasks",
-    date: "Oct 24",
-    color: "#f9e5dc",
-    ink: "#bd876b",
-    icon: "↗",
-    team: [2, 3],
-  },
-  {
-    name: "Autumn campaign",
-    client: "The Good Life",
-    category: "Marketing",
-    progress: 86,
-    tasks: "24 / 28 tasks",
-    date: "Oct 12",
-    color: "#deeee7",
-    ink: "#719a8a",
-    icon: "◒",
-    team: [1, 3],
-  },
+export const statuses: TaskStatus[] = [
+  "To do",
+  "In progress",
+  "Review",
+  "Done",
 ];
-export const initialTasks = [
+export const people = [
+  { name: "Sam Rivera", avatar: 1, role: "Design" },
+  { name: "Alex Chen", avatar: 2, role: "Research" },
+  { name: "Jules Park", avatar: 3, role: "Content" },
+];
+export const stageColors: Record<string, string> = {
+  Research: "#158F73",
+  Design: "#6D4AF1",
+  Content: "#E99B36",
+  Review: "#D97769",
+};
+export const isCheckComplete = (task: Task, index: number) =>
+  task.checked.includes(index);
+export const progress = (task: Task) =>
+  Math.round((task.checked.length / Math.max(1, task.checks.length)) * 100);
+export const meetings = [
   {
-    id: 1,
-    name: "Finalize homepage concepts",
-    project: "Website launch",
-    date: "Today",
-    priority: "High",
-    done: false,
+    time: "10:00",
+    title: "Opening story review",
+    task: 1,
+    people: [1, 3],
+    duration: "25 min",
   },
   {
-    id: 2,
-    name: "Review visual identity guidelines",
-    project: "Brand refresh",
-    date: "Today",
-    priority: "Medium",
-    done: false,
+    time: "14:30",
+    title: "Collection copy workshop",
+    task: 3,
+    people: [2, 3],
+    duration: "40 min",
   },
   {
-    id: 3,
-    name: "Prepare campaign presentation",
-    project: "Autumn campaign",
-    date: "Tomorrow",
-    priority: "High",
-    done: false,
-  },
-  {
-    id: 4,
-    name: "Share moodboard with the team",
-    project: "Brand refresh",
-    date: "Oct 10",
-    priority: "Low",
-    done: true,
+    time: "16:00",
+    title: "Studio wrap-up",
+    task: 5,
+    people: [1, 2, 3],
+    duration: "15 min",
   },
 ];
