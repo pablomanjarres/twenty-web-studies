@@ -7,7 +7,7 @@ export const brand: Brand = {
   purpose:
     "An intimate alpine retreat offering restorative stays, seasonal food, and unhurried ways to experience the mountain landscape.",
   description:
-    "Vestra is an intimate alpine retreat where the landscape sets the pace. Its identity brings together deep forest green, warm cream, and expressive serif typography, with a mountain-fold symbol that connects the brand to its setting. The website opens onto a panoramic mountain view, then invites guests into the rooms, seasonal kitchen, and slower rituals of a stay. A simple booking panel makes choosing dates and exploring availability feel effortless. The experience is designed for travelers seeking quiet rather than spectacle, presenting hospitality as a thoughtful connection to place, with generous photography and small details that leave space to breathe.",
+    "Vestra is an intimate alpine retreat where the landscape sets the pace. Its identity brings together deep forest green, warm cream, and expressive serif typography, with a mountain-fold symbol that connects the brand to its setting. The website opens onto a panoramic mountain view, then invites guests into the rooms, seasonal kitchen, and slower rituals of a stay. A simple booking panel makes choosing dates and exploring availability feel straightforward. The experience is designed for travelers seeking quiet rather than spectacle, presenting hospitality as a thoughtful connection to place, with generous photography and small details that leave space to breathe.",
   colors: [
     {
       name: "Forest",
