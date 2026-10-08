@@ -7,11 +7,11 @@ export const brand: Brand = {
   purpose:
     "A small ceramics atelier making tactile, thoughtfully shaped objects that add quiet beauty to everyday rituals.",
   description:
-    "Kanso is a ceramics atelier devoted to the objects people reach for every day. Its identity pairs soft blush and deep cocoa with refined serif typography, allowing material texture and simple forms to take the lead. A hand-drawn vessel symbol captures the slight asymmetry of handmade work. The online shop presents a small collection with generous product photography, restrained descriptions, and an intuitive category filter. A local cart interaction makes selecting a piece feel immediate. The website’s purpose is to translate the atelier’s care into a digital setting, celebrating useful beauty through honest materials, thoughtful spacing, and a shopping experience that feels unhurried.",
+    "Kanso is a small ceramics atelier devoted to useful objects and the slight irregularities of handmade work. Its shop opens as a shelf: six individual forms rest on washed blush paper, with their dimensions, glazes, and prices close at hand. A narrow category index and outlined finish swatches make the collection easy to explore. The quiet Commune wordmark occupies a pause beside the objects, while a vessel symbol recalls the maker’s touch. Product details, quantities, and a personal bag support an unhurried selection. A close surface study, batch specifications, and a photograph of clay on the wheel carry the material story through the rest of the page.",
   colors: [
     {
       name: "Blush",
-      hex: "#E9D6D1",
+      hex: "#EAD9D2",
     },
     {
       name: "Cocoa",
@@ -22,12 +22,12 @@ export const brand: Brand = {
       hex: "#F8F4EF",
     },
     {
-      name: "Clay",
-      hex: "#B38570",
+      name: "Clay shadow",
+      hex: "#79635A",
     },
     {
       name: "Stone",
-      hex: "#D0CBC0",
+      hex: "#D5D5CC",
     },
   ],
   fonts: {
@@ -50,5 +50,5 @@ export const brand: Brand = {
     "Lifestyle",
   ],
   artDirection:
-    "Soft blush and cocoa, a large quiet serif headline, oversized ceramic product photography, and an airy catalogue with a maker-led story.",
+    "An asymmetric ceramic shelf on washed blush paper, individual tactile product cutouts, a narrow category rail, modest Commune typography, precise dimensions, a blue glaze macro, and a wide pottery-process photograph.",
 };

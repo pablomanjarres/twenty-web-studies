@@ -1,9 +1,7 @@
-@import "./styles/layout-header.css";
-@import "./styles/hero.css";
-@import "./styles/collection.css";
-@import "./styles/story-care.css";
-@import "./styles/newsletter-footer.css";
-@import "./styles/shopping-bag.css";
-@import "./styles/responsive-tablet.css";
-@import "./styles/responsive-mobile-shop.css";
-@import "./styles/responsive-mobile-editorial.css";
+@import "./styles/base.css";
+@import "./styles/shelf-index.css";
+@import "./styles/shelf-objects.css";
+@import "./styles/notes.css";
+@import "./styles/dialogs.css";
+@import "./styles/responsive-shop.css";
+@import "./styles/responsive-notes-dialogs.css";
