@@ -7,7 +7,7 @@ export const brand: Brand = {
   purpose:
     "A considered money workspace for independent creatives, bringing invoices, income, and everyday spending into one clear rhythm.",
   description:
-    "Aether gives independent creatives a calmer relationship with money. The banking experience brings incoming payments, invoice tracking, and everyday spending into one focused workspace. An ember-orange payment card sits at the heart of the identity, surrounded by warm neutrals, precise typography, and sculptural layers that suggest movement without visual noise. The website makes the product tangible through a live currency selector, clear account features, and a concise view of freelance cash flow. Every detail supports a simple purpose: helping people spend less time organizing their finances and more time doing the work they love.",
+    "Aether brings the rhythm of independent work into a considered money workspace. A satin graphite payment card and translucent ember ribbon make the relationship between work, income, and possibility tangible. Small invoice controls frame the central object, connecting each selected payment to a readable account balance and allocation. The spacious opening gives way to a full-width ledger, where client names, invoice references, and amounts carry the hierarchy. Warm black, quiet paper, and precise money labels support a clear purpose: helping independent creatives understand their finances and make room for their next ambition.",
   colors: [
     {
       name: "Ink",
@@ -36,7 +36,7 @@ export const brand: Brand = {
   },
   logo: '<path d="M6 28C6 16 12 8 20 8s14 8 14 20" fill="none" stroke="currentColor" stroke-width="5"/><path d="M12 28c0-8 3-12 8-12s8 4 8 12" fill="none" stroke="currentColor" stroke-width="4"/><circle cx="20" cy="29" r="3" fill="currentColor"/>',
   logoMeaning:
-    "Three rising arcs express independent momentum and a steady foundation for financial freedom.",
+    "Two rising arcs and a central point express independent momentum and a steady foundation for financial freedom.",
   tags: [
     "Fintech",
     "Banking",
@@ -50,5 +50,5 @@ export const brand: Brand = {
     "Minimal",
   ],
   artDirection:
-    "Oversized warm-white typography on a matte black field with an offset stack of dimensional payment cards and restrained ember-orange accents.",
+    "A central satin-metal payment object and ember acrylic ribbon on warm black, with peripheral copy, connected invoice controls, and a full-width ruled ledger on quiet paper.",
 };
