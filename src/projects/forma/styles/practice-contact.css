@@ -1,0 +1,92 @@
+.forma-practice {
+  border-top: 1px solid #d7d5cc;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  padding: 85px 5.5%;
+  background: #e7e6dc;
+}
+.forma-practice > div > span {
+  font-size: 11px;
+  color: #6b6d60;
+}
+.forma-practice h2 {
+  font-size: 65px;
+  line-height: 1.06;
+  margin-top: 28px;
+}
+.forma-practice-intro {
+  font-family: "Manrope", sans-serif;
+  font-size: 22px;
+  line-height: 1.5;
+  letter-spacing: -0.03em;
+  margin: 0 0 35px;
+  max-width: 450px;
+}
+.forma-values article {
+  border-top: 1px solid #bfbfb2;
+  padding: 20px 0;
+}
+.forma-values button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  font-size: 13px;
+  text-align: left;
+  color: #282824;
+}
+.forma-values p {
+  font-size: 12px;
+  color: #777a6e;
+  line-height: 1.8;
+  max-width: 380px;
+  margin-bottom: 0;
+}
+.forma-contact {
+  padding: 70px 5.5% 30px;
+  background: #282824;
+  color: #f0eee8;
+}
+.forma-contact > span {
+  font-size: 12px;
+  color: #b4b5a8;
+}
+.forma-contact-title {
+  font-family: "Manrope", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: clamp(40px, 7vw, 96px);
+  letter-spacing: -0.06em;
+  border-bottom: 1px solid #515248;
+  padding: 25px 0 50px;
+}
+.forma-contact-title svg {
+  width: 65px;
+  height: 65px;
+  stroke-width: 1;
+}
+.forma-contact-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 28px;
+}
+.forma-contact-bottom .brand-logo {
+  font-size: 21px;
+}
+.forma-contact-bottom p {
+  font-size: 10px;
+  color: #b0b1a2;
+  line-height: 1.6;
+  margin-left: auto;
+  margin-right: 100px;
+}
+.forma-contact-bottom > span {
+  font-size: 10px;
+  color: #b0b1a2;
+}
