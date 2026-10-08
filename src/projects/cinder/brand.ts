@@ -6,9 +6,9 @@ export const brand: Brand = {
   category: "Coffee roaster",
   tagline: "Fresh roast. Slow mornings.",
   purpose:
-    "A small-batch coffee roaster storefront for discovering seasonal beans, choosing a grind, and planning a visit to the roastery.",
+    "A small-batch coffee storefront for discovering seasonal beans, choosing a grind, and finding a comfortable brewing and delivery rhythm.",
   description:
-    "Cinder brings the warmth of a neighborhood roastery to a coffee storefront. Brick red, butter yellow, and a generous slab serif give the identity the character of a printed café poster. The page pairs a bold opening with real coffee photography, illustrated bags, tasting notes, and a short story about the ritual of brewing. Visitors can choose whole bean or ground coffee, build a small basket, and browse the roastery details. The ember symbol connects the name to the heat of roasting. The result is a lively shop with enough room to linger over the next cup.",
+    "Cinder opens as a roastery package poster, with an oversized tactile coffee pouch at the centre and origin and tasting notes in opposing corners. Cream, kraft, and olive packages give three roasts their own material character against a brick field. A compact order strip puts grind, quantity, and price directly beneath the coffee. The original ember symbol and Grindela typography connect the storefront to the warmth of roasting. A batch ledger makes process and altitude easy to compare, followed by a coffee-cherry photograph and a practical brewing sheet. Visitors can build a basket and save a delivery rhythm while keeping the ritual of the everyday cup in view.",
   colors: [
     { name: "Roast brick", hex: "#9F3429" },
     { name: "Cream paper", hex: "#F5EDD9" },
@@ -27,11 +27,11 @@ export const brand: Brand = {
     "Typography",
     "Roastery",
     "Food and drink",
-    "Illustration",
+    "Packaging",
     "Local business",
     "Editorial",
     "Brand identity",
   ],
   artDirection:
-    "A brick and cream café poster with chunky slab typography, butter-yellow seals, warm photography, and simple illustrated coffee packaging.",
+    "An oversized physically photographed coffee pouch on a brick field, opposing-corner product typography and tasting facts, three coherent paper packages, a hard-edged grind/order strip, batch ledger, coffee-cherry study, and a kitchen-counter brewing sheet.",
 };

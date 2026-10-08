@@ -1,6 +1,8 @@
 @import "./base.css";
-@import "./hero.css";
-@import "./coffee.css";
-@import "./story-footer.css";
-@import "./basket.css";
+@import "./poster.css";
+@import "./order-basket.css";
+@import "./ledger-origin.css";
+@import "./brew-dispatch.css";
 @import "./responsive.css";
+@import "./responsive-poster.css";
+@import "./responsive-sections.css";
