@@ -1,0 +1,90 @@
+@media (max-width: 540px) {
+  .monograph-main {
+    padding: 0 18px;
+  }
+  .monograph-wall {
+    gap: 34px 15px;
+  }
+  .monograph-story-kicker {
+    font-size: 8px;
+  }
+  .monograph-story-1 .monograph-photo-button img {
+    height: 260px;
+  }
+  .monograph-story-2 .monograph-photo-button img {
+    height: 170px;
+  }
+  .monograph-story-3 .monograph-photo-button img {
+    height: 220px;
+  }
+  .monograph-story-4 .monograph-photo-button img {
+    height: 180px;
+  }
+  .monograph-story-1 .monograph-story-title h2 {
+    font-size: 30px;
+  }
+  .monograph-story-title h2 {
+    font-size: 24px;
+  }
+  .monograph-story-title svg {
+    width: 15px;
+  }
+  .monograph-story > p {
+    font-size: 11px;
+  }
+  .monograph-credit {
+    font-size: 7px;
+  }
+  .monograph-essay-intro {
+    grid-template-columns: 1fr;
+    gap: 26px;
+    padding: 30px 0;
+  }
+  .monograph-essay-intro h2 {
+    font-size: 47px;
+  }
+  .monograph-section-line {
+    font-size: 8px;
+  }
+  .monograph-visual-essay figcaption {
+    flex-direction: column;
+    gap: 5px;
+    line-height: 1.6;
+  }
+  .monograph-archive {
+    padding-bottom: 55px;
+  }
+  .monograph-archive h2 {
+    font-size: 36px;
+  }
+  .monograph-print {
+    grid-template-columns: 1fr;
+    margin: 0 -18px;
+    padding: 55px 28px;
+    gap: 50px;
+  }
+  .monograph-paper-cover {
+    max-width: 230px;
+  }
+  .monograph-print-copy h2 {
+    font-size: 46px;
+  }
+  .monograph-reading-copy {
+    padding: 25px;
+  }
+  .monograph-reading-copy h2 {
+    font-size: 43px;
+  }
+  .monograph-reading > img {
+    height: 280px;
+  }
+  .monograph-footer {
+    font-size: 9px;
+    line-height: 1.7;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .monograph-photo-button img {
+    transition: none;
+  }
+}
