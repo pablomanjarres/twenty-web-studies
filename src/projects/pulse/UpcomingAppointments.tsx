@@ -1,6 +1,7 @@
 import { ArrowUpRight, Plus, Clock } from "lucide-react";
 import { days, timeLabel, type Visit } from "./data";
 import { PatientPortrait } from "./overviewData";
+import { countLabel } from "./countLabel";
 
 export function UpcomingAppointments({
   visits,
@@ -72,7 +73,9 @@ export function UpcomingAppointments({
       </button>
       <div className="pv-upcoming-foot">
         <Clock size={15} />
-        <span>{visits.length} visits · Room for a good conversation.</span>
+        <span>
+          {countLabel(visits.length, "visit")} · Room for a good conversation.
+        </span>
       </div>
     </aside>
   );

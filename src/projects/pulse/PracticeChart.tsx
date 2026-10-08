@@ -1,6 +1,7 @@
 import { ArrowUpRight } from "lucide-react";
 import { days, type Visit } from "./data";
 import { dailyVisits, visitMinutes, careTime } from "./overviewData";
+import { countLabel, countNoun } from "./countLabel";
 
 export function PracticeChart({
   appointments,
@@ -33,7 +34,9 @@ export function PracticeChart({
             {metric === "visits" ? count : careTime(visitMinutes(appointments))}
           </strong>
           <span>
-            {metric === "visits" ? "visits this week" : "scheduled this week"}
+            {metric === "visits"
+              ? `${countNoun(count, "visit")} this week`
+              : "scheduled this week"}
           </span>
         </div>
         <div className="pv-metric-toggle" aria-label="Practice chart metric">
@@ -70,7 +73,7 @@ export function PracticeChart({
           {days.map((d, i) => (
             <button
               key={d.short}
-              aria-label={`${d.name}: ${metric === "visits" ? `${values[i]} visits` : careTime(values[i])}`}
+              aria-label={`${d.name}: ${metric === "visits" ? countLabel(values[i], "visit") : careTime(values[i])}`}
               aria-pressed={day === i}
               onClick={() => onDay(i)}
             >

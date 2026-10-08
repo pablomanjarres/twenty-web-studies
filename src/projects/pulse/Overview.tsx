@@ -11,6 +11,7 @@ import { careTime, dailyVisits, visitMinutes } from "./overviewData";
 import { PracticeChart } from "./PracticeChart";
 import { UpcomingAppointments } from "./UpcomingAppointments";
 import { AppointmentLedger } from "./AppointmentLedger";
+import { countLabel } from "./countLabel";
 
 export function Overview({
   appointments,
@@ -72,7 +73,7 @@ export function Overview({
               return (
                 <span
                   key={i}
-                  title={`${i + 8}:00 · ${n} appointments`}
+                  title={`${i + 8}:00 · ${countLabel(n, "appointment")}`}
                   style={{ height: `${16 + n * 20}px` }}
                 />
               );
