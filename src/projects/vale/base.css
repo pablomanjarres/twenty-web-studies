@@ -1,0 +1,76 @@
+.vale-page {
+  --va-green: #294b3a;
+  --va-mist: #e3ece3;
+  --va-paper: #fafaf3;
+  --va-rule: #294b3a27;
+  background: var(--va-paper);
+  color: var(--va-green);
+  font-family: "Manrope", sans-serif;
+}
+.vale-page a {
+  color: inherit;
+  text-decoration: none;
+}
+.vale-page button {
+  cursor: pointer;
+}
+.vale-page h1,
+.vale-page h2,
+.vale-page h3 {
+  font-family: "The Foriene", "Cormorant Garamond", serif;
+  font-weight: 400;
+  margin: 0;
+}
+.vale-page h1 i,
+.vale-page h2 i {
+  font-family: "Instrument Serif", serif;
+  font-weight: 400;
+}
+.vale-page p {
+  line-height: 1.8;
+}
+.va-header {
+  height: 98px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  background: var(--va-paper);
+}
+.va-header .brand-logo {
+  font:
+    45px "The Foriene",
+    serif;
+  gap: 9px;
+  letter-spacing: -2.3px;
+}
+.va-header .brand-logo svg {
+  height: 31px;
+  width: 28px;
+}
+.va-header nav {
+  display: flex;
+  gap: 33px;
+  font-size: 11px;
+}
+.va-header nav a:hover {
+  opacity: 0.55;
+}
+.va-header > button {
+  border: 0;
+  background: transparent;
+  color: var(--va-green);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+}
+.va-header > button span {
+  border: 1px solid var(--va-rule);
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 10px;
+}
