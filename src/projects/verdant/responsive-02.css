@@ -1,0 +1,127 @@
+@media (max-width: 650px) {
+  .vd-header {
+    inset: 15px 20px auto;
+    gap: 15px;
+  }
+  .vd-header > a {
+    font-size: 21px;
+  }
+  .vd-header .brand-logo > svg {
+    width: 25px;
+    height: 25px;
+  }
+  .vd-header nav {
+    gap: 15px;
+    font-size: 9px;
+  }
+  .vd-header nav a {
+    min-height: 36px;
+    display: flex;
+    align-items: center;
+  }
+  .vd-header nav a:last-child {
+    max-width: 92px;
+    line-height: 1.6;
+  }
+  .vd-system {
+    padding: 160px 16px 0;
+    min-height: 0;
+  }
+  .vd-operating-notes {
+    top: 75px;
+    left: 20px;
+  }
+  .vd-operating-notes > span {
+    font-size: 6px;
+  }
+  .vd-operating-notes h1 {
+    font-size: 17px;
+    margin: 7px 0;
+  }
+  .vd-operating-notes p {
+    display: none;
+  }
+  .vd-source-legend {
+    top: 118px;
+    left: 16px;
+    right: 16px;
+    gap: 0;
+    padding: 0;
+    border: 0;
+    border-bottom: 1px solid var(--vd-line);
+    background: none;
+  }
+  .vd-source-legend > span {
+    display: none;
+  }
+  .vd-source-legend button {
+    flex: 1;
+    padding: 0 9px;
+    min-height: 43px;
+    font-size: 10px;
+  }
+  .vd-source-legend button svg {
+    width: 17px;
+  }
+  .vd-flow-diagram {
+    height: 515px;
+    overflow: hidden;
+  }
+  .vd-flow-lines {
+    display: none;
+  }
+  .vd-flow-diagram:before {
+    content: "";
+    position: absolute;
+    top: 25%;
+    bottom: 22%;
+    left: 50%;
+    border-left: 3px dashed #8b9a7170;
+  }
+  .vd-node {
+    border-color: #81917430;
+    background: #f9f8edc9;
+  }
+  .vd-node > svg {
+    height: 100px;
+  }
+  .vd-source {
+    top: 17px;
+    left: 8%;
+    width: 41%;
+    padding: 5px 12px 12px;
+  }
+  .vd-inverter {
+    top: 125px;
+    left: auto;
+    right: 6%;
+    width: 39%;
+    padding: 5px 10px 12px;
+  }
+  .vd-inverter > svg {
+    height: 100px;
+  }
+  .vd-home {
+    top: 265px;
+    left: 5%;
+    right: auto;
+    width: 43%;
+    padding: 5px 12px 12px;
+  }
+  .vd-battery {
+    top: 340px;
+    right: 4%;
+    bottom: auto;
+    width: 46%;
+    padding: 7px 4px;
+    display: block;
+  }
+  .vd-battery > svg {
+    width: 100%;
+    height: 87px;
+  }
+  .vd-battery > div {
+    width: 100%;
+    padding: 0 9px 6px;
+  }
+}
