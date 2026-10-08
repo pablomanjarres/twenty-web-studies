@@ -1,0 +1,54 @@
+.md-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 21px;
+}
+.md-stat {
+  background: var(--md-panel);
+  border: 1px solid var(--md-line);
+  border-radius: 5px;
+  padding: 17px 18px 15px;
+}
+.md-stat-label {
+  display: flex;
+  justify-content: space-between;
+  gap: 6px;
+  align-items: center;
+  font-size: 9px;
+  color: #9db1c3;
+}
+.md-stat-label svg {
+  color: #68869a;
+}
+.md-stat-value {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin: 19px 0 12px;
+}
+.md-stat-value > strong {
+  font: 27px "Space Grotesk";
+  white-space: nowrap;
+  letter-spacing: -1px;
+}
+.md-stat-value > svg {
+  width: 75px;
+  height: 31px;
+  color: var(--md-cyan);
+  opacity: 0.75;
+}
+.md-stat-change {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  color: #9de2ac;
+  font-size: 7px;
+  white-space: nowrap;
+}
+.md-stat-change small {
+  color: #698599;
+  font-size: 7px;
+  margin-left: 5px;
+}
