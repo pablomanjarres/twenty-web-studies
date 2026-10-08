@@ -3,11 +3,11 @@ export const brand: Brand = {
   slug: "salt",
   name: "Salt",
   category: "Food & hospitality",
-  tagline: "A little sea. A lot of soul.",
+  tagline: "Coastal food. A generous table.",
   purpose:
     "A neighborhood seafood restaurant serving honest coastal food and long, easy evenings.",
   description:
-    "Salt is a neighborhood seafood kitchen with a coastal point of view and a generous table. Fresh catches, simple ingredients, and a lively room make it a place for both everyday lunches and dinners that stretch into the evening. The visual identity pairs spirited red typography with navy nautical details and bright food photography. A scallop shell anchors the brand without relying on familiar restaurant lettering or crests. The website puts appetite first, then makes the practical details easy: explore the seasonal menu, learn about the kitchen, and choose a table time. It is warm, direct, and full of seaside character.",
+    "Salt is a coastal neighborhood kitchen with a generous table and a menu shaped by the season. Its website opens as a printed menu spread, pairing dish names, prices and ingredient notes with an overhead plate of garlic prawns. Tomato-red edge tabs make lunch, dinner and drinks easy to explore, while navy rules and cream paper bring the warmth of a restaurant menu into the page. A scallop-shell symbol connects the identity to the coast. Kitchen photographs continue the story, and a receipt-style table planner keeps the practical details close. The experience puts appetite, good company and clear information at the center.",
   colors: [
     { name: "Tomato", hex: "#E64732" },
     { name: "Sea navy", hex: "#183445" },
@@ -20,7 +20,7 @@ export const brand: Brand = {
   logoMeaning:
     "A fan-shaped scallop shell brings the coast to the table, with open ribs suggesting shared plates and good company.",
   artDirection:
-    "Spirited Tahoe typography, tomato red, simple scallop and wave drawings, close food photography, and an asymmetric seasonal menu.",
+    "A folded seasonal menu on cream paper, tomato-red edge tabs, price-aligned dish columns, an overhead photographic plate cutout and a receipt-style table planner; compact Tahoe titles rather than a large slogan.",
   tags: [
     "Restaurant",
     "Seafood",
