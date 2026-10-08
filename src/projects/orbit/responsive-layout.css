@@ -1,0 +1,139 @@
+@media (min-width: 1700px) {
+  .orbit-v3 .ov3-main {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+  .orbit-v3 .ov3-overview-top,
+  .orbit-v3 .ov3-overview-bottom {
+    grid-template-columns: minmax(0, 1fr) 325px;
+  }
+  .orbit-v3 .ov3-roadmap-row {
+    height: 49px;
+  }
+}
+@media (max-width: 1250px) {
+  .orbit-v3 {
+    grid-template-columns: 170px minmax(0, 1fr);
+  }
+  .orbit-v3 .ov3-navigation {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .orbit-v3 .ov3-main {
+    padding: 0 23px;
+  }
+  .orbit-v3 .ov3-overview-top,
+  .orbit-v3 .ov3-overview-bottom {
+    grid-template-columns: minmax(0, 1fr) 255px;
+    gap: 16px;
+  }
+  .orbit-v3 .ov3-page-heading h1 {
+    font-size: 26px;
+  }
+  .orbit-v3 .ov3-date {
+    display: none;
+  }
+  .orbit-v3 .ov3-task-progress {
+    display: none;
+  }
+  .orbit-v3 .ov3-task-row,
+  .orbit-v3 .ov3-ledger-labels {
+    grid-template-columns: minmax(0, 1fr) 92px 70px;
+  }
+  .orbit-v3 .ov3-ledger-labels > span:nth-child(3) {
+    display: none;
+  }
+  .orbit-v3 .ov3-task-due {
+    font-size: 8px;
+  }
+  .orbit-v3 .ov3-roadmap-row button > svg {
+    display: none;
+  }
+  .orbit-v3 .ov3-roadmap-row button {
+    padding: 0 9px;
+  }
+  .orbit-v3 .ov3-roadmap-row img {
+    height: 23px;
+    width: 23px;
+  }
+  .orbit-v3 .ov3-roadmap-row small {
+    display: none;
+  }
+  .orbit-v3 .ov3-section-note {
+    display: none;
+  }
+}
+@media (max-width: 1050px) {
+  .orbit-v3 {
+    grid-template-columns: 75px minmax(0, 1fr);
+  }
+  .orbit-v3 .ov3-navigation {
+    padding: 30px 12px;
+  }
+  .orbit-v3 .ov3-navigation > .brand-logo {
+    padding: 0;
+    justify-content: center;
+  }
+  .orbit-v3 .ov3-navigation .brand-logo > span,
+  .orbit-v3 .ov3-workspace,
+  .orbit-v3 .ov3-nav-label,
+  .orbit-v3 .ov3-project-nav,
+  .orbit-v3 .ov3-nav-foot > svg,
+  .orbit-v3 .ov3-nav-foot > p,
+  .orbit-v3 .ov3-nav-foot > div span,
+  .orbit-v3 .ov3-nav-foot > div > svg {
+    display: none;
+  }
+  .orbit-v3 .ov3-navigation nav {
+    margin-top: 40px;
+  }
+  .orbit-v3 .ov3-navigation nav button {
+    font-size: 0;
+    padding: 14px;
+    gap: 0;
+  }
+  .orbit-v3 .ov3-navigation nav button i {
+    display: none;
+  }
+  .orbit-v3 .ov3-nav-foot > div {
+    border: 0;
+    justify-content: center;
+  }
+  .orbit-v3 .ov3-page-heading h1 {
+    font-size: 25px;
+  }
+  .orbit-v3 .ov3-allocation footer {
+    gap: 14px;
+  }
+  .orbit-v3 .ov3-roadmap {
+    padding: 23px 20px 16px;
+  }
+}
+@media (max-width: 850px) {
+  .orbit-v3 .ov3-overview-top,
+  .orbit-v3 .ov3-overview-bottom {
+    grid-template-columns: 1fr;
+  }
+  .orbit-v3 .ov3-focus {
+    display: none;
+  }
+  .orbit-v3 .ov3-team-column {
+    grid-template-columns: 1fr 1fr;
+  }
+  .orbit-v3 .ov3-roadmap-row small {
+    display: inline;
+  }
+  .orbit-v3 .ov3-roadmap-row button > svg {
+    display: block;
+  }
+  .orbit-v3 .ov3-task-progress {
+    display: flex;
+  }
+  .orbit-v3 .ov3-task-row,
+  .orbit-v3 .ov3-ledger-labels {
+    grid-template-columns: minmax(0, 1fr) 92px 82px 88px;
+  }
+  .orbit-v3 .ov3-ledger-labels > span:nth-child(3) {
+    display: block;
+  }
+}
