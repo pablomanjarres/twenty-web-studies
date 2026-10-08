@@ -1,0 +1,98 @@
+.estelle-page {
+  --est-ivory: #f3ece0;
+  --est-plum: #211419;
+  --est-gold: #d5be98;
+  --est-rule: #c9bfaf;
+  background: var(--est-ivory);
+  color: var(--est-plum);
+  font-family: "DM Sans", sans-serif;
+}
+.estelle-page * {
+  box-sizing: border-box;
+}
+.estelle-page h1,
+.estelle-page h2,
+.estelle-page h3,
+.estelle-page p,
+.estelle-page figure {
+  margin: 0;
+}
+.estelle-page h1,
+.estelle-page h2,
+.estelle-page h3 {
+  font-family: "The Foriene", serif;
+  font-weight: 400;
+}
+.estelle-page button,
+.estelle-page input,
+.estelle-page select {
+  font: inherit;
+}
+.estelle-page button {
+  cursor: pointer;
+}
+.estelle-page img {
+  display: block;
+  max-width: 100%;
+}
+.estelle-page a {
+  color: inherit;
+  text-decoration: none;
+}
+.estelle-page button:focus-visible,
+.estelle-page a:focus-visible,
+.estelle-page input:focus-visible,
+.estelle-page select:focus-visible {
+  outline: 1px solid var(--est-plum);
+  outline-offset: 5px;
+}
+.estelle-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  padding: 26px 42px;
+  font-size: 10px;
+  letter-spacing: 0.02em;
+}
+.estelle-header > span {
+  text-align: center;
+}
+.estelle-header > a:last-child {
+  text-align: right;
+}
+.estelle-section-label {
+  border-top: 1px solid var(--est-rule);
+  padding-top: 18px;
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  font-size: 9px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.estelle-micro {
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.estelle-footer {
+  padding: 30px 42px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  font-size: 9px;
+}
+.estelle-footer .brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.estelle-footer .brand-logo svg {
+  width: 23px;
+  height: 23px;
+}
+.estelle-footer .brand-logo > span {
+  font-family: "The Foriene", serif;
+  font-size: 25px;
+}
