@@ -1,10 +1,4 @@
-@media (max-width: 1050px) {
-}
-@media (max-width: 650px) {
-}
-
-@media (max-width: 900px) {
-}@media (max-width: 1100px) {
+@media (max-width: 1100px) {
   .cinder-order-strip {
     gap: 18px;
     grid-template-columns: 1.5fr 0.6fr 1fr;
@@ -30,5 +24,62 @@
   }
   .cinder-roast-ledger > div {
     gap: 12px;
+  }
+}
+@media (max-width: 760px) {
+  .cinder-header {
+    height: 60px;
+    gap: 15px;
+    padding: 0 5%;
+  }
+  .cinder-header .brand-logo {
+    font-size: 27px;
+  }
+  .cinder-header .brand-logo svg {
+    width: 22px;
+    height: 22px;
+  }
+  .cinder-header > span,
+  .cinder-header nav > a {
+    display: none;
+  }
+  .cinder-header nav {
+    gap: 0;
+  }
+  .cinder-header button {
+    font-size: 10px;
+  }
+  .cinder-order-strip {
+    padding: 20px 5%;
+    gap: 17px 20px;
+    grid-template-columns: 1fr 85px;
+  }
+  .cinder-grind-controls .cinder-label {
+    font-size: 8px;
+  }
+  .cinder-grind-controls button {
+    font-size: 9px;
+    padding: 8px;
+  }
+  .cinder-grind-controls > div {
+    gap: 3px;
+    margin-top: 9px;
+  }
+  .cinder-order-quantity > .cinder-label {
+    font-size: 7px;
+  }
+  .cinder-quantity button {
+    width: 26px;
+    height: 32px;
+  }
+  .cinder-quantity output {
+    width: 20px;
+    font-size: 10px;
+  }
+  .cinder-order-strip > .cinder-order-button {
+    grid-column: 1/-1;
+  }
+  .cinder-order-button {
+    font-size: 11px !important;
   }
 }
