@@ -1,0 +1,155 @@
+.sprinto {
+  --sp-violet: #6535f4;
+  --sp-lime: #ddfc6b;
+  --sp-ink: #19152d;
+  --sp-paper: #f2f0f7;
+  color: var(--sp-ink);
+  background: var(--sp-paper);
+  font-family: "DM Sans", sans-serif;
+}
+.sprinto h1,
+.sprinto h2,
+.sprinto h3,
+.sprinto p {
+  margin: 0;
+}
+.sp-court-stage {
+  padding: 0 28px;
+  background: var(--sp-violet);
+}
+.sp-header {
+  min-height: 87px;
+  display: flex;
+  align-items: center;
+  gap: 45px;
+  color: var(--sp-paper);
+}
+.sp-header > a {
+  text-decoration: none;
+  font-size: 26px;
+}
+.sp-header > span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+}
+.sp-header nav {
+  display: flex;
+  gap: 26px;
+  margin-left: auto;
+  font-size: 12px;
+}
+.sp-header nav a {
+  text-decoration: none;
+  display: flex;
+  gap: 7px;
+  align-items: center;
+}
+.sp-environment {
+  position: relative;
+  min-height: 650px;
+  isolation: isolate;
+  color: #fff;
+  border: 1px solid #baa1f866;
+}
+.sp-environment > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 37% center;
+  z-index: -2;
+}
+.sp-environment:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(90deg, #19152d44 0%, transparent 65%);
+}
+.sp-scene-title {
+  position: absolute;
+  left: 36px;
+  top: 35px;
+}
+.sp-scene-title > span {
+  font:
+    10px "IBM Plex Mono",
+    monospace;
+  letter-spacing: 0.1em;
+}
+.sp-scene-title h1 {
+  font:
+    400 60px/1.04 "Anton",
+    sans-serif;
+  text-transform: uppercase;
+  letter-spacing: -0.025em;
+  margin: 12px 0 12px;
+  max-width: 400px;
+}
+.sp-scene-title p {
+  font-size: 12px;
+}
+.sp-court-caption {
+  position: absolute;
+  bottom: 35px;
+  left: 36px;
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+.sp-court-caption > span {
+  font:
+    9px "IBM Plex Mono",
+    monospace;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.sp-court-caption i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--sp-lime);
+}
+.sp-court-caption p {
+  font-size: 12px;
+  line-height: 1.6;
+}
+.sp-club-strip {
+  padding: 20px 10px;
+  display: flex;
+  justify-content: space-between;
+  color: var(--sp-lime);
+  font-size: 12px;
+}
+.sp-club-strip > span:first-child {
+  font-size: 17px;
+}
+.sp-section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 30px;
+  margin-bottom: 35px;
+}
+.sp-section-head span {
+  font:
+    10px "IBM Plex Mono",
+    monospace;
+  letter-spacing: 0.06em;
+}
+.sp-section-head h2 {
+  font:
+    400 40px/1.1 "Anton",
+    sans-serif;
+  text-transform: uppercase;
+  margin-top: 14px;
+  letter-spacing: -0.02em;
+}
+.sp-section-head > p {
+  font-size: 13px;
+  line-height: 1.7;
+}
