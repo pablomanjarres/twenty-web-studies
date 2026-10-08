@@ -1,10 +1,4 @@
-@media (max-width: 1000px) {
-}
-@media (max-width: 700px) {
-}
-
-@media (max-width: 700px) {
-}@media (max-width: 1100px) {
+@media (max-width: 1100px) {
   .forma-archive {
     grid-template-columns: minmax(0, 1fr) 180px;
     gap: 23px;
@@ -20,5 +14,146 @@
   }
   .forma-material-wide img {
     height: 650px;
+  }
+}
+@media (max-width: 760px) {
+  .forma-header {
+    height: 72px;
+    padding: 0 5%;
+    gap: 15px;
+  }
+  .forma-header .brand-logo {
+    font-size: 22px;
+  }
+  .forma-header > span {
+    display: none;
+  }
+  .forma-header nav {
+    gap: 19px;
+    font-size: 10px;
+  }
+  .forma-archive {
+    display: block;
+    padding: 20px 5% 0;
+  }
+  .forma-selected-project figure > img {
+    height: 360px;
+    min-height: 0;
+    object-position: 55% center;
+  }
+  .forma-selected-project figcaption {
+    padding: 14px 12px;
+    font-size: 7px;
+  }
+  .forma-project-name {
+    flex-wrap: wrap;
+    padding: 19px 0;
+    gap: 12px;
+  }
+  .forma-project-name h1 {
+    font-size: 29px;
+    width: 90%;
+  }
+  .forma-project-name > div {
+    margin-left: 0;
+    font-size: 8px;
+    display: flex;
+    gap: 20px;
+  }
+  .forma-project-name > a {
+    margin-left: auto;
+    padding: 0;
+  }
+  .forma-project-index {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 27px;
+    gap: 0 20px;
+  }
+  .forma-index-title {
+    width: 100%;
+    padding: 0 0 12px;
+  }
+  .forma-project-index > button {
+    width: calc(50% - 10px);
+    padding: 16px 0;
+  }
+  .forma-project-index b {
+    font-size: 15px;
+    margin-top: 12px;
+  }
+  .forma-project-index small {
+    font-size: 8px;
+  }
+  .forma-project-index img,
+  .forma-index-note {
+    display: none;
+  }
+  .forma-project-index > button[aria-pressed="true"]::before {
+    bottom: 18px;
+  }
+  .forma-dossier {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding: 55px 5%;
+  }
+  .forma h2 {
+    font-size: 31px;
+  }
+  .forma-dossier p {
+    font-size: 12px;
+  }
+  .forma-dossier dl {
+    font-size: 10px;
+  }
+  .forma-dossier dl > div {
+    grid-template-columns: 100px 1fr;
+  }
+  .forma-plan {
+    padding: 10px 0 0;
+  }
+  .forma-plan figcaption {
+    font-size: 7px;
+    margin-top: 12px;
+  }
+  .forma-materials {
+    grid-template-columns: 1fr;
+    padding: 45px 5%;
+    gap: 40px;
+  }
+  .forma-material-wide img {
+    height: 480px;
+  }
+  .forma-material-close {
+    padding-top: 35px;
+  }
+  .forma-material-close img {
+    height: 310px;
+  }
+  .forma-practice {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding: 45px 5%;
+  }
+  .forma-practice h2 {
+    font-size: 36px;
+  }
+  .forma-practice-intro {
+    font-size: 15px;
+  }
+  .forma-contact {
+    padding: 45px 5% 25px;
+  }
+  .forma-contact-title {
+    font-size: 31px;
+    gap: 20px;
+  }
+  .forma-contact-bottom {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  .forma-contact-bottom p {
+    order: 3;
+    width: 100%;
   }
 }
