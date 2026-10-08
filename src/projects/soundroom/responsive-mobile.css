@@ -1,0 +1,169 @@
+@media (max-width: 650px) {
+  .soundroom-page {
+    display: block;
+  }
+  .sr-sidebar {
+    min-height: 0;
+    padding: 19px 6%;
+    border-right: 0;
+    border-bottom: 1px solid #39363e;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+  }
+  .sr-logo .brand-logo > span {
+    font-size: 25px;
+  }
+  .sr-side-caption,
+  .sr-collection,
+  .sr-side-bottom,
+  .sr-sidebar nav a {
+    display: none;
+  }
+  .sr-sidebar nav {
+    flex-direction: row;
+    gap: 5px;
+  }
+  .sr-sidebar nav button {
+    width: auto;
+    padding: 9px 12px;
+    font-size: 0;
+    gap: 0;
+  }
+  .sr-sidebar nav button svg {
+    height: 18px;
+    width: 18px;
+  }
+  .sr-workspace {
+    padding: 22px 5% 0;
+  }
+  .sr-topbar {
+    display: block;
+    margin-bottom: 22px;
+  }
+  .sr-topbar > span {
+    display: none;
+  }
+  .sr-search {
+    width: 100%;
+    margin: 0;
+  }
+  .sr-feature {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+  .sr-feature-copy {
+    padding: 22px;
+  }
+  .sr-feature-copy h1 {
+    font-size: 88px;
+    margin: 28px 0 20px;
+  }
+  .sr-feature-bottom {
+    display: flex;
+    align-items: flex-end;
+    gap: 14px;
+    margin: 0;
+  }
+  .sr-feature-bottom button {
+    margin: 0;
+    font-size: 8px;
+    padding: 11px 12px;
+  }
+  .sr-feature-art {
+    height: 200px;
+  }
+  .sr-record {
+    width: 210px;
+    height: 210px;
+    top: 20px;
+    right: -25px;
+  }
+  .sr-art-note {
+    font-size: 8px;
+    max-width: 125px;
+    bottom: 22px;
+  }
+  .sr-releases {
+    padding: 30px 0;
+  }
+  .sr-section-title h2 {
+    font-size: 30px;
+  }
+  .sr-section-title > span {
+    font-size: 8px;
+    max-width: 125px;
+    gap: 10px;
+  }
+  .sr-release-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 25px 15px;
+  }
+  .sr-cover-title {
+    font-size: 35px;
+  }
+  .sr-drive .sr-cover-title,
+  .sr-skies .sr-cover-title {
+    font-size: 38px;
+  }
+  .sr-release h3 {
+    font-size: 12px;
+  }
+  .sr-release p {
+    font-size: 10px;
+  }
+  .sr-track {
+    gap: 11px;
+    padding: 11px 4px;
+  }
+  .sr-track-genre {
+    display: none;
+  }
+  .sr-track > svg {
+    margin-left: 7px;
+  }
+  .sr-queue {
+    gap: 12px;
+    padding: 18px 0;
+  }
+  .sr-queue-track {
+    min-width: 0;
+  }
+  .sr-queue-track img {
+    width: 39px;
+    height: 39px;
+  }
+  .sr-queue > button {
+    font-size: 0;
+    gap: 0;
+    padding: 11px;
+  }
+  .sr-queue > button svg {
+    width: 18px;
+  }
+}
+
+@media (max-width: 900px) {
+  .sr-sidebar nav button,
+  .sr-cover-queue,
+  .sr-release-title button,
+  .sr-queue > button {
+    min-width: 44px;
+    min-height: 44px;
+  }
+  .sr-cover-queue {
+    right: 7px;
+    bottom: 7px;
+  }
+  .sr-release-title {
+    margin-top: 7px;
+  }
+  .sr-search {
+    min-height: 44px;
+  }
+}
+.sr-record-centre .brand-logo svg {
+  width: 31px;
+  height: 31px;
+}
