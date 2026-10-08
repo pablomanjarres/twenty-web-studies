@@ -1,0 +1,116 @@
+.kanso {
+  --kanso-paper: #ead9d2;
+  --kanso-ivory: #f8f4ef;
+  --kanso-ink: #543c34;
+  --kanso-line: #543c3430;
+  --kanso-muted: #79635a;
+  background: var(--kanso-paper);
+  color: var(--kanso-ink);
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  line-height: 1.55;
+}
+.kanso * {
+  box-sizing: border-box;
+}
+.kanso button,
+.kanso input {
+  font: inherit;
+  color: inherit;
+}
+.kanso button {
+  border: 0;
+  cursor: pointer;
+  background: none;
+}
+.kanso button:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+.kanso a {
+  color: inherit;
+  text-decoration: none;
+}
+.kanso h1,
+.kanso h2,
+.kanso h3,
+.kanso p,
+.kanso figure {
+  margin: 0;
+}
+.kanso h1,
+.kanso h2,
+.kanso h3 {
+  font-family: "Commune", serif;
+  font-weight: 400;
+}
+.kanso button:focus-visible,
+.kanso a:focus-visible,
+.kanso input:focus-visible {
+  outline: 2px solid var(--kanso-ink);
+  outline-offset: 5px;
+}
+.kanso-label {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+.kanso-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+.kanso-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  height: 76px;
+  padding: 0 4.5%;
+  border-bottom: 1px solid var(--kanso-line);
+  font-size: 12px;
+}
+.kanso-header-mark {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.kanso-header-mark .brand-logo svg {
+  width: 23px;
+  height: 23px;
+}
+.kanso-header nav,
+.kanso-utilities {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+.kanso-header nav a {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.kanso-utilities {
+  gap: 20px;
+}
+.kanso-utilities button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 0;
+}
+.kanso-utilities input {
+  width: 155px;
+  border: 0;
+  border-bottom: 1px solid var(--kanso-ink);
+  background: transparent;
+  padding: 5px 0;
+}
+.kanso-bag-trigger span {
+  white-space: nowrap;
+}
