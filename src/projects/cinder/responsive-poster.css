@@ -1,0 +1,104 @@
+@media (max-width: 1100px) {
+  .cinder-main-package {
+    width: 545px;
+    height: 545px;
+    top: 15px;
+  }
+  .cinder-poster-title h1 {
+    font-size: 57px;
+  }
+  .cinder-tasting {
+    right: 7%;
+    width: 20%;
+  }
+  .cinder-tasting > span:not(.cinder-label) {
+    font-size: 26px;
+  }
+}
+@media (max-width: 760px) {
+  .cinder-roast-poster {
+    height: auto;
+    padding-top: 450px;
+  }
+  .cinder-poster-title {
+    left: 5%;
+    top: 24px;
+    width: 47%;
+  }
+  .cinder-poster-title .cinder-label {
+    font-size: 7px;
+    max-width: 125px;
+  }
+  .cinder-poster-title h1 {
+    font-size: 42px;
+    line-height: 1.05;
+    margin: 12px 0;
+    max-width: 170px;
+  }
+  .cinder-poster-title p {
+    display: none;
+  }
+  .cinder-main-package {
+    width: 375px;
+    height: 375px;
+    top: 70px;
+    left: 51%;
+    transform: translateX(-50%) rotate(-9deg);
+  }
+  .cinder-variants {
+    top: 23px;
+    right: 5%;
+    gap: 4px;
+  }
+  .cinder-variants button,
+  .cinder-variants img {
+    width: 32px;
+  }
+  .cinder-variants img {
+    height: 47px;
+  }
+  .cinder-variants span {
+    font-size: 6px;
+  }
+  .cinder-origin-label {
+    position: static;
+    width: auto;
+  }
+  .cinder-origin-label .cinder-label {
+    font-size: 7px;
+  }
+  .cinder-origin-label strong {
+    font-size: 20px;
+    margin: 9px 0;
+  }
+  .cinder-origin-label > span:last-child {
+    font-size: 8px;
+  }
+  .cinder-tasting {
+    position: static;
+    width: auto;
+  }
+  .cinder-tasting .cinder-label {
+    font-size: 7px;
+    margin-bottom: 8px;
+  }
+  .cinder-tasting > span:not(.cinder-label) {
+    font-size: 19px;
+    line-height: 1.35;
+  }
+  .cinder-poster-floor {
+    display: none;
+  }
+  .cinder-poster-facts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    padding: 20px 5% 27px;
+    border-top: 1px solid #f4ebda45;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cinder-variants button {
+    transition: none;
+  }
+}
