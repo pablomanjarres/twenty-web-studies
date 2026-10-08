@@ -1,0 +1,170 @@
+.bloom-streak small {
+  display: block;
+  font-size: 7px;
+  color: #b89d80;
+  margin-top: 4px;
+}
+
+.bloom-main-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 270px;
+  gap: 24px;
+}
+
+.bloom-main-column {
+  min-width: 0;
+}
+
+.bloom-growth {
+  position: relative;
+  background: #ddeba7;
+  border: 1px solid #d4e29d;
+  border-radius: 18px;
+  padding: 29px 29px 30px;
+  overflow: hidden;
+  min-height: 255px;
+}
+
+.bloom-tiny {
+  font-size: 8px;
+  color: #819464;
+}
+
+.bloom-growth h2 {
+  font:
+    400 35px/1.12 "Sunny Side",
+    sans-serif;
+  letter-spacing: -0.045em;
+  margin: 13px 0;
+  color: #425737;
+  position: relative;
+  z-index: 1;
+}
+
+.bloom-growth p {
+  font-size: 9px;
+  line-height: 1.8;
+  color: #6d8258;
+  position: relative;
+  z-index: 1;
+}
+
+.bloom-growth > div > button {
+  background: #3d5134;
+  color: white;
+  border: 0;
+  padding: 11px 14px;
+  display: flex;
+  align-items: center;
+  gap: 19px;
+  font-size: 9px;
+  border-radius: 7px;
+  margin-top: 18px;
+  position: relative;
+  z-index: 1;
+}
+
+.bloom-learning-illustration {
+  position: absolute;
+  width: 250px;
+  height: 210px;
+  bottom: 0;
+  right: 3px;
+}
+
+.bloom-banner-goal {
+  position: absolute;
+  right: 23px;
+  top: 24px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.bloom-banner-goal > svg {
+  width: 42px;
+  height: 42px;
+}
+
+.bloom-banner-goal > span > b {
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.bloom-banner-goal > span > small {
+  display: block;
+  font-size: 7px;
+  color: #819464;
+  margin-top: 4px;
+}
+
+.bloom-progress-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.bloom-progress-stats article {
+  background: white;
+  border: 1px solid #e9ece4;
+  padding: 16px 16px 15px;
+  border-radius: 12px;
+}
+
+.bloom-progress-stats article > div {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  font-size: 8px;
+  color: #8b968a;
+}
+
+.bloom-progress-stats article > div > svg {
+  width: 13px;
+  flex-shrink: 0;
+}
+
+.bloom-progress-stats article > b {
+  display: block;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: -0.055em;
+  margin: 16px 0 7px;
+}
+
+.bloom-progress-stats article > small {
+  font-size: 7px;
+  color: #a0aa97;
+}
+
+.bloom-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.bloom-section-heading h2 {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  margin: 0;
+}
+
+.bloom-section-heading > a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 8px;
+  color: #8b968a;
+}
+
+.bloom-section-heading > span {
+  font-size: 8px;
+  color: #8b968a;
+}
+
+.bloom-courses {
+  margin-top: 31px;
+}
