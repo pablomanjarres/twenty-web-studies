@@ -1,2 +1,131 @@
-@media (max-width: 620px) {
+@media (max-width: 760px) {
+  .md-port-schematic,
+  .md-network-map {
+    min-height: 450px;
+  }
+  .md-port-caption {
+    top: 15px;
+    left: 14px;
+    right: 14px;
+  }
+  .md-port-caption > div {
+    padding: 11px 13px;
+  }
+  .md-port-caption h2 {
+    font-size: 20px;
+  }
+  .md-port-caption > div > span {
+    font-size: 8px;
+  }
+  .md-port-cartography {
+    inset: 0;
+    width: 140%;
+    height: 100%;
+    left: -20%;
+  }
+  .md-cartography {
+    height: 310px;
+    top: 100px;
+  }
+  .md-map-coordinate {
+    top: 108px;
+    left: 15px;
+    font-size: 8px;
+  }
+  .md-map-tools {
+    right: 14px;
+    top: 15px;
+  }
+  .md-map-tools button {
+    width: 44px;
+    min-height: 44px;
+  }
+  .md-plan-focus {
+    left: 14px;
+    right: auto;
+    top: auto;
+    bottom: 44px;
+    width: 260px;
+    padding: 10px 12px;
+  }
+  .md-map-legend {
+    left: 14px;
+    right: 14px;
+    bottom: 18px;
+    font-size: 8px;
+  }
+  .md-operations-docks {
+    position: static;
+    padding: 12px 14px 18px;
+    display: grid;
+    gap: 12px;
+    grid-template-columns: minmax(0, 1fr);
+    background: #122335;
+  }
+  .md-event-dock {
+    display: block;
+  }
+  .md-load-dock,
+  .md-event-dock {
+    padding: 16px;
+  }
+  .md-load-identity > .md-vehicle-study {
+    width: 150px;
+  }
+  .md-load-facts b {
+    font-size: 12px;
+  }
+  .md-load-facts small {
+    font-size: 10px;
+  }
+  .md-event-dock h3 {
+    font-size: 17px;
+  }
+  .md-event-dock p {
+    font-size: 12px;
+  }
+  .md-port-study {
+    min-height: 470px;
+  }
+  .md-port-study > header {
+    top: 25px;
+    left: 20px;
+  }
+  .md-port-study h2 {
+    font-size: 32px;
+  }
+  .md-port-study > p {
+    left: 20px;
+    right: auto;
+    bottom: 90px;
+    font-size: 14px;
+  }
+  .md-port-study > footer {
+    left: 20px;
+    right: 20px;
+    font-size: 8px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .md-port-study > footer > span {
+    width: 100%;
+  }
+  .md-table-panel {
+    padding: 25px 14px;
+  }
+  .md-table-header {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .md-table-header h2 {
+    font-size: 25px;
+  }
+  .md-schedule {
+    padding: 28px 22px;
+  }
+  .md-schedule select,
+  .md-schedule input {
+    font-size: 14px;
+  }
 }
