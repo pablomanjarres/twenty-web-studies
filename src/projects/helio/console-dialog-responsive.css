@@ -1,0 +1,59 @@
+@media (max-width: 600px) {
+  .hc-dialog-backdrop {
+    padding: 10px;
+    align-items: flex-start;
+  }
+  .hc-deploy-dialog {
+    margin-top: 10px;
+    max-height: calc(100svh - 40px);
+  }
+  .hc-deploy-dialog > header {
+    padding: 18px;
+  }
+  .hc-deploy-dialog > header h2 {
+    font-size: 18px;
+  }
+  .hc-deploy-config {
+    padding: 18px;
+    gap: 12px;
+  }
+  .hc-deploy-dialog .helio-panel-label {
+    padding: 15px 18px;
+    font-size: 8px;
+  }
+  .hc-deploy-dialog .helio-command {
+    margin: 18px 18px 0;
+    font-size: 8px;
+  }
+  .hc-deploy-dialog .helio-build-trace > header {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+  .hc-deploy-dialog .helio-build-trace p {
+    font-size: 10px;
+  }
+  .hc-deploy-dialog .helio-run-row {
+    margin: 18px 18px 0;
+    gap: 12px;
+  }
+  .hc-deploy-dialog .helio-events {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+  .hc-deploy-dialog .helio-events > div {
+    gap: 10px;
+  }
+  .hc-deploy-dialog .helio-events b {
+    font-size: 10px;
+  }
+  .hc-deploy-dialog .helio-events small {
+    font-size: 7px;
+  }
+  .hc-deploy-dialog .helio-events time {
+    font-size: 7px;
+  }
+  .hc-deploy-dialog .helio-endpoint {
+    padding: 20px 18px;
+    font-size: 8px;
+  }
+}
