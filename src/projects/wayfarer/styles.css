@@ -1,4 +1,5 @@
-@import "./shell.css";
-@import "./journeys.css";
-@import "./editorial.css";
+@import "./layout.css";
+@import "./atlas.css";
+@import "./itinerary.css";
+@import "./notes.css";
 @import "./responsive.css";
