@@ -1,0 +1,102 @@
+@media (min-width: 1600px) {
+  .estelle-piece-index {
+    padding-left: 110px;
+    padding-right: 110px;
+  }
+}
+@media (max-width: 1100px) {
+  .estelle-piece-index {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+  .estelle-piece-list {
+    gap: 30px;
+  }
+  .estelle-piece-list button {
+    gap: 14px;
+  }
+  .estelle-piece-list img {
+    width: 80px;
+    height: 110px;
+  }
+  .estelle-appointment {
+    padding-left: 42px;
+    padding-right: 42px;
+  }
+  .estelle-visit-layout {
+    gap: 55px;
+  }
+}
+@media (max-width: 760px) {
+  .estelle-piece-index {
+    padding: 0 25px 65px;
+  }
+  .estelle-piece-list {
+    gap: 25px;
+  }
+  .estelle-piece-list button {
+    flex-wrap: wrap;
+    gap: 13px;
+  }
+  .estelle-piece-list img {
+    width: 85px;
+    height: 115px;
+  }
+  .estelle-piece-list button > span:last-child {
+    width: 100%;
+    margin-left: 0;
+    text-align: right;
+  }
+  .estelle-piece-list h3 {
+    font-size: 27px;
+  }
+  .estelle-appointment {
+    padding: 30px 25px 45px;
+  }
+  .estelle-visit-layout {
+    gap: 37px;
+    grid-template-columns: 1fr;
+    padding-top: 37px;
+  }
+  .estelle-visit-layout h2 {
+    font-size: 46px;
+  }
+  .estelle-visit-layout > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+  }
+  .estelle-visit-layout > div > .estelle-micro {
+    grid-column: 1/-1;
+  }
+  .estelle-visit-layout h2 {
+    grid-column: 1/-1;
+    margin: 18px 0;
+  }
+  .estelle-visit-piece {
+    margin-top: 5px;
+  }
+}
+@media (max-width: 480px) {
+  .estelle-piece-list {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .estelle-piece-list button {
+    flex-wrap: nowrap;
+    gap: 24px;
+  }
+  .estelle-piece-list button > span:last-child {
+    width: auto;
+    margin-left: auto;
+  }
+  .estelle-visit-layout > div {
+    grid-template-columns: 1fr;
+  }
+  .estelle-visit-piece {
+    margin-top: 25px;
+  }
+  .estelle-visit-row {
+    gap: 20px;
+  }
+}
