@@ -10,14 +10,17 @@ export type CollectionGroup = (typeof collectionGroups)[number];
 export function groupFor(
   brand: Brand,
 ): Exclude<CollectionGroup, "All projects"> {
-  const text = `${brand.category} ${brand.purpose}`.toLowerCase();
+  const category = brand.category.toLowerCase();
+  const tags = brand.tags.map((tag) => tag.toLowerCase());
   return /dashboard|workspace|developer platform|logistics platform|music platform/.test(
-    text,
+    category,
   )
     ? "Dashboards"
-    : /ecommerce|store|shop|ceramic|skincare|jewel/.test(text)
+    : tags.includes("ecommerce") ||
+        /store|shop|ceramic|skincare|jewel/.test(category)
       ? "Shops"
-      : /magazine|journal|editorial/.test(text)
+      : tags.includes("publishing") ||
+          /magazine|journal|editorial/.test(category)
         ? "Editorial"
         : "Landing pages";
 }

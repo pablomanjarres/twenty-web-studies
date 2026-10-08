@@ -21,8 +21,7 @@ export function UpcomingAppointments({
       <div className="pv-card-title">
         <h2>
           Daily
-          <br />
-          appointments
+          <br /> appointments
         </h2>
         <button aria-label="Open full calendar" onClick={onCalendar}>
           <ArrowUpRight size={19} />
