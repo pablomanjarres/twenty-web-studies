@@ -1,0 +1,171 @@
+@media (max-width: 700px) {
+  .pulse-care-grid,
+  .pulse-bottom-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .pulse-appointments,
+  .pulse-patient,
+  .pulse-activity,
+  .pulse-team {
+    padding: 20px;
+  }
+  .pulse-section-heading {
+    gap: 10px;
+  }
+  .pulse-section-heading h2 {
+    font-size: 17px;
+  }
+  .pulse-outline-button {
+    font-size: 7px;
+    padding: 7px 8px;
+    gap: 4px;
+  }
+  .pulse-date-strip {
+    gap: 5px;
+    padding: 21px 0;
+  }
+  .pulse-date-strip button {
+    font-size: 8px;
+  }
+  .pulse-date-strip button strong {
+    font-size: 20px;
+  }
+  .pulse-appointment-toolbar > span {
+    font-size: 9px;
+  }
+  .pulse-appointment-toolbar small {
+    display: inline-block;
+    font-size: 7px;
+    margin-left: 4px;
+  }
+  .pulse-appointment-toolbar select {
+    font-size: 7px;
+    max-width: 116px;
+  }
+  .pulse-appointment-row {
+    gap: 9px;
+    padding: 15px 4px;
+  }
+  .pulse-appointment-time {
+    width: 35px;
+    font-size: 10px;
+  }
+  .pulse-appointment-time small {
+    font-size: 6px;
+  }
+  .pulse-patient-avatar {
+    width: 32px;
+    height: 32px;
+    font-size: 8px;
+  }
+  .pulse-appointment-name strong {
+    font-size: 9px;
+  }
+  .pulse-appointment-name small {
+    font-size: 7px;
+  }
+  .pulse-appointment-row > svg {
+    width: 13px;
+  }
+  .pulse-appointment-status {
+    display: none;
+  }
+  .pulse-schedule-footer > span {
+    display: flex;
+    font-size: 6px;
+  }
+  .pulse-schedule-footer {
+    justify-content: space-between;
+  }
+  .pulse-schedule-footer > a {
+    font-size: 6px;
+    gap: 3px;
+  }
+  .pulse-patient-profile h3 {
+    font-size: 24px;
+  }
+  .pulse-patient-profile > img {
+    width: 90px;
+    height: 90px;
+  }
+  .pulse-patient-profile > p {
+    font-size: 9px;
+  }
+  .pulse-patient-details > div {
+    font-size: 10px;
+  }
+  .pulse-patient-details strong {
+    font-size: 10px;
+  }
+  .pulse-visit-note p {
+    font-size: 10px;
+  }
+  .pulse-visit-note span {
+    font-size: 9px;
+  }
+  .pulse-patient-button {
+    font-size: 10px;
+  }
+  .pulse-chart {
+    height: 165px;
+  }
+  .pulse-chart-period {
+    font-size: 7px;
+  }
+  .pulse-chart-bottom > p {
+    font-size: 6px;
+  }
+  .pulse-chart-bottom > span {
+    font-size: 7px;
+  }
+  .pulse-team p {
+    font-size: 11px;
+  }
+  .pulse-team p small {
+    font-size: 9px;
+  }
+  .pulse-team > div > span {
+    width: 37px;
+    height: 37px;
+    font-size: 10px;
+  }
+  .pulse-team-note p {
+    font-size: 10px;
+  }
+  .pulse-footer {
+    font-size: 6px;
+    line-height: 1.5;
+    gap: 20px;
+  }
+  .pulse-footer > span:last-child {
+    text-align: right;
+    max-width: 120px;
+  }
+  .pulse-notice {
+    right: 20px;
+    top: 57px;
+  }
+}
+
+@media (max-width: 700px) {
+  .pulse-outline-button,
+  .pulse-primary-button {
+    min-height: 44px;
+  }
+  .pulse-appointment-toolbar select {
+    min-height: 36px;
+  }
+  .pulse-topbar-actions button {
+    min-width: 36px;
+    min-height: 36px;
+  }
+  .pulse-topbar-actions button > i {
+    top: 6px;
+    right: 8px;
+  }
+  .pulse-sidebar nav > a {
+    min-width: 36px;
+    min-height: 44px;
+  }
+}
