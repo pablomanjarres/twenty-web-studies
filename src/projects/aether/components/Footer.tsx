@@ -5,7 +5,7 @@ import { brand } from "../brand";
 export function Footer() {
   return (
     <>
-      <section className="aether-closing" id="pricing">
+      <section className="aether-closing" id="start">
         <div>
           <span>Less busywork. More life's work.</span>
           <h2>Go your own way.</h2>
