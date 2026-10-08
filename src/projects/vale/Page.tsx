@@ -1,40 +1,50 @@
 import { useState } from "react";
-import { products } from "./data";
-import { Header, Hero } from "./HeaderHero";
-import { Essentials } from "./Essentials";
-import { Philosophy } from "./Philosophy";
+import { formulas, type Selection } from "./data";
+import { Header } from "./Header";
+import { SpecimenSheet } from "./SpecimenSheet";
+import { TextureStudy } from "./TextureStudy";
 import { Ritual } from "./Ritual";
-import { RitualDrawer } from "./RitualDrawer";
+import { Packaging } from "./Packaging";
 import { Footer } from "./Footer";
+import { SelectionBag } from "./SelectionBag";
 import "./styles.css";
-
 export default function Page() {
-  const [selected, setSelected] = useState<string[]>([]);
-  const [open, setOpen] = useState(false);
-  const toggle = (name: string) =>
-    setSelected((current) =>
-      current.includes(name)
-        ? current.filter((item) => item !== name)
-        : [...current, name],
-    );
+  const [active, setActive] = useState(1);
+  const [volume, setVolume] = useState(0);
+  const [selections, setSelections] = useState<Selection[]>([]);
+  const [bag, setBag] = useState(false);
+  const select = (index: number) => {
+    setActive(index);
+    setVolume(0);
+  };
   return (
-    <main className="vale-page">
-      <Header count={selected.length} onOpen={() => setOpen(true)} />
-      <Hero />
-      <Essentials selected={selected} onSelect={toggle} />
-      <Philosophy />
-      <Ritual
-        onChoose={() => {
-          setSelected(products.map((product) => product.name));
-          setOpen(true);
+    <main className="vale">
+      <Header count={selections.length} onBag={() => setBag(true)} />
+      <SpecimenSheet
+        formula={formulas[active]}
+        active={active}
+        volume={volume}
+        onSelect={select}
+        onVolume={setVolume}
+        onAdd={() => {
+          setSelections((current) => [
+            ...current,
+            { formula: formulas[active], volume },
+          ]);
+          setBag(true);
         }}
       />
+      <TextureStudy formula={formulas[active]} />
+      <Ritual onSelect={select} />
+      <Packaging />
       <Footer />
-      {open && (
-        <RitualDrawer
-          selected={selected}
-          onClose={() => setOpen(false)}
-          onSelect={toggle}
+      {bag && (
+        <SelectionBag
+          items={selections}
+          onClose={() => setBag(false)}
+          onRemove={(index) =>
+            setSelections((current) => current.filter((_, i) => i !== index))
+          }
         />
       )}
     </main>
