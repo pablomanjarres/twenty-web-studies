@@ -1,0 +1,188 @@
+.orbit {
+  font-family: "DM Sans", sans-serif;
+  color: #352753;
+  background: #f7f6fa;
+  display: flex;
+  min-height: 100vh;
+  font-size: 12px;
+}
+.orbit a {
+  text-decoration: none;
+}
+.orbit button {
+  color: inherit;
+}
+.orbit-sidebar {
+  width: 223px;
+  flex: none;
+  background: white;
+  border-right: 1px solid #eeebf3;
+  padding: 29px 20px 21px;
+  display: flex;
+  flex-direction: column;
+}
+.orbit-sidebar > .brand-logo,
+.orbit-sidebar > a > .brand-logo {
+  font-size: 28px;
+  margin-left: 9px;
+}
+.orbit-sidebar .brand-logo svg {
+  color: #9673d5;
+}
+.orbit-workspace-switch {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-align: left;
+  border: 1px solid #e8e3ef;
+  background: white;
+  padding: 11px 10px;
+  border-radius: 8px;
+  margin: 30px 0 26px;
+}
+.orbit-workspace-switch > span {
+  height: 33px;
+  width: 33px;
+  border-radius: 7px;
+  background: #eee8fa;
+  display: grid;
+  place-items: center;
+  font-size: 11px;
+  font-weight: 500;
+  color: #8563b5;
+}
+.orbit-workspace-switch > div {
+  font-size: 11px;
+  flex: 1;
+}
+.orbit-workspace-switch small {
+  display: block;
+  font-size: 8px;
+  color: #a29aae;
+  margin-top: 3px;
+}
+.orbit-sidebar-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #8a7b96;
+  font-size: 9px;
+  padding: 0 12px;
+  margin-bottom: 12px;
+}
+.orbit-sidebar nav {
+  display: grid;
+  gap: 6px;
+}
+.orbit-sidebar nav > a {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 11px 12px;
+  color: #91869f;
+  border-radius: 6px;
+  font-size: 11px;
+}
+.orbit-sidebar nav > a.is-active {
+  background: #eee8fa;
+  color: #7854a8;
+}
+.orbit-sidebar nav small {
+  margin-left: auto;
+  display: grid;
+  place-items: center;
+  min-width: 18px;
+  height: 17px;
+  border-radius: 4px;
+  background: #f4f1f8;
+  color: #9b8aaa;
+  font-size: 8px;
+}
+.orbit-sidebar-projects {
+  margin-top: 30px;
+}
+.orbit-sidebar-projects > a {
+  display: flex;
+  gap: 11px;
+  align-items: center;
+  padding: 10px 12px;
+  font-size: 10px;
+  color: #94889f;
+}
+.orbit-sidebar-projects > a i {
+  width: 7px;
+  height: 7px;
+  border-radius: 2px;
+}
+.orbit-upgrade {
+  margin-top: 32px;
+  background: #f1ebfa;
+  border-radius: 10px;
+  padding: 18px 13px;
+  position: relative;
+}
+.orbit-upgrade > span {
+  color: #9673d5;
+}
+.orbit-upgrade h3 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 13px;
+  line-height: 1.6;
+  font-weight: 600;
+  margin: 10px 0 7px;
+  letter-spacing: -0.025em;
+}
+.orbit-upgrade p {
+  color: #9b8baa;
+  font-size: 9px;
+  line-height: 1.6;
+  margin: 0;
+}
+.orbit-upgrade > a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  font-size: 8px;
+  border-radius: 5px;
+  padding: 10px 8px;
+  margin-top: 13px;
+  color: #8c6cb6;
+}
+.orbit-sidebar-bottom {
+  margin-top: auto;
+  padding-top: 45px;
+}
+.orbit-sidebar-bottom > a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 9px;
+  color: #9b90a7;
+  padding: 10px 12px;
+}
+.orbit-sidebar-bottom > div {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  border-top: 1px solid #eeeaf3;
+  padding-top: 20px;
+  margin-top: 10px;
+}
+.orbit-avatar {
+  height: 29px;
+  width: 29px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.orbit-sidebar-bottom p {
+  font-size: 9px;
+  line-height: 1.5;
+  flex: 1;
+  margin: 0;
+}
+.orbit-sidebar-bottom p small {
+  display: block;
+  font-size: 7px;
+  color: #837391;
+}
