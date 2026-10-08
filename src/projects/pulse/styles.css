@@ -1,0 +1,12 @@
+@import "./styles/layout-sidebar.css";
+@import "./styles/workspace-topbar.css";
+@import "./styles/overview-metrics.css";
+@import "./styles/appointment-controls.css";
+@import "./styles/appointment-list.css";
+@import "./styles/patient-record.css";
+@import "./styles/activity-chart.css";
+@import "./styles/team-footer.css";
+@import "./styles/responsive-wide.css";
+@import "./styles/responsive-tablet.css";
+@import "./styles/responsive-mobile-shell.css";
+@import "./styles/responsive-mobile-care.css";
