@@ -1,0 +1,93 @@
+.sprinto-original-play {
+  background: #19152d;
+  color: white;
+  padding: 70px 5%;
+}
+.sprinto-original-play > h2 {
+  font-size: 65px;
+  margin: 0 0 45px;
+}
+.sprinto-original-play > div {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 50px;
+}
+.sprinto-original-play article {
+  border-top: 1px solid #544964;
+  padding-top: 25px;
+}
+.sprinto-original-play article > svg {
+  color: #ddfc6b;
+}
+.sprinto-original-play h3 {
+  font-size: 31px;
+  margin: 22px 0 13px;
+}
+.sprinto-original-play p {
+  font-size: 12px;
+  line-height: 1.8;
+  color: #a9a1b9;
+  max-width: 270px;
+}
+.sprinto-original-play article > a {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  color: #ddfc6b;
+  font-size: 11px;
+  margin-top: 25px;
+}
+.sprinto-original-club {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #d9d0f0;
+}
+.sprinto-original-club > img {
+  height: 540px;
+  width: 100%;
+  object-fit: cover;
+}
+.sprinto-original-club > div {
+  align-self: center;
+  padding: 65px 12%;
+}
+.sprinto-original-club > div > span {
+  font-size: 10px;
+  color: #6f618a;
+}
+.sprinto-original-club h2 {
+  font-size: 65px;
+  margin: 23px 0;
+}
+.sprinto-original-club p {
+  font-size: 12px;
+  line-height: 1.8;
+  color: #716386;
+  margin-bottom: 25px;
+  max-width: 320px;
+}
+.sprinto-original-footer {
+  background: #6535f4;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  padding: 36px 5%;
+}
+.sprinto-original-footer .brand-logo {
+  font-size: 30px;
+}
+.sprinto-original-footer > span {
+  font-size: 12px;
+}
+.sprinto-original-footer > a {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 12px;
+}
+.sprinto-original-footer > small {
+  font-size: 9px;
+  color: #c7b4fc;
+}
