@@ -1,84 +1,31 @@
-export const asset = (name: string) =>
-  `${import.meta.env.BASE_URL}images/pulse/${name}.jpg`;
-export const appointments = [
-  {
-    name: "Olivia Martinez",
-    initials: "OM",
-    reason: "Annual wellness visit",
-    time: "09:00",
-    duration: "30 min",
-    status: "Checked in",
-    color: "#fae5d8",
-    day: 8,
-  },
-  {
-    name: "James Wilson",
-    initials: "JW",
-    reason: "Follow-up consultation",
-    time: "09:45",
-    duration: "30 min",
-    status: "Confirmed",
-    color: "#e3ebe9",
-    day: 8,
-  },
-  {
-    name: "Emma Thompson",
-    initials: "ET",
-    reason: "New patient consultation",
-    time: "10:30",
-    duration: "45 min",
-    status: "Confirmed",
-    color: "#f1e9d8",
-    day: 8,
-  },
-  {
-    name: "Noah Anderson",
-    initials: "NA",
-    reason: "Routine check-up",
-    time: "11:30",
-    duration: "30 min",
-    status: "Confirmed",
-    color: "#e6e8f0",
-    day: 8,
-  },
-  {
-    name: "Sophia Garcia",
-    initials: "SG",
-    reason: "Follow-up consultation",
-    time: "13:00",
-    duration: "30 min",
-    status: "Pending",
-    color: "#eee3e6",
-    day: 8,
-  },
-  {
-    name: "Daniel Lee",
-    initials: "DL",
-    reason: "Annual wellness visit",
-    time: "09:30",
-    duration: "30 min",
-    status: "Confirmed",
-    color: "#e3ebe9",
-    day: 9,
-  },
-  {
-    name: "Ava Robinson",
-    initials: "AR",
-    reason: "New patient consultation",
-    time: "10:15",
-    duration: "45 min",
-    status: "Confirmed",
-    color: "#fae5d8",
-    day: 9,
-  },
-  {
-    name: "Liam Walker",
-    initials: "LW",
-    reason: "Routine check-up",
-    time: "11:00",
-    duration: "30 min",
-    status: "Pending",
-    color: "#eee3e6",
-    day: 9,
-  },
+export type Visit = {
+  id: number;
+  patient: string;
+  age: number;
+  initials: string;
+  purpose: string;
+  doctor: string;
+  time: number;
+  duration: number;
+  day: number;
+  tone: string;
+  status: string;
+  note: string;
+};
+export const asset = (file: string) =>
+  `${import.meta.env.BASE_URL}images/pulse/${file}`;
+export const clinicians = [
+  { id: "allen", name: "Dr. Maya Allen", role: "Family medicine" },
+  { id: "chen", name: "Dr. Oliver Chen", role: "General practice" },
+  { id: "reed", name: "Dr. Sofia Reed", role: "Women's health" },
 ];
+export const days = [
+  { short: "Mon", date: "05", name: "Monday" },
+  { short: "Tue", date: "06", name: "Tuesday" },
+  { short: "Wed", date: "07", name: "Wednesday" },
+  { short: "Thu", date: "08", name: "Thursday" },
+  { short: "Fri", date: "09", name: "Friday" },
+];
+export const timeLabel = (minute: number) =>
+  `${String(Math.floor(minute / 60)).padStart(2, "0")}:${String(minute % 60).padStart(2, "0")}`;
+export { visits } from "./visitFixtures";
