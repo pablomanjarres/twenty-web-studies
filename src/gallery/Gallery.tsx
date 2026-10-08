@@ -5,23 +5,13 @@ import {
 import { useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { projects } from "../projects";
-import type { Brand } from "../shared/types";
+import { groupFor, type CollectionGroup } from "./projectGroups";
 import "./gallery.css";
 import "./gallery-responsive.css";
 import { ProjectCard } from "./ProjectCard";
 import { CollectionControls } from "./CollectionControls";
-function groupFor(brand: Brand) {
-  const text = `${brand.category} ${brand.purpose}`.toLowerCase();
-  return /dashboard|workspace|logistics platform|music platform/.test(text)
-    ? "Dashboards"
-    : /ecommerce|store|shop|ceramic|skincare|jewel/.test(text)
-      ? "Shops"
-      : /magazine|journal|editorial/.test(text)
-        ? "Editorial"
-        : "Landing pages";
-}
 export function Gallery() {
-  const [group, setGroup] = useState("All projects");
+  const [group, setGroup] = useState<CollectionGroup>("All projects");
   const [query, setQuery] = useState("");
   const filtered = projects.filter(
     ({ brand }) =>
