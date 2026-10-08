@@ -1,0 +1,37 @@
+@media (max-width: 720px) {
+  .sl-catch-note {
+    grid-template-columns: 115px 1fr;
+  }
+  .sl-catch-note img {
+    width: 115px;
+    height: 170px;
+  }
+  .sl-catch-note p {
+    font-size: 23px;
+  }
+  .sl-tables {
+    padding: 45px 27px 60px;
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .sl-tables h2 {
+    font-size: 39px;
+  }
+  .sl-receipt {
+    max-width: 360px;
+    justify-self: center;
+    width: 100%;
+    padding: 25px 24px 20px;
+  }
+  .sl-footer {
+    padding: 35px 25px;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+  }
+  .sl-footer a {
+    justify-self: start;
+  }
+  .sl-footer > span {
+    font-size: 10px;
+  }
+}
