@@ -24,7 +24,7 @@
 
 .archive-story {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   background: #eeeeeb;
   max-width: 1600px;
   margin: auto;
@@ -54,6 +54,7 @@
     sans-serif;
   text-transform: uppercase;
   letter-spacing: -0.03em;
+  overflow-wrap: anywhere;
   margin: 35px 0 26px;
 }
 

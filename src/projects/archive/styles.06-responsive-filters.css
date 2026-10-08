@@ -23,7 +23,7 @@
     gap: 3px;
   }
   .archive-story {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
   .archive-story-photo > img {
     height: 340px;
