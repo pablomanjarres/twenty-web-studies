@@ -1,0 +1,104 @@
+.orbit-tasks {
+  margin-top: 30px;
+}
+.orbit-task-table {
+  background: white;
+  border: 1px solid #eee9f5;
+  border-radius: 9px;
+  overflow: hidden;
+}
+.orbit-table-labels,
+.orbit-task-row {
+  display: grid;
+  grid-template-columns: minmax(200px, 1fr) 70px 78px 46px;
+  gap: 8px;
+  align-items: center;
+  padding: 12px 17px;
+}
+.orbit-table-labels {
+  font-size: 8px;
+  background: #fdfcfe;
+  border-bottom: 1px solid #f0ecf6;
+  color: #8e7b9f;
+}
+.orbit-task-row {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #f1edf6;
+}
+.orbit-task-row:last-child {
+  border: 0;
+}
+.orbit-task-row > div {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+}
+.orbit-task-row button {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  color: #cec3dc;
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 17px;
+  height: 17px;
+}
+.orbit-task-row.is-done button {
+  background: #9673d5;
+  color: white;
+  border-radius: 4px;
+}
+.orbit-task-row p {
+  font-size: 9px;
+  line-height: 1.4;
+  margin: 0;
+  min-width: 0;
+}
+.orbit-task-row p > small {
+  display: block;
+  font-size: 7px;
+  color: #8e7b9f;
+  margin-top: 4px;
+}
+.orbit-task-row.is-done p {
+  text-decoration: line-through;
+  color: #8e7b9f;
+}
+.orbit-task-row > span {
+  font-size: 8px;
+  color: #ab9db8;
+}
+.orbit-priority {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  width: max-content;
+  border-radius: 4px;
+  padding: 4px 6px !important;
+  font-size: 7px !important;
+}
+.orbit-priority > i {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: currentColor;
+}
+.orbit-priority.high {
+  color: #c08b7e;
+  background: #fbede6;
+}
+.orbit-priority.medium {
+  color: #b29971;
+  background: #f7f1e6;
+}
+.orbit-priority.low {
+  color: #81a493;
+  background: #eaf3ee;
+}
+.orbit-task-row > .orbit-avatar {
+  height: 23px;
+  width: 23px;
+}
