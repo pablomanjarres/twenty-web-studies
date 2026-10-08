@@ -1,20 +1,10 @@
-.md-panel-heading {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 19px 20px 17px;
-  border-bottom: 1px solid var(--md-line);
-  gap: 10px;
-}
-.md-panel-heading h2 {
-  font-size: 12px;
-  letter-spacing: -0.1px;
-}
-.md-panel-heading > div > span {
-  display: block;
-  font-size: 8px;
-  color: var(--md-muted);
-  margin-top: 7px;
+.md-network-map,
+.md-port-schematic {
+  position: relative;
+  min-height: 0;
+  flex: 1;
+  background: #112536;
+  overflow: hidden;
 }
 .md-port-caption {
   position: absolute;
@@ -66,6 +56,26 @@
   background: #14283a;
   color: #9ebccc;
   font-size: 10px;
+}
+.md-port-cartography {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+}
+.md-cartography {
+  width: 100%;
+  height: calc(100% - 160px);
+  position: absolute;
+  top: 100px;
+  left: 0;
+}
+.md-cartography [role="button"],
+.md-planning-point {
+  cursor: pointer;
+}
+.md-cartography [role="button"]:focus-visible .md-route-hit {
+  stroke: #ffffff45;
 }
 .md-planning-point:focus-visible circle:first-child {
   stroke: #fff;
