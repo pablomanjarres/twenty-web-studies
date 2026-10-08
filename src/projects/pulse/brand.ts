@@ -7,32 +7,14 @@ export const brand: Brand = {
   purpose:
     "A humane clinical workspace that brings appointments, patient context, and practice activity into a calm, legible daily view.",
   description:
-    "Pulse is a clinical workspace designed around the people behind every appointment. Its dashboard brings the day’s schedule, patient context, and practice activity into one calm view, using teal for clarity and warm peach for a more welcoming tone. Rounded charts and readable data support quick decisions without overwhelming the interface. The identity’s interlocking pulse symbol connects continuity of care with steady forward movement. Date selection and appointment filtering make the daily schedule interactive, while realistic patient cards and activity details establish useful context. The design’s purpose is to give care teams a reliable overview of the day, leaving more attention for the conversations that matter.",
+    "Pulse brings the care team, the working week and the next patient into one clear clinical workspace. Its overview combines scheduled care time, accurate appointment totals and a selectable weekly activity chart with a portrait-led appointment ledger. Choosing a day updates every summary and the daily appointment list from the same visits. A separate calendar provides timed clinician lanes and a chronological phone agenda, while searchable patient records preserve context and editable conversation notes. New visits use the available schedule rather than creating conflicting appointments. Dark teal navigation, lemon accents and quiet white cards make the administrative view feel calm, precise and easy to scan.",
   colors: [
-    {
-      name: "Teal",
-      hex: "#176B63",
-    },
-    {
-      name: "Mint",
-      hex: "#E5F2EB",
-    },
-    {
-      name: "Peach",
-      hex: "#FAE5D8",
-    },
-    {
-      name: "Slate",
-      hex: "#243B3A",
-    },
-    {
-      name: "Mist",
-      hex: "#F5F8F6",
-    },
-    {
-      name: "White",
-      hex: "#FFFFFF",
-    },
+    { name: "Teal", hex: "#176B63" },
+    { name: "Lemon", hex: "#E8F3A4" },
+    { name: "Peach", hex: "#F8E3D5" },
+    { name: "Slate", hex: "#25443E" },
+    { name: "Mist", hex: "#F3F6F3" },
+    { name: "Paper", hex: "#F4EDE2" },
   ],
   fonts: {
     heading: "Outfit",
@@ -54,5 +36,5 @@ export const brand: Brand = {
     "Brand identity",
   ],
   artDirection:
-    "A calm mint clinical workspace with a teal navigation rail, peach appointment highlights, spacious patient rows, and a rounded activity chart.",
+    "Modern clinical overview with unequal columns of scheduled care statistics, a dominant pill-bar activity chart, temporal appointment cards and a portrait-led ledger; rounded white surfaces, dark teal pill navigation and precise lemon accents.",
 };
