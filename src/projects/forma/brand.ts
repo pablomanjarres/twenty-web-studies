@@ -7,11 +7,11 @@ export const brand: Brand = {
   purpose:
     "An architecture practice creating quiet, enduring spaces through material honesty and close attention to the way people live.",
   description:
-    "Forma is an architecture practice built around the relationship between people, material, and place. Its digital identity treats every project as a spatial story, allowing generous photography and carefully placed typography to carry the experience. An ivory and charcoal palette echoes plaster, stone, and shadow, while the geometric symbol recalls an open architectural volume. The website pairs a full-width residential interior with a curated project index, a clear account of the studio’s approach, and direct contact information. Its purpose is to help prospective clients understand the practice through the spaces it creates, with the same clarity and care found in its buildings.",
+    "Forma presents architecture through the spaces themselves. A large framed photograph opens beside a narrow project archive, giving each interior room to speak before the studio describes its approach. Selecting a project changes its image, facts, material palette, and spatial study. The page then follows the scale of a physical dossier: a measured plan, a broad detail photograph, a smaller material crop, and quiet practice notes. Paper, charcoal, hairline rules, and compact technical labels recall an architect’s presentation board. The nested volume symbol expresses the relationship between structure and the lives it holds.",
   colors: [
     {
       name: "Plaster",
-      hex: "#F0EEE8",
+      hex: "#F5F4EF",
     },
     {
       name: "Charcoal",
@@ -50,5 +50,5 @@ export const brand: Brand = {
     "Portfolio",
   ],
   artDirection:
-    "Full-bleed interior photography, an oversized geometric studio wordmark, understated ivory panels, and an asymmetric project index.",
+    "A large framed architectural photograph beside a narrow project index, followed by measured dossier facts, original spatial diagrams, uneven material photographs, and restrained ruled contact details.",
 };
