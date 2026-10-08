@@ -1,85 +1,92 @@
-import { useState } from "react";
-import { Check, MoveUpRight } from "lucide-react";
-import { BrandLogo } from "../../../shared/BrandLogo";
-import { brand } from "../brand";
+import { ArrowUpRight, Check, CornerDownRight } from "lucide-react";
+import { accountBalance, invoices, money, type Invoice } from "../data";
 
-export function Account() {
-  const [currency, setCurrency] = useState("USD");
-  const balances: { [key: string]: string } = {
-    USD: "$12,480.50",
-    EUR: "€11,526.46",
-    GBP: "£9,615.78",
-  };
+export function Account({
+  invoice,
+  onSelect,
+}: {
+  invoice: Invoice;
+  onSelect: (id: string) => void;
+}) {
+  const balance = accountBalance(invoice);
   return (
     <section className="aether-account" id="account">
-      <div>
-        <span className="aether-section-kicker">
-          A little less admin. A lot more possibility.
-        </span>
+      <header>
+        <span className="aether-section-kicker">02 / A CLEARER PICTURE</span>
         <h2>
-          One account.
+          Good work.
           <br />
-          Room for every ambition.
+          Clear numbers.
         </h2>
         <p>
-          See where you stand, set something aside, and send your next invoice.
-          All in a space that feels like yours.
+          From the moment you send an invoice to the next thing you set in
+          motion. Everything has its place.
         </p>
-        <ul>
-          {[
-            "A clear view of your cash flow",
-            "Separate spaces for tax and savings",
-            "A card that works as hard as you do",
-          ].map((i) => (
-            <li key={i}>
-              <Check size={17} />
-              {i}
-            </li>
-          ))}
-        </ul>
-      </div>
+      </header>
       <div className="aether-account-preview">
         <div className="aether-preview-top">
-          <BrandLogo brand={brand} />
-          <span>
-            Hello, Morgan <span className="aether-profile-dot">MW</span>
-          </span>
+          <span>YOUR WORK, ACCOUNTED FOR</span>
+          <span>October 2026 / Sample ledger</span>
         </div>
-        <div className="aether-balance-row">
-          <span>Available balance</span>
-          <div className="aether-currency-tabs" aria-label="Balance currency">
-            {Object.keys(balances).map((i) => (
-              <button
-                key={i}
-                aria-pressed={currency === i}
-                onClick={() => setCurrency(i)}
-              >
-                {i}
-              </button>
-            ))}
+        <div className="aether-ledger">
+          <div className="aether-ledger-labels">
+            <span>CLIENT / PROJECT</span>
+            <span>INVOICE</span>
+            <span>AMOUNT</span>
+            <span>STATUS</span>
           </div>
+          {invoices.map((item) => (
+            <button
+              key={item.id}
+              aria-pressed={item.id === invoice.id}
+              onClick={() => onSelect(item.id)}
+            >
+              <div>
+                <span className="aether-client-mark">{item.initials}</span>
+                <span>
+                  <b>{item.client}</b>
+                  <small>{item.project}</small>
+                </span>
+              </div>
+              <span>
+                #{item.id} · {item.date}
+              </span>
+              <strong>{money(item.amount)}</strong>
+              <span className="aether-invoice-state">
+                {item.id === invoice.id ? (
+                  <>
+                    <Check size={12} /> Selected
+                  </>
+                ) : (
+                  "Upcoming"
+                )}
+              </span>
+            </button>
+          ))}
         </div>
-        <strong className="aether-balance">{balances[currency]}</strong>
-        <div className="aether-spaces">
+        <div className="aether-allocation">
           <div>
-            <span>Tax pot</span>
-            <strong>$3,120.00</strong>
-            <i style={{ width: "72%" }} />
+            <span>AVAILABLE FOR WHAT’S NEXT</span>
+            <strong>{money(balance)}</strong>
+            <small>
+              <CornerDownRight size={13} /> {invoice.client} ·{" "}
+              {money(invoice.amount)} included
+            </small>
           </div>
           <div>
-            <span>Next adventure</span>
-            <strong>$1,850.00</strong>
-            <i style={{ width: "46%" }} />
+            <span>SET ASIDE, WITHOUT THINKING</span>
+            <strong>{money(invoice.amount * 0.25)}</strong>
+            <small>25% allocation from this invoice</small>
+            <div className="aether-allocation-track">
+              <i />
+            </div>
           </div>
-        </div>
-        <div className="aether-transaction">
-          <span className="aether-transaction-icon">
-            <MoveUpRight size={20} />
-          </span>
-          <div>
-            Studio North<strong>Brand identity · Invoice #024</strong>
-          </div>
-          <b>+ $2,450.00</b>
+          <a href="#start">
+            Make room for
+            <br />
+            your next ambition.
+            <ArrowUpRight size={25} />
+          </a>
         </div>
       </div>
     </section>
