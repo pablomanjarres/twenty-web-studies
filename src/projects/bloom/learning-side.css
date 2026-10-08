@@ -1,0 +1,175 @@
+@import "./learning-guidance.css";
+.bv-learning-side {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.bv-month-card {
+  padding: 23px;
+  background: white;
+  border: 1px solid #e8edde;
+  border-radius: 24px;
+}
+.bv-month-card .bv-section-heading h2 {
+  font-size: 14px;
+}
+.bv-month-card .bv-section-heading svg {
+  color: #97a786;
+}
+.bv-month-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 4px;
+  margin-top: 23px;
+  text-align: center;
+}
+.bv-month-grid > span {
+  font-size: 7px;
+  color: #a0ae91;
+  padding-bottom: 8px;
+}
+.bv-month-grid button {
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  font-size: 9px;
+  min-height: 27px;
+  color: #6c8057;
+  padding: 0;
+}
+.bv-month-grid button:disabled {
+  color: #c3cbb8;
+}
+.bv-month-grid button[aria-pressed="true"] {
+  background: var(--bv-lime);
+  color: #4a6333;
+}
+.bv-day-plan {
+  border-top: 1px solid #eef2e6;
+  margin-top: 21px;
+  padding-top: 16px;
+}
+.bv-day-plan > p {
+  font-size: 10px;
+  margin: 0 0 15px;
+  color: #6c8057;
+  display: flex;
+  justify-content: space-between;
+}
+.bv-day-plan > p span {
+  font-size: 8px;
+  color: #a4b192;
+}
+.bv-day-plan > button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  width: 100%;
+  padding: 5px 0;
+}
+.bv-day-plan button > i {
+  height: 30px;
+  width: 3px;
+  border-radius: 3px;
+  background: var(--bv-pink);
+}
+.bv-day-plan button strong {
+  font-size: 10px;
+  font-weight: 500;
+}
+.bv-day-plan button small {
+  display: block;
+  margin-top: 5px;
+  font-size: 8px;
+  color: #a2ad94;
+}
+.bv-day-plan button > svg {
+  margin-left: auto;
+  color: #91a078;
+}
+.bv-study-activity {
+  border-radius: 24px;
+  padding: 23px;
+  background: var(--bv-lime);
+}
+.bv-study-activity .bv-section-heading h2 {
+  font-size: 14px;
+}
+.bv-study-activity .bv-section-heading > span {
+  font-size: 8px;
+  color: #8da260;
+}
+.bv-study-activity > strong {
+  display: block;
+  font-size: 29px;
+  font-weight: 500;
+  letter-spacing: -1px;
+  margin-top: 19px;
+}
+.bv-study-activity > strong > small {
+  font-size: 9px;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: #92a368;
+}
+.bv-study-bars {
+  height: 112px;
+  display: flex;
+  gap: 18px;
+  margin-top: 19px;
+  padding-bottom: 15px;
+}
+.bv-study-bars > div {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  align-items: end;
+}
+.bv-study-bars > div > span {
+  position: relative;
+  overflow: hidden;
+  background: #f9fbee;
+  width: 17px;
+  border-radius: 8px;
+}
+.bv-study-bars i {
+  display: block;
+  background: #ebbad0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 8px;
+}
+.bv-study-bars small {
+  position: absolute;
+  bottom: -18px;
+  font-size: 8px;
+  color: #91a46b;
+}
+.bv-study-activity > p {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #93a365;
+  font-size: 8px;
+  margin: 22px 0 0;
+}
+.bv-study-activity > p > i {
+  width: 5px;
+  height: 5px;
+  background: #ebbad0;
+  border-radius: 50%;
+}
+.bv-study-activity > p > span {
+  margin-left: auto;
+  color: #70894c;
+}
+.bv-study-activity > p > .bv-planned-dot {
+  background: #f9fbee;
+  margin-left: 5px;
+}
