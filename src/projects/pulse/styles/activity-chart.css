@@ -1,0 +1,103 @@
+.pulse-bottom-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 302px;
+  gap: 25px;
+  margin-top: 25px;
+}
+.pulse-activity,
+.pulse-team {
+  background: white;
+  border: 1px solid #e5ece5;
+  border-radius: 11px;
+  padding: 23px 24px;
+}
+.pulse-chart-period {
+  border: 1px solid #e3eadd;
+  padding: 7px 8px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 8px;
+  color: #a1b094;
+  border-radius: 4px;
+}
+.pulse-chart {
+  display: flex;
+  gap: 14px;
+  margin-top: 28px;
+  height: 170px;
+}
+.pulse-chart-labels {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 17px;
+  font-size: 7px;
+  color: #b9c1ad;
+}
+.pulse-chart-main {
+  flex: 1;
+  min-width: 0;
+  position: relative;
+}
+.pulse-chart-main > svg {
+  width: 100%;
+  height: calc(100% - 20px);
+}
+.pulse-chart-days {
+  display: flex;
+  justify-content: space-between;
+  font-size: 7px;
+  color: #b0bba3;
+  margin-top: 9px;
+}
+.pulse-chart-tooltip {
+  position: absolute;
+  left: calc(50% - 30px);
+  top: 0;
+  background: #176b63;
+  color: white;
+  border-radius: 5px;
+  padding: 8px 11px;
+  box-shadow: 0 4px 14px #176b6325;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.pulse-chart-tooltip strong {
+  font-size: 9px;
+  font-weight: 500;
+}
+.pulse-chart-tooltip span {
+  font-size: 6px;
+  color: #b0cfb8;
+}
+.pulse-chart-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #edf0e8;
+  padding-top: 13px;
+  margin-top: 18px;
+}
+.pulse-chart-bottom > span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 8px;
+  color: #7e8b69;
+}
+.pulse-chart-bottom > span > i {
+  background: #438a7b;
+  width: 5px;
+  height: 5px;
+  border-radius: 2px;
+}
+.pulse-chart-bottom > p {
+  font-size: 8px;
+  color: #9cb491;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  margin: 0;
+}
