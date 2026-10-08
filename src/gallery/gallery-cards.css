@@ -7,14 +7,14 @@
   position: relative;
   display: block;
   overflow: hidden;
-  aspect-ratio: 16/11;
+  aspect-ratio: 1280/793;
   text-decoration: none;
   border-radius: 3px;
 }
 .collection-preview img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: top;
   transition: transform 0.45s;
 }
