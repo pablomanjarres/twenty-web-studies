@@ -142,3 +142,11 @@
   font-size: 10px;
   color: #757d69;
 }
+@keyframes forma-reveal {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
+}
