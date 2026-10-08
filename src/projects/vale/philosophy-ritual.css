@@ -1,0 +1,147 @@
+.va-philosophy {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #e7e9dd;
+  min-height: 565px;
+}
+.va-philosophy-image {
+  position: relative;
+  min-height: 565px;
+}
+.va-philosophy-image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 56%;
+}
+.va-philosophy-image > span {
+  position: absolute;
+  bottom: 28px;
+  left: 31px;
+  color: var(--va-paper);
+  font: italic 19px "Instrument Serif";
+}
+.va-philosophy-copy {
+  padding: 52px 12% 46px;
+}
+.va-philosophy-copy > .brand-logo {
+  display: block;
+  margin-bottom: 26px;
+}
+.va-philosophy-copy > .brand-logo svg {
+  height: 29px;
+  width: 29px;
+}
+.va-philosophy-copy h2 {
+  font-size: 43px;
+  line-height: 1.13;
+  letter-spacing: -1.2px;
+  margin: 26px 0 25px;
+  white-space: nowrap;
+}
+.va-philosophy-copy p {
+  font-size: 11px;
+  opacity: 0.8;
+  max-width: 335px;
+}
+.va-principles {
+  display: flex;
+  flex-direction: column;
+  font-size: 10px;
+  gap: 12px;
+  border-top: 1px solid var(--va-rule);
+  margin-top: 27px;
+  padding-top: 22px;
+}
+.va-principles > span {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+}
+.va-principles > span:before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #829476;
+}
+.va-ritual {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10%;
+  padding: 90px 11% 88px;
+}
+.va-ritual-heading h2 {
+  font-size: 68px;
+  letter-spacing: -2px;
+  line-height: 1.1;
+  margin: 30px 0 23px;
+}
+.va-ritual-heading > p {
+  font-size: 12px;
+  opacity: 0.7;
+}
+.va-ritual-tabs {
+  border-bottom: 1px solid var(--va-rule);
+  display: flex;
+  gap: 37px;
+  padding-bottom: 16px;
+  margin-bottom: 34px;
+}
+.va-ritual-tabs button {
+  border: 0;
+  background: transparent;
+  color: var(--va-green);
+  opacity: 0.5;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+}
+.va-ritual-tabs button[aria-pressed="true"] {
+  opacity: 1;
+}
+.va-ritual-body h3 {
+  font-size: 35px;
+  letter-spacing: -1px;
+  margin: 15px 0 16px;
+}
+.va-ritual-body p {
+  font-size: 11px;
+  opacity: 0.7;
+  max-width: 340px;
+}
+.va-ritual-body ol {
+  padding: 0;
+  list-style: none;
+  font-size: 10px;
+  margin: 23px 0 27px;
+}
+.va-ritual-body li {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--va-rule);
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.va-ritual-body li > span {
+  font-size: 9px;
+  opacity: 0.5;
+}
+.va-ritual-button {
+  background: var(--va-green);
+  color: var(--va-paper);
+  border: 0;
+  padding: 16px 17px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 33px;
+  font-size: 10px;
+}
+.va-ritual-button:hover {
+  background: #3a604b;
+}
