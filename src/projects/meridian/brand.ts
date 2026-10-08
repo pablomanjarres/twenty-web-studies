@@ -6,15 +6,15 @@ export const brand: Brand = {
   category: "Logistics dashboard",
   tagline: "Every movement. In view.",
   purpose:
-    "A shipment control tower that connects route monitoring, freight status, and arrival planning in one operational workspace.",
+    "A freight operations workspace for shipment selection, destination handoff planning, and geographic route monitoring.",
   description:
-    "Meridian is a logistics control tower designed for the rhythm of a busy freight desk. A midnight navy workspace pairs precise cyan route graphics with compact shipment rows, arrival details, and readable operational metrics. The map and table share a selection, so choosing a shipment brings its journey into focus. Search and transport filters narrow the workspace, while a local scheduling panel adds a new movement to the list. Technical mono labels give coordinates and reference numbers a distinct voice. The crossing route symbol represents connected destinations. Every panel supports a clear task: locate a movement, understand its status, and plan the next arrival.",
+    "Meridian brings the freight desk onto a detailed destination planning map. A compact utility bar and icon rail frame richly layered shipment cards, each with an original vessel, aircraft, or truck illustration. Selecting a movement reveals its destination port schematic, expected arrival, cargo, and operational handoff state. Berth, collection, and transfer points support the next planning decision without implying live vehicle positioning. A secondary world view connects the same shipments over geographic coastlines, while the manifest provides a concise operational ledger. Midnight surfaces, restrained cyan routes, and clear status accents keep the working geography in focus. The crossing-route identity connects each destination to one shared operational view.",
   colors: [
-    { name: "Midnight", hex: "#101C2B" },
-    { name: "Deep ocean", hex: "#152537" },
+    { name: "Midnight", hex: "#111B2A" },
+    { name: "Deep ocean", hex: "#192B3E" },
     { name: "Route cyan", hex: "#58D8DC" },
-    { name: "Signal green", hex: "#9DE2AC" },
-    { name: "Map slate", hex: "#7390A9" },
+    { name: "Handoff amber", hex: "#F2C998" },
+    { name: "Map slate", hex: "#596A7F" },
     { name: "Clear white", hex: "#EAF0F6" },
   ],
   fonts: { heading: "Space Grotesk", body: "DM Sans" },
@@ -34,5 +34,5 @@ export const brand: Brand = {
     "Brand identity",
   ],
   artDirection:
-    "A precise midnight operational workspace with compact tables, vector cartography, cyan routes, measured spacing, and selective Caleb Mono technical labels.",
+    "A midnight operational map with dense original port schematics, compact utility navigation, a narrow card rail, detailed vehicle illustrations, and floating arrival and handoff docks. Unequal information surfaces preserve the map as the dominant working area; cyan selects movement and amber marks review states.",
 };
