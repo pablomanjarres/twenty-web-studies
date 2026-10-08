@@ -28,7 +28,7 @@
   z-index: 1;
 }
 .sprinto-image-label > span {
-  font-family: "Conthic", sans-serif;
+  font-family: "Anton", sans-serif;
   font-size: 20px;
   line-height: 1.05;
 }
@@ -65,7 +65,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: "Conthic", sans-serif;
+  font-family: "Anton", sans-serif;
   line-height: 1.05;
   font-size: 18px;
   box-shadow: 0 0 0 7px #6535f4;

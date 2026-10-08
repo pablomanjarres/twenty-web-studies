@@ -31,7 +31,7 @@ export const brand: Brand = {
     },
   ],
   fonts: {
-    heading: "Conthic",
+    heading: "Anton",
     body: "DM Sans",
   },
   logo: '<circle cx="25" cy="15" r="9" fill="currentColor"/><path d="m4 27 12-7M9 34l13-8M3 17l10-6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M20 8c-1 6 3 11 11 12" fill="none" stroke="#6535F4" stroke-width="2"/>',
