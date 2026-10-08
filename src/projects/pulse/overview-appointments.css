@@ -1,0 +1,138 @@
+.pv-upcoming {
+  min-height: 374px;
+  padding: 21px 20px;
+}
+.pv-day-pills {
+  display: flex;
+  gap: 6px;
+  justify-content: space-between;
+  margin: 19px 0 18px;
+}
+.pv-day-pills button {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 7px;
+  flex: 1;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+.pv-day-pills strong {
+  font-size: 11px;
+  font-weight: 500;
+  width: 33px;
+  height: 33px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #f3f6f3;
+  color: #7b9185;
+}
+.pv-day-pills button[aria-pressed="true"] strong {
+  background: #214e46;
+  color: white;
+}
+.pv-day-pills span {
+  font-size: 8px;
+  color: #8da094;
+}
+.pv-upcoming-list {
+  display: grid;
+  gap: 10px;
+}
+.pv-upcoming-row {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.pv-upcoming-row > span {
+  width: 35px;
+  flex-shrink: 0;
+  font-size: 10px;
+  color: #667e70;
+}
+.pv-upcoming-row > span small {
+  display: block;
+  font-size: 7px;
+  color: #a3afa6;
+  margin-top: 4px;
+}
+.pv-upcoming-visit {
+  border: 0;
+  border-radius: 18px;
+  padding: 10px;
+  min-width: 0;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #214238;
+  text-align: left;
+}
+.pv-upcoming-visit img,
+.pv-upcoming-visit > i {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid white;
+}
+.pv-upcoming-visit > i {
+  display: grid;
+  place-items: center;
+  font-size: 9px;
+  font-style: normal;
+  background: white;
+}
+.pv-upcoming-visit strong {
+  font-size: 10px;
+  line-height: 1.35;
+  font-weight: 500;
+  min-width: 0;
+}
+.pv-upcoming-visit small {
+  display: block;
+  font-size: 8px;
+  font-weight: 400;
+  margin-top: 2px;
+  color: #688375;
+}
+.pv-upcoming-visit > svg {
+  margin-left: auto;
+  flex-shrink: 0;
+}
+.pv-upcoming-tone-0 {
+  background: #eaf1bd;
+}
+.pv-upcoming-tone-1 {
+  background: #d7eeea;
+}
+.pv-upcoming-tone-2 {
+  background: #f7e4cb;
+}
+.pv-calendar-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  border: 0;
+  padding: 11px;
+  margin: 14px 0 0;
+  width: 100%;
+  color: #769286;
+  background: #f5f7f3;
+  border-radius: 20px;
+  font-size: 9px;
+}
+.pv-upcoming-foot {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 8px;
+  color: #9aa99f;
+  border-top: 1px solid #eef2ec;
+  margin-top: 17px;
+  padding-top: 15px;
+}
