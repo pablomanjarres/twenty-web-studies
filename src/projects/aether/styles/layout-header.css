@@ -1,0 +1,40 @@
+.aether {
+  --ink: #161614;
+  --paper: #f5f3eb;
+  --orange: #ff6b35;
+  color: var(--paper);
+  background: var(--ink);
+  font-family: "DM Sans", sans-serif;
+}
+.aether a {
+  text-decoration: none;
+}
+.aether-header {
+  height: 100px;
+  max-width: 1320px;
+  padding: 0 58px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.aether-header .brand-logo {
+  font-size: 29px;
+}
+.aether-header nav {
+  display: flex;
+  gap: 36px;
+  font-size: 14px;
+}
+.aether-header nav a {
+  color: #cecec7;
+}
+.aether-header-cta {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  border: 1px solid #55564e;
+  border-radius: 100px;
+  padding: 13px 19px;
+  font-size: 13px;
+}
