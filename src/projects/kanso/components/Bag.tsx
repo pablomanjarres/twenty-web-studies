@@ -1,75 +1,73 @@
-import { useEffect, useRef } from "react";
-import { ArrowUpRight, ArrowRight, ShoppingBag, Minus, X } from "lucide-react";
-import { asset, Product } from "../data";
-
+import { X, ArrowRight } from "lucide-react";
+import { image, money, type CartLine } from "../data";
+import { Dialog } from "./Dialog";
 export function Bag({
   items,
   onClose,
   onRemove,
 }: {
-  items: Product[];
+  items: CartLine[];
   onClose: () => void;
-  onRemove: (index: number) => void;
+  onRemove: (id: string) => void;
 }) {
-  const dialog = useRef<HTMLDialogElement>(null);
-  useEffect(() => {
-    dialog.current?.showModal();
-  }, []);
+  const total = items.reduce(
+    (sum, line) => sum + line.product.price * line.quantity,
+    0,
+  );
   return (
-    <dialog
-      aria-labelledby="kanso-bag-title"
-      ref={dialog}
-      className="kanso-bag-backdrop"
-      onCancel={onClose}
+    <Dialog
+      label="kanso-bag-title"
+      className="kanso-bag-dialog"
+      onClose={onClose}
     >
-      <aside className="kanso-bag-panel" aria-labelledby="kanso-bag-title">
-        <div>
-          <h2 id="kanso-bag-title">Your good things.</h2>
-          <button aria-label="Close bag" onClick={onClose}>
-            <X size={20} />
-          </button>
-        </div>
-        {items.length === 0 ? (
-          <div className="kanso-empty-bag">
-            <ShoppingBag size={30} />
-            <p>A little room for something lovely.</p>
-            <a href="#collection" onClick={onClose}>
-              Explore the collection <ArrowUpRight size={17} />
-            </a>
+      <div className="kanso-bag-top">
+        <h2 id="kanso-bag-title">Your objects.</h2>
+        <button aria-label="Close bag" onClick={onClose}>
+          <X size={20} />
+        </button>
+      </div>
+      {items.length ? (
+        <>
+          <div className="kanso-bag-items">
+            {items.map(({ product, quantity }) => (
+              <article key={product.id}>
+                <img src={image(product.image)} alt={product.name} />
+                <div>
+                  <h3>{product.name}</h3>
+                  <p>
+                    {product.glaze} / {quantity}{" "}
+                    {quantity === 1 ? "piece" : "pieces"}
+                  </p>
+                  <strong>{money(product.price * quantity)}</strong>
+                </div>
+                <button
+                  aria-label={`Remove ${product.name}`}
+                  onClick={() => onRemove(product.id)}
+                >
+                  <X size={15} />
+                </button>
+              </article>
+            ))}
           </div>
-        ) : (
-          <>
-            <div className="kanso-bag-items">
-              {items.map((i, k) => (
-                <article key={`${i.id}-${k}`}>
-                  <img src={asset(i.image)} alt={i.name} />
-                  <div>
-                    <h3>{i.name}</h3>
-                    <p>{i.material}</p>
-                    <strong>€{i.price}</strong>
-                  </div>
-                  <button
-                    aria-label={`Remove ${i.name}`}
-                    onClick={() => onRemove(k)}
-                  >
-                    <Minus size={16} />
-                  </button>
-                </article>
-              ))}
-            </div>
-            <div className="kanso-bag-total">
-              <span>Subtotal</span>
-              <strong>€{items.reduce((sum, i) => sum + i.price, 0)}</strong>
-            </div>
-            <p className="kanso-bag-note">
-              Your selection is saved for this visit.
-            </p>
-            <button className="kanso-continue" onClick={onClose}>
-              Keep exploring <ArrowRight size={17} />
-            </button>
-          </>
-        )}
-      </aside>
-    </dialog>
+          <div className="kanso-bag-total">
+            <span>Subtotal</span>
+            <strong>{money(total)}</strong>
+          </div>
+          <p className="kanso-detail-note">
+            Your selection is saved for this visit.
+          </p>
+        </>
+      ) : (
+        <div className="kanso-empty-bag">
+          <p>A little room for something useful.</p>
+          <a href="#objects" onClick={onClose}>
+            Return to the shelf <ArrowRight size={16} />
+          </a>
+        </div>
+      )}
+      <button className="kanso-add" onClick={onClose}>
+        Keep looking <ArrowRight size={16} />
+      </button>
+    </Dialog>
   );
 }
