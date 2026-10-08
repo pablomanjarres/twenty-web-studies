@@ -1,0 +1,58 @@
+.kanso-story {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #e9e1d7;
+}
+.kanso-story > img {
+  height: 610px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.kanso-story > div {
+  align-self: center;
+  padding: 60px 12%;
+}
+.kanso-story > div > span {
+  font-size: 10px;
+  color: #a18876;
+}
+.kanso-story h2 {
+  font-size: 54px;
+  line-height: 1.15;
+  margin: 25px 0;
+}
+.kanso-story p {
+  font-size: 11px;
+  line-height: 1.9;
+  color: #92745b;
+  max-width: 340px;
+}
+.kanso-story .kanso-shop-link {
+  margin-top: 17px;
+}
+.kanso-care {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 75px;
+  padding: 65px 8%;
+  border-bottom: 1px solid #e3d5c6;
+}
+.kanso-care article {
+  text-align: center;
+}
+.kanso-care svg {
+  stroke-width: 1.3;
+  color: #957252;
+}
+.kanso-care h3 {
+  font-size: 26px;
+  margin: 20px 0 13px;
+}
+.kanso-care p {
+  font-size: 10px;
+  line-height: 1.8;
+  color: #997859;
+  max-width: 240px;
+  margin: auto;
+}
