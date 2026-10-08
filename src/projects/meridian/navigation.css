@@ -1,99 +1,3 @@
-.meridian-page {
-  --md-bg: #101c2b;
-  --md-panel: #152537;
-  --md-panel2: #172b3d;
-  --md-line: #adc9de15;
-  --md-text: #eaf0f6;
-  --md-muted: #7d98ae;
-  --md-cyan: #58d8dc;
-  background: var(--md-bg);
-  color: var(--md-text);
-  font-family: "DM Sans", sans-serif;
-  display: grid;
-  grid-template-columns: 209px minmax(0, 1fr);
-  min-height: 100vh;
-}
-.meridian-page a {
-  color: inherit;
-  text-decoration: none;
-}
-.meridian-page h1,
-.meridian-page h2,
-.meridian-page h3 {
-  font-family: "Space Grotesk", sans-serif;
-  margin: 0;
-  font-weight: 500;
-}
-.meridian-page button,
-.meridian-page select {
-  cursor: pointer;
-}
-.md-sidebar {
-  background: #0d1927;
-  border-right: 1px solid var(--md-line);
-  padding: 30px 21px 22px;
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-}
-.md-logo {
-  margin-bottom: 52px;
-}
-.md-logo .brand-logo {
-  font-size: 22px;
-  letter-spacing: -1px;
-  gap: 7px;
-  font-family: "Space Grotesk";
-}
-.md-logo .brand-logo svg {
-  color: var(--md-cyan);
-  width: 27px;
-  height: 29px;
-}
-.md-sidebar-label {
-  font-size: 8px;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 1.7px;
-  color: var(--md-muted);
-  font-family: "Caleb Mono", "IBM Plex Mono", monospace;
-}
-.md-sidebar > .md-sidebar-label {
-  padding-left: 10px;
-}
-.md-sidebar nav {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  margin: 16px -5px 0;
-}
-.md-sidebar nav > a {
-  font-size: 11px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 13px 12px;
-  color: #8da4b8;
-  border-radius: 4px;
-}
-.md-sidebar nav .md-nav-active {
-  color: var(--md-cyan);
-  background: #58d8dc12;
-}
-.md-sidebar nav > a:hover {
-  background: #58d8dc0b;
-}
-.md-sidebar nav > a > span {
-  margin-left: auto;
-  font-size: 8px;
-  font-family: "Caleb Mono", monospace;
-  color: var(--md-muted);
-}
-.md-side-divider {
-  height: 1px;
-  background: var(--md-line);
-  margin: 26px 0;
-}
 .md-network-port {
   font-size: 9px;
   padding: 17px 7px 0;
@@ -107,18 +11,6 @@
   font-size: 8px;
   color: var(--md-muted);
 }
-.md-port-dot {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: var(--md-cyan);
-}
-.md-port-dot.blue {
-  background: #839fe8;
-}
-.md-port-dot.green {
-  background: #9de2ac;
-}
 .md-sidebar-footer {
   margin-top: auto;
   padding-top: 70px;
@@ -129,40 +21,75 @@
   gap: 9px;
   align-items: center;
   color: var(--md-muted);
-}
-.md-user {
-  border-top: 1px solid var(--md-line);
-  margin-top: 27px;
-  padding-top: 23px;
+}.md-command-bar {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 24px;
+  height: 56px;
+  padding: 0 20px;
+  background: #111b2a;
+  border-bottom: 1px solid var(--md-line);
 }
-.md-user > span {
-  font-family: "Space Grotesk";
-  font-size: 10px;
+.md-command-bar > a {
+  width: 290px;
+  flex-shrink: 0;
+}
+.md-command-bar .brand-logo {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 21px;
+  letter-spacing: -0.045em;
+}
+.md-command-bar .brand-logo svg {
+  width: 25px;
+  height: 25px;
+}
+.md-workspace-name {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  color: #c1d0de;
+  font-size: 13px;
+}
+.md-command-title {
+  font-size: 12px;
+  color: #8399ac;
+}
+.md-command-date {
+  margin-left: auto;
+  font-size: 12px;
+  color: #a4b6c6;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  white-space: nowrap;
+}
+.md-command-date i {
+  width: 5px;
+  height: 5px;
+  background: var(--md-cyan);
+  border-radius: 50%;
+}
+.md-side-navigation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-right: 1px solid var(--md-line);
+  background: #111b2a;
+}
+.md-side-navigation > div {
+  display: grid;
+  gap: 14px;
+}
+.md-operator {
   display: grid;
   place-items: center;
-  width: 29px;
-  height: 29px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
-  background: #294457;
-  color: #a9d9df;
-}
-.md-user > div {
-  flex: 1;
-}
-.md-user strong {
-  display: block;
+  background: #374158;
+  border: 2px solid #596379;
   font-size: 10px;
-  font-weight: 500;
-}
-.md-user small {
-  display: block;
-  font-size: 8px;
-  color: var(--md-muted);
-  margin-top: 5px;
-}
-.md-user > svg {
-  color: var(--md-muted);
+  color: #e1e9f0;
 }
