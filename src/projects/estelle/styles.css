@@ -1,7 +1,8 @@
-@import "./styles.01-layout.css";
-@import "./styles.02-hero.css";
-@import "./styles.03-atelier.css";
-@import "./styles.04-footer.css";
-@import "./styles.05-responsive-header.css";
-@import "./styles.06-responsive-topline.css";
-@import "./styles.07-responsive-save.css";
+@import "./styles/base.css";
+@import "./styles/exhibition.css";
+@import "./styles/notes-atelier.css";
+@import "./styles/index.css";
+@import "./styles/appointment.css";
+@import "./styles/responsive-exhibition.css";
+@import "./styles/responsive-materials.css";
+@import "./styles/responsive-folio.css";
