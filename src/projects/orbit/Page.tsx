@@ -1,56 +1,93 @@
 import { useState } from "react";
-import { Plus, ArrowRight, Sparkles } from "lucide-react";
-import { Sidebar } from "./components/Sidebar";
-import { Topbar } from "./components/Topbar";
-import { Stats } from "./components/Stats";
-import { Projects } from "./components/Projects";
-import { Tasks } from "./components/Tasks";
-import { Calendar } from "./components/Calendar";
-import { Progress } from "./components/Progress";
-import { Activity } from "./components/Activity";
+import { Navigation, type View } from "./Navigation";
+import { Header } from "./Header";
+import { Roadmap } from "./Roadmap";
+import { Allocation } from "./Allocation";
+import { TaskLedger } from "./TaskLedger";
+import { TeamPanel } from "./TeamPanel";
+import { FocusCard } from "./FocusCard";
+import { TaskDrawer } from "./TaskDrawer";
+import { NewTask } from "./NewTask";
+import { ActivityFeed } from "./ActivityFeed";
+import { useTasks } from "./useTasks";
 import "./styles.css";
-
 export default function Page() {
-  const [search, setSearch] = useState("");
+  const work = useTasks();
+  const [view, setView] = useState<View>("overview");
+  const [query, setQuery] = useState("");
+  const [filter, setFilter] = useState("All");
+  const [adding, setAdding] = useState(false);
+  const selected = work.tasks.find((t) => t.id === work.selected);
+  const shown = work.tasks.filter((t) =>
+    `${t.title} ${t.kind} ${t.owner}`
+      .toLowerCase()
+      .includes(query.toLowerCase()),
+  );
   return (
-    <main className="orbit">
-      <Sidebar />
-      <div className="orbit-workspace">
-        <Topbar search={search} setSearch={setSearch} />
-        <div className="orbit-main" id="overview">
-          <div className="orbit-welcome">
-            <div>
-              <span>Thursday, October 8</span>
-              <h1>A little focus. A lot of possibility.</h1>
-              <p>Good morning, Alex. Let’s make some good work happen.</p>
+    <main className="orbit-v3">
+      <Navigation
+        view={view}
+        onView={setView}
+        activityCount={work.events.length}
+      />
+      <div className="ov3-main">
+        <Header
+          view={view}
+          query={query}
+          onQuery={setQuery}
+          onAdd={() => setAdding(true)}
+        />
+        {view === "overview" ? (
+          <>
+            <div className="ov3-overview-top">
+              <Roadmap tasks={shown} onSelect={work.setSelected} />
+              <FocusCard
+                task={work.tasks.find((t) => t.id === 5)!}
+                onSelect={work.setSelected}
+              />
             </div>
-            <a href="#projects" className="orbit-new-project">
-              <Plus size={16} />
-              Explore projects
-            </a>
-          </div>
-          <div className="orbit-content-columns">
-            <div className="orbit-content-primary">
-              <Stats />
-              <Projects search={search} />
-              <Tasks search={search} />
+            <Allocation tasks={work.tasks} />
+            <div className="ov3-overview-bottom">
+              <TaskLedger
+                tasks={shown}
+                filter={filter}
+                onFilter={setFilter}
+                onSelect={work.setSelected}
+              />
+              <TeamPanel tasks={work.tasks} onSelect={work.setSelected} />
             </div>
-            <aside className="orbit-content-secondary">
-              <Calendar />
-              <Progress />
-              <Activity />
-            </aside>
-          </div>
-          <div className="orbit-bottom-note">
-            <span>
-              <Sparkles size={12} /> A shared space for your best work.
-            </span>
-            <a href="#tasks">
-              Keep the momentum <ArrowRight size={12} />
-            </a>
-          </div>
-        </div>
+          </>
+        ) : view === "tasks" ? (
+          <TaskLedger
+            tasks={shown}
+            filter={filter}
+            onFilter={setFilter}
+            onSelect={work.setSelected}
+          />
+        ) : (
+          <ActivityFeed
+            events={work.events}
+            onOverview={() => setView("overview")}
+          />
+        )}
+        <footer className="ov3-page-footer">
+          <span>
+            <i />
+            Your studio, in sync.
+          </span>
+          <span>Maison collection · Round 02</span>
+        </footer>
       </div>
+      {selected && (
+        <TaskDrawer
+          task={selected}
+          onClose={() => work.setSelected(null)}
+          onStatus={(status) => work.status(selected.id, status)}
+          onCheck={(index) => work.toggle(selected.id, index)}
+          onNote={(note) => work.update(selected.id, { note })}
+        />
+      )}{" "}
+      {adding && <NewTask onAdd={work.add} onClose={() => setAdding(false)} />}
     </main>
   );
 }
