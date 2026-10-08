@@ -1,0 +1,134 @@
+.hc-traffic {
+  background: #fff;
+  border: 1px solid #e5e8ef;
+  border-radius: 10px;
+  padding: 20px 23px 16px;
+  box-shadow: 0 2px 3px #14233b03;
+  min-width: 0;
+}
+.hc-traffic > header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.hc-traffic h2,
+.hc-releases h2 {
+  font:
+    550 15px "DM Sans",
+    sans-serif;
+  margin: 0 0 7px;
+  letter-spacing: -0.025em;
+  color: #394258;
+}
+.hc-traffic > header > div > span {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  font-size: 9px;
+  color: #a3aab8;
+}
+.hc-traffic > header > label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid #e3e7ef;
+  border-radius: 5px;
+  padding: 6px 9px;
+  font-size: 0;
+  color: #9da5b5;
+}
+.hc-traffic select {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: #768093;
+  font-size: 10px;
+  cursor: pointer;
+}
+.hc-chart-key {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 16px 0 12px;
+  min-height: 32px;
+}
+.hc-chart-key > span {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  font-size: 10px;
+  color: #798499;
+}
+.hc-chart-key i {
+  height: 6px;
+  width: 6px;
+  border: 2px solid #3458ee;
+  border-radius: 50%;
+}
+.hc-chart-key > small {
+  font-size: 9px;
+  color: #b0b7c4;
+}
+.hc-chart-key > strong {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 10px;
+  font-weight: 500;
+  color: #8c96aa;
+  background: #f6f8ff;
+  border: 1px solid #e7ecfb;
+  border-radius: 6px;
+  padding: 7px 10px;
+}
+.hc-chart-key b {
+  font-weight: 650;
+  color: #3458ee;
+}
+.hc-chart-key em {
+  font-style: normal;
+  color: #a8b0c1;
+  font-size: 9px;
+  padding-left: 10px;
+  border-left: 1px solid #dfe5f5;
+}
+.hc-chart-body {
+  display: grid;
+  grid-template-columns: 26px minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr);
+  gap: 8px;
+  height: 170px;
+}
+.hc-chart-axis {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font:
+    9px "DM Sans",
+    sans-serif;
+  color: #b0b7c4;
+}
+.hc-chart-body svg {
+  min-height: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+.hc-chart-body [role="button"] {
+  cursor: crosshair;
+}
+.hc-chart-body [role="button"]:focus-visible {
+  outline: 0;
+}
+.hc-chart-body [role="button"]:focus-visible rect {
+  fill: #3458ee0a;
+}
+.hc-chart-times {
+  display: flex;
+  justify-content: space-between;
+  margin: 12px 0 0 34px;
+  font-size: 9px;
+  color: #b0b7c4;
+}
