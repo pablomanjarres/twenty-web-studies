@@ -1,0 +1,68 @@
+.ve-conversation {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 12%;
+  background: var(--ve-mustard);
+  padding: 72px 9% 76px;
+}
+.ve-conversation h2 {
+  font-size: 68px;
+  line-height: 1.06;
+  letter-spacing: -3.8px;
+  margin: 24px 0 21px;
+}
+.ve-conversation > div > p {
+  font-size: 11px;
+  opacity: 0.8;
+}
+.ve-conversation form {
+  padding-top: 8px;
+}
+.ve-conversation label {
+  display: block;
+  font: 8px "IBM Plex Mono";
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin: 0 0 30px;
+}
+.ve-conversation select {
+  display: block;
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px 0 14px;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #343d2660;
+  font: 15px "Manrope";
+  color: var(--ve-olive);
+  letter-spacing: -0.2px;
+}
+.ve-conversation select option {
+  background: var(--ve-milk);
+}
+.ve-conversation button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 19px;
+  border: 0;
+  background: var(--ve-olive);
+  color: var(--ve-milk);
+  font-size: 11px;
+}
+.ve-conversation button:hover {
+  background: #485036;
+}
+.ve-conversation-result {
+  display: flex;
+  gap: 9px;
+  align-items: start;
+  font-size: 10px;
+  line-height: 1.6;
+  margin: 19px 0 0;
+}
+.ve-conversation-result > svg {
+  flex: none;
+  margin-top: 3px;
+}
