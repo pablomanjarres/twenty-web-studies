@@ -1,60 +1,52 @@
 import { useState } from "react";
-import { ArrowUpRight, Sun, Moon } from "lucide-react";
-import { rituals } from "./data";
-import type { RitualName } from "./data";
-
-export function Ritual({ onChoose }: { onChoose: () => void }) {
-  const [time, setTime] = useState<RitualName>("Morning");
-  const current = rituals[time];
+import { formulas, image } from "./data";
+export function Ritual({ onSelect }: { onSelect: (index: number) => void }) {
+  const [time, setTime] = useState("Morning");
+  const selected = time === "Morning" ? formulas : [formulas[0], formulas[2]];
   return (
-    <section className="va-ritual" id="va-ritual">
-      <div className="va-ritual-heading">
-        <span className="va-kicker">A moment for you</span>
-        <h2>
-          Your day.
-          <br />
-          <i>Your ritual.</i>
-        </h2>
-        <p>
-          Find a rhythm that feels good.
-          <br />
-          Begin with a little care.
-        </p>
-      </div>
-      <div className="va-ritual-details">
-        <div
-          className="va-ritual-tabs"
-          role="group"
-          aria-label="Choose a ritual time"
-        >
-          {(["Morning", "Evening"] as RitualName[]).map((value) => (
+    <section id="ritual" className="vale-ritual">
+      <div className="vale-ritual-top">
+        <div>
+          <span className="vale-label">The daily sequence</span>
+          <h2>A few considered moments.</h2>
+        </div>
+        <div className="vale-time-tabs" aria-label="Ritual time">
+          {["Morning", "Evening"].map((name) => (
             <button
-              key={value}
-              aria-pressed={time === value}
-              onClick={() => setTime(value)}
+              key={name}
+              aria-pressed={time === name}
+              onClick={() => setTime(name)}
             >
-              {value === "Morning" ? <Sun size={16} /> : <Moon size={16} />}{" "}
-              {value}
+              {name}
             </button>
           ))}
         </div>
-        <div className="va-ritual-body">
-          <span className="va-kicker">{current.label}</span>
-          <h3>{current.heading}</h3>
-          <p>{current.text}</p>
-          <ol>
-            {current.steps.map((step, index) => (
-              <li key={step}>
-                <span>0{index + 1}</span>
-                {step}
-              </li>
-            ))}
-          </ol>
-          <button className="va-ritual-button" onClick={onChoose}>
-            Start with the essentials <ArrowUpRight size={18} />
-          </button>
-        </div>
       </div>
+      <div className="vale-ritual-sequence">
+        {selected.map((formula, index) => (
+          <article key={formula.id}>
+            <span className="vale-label">
+              0{index + 1} / {formula.kind}
+            </span>
+            <img src={image(formula.image)} alt={formula.name} loading="lazy" />
+            <div>
+              <h3>{formula.name}</h3>
+              <p>{formula.use}</p>
+              <a
+                href="#formulas"
+                onClick={() => onSelect(formulas.indexOf(formula))}
+              >
+                View formula ↗
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+      <p className="vale-ritual-note">
+        {time === "Morning"
+          ? "Begin slowly. A fresh start, a light layer, a soft finish."
+          : "Let the day settle. Cleanse, then take a little time to finish."}
+      </p>
     </section>
   );
 }
