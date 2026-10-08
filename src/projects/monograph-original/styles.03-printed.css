@@ -1,0 +1,104 @@
+.monograph-original-printed p {
+  font-size: 13px;
+  line-height: 1.7;
+  max-width: 350px;
+  color: #ccd1e0;
+}
+
+.monograph-original-paper-button {
+  display: flex;
+  align-items: center;
+  gap: 42px;
+  width: max-content;
+  background: #f7f5ef;
+  color: #182a63;
+  padding: 15px 19px;
+  margin: 28px 0 20px;
+  font-size: 12px;
+}
+
+.monograph-original-printed > div > small {
+  display: block;
+  font-size: 10px;
+  color: #ccd1e0;
+}
+
+.monograph-original-footer {
+  display: flex;
+  gap: 35px;
+  align-items: center;
+  padding: 38px 0;
+  font-size: 11px;
+}
+
+.monograph-original-footer .brand-logo {
+  color: #182a63;
+  font-size: 20px;
+}
+
+.monograph-original-footer > p {
+  color: #777a74;
+}
+
+.monograph-original-footer > a {
+  margin-left: auto;
+}
+
+.monograph-original-footer > small {
+  font-size: 9px;
+  color: #777a74;
+}
+
+@media (min-width: 1500px) {
+  .monograph-original-cover-image > img {
+    height: 650px;
+  }
+  .monograph-original-cover-copy h2 {
+    margin-top: 52px;
+  }
+  .monograph-original-editor-note {
+    margin-top: 38px;
+  }
+}
+
+@media (max-width: 950px) {
+  .monograph-original-page {
+    padding: 0 28px;
+  }
+  .monograph-original-header > span {
+    display: none;
+  }
+  .monograph-original-cover {
+    gap: 30px;
+    grid-template-columns: 1.2fr 1fr;
+  }
+  .monograph-original-cover-image > img {
+    height: 500px;
+  }
+  .monograph-original-cover-copy h2 {
+    font-size: 54px;
+  }
+  .monograph-original-masthead nav {
+    gap: 25px;
+  }
+  .monograph-original-masthead nav > span {
+    display: none;
+  }
+  .monograph-original-editor-note p {
+    font-size: 20px;
+  }
+  .monograph-original-story img {
+    height: 230px;
+  }
+  .monograph-original-printed {
+    margin: 0 -28px;
+    padding: 60px 42px;
+    gap: 42px;
+  }
+  .monograph-original-printed h2 {
+    font-size: 36px;
+  }
+  .monograph-original-footer > p {
+    display: none;
+  }
+}
