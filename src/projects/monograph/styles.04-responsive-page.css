@@ -1,0 +1,94 @@
+@media (max-width: 620px) {
+  .monograph-page {
+    padding: 0 20px;
+  }
+  .monograph-header {
+    height: 66px;
+  }
+  .monograph-header .brand-logo {
+    font-size: 17px;
+  }
+  .monograph-issue-link {
+    font-size: 10px;
+    gap: 8px;
+  }
+  .monograph-dateline {
+    font-size: 9px;
+    padding-top: 20px;
+  }
+  .monograph-masthead h1 {
+    font-size: 18vw;
+    margin: 5px 0 8px;
+  }
+  .monograph-masthead nav {
+    gap: 0;
+    justify-content: space-between;
+    font-size: 9px;
+    padding: 14px 0;
+  }
+  .monograph-masthead nav a:last-of-type {
+    display: none;
+  }
+  .monograph-cover {
+    display: flex;
+    flex-direction: column;
+    padding-top: 24px;
+    gap: 28px;
+  }
+  .monograph-cover-image > img {
+    height: 430px;
+  }
+  .monograph-cover-copy h2 {
+    font-size: 65px;
+    margin: 24px 0;
+  }
+  .monograph-cover-copy > p {
+    max-width: none;
+  }
+  .monograph-editor-note {
+    margin-top: 18px;
+  }
+  .monograph-section-title {
+    align-items: flex-start;
+    gap: 20px;
+    flex-direction: column;
+  }
+  .monograph-section-title h2 {
+    font-size: 30px;
+  }
+  .monograph-story-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .monograph-story img {
+    height: 300px;
+  }
+  .monograph-story h3 {
+    font-size: 34px;
+  }
+  .monograph-printed {
+    margin: 0 -20px;
+    padding: 50px 28px;
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  .monograph-printed h2 {
+    font-size: 40px;
+  }
+  .monograph-footer {
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+  .monograph-footer > a {
+    font-size: 10px;
+  }
+  .monograph-footer > small {
+    width: 100%;
+  }
+  .monograph-book-cover {
+    width: 230px;
+  }
+  .monograph-book-cover img {
+    height: 245px;
+  }
+}
