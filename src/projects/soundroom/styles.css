@@ -1,6 +1,9 @@
-@import "./shell.css";
+@import "./layout.css";
+@import "./navigation.css";
 @import "./featured.css";
-@import "./releases.css";
-@import "./tracks-queue.css";
-@import "./responsive-wide.css";
-@import "./responsive-mobile.css";
+@import "./artwork.css";
+@import "./tracks.css";
+@import "./rooms.css";
+@import "./discovery.css";
+@import "./player.css";
+@import "./responsive.css";
