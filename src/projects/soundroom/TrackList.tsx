@@ -1,39 +1,67 @@
-import { Plus } from "lucide-react";
-import { image, releases } from "./data";
-
+import { SlidersHorizontal } from "lucide-react";
+import { TrackRow } from "./TrackRow";
+import type { Track } from "./data";
+import type { MusicView } from "./Navigation";
 export function TrackList({
+  tracks,
+  view,
   selected,
-  onSelect,
+  playing,
+  saved,
+  onPlay,
+  onSave,
 }: {
-  selected: string;
-  onSelect: (title: string) => void;
+  tracks: Track[];
+  view: MusicView;
+  selected: number;
+  playing: boolean;
+  saved: number[];
+  onPlay: (id: number) => void;
+  onSave: (id: number) => void;
 }) {
   return (
-    <section className="sr-tracks" id="sr-tracks">
-      <div className="sr-section-title">
-        <h2>On the radar</h2>
-        <span>A few worth keeping.</span>
-      </div>
-      {releases.map((release, index) => (
-        <button
-          className={`sr-track ${selected === release.title ? "sr-track-selected" : ""}`}
-          key={release.title}
-          onClick={() => onSelect(release.title)}
-          aria-label={`Select ${release.title} for your queue`}
-        >
-          <span className="sr-track-number">
-            {String(index + 1).padStart(2, "0")}
+    <section className="sr3-track-list">
+      <header>
+        <div>
+          <h2>
+            {view === "collection"
+              ? "Your collection"
+              : view === "recent"
+                ? "Recently played"
+                : "In your rotation"}
+          </h2>
+          <span>
+            {tracks.length} {tracks.length === 1 ? "sound" : "sounds"}, a little
+            room to listen.
           </span>
-          <img src={image(release.image)} alt="" />
-          <span className="sr-track-name">
-            <strong>{release.title}</strong>
-            <span>{release.artist}</span>
-          </span>
-          <span className="sr-track-genre">{release.genre}</span>
-          <span>{release.duration}</span>
-          <Plus size={15} />
-        </button>
+        </div>
+        <span className="sr3-track-list-meta">
+          <SlidersHorizontal size={14} />
+          ROOM EDITIONS
+        </span>
+      </header>
+      {tracks.map((track, index) => (
+        <TrackRow
+          key={track.id}
+          track={track}
+          index={index}
+          selected={selected === track.id}
+          playing={playing}
+          saved={saved.includes(track.id)}
+          onPlay={() => onPlay(track.id)}
+          onSave={() => onSave(track.id)}
+        />
       ))}
+      {!tracks.length && (
+        <div className="sr3-empty">
+          <h3>A little space for something new.</h3>
+          <p>
+            {view === "collection"
+              ? "Save a sound with the heart to keep it in your collection."
+              : "Try another title, artist, or mood."}
+          </p>
+        </div>
+      )}
     </section>
   );
 }
