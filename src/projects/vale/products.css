@@ -1,0 +1,97 @@
+.va-essentials {
+  padding: 86px 7% 83px;
+}
+.va-section-heading {
+  text-align: center;
+}
+.va-section-heading h2 {
+  font-size: 58px;
+  line-height: 1.08;
+  letter-spacing: -1.6px;
+  margin: 20px 0;
+}
+.va-section-heading h2 i {
+  letter-spacing: -1px;
+}
+.va-section-heading > p {
+  font-size: 11px;
+  opacity: 0.75;
+  margin: 19px 0 37px;
+}
+.va-product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+}
+.va-product-art {
+  height: 340px;
+  position: relative;
+  background: #eef1e7;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+.va-product:nth-child(2) .va-product-art {
+  background: #e7ede2;
+}
+.va-product:nth-child(3) .va-product-art {
+  background: #ebece0;
+}
+.va-product-art > span:first-child {
+  position: absolute;
+  top: 21px;
+  left: 20px;
+  font-size: 9px;
+}
+.va-art-size {
+  position: absolute;
+  bottom: 19px;
+  right: 19px;
+  font-size: 9px;
+  opacity: 0.7;
+}
+.va-package {
+  height: 295px;
+  width: auto;
+  filter: drop-shadow(14px 12px 8px #294b3a0d);
+  transition: transform 0.35s;
+}
+.va-product:hover .va-package {
+  transform: translateY(-7px);
+}
+.va-package-jar {
+  height: 286px;
+}
+.va-product-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 22px 0 5px;
+}
+.va-product-title h3 {
+  font-size: 32px;
+  letter-spacing: -0.8px;
+}
+.va-product-title > span {
+  font-size: 12px;
+}
+.va-product > p {
+  font-size: 10px;
+  opacity: 0.7;
+  margin: 11px 0 21px;
+}
+.va-product-add {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  border: 0;
+  border-top: 1px solid var(--va-rule);
+  padding: 14px 0;
+  color: var(--va-green);
+  font-size: 10px;
+  width: 100%;
+}
+.va-product-add:hover {
+  opacity: 0.55;
+}
