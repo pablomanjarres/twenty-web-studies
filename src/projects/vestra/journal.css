@@ -1,0 +1,163 @@
+.vs-suite {
+  padding: 110px 10%;
+  display: grid;
+  grid-template-columns: 1fr 0.95fr;
+  gap: 12%;
+  align-items: center;
+}
+.vs-suite-photograph {
+  position: relative;
+}
+.vs-suite-photograph img {
+  height: 650px;
+  width: 100%;
+  object-fit: cover;
+}
+.vs-suite-photograph > span {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  padding-top: 17px;
+}
+.vs-suite-copy > small,
+.vs-ritual-title > span {
+  font-size: 9px;
+  letter-spacing: 0.15em;
+}
+.vs-suite-copy h2,
+.vs-ritual h2 {
+  font:
+    400 52px/1.12 "The Foriene",
+    "Cormorant Garamond",
+    serif;
+  letter-spacing: -0.03em;
+  margin: 23px 0;
+}
+.vs-suite-copy > p {
+  font-size: 13px;
+  line-height: 1.9;
+  max-width: 340px;
+}
+.vs-room-index {
+  margin: 38px 0 30px;
+}
+.vs-room-index details {
+  border-top: 1px solid #203c3130;
+  padding: 18px 0;
+}
+.vs-room-index details:last-child {
+  border-bottom: 1px solid #203c3130;
+}
+.vs-room-index summary {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+.vs-room-index summary small {
+  margin-left: auto;
+  font-size: 10px;
+}
+.vs-room-index details p {
+  font-size: 11px;
+  line-height: 1.8;
+  margin-top: 15px;
+}
+.vs-suite-copy > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 40px;
+  text-decoration: none;
+  font-size: 12px;
+  border-bottom: 1px solid #203c3166;
+  padding-bottom: 10px;
+}
+.vs-ritual {
+  background: var(--vs-forest);
+  color: var(--vs-cream);
+  padding: 75px 10%;
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 40px 8%;
+  align-items: center;
+}
+.vs-ritual-title {
+  align-self: start;
+  padding-top: 45px;
+}
+.vs-ritual figure {
+  grid-row: span 2;
+}
+.vs-ritual figure img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+}
+.vs-ritual figcaption {
+  font-size: 10px;
+  margin-top: 16px;
+}
+.vs-ritual-notes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+.vs-ritual-notes article {
+  border-top: 1px solid #f4f0e64d;
+  padding-top: 20px;
+}
+.vs-ritual-notes article > span {
+  font-size: 8px;
+  letter-spacing: 0.07em;
+}
+.vs-ritual-notes h3 {
+  font:
+    400 26px/1.15 "The Foriene",
+    "Cormorant Garamond",
+    serif;
+  margin: 18px 0;
+}
+.vs-ritual-notes p {
+  font-size: 11px;
+  line-height: 1.9;
+  opacity: 0.8;
+}
+.vs-footer {
+  padding: 65px 8%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 35px;
+  align-items: center;
+}
+.vs-footer .brand-logo {
+  font-size: 27px;
+}
+.vs-footer .brand-logo > span {
+  font-weight: 400;
+  letter-spacing: 0.04em;
+}
+.vs-footer > p {
+  font:
+    400 31px/1.2 "The Foriene",
+    "Cormorant Garamond",
+    serif;
+}
+.vs-footer > a {
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  font-size: 13px;
+  text-decoration: none;
+  border-bottom: 1px solid #203c3155;
+  padding-bottom: 12px;
+}
+.vs-footer > small {
+  grid-column: 1/-1;
+  font-size: 9px;
+  opacity: 0.65;
+}
