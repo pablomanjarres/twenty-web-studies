@@ -1,178 +1,36 @@
 @media (min-width: 1500px) {
-  .aether-hero {
-    min-height: 760px;
-  }
 }
 @media (max-width: 1000px) {
-  .aether-header,
-  .aether-hero {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-  .aether-hero {
-    grid-template-columns: 1fr 1fr;
-  }
-  .aether-payment-card {
-    width: 285px;
-    height: 185px;
-  }
-  .aether-card-back {
-    left: 30px;
-  }
-  .aether-card-middle {
-    left: 0;
-  }
-  .aether-card-front {
-    left: 30px;
-  }
-  .aether-sculpture-ring {
-    width: 340px;
-    height: 340px;
-    left: -10px;
-  }
-  .aether-account {
-    gap: 35px;
-    padding: 75px 30px;
-  }
-  .aether-partners,
-  .aether-features,
-  .aether-closing {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-  .aether h2 {
-    font-size: 35px;
-  }
-  .aether-footer {
-    margin: 0 30px;
-  }
 }
 @media (max-width: 700px) {
-  .aether-header {
-    height: 82px;
-    padding: 0 22px;
-  }
-  .aether-header nav {
-    display: none;
-  }
-  .aether-header .brand-logo {
-    font-size: 23px;
-  }
-  .aether-header-cta {
-    font-size: 10px;
-    gap: 8px;
-    padding: 11px 13px;
-  }
-  .aether-hero {
-    display: flex;
-    flex-direction: column;
-    padding: 36px 25px 44px;
-    gap: 10px;
-  }
-  .aether h1 {
-    font-size: 61px;
-  }
-  .aether-hero-copy > p {
-    font-size: 14px;
-  }
-  .aether-sculpture {
-    min-height: 470px;
-    max-width: 390px;
-    width: 100%;
-    margin: 0 auto;
-  }
-  .aether-card-back {
-    left: 70px;
-    top: 35px;
-  }
-  .aether-card-middle {
-    left: 15px;
-    top: 108px;
-  }
-  .aether-card-front {
-    left: 45px;
-    top: 184px;
-  }
-  .aether-sculpture-ring {
-    left: 4px;
-    top: 20px;
-  }
-  .aether-received {
-    top: 370px;
-    left: 10px;
-  }
-  .aether-partners {
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 25px;
-  }
-  .aether-partners > span {
-    flex-basis: 100%;
-    max-width: none;
-  }
-  .aether-partners strong {
-    font-size: 16px;
-  }
-  .aether-account {
-    grid-template-columns: 1fr;
-    padding: 60px 25px;
-    gap: 28px;
-  }
-  .aether-account-preview {
-    padding: 21px;
-  }
-  .aether-balance {
-    font-size: 36px;
-  }
-  .aether-features {
-    grid-template-columns: 1fr;
-    gap: 25px;
-    padding: 25px 25px 60px;
-  }
-  .aether-features article {
-    display: grid;
-    grid-template-columns: 48px 1fr;
-    column-gap: 18px;
-  }
-  .aether-features h3 {
-    margin: 0 0 8px;
-    font-size: 20px;
-    align-self: center;
-  }
-  .aether-features p {
-    grid-column: 2;
-    margin: 0;
-  }
-  .aether-closing {
-    padding: 50px 25px;
-    align-items: flex-start;
-    gap: 30px;
-    flex-direction: column;
-  }
-  .aether-closing h2 {
-    font-size: 41px;
-  }
-  .aether-footer {
-    margin: 0 25px;
-    flex-wrap: wrap;
-    gap: 18px;
-  }
-  .aether-footer p {
-    width: 100%;
-    order: 3;
-    margin: 0;
-  }
-  .aether-footer > span {
-    margin-left: auto;
-  }
 }
 
 @media (max-width: 700px) {
-  .aether-currency-tabs button {
-    min-height: 36px;
-    min-width: 40px;
+}@media (max-width: 1100px) {
+  .aether-hero {
+    min-height: 710px;
   }
-  .aether-header-cta {
-    min-height: 44px;
+  .aether-hero-object {
+    left: 20%;
+    width: 58%;
+    height: 520px;
+    top: 45px;
+  }
+  .aether-hero-aside {
+    right: 4.5%;
+    width: 170px;
+    top: 170px;
+  }
+  .aether-hero-aside p {
+    font-size: 18px;
+  }
+  .aether-incoming button {
+    min-width: 126px;
+  }
+  .aether-incoming button > span {
+    display: none;
+  }
+  .aether-ledger-link {
+    display: none;
   }
 }
