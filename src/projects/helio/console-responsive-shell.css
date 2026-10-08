@@ -1,0 +1,131 @@
+@media (max-width: 1100px) {
+  .helio-console {
+    grid-template-columns: 190px minmax(0, 1fr);
+  }
+  .hc-sidebar {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .hc-topbar {
+    padding: 0 22px;
+  }
+  .hc-heading {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+  .hc-toolbar {
+    margin-left: 22px;
+    margin-right: 22px;
+  }
+  .hc-content {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+  .hc-plan {
+    padding: 11px;
+  }
+  .hc-team > div {
+    overflow: hidden;
+  }
+  .hc-team strong {
+    font-size: 10px;
+  }
+  .hc-sidebar nav button {
+    font-size: 11px;
+  }
+  .hc-metric-spark {
+    width: 50px;
+    right: 13px;
+  }
+}
+@media (max-width: 850px) {
+  .helio-console {
+    grid-template-columns: 68px minmax(0, 1fr);
+  }
+  .hc-sidebar {
+    padding: 0 9px 12px;
+  }
+  .hc-logo {
+    justify-content: center;
+    padding: 0;
+    margin: 0 0 18px;
+  }
+  .hc-logo .brand-logo > span,
+  .hc-logo > .lucide {
+    display: none;
+  }
+  .hc-logo .brand-logo svg {
+    width: 31px;
+    height: 31px;
+  }
+  .hc-team {
+    justify-content: center;
+    padding: 8px;
+    border: 0;
+  }
+  .hc-team > div,
+  .hc-team > .lucide,
+  .hc-project-label,
+  .hc-project,
+  .hc-resource-label,
+  .hc-resource,
+  .hc-plan,
+  .hc-profile strong,
+  .hc-profile > .lucide {
+    display: none;
+  }
+  .hc-sidebar nav {
+    margin-top: 24px;
+    gap: 10px;
+  }
+  .hc-sidebar nav button {
+    font-size: 0;
+    gap: 0;
+    justify-content: center;
+    padding: 13px 8px;
+  }
+  .hc-sidebar nav small {
+    display: none;
+  }
+  .hc-profile {
+    justify-content: center;
+    border: 0;
+  }
+  .hc-topbar > div:first-child > span:first-child,
+  .hc-topbar > div:first-child > .lucide {
+    display: none;
+  }
+  .hc-topbar a {
+    font-size: 10px;
+  }
+  .hc-heading h1 {
+    font-size: 26px;
+  }
+  .hc-heading p {
+    font-size: 10px;
+  }
+  .hc-metrics {
+    gap: 10px;
+  }
+  .hc-metrics article {
+    padding: 15px;
+  }
+  .hc-metrics article > strong {
+    font-size: 25px;
+  }
+  .hc-metric-spark {
+    display: none;
+  }
+  .hc-metrics article > div:first-child {
+    font-size: 9px;
+  }
+  .hc-metrics p {
+    font-size: 8px;
+  }
+  .hc-toolbar > label {
+    font-size: 0;
+  }
+  .hc-region-view {
+    grid-template-columns: 1fr;
+  }
+}

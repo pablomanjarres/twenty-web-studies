@@ -1,0 +1,47 @@
+@media (max-width: 760px) {
+  .helio-recipes {
+    padding: 35px 5% 55px;
+  }
+  .helio-architecture-strip {
+    display: block;
+  }
+  .helio-architecture-strip > div {
+    padding: 22px 5px;
+    border-right: 0;
+    border-bottom: 1px solid #b9c2ca;
+  }
+  .helio-architecture-strip > div:last-child {
+    border-bottom: 0;
+  }
+  .helio-recipe-grid,
+  .helio-usage {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 45px 0;
+  }
+  .helio-recipes h2 {
+    font-size: 35px;
+  }
+  .helio-recipe-code pre {
+    font-size: 10px;
+    padding: 18px;
+  }
+  .helio-recipe-code button {
+    padding: 15px 17px;
+  }
+  .helio-usage {
+    padding-bottom: 0;
+  }
+  .helio-footer {
+    padding: 25px 5%;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .helio-footer > span {
+    width: 100%;
+    order: 3;
+  }
+  .helio-footer small {
+    display: none;
+  }
+}
