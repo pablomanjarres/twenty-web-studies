@@ -1,0 +1,152 @@
+@media (min-width: 1600px) {
+  .estelle-exhibition {
+    padding-left: 110px;
+    padding-right: 110px;
+  }
+  .estelle-object img {
+    height: 710px;
+  }
+  .estelle-worn img {
+    height: 590px;
+  }
+}
+@media (max-width: 1100px) {
+  .estelle-exhibition {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+  .estelle-apertures {
+    grid-template-columns: 1.2fr 90px 1fr;
+    gap: 20px;
+  }
+  .estelle-object img {
+    height: 480px;
+  }
+  .estelle-worn img {
+    height: 410px;
+  }
+  .estelle-centre-mark .brand-logo > span {
+    font-size: 40px;
+  }
+}
+@media (max-width: 760px) {
+  .estelle-header {
+    padding: 23px 25px;
+    grid-template-columns: 1fr 1fr;
+  }
+  .estelle-header > span {
+    display: none;
+  }
+  .estelle-exhibition {
+    padding: 12px 25px 45px;
+  }
+  .estelle-apertures {
+    grid-template-columns: 1.1fr 58px 1fr;
+    gap: 12px;
+  }
+  .estelle-object img {
+    height: 390px;
+  }
+  .estelle-worn img {
+    height: 325px;
+  }
+  .estelle-centre-mark {
+    gap: 26px;
+  }
+  .estelle-centre-mark .brand-logo {
+    gap: 23px;
+  }
+  .estelle-centre-mark .brand-logo svg {
+    width: 26px;
+    height: 26px;
+  }
+  .estelle-centre-mark .brand-logo > span {
+    font-size: 35px;
+  }
+  .estelle-centre-mark > span {
+    font-size: 6px;
+  }
+  .estelle-aperture figcaption {
+    font-size: 6px;
+    flex-direction: column;
+    gap: 3px;
+  }
+  .estelle-exhibit-footer {
+    gap: 22px;
+    grid-template-columns: 1fr auto;
+    align-items: start;
+  }
+  .estelle-metals {
+    grid-column: 1/-1;
+    grid-row: 2;
+    padding-top: 7px;
+  }
+  .estelle-exhibit-footer h1 {
+    font-size: 31px;
+  }
+  .estelle-exhibit-price {
+    padding-top: 5px;
+  }
+  .estelle-footer {
+    padding: 25px;
+    flex-wrap: wrap;
+    gap: 17px;
+  }
+}
+@media (max-width: 480px) {
+  .estelle-header {
+    font-size: 9px;
+    padding: 23px 18px;
+  }
+  .estelle-exhibition {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+  .estelle-exhibit-line {
+    font-size: 6px;
+    padding-bottom: 20px;
+  }
+  .estelle-apertures {
+    grid-template-columns: 1.13fr 38px 1fr;
+    gap: 9px;
+  }
+  .estelle-object img {
+    height: 300px;
+  }
+  .estelle-worn img {
+    height: 247px;
+    object-position: 53% center;
+  }
+  .estelle-worn {
+    padding-top: 27px;
+  }
+  .estelle-centre-mark .brand-logo > span {
+    font-size: 29px;
+  }
+  .estelle-centre-mark .brand-logo svg {
+    width: 22px;
+    height: 22px;
+  }
+  .estelle-centre-mark > span {
+    font-size: 5px;
+  }
+  .estelle-exhibit-footer {
+    padding-top: 24px;
+  }
+  .estelle-exhibit-footer .estelle-micro {
+    font-size: 7px;
+  }
+  .estelle-exhibit-footer p {
+    font-size: 9px;
+  }
+  .estelle-exhibit-price {
+    font-size: 9px;
+  }
+  .estelle-section-label {
+    font-size: 7px;
+    line-height: 1.7;
+  }
+  .estelle-footer > span {
+    display: none;
+  }
+}

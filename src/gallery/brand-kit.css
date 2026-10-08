@@ -1,0 +1,134 @@
+@import "./brand-specimens.css";
+.brand-kit {
+  background: #f9f8f5;
+  color: #252525;
+  font-family: var(--kit-body), "Manrope", sans-serif;
+}
+.kit-header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 6vw;
+  padding: 30px 0;
+  border-bottom: 1px solid #d8d7d2;
+}
+.kit-header a {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  text-decoration: none;
+  font-size: 12px;
+}
+.brand-kit main {
+  max-width: 1300px;
+  margin: auto;
+  padding: 0 6vw;
+}
+.kit-intro {
+  padding: 80px 0 55px;
+}
+.kit-intro > span {
+  color: #777;
+  font-size: 12px;
+}
+.kit-intro h1 {
+  font-family: var(--kit-display), serif;
+  font-size: clamp(70px, 10vw, 145px);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.05em;
+  color: var(--kit-ink);
+  margin: 24px 0 10px;
+}
+.kit-intro > p {
+  font-size: 19px;
+  line-height: 1.5;
+  color: #555;
+  margin: 0;
+}
+.kit-story {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 60px;
+  border-top: 1px solid #d8d7d2;
+  padding: 34px 0 60px;
+}
+.kit-story h2,
+.kit-section h2,
+.kit-download h2 {
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  margin: 0;
+  line-height: 1.25;
+}
+.kit-story p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.85;
+  color: #666;
+}
+.kit-section {
+  padding: 40px 0 55px;
+  border-top: 1px solid #d8d7d2;
+}
+.kit-section-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  margin-bottom: 28px;
+}
+.kit-section-heading p {
+  max-width: 440px;
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.7;
+  color: #777;
+}
+.kit-download {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 35px;
+  background: var(--kit-ink);
+  color: white;
+  padding: 38px;
+  margin: 0 0 70px;
+}
+.kit-download p {
+  font-size: 12px;
+  color: #ffffffa8;
+  line-height: 1.6;
+  margin: 12px 0 0;
+  max-width: 370px;
+}
+.kit-download > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.kit-download a {
+  background: #fff;
+  color: #202020;
+  padding: 13px 20px;
+  text-decoration: none;
+  font-size: 12px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  white-space: nowrap;
+}
+.kit-footer {
+  padding: 30px 6vw;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #d8d7d2;
+  font-size: 13px;
+  color: var(--kit-ink);
+}
+.kit-footer a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  text-decoration: none;
+}

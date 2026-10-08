@@ -1,0 +1,46 @@
+.orbit-v3 .ov3-new-task {
+  margin: auto;
+  width: 430px;
+  max-width: calc(100% - 24px);
+  padding: 26px;
+  background: #fafaf5;
+  border-radius: 18px;
+}
+.orbit-v3 .ov3-new-task h2 {
+  font-size: 23px;
+  margin: 24px 0;
+}
+.orbit-v3 .ov3-new-task form {
+  display: grid;
+  gap: 20px;
+}
+.orbit-v3 .ov3-new-task label {
+  display: grid;
+  gap: 8px;
+  font-size: 12px;
+  color: #868e79;
+}
+.orbit-v3 .ov3-new-task input,
+.orbit-v3 .ov3-new-task select {
+  width: 100%;
+  border: 1px solid #dfe3d5;
+  background: white;
+  padding: 12px;
+  border-radius: 7px;
+  font-size: 13px;
+}
+.orbit-v3 .ov3-new-task form > p {
+  color: #a0a98d;
+  font-size: 11px;
+  line-height: 1.5;
+}
+.orbit-v3 .ov3-new-task form > button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #6d4af1;
+  color: white;
+  border-radius: 8px;
+  padding: 13px;
+}

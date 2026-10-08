@@ -1,0 +1,80 @@
+.cinder-batch {
+  padding: 80px 6%;
+  display: grid;
+  grid-template-columns: 1fr 1.8fr;
+  gap: 8%;
+}
+.cinder-batch h2 {
+  font-size: 39px;
+  line-height: 1.12;
+  margin: 25px 0 20px;
+  max-width: 300px;
+}
+.cinder-batch-intro > p {
+  font-size: 12px;
+  line-height: 1.8;
+  max-width: 275px;
+}
+.cinder-roast-ledger > div {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+  border-bottom: 1px solid var(--cinder-line);
+  padding: 21px 0;
+  font-size: 10px;
+}
+.cinder-roast-ledger > .cinder-ledger-heading {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 8px;
+  padding: 0 0 15px;
+}
+.cinder-roast-ledger strong {
+  display: block;
+  font-family: "Grindela", serif;
+  font-weight: 400;
+  font-size: 22px;
+  margin: 4px 0 7px;
+}
+.cinder-roast-ledger small {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 8px;
+}
+.cinder-roast-ledger em {
+  font-style: normal;
+  font-size: 9px;
+}
+.cinder-origin-study {
+  position: relative;
+  height: 520px;
+  background: #324629;
+  color: var(--cinder-cream);
+  overflow: hidden;
+}
+.cinder-origin-study > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.73);
+}
+.cinder-origin-study > div {
+  position: absolute;
+  left: 6%;
+  top: 19%;
+  width: 275px;
+}
+.cinder-origin-study h2 {
+  font-size: 55px;
+  line-height: 1.05;
+  margin: 25px 0;
+}
+.cinder-origin-study p {
+  font-size: 12px;
+  line-height: 1.8;
+}
+.cinder-origin-study > div > span:last-child {
+  display: block;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 8px;
+  margin-top: 35px;
+}

@@ -1,0 +1,133 @@
+.bv-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  background: #22381e55;
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+.bv-course-dialog {
+  width: 100%;
+  max-width: 470px;
+  max-height: 90vh;
+  overflow: auto;
+  border-radius: 26px;
+  background: #fffdf7;
+  border: 1px solid #e7eddc;
+  padding: 34px;
+  position: relative;
+  box-shadow: 0 20px 80px #28432025;
+}
+.bv-dialog-close {
+  position: absolute;
+  z-index: 1;
+  top: 17px;
+  right: 17px;
+  width: 35px;
+  height: 35px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: #ffffffcc;
+  color: #738762;
+}
+.bv-dialog-art {
+  height: 180px;
+  border-radius: 18px;
+  margin: 8px 0 25px;
+  display: grid;
+  place-items: center;
+}
+.bv-dialog-art > svg {
+  width: 160px;
+  height: 140px;
+}
+.bv-detail-kicker {
+  font-size: 8px;
+  letter-spacing: 1.3px;
+  color: #91a279;
+}
+.bv-course-dialog h2 {
+  font-size: 27px;
+  line-height: 1.2;
+  font-weight: 500;
+  letter-spacing: -0.8px;
+  margin: 14px 0;
+}
+.bv-course-dialog > p {
+  color: #8b9d76;
+  font-size: 12px;
+  line-height: 1.9;
+}
+.bv-dialog-task {
+  border-top: 1px solid #e6ecd9;
+  padding-top: 20px;
+  margin-top: 22px;
+}
+.bv-dialog-task strong {
+  font-size: 10px;
+}
+.bv-dialog-task p {
+  font-size: 12px;
+  color: #8b9d76;
+  margin: 8px 0 22px;
+}
+.bv-dialog-start {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 46px;
+  border: 0;
+  background: #344431;
+  color: white !important;
+  border-radius: 26px;
+  font-size: 11px;
+  margin-top: 20px;
+}
+.bv-dialog-start:disabled {
+  background: #e6ebdc;
+  color: #a3ad90 !important;
+}
+.bv-locked-note {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px;
+  border-radius: 12px;
+  background: #f0f3e7;
+  font-size: 10px !important;
+}
+.bv-milestone-art {
+  height: 185px;
+  display: grid;
+  place-items: center;
+  background: #edf3d3;
+  color: #879e55;
+  border-radius: 18px;
+  margin-bottom: 26px;
+}
+.bv-milestone-progress {
+  height: 7px;
+  border-radius: 10px;
+  background: #edf1e4;
+  margin-top: 25px;
+  overflow: hidden;
+}
+.bv-milestone-progress > i {
+  display: block;
+  height: 100%;
+  background: #b9cd78;
+  border-radius: 10px;
+}
+.bv-practice-dialog h2 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 500;
+  font-size: 29px;
+  letter-spacing: -0.8px;
+}

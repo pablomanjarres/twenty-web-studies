@@ -1,0 +1,71 @@
+.monograph-reading-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 110;
+  background: #182a6370;
+  display: flex;
+  justify-content: flex-end;
+}
+.monograph-reading {
+  width: min(800px, 100%);
+  height: 100%;
+  overflow: auto;
+  background: var(--mono-paper);
+}
+.monograph-reading > header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding: 20px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--mono-paper);
+  border-bottom: 1px solid var(--mono-rule);
+  font-size: 11px;
+}
+.monograph-reading > header button {
+  padding: 5px;
+  border: 0;
+  background: transparent;
+}
+.monograph-reading > img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+}
+.monograph-reading-copy {
+  padding: 28px 65px 65px;
+}
+.monograph-reading-copy h2 {
+  font-size: 58px;
+  line-height: 1.03;
+  margin: 25px 0 21px;
+  letter-spacing: -0.03em;
+}
+.monograph-reading-copy > p {
+  font-size: 14px;
+  line-height: 1.95;
+  margin-top: 23px;
+}
+.monograph-reading-copy .monograph-reading-deck {
+  font-family: "The Foriene", serif;
+  font-size: 25px;
+  line-height: 1.5;
+}
+.monograph-reading-copy .monograph-reading-caption {
+  font-size: 10px;
+  border-top: 1px solid var(--mono-rule);
+  padding-top: 20px;
+}
+.monograph-save-story {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 0;
+  border: 0;
+  background: transparent;
+  font-size: 11px;
+  color: var(--mono-blue);
+  margin-top: 20px;
+}

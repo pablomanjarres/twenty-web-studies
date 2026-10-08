@@ -1,0 +1,178 @@
+@media (max-width: 1100px) {
+  .kanso-shop {
+    gap: 30px;
+    grid-template-columns: 150px minmax(0, 1fr);
+  }
+  .kanso-shelf {
+    gap: 29px 28px;
+  }
+  .kanso-shelf-wordmark .brand-logo > span {
+    font-size: 60px;
+  }
+  .kanso-object-caption h2 {
+    font-size: 20px;
+  }
+  .kanso-glaze-study > div {
+    right: 5%;
+  }
+  .kanso-batch {
+    gap: 7%;
+    padding: 75px 5%;
+  }
+  .kanso-atelier-caption {
+    padding-left: 0;
+  }
+  .kanso-atelier h2 {
+    font-size: 34px;
+  }
+}
+@media (max-width: 780px) {
+  .kanso-header {
+    height: 62px;
+    padding: 0 5%;
+    gap: 15px;
+  }
+  .kanso-header-mark > span:not(.brand-logo),
+  .kanso-header nav {
+    display: none;
+  }
+  .kanso-utilities {
+    gap: 17px;
+  }
+  .kanso-shop {
+    padding: 24px 5% 28px;
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .kanso-index {
+    padding: 0;
+    display: block;
+  }
+  .kanso-index > div:first-child {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .kanso-index h1 {
+    font-size: 22px;
+    line-height: 1.1;
+    margin: 0;
+  }
+  .kanso-index p {
+    font-size: 10px;
+    max-width: 145px;
+  }
+  .kanso-filters {
+    width: 100%;
+    margin-top: 16px;
+  }
+  .kanso-categories {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 15px;
+  }
+  .kanso-categories button {
+    font-size: 12px;
+    padding: 5px 0;
+  }
+  .kanso-categories small {
+    display: none;
+  }
+  .kanso-glazes {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 15px;
+    font-size: 10px;
+  }
+  .kanso-glazes > div {
+    gap: 9px;
+    margin: 0;
+  }
+  .kanso-glazes > div button {
+    width: 15px;
+    height: 15px;
+  }
+  .kanso-glazes > span:last-of-type {
+    margin-left: auto;
+    font-size: 9px;
+  }
+  .kanso-reset-glaze {
+    display: none;
+  }
+  .kanso-shelf-wordmark {
+    display: none;
+  }
+  .kanso-shelf-heading {
+    font-size: 9px;
+    padding-top: 10px;
+  }
+  .kanso-shelf {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px 22px;
+    min-height: 0;
+    padding: 16px 0 25px;
+  }
+  .kanso-object {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+  }
+  .kanso-object-image {
+    height: 158px !important;
+  }
+  .kanso-object-vase .kanso-object-image {
+    height: 180px !important;
+  }
+  .kanso-object-bowl .kanso-object-image {
+    height: 158px !important;
+  }
+  .kanso-object-vase {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .kanso-object-bowl {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .kanso-object-caption {
+    gap: 5px;
+    margin-top: 8px;
+  }
+  .kanso-object-caption h2 {
+    font-size: 20px;
+  }
+  .kanso-object-caption button {
+    gap: 4px;
+  }
+  .kanso-object-caption svg {
+    display: none;
+  }
+  .kanso-object-caption > span {
+    font-size: 11px;
+  }
+  .kanso-object-spec {
+    font-size: 9px;
+    gap: 5px;
+    margin-top: 5px;
+  }
+  .kanso-shelf-filtered .kanso-object {
+    grid-column: auto;
+    grid-row: auto;
+  }
+  .kanso-shelf-foot {
+    font-size: 9px;
+    gap: 20px;
+  }
+  .kanso-shelf-foot > span {
+    max-width: 175px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .kanso-object-image {
+    transition: none;
+  }
+  .kanso-object-image:hover {
+    transform: none;
+  }
+}

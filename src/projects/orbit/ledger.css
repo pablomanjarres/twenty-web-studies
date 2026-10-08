@@ -1,0 +1,164 @@
+.orbit-v3 .ov3-ledger {
+  background: white;
+  border-radius: 18px;
+  padding: 24px 24px 12px;
+  min-width: 0;
+}
+.orbit-v3 .ov3-ledger-filters {
+  display: flex;
+  gap: 7px;
+  margin: 19px 0 17px;
+}
+.orbit-v3 .ov3-ledger-filters button {
+  color: #979b95;
+  font-size: 11px;
+  padding: 7px 11px;
+  border-radius: 6px;
+}
+.orbit-v3 .ov3-ledger-filters button[aria-pressed="true"] {
+  background: #f0ebff;
+  color: #6d4af1;
+}
+.orbit-v3 .ov3-ledger-filters button > span {
+  font-size: 9px;
+  margin-left: 6px;
+}
+.orbit-v3 .ov3-ledger-labels {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 92px 82px 88px;
+  gap: 9px;
+  padding: 0 4px 13px;
+  color: #adb1a9;
+  letter-spacing: 0.7px;
+  font-size: 8px;
+  border-bottom: 1px solid #edeee7;
+}
+.orbit-v3 .ov3-task-row {
+  display: grid;
+  width: 100%;
+  text-align: left;
+  grid-template-columns: minmax(0, 1fr) 92px 82px 88px;
+  gap: 9px;
+  align-items: center;
+  padding: 15px 4px;
+  border-bottom: 1px solid #f0f1eb;
+}
+.orbit-v3 .ov3-task-row:last-child {
+  border: 0;
+}
+.orbit-v3 .ov3-task-row:hover {
+  background: #fcfbff;
+}
+.orbit-v3 .ov3-task-title {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  min-width: 0;
+}
+.orbit-v3 .ov3-task-title > img {
+  height: 29px;
+  width: 29px;
+  flex: none;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.orbit-v3 .ov3-task-title strong {
+  font-size: 11px;
+  font-weight: 550;
+  display: block;
+  line-height: 1.45;
+}
+.orbit-v3 .ov3-task-title small {
+  display: block;
+  font-size: 9px;
+  color: #a3a89f;
+  margin-top: 4px;
+}
+.orbit-v3 .ov3-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  justify-self: start;
+  font-size: 8px;
+  white-space: nowrap;
+  border-radius: 5px;
+  padding: 5px 6px;
+  background: #f2f2ed;
+  color: #898e85;
+}
+.orbit-v3 .ov3-status-done {
+  color: #23846b;
+  background: #ebf5ee;
+}
+.orbit-v3 .ov3-status-in-progress {
+  color: #8264b8;
+  background: #f2edfb;
+}
+.orbit-v3 .ov3-status-review {
+  color: #b98737;
+  background: #fbf4e6;
+}
+.orbit-v3 .ov3-task-progress {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.orbit-v3 .ov3-task-progress > i {
+  height: 4px;
+  width: 42px;
+  background: #f0ede7;
+  border-radius: 2px;
+  overflow: hidden;
+}
+.orbit-v3 .ov3-task-progress b {
+  display: block;
+  height: 100%;
+  background: #b29cdf;
+  border-radius: 2px;
+}
+.orbit-v3 .ov3-task-progress small {
+  color: #969d91;
+  font-size: 8px;
+}
+.orbit-v3 .ov3-task-due {
+  font-size: 9px;
+  color: #90988a;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+}
+.orbit-v3 .ov3-task-due svg {
+  color: #abb0a4;
+}
+.orbit-v3 .ov3-feed {
+  border-radius: 18px;
+  padding: 27px;
+  background: white;
+}
+.orbit-v3 .ov3-feed .ov3-section-heading button {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  color: #8b75bc;
+  font-size: 12px;
+}
+.orbit-v3 .ov3-feed article {
+  display: flex;
+  gap: 17px;
+  padding: 25px 0;
+  border-bottom: 1px solid #eeefe7;
+}
+.orbit-v3 .ov3-feed article > svg {
+  color: #859d7f;
+  flex: none;
+}
+.orbit-v3 .ov3-feed article p {
+  font-size: 14px;
+}
+.orbit-v3 .ov3-feed article span {
+  display: block;
+  color: #969d8f;
+  font-size: 11px;
+  margin-top: 7px;
+}

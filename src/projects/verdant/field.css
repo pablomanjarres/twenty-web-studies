@@ -1,0 +1,144 @@
+.vd-field {
+  padding: 65px 7% 75px;
+  display: grid;
+  grid-template-columns: 0.9fr 1.25fr;
+  gap: 45px 8%;
+  align-items: center;
+}
+.vd-field > figure {
+  grid-column: 1/-1;
+  position: relative;
+}
+.vd-field > figure img {
+  height: 390px;
+  width: 100%;
+  object-fit: cover;
+}
+.vd-field figcaption {
+  position: absolute;
+  left: 24px;
+  bottom: 24px;
+  font:
+    9px "IBM Plex Mono",
+    monospace;
+  background: var(--vd-yellow);
+  padding: 13px 16px;
+  letter-spacing: 0.06em;
+}
+.vd-field-intro > span,
+.vd-connection > div > span {
+  font:
+    9px "IBM Plex Mono",
+    monospace;
+  letter-spacing: 0.08em;
+}
+.vd-field h2,
+.vd-connection h2 {
+  font:
+    400 38px/1.2 "Sora",
+    sans-serif;
+  letter-spacing: -0.055em;
+  margin: 20px 0;
+}
+.vd-field-intro p,
+.vd-connection > div > p {
+  font-size: 12px;
+  line-height: 1.9;
+  max-width: 370px;
+}
+.vd-project-ledger details {
+  border-top: 1px solid var(--vd-line);
+  padding: 20px 0;
+}
+.vd-project-ledger details:last-child {
+  border-bottom: 1px solid var(--vd-line);
+}
+.vd-project-ledger summary {
+  display: grid;
+  grid-template-columns: 70px 1fr 70px 20px;
+  gap: 15px;
+  align-items: center;
+  cursor: pointer;
+  list-style: none;
+}
+.vd-project-ledger summary > span {
+  font:
+    9px "IBM Plex Mono",
+    monospace;
+}
+.vd-project-ledger h3 {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+}
+.vd-project-ledger strong {
+  font:
+    10px "IBM Plex Mono",
+    monospace;
+  font-weight: 400;
+}
+.vd-project-ledger p {
+  font-size: 11px;
+  line-height: 1.9;
+  margin-top: 17px;
+}
+.vd-connection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14%;
+  padding: 70px 10%;
+  background: var(--vd-ink);
+  color: var(--vd-paper);
+  align-items: center;
+}
+.vd-connection label {
+  display: grid;
+  gap: 12px;
+  font-size: 11px;
+  margin-bottom: 23px;
+}
+.vd-connection select {
+  border: 0;
+  border-bottom: 1px solid #f5f4e856;
+  border-radius: 0;
+  min-height: 43px;
+  background: transparent;
+  color: inherit;
+  font-size: 13px;
+  padding: 0;
+}
+.vd-connection option {
+  color: var(--vd-ink);
+  background: var(--vd-paper);
+}
+.vd-connection button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 15px 17px;
+  border: 0;
+  background: var(--vd-yellow);
+  color: var(--vd-ink);
+  font-size: 12px;
+}
+.vd-connection form > p {
+  font-size: 9px;
+  line-height: 1.8;
+  margin-top: 13px;
+  opacity: 0.75;
+}
+.vd-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  padding: 35px 40px;
+  font-size: 10px;
+}
+.vd-footer .brand-logo {
+  font-size: 25px;
+}
+.vd-footer a {
+  text-decoration: none;
+}

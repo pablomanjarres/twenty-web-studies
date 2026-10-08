@@ -1,0 +1,111 @@
+@media (max-width: 650px) {
+  .vd-battery > div > strong {
+    font-size: 17px;
+  }
+  .vd-battery strong small {
+    display: inline;
+    font-size: 7px;
+  }
+  .vd-battery > div > small {
+    font-size: 7px;
+  }
+  .vd-grid-export {
+    left: 15%;
+    bottom: 26px;
+  }
+  .vd-grid-export strong {
+    font-size: 12px;
+  }
+  .vd-grid-export i {
+    width: 25px;
+    height: 25px;
+    left: -34px;
+  }
+  .vd-node-caption {
+    display: grid;
+    grid-template-columns: 1fr 85px 18px;
+    gap: 10px 12px;
+    padding: 17px 3px;
+  }
+  .vd-node-caption > span {
+    min-width: 0;
+    font-size: 7px;
+  }
+  .vd-node-caption p {
+    grid-column: 1/-1;
+    grid-row: 2;
+    font-size: 10px;
+  }
+  .vd-balance-note {
+    grid-column: 2;
+    grid-row: 1;
+    min-width: 0;
+  }
+  .vd-balance-note small {
+    font-size: 6px;
+  }
+  .vd-balance-note strong {
+    font-size: 17px;
+    margin-top: 3px;
+  }
+  .vd-node-caption > svg {
+    grid-column: 3;
+    grid-row: 1;
+  }
+  .vd-system-bottom {
+    display: block;
+    font-size: 9px;
+    padding: 15px 3px 20px;
+  }
+  .vd-system-bottom > span {
+    display: none;
+  }
+  .vd-field {
+    padding: 40px 24px 50px;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .vd-field > figure img {
+    height: 300px;
+  }
+  .vd-field figcaption {
+    left: 15px;
+    bottom: 15px;
+    font-size: 7px;
+    padding: 11px;
+  }
+  .vd-field h2,
+  .vd-connection h2 {
+    font-size: 31px;
+  }
+  .vd-project-ledger summary {
+    grid-template-columns: 45px 1fr 52px 16px;
+    gap: 9px;
+  }
+  .vd-project-ledger summary > span {
+    font-size: 8px;
+  }
+  .vd-project-ledger strong {
+    font-size: 8px;
+  }
+  .vd-project-ledger h3 {
+    font-size: 13px;
+  }
+  .vd-connection {
+    padding: 45px 25px;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .vd-footer {
+    padding: 30px 25px;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .vd-footer p {
+    display: none;
+  }
+  .vd-footer > span {
+    width: 100%;
+    font-size: 8px;
+  }
+}

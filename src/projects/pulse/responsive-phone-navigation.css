@@ -1,0 +1,168 @@
+@media (max-width: 600px) {
+  .pulse-v2 {
+    padding: 0 18px;
+  }
+  .pv-nav {
+    height: 68px;
+    gap: 25px;
+  }
+  .pv-nav .brand-logo {
+    font-size: 22px;
+  }
+  .pv-nav .brand-logo svg {
+    width: 24px;
+    height: 24px;
+  }
+  .pv-nav nav {
+    gap: 16px;
+    margin-left: auto;
+  }
+  .pv-nav nav button {
+    font-size: 11px;
+  }
+  .pv-clinic {
+    display: none;
+  }
+  .pv-heading {
+    padding: 27px 0 20px;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  .pv-heading p {
+    font-size: 7px;
+    letter-spacing: 1px;
+    margin-bottom: 9px;
+  }
+  .pv-heading h1 {
+    font-size: 25px;
+    max-width: 220px;
+    line-height: 1.2;
+  }
+  .pv-new {
+    font-size: 0;
+    padding: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .pv-new svg {
+    width: 20px;
+    height: 20px;
+  }
+  .pv-controls {
+    flex-wrap: wrap;
+    gap: 13px;
+    padding: 13px 0;
+  }
+  .pv-date-controls {
+    gap: 5px;
+  }
+  .pv-date-controls > span {
+    display: none;
+  }
+  .pv-date-controls .pv-today {
+    padding: 6px 9px;
+    margin-left: 0;
+  }
+  .pv-clinician-filter {
+    gap: 4px;
+  }
+  .pv-clinician-filter select {
+    max-width: 132px;
+    font-size: 10px;
+  }
+  .pv-view {
+    margin-left: auto;
+  }
+  .pv-view button {
+    padding: 6px 10px;
+  }
+  .pv-grid-desktop {
+    display: none;
+  }
+  .pv-agenda {
+    display: block;
+  }
+  .pv-agenda-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 10px;
+    letter-spacing: 0.3px;
+    color: #99a99d;
+    padding: 4px 0 17px;
+  }
+  .pv-agenda-label > span {
+    background: #e5ede4;
+    padding: 3px 7px;
+    border-radius: 15px;
+  }
+  .pv-agenda-row {
+    display: grid;
+    grid-template-columns: 43px minmax(0, 1fr);
+    gap: 12px;
+    align-items: flex-start;
+    margin-bottom: 13px;
+  }
+  .pv-agenda-time {
+    font-size: 10px;
+    color: #9cac9f;
+    padding-top: 14px;
+  }
+  .pv-agenda-time small {
+    display: block;
+    font-size: 8px;
+    margin-bottom: 4px;
+  }
+  .pv-agenda .pv-visit {
+    position: relative;
+    left: auto;
+    right: auto;
+    width: 100%;
+    min-height: 103px;
+    padding: 14px;
+    gap: 6px;
+    border-radius: 7px;
+  }
+  .pv-agenda .pv-visit strong {
+    font-size: 17px;
+  }
+  .pv-agenda .pv-visit-time {
+    font-size: 9px;
+  }
+  .pv-agenda .pv-visit-purpose {
+    font-size: 11px;
+  }
+  .pv-agenda .pv-visit > svg {
+    position: absolute;
+    right: 12px;
+    top: 42px;
+    color: #8f9d89;
+  }
+  .pv-day-workspace {
+    padding-top: 22px;
+  }
+  .pv-footer {
+    font-size: 8px;
+    justify-content: space-between;
+  }
+  .pv-footer p {
+    display: none;
+  }
+  .pv-overlay {
+    padding: 0;
+    align-items: flex-end;
+  }
+  .pv-mobile-sheet {
+    border-radius: 17px 17px 0 0;
+    width: 100%;
+    max-width: none;
+  }
+  .pv-patient-sheet {
+    padding: 28px;
+    border: 0;
+    border-radius: 0;
+  }
+  .pv-patient-sheet h2 {
+    font-size: 34px;
+  }
+}

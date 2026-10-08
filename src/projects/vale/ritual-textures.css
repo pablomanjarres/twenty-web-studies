@@ -1,0 +1,115 @@
+.vale-texture-study {
+  padding: 70px 5%;
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 10%;
+  align-items: center;
+  border-top: 1px solid var(--vale-line);
+}
+.vale-texture-copy {
+  padding-left: 10%;
+}
+.vale-texture-copy h2 {
+  font-size: 39px;
+  line-height: 1.12;
+  max-width: 320px;
+  margin: 22px 0;
+}
+.vale-texture-copy > p {
+  font-size: 13px;
+  max-width: 300px;
+}
+.vale-texture-copy dl {
+  margin: 35px 0 0;
+  max-width: 300px;
+}
+.vale-texture-copy dl > div {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--vale-line);
+  padding: 11px 0;
+  gap: 15px;
+  font-size: 10px;
+}
+.vale-texture-copy dd {
+  margin: 0;
+}
+.vale-texture-study img {
+  display: block;
+  width: 100%;
+  height: 390px;
+  object-fit: cover;
+}
+.vale-texture-study figcaption {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 9px;
+  margin-top: 12px;
+}
+.vale-ritual {
+  padding: 65px 8% 45px;
+  background: var(--vale-mineral);
+}
+.vale-ritual-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  border-bottom: 1px solid var(--vale-line);
+  padding-bottom: 30px;
+}
+.vale-ritual h2 {
+  font-size: 36px;
+  margin-top: 14px;
+}
+.vale-time-tabs {
+  display: flex;
+  gap: 10px;
+}
+.vale-time-tabs button {
+  font-size: 11px;
+  border-bottom: 1px solid transparent;
+  padding: 9px 5px;
+}
+.vale-time-tabs button[aria-pressed="true"] {
+  border-bottom-color: var(--vale-green);
+}
+.vale-ritual-sequence {
+  display: flex;
+  gap: 45px;
+  margin-top: 35px;
+}
+.vale-ritual-sequence article {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 18px;
+  align-items: center;
+  min-width: 0;
+}
+.vale-ritual-sequence article > .vale-label {
+  grid-column: 1/-1;
+  font-size: 8px;
+}
+.vale-ritual-sequence img {
+  width: 90px;
+  height: 135px;
+  object-fit: contain;
+}
+.vale-ritual-sequence h3 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+.vale-ritual-sequence p {
+  font-size: 10px;
+  line-height: 1.7;
+}
+.vale-ritual-sequence a {
+  display: inline-block;
+  font-size: 9px;
+  border-bottom: 1px solid var(--vale-line);
+  margin-top: 15px;
+}
+.vale-ritual-note {
+  font-size: 10px;
+  margin-top: 30px;
+}

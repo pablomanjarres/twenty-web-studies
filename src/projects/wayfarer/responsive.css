@@ -1,0 +1,167 @@
+@media (max-width: 1100px) {
+  .wf-header > span {
+    display: none;
+  }
+  .wf-atlas-grid {
+    grid-template-columns: minmax(0, 1fr) 310px;
+  }
+  .wf-itinerary {
+    padding: 24px 21px;
+  }
+  .wf-postcard {
+    width: 190px;
+    left: 25px;
+  }
+  .wf-postcard img {
+    height: 130px;
+  }
+  .wf-route-key {
+    display: none;
+  }
+  .wf-notes {
+    gap: 24px;
+  }
+  .wf-note-title h2,
+  .wf-guide h2 {
+    font-size: 36px;
+  }
+  .wf-route-tabs button {
+    padding: 16px 12px;
+    gap: 5px 8px;
+  }
+  .wf-route-tabs strong {
+    font-size: 12px;
+  }
+}
+@media (max-width: 760px) {
+  .wf-header {
+    padding: 18px 20px;
+    gap: 15px;
+  }
+  .wf-header > a {
+    font-size: 20px;
+  }
+  .wf-header nav {
+    gap: 15px;
+    font-size: 11px;
+  }
+  .wf-header nav a:last-child {
+    display: none;
+  }
+  .wf-atlas {
+    padding: 20px 16px 0;
+  }
+  .wf-atlas-top {
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  .wf-atlas-top h1 {
+    font-size: 29px;
+  }
+  .wf-atlas-top p {
+    font-size: 10px;
+  }
+  .wf-atlas-top > svg {
+    display: none;
+  }
+  .wf-atlas-grid {
+    grid-template-columns: 1fr;
+  }
+  .wf-map-sheet {
+    min-height: 420px;
+  }
+  .wf-map {
+    min-height: 420px;
+    width: 100%;
+    height: 420px;
+  }
+  .wf-map-heading {
+    left: 15px;
+    right: 15px;
+    top: 17px;
+    font-size: 8px;
+  }
+  .wf-postcard {
+    width: 165px;
+    bottom: 65px;
+    left: 25px;
+  }
+  .wf-postcard img {
+    height: 100px;
+  }
+  .wf-postcard figcaption {
+    font-size: 14px;
+  }
+  .wf-postcard span {
+    font-size: 7px;
+  }
+  .wf-map-scale {
+    left: 15px;
+    bottom: 18px;
+  }
+  .wf-map-scale small {
+    font-size: 7px;
+  }
+  .wf-itinerary {
+    border-left: 0;
+    border-top: 1px solid var(--wf-line);
+    padding: 24px;
+  }
+  .wf-itinerary:before {
+    display: none;
+  }
+  .wf-trip-facts {
+    gap: 45px;
+  }
+  .wf-stops {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .wf-route-tabs {
+    grid-template-columns: 1fr;
+  }
+  .wf-route-tabs button {
+    min-height: 66px;
+    padding: 13px 20px;
+    grid-template-columns: 30px 1fr 20px;
+  }
+  .wf-route-tabs strong {
+    font-size: 14px;
+  }
+  .wf-notes {
+    padding: 60px 22px;
+    grid-template-columns: 1fr;
+  }
+  .wf-note-title h2 {
+    font-size: 38px;
+  }
+  .wf-notes > figure img {
+    height: 350px;
+  }
+  .wf-guide {
+    padding: 40px 24px;
+    grid-template-columns: 45px 1fr;
+    gap: 20px;
+  }
+  .wf-guide > svg {
+    width: 35px;
+  }
+  .wf-guide p,
+  .wf-guide a {
+    grid-column: 2;
+  }
+  .wf-guide h2 {
+    font-size: 34px;
+  }
+  .wf-footer {
+    padding: 30px 24px;
+    flex-wrap: wrap;
+    gap: 22px;
+  }
+  .wf-footer p {
+    display: none;
+  }
+  .wf-footer > span:last-child {
+    width: 100%;
+  }
+}

@@ -1,0 +1,114 @@
+@import "./gallery-controls.css";
+@import "./gallery-cards.css";
+.collection {
+  color: #202020;
+  background: #f8f7f5;
+  font-family: "Manrope", sans-serif;
+}
+.collection-header {
+  height: 100px;
+  margin: 0 5vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #d6d5d2;
+}
+.collection-wordmark {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 17px;
+  letter-spacing: -0.05em;
+}
+.collection-mark {
+  font-size: 35px;
+  line-height: 1;
+}
+.collection-header nav {
+  display: flex;
+  gap: 34px;
+  align-items: center;
+}
+.collection-header nav a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  font-size: 12px;
+}
+.collection-intro {
+  padding: 92px 5vw 80px;
+  display: grid;
+  grid-template-columns: 1.7fr 1fr;
+  gap: 7vw;
+  align-items: end;
+}
+.collection-kicker {
+  font-size: 12px;
+  margin: 0 0 26px;
+  color: #777;
+}
+.collection-intro h1 {
+  font-size: clamp(42px, 5.5vw, 88px);
+  line-height: 1.04;
+  letter-spacing: -0.065em;
+  font-weight: 500;
+  margin: 0;
+}
+.collection-intro-note > span {
+  font-size: 80px;
+  line-height: 1;
+  letter-spacing: -0.07em;
+  color: #b7b6b1;
+  font-weight: 400;
+}
+.collection-intro-note p {
+  max-width: 320px;
+  line-height: 1.8;
+  font-size: 13px;
+  color: #686865;
+  margin: 18px 0 25px;
+}
+.collection-intro-note a {
+  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-underline-offset: 6px;
+}
+.collection-projects {
+  margin: 0 5vw;
+}
+.collection-empty {
+  padding: 80px 0;
+  color: #777;
+}
+.collection-footer {
+  margin: 90px 5vw 0;
+  padding: 35px 0;
+  border-top: 1px solid #d6d5d2;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  font-size: 11px;
+}
+.collection-footer p {
+  color: #888;
+}
+.collection-footer a {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  text-decoration: none;
+}
+.collection-loading {
+  font-family: "Manrope", sans-serif;
+  padding: 12vw;
+  color: #656565;
+  background: #faf9f6;
+  min-height: 100vh;
+  font-size: 18px;
+}

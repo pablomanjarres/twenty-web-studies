@@ -1,0 +1,33 @@
+.bv-guidance {
+  border: 1px solid #e6ecda;
+  border-radius: 24px;
+  padding: 24px;
+  background: #f0f2e5;
+}
+.bv-guidance > span {
+  font-size: 7px;
+  letter-spacing: 1px;
+  color: #9caa85;
+}
+.bv-guidance h3 {
+  font-weight: 500;
+  font-size: 23px;
+  line-height: 1.18;
+  letter-spacing: -0.8px;
+  margin: 15px 0 11px;
+}
+.bv-guidance p {
+  font-size: 10px;
+  line-height: 1.8;
+  color: #94a27e;
+}
+.bv-guidance button {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  border: 0;
+  background: transparent;
+  padding: 10px 0 0;
+  font-size: 9px;
+  color: #74914c;
+}

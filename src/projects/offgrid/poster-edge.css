@@ -1,0 +1,26 @@
+.fg-poster-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  border-top: 1px solid #f2f0e457;
+  margin-top: 24px;
+  padding: 21px 0 27px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 7px;
+  line-height: 1.5;
+  letter-spacing: 0.8px;
+  flex-shrink: 0;
+}
+.fg-poster-bottom > span:last-child {
+  text-align: right;
+}
+.fg-poster-bottom a {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  color: var(--fg-milk);
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  text-decoration: none;
+  letter-spacing: 0;
+}

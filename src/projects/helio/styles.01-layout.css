@@ -1,0 +1,39 @@
+.helio {
+  --h-blue: #214cf9;
+  --h-ink: #11151e;
+  --focus-color: #214cf9;
+  color: #263448;
+  background: #f8fafc;
+  font-family: "DM Sans", sans-serif;
+}
+.helio a {
+  text-decoration: none;
+}
+.helio button {
+  color: inherit;
+}
+.helio-build-state i {
+  width: 5px;
+  height: 5px;
+  background: #71bd9d;
+  border-radius: 50%;
+}
+.helio-footer {
+  padding: 30px 3.2%;
+  color: #1e2734;
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  align-items: center;
+  font-size: 11px;
+  border-top: 1px solid #e0e6ef;
+}
+.helio-footer .brand-logo {
+  font-size: 23px;
+}
+.helio-footer a,
+.helio-footer small {
+  font:
+    9px "IBM Plex Mono",
+    monospace;
+}

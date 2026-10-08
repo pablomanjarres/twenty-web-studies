@@ -1,0 +1,86 @@
+.cinder {
+  --cinder-brick: #9f3429;
+  --cinder-cream: #f5edd9;
+  --cinder-ink: #38271f;
+  --cinder-yellow: #eec76a;
+  --cinder-line: #38271f35;
+  background: var(--cinder-cream);
+  color: var(--cinder-ink);
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  line-height: 1.55;
+}
+.cinder * {
+  box-sizing: border-box;
+}
+.cinder h1,
+.cinder h2,
+.cinder h3,
+.cinder p,
+.cinder figure {
+  margin: 0;
+}
+.cinder h1,
+.cinder h2,
+.cinder h3 {
+  font-family: "Grindela", serif;
+  font-weight: 400;
+}
+.cinder button,
+.cinder input {
+  font: inherit;
+  color: inherit;
+}
+.cinder button {
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+.cinder button:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+.cinder a {
+  color: inherit;
+  text-decoration: none;
+}
+.cinder button:focus-visible,
+.cinder a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+.cinder-label {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  display: block;
+}
+.cinder-header {
+  height: 73px;
+  padding: 0 4%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  border-bottom: 1px solid var(--cinder-line);
+  font-size: 11px;
+}
+.cinder-header .brand-logo {
+  font-family: "Grindela", serif;
+  font-size: 32px;
+  gap: 7px;
+}
+.cinder-header .brand-logo svg {
+  width: 26px;
+  height: 26px;
+}
+.cinder-header nav {
+  display: flex;
+  align-items: center;
+  gap: 27px;
+}
+.cinder-header button {
+  font-size: 11px;
+  padding: 8px 0;
+}

@@ -1,0 +1,45 @@
+@media (max-width: 1150px) {
+  .pulse-v2 {
+    padding: 18px 22px 0;
+  }
+  .pv-nav {
+    gap: 20px;
+    padding: 0 18px;
+  }
+  .pv-nav nav button {
+    padding: 11px 13px;
+  }
+  .pv-overview {
+    grid-template-columns: minmax(185px, 0.7fr) minmax(300px, 1.3fr);
+    gap: 15px;
+  }
+  .pv-overview-stats {
+    grid-row: 1 / 3;
+  }
+  .pv-upcoming {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .pv-ledger {
+    grid-column: 1 / 3;
+    grid-row: 3;
+  }
+  .pv-care-feature {
+    min-height: 240px;
+  }
+  .pv-compact-stat > small {
+    display: none;
+  }
+  .pv-upcoming {
+    min-height: auto;
+  }
+  .pv-upcoming-list {
+    grid-template-columns: 1fr;
+  }
+  .pv-upcoming .pv-card-title h2 br {
+    display: none;
+  }
+  .pv-upcoming-foot {
+    display: none;
+  }
+}

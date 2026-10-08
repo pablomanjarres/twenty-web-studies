@@ -1,0 +1,174 @@
+.pulse-v2 {
+  --pv-line: #e3e9e4;
+  background: var(--pv-surface);
+  color: var(--pv-ink);
+  font-family: "DM Sans", sans-serif;
+  padding: 0 32px;
+  min-height: 100vh;
+}
+.pulse-v2 * {
+  box-sizing: border-box;
+}
+.pulse-v2 button,
+.pulse-v2 input,
+.pulse-v2 select,
+.pulse-v2 textarea {
+  font-family: inherit;
+}
+.pulse-v2 button {
+  cursor: pointer;
+}
+.pulse-v2 button:focus-visible,
+.pulse-v2 input:focus-visible,
+.pulse-v2 select:focus-visible,
+.pulse-v2 textarea:focus-visible {
+  outline: 3px solid #2f8c7f;
+  outline-offset: 4px;
+}
+.pv-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+.pv-nav {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  border-bottom: 1px solid var(--pv-line);
+  gap: 65px;
+}
+.pv-nav .brand-logo {
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
+  font-size: 26px;
+  letter-spacing: -0.8px;
+  color: var(--pv-teal);
+}
+.pv-nav .brand-logo svg {
+  width: 29px;
+  height: 29px;
+}
+.pv-nav nav {
+  display: flex;
+  height: 100%;
+  gap: 33px;
+}
+.pv-nav nav button {
+  border: 0;
+  background: none;
+  color: #95a49e;
+  font-size: 13px;
+  padding: 0 4px;
+  position: relative;
+}
+.pv-nav nav button[aria-pressed="true"] {
+  color: var(--pv-teal);
+}
+.pv-nav nav button[aria-pressed="true"]:after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--pv-teal);
+}
+.pv-clinic {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-left: auto;
+}
+.pv-clinic > span {
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #8b9c92;
+}
+.pv-clinic i,
+.pv-footer i {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #69a591;
+}
+.pv-clinic img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.pv-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 31px 0 27px;
+  gap: 20px;
+}
+.pv-heading p {
+  margin: 0 0 10px;
+  font-size: 9px;
+  letter-spacing: 1.4px;
+  color: #a1afa5;
+}
+.pv-heading h1 {
+  margin: 0;
+  font-family: "Outfit", sans-serif;
+  font-size: 29px;
+  font-weight: 400;
+  letter-spacing: -0.7px;
+}
+.pv-new {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 0;
+  background: var(--pv-teal);
+  color: white;
+  padding: 12px 17px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+.pv-controls {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 15px 0;
+  border-top: 1px solid var(--pv-line);
+  border-bottom: 1px solid var(--pv-line);
+}
+.pv-date-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.pv-date-controls button {
+  border: 1px solid var(--pv-line);
+  background: white;
+  border-radius: 5px;
+  height: 30px;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  color: #62796e;
+}
+.pv-date-controls .pv-today {
+  padding: 6px 13px;
+  font-size: 11px;
+  margin-left: 5px;
+}
+.pv-date-controls > span {
+  font-size: 11px;
+  color: #99a79f;
+  margin-left: 12px;
+}
+.pv-clinician-filter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+  color: #7a8e82;
+}

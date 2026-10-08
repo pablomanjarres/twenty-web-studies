@@ -1,0 +1,144 @@
+@media (max-width: 700px) {
+  .soundroom-v3 .sr3-featured {
+    height: 230px;
+    border-radius: 12px;
+    margin-top: 12px;
+  }
+  .soundroom-v3 .sr3-featured > img {
+    object-position: 63% center;
+  }
+  .soundroom-v3 .sr3-featured-copy {
+    left: 20px;
+    bottom: 23px;
+  }
+  .soundroom-v3 .sr3-featured-copy > span {
+    font-size: 7px;
+    letter-spacing: 1.3px;
+  }
+  .soundroom-v3 .sr3-featured-copy > p {
+    font-size: 11px;
+    margin-top: 17px;
+  }
+  .soundroom-v3 .sr3-featured h1 {
+    font-size: 34px;
+    margin-top: 7px;
+  }
+  .soundroom-v3 .sr3-featured-copy > div {
+    margin-top: 17px;
+    gap: 10px;
+  }
+  .soundroom-v3 .sr3-featured-play {
+    padding: 11px 14px;
+    font-size: 11px;
+  }
+  .soundroom-v3 .sr3-featured-save {
+    width: 36px;
+    height: 36px;
+  }
+  .soundroom-v3 .sr3-featured-copy small {
+    font-size: 8px;
+    margin-left: 0;
+  }
+  .soundroom-v3 .sr3-track-list {
+    margin-top: 27px;
+  }
+  .soundroom-v3 .sr3-track-list > header {
+    margin-bottom: 16px;
+    align-items: start;
+  }
+  .soundroom-v3 .sr3-track-list h2 {
+    font-size: 18px;
+  }
+  .soundroom-v3 .sr3-track-list > header span {
+    font-size: 9px;
+  }
+  .soundroom-v3 .sr3-track-list > header .sr3-track-list-meta {
+    display: none;
+  }
+  .soundroom-v3 .sr3-track-mood {
+    display: none;
+  }
+  .soundroom-v3 .sr3-track-play {
+    padding: 10px 7px 10px 9px;
+    gap: 9px;
+    min-height: 54px;
+  }
+  .soundroom-v3 .sr3-track-number {
+    width: 15px;
+    font-size: 8px;
+  }
+  .soundroom-v3 .sr3-track-play > .sr3-artwork {
+    width: 31px;
+  }
+  .soundroom-v3 .sr3-track-title strong {
+    font-size: 11px;
+  }
+  .soundroom-v3 .sr3-track-title small {
+    font-size: 8px;
+  }
+  .soundroom-v3 .sr3-track-duration {
+    font-size: 8px;
+    width: 25px;
+  }
+  .soundroom-v3 .sr3-row-play-icon {
+    display: none;
+  }
+  .soundroom-v3 .sr3-save {
+    padding: 10px 9px 10px 4px;
+  }
+  .soundroom-v3 .sr3-save > svg {
+    width: 13px;
+    height: 13px;
+  }
+  .soundroom-v3 .sr3-rooms {
+    margin-top: 24px;
+  }
+  .soundroom-v3 .sr3-rooms > header h2 {
+    font-size: 16px;
+  }
+  .soundroom-v3 .sr3-rooms > header button {
+    font-size: 9px;
+  }
+  .soundroom-v3 .sr3-rooms > div {
+    gap: 10px;
+  }
+  .soundroom-v3 .sr3-room-art {
+    height: 90px;
+    border-radius: 6px;
+  }
+  .soundroom-v3 .sr3-room-art > .sr3-artwork {
+    width: 170px;
+    height: 170px;
+    right: -75px;
+    top: -30px;
+  }
+  .soundroom-v3 .sr3-room-art > span {
+    font-size: 6px;
+    left: 9px;
+    bottom: 10px;
+    max-width: 58px;
+  }
+  .soundroom-v3 .sr3-room-art > svg {
+    width: 11px;
+    height: 11px;
+    right: 7px;
+    bottom: 9px;
+  }
+  .soundroom-v3 .sr3-rooms > div > button > strong {
+    font-size: 10px;
+    margin-top: 10px;
+  }
+  .soundroom-v3 .sr3-rooms > div > button > small {
+    font-size: 8px;
+  }
+  .soundroom-v3 .sr3-status {
+    padding: 22px 0;
+    font-size: 8px;
+  }
+  .soundroom-v3 .sr3-empty {
+    padding: 30px 0;
+  }
+  .soundroom-v3 .sr3-empty h3 {
+    font-size: 16px;
+  }
+}

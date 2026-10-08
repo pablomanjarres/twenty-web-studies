@@ -1,0 +1,55 @@
+.vale-sheet-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 9px;
+  border-top: 1px solid var(--vale-line);
+  padding: 11px 0;
+}
+.vale-formula-caption {
+  display: flex;
+  justify-content: space-between;
+  gap: 35px;
+  padding-top: 26px;
+  border-top: 1px solid var(--vale-line);
+  align-items: center;
+}
+.vale-formula-caption h2 {
+  font-size: 42px;
+  line-height: 1.1;
+  margin: 10px 0;
+}
+.vale-formula-caption p {
+  font-size: 12px;
+}
+.vale-formula-order {
+  width: 265px;
+  max-width: 45%;
+}
+.vale-volumes {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+.vale-volumes button {
+  font-family: "IBM Plex Mono", monospace;
+  border: 1px solid var(--vale-line);
+  font-size: 10px;
+  padding: 8px 15px;
+}
+.vale-volumes button[aria-pressed="true"] {
+  border-color: var(--vale-green);
+  background: var(--vale-mineral);
+}
+.vale-add {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  background: var(--vale-green) !important;
+  color: var(--vale-paper) !important;
+  padding: 13px 17px !important;
+  font-size: 11px !important;
+  width: 100%;
+}

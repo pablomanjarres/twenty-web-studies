@@ -1,0 +1,73 @@
+.md-form-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: end;
+  background: #07101ce0;
+  z-index: 50;
+}
+.md-schedule {
+  background: var(--md-panel);
+  padding: 36px;
+  width: min(430px, 100%);
+  border-left: 1px solid var(--md-line);
+  overflow: auto;
+}
+.md-schedule-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.md-schedule-heading h2 {
+  font-size: 26px;
+  margin-top: 10px;
+  letter-spacing: -0.8px;
+}
+.md-schedule-heading > button {
+  border: 0;
+  background: transparent;
+  color: var(--md-muted);
+  padding: 5px;
+}
+.md-schedule > p {
+  font-size: 11px;
+  line-height: 1.7;
+  color: var(--md-muted);
+  margin: 23px 0 31px;
+}
+.md-schedule > label {
+  display: block;
+  font-size: 10px;
+  color: #a7bccb;
+  margin: 20px 0;
+}
+.md-schedule select,
+.md-schedule input {
+  display: block;
+  width: 100%;
+  margin-top: 9px;
+  background: var(--md-bg);
+  border: 1px solid #adc9de26;
+  padding: 13px;
+  color: var(--md-text);
+  border-radius: 3px;
+  font-size: 11px;
+}
+.md-form-note {
+  font-size: 9px;
+  display: block;
+  color: var(--md-muted);
+  margin: 23px 0;
+}
+.md-create-button {
+  background: var(--md-cyan);
+  color: var(--md-bg);
+  border: 0;
+  border-radius: 3px;
+  padding: 15px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-size: 11px;
+}

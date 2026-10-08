@@ -1,0 +1,110 @@
+.orbit-v3 .ov3-team-column {
+  display: grid;
+  gap: 20px;
+}
+.orbit-v3 .ov3-team-load,
+.orbit-v3 .ov3-meetings {
+  background: white;
+  border-radius: 18px;
+  padding: 24px 22px;
+}
+.orbit-v3 .ov3-team-load .ov3-section-heading span,
+.orbit-v3 .ov3-meetings .ov3-section-heading span {
+  font-size: 8px;
+  letter-spacing: 0.6px;
+}
+.orbit-v3 .ov3-person {
+  display: flex;
+  gap: 10px;
+  align-items: start;
+  margin-top: 21px;
+}
+.orbit-v3 .ov3-person > img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.orbit-v3 .ov3-person > span {
+  flex: 1;
+}
+.orbit-v3 .ov3-person strong {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+}
+.orbit-v3 .ov3-person small {
+  display: block;
+  color: #a2a89b;
+  font-size: 9px;
+  margin-top: 3px;
+}
+.orbit-v3 .ov3-person i {
+  display: block;
+  height: 4px;
+  background: #f2f2ec;
+  border-radius: 3px;
+  margin-top: 10px;
+}
+.orbit-v3 .ov3-person b {
+  display: block;
+  height: 100%;
+  border-radius: 3px;
+  background: #d0bddf;
+}
+.orbit-v3 .ov3-person:nth-child(3) b {
+  background: #a9c4b3;
+}
+.orbit-v3 .ov3-person:nth-child(4) b {
+  background: #dfc09a;
+}
+.orbit-v3 .ov3-meetings > button {
+  width: 100%;
+  text-align: left;
+  display: flex;
+  gap: 11px;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid #f0f0ea;
+}
+.orbit-v3 .ov3-meetings > button:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+.orbit-v3 .ov3-meetings time {
+  font-size: 9px;
+  color: #9ba191;
+  align-self: start;
+  margin-top: 3px;
+}
+.orbit-v3 .ov3-meetings > button > span {
+  flex: 1;
+}
+.orbit-v3 .ov3-meetings strong {
+  font-size: 10px;
+  font-weight: 500;
+  display: block;
+}
+.orbit-v3 .ov3-meetings small {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 8px;
+  color: #a0a794;
+  margin-top: 7px;
+}
+.orbit-v3 .ov3-meetings small > span {
+  display: flex;
+  padding-right: 5px;
+}
+.orbit-v3 .ov3-meetings img {
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+  margin-right: -5px;
+}
+.orbit-v3 .ov3-meetings > button > svg {
+  color: #adaf9e;
+}

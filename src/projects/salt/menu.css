@@ -1,0 +1,96 @@
+.sl-menu-spread {
+  display: grid;
+  grid-template-columns: 1fr 1.12fr 1fr;
+  gap: 30px;
+  padding: 28px 0 35px;
+  align-items: start;
+}
+.sl-menu-spread h2 {
+  font:
+    400 25px "Instrument Serif",
+    serif;
+  color: var(--sl-red);
+  margin-bottom: 20px;
+}
+.sl-dish {
+  margin-bottom: 22px;
+}
+.sl-dish > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: baseline;
+}
+.sl-dish h3 {
+  font-size: 13px;
+  font-weight: 500;
+}
+.sl-dish > div > span {
+  font:
+    12px "IBM Plex Mono",
+    monospace;
+}
+.sl-dish p {
+  font-size: 10px;
+  line-height: 1.7;
+  color: #6b7a7e;
+  margin-top: 7px;
+  max-width: 230px;
+}
+.sl-menu-note {
+  display: flex;
+  gap: 13px;
+  align-items: start;
+  border-top: 1px solid var(--sl-line);
+  padding-top: 18px;
+  margin-top: 10px;
+}
+.sl-menu-note svg {
+  color: var(--sl-red);
+  flex: none;
+}
+.sl-menu-note p {
+  font-size: 10px;
+  line-height: 1.8;
+}
+.sl-plate {
+  padding-top: 5px;
+  margin-left: -40px !important;
+  margin-right: -40px !important;
+}
+.sl-plate img {
+  width: 100%;
+  height: 340px;
+  object-fit: contain;
+  transform: rotate(-12deg);
+  filter: drop-shadow(8px 15px 10px #18344517);
+}
+.sl-plate figcaption {
+  text-align: center;
+  font:
+    8px "IBM Plex Mono",
+    monospace;
+  letter-spacing: 0.06em;
+  margin-top: 16px;
+}
+.sl-plate figcaption span {
+  display: block;
+  font:
+    400 21px "Instrument Serif",
+    serif;
+  letter-spacing: 0;
+  margin-top: 8px;
+}
+.sl-plate figcaption small {
+  display: block;
+  font:
+    9px "DM Sans",
+    sans-serif;
+  letter-spacing: 0;
+  margin-top: 8px;
+}
+.sl-menu-section + .sl-menu-section {
+  border-top: 1px solid var(--sl-line);
+  padding-top: 21px;
+  margin-top: 23px;
+}

@@ -1,0 +1,164 @@
+.orbit-v3 .ov3-drawer-backdrop {
+  position: fixed;
+  inset: 0;
+  background: #17161d35;
+  backdrop-filter: blur(3px);
+  z-index: 50;
+  display: flex;
+  justify-content: flex-end;
+}
+.orbit-v3 .ov3-drawer {
+  width: 450px;
+  max-width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: #fafaf5;
+  padding: 27px 32px 20px;
+  box-shadow: -20px 0 70px #2b213520;
+}
+.orbit-v3 .ov3-drawer header,
+.orbit-v3 .ov3-new-task header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #a2a797;
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+.orbit-v3 .ov3-drawer header button,
+.orbit-v3 .ov3-new-task header button {
+  min-width: 40px;
+  min-height: 40px;
+  display: grid;
+  place-items: center;
+  color: #777f6c;
+}
+.orbit-v3 .ov3-task-kind {
+  display: inline-block;
+  margin-top: 26px;
+  font-size: 11px;
+  color: #9670b3;
+}
+.orbit-v3 .ov3-drawer h2 {
+  font-size: 29px;
+  line-height: 1.2;
+  margin: 10px 0 16px;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+.orbit-v3 .ov3-drawer > p {
+  font-size: 13px;
+  line-height: 1.8;
+  color: #8d9383;
+}
+.orbit-v3 .ov3-drawer dl {
+  margin: 30px 0;
+  padding: 18px 0;
+  border-top: 1px solid #e4e6dc;
+  border-bottom: 1px solid #e4e6dc;
+  display: grid;
+  gap: 17px;
+}
+.orbit-v3 .ov3-drawer dl > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.orbit-v3 .ov3-drawer dt {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #9fa792;
+  font-size: 12px;
+}
+.orbit-v3 .ov3-drawer dd {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+}
+.orbit-v3 .ov3-drawer dd img {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.orbit-v3 .ov3-drawer select {
+  border: 1px solid #e2dbef;
+  background: #f2ecf8;
+  border-radius: 6px;
+  padding: 7px 9px;
+  font-size: 11px;
+  color: #8766a8;
+}
+.orbit-v3 .ov3-drawer-checks > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 13px;
+}
+.orbit-v3 .ov3-drawer-checks h3 {
+  font-size: 14px;
+}
+.orbit-v3 .ov3-drawer-checks > div > span {
+  font-size: 11px;
+  color: #9b83b7;
+}
+.orbit-v3 .ov3-drawer-checks > button {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+  padding: 11px 0;
+  color: #8b9380;
+  font-size: 12px;
+}
+.orbit-v3 .ov3-drawer-checks > button i {
+  height: 18px;
+  width: 18px;
+  flex: none;
+  display: grid;
+  place-items: center;
+  border: 1px solid #c7cdbf;
+  border-radius: 4px;
+}
+.orbit-v3 .ov3-drawer-checks > button[aria-pressed="true"] i {
+  background: #9172b5;
+  border-color: #9172b5;
+  color: white;
+}
+.orbit-v3 .ov3-task-note {
+  display: block;
+  margin-top: 31px;
+}
+.orbit-v3 .ov3-task-note > span {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-weight: 600;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+.orbit-v3 .ov3-task-note textarea {
+  width: 100%;
+  min-height: 140px;
+  background: white;
+  border: 1px solid #e1e4d9;
+  border-radius: 8px;
+  padding: 13px;
+  font-size: 12px;
+  line-height: 1.6;
+  resize: vertical;
+}
+.orbit-v3 .ov3-drawer footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 10px;
+  color: #a5ad98;
+  border-top: 1px solid #e4e6dc;
+  padding-top: 19px;
+  margin-top: 28px;
+}

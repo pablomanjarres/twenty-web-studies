@@ -1,0 +1,70 @@
+.hc-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+.hc-metrics article {
+  position: relative;
+  overflow: hidden;
+  background: white;
+  border: 1px solid #e5e8ef;
+  border-radius: 9px;
+  padding: 18px 20px;
+  box-shadow: 0 2px 3px #14233b03;
+}
+.hc-metrics article > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #8d96a8;
+  font-size: 11px;
+}
+.hc-metrics article > strong {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  font:
+    550 29px/1 "Space Grotesk",
+    sans-serif;
+  letter-spacing: -0.05em;
+  margin: 16px 0 12px;
+  color: #273146;
+}
+.hc-metrics article > strong small {
+  font:
+    400 13px "DM Sans",
+    sans-serif;
+  letter-spacing: 0;
+  color: #94a0b5;
+}
+.hc-metrics p {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 9px;
+  color: #98a1b1;
+  margin: 0;
+}
+.hc-metrics p > .lucide {
+  color: #55af90;
+}
+.hc-metric-spark {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  position: absolute;
+  right: 20px;
+  bottom: 39px;
+  height: 35px;
+  width: 80px;
+  opacity: 0.75;
+}
+.hc-metric-spark i {
+  flex: 1;
+  max-height: 100%;
+  background: #e8edfe;
+  border-radius: 2px 2px 0 0;
+}
+.hc-metric-spark i:nth-last-child(-n + 2) {
+  background: #7390ed;
+}

@@ -1,0 +1,93 @@
+@media (max-width: 1250px) {
+  .md-command-bar > a {
+    width: 285px;
+  }
+  .md-command-title {
+    display: none;
+  }
+  .md-control-room {
+    grid-template-columns: 60px 258px minmax(0, 1fr);
+  }
+  .md-operations-docks {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    gap: 10px;
+  }
+  .md-load-dock,
+  .md-event-dock {
+    padding: 13px;
+  }
+  .md-port-caption {
+    left: 16px;
+    right: 16px;
+  }
+  .md-map-tools {
+    right: 16px;
+  }
+  .md-plan-focus {
+    right: 72px;
+    width: 218px;
+  }
+  .md-load-identity > .md-vehicle-study {
+    width: 104px;
+  }
+  .md-load-facts {
+    gap: 8px;
+  }
+  .md-load-facts b {
+    font-size: 10px;
+  }
+  .md-event-dock h3 {
+    font-size: 14px;
+  }
+}
+@media (max-width: 1050px) {
+  .md-workspace-name {
+    display: none;
+  }
+  .md-command-title {
+    display: block;
+  }
+  .md-command-bar {
+    gap: 12px;
+  }
+  .md-command-date {
+    display: none;
+  }
+  .md-new-movement {
+    margin-left: auto;
+  }
+  .md-control-room {
+    grid-template-columns: 56px 245px minmax(0, 1fr);
+  }
+  .md-plan-focus {
+    top: auto;
+    bottom: 252px;
+    right: 18px;
+    width: 215px;
+  }
+  .md-port-caption h2 {
+    font-size: 20px;
+  }
+  .md-map-badge {
+    display: none;
+  }
+  .md-port-cartography {
+    height: calc(100% - 140px);
+    top: 10px;
+  }
+  .md-load-identity > .md-vehicle-study {
+    width: 80px;
+  }
+  .md-load-facts b {
+    font-size: 11px;
+  }
+  .md-map-legend {
+    bottom: 227px;
+    font-size: 8px;
+  }
+  .md-map-legend > span:last-child {
+    display: none;
+  }
+}

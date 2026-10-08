@@ -1,0 +1,75 @@
+.orbit-v3 .ov3-allocation {
+  border-radius: 16px;
+  background: white;
+  padding: 20px 25px;
+  margin: 20px 0;
+}
+.orbit-v3 .ov3-allocation > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+.orbit-v3 .ov3-allocation h2 {
+  font-size: 15px;
+}
+.orbit-v3 .ov3-allocation > div > span {
+  color: #93978f;
+  font-size: 10px;
+}
+.orbit-v3 .ov3-allocation strong {
+  margin-left: auto;
+  font:
+    600 20px "Manrope",
+    sans-serif;
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+}
+.orbit-v3 .ov3-allocation strong small {
+  color: #a2a59e;
+  font:
+    9px "DM Sans",
+    sans-serif;
+}
+.orbit-v3 .ov3-allocation-strip {
+  display: flex;
+  gap: 3px;
+  height: 15px;
+  border-radius: 3px;
+  overflow: hidden;
+  background: #efefe7;
+}
+.orbit-v3 .ov3-allocation-strip span {
+  position: relative;
+  min-width: 4px;
+  background-image: repeating-linear-gradient(
+    90deg,
+    transparent 0,
+    transparent 8px,
+    #ffffff65 8px,
+    #ffffff65 10px
+  ) !important;
+}
+.orbit-v3 .ov3-allocation footer {
+  display: flex;
+  gap: 24px;
+  margin-top: 13px;
+}
+.orbit-v3 .ov3-allocation footer span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #737a71;
+  font-size: 10px;
+}
+.orbit-v3 .ov3-allocation footer i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+.orbit-v3 .ov3-allocation footer b {
+  font-weight: 400;
+  color: #a7aca2;
+  margin-left: 2px;
+}

@@ -1,0 +1,113 @@
+@media (max-width: 760px) {
+  .cinder-batch {
+    grid-template-columns: 1fr;
+    gap: 33px;
+    padding: 50px 5%;
+  }
+  .cinder-batch h2 {
+    font-size: 35px;
+    margin: 20px 0;
+  }
+  .cinder-roast-ledger > div {
+    grid-template-columns: 1.4fr 0.9fr 1fr 0.8fr;
+    gap: 8px;
+    font-size: 8px;
+    padding: 18px 0;
+  }
+  .cinder-roast-ledger > .cinder-ledger-heading {
+    font-size: 6px;
+  }
+  .cinder-roast-ledger strong {
+    font-size: 18px;
+    margin: 4px 0 5px;
+  }
+  .cinder-roast-ledger em {
+    font-size: 7px;
+  }
+  .cinder-origin-study {
+    height: 420px;
+  }
+  .cinder-origin-study > div {
+    left: 5%;
+    top: 18%;
+    width: 225px;
+  }
+  .cinder-origin-study h2 {
+    font-size: 44px;
+  }
+  .cinder-origin-study p {
+    font-size: 11px;
+  }
+  .cinder-brew-sheet {
+    padding: 45px 5%;
+  }
+  .cinder-brew-top {
+    gap: 21px;
+  }
+  .cinder-brew-top h2 {
+    font-size: 34px;
+    max-width: 240px;
+  }
+  .cinder-brew-top nav {
+    gap: 20px;
+  }
+  .cinder-brew-top button {
+    font-size: 10px;
+  }
+  .cinder-brew-body {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-top: 20px;
+  }
+  .cinder-brew-body dl {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 25px;
+  }
+  .cinder-brew-body dd {
+    font-size: 24px;
+  }
+  .cinder-brew-body li > p {
+    font-size: 12px;
+  }
+  .cinder-dispatch {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 45px 5% 25px;
+  }
+  .cinder-dispatch h2 {
+    font-size: 37px;
+  }
+  .cinder-footer-line {
+    margin-top: 13px;
+    font-size: 8px;
+    gap: 15px;
+  }
+  .cinder-footer-line .brand-logo {
+    font-size: 27px;
+  }
+  .cinder-footer-line .brand-logo svg {
+    display: none;
+  }
+  .cinder-footer-line > span {
+    display: none;
+  }
+  .cinder-basket {
+    padding: 25px;
+  }
+  .cinder-basket > article {
+    gap: 10px;
+  }
+  .cinder-basket img {
+    width: 55px;
+  }
+  .cinder-basket h3 {
+    font-size: 18px;
+  }
+  .cinder-basket article p {
+    font-size: 8px;
+  }
+  .cinder-basket .cinder-quantity button {
+    width: 23px;
+  }
+}

@@ -1,0 +1,90 @@
+@media (max-width: 1000px) {
+  .collection-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .collection-intro {
+    gap: 4vw;
+  }
+  .collection-intro-note > span {
+    font-size: 65px;
+  }
+  .collection-tools {
+    align-items: start;
+    flex-direction: column;
+  }
+  .collection-search {
+    align-self: end;
+  }
+}
+@media (max-width: 600px) {
+  .collection-header {
+    height: 77px;
+  }
+  .collection-header nav a:first-child {
+    display: none;
+  }
+  .collection-header nav {
+    gap: 0;
+  }
+  .collection-wordmark {
+    font-size: 13px;
+  }
+  .collection-mark {
+    font-size: 28px;
+  }
+  .collection-intro {
+    display: block;
+    padding: 52px 5vw 44px;
+  }
+  .collection-intro h1 {
+    font-size: 44px;
+  }
+  .collection-intro-note {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-top: 28px;
+    flex-wrap: wrap;
+  }
+  .collection-intro-note > span {
+    font-size: 54px;
+  }
+  .collection-intro-note p {
+    flex: 1;
+    font-size: 11px;
+    margin: 0;
+    max-width: none;
+  }
+  .collection-intro-note a {
+    display: none;
+  }
+  .collection-kicker {
+    font-size: 10px;
+    margin-bottom: 22px;
+  }
+  .collection-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .collection-filters {
+    gap: 1px;
+  }
+  .collection-filters button {
+    padding: 9px 10px;
+    font-size: 10px;
+  }
+  .collection-tools {
+    gap: 10px;
+    padding: 18px 0 25px;
+  }
+  .collection-search {
+    align-self: start;
+  }
+  .collection-footer {
+    margin-top: 50px;
+    flex-wrap: wrap;
+  }
+  .collection-footer p {
+    display: none;
+  }
+}

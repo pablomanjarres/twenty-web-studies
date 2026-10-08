@@ -1,0 +1,127 @@
+.cinder-order-strip {
+  display: grid;
+  grid-template-columns: 1.5fr 0.6fr 1.05fr;
+  align-items: center;
+  gap: 35px;
+  padding: 25px 6%;
+  border-bottom: 1px solid var(--cinder-line);
+}
+.cinder-grind-controls {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.cinder-grind-controls > div {
+  display: flex;
+  gap: 4px;
+}
+.cinder-grind-controls button {
+  font-size: 11px;
+  padding: 9px 12px;
+  border: 1px solid var(--cinder-line);
+  white-space: nowrap;
+}
+.cinder-grind-controls button[aria-pressed="true"] {
+  background: var(--cinder-ink);
+  color: var(--cinder-cream);
+  border-color: var(--cinder-ink);
+}
+.cinder-order-quantity {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.cinder-order-quantity > .cinder-label {
+  font-size: 8px;
+  white-space: nowrap;
+}
+.cinder-quantity {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--cinder-line);
+}
+.cinder-quantity button {
+  width: 29px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cinder-quantity output {
+  width: 20px;
+  text-align: center;
+  font-size: 11px;
+}
+.cinder-order-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  background: var(--cinder-brick) !important;
+  color: var(--cinder-cream) !important;
+  font-size: 11px !important;
+  padding: 14px 18px !important;
+}
+.cinder-basket-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  background: #38271f77;
+  display: flex;
+  justify-content: end;
+  backdrop-filter: blur(4px);
+}
+.cinder-basket {
+  width: min(520px, 100%);
+  background: var(--cinder-cream);
+  padding: 35px;
+  overflow: auto;
+}
+.cinder-basket-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.cinder-basket h2 {
+  font-size: 34px;
+}
+.cinder-basket > article {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  border-bottom: 1px solid var(--cinder-line);
+  padding: 15px 0;
+}
+.cinder-basket > article > div:not(.cinder-quantity) {
+  flex: 1;
+}
+.cinder-basket img {
+  width: 70px;
+  height: 100px;
+  object-fit: contain;
+}
+.cinder-basket h3 {
+  font-size: 21px;
+}
+.cinder-basket article p,
+.cinder-basket article strong {
+  font-size: 10px;
+}
+.cinder-basket article p {
+  margin: 7px 0;
+}
+.cinder-basket-total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  font-size: 13px;
+}
+.cinder-basket-note {
+  font-size: 10px;
+  margin: 20px 0 25px;
+}
+.cinder-basket > .cinder-order-button {
+  width: 100%;
+}

@@ -1,0 +1,95 @@
+.sp-club {
+  background: var(--sp-lime);
+  padding: 75px 8%;
+  display: grid;
+  grid-template-columns: 0.75fr 1fr;
+  gap: 12%;
+  align-items: center;
+}
+.sp-club > div > span {
+  font:
+    10px "IBM Plex Mono",
+    monospace;
+  letter-spacing: 0.1em;
+}
+.sp-club h2 {
+  font:
+    400 52px/1.06 "Anton",
+    sans-serif;
+  text-transform: uppercase;
+  margin: 20px 0;
+}
+.sp-club p {
+  font-size: 13px;
+  line-height: 1.9;
+}
+.sp-club a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  margin-top: 30px;
+  border-bottom: 1px solid var(--sp-ink);
+  padding: 0 0 12px;
+  font-size: 15px;
+}
+.sp-court-drawing {
+  height: 330px;
+  border: 2px solid var(--sp-violet);
+  position: relative;
+  transform: rotate(-8deg);
+  box-shadow: 14px 14px 0 #6535f419;
+}
+.sp-court-drawing:before,
+.sp-court-drawing:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  border-top: 2px solid var(--sp-violet);
+  left: 0;
+}
+.sp-court-drawing:before {
+  top: 25%;
+}
+.sp-court-drawing:after {
+  top: 75%;
+}
+.sp-court-drawing > div {
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  height: 50%;
+  border-left: 2px solid var(--sp-violet);
+}
+.sp-court-drawing > i {
+  position: absolute;
+  left: -4px;
+  right: -4px;
+  top: 50%;
+  border-top: 5px solid var(--sp-ink);
+}
+.sp-court-drawing > span {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: var(--sp-violet);
+  right: 15%;
+  top: 35%;
+}
+.sp-footer {
+  background: var(--sp-violet);
+  color: var(--sp-paper);
+  padding: 32px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+.sp-footer .brand-logo {
+  font-size: 26px;
+}
+.sp-footer p,
+.sp-footer > span {
+  font-size: 10px;
+}

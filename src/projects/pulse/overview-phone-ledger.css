@@ -1,0 +1,33 @@
+@media (max-width: 700px) {
+  .pv-ledger .pv-card-title {
+    flex-wrap: wrap;
+  }
+  .pv-ledger .pv-card-title label {
+    width: 100%;
+  }
+  .pv-ledger input {
+    font-size: 11px;
+    width: 100%;
+    min-height: 22px;
+  }
+  .pv-ledger-scroll {
+    overflow-x: auto;
+  }
+  .pv-ledger table {
+    min-width: 535px;
+  }
+  .pv-ledger td {
+    padding-top: 13px;
+    padding-bottom: 13px;
+  }
+  .pv-ledger-person {
+    min-height: 44px;
+  }
+  .pv-ledger-open {
+    width: 44px;
+    height: 44px;
+  }
+  .pv-ledger-person strong {
+    font-size: 12px;
+  }
+}

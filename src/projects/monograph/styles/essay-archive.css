@@ -1,0 +1,72 @@
+.monograph-visual-essay {
+  padding-bottom: 80px;
+}
+.monograph-essay-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 90px;
+  padding: 42px 0;
+}
+.monograph-essay-intro h2 {
+  font-size: 62px;
+  line-height: 0.99;
+  letter-spacing: -0.04em;
+  color: var(--mono-blue);
+}
+.monograph-essay-intro p {
+  font-size: 14px;
+  line-height: 1.9;
+  margin-bottom: 20px;
+  max-width: 35em;
+}
+.monograph-essay-intro button {
+  border: 0;
+  border-bottom: 1px solid var(--mono-ink);
+  background: transparent;
+  padding: 0 0 6px;
+  font-size: 11px;
+}
+.monograph-visual-essay figure img {
+  width: 100%;
+  height: 530px;
+  object-fit: cover;
+}
+.monograph-visual-essay figcaption {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 10px;
+  font-size: 9px;
+}
+.monograph-visual-essay figcaption .monograph-credit {
+  margin: 0;
+}
+.monograph-archive {
+  padding-bottom: 85px;
+  scroll-margin-top: 20px;
+}
+.monograph-archive h2 {
+  font-size: 43px;
+  margin: 27px 0 32px;
+}
+.monograph-archive > div:last-child {
+  border-top: 1px solid var(--mono-rule);
+}
+.monograph-archive a {
+  padding: 25px 0;
+  border-bottom: 1px solid var(--mono-rule);
+  display: grid;
+  grid-template-columns: 180px 1fr 170px 15px;
+  gap: 20px;
+  align-items: center;
+}
+.monograph-archive a > span {
+  font-size: 10px;
+  line-height: 1.7;
+}
+.monograph-archive h3 {
+  font-size: 25px;
+}
+.monograph-archive a:hover h3 {
+  color: var(--mono-blue);
+}

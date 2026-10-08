@@ -1,0 +1,141 @@
+@media (max-width: 720px) {
+  .sl-header {
+    min-height: 74px;
+    padding: 18px 20px;
+    gap: 16px;
+  }
+  .sl-header > a {
+    font-size: 27px;
+  }
+  .sl-header > span {
+    display: none;
+  }
+  .sl-header nav {
+    gap: 17px;
+    font-size: 10px;
+  }
+  .sl-menu-stage {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 14px 35px;
+  }
+  .sl-menu-edge {
+    flex-direction: row;
+    padding: 0 15px;
+    height: 53px;
+  }
+  .sl-menu-edge > span {
+    writing-mode: initial;
+    font-size: 7px;
+    max-width: 55px;
+    line-height: 1.7;
+  }
+  .sl-menu-edge > span:last-child {
+    display: none;
+  }
+  .sl-menu-edge nav {
+    display: flex;
+    gap: 6px;
+  }
+  .sl-menu-edge button {
+    writing-mode: initial;
+    width: 63px;
+    min-height: 44px;
+    font-size: 11px;
+    border: 0;
+  }
+  .sl-menu-paper {
+    border-left: 1px solid var(--sl-line);
+    border-top: 0;
+    padding: 21px 20px;
+    background: none;
+  }
+  .sl-menu-masthead {
+    padding-bottom: 18px;
+  }
+  .sl-menu-masthead > p {
+    font-size: 6px;
+    letter-spacing: 0.02em;
+  }
+  .sl-menu-masthead h1 {
+    font-size: 29px;
+    margin-top: 13px;
+    line-height: 1.2;
+  }
+  .sl-menu-masthead > span {
+    font-size: 15px;
+    margin-top: 8px;
+  }
+  .sl-menu-spread {
+    grid-template-columns: 1fr;
+    gap: 23px;
+    padding: 18px 0 22px;
+  }
+  .sl-plate {
+    grid-row: 1;
+    margin: 0 !important;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+  }
+  .sl-plate img {
+    height: 195px;
+  }
+  .sl-plate figcaption {
+    font-size: 6px;
+    margin: 0;
+    line-height: 1.7;
+  }
+  .sl-plate figcaption span {
+    font-size: 19px;
+    line-height: 1.1;
+  }
+  .sl-plate figcaption small {
+    font-size: 8px;
+    line-height: 1.6;
+  }
+  .sl-menu-spread h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+  .sl-dish h3 {
+    font-size: 14px;
+  }
+  .sl-dish p {
+    font-size: 11px;
+    max-width: 270px;
+  }
+  .sl-dish {
+    margin-bottom: 21px;
+  }
+  .sl-menu-note {
+    display: none;
+  }
+  .sl-menu-section + .sl-menu-section {
+    padding-top: 18px;
+    margin-top: 24px;
+  }
+  .sl-menu-bottom {
+    display: grid;
+    gap: 9px;
+    font-size: 8px;
+  }
+  .sl-kitchen {
+    padding: 15px 24px 50px;
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+  .sl-kitchen > figure img {
+    height: 280px;
+  }
+  .sl-kitchen > figure figcaption {
+    font-size: 8px;
+    left: 18px;
+    bottom: 18px;
+  }
+  .sl-kitchen-story h2 {
+    font-size: 34px;
+  }
+}

@@ -1,0 +1,146 @@
+@media (max-width: 600px) {
+  .orbit-v3 .ov3-roadmap {
+    padding: 21px 15px 14px;
+    border-radius: 14px;
+  }
+  .orbit-v3 .ov3-roadmap .ov3-section-heading h2 {
+    font-size: 17px;
+  }
+  .orbit-v3 .ov3-roadmap .ov3-section-heading > div span {
+    font-size: 10px;
+  }
+  .orbit-v3 .ov3-roadmap-days {
+    font-size: 8px;
+    margin-top: 21px;
+    gap: 3px;
+  }
+  .orbit-v3 .ov3-roadmap-row {
+    height: 43px;
+  }
+  .orbit-v3 .ov3-roadmap-row button {
+    height: 32px;
+    min-width: 75px;
+    padding: 0 8px;
+  }
+  .orbit-v3 .ov3-roadmap-row button > span {
+    font-size: 9px;
+  }
+  .orbit-v3 .ov3-roadmap-row button small,
+  .orbit-v3 .ov3-roadmap-row button > svg {
+    display: none;
+  }
+  .orbit-v3 .ov3-roadmap-row img {
+    height: 23px;
+    width: 23px;
+  }
+  .orbit-v3 .ov3-roadmap footer {
+    font-size: 8px;
+  }
+  .orbit-v3 .ov3-allocation {
+    padding: 18px 17px;
+    margin: 16px 0;
+    border-radius: 14px;
+  }
+  .orbit-v3 .ov3-allocation > div:first-child {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .orbit-v3 .ov3-allocation > div > span {
+    font-size: 9px;
+  }
+  .orbit-v3 .ov3-allocation h2 {
+    font-size: 13px;
+  }
+  .orbit-v3 .ov3-allocation strong {
+    font-size: 16px;
+  }
+  .orbit-v3 .ov3-allocation strong small {
+    display: none;
+  }
+  .orbit-v3 .ov3-allocation footer {
+    gap: 13px;
+    flex-wrap: wrap;
+  }
+  .orbit-v3 .ov3-allocation footer span {
+    font-size: 9px;
+  }
+  .orbit-v3 .ov3-allocation footer b {
+    display: none;
+  }
+  .orbit-v3 .ov3-ledger {
+    padding: 21px 16px 9px;
+    border-radius: 14px;
+  }
+  .orbit-v3 .ov3-ledger-filters {
+    gap: 2px;
+    margin: 17px 0 13px;
+    flex-wrap: wrap;
+  }
+  .orbit-v3 .ov3-ledger-filters button {
+    padding: 7px 9px;
+    font-size: 10px;
+  }
+  .orbit-v3 .ov3-ledger-labels {
+    display: none;
+  }
+  .orbit-v3 .ov3-task-row {
+    grid-template-columns: minmax(0, 1fr) 86px;
+    gap: 8px;
+    padding: 15px 0;
+  }
+  .orbit-v3 .ov3-task-title strong {
+    font-size: 11px;
+  }
+  .orbit-v3 .ov3-task-title > img {
+    width: 25px;
+    height: 25px;
+  }
+  .orbit-v3 .ov3-task-progress,
+  .orbit-v3 .ov3-task-due {
+    display: none;
+  }
+  .orbit-v3 .ov3-status {
+    justify-self: end;
+    font-size: 8px;
+  }
+  .orbit-v3 .ov3-team-column {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .orbit-v3 .ov3-overview-bottom {
+    gap: 16px;
+  }
+  .orbit-v3 .ov3-team-load,
+  .orbit-v3 .ov3-meetings {
+    padding: 22px 19px;
+    border-radius: 14px;
+  }
+  .orbit-v3 .ov3-person {
+    margin-top: 18px;
+  }
+  .orbit-v3 .ov3-page-footer {
+    font-size: 8px;
+    gap: 10px;
+  }
+  .orbit-v3 .ov3-drawer {
+    padding: 22px 23px;
+  }
+  .orbit-v3 .ov3-drawer h2 {
+    font-size: 26px;
+  }
+  .orbit-v3 .ov3-drawer > p {
+    font-size: 12px;
+  }
+  .orbit-v3 .ov3-feed {
+    padding: 23px 19px;
+  }
+  .orbit-v3 .ov3-feed .ov3-section-heading {
+    align-items: start;
+  }
+  .orbit-v3 .ov3-feed .ov3-section-heading button {
+    font-size: 10px;
+  }
+  .orbit-v3 .ov3-feed article p {
+    font-size: 12px;
+  }
+}

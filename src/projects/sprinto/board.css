@@ -1,0 +1,128 @@
+.sp-availability {
+  padding: 65px 5% 75px;
+}
+.sp-availability .sp-section-head > p > span {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 8px;
+  font-size: 9px;
+  margin-top: 12px;
+}
+.sp-availability .sp-section-head i {
+  width: 9px;
+  height: 9px;
+  background: var(--sp-violet);
+  display: inline-block;
+}
+.sp-availability .sp-section-head .sp-occupied {
+  background: #dddae4;
+  margin-left: 12px;
+}
+.sp-board-scroll {
+  overflow-x: auto;
+}
+.sp-board-scroll table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 650px;
+}
+.sp-board-scroll thead th {
+  font:
+    10px "IBM Plex Mono",
+    monospace;
+  text-align: left;
+  color: #7e788b;
+  font-weight: 400;
+  padding: 0 0 16px;
+}
+.sp-board-scroll tbody th {
+  text-align: left;
+  font-size: 15px;
+  font-weight: 500;
+  border-top: 1px solid #19152d20;
+  width: 210px;
+  padding: 20px 0;
+}
+.sp-board-scroll th small {
+  display: block;
+  font-size: 10px;
+  color: #7e788b;
+  margin-top: 5px;
+  font-weight: 400;
+}
+.sp-board-scroll td {
+  border-top: 1px solid #19152d20;
+  padding: 8px 7px 8px 0;
+}
+.sp-board-scroll td button {
+  border: 1px solid #6535f440;
+  background: #6535f413;
+  color: var(--sp-violet);
+  width: 100%;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sp-board-scroll td button[aria-pressed="true"] {
+  background: var(--sp-violet);
+  color: var(--sp-lime);
+}
+.sp-board-scroll td button:disabled {
+  border-color: #19152d09;
+  background: #dddae466;
+  color: #aaa4b2;
+  cursor: not-allowed;
+}
+.sp-matches {
+  padding: 70px 5%;
+  background: var(--sp-ink);
+  color: var(--sp-paper);
+}
+.sp-matches .sp-section-head > p {
+  opacity: 0.65;
+}
+.sp-fixtures article {
+  border-top: 1px solid #f2f0f730;
+  display: grid;
+  grid-template-columns: 140px 1fr 100px 35px;
+  gap: 25px;
+  align-items: center;
+  padding: 25px 0;
+}
+.sp-fixtures article:last-child {
+  border-bottom: 1px solid #f2f0f730;
+}
+.sp-fixture-date {
+  font:
+    10px "IBM Plex Mono",
+    monospace;
+  color: var(--sp-lime);
+}
+.sp-fixture-date strong {
+  display: block;
+  font:
+    400 27px "Anton",
+    sans-serif;
+  margin-top: 5px;
+}
+.sp-fixtures h3 {
+  font-size: 23px;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+}
+.sp-fixtures p {
+  font-size: 11px;
+  opacity: 0.6;
+  margin-top: 7px;
+}
+.sp-fixtures article > span {
+  font-size: 11px;
+}
+.sp-fixtures article > a {
+  color: var(--sp-lime);
+  display: grid;
+  place-items: center;
+  min-height: 44px;
+}

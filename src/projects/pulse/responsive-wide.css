@@ -1,0 +1,96 @@
+@media (min-width: 1700px) {
+  .pulse-v2 {
+    padding: 0 55px;
+  }
+  .pv-day-workspace {
+    grid-template-columns: minmax(0, 1fr) 345px;
+  }
+  .pv-lane-headings strong {
+    font-size: 14px;
+  }
+  .pv-visit strong {
+    font-size: 14px;
+  }
+  .pv-visit-time,
+  .pv-visit-purpose {
+    font-size: 10px;
+  }
+  .pv-patient-sheet h2 {
+    font-size: 31px;
+  }
+}
+@media (max-width: 1150px) {
+  .pulse-v2 {
+    padding: 0 22px;
+  }
+  .pv-nav {
+    gap: 35px;
+  }
+  .pv-clinic > span {
+    display: none;
+  }
+  .pv-day-workspace {
+    grid-template-columns: minmax(0, 1fr) 270px;
+    gap: 16px;
+  }
+  .pv-patient-sheet {
+    padding: 22px;
+  }
+  .pv-visit {
+    left: 5px;
+    right: 5px;
+    padding: 8px;
+  }
+  .pv-visit strong {
+    font-size: 11px;
+  }
+  .pv-lane-headings > div {
+    padding: 9px 10px;
+  }
+  .pv-lane-headings strong {
+    font-size: 10px;
+  }
+  .pv-lane-headings i {
+    display: none;
+  }
+  .pv-heading h1 {
+    font-size: 27px;
+  }
+  .pv-footer p {
+    font-size: 8px;
+  }
+  .pv-records {
+    gap: 20px;
+    grid-template-columns: 300px 1fr;
+  }
+  .pv-records > div:last-child {
+    padding: 20px;
+  }
+}
+@media (max-width: 900px) {
+  .pv-day-workspace {
+    grid-template-columns: 1fr;
+  }
+  .pv-detail-desktop {
+    display: none;
+  }
+  .pv-visit strong {
+    font-size: 13px;
+  }
+  .pv-visit-time,
+  .pv-visit-purpose {
+    font-size: 9px;
+  }
+  .pv-lane-headings strong {
+    font-size: 12px;
+  }
+  .pv-records {
+    grid-template-columns: 300px 1fr;
+  }
+  .pv-records article {
+    gap: 12px;
+  }
+  .pv-records h3 {
+    font-size: 14px;
+  }
+}

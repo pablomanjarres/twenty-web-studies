@@ -1,0 +1,178 @@
+.aether-hero {
+  position: relative;
+  min-height: 715px;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 55px 4.5% 0;
+}
+.aether-hero::before {
+  content: "";
+  position: absolute;
+  width: 65%;
+  height: 75%;
+  left: 17%;
+  top: 0;
+  background: radial-gradient(ellipse, #59402536, transparent 65%);
+  z-index: -1;
+}
+.aether-hero-heading {
+  position: relative;
+  z-index: 2;
+  width: 27%;
+}
+.aether-hero h1 {
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(40px, 4.2vw, 65px);
+  font-weight: 500;
+  line-height: 1.07;
+  letter-spacing: -0.058em;
+  margin: 30px 0;
+}
+.aether-hero-object {
+  position: absolute;
+  left: 23%;
+  top: 5px;
+  width: 55%;
+  height: 580px;
+  pointer-events: none;
+}
+.aether-hero-object img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 35px 35px #0008);
+  animation: aether-arrive 1.2s ease-out both;
+}
+.aether-object-ring {
+  position: absolute;
+  width: 92%;
+  aspect-ratio: 1;
+  top: 8%;
+  left: 4%;
+  border: 1px solid #bdb9a21d;
+  border-radius: 50%;
+  z-index: -1;
+}
+.aether-object-ring::after {
+  content: "";
+  position: absolute;
+  inset: 11%;
+  border: 1px dashed #bdb9a215;
+  border-radius: 50%;
+}
+.aether-object-caption {
+  position: absolute;
+  bottom: 22px;
+  left: 32%;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 9px;
+  letter-spacing: 0.13em;
+  color: #abaca0;
+}
+.aether-hero-aside {
+  position: absolute;
+  right: 4.5%;
+  top: 170px;
+  width: 205px;
+}
+.aether-hero-aside p {
+  font-size: 21px;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+  margin: 22px 0 38px;
+}
+.aether-hero-aside small {
+  display: block;
+  color: #949889;
+  font-size: 10px;
+  margin-top: 17px;
+}
+.aether-flow-strip {
+  position: absolute;
+  left: 4.5%;
+  right: 4.5%;
+  bottom: 0;
+  border-top: 1px solid #ffffff26;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  padding: 30px 0;
+}
+.aether-incoming > div {
+  display: flex;
+  margin-top: 16px;
+  gap: 8px;
+}
+.aether-incoming button {
+  min-width: 155px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px;
+  text-align: left;
+  color: #c9cbbb;
+  background: #1a1d17;
+  border: 1px solid #ffffff18;
+}
+.aether-incoming button[aria-pressed="true"] {
+  border-color: var(--orange);
+  background: #31251c;
+}
+.aether-incoming button > span {
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  background: #ffffff0c;
+  font-size: 9px;
+}
+.aether-incoming b {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+}
+.aether-incoming small {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 10px;
+  color: #919780;
+}
+.aether-incoming button > svg {
+  color: var(--orange);
+  margin-left: auto;
+}
+.aether-flow-arrow {
+  font-size: 44px;
+  color: var(--orange);
+  font-weight: 300;
+}
+.aether-hero-balance strong {
+  display: block;
+  font-size: 36px;
+  font-weight: 500;
+  letter-spacing: -0.055em;
+  margin: 6px 0;
+}
+.aether-hero-balance small {
+  display: block;
+  font-size: 10px;
+  color: #929888;
+}
+.aether-ledger-link {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 11px;
+  align-self: flex-end;
+  padding-bottom: 7px;
+}
+@keyframes aether-arrive {
+  from {
+    opacity: 0;
+    transform: translateY(24px) rotate(-4deg);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}

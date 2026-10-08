@@ -1,0 +1,94 @@
+.forma-dossier {
+  padding: 90px 3.5% 85px;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 100px;
+  border-bottom: 1px solid #c5c9ba;
+}
+.forma-dossier h2 {
+  max-width: 360px;
+  margin: 25px 0;
+}
+.forma-dossier p {
+  font-size: 13px;
+  line-height: 1.85;
+  color: #777f6d;
+  max-width: 360px;
+}
+.forma-dossier dl {
+  margin: 35px 0 0;
+  font-size: 11px;
+}
+.forma-dossier dl > div {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  padding: 11px 0;
+  border-top: 1px solid #c5c9ba;
+}
+.forma-dossier dt {
+  color: #7b836f;
+}
+.forma-dossier dd {
+  margin: 0;
+}
+.forma-plan {
+  margin: 0;
+  padding: 55px 20px 0;
+  align-self: center;
+}
+.forma-plan svg {
+  width: 100%;
+  color: #747d68;
+}
+.forma-plan figcaption {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #b7bfa9;
+  padding: 20px 0;
+  margin-top: 25px;
+  font:
+    8px "IBM Plex Mono",
+    monospace;
+  color: #7e896f;
+  gap: 20px;
+}
+.forma-materials {
+  padding: 80px 3.5%;
+  display: grid;
+  grid-template-columns: 1.4fr 0.7fr;
+  gap: 10%;
+}
+.forma-materials figure {
+  margin: 0;
+}
+.forma-material-wide img {
+  width: 100%;
+  height: 740px;
+  object-fit: cover;
+  object-position: 25% center;
+}
+.forma-materials figcaption {
+  font:
+    8px "IBM Plex Mono",
+    monospace;
+  padding: 18px 0;
+  color: #858e78;
+}
+.forma-materials h2 {
+  margin: 25px 0;
+  font-size: 30px;
+}
+.forma-materials p {
+  font-size: 12px;
+  line-height: 1.9;
+  color: #7c856e;
+}
+.forma-material-close {
+  padding-top: 95px;
+}
+.forma-material-close img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: right bottom;
+}

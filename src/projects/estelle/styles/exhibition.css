@@ -1,0 +1,122 @@
+.estelle-exhibition {
+  padding: 17px 70px 62px;
+}
+.estelle-exhibit-line {
+  display: flex;
+  justify-content: space-between;
+  font-size: 8px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding-bottom: 25px;
+}
+.estelle-apertures {
+  display: grid;
+  grid-template-columns: 1.2fr 130px 1fr;
+  align-items: center;
+  gap: 26px;
+}
+.estelle-aperture img {
+  width: 100%;
+  object-fit: cover;
+}
+.estelle-object img {
+  height: 575px;
+}
+.estelle-worn {
+  padding-top: 33px;
+}
+.estelle-worn img {
+  height: 480px;
+  object-position: center 40%;
+}
+.estelle-aperture figcaption {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding-top: 10px;
+  font-size: 8px;
+  line-height: 1.6;
+}
+.estelle-centre-mark {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  padding-bottom: 25px;
+}
+.estelle-centre-mark .brand-logo {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 35px;
+}
+.estelle-centre-mark .brand-logo svg {
+  width: 38px;
+  height: 38px;
+}
+.estelle-centre-mark .brand-logo > span {
+  font-family: "The Foriene", serif;
+  font-size: 47px;
+  writing-mode: vertical-rl;
+  letter-spacing: 0.025em;
+}
+.estelle-centre-mark > span {
+  font-size: 8px;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.9;
+  letter-spacing: 0.1em;
+}
+.estelle-exhibit-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 40px;
+  align-items: end;
+  padding-top: 29px;
+}
+.estelle-exhibit-footer h1 {
+  font-size: 35px;
+  line-height: 1.1;
+  margin: 12px 0 7px;
+}
+.estelle-exhibit-footer p {
+  font-size: 11px;
+}
+.estelle-metals > div {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+.estelle-metal {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid transparent;
+  padding: 0 0 6px;
+  font-size: 10px !important;
+}
+.estelle-metal[aria-pressed="true"] {
+  border-color: var(--est-plum);
+}
+.estelle-metal > span {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #b08445, #ecd8a4, #a06d22);
+}
+.estelle-metal-silver > span {
+  background: linear-gradient(135deg, #aaa, #f8f6ee, #999);
+}
+.estelle-exhibit-price {
+  display: grid;
+  text-align: right;
+  gap: 17px;
+  font-size: 10px;
+}
+.estelle-exhibit-price a {
+  border-bottom: 1px solid var(--est-plum);
+  padding-bottom: 6px;
+}

@@ -1,0 +1,141 @@
+.salt {
+  --sl-red: #e64732;
+  --sl-navy: #183445;
+  --sl-paper: #fffdf7;
+  --sl-line: #18344533;
+  background: var(--sl-paper);
+  color: var(--sl-navy);
+  font-family: "DM Sans", sans-serif;
+}
+.salt h1,
+.salt h2,
+.salt h3,
+.salt p,
+.salt figure {
+  margin: 0;
+}
+.sl-header {
+  min-height: 90px;
+  padding: 22px 40px;
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  border-bottom: 1px solid var(--sl-line);
+}
+.sl-header > a {
+  text-decoration: none;
+  font-size: 31px;
+  color: var(--sl-red);
+}
+.sl-header .brand-logo > span {
+  font-family: "Tahoe", "Fraunces", serif;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+}
+.sl-header > span {
+  font-size: 12px;
+}
+.sl-header nav {
+  margin-left: auto;
+  display: flex;
+  gap: 30px;
+  font-size: 12px;
+}
+.sl-header nav a {
+  text-decoration: none;
+}
+.sl-menu-stage {
+  padding: 26px 40px 45px;
+  display: grid;
+  grid-template-columns: 63px minmax(0, 1fr);
+}
+.sl-menu-edge {
+  background: var(--sl-red);
+  color: var(--sl-paper);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 25px 0;
+}
+.sl-menu-edge > span {
+  writing-mode: vertical-rl;
+  font:
+    9px "IBM Plex Mono",
+    monospace;
+  letter-spacing: 0.12em;
+}
+.sl-menu-edge nav {
+  display: grid;
+  gap: 24px;
+}
+.sl-menu-edge button {
+  border: 0;
+  border-bottom: 1px solid #fffdf74d;
+  background: transparent;
+  color: var(--sl-paper);
+  font-size: 12px;
+  writing-mode: vertical-rl;
+  min-height: 70px;
+  width: 44px;
+  padding: 10px 0;
+}
+.sl-menu-edge button[aria-pressed="true"] {
+  background: var(--sl-paper);
+  color: var(--sl-red);
+}
+.sl-menu-paper {
+  border: 1px solid var(--sl-line);
+  border-left: 0;
+  padding: 28px 30px 20px;
+  position: relative;
+  background: linear-gradient(
+    90deg,
+    transparent 49.7%,
+    #18344507 50%,
+    transparent 50.3%
+  );
+}
+.sl-menu-masthead {
+  text-align: center;
+  position: relative;
+  padding-bottom: 25px;
+  border-bottom: 1px solid var(--sl-line);
+}
+.sl-menu-masthead > p {
+  font:
+    9px "IBM Plex Mono",
+    monospace;
+  letter-spacing: 0.1em;
+}
+.sl-menu-masthead h1 {
+  font:
+    400 38px/1.1 "Tahoe",
+    "Fraunces",
+    serif;
+  letter-spacing: -0.04em;
+  color: var(--sl-red);
+  margin-top: 17px;
+}
+.sl-menu-masthead > span {
+  display: inline-block;
+  font:
+    italic 17px "Instrument Serif",
+    serif;
+  margin-top: 12px;
+}
+.sl-menu-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  padding-top: 18px;
+  border-top: 1px solid var(--sl-line);
+  font-size: 8px;
+  line-height: 1.6;
+}
+.sl-menu-bottom > span:last-child {
+  font:
+    italic 12px "Instrument Serif",
+    serif;
+  white-space: nowrap;
+}

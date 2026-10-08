@@ -1,0 +1,96 @@
+@media (max-width: 760px) {
+  .md-command-bar {
+    height: 56px;
+    padding: 0 16px;
+    gap: 10px;
+  }
+  .md-command-bar > a {
+    width: auto;
+  }
+  .md-command-title {
+    display: none;
+  }
+  .md-new-movement {
+    min-height: 40px;
+    padding: 8px 11px;
+    font-size: 11px;
+  }
+  .md-control-room {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    min-height: 0;
+    height: auto;
+  }
+  .md-side-navigation {
+    flex-direction: row;
+    padding: 5px 12px;
+    border-right: 0;
+    border-bottom: 1px solid var(--md-line);
+  }
+  .md-side-navigation > div {
+    display: flex;
+    gap: 8px;
+  }
+  .md-side-navigation button {
+    width: 44px;
+    height: 44px;
+  }
+  .md-operator {
+    width: 28px;
+    height: 28px;
+  }
+  .md-movement-rail {
+    border-right: 0;
+    border-bottom: 1px solid var(--md-line);
+  }
+  .md-movement-rail > header,
+  .md-movement-rail > footer {
+    display: none;
+  }
+  .md-rail-controls {
+    display: flex;
+    padding: 10px 14px;
+    gap: 10px;
+  }
+  .md-rail-controls > label:first-child {
+    flex: 1;
+  }
+  .md-rail-controls .md-rail-mode {
+    width: 115px;
+    flex-shrink: 0;
+    padding: 0 7px;
+  }
+  .md-rail-mode > svg {
+    display: none;
+  }
+  .md-movement-list {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding: 0 14px 10px;
+  }
+  .md-movement-card {
+    flex: 0 0 236px;
+    margin: 0;
+    padding: 10px 12px;
+  }
+  .md-movement-card .md-movement-carrier {
+    min-height: 45px;
+  }
+  .md-movement-carrier > .md-vehicle-study {
+    width: 100px;
+    top: 4px;
+  }
+  .md-movement-carrier small {
+    display: none;
+  }
+  .md-movement-endpoints {
+    padding: 5px 0 7px;
+  }
+  .md-movement-endpoints small {
+    display: none;
+  }
+  .md-movement-card > footer {
+    margin-top: 7px;
+  }
+}

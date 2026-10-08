@@ -1,0 +1,95 @@
+.archive-bag-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  background: #18171380;
+  display: flex;
+  justify-content: end;
+}
+.archive-bag-panel {
+  width: min(470px, 100%);
+  height: 100svh;
+  overflow-y: auto;
+  background: #f5f4ef;
+  padding: 34px;
+  box-shadow: -15px 0 60px #15141120;
+}
+.archive-bag-panel > header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-bottom: 1px solid #bcb5a8;
+  padding-bottom: 25px;
+}
+.archive-bag-panel h2 {
+  font:
+    400 39px "Sublime",
+    sans-serif;
+  margin: 0;
+}
+.archive-bag-panel button {
+  border: 1px solid #bcb5a8;
+  min-height: 44px;
+  min-width: 44px;
+  background: transparent;
+}
+.archive-bag-panel > header button {
+  border: 0;
+  display: grid;
+  place-items: center;
+}
+.archive-bag-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1px solid #c3bdaf;
+  padding: 22px 0;
+}
+
+.archive-bag-row > img {
+  width: 77px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.archive-bag-row > div {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  font-size: 12px;
+}
+
+.archive-bag-row small {
+  font-size: 11px;
+  color: #8b8b87;
+}
+
+.archive-bag-row > button {
+  margin-left: auto;
+  padding: 9px;
+}
+
+.archive-bag-total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  margin: 35px 0;
+}
+
+.archive-bag-panel .archive-continue {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #080808;
+  color: #fff;
+  width: 100%;
+  font-size: 12px;
+  padding: 18px;
+}
+
+.archive-bag-empty {
+  font-size: 14px;
+  line-height: 1.9;
+  padding: 40px 0;
+}

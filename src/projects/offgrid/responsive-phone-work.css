@@ -1,0 +1,170 @@
+@media (max-width: 650px) {
+  .fg-case-type small {
+    font-size: 5px;
+    letter-spacing: 0.6px;
+    max-width: 180px;
+    display: block;
+  }
+  .fg-case-print {
+    width: 120px;
+    height: 170px;
+    right: 5%;
+    top: 38%;
+    padding: 15px;
+    box-shadow: 4px 5px 0 #353c2b66;
+    transform: rotate(12deg);
+  }
+  .fg-case-print > span {
+    font-size: 12px;
+    letter-spacing: -0.4px;
+  }
+  .fg-case-print i {
+    font-size: 79px;
+    left: -5px;
+  }
+  .fg-case-print small {
+    font-size: 4px;
+    letter-spacing: 0.3px;
+  }
+  .fg-case-2 .fg-case-type strong {
+    font-size: 25vw;
+    margin-top: 65px;
+  }
+  .fg-case-2 .fg-case-print {
+    width: 115px;
+    height: 157px;
+    right: 5%;
+    top: 50%;
+  }
+  .fg-case-2 .fg-case-print i {
+    font-size: 74px;
+  }
+  .fg-case-3 .fg-case-type strong {
+    font-size: 30vw;
+    line-height: 0.82;
+    margin-top: 52px;
+  }
+  .fg-case-3 .fg-case-print {
+    width: 115px;
+    height: 158px;
+    right: 7%;
+    top: 44%;
+    transform: rotate(9deg);
+  }
+  .fg-case-3 .fg-case-print i {
+    font-size: 73px;
+  }
+  .fg-case-details {
+    display: block;
+    padding-top: 26px;
+  }
+  .fg-case-details h2 {
+    font-size: 27px;
+    gap: 18px;
+    margin-bottom: 18px;
+  }
+  .fg-case-details h2 svg {
+    width: 23px;
+  }
+  .fg-case-details p {
+    font-size: 11px;
+    line-height: 1.9;
+  }
+  .fg-case-details > div {
+    margin-top: 22px;
+    font-size: 9px;
+    gap: 10px 15px;
+  }
+  .fg-case-details > div > span {
+    font-size: 6px;
+    margin-bottom: 2px;
+  }
+  .fg-studio {
+    display: block;
+    padding: 40px 19px 50px;
+  }
+  .fg-studio > span {
+    font-size: 7px;
+    display: block;
+    margin-bottom: 30px;
+  }
+  .fg-studio h2 {
+    font-size: 35px;
+    letter-spacing: -1.4px;
+    line-height: 1.15;
+    margin-bottom: 22px;
+  }
+  .fg-studio p {
+    font-size: 11px;
+    line-height: 1.9;
+  }
+  .fg-studio button {
+    font-size: 23px;
+    gap: 16px;
+    padding-top: 18px;
+  }
+  .fg-principles {
+    margin-top: 35px;
+  }
+  .fg-principles p {
+    font-size: 9px;
+    padding: 14px 0;
+  }
+  .fg-footer {
+    padding: 24px 19px;
+    gap: 12px;
+  }
+  .fg-footer .brand-logo {
+    font-size: 19px;
+    gap: 6px;
+  }
+  .fg-footer .brand-logo svg {
+    width: 24px;
+    height: 24px;
+  }
+  .fg-footer > span {
+    display: none;
+  }
+  .fg-footer > a {
+    font-size: 6px;
+  }
+  .fg-overlay {
+    padding: 9px;
+  }
+  .fg-brief {
+    padding: 36px 24px;
+    max-height: 94vh;
+  }
+  .fg-brief > span {
+    font-size: 6px;
+    letter-spacing: 0.8px;
+  }
+  .fg-brief h2 {
+    font-size: 31px;
+    margin: 22px 0;
+  }
+  .fg-form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .fg-brief input,
+  .fg-brief select,
+  .fg-brief textarea {
+    font-size: 12px;
+    margin-bottom: 17px;
+  }
+  .fg-brief-ready p {
+    font-size: 12px;
+  }
+  .fg-close {
+    right: 12px;
+    top: 12px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .offgrid-v2 * {
+    transition: none !important;
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
+}

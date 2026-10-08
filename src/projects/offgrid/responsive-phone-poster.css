@@ -1,0 +1,174 @@
+@media (max-width: 650px) {
+  .fg-poster {
+    height: 100svh;
+    min-height: 780px;
+    padding: 0 19px;
+  }
+  .fg-nav {
+    height: 77px;
+    gap: 15px;
+  }
+  .fg-nav .brand-logo {
+    font-size: 21px;
+    gap: 6px;
+    letter-spacing: -0.5px;
+  }
+  .fg-nav .brand-logo svg {
+    width: 26px;
+    height: 26px;
+  }
+  .fg-nav > span:not(.brand-logo) {
+    display: none;
+  }
+  .fg-nav button {
+    margin-left: auto;
+    font-size: 10px;
+    max-width: 130px;
+    gap: 12px;
+    text-align: left;
+    line-height: 1.5;
+  }
+  .fg-nav button svg {
+    flex-shrink: 0;
+    width: 14px;
+  }
+  .fg-poster-top {
+    display: block;
+    padding-top: 30px;
+  }
+  .fg-poster-top > p {
+    font-size: 24px;
+    line-height: 1.15;
+    letter-spacing: -0.8px;
+  }
+  .fg-poster-top em {
+    font-size: 29px;
+  }
+  .fg-poster-top small {
+    font-size: 9px;
+    margin-top: 17px;
+    line-height: 1.7;
+  }
+  .fg-poster-top nav {
+    width: 100%;
+    min-width: 0;
+    padding-top: 34px;
+  }
+  .fg-poster-top nav > span {
+    font-size: 6px;
+    letter-spacing: 0.8px;
+    margin-bottom: 9px;
+  }
+  .fg-poster-top nav > a {
+    font-size: 25px;
+    letter-spacing: -0.7px;
+    padding: 9px 0;
+    gap: 18px;
+  }
+  .fg-poster-top sup {
+    font-size: 7px;
+    margin-top: 6px;
+  }
+  .fg-poster-top nav svg {
+    width: 21px;
+  }
+  .fg-poster-top nav > .fg-studio-link {
+    font-size: 8px;
+    padding-top: 16px;
+  }
+  .fg-wordmark {
+    align-items: center;
+    min-height: 220px;
+    display: block;
+    flex: 1;
+    padding-top: 21px;
+    padding-bottom: 0;
+  }
+  .fg-wordmark h1 {
+    position: absolute;
+    font-size: 28vw;
+    left: -0.03em;
+    bottom: 2px;
+    transform: scaleX(1.02);
+    letter-spacing: -0.063em;
+    line-height: 0.9;
+  }
+  .fg-wordmark h1 > span {
+    display: block;
+  }
+  .fg-wordmark > span {
+    font-size: 6px;
+    top: 12px;
+    right: 0;
+    line-height: 1.6;
+  }
+  .fg-poster-bottom {
+    margin-top: 15px;
+    padding: 16px 0 22px;
+    font-size: 5px;
+    letter-spacing: 0.5px;
+    gap: 14px;
+  }
+  .fg-poster-bottom > span:last-child {
+    display: none;
+  }
+  .fg-poster-bottom a {
+    font-size: 10px;
+    margin-left: auto;
+    gap: 8px;
+  }
+  .fg-poster-bottom a svg {
+    width: 15px;
+  }
+  .fg-work {
+    padding: 29px 19px 32px;
+  }
+  .fg-work > header {
+    font-size: 6px;
+    padding-bottom: 25px;
+  }
+  .fg-work-index {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 17px;
+  }
+  .fg-work-index button {
+    font-size: 21px;
+    letter-spacing: -0.4px;
+    padding-top: 13px;
+  }
+  .fg-work-index small {
+    font-size: 4px;
+    letter-spacing: 0.3px;
+    line-height: 1.7;
+    margin-top: 9px;
+    max-width: none;
+  }
+  .fg-work-index svg {
+    width: 13px;
+    right: 0;
+    top: 12px;
+  }
+  .fg-case-stage {
+    min-height: 380px;
+    padding: 20px;
+  }
+  .fg-case-stage > img {
+    width: 100%;
+    opacity: 0.37;
+    filter: grayscale(1);
+    mix-blend-mode: multiply;
+  }
+  .fg-case-type > span {
+    font-size: 6px;
+    letter-spacing: 0.6px;
+  }
+  .fg-case-type strong {
+    font-size: 22.7vw;
+    margin: 53px 0 50px;
+    line-height: 0.79;
+    letter-spacing: -0.08em;
+    transform: rotate(-4deg);
+  }
+}

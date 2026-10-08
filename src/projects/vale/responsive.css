@@ -1,0 +1,175 @@
+@media (max-width: 760px) {
+  .vale-header {
+    height: 62px;
+    padding: 0 5%;
+  }
+  .vale-header nav {
+    gap: 19px;
+    font-size: 10px;
+  }
+  .vale-header .brand-logo {
+    font-size: 29px;
+  }
+  .vale-header .brand-logo svg {
+    display: none;
+  }
+  .vale-header button {
+    font-size: 9px;
+  }
+  .vale-formulas {
+    display: block;
+    padding: 25px 5% 36px;
+  }
+  .vale-formula-index {
+    padding: 0;
+  }
+  .vale-formula-index > .vale-label,
+  .vale-index-note,
+  .vale-formula-index > p {
+    display: none;
+  }
+  .vale-formula-index h1 {
+    font-size: 26px;
+    margin: 0;
+    line-height: 1.05;
+  }
+  .vale-formula-index h1 br {
+    display: none;
+  }
+  .vale-formula-index nav {
+    flex-direction: row;
+    gap: 16px;
+    margin: 19px 0 25px;
+  }
+  .vale-formula-index nav button {
+    flex: 1;
+    gap: 8px;
+    padding: 8px 0;
+  }
+  .vale-formula-index nav span {
+    font-size: 18px;
+  }
+  .vale-formula-index nav small {
+    font-size: 8px;
+  }
+  .vale-formula-index nav em {
+    font-size: 8px;
+    line-height: 1.5;
+    margin-top: 7px;
+  }
+  .vale-sheet-top {
+    font-size: 7px;
+  }
+  .vale-sheet-top span:last-child {
+    display: none;
+  }
+  .vale-specimen-stage {
+    height: 315px;
+    background-size: 80px 80px;
+  }
+  .vale-pressed-plant {
+    width: 44%;
+    left: 2%;
+    top: 18%;
+    height: 70%;
+  }
+  .vale-formula-bottle {
+    width: 48%;
+    height: 80%;
+    left: 36%;
+    top: 13%;
+  }
+  .vale-bottle-still-water {
+    height: 60%;
+    top: 23%;
+    width: 50%;
+  }
+  .vale-plant-caption {
+    left: 5%;
+    top: 7%;
+  }
+  .vale-plant-caption > span,
+  .vale-bottle-caption > span {
+    font-size: 6px;
+  }
+  .vale-plant-caption strong,
+  .vale-bottle-caption strong {
+    font-size: 9px;
+    margin: 4px 0 0;
+  }
+  .vale-plant-caption small,
+  .vale-bottle-caption small {
+    font-size: 7px;
+  }
+  .vale-plant-caption::after,
+  .vale-bottle-caption::after {
+    display: none;
+  }
+  .vale-bottle-caption {
+    right: 4%;
+    top: 8%;
+  }
+  .vale-ingredient-note {
+    bottom: 4%;
+    right: 4%;
+    width: 50%;
+    padding: 7px 0;
+  }
+  .vale-ingredient-note > span {
+    font-size: 6px;
+  }
+  .vale-ingredient-note strong {
+    font-size: 9px;
+    margin: 4px 0;
+  }
+  .vale-ingredient-note p {
+    display: none;
+  }
+  .vale-ingredient-note.is-open p {
+    display: block;
+    font-size: 8px;
+  }
+  .vale-ingredient-note::before {
+    width: 20px;
+  }
+  .vale-cross {
+    font-size: 12px;
+  }
+  .vale-cross-one {
+    top: auto;
+    bottom: 13px;
+    right: 13px;
+  }
+  .vale-formula-caption {
+    padding-top: 22px;
+    gap: 14px;
+    align-items: start;
+  }
+  .vale-formula-caption h2 {
+    font-size: 30px;
+    margin: 8px 0;
+  }
+  .vale-formula-caption p {
+    font-size: 10px;
+    max-width: 135px;
+  }
+  .vale-formula-caption .vale-label {
+    font-size: 8px;
+  }
+  .vale-formula-order {
+    width: 155px;
+    max-width: 49%;
+  }
+  .vale-volumes {
+    gap: 5px;
+  }
+  .vale-volumes button {
+    padding: 7px 10px;
+    font-size: 8px;
+  }
+  .vale-add {
+    font-size: 9px !important;
+    padding: 11px 10px !important;
+    gap: 8px;
+  }
+}

@@ -1,0 +1,110 @@
+.vd-system {
+  position: relative;
+  min-height: 100svh;
+  padding: 160px 36px 0;
+  background-image: radial-gradient(#b9c3a360 0.7px, transparent 0.7px);
+  background-size: 19px 19px;
+}
+.vd-operating-notes {
+  position: absolute;
+  top: 95px;
+  left: 40px;
+}
+.vd-operating-notes > span,
+.vd-operating-notes p {
+  font:
+    8px "IBM Plex Mono",
+    monospace;
+  letter-spacing: 0.08em;
+}
+.vd-operating-notes h1 {
+  font:
+    400 20px/1.4 "Sora",
+    sans-serif;
+  letter-spacing: -0.035em;
+  margin: 9px 0 7px;
+}
+.vd-operating-notes p {
+  font-size: 7px;
+  color: #657251;
+}
+.vd-node-caption {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  padding: 19px 4px;
+  border-top: 1px solid var(--vd-line);
+  min-height: 85px;
+}
+.vd-node-caption > span {
+  font:
+    8px "IBM Plex Mono",
+    monospace;
+  min-width: 165px;
+  letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.vd-node-caption > span i {
+  width: 5px;
+  height: 5px;
+  background: var(--vd-ink);
+}
+.vd-node-caption > p {
+  font-size: 10px;
+  line-height: 1.7;
+  max-width: 620px;
+}
+.vd-node-caption > svg {
+  flex: none;
+}
+.vd-balance-note {
+  margin-left: auto;
+  white-space: nowrap;
+  min-width: 112px;
+}
+.vd-balance-note small {
+  display: block;
+  font:
+    7px "IBM Plex Mono",
+    monospace;
+  letter-spacing: 0.05em;
+}
+.vd-balance-note strong {
+  display: block;
+  font:
+    400 24px "IBM Plex Mono",
+    monospace;
+  margin-top: 5px;
+}
+.vd-balance-note em {
+  font-style: normal;
+  font-size: 10px;
+}
+.vd-system-bottom {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  padding: 16px 4px;
+  font-size: 9px;
+  line-height: 1.7;
+}
+.vd-system-bottom > span {
+  font:
+    7px "IBM Plex Mono",
+    monospace;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.vd-system-bottom > span:last-child {
+  margin-left: auto;
+}
+.vd-system-bottom i {
+  display: inline-block;
+  width: 20px;
+  height: 3px;
+  background: #8b9a71;
+}

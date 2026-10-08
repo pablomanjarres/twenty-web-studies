@@ -1,0 +1,108 @@
+@media (max-width: 600px) {
+  .helio-console {
+    display: block;
+  }
+  .hc-sidebar {
+    padding: 0;
+    flex-direction: row;
+    height: 58px;
+    align-items: center;
+    border-right: 0;
+    border-bottom: 1px solid #e5e9f1;
+    gap: 12px;
+  }
+  .hc-logo {
+    height: auto;
+    margin: 0 auto 0 18px;
+  }
+  .hc-logo .brand-logo > span {
+    display: inline;
+  }
+  .hc-logo .brand-logo {
+    font-size: 22px;
+  }
+  .hc-logo .brand-logo svg {
+    width: 27px;
+    height: 27px;
+  }
+  .hc-team,
+  .hc-sidebar nav,
+  .hc-sidebar-bottom {
+    display: none;
+  }
+  .hc-topbar {
+    height: 44px;
+    padding: 0 18px;
+    font-size: 10px;
+  }
+  .hc-topbar a {
+    font-size: 9px;
+  }
+  .hc-notice {
+    display: none;
+  }
+  .hc-topbar > div {
+    gap: 8px;
+  }
+  .hc-avatar {
+    width: 23px;
+    height: 23px;
+  }
+  .hc-sandbox {
+    font-size: 8px;
+  }
+  .hc-heading {
+    padding: 22px 18px;
+    align-items: flex-start;
+  }
+  .hc-breadcrumb {
+    font-size: 9px;
+  }
+  .hc-heading h1 {
+    font-size: 26px;
+  }
+  .hc-heading p {
+    max-width: 190px;
+    font-size: 10px;
+    line-height: 1.6;
+  }
+  .hc-primary {
+    font-size: 9px;
+    padding: 10px;
+    gap: 5px;
+    white-space: nowrap;
+    margin-top: 21px;
+  }
+  .hc-primary > .lucide {
+    width: 12px;
+  }
+  .hc-toolbar {
+    margin: 0 18px;
+    gap: 10px;
+  }
+  .hc-toolbar nav {
+    gap: 16px;
+  }
+  .hc-toolbar nav button {
+    font-size: 10px;
+    padding-bottom: 12px;
+  }
+  .hc-toolbar select {
+    font-size: 9px;
+    max-width: 90px;
+  }
+  .hc-toolbar > label {
+    gap: 3px;
+    margin-bottom: 10px;
+  }
+  .hc-content {
+    padding: 18px;
+    gap: 16px;
+  }
+  .hc-content-footer {
+    font-size: 8px;
+  }
+  .hc-content-footer > span:last-child {
+    display: none;
+  }
+}

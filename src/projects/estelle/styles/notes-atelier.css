@@ -1,0 +1,77 @@
+.estelle-material-notes {
+  padding: 0 70px 90px;
+  scroll-margin-top: 30px;
+}
+.estelle-material-body {
+  display: grid;
+  grid-template-columns: 0.95fr 1fr 1.05fr;
+  gap: 60px;
+  padding-top: 51px;
+}
+.estelle-material-body h2 {
+  font-size: 40px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+.estelle-material-body p {
+  font-size: 12px;
+  line-height: 1.95;
+  margin-bottom: 17px;
+}
+.estelle-material-body dl {
+  margin: 0;
+}
+.estelle-material-body dl > div {
+  border-bottom: 1px solid var(--est-rule);
+  padding: 10px 0;
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 20px;
+  font-size: 9px;
+  line-height: 1.6;
+}
+.estelle-material-body dl > div:first-child {
+  padding-top: 0;
+}
+.estelle-material-body dd {
+  margin: 0;
+}
+.estelle-care-note {
+  margin-top: 32px !important;
+  font-size: 9px;
+  line-height: 1.7;
+  max-width: 470px;
+  margin-left: auto !important;
+}
+.estelle-atelier-study {
+  padding: 0 42px 80px;
+}
+.estelle-atelier-study figure {
+  margin-top: 30px;
+}
+.estelle-atelier-study figure > img {
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
+}
+.estelle-atelier-study figcaption {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 12px;
+  font-size: 9px;
+}
+.estelle-atelier-text {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 55px;
+  padding: 50px 28px 0;
+}
+.estelle-atelier-text h2 {
+  font-size: 37px;
+  line-height: 1.14;
+}
+.estelle-atelier-text p {
+  font-size: 12px;
+  line-height: 2;
+}

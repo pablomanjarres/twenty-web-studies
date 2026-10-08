@@ -1,0 +1,92 @@
+.monograph-page {
+  --mono-blue: #182a63;
+  --mono-paper: #f7f5ef;
+  --mono-ink: #202321;
+  --mono-rule: #d5d5cc;
+  color: var(--mono-ink);
+  background: var(--mono-paper);
+  font-family: "DM Sans", sans-serif;
+  min-height: 100vh;
+}
+.monograph-page * {
+  box-sizing: border-box;
+}
+.monograph-page button,
+.monograph-page input,
+.monograph-page select {
+  font: inherit;
+}
+.monograph-page button {
+  cursor: pointer;
+}
+.monograph-page a {
+  color: inherit;
+  text-decoration: none;
+}
+.monograph-page img {
+  display: block;
+  max-width: 100%;
+}
+.monograph-page h1,
+.monograph-page h2,
+.monograph-page h3,
+.monograph-page p,
+.monograph-page figure {
+  margin: 0;
+}
+.monograph-page h1,
+.monograph-page h2,
+.monograph-page h3 {
+  font-family: "The Foriene", serif;
+  font-weight: 400;
+}
+.monograph-page button:focus-visible,
+.monograph-page a:focus-visible,
+.monograph-page input:focus-visible,
+.monograph-page select:focus-visible {
+  outline: 2px solid var(--mono-blue);
+  outline-offset: 5px;
+}
+.monograph-main {
+  margin-left: 186px;
+  padding: 0 32px;
+}
+.monograph-edition-line {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  border-bottom: 1px solid var(--mono-rule);
+  padding: 23px 0;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.055em;
+}
+.monograph-section-line {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  border-top: 1px solid var(--mono-ink);
+  padding: 17px 0;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.monograph-small-label {
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.monograph-footer {
+  border-top: 1px solid var(--mono-rule);
+  padding: 28px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  font-size: 11px;
+}
+
+.monograph-edition-line h1 {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 400;
+}

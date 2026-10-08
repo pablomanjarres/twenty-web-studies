@@ -1,0 +1,148 @@
+.bv-timetable {
+  padding: 24px;
+  border: 1px solid #e9eee1;
+  background: white;
+  border-radius: 24px;
+  min-width: 0;
+}
+.bv-time-view {
+  display: flex;
+  padding: 3px;
+  background: #f5f7ef;
+  border-radius: 20px;
+}
+.bv-time-view button {
+  border: 0;
+  background: transparent;
+  font-size: 9px;
+  padding: 7px 12px;
+  border-radius: 17px;
+  color: #9caa8b;
+}
+.bv-time-view button[aria-pressed="true"] {
+  background: white;
+  color: #5a6e47;
+  box-shadow: 0 1px 4px #53613710;
+}
+.bv-timetable-grid {
+  display: grid;
+  grid-template-columns: 48px repeat(5, minmax(0, 1fr));
+  gap: 9px;
+  margin-top: 24px;
+}
+.bv-timetable-grid.is-day {
+  grid-template-columns: 48px minmax(0, 1fr);
+}
+.bv-time-column {
+  min-width: 0;
+}
+.bv-time-day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  border: 1px solid #e8edde;
+  background: white;
+  border-radius: 18px;
+  padding: 14px 0;
+  width: 100%;
+}
+.bv-time-day strong {
+  font-size: 23px;
+  font-weight: 400;
+  letter-spacing: -1px;
+}
+.bv-time-day span {
+  font-size: 9px;
+  color: #a0ad92;
+}
+.bv-time-day[aria-pressed="true"] {
+  border-color: #e2edb6;
+  background: #e2edb6;
+}
+.bv-time-day[aria-pressed="true"] span {
+  color: #7f9359;
+}
+.bv-time-events {
+  height: 224px;
+  margin-top: 18px;
+  position: relative;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 54px,
+    #f2f4ee 54px,
+    #f2f4ee 55px
+  );
+}
+.bv-time-axis {
+  color: #aeb89e;
+  font-size: 7px;
+}
+.bv-time-axis > span {
+  display: block;
+  padding-top: 23px;
+}
+.bv-time-axis > div {
+  display: flex;
+  flex-direction: column;
+  margin-top: 65px;
+  gap: 42px;
+}
+.bv-time-axis i {
+  font-style: normal;
+  font-size: 8px;
+}
+.bv-planned-lesson {
+  position: absolute;
+  left: 0;
+  right: 0;
+  border: 0;
+  border-radius: 16px;
+  padding: 12px 10px;
+  min-height: 96px;
+  text-align: left;
+}
+.bv-planned-lesson > span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  color: #71834f;
+  margin-bottom: 8px;
+}
+.bv-planned-lesson > span i {
+  font-size: 5px;
+  font-style: normal;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+}
+.bv-planned-lesson strong {
+  display: block;
+  font-size: 10px;
+  line-height: 1.4;
+  font-weight: 500;
+  max-width: 105px;
+}
+.bv-planned-lesson small {
+  display: block;
+  font-size: 7px;
+  color: #80915e;
+  margin-top: 9px;
+}
+.bv-planned-lesson.is-done {
+  opacity: 0.67;
+}
+.bv-plan-foot {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 8px;
+  color: #a4b092;
+  margin: 8px 0 0;
+}
+.bv-plan-foot > span {
+  margin-left: auto;
+  font-size: 7px;
+}

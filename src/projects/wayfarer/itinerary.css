@@ -1,0 +1,125 @@
+.wf-itinerary {
+  padding: 24px 28px;
+  background: #fcfbf4;
+  border-left: 1px solid var(--wf-line);
+  position: relative;
+}
+.wf-itinerary:before {
+  content: "";
+  position: absolute;
+  left: -8px;
+  top: 0;
+  bottom: 0;
+  width: 8px;
+  background: linear-gradient(90deg, #162b3a14, transparent);
+}
+.wf-ticket-top {
+  display: flex;
+  justify-content: space-between;
+  font:
+    9px "IBM Plex Mono",
+    monospace;
+  border-bottom: 1px dashed var(--wf-line);
+  padding-bottom: 16px;
+}
+.wf-itinerary h2 {
+  font:
+    400 35px/1.08 "Bricolage Grotesque",
+    sans-serif;
+  letter-spacing: -0.04em;
+  margin-top: 19px;
+}
+.wf-region {
+  font-size: 12px;
+  margin-top: 8px !important;
+}
+.wf-trip-note {
+  font-size: 12px;
+  line-height: 1.8;
+  margin-top: 19px !important;
+  color: #657065;
+}
+.wf-trip-facts {
+  display: flex;
+  gap: 18px;
+  border-top: 1px solid var(--wf-line);
+  border-bottom: 1px solid var(--wf-line);
+  padding: 16px 0;
+  margin: 19px 0;
+}
+.wf-trip-facts dt {
+  font-size: 9px;
+  margin-bottom: 7px;
+  color: #697769;
+}
+.wf-trip-facts dd {
+  font:
+    14px "IBM Plex Mono",
+    monospace;
+  margin: 0;
+}
+.wf-stops {
+  list-style: none;
+  margin: 0 0 17px;
+  padding: 0;
+  display: grid;
+  gap: 11px;
+  font-size: 11px;
+  counter-reset: stops;
+}
+.wf-stops li {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  counter-increment: stops;
+}
+.wf-stops li:before {
+  content: counter(stops, decimal-leading-zero);
+  font:
+    9px "IBM Plex Mono",
+    monospace;
+  border: 1px solid var(--wf-line);
+  padding: 4px;
+}
+.wf-departure {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  position: relative;
+  font-size: 11px;
+  border-top: 1px dashed var(--wf-line);
+  padding-top: 13px;
+}
+.wf-departure select {
+  border: 0;
+  background: transparent;
+  color: var(--wf-ink);
+  appearance: none;
+  min-height: 35px;
+  font-size: 12px;
+  padding-left: 6px;
+}
+.wf-departure svg {
+  position: absolute;
+  right: 0;
+  bottom: 9px;
+  pointer-events: none;
+}
+.wf-plan {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 0;
+  background: var(--wf-orange);
+  color: var(--wf-ink);
+  padding: 14px 15px;
+  font-size: 12px !important;
+  margin-top: 8px;
+}
+.wf-price {
+  font-size: 9px;
+  text-align: center;
+  margin-top: 10px !important;
+  line-height: 1.5;
+}

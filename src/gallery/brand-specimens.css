@@ -1,0 +1,112 @@
+.kit-logo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.kit-specimen {
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.kit-specimen > .brand-logo {
+  font-size: 48px;
+  gap: 17px;
+}
+.kit-specimen svg {
+  width: 54px;
+  height: 54px;
+}
+.kit-specimen > span:last-child {
+  position: absolute;
+  bottom: 20px;
+  left: 22px;
+  font-size: 10px;
+  opacity: 0.6;
+  font-family: var(--kit-body), sans-serif;
+}
+.kit-symbol-row {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+.kit-symbol-row > div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+}
+.kit-symbol-row svg {
+  width: 60px;
+  height: 60px;
+}
+.kit-symbol-row > div:first-child > span {
+  font-size: 10px;
+  color: #888;
+}
+.kit-icon {
+  border-radius: 22px;
+  width: 105px;
+  height: 105px;
+  display: grid;
+  place-items: center;
+}
+.kit-symbol-row > p {
+  margin-left: auto;
+  max-width: 310px;
+  font-size: 12px;
+  line-height: 1.7;
+  color: #888;
+}
+.kit-colors {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+.kit-colors > div > div {
+  height: 145px;
+  border: 1px solid #00000008;
+}
+.kit-colors h3 {
+  margin: 12px 0 4px;
+  font-size: 11px;
+  font-weight: 500;
+}
+.kit-colors code {
+  font-size: 10px;
+  color: #777;
+  font-family: "IBM Plex Mono", monospace;
+}
+.kit-type-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+.kit-type-grid > div {
+  background: #f0efea;
+  padding: 30px;
+}
+.kit-type-grid > div > span {
+  font-size: 10px;
+  color: #777;
+}
+.kit-type-grid p {
+  font-size: 43px;
+  line-height: 1.25;
+  margin: 30px 0 5px;
+}
+.kit-type-grid > div:last-child p {
+  font-size: 25px;
+  line-height: 1.45;
+}
+.kit-type-grid > div:last-child > div {
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 2px;
+  margin-top: 35px;
+  overflow-wrap: anywhere;
+}

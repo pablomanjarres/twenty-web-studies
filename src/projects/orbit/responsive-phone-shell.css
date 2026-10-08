@@ -1,0 +1,81 @@
+@media (max-width: 600px) {
+  .orbit-v3 {
+    display: block;
+  }
+  .orbit-v3 .ov3-navigation {
+    min-height: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 13px 19px;
+    border-bottom: 1px solid var(--ov3-line);
+    border-right: 0;
+    gap: 18px;
+  }
+  .orbit-v3 .ov3-navigation > .brand-logo {
+    font-size: 23px;
+  }
+  .orbit-v3 .ov3-navigation .brand-logo > span {
+    display: block;
+  }
+  .orbit-v3 .ov3-navigation nav {
+    margin: 0 0 0 auto;
+    display: flex;
+    gap: 2px;
+  }
+  .orbit-v3 .ov3-navigation nav button {
+    padding: 11px;
+  }
+  .orbit-v3 .ov3-nav-foot {
+    display: none;
+  }
+  .orbit-v3 .ov3-main {
+    padding: 0 18px;
+  }
+  .orbit-v3 .ov3-topbar {
+    height: 56px;
+    gap: 7px;
+  }
+  .orbit-v3 .ov3-topbar > span {
+    font-size: 10px;
+  }
+  .orbit-v3 .ov3-topbar > span i {
+    margin: 0 5px;
+  }
+  .orbit-v3 .ov3-topbar label {
+    gap: 6px;
+  }
+  .orbit-v3 .ov3-topbar input {
+    width: 110px;
+    font-size: 10px;
+  }
+  .orbit-v3 .ov3-topbar kbd,
+  .orbit-v3 .ov3-avatars {
+    display: none;
+  }
+  .orbit-v3 .ov3-page-heading {
+    align-items: start;
+    padding: 25px 0 21px;
+    gap: 8px;
+  }
+  .orbit-v3 .ov3-page-heading p {
+    font-size: 8px;
+    letter-spacing: 0.8px;
+  }
+  .orbit-v3 .ov3-page-heading h1 {
+    font-size: 23px;
+    max-width: 230px;
+    letter-spacing: -0.8px;
+  }
+  .orbit-v3 .ov3-page-heading > div > span {
+    font-size: 10px;
+    margin-top: 8px;
+  }
+  .orbit-v3 .ov3-add {
+    padding: 10px;
+    font-size: 0;
+    min-width: 40px;
+    min-height: 40px;
+    justify-content: center;
+  }
+}

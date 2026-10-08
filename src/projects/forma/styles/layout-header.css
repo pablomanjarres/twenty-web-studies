@@ -1,0 +1,55 @@
+.forma {
+  --focus-color: #626c56;
+  background: #f5f4ef;
+  color: #282824;
+  font-family: "DM Sans", sans-serif;
+}
+.forma a {
+  text-decoration: none;
+}
+.forma-header {
+  height: 83px;
+  padding: 0 3.5%;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #cecec6;
+  gap: 35px;
+}
+.forma-header .brand-logo {
+  font:
+    600 26px "Manrope",
+    sans-serif;
+}
+.forma-header .brand-logo > span {
+  letter-spacing: 0.025em;
+}
+.forma-header .brand-logo svg {
+  width: 24px;
+}
+.forma-header > span {
+  font:
+    8px/1.7 "IBM Plex Mono",
+    monospace;
+  color: #777c6b;
+  margin-left: 5%;
+}
+.forma-header nav {
+  margin-left: auto;
+  display: flex;
+  gap: 35px;
+  font-size: 11px;
+}
+.forma-kicker {
+  font:
+    9px "IBM Plex Mono",
+    monospace;
+  letter-spacing: 0.035em;
+  color: #777e68;
+}
+.forma h2 {
+  font:
+    500 38px/1.18 "Manrope",
+    sans-serif;
+  letter-spacing: -0.045em;
+  margin: 0;
+}

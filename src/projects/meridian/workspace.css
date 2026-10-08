@@ -1,0 +1,127 @@
+.meridian-page {
+  --md-bg: #101c2b;
+  --md-panel: #172938;
+  --md-line: #a9c4cd26;
+  --md-cyan: #58d8dc;
+  --md-muted: #9aaebc;
+  --md-text: #eaf0f6;
+  --focus-color: #58d8dc;
+  background: var(--md-bg);
+  color: var(--md-text);
+  font-family: "DM Sans", sans-serif;
+  min-height: 100svh;
+}
+.meridian-page a {
+  text-decoration: none;
+}
+.meridian-page button,
+.meridian-page input,
+.meridian-page select {
+  font-family: inherit;
+}
+.md-control-room {
+  display: grid;
+  grid-template-columns: 64px 270px minmax(0, 1fr);
+  height: calc(100svh - 56px);
+  min-height: 680px;
+}
+.md-operating-surface {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.md-sidebar-label {
+  font:
+    10px "Caleb Mono",
+    monospace;
+  letter-spacing: 0.08em;
+  color: var(--md-muted);
+}
+.md-port-study {
+  position: relative;
+  min-height: 540px;
+  flex: 1;
+  overflow: hidden;
+}
+.md-port-study > img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+}
+.md-port-study::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, #07152190, transparent 45%, #07152190);
+  pointer-events: none;
+}
+.md-port-study > header,
+.md-port-study > p,
+.md-port-study > footer {
+  position: absolute;
+  z-index: 1;
+}
+.md-port-study > header {
+  top: 35px;
+  left: 40px;
+}
+.md-port-study > header span,
+.md-port-study > footer {
+  font:
+    10px "Caleb Mono",
+    monospace;
+  letter-spacing: 0.06em;
+}
+.md-port-study h2 {
+  font:
+    400 46px "Space Grotesk",
+    sans-serif;
+  letter-spacing: -0.06em;
+  margin: 18px 0;
+}
+.md-port-study > p {
+  bottom: 82px;
+  right: 40px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+.md-port-study > footer {
+  bottom: 27px;
+  left: 40px;
+  right: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.md-network-empty {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  padding: 50px 20px;
+  text-align: center;
+}
+.md-network-empty > svg {
+  color: #58d8dc;
+}
+.md-network-empty h2 {
+  font:
+    400 28px "Space Grotesk",
+    sans-serif;
+  letter-spacing: -0.05em;
+}
+.md-network-empty p {
+  color: #9ab6c3;
+  font-size: 13px;
+}
+.md-network-empty button {
+  background: transparent;
+  color: #58d8dc;
+  border: 1px solid #58d8dc70;
+  padding: 15px;
+  margin-top: 25px;
+  font-size: 12px;
+}

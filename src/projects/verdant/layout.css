@@ -1,0 +1,57 @@
+.verdant {
+  --vd-ink: #343d26;
+  --vd-paper: #f5f4e8;
+  --vd-line: #c7ceb6;
+  --vd-yellow: #e5c24d;
+  background: var(--vd-paper);
+  color: var(--vd-ink);
+  font-family: "Manrope", sans-serif;
+  position: relative;
+}
+.verdant h1,
+.verdant h2,
+.verdant h3,
+.verdant p,
+.verdant figure {
+  margin: 0;
+}
+.vd-header {
+  position: absolute;
+  inset: 25px 36px auto;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+.vd-header > a {
+  text-decoration: none;
+  font-size: 23px;
+}
+.vd-header .brand-logo > svg {
+  width: 27px;
+  height: 27px;
+}
+.vd-header > span {
+  font:
+    8px "IBM Plex Mono",
+    monospace;
+  letter-spacing: 0.08em;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.vd-header > span i {
+  width: 5px;
+  height: 5px;
+  background: #819174;
+  border-radius: 50%;
+}
+.vd-header nav {
+  margin-left: auto;
+  display: flex;
+  gap: 25px;
+  font-size: 11px;
+}
+.vd-header nav a {
+  text-decoration: none;
+}
