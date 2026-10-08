@@ -1,5 +1,5 @@
 import { ArrowRight, Minus, X } from "lucide-react";
-import { useDialog } from "./useDialog";
+import { useDialog } from "../../shared/useDialog";
 import { products } from "./data";
 import { ProductIllustration } from "./ProductIllustration";
 

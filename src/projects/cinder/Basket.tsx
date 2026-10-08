@@ -1,5 +1,5 @@
 import { ArrowRight, Minus, Plus, X } from "lucide-react";
-import { useDialog } from "./useDialog";
+import { useDialog } from "../../shared/useDialog";
 import { coffees } from "./data";
 import type { CartItem } from "./data";
 

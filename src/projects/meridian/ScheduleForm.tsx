@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { ArrowRight, X } from "lucide-react";
-import { useDialog } from "./useDialog";
+import { useDialog } from "../../shared/useDialog";
 import { ports } from "./data";
 import type { Shipment } from "./data";
 
