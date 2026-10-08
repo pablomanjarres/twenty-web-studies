@@ -85,7 +85,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 32%;
+  object-position: center 10%;
   border: 9px solid var(--og-paper);
 }
 .og-paper-tag {
