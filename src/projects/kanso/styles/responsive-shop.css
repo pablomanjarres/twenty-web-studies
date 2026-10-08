@@ -6,6 +6,9 @@
   .kanso-shelf {
     gap: 29px 28px;
   }
+  .kanso-shelf-wordmark .brand-logo > span {
+    font-size: 60px;
+  }
   .kanso-object-caption h2 {
     font-size: 20px;
   }
