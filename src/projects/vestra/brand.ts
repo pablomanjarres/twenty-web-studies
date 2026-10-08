@@ -3,11 +3,11 @@ export const brand: Brand = {
   slug: "vestra",
   name: "vestra",
   category: "Alpine retreat",
-  tagline: "A little closer to nature.",
+  tagline: "Come for the view. Stay for the stillness.",
   purpose:
     "An intimate alpine retreat offering restorative stays, seasonal food, and unhurried ways to experience the mountain landscape.",
   description:
-    "Vestra is an intimate alpine retreat where the landscape sets the pace. Its identity brings together deep forest green, warm cream, and expressive serif typography, with a mountain-fold symbol that connects the brand to its setting. The website opens onto a panoramic mountain view, then invites guests into the rooms, seasonal kitchen, and slower rituals of a stay. A simple booking panel makes choosing dates and exploring availability feel straightforward. The experience is designed for travelers seeking quiet rather than spectacle, presenting hospitality as a thoughtful connection to place, with generous photography and small details that leave space to breathe.",
+    "Vestra is an intimate mountain retreat where the landscape sets the pace. The website opens as a quiet alpine panorama, with a small invitation placed near the valley and an arrival folio that stays out of the view until it is needed. Forest green, warm cream and delicate serif typography carry a measured hospitality identity. Guests can explore room details, select dates and prepare a stay outline, then move through a portrait room journal and the slower rituals of a mountain day. The folded-ridge symbol suggests a sheltered valley. Photography, restrained captions and generous space make the retreat feel connected to its setting.",
   colors: [
     {
       name: "Forest",
@@ -50,5 +50,5 @@ export const brand: Brand = {
     "Luxury",
   ],
   artDirection:
-    "Immersive mountain photography with quiet forest-green navigation, elegant serif titles, and a cream booking bar set over the horizon.",
+    "A quiet alpine panorama with low-corner serif copy, restrained edge navigation and a linen arrival folio; portrait suite photographs and uneven forest journals create a slow editorial rhythm.",
 };
