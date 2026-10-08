@@ -1,0 +1,145 @@
+.helio-recipes {
+  padding: 50px 3.2% 85px;
+  color: #263142;
+}
+.helio-architecture-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid #b9c2ca;
+  border-bottom: 1px solid #b9c2ca;
+}
+.helio-architecture-strip > div {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+  padding: 28px;
+  border-right: 1px solid #b9c2ca;
+}
+.helio-architecture-strip > div:last-child {
+  border-right: 0;
+}
+.helio-architecture-strip svg {
+  color: #3b64d3;
+}
+.helio-architecture-strip span {
+  font:
+    8px "IBM Plex Mono",
+    monospace;
+  color: #8b96a5;
+}
+.helio-architecture-strip b {
+  display: block;
+  font:
+    500 15px "Space Grotesk",
+    sans-serif;
+  color: #263142;
+  margin-top: 10px;
+}
+.helio-recipe-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 90px;
+  padding: 80px 3%;
+}
+.helio-eyebrow {
+  font:
+    9px "IBM Plex Mono",
+    monospace;
+  color: #6d809b;
+}
+.helio-recipes h2 {
+  font:
+    500 43px/1.1 "Space Grotesk",
+    sans-serif;
+  letter-spacing: -0.045em;
+  margin: 25px 0;
+}
+.helio-recipes p {
+  font-size: 13px;
+  line-height: 1.8;
+  color: #748196;
+  max-width: 350px;
+}
+.helio-recipe-grid a {
+  display: inline-block;
+  border-bottom: 1px solid #5671ac;
+  margin-top: 20px;
+  padding-bottom: 10px;
+  font:
+    10px "IBM Plex Mono",
+    monospace;
+  color: #315ac0;
+}
+.helio-recipe-code {
+  background: #151c29;
+  color: #b9c9e5;
+  border: 1px solid #34435a;
+}
+.helio-recipe-code > div {
+  display: flex;
+  border-bottom: 1px solid #34435a;
+}
+.helio-recipe-code button {
+  border: 0;
+  border-right: 1px solid #34435a;
+  padding: 17px 22px;
+  background: transparent;
+  font:
+    9px "IBM Plex Mono",
+    monospace;
+  color: #7d90b1;
+}
+.helio-recipe-code button[aria-pressed="true"] {
+  background: #263959;
+  color: #bed0f4;
+}
+.helio-recipe-code pre {
+  font:
+    11px/1.9 "IBM Plex Mono",
+    monospace;
+  padding: 20px 25px;
+  overflow: auto;
+}
+.helio-recipe-code > span {
+  display: block;
+  padding: 14px 25px;
+  border-top: 1px solid #34435a;
+  font:
+    9px "IBM Plex Mono",
+    monospace;
+  color: #7baf9f;
+}
+.helio-usage {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 90px;
+  padding: 65px 3% 0;
+  border-top: 1px solid #b9c2ca;
+}
+.helio-usage table {
+  width: 100%;
+  border-collapse: collapse;
+  align-self: center;
+  font-size: 12px;
+}
+.helio-usage caption {
+  text-align: left;
+  font:
+    500 17px "Space Grotesk",
+    sans-serif;
+  padding-bottom: 28px;
+}
+.helio-usage th,
+.helio-usage td {
+  padding: 16px 0;
+  border-top: 1px solid #b9c2ca;
+  text-align: left;
+  font-weight: 400;
+}
+.helio-usage td {
+  text-align: right;
+  font:
+    10px "IBM Plex Mono",
+    monospace;
+  color: #718298;
+}
