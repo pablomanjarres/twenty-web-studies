@@ -1,60 +1,133 @@
+import type { CSSProperties } from "react";
 import { useState } from "react";
-import { CalendarDays, Search, Activity } from "lucide-react";
-import { Sidebar } from "./components/Sidebar";
-import { Topbar } from "./components/Topbar";
-import { Metrics } from "./components/Metrics";
-import { Appointments } from "./components/Appointments";
-import { Patient } from "./components/Patient";
-import { ActivityChart } from "./components/ActivityChart";
-import { Team } from "./components/Team";
+import { ClinicalHeader, ScheduleControls } from "./ClinicalNavigation";
+import { brand } from "./brand";
+import { visits, type Visit } from "./data";
+import { Schedule } from "./Schedule";
+import {
+  PatientDirectory,
+  PatientRecords,
+  PracticeStatus,
+} from "./PatientViews";
+import { PatientDetails, PatientSheet } from "./PatientDetails";
+import { NewVisit } from "./NewVisit";
+import { Overview } from "./Overview";
 import "./styles.css";
-
+const theme = {
+  "--pv-teal": brand.colors[0].hex,
+  "--pv-lemon": brand.colors[1].hex,
+  "--pv-ink": brand.colors[3].hex,
+  "--pv-surface": brand.colors[4].hex,
+  "--pv-paper": brand.colors[5].hex,
+} as CSSProperties;
 export default function Page() {
-  const [search, setSearch] = useState("");
+  const [appointments, setAppointments] = useState(visits);
+  const [day, setDay] = useState(3);
+  const [view, setView] = useState<"day" | "week">("day");
+  const [tab, setTab] = useState("Overview");
+  const [doctor, setDoctor] = useState("all");
+  const [selected, setSelected] = useState(1);
+  const [sheet, setSheet] = useState(false);
+  const [newVisit, setNewVisit] = useState(false);
+  const [query, setQuery] = useState("");
+  const [notes, setNotes] = useState<Record<number, string>>({});
+  const visit = appointments.find((v) => v.id === selected)!;
+  const shown = appointments.filter(
+    (v) =>
+      (doctor === "all" || v.doctor === doctor) &&
+      (view === "week" || v.day === day),
+  );
+  function choose(id: number) {
+    setSelected(id);
+    if (tab === "Overview" || window.matchMedia("(max-width:900px)").matches)
+      setSheet(true);
+    else if (tab === "Patients") setTab("Records");
+  }
+  function add(visit: Visit) {
+    setAppointments((current) => [...current, visit]);
+    setDay(visit.day);
+    setSelected(visit.id);
+    setNewVisit(false);
+    setTab("Overview");
+  }
   return (
-    <main className="pulse">
-      <Sidebar />
-      <div className="pulse-workspace">
-        <Topbar search={search} setSearch={setSearch} />
-        <div className="pulse-main" id="overview">
-          <div className="pulse-welcome">
-            <div>
-              <span>Thursday, October 8, 2026</span>
-              <h1>Good morning, Dr. Chen.</h1>
-              <p>A clear view of the day. More space for your patients.</p>
-            </div>
-            <a href="#appointments" className="pulse-primary-button">
-              <CalendarDays size={15} />
-              View appointments
-            </a>
-          </div>
-          <label className="pulse-search-mobile">
-            <Search size={15} />
-            <input
-              id="pulse-search-field"
-              aria-label="Search patient names"
-              placeholder="Search patient names"
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
+    <main className="pulse-v2" style={theme}>
+      <ClinicalHeader
+        tab={tab}
+        day={day}
+        view={view}
+        onTab={setTab}
+        onNew={() => setNewVisit(true)}
+      />
+      {tab === "Overview" ? (
+        <Overview
+          appointments={appointments}
+          day={day}
+          onDay={setDay}
+          onSelect={choose}
+          onCalendar={() => setTab("Calendar")}
+        />
+      ) : tab === "Calendar" ? (
+        <>
+          <ScheduleControls
+            day={day}
+            doctor={doctor}
+            view={view}
+            onDay={setDay}
+            onDoctor={setDoctor}
+            onView={setView}
+          />
+          <div className="pv-day-workspace">
+            <Schedule
+              appointments={shown}
+              selected={selected}
+              onSelect={choose}
+              doctor={doctor}
+              day={day}
+              view={view}
             />
-          </label>
-          <Metrics />
-          <div className="pulse-care-grid">
-            <Appointments search={search} />
-            <Patient />
+            <aside className="pv-detail-desktop">
+              <PatientDetails
+                key={visit.id}
+                visit={visit}
+                note={notes[visit.id] ?? visit.note}
+                onNote={(note) => setNotes((n) => ({ ...n, [visit.id]: note }))}
+              />
+            </aside>
           </div>
-          <div className="pulse-bottom-grid">
-            <ActivityChart />
-            <Team />
-          </div>
-          <footer className="pulse-footer">
-            <span>
-              <Activity size={12} /> A clearer day in care.
-            </span>
-            <span>All times in your practice’s local time.</span>
-          </footer>
-        </div>
-      </div>
+        </>
+      ) : tab === "Patients" ? (
+        <PatientDirectory
+          appointments={appointments}
+          query={query}
+          onQuery={setQuery}
+          onSelect={choose}
+        />
+      ) : (
+        <PatientRecords
+          visit={visit}
+          note={notes[visit.id] ?? visit.note}
+          onNote={(note) => setNotes((n) => ({ ...n, [visit.id]: note }))}
+        />
+      )}
+      <PracticeStatus />
+      {sheet && (
+        <PatientSheet
+          visit={visit}
+          note={notes[visit.id] ?? visit.note}
+          onNote={(note) => setNotes((n) => ({ ...n, [visit.id]: note }))}
+          onClose={() => setSheet(false)}
+        />
+      )}
+      {newVisit && (
+        <NewVisit
+          appointments={appointments}
+          day={day}
+          id={Math.max(...appointments.map((v) => v.id)) + 1}
+          onClose={() => setNewVisit(false)}
+          onAdd={add}
+        />
+      )}
     </main>
   );
 }
