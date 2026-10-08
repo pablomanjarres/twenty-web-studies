@@ -1,0 +1,169 @@
+.bloom {
+  background: #f8f9f5;
+  color: #2e3830;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  display: flex;
+  min-height: 100vh;
+  font-size: 12px;
+}
+
+.bloom a {
+  text-decoration: none;
+}
+
+.bloom button {
+  color: inherit;
+}
+
+.bloom-sidebar {
+  width: 218px;
+  flex-shrink: 0;
+  background: white;
+  border-right: 1px solid #e9ece4;
+  padding: 34px 22px 22px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.bloom-sidebar > .bloom-brand,
+.bloom-sidebar > a > .brand-logo {
+  font:
+    27px "Sunny Side",
+    sans-serif;
+  gap: 9px;
+}
+
+.bloom-sidebar .brand-logo > span {
+  font-weight: 400;
+  letter-spacing: -0.045em;
+}
+
+.bloom-sidebar .brand-logo svg {
+  color: #779264;
+  width: 31px;
+  height: 31px;
+}
+
+.bloom-workspace {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  background: #f8f9f5;
+  border: 1px solid #e9ece4;
+  border-radius: 9px;
+  padding: 11px 9px;
+  margin-top: 37px;
+  font-size: 9px;
+}
+
+.bloom-workspace-icon {
+  height: 28px;
+  width: 28px;
+  border-radius: 7px;
+  background: #ddeba7;
+  color: #536b47;
+  display: grid;
+  place-items: center;
+  font-size: 19px;
+}
+
+.bloom-workspace small {
+  display: block;
+  font-size: 7px;
+  color: #a0a59c;
+  margin-top: 5px;
+}
+
+.bloom-workspace > svg {
+  margin-left: auto;
+  color: #a0a59c;
+}
+
+.bloom-sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin: 28px -3px 0;
+}
+
+.bloom-sidebar nav > a {
+  padding: 13px 11px;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  color: #8b968a;
+  font-size: 11px;
+}
+
+.bloom-sidebar nav > a.active {
+  background: #edf3df;
+  color: #455c39;
+}
+
+.bloom-sidebar nav > a > span {
+  background: #e9ede5;
+  padding: 3px 5px;
+  border-radius: 4px;
+  margin-left: auto;
+  font-size: 8px;
+}
+
+.bloom-sidebar-prompt {
+  background: #f6f2e9;
+  border-radius: 12px;
+  padding: 20px 16px;
+  margin-top: 65px;
+}
+
+.bloom-sidebar-prompt > svg {
+  color: #81926e;
+}
+
+.bloom-sidebar-prompt h3 {
+  font:
+    17px/1.3 "Sunny Side",
+    sans-serif;
+  font-weight: 400;
+  margin: 13px 0 9px;
+}
+
+.bloom-sidebar-prompt p {
+  font-size: 9px;
+  line-height: 1.8;
+  color: #8d9688;
+}
+
+.bloom-sidebar-prompt a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 9px;
+  padding-top: 9px;
+}
+
+.bloom-sidebar-bottom {
+  margin-top: auto;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.bloom-sidebar-bottom > a {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-size: 9px;
+  color: #8b968a;
+}
+
+.bloom-profile {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding-top: 23px;
+  border-top: 1px solid #e9ece4;
+  font-size: 9px;
+}
