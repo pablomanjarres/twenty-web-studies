@@ -1,0 +1,79 @@
+.fg-case-3 {
+  background: #1d2c43;
+}
+.fg-case-3 > img {
+  width: 100%;
+  filter: none;
+  opacity: 0.8;
+}
+.fg-case-3 .fg-case-type > span,
+.fg-case-3 .fg-case-type small {
+  color: #bec5d2;
+}
+.fg-case-3 .fg-case-type strong {
+  font-family: "Tahoe", sans-serif;
+  font-size: 15vw;
+  font-weight: 400;
+  letter-spacing: -0.06em;
+  color: #e7e1d5;
+  transform: rotate(-7deg);
+  text-shadow: none;
+  margin-top: 55px;
+  line-height: 0.73;
+}
+.fg-case-3 .fg-case-print {
+  background: #ebe2d0;
+  width: 195px;
+  height: 245px;
+  top: 28%;
+  right: 13%;
+  transform: rotate(15deg);
+  color: #29354c;
+}
+.fg-case-3 .fg-case-print i {
+  font-family: "Tahoe", sans-serif;
+  font-weight: 400;
+  font-size: 115px;
+  letter-spacing: -0.05em;
+}
+.fg-case-details {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 0.7fr;
+  gap: 50px;
+  padding: 37px 0 0;
+  align-items: start;
+}
+.fg-case-details h2 {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  font-family: "Tahoe", sans-serif;
+  font-size: 34px;
+  font-weight: 400;
+  letter-spacing: -1px;
+  margin: 0;
+}
+.fg-case-details p {
+  font-size: 12px;
+  line-height: 1.9;
+  color: #a5ad97;
+  margin: 0;
+  max-width: 380px;
+}
+.fg-case-details > div {
+  font-size: 10px;
+  color: #99a289;
+}
+.fg-case-details > div > span {
+  display: block;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 7px;
+  letter-spacing: 0.7px;
+  color: #68755a;
+  margin-bottom: 15px;
+}
+.fg-case-details i {
+  display: block;
+  font-style: normal;
+  line-height: 1.9;
+}
