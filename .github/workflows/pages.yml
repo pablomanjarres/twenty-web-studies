@@ -23,13 +23,16 @@ jobs:
         env:
           SITE_BASE: /twenty-web-studies/
       - uses: actions/upload-pages-artifact@v4
-        if: github.event_name != 'pull_request'
+        if: (github.event_name == 'push' && github.ref == 'refs/heads/collection') || (github.event_name == 'workflow_dispatch' && (github.ref == 'refs/heads/collection' || github.ref == 'refs/heads/redesign-v2'))
         with:
           path: dist
   deploy:
-    if: github.event_name != 'pull_request'
+    if: (github.event_name == 'push' && github.ref == 'refs/heads/collection') || (github.event_name == 'workflow_dispatch' && (github.ref == 'refs/heads/collection' || github.ref == 'refs/heads/redesign-v2'))
     runs-on: ubuntu-latest
     needs: build
+    concurrency:
+      group: github-pages
+      cancel-in-progress: false
     permissions:
       pages: write
       id-token: write
