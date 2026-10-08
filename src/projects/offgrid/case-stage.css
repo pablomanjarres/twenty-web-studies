@@ -1,0 +1,177 @@
+.fg-work {
+  padding: 40px 32px 45px;
+  background: #20221f;
+  color: #ecebdf;
+  scroll-margin-top: 0;
+}
+.fg-work > header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 8px;
+  letter-spacing: 1px;
+  padding-bottom: 30px;
+  color: #96998b;
+}
+.fg-work > header p {
+  margin: 0;
+}
+.fg-work-index {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-bottom: 26px;
+}
+.fg-work-index button {
+  position: relative;
+  background: none;
+  border: 0;
+  border-top: 1px solid #53564d;
+  text-align: left;
+  padding: 15px 0;
+  font-family: "Tahoe", sans-serif;
+  font-size: 25px;
+  letter-spacing: -0.6px;
+  color: #868d7c;
+  transition: color 0.2s;
+}
+.fg-work-index button[aria-pressed="true"] {
+  color: #eed958;
+  border-top: 2px solid #eed958;
+}
+.fg-work-index small {
+  display: block;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 6px;
+  letter-spacing: 0.8px;
+  color: #777f6c;
+  margin-top: 10px;
+}
+.fg-work-index svg {
+  position: absolute;
+  right: 0;
+  top: 16px;
+}
+.fg-case-stage {
+  min-height: 520px;
+  position: relative;
+  background: #f3db43;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 32px;
+  isolation: isolate;
+}
+.fg-case-stage > img {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 55%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(1) contrast(1.1);
+  z-index: -1;
+}
+.fg-case-type {
+  position: relative;
+  padding: 5px 0;
+  z-index: 2;
+}
+.fg-case-type > span {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 8px;
+  letter-spacing: 1px;
+  color: #313326;
+}
+.fg-case-type strong {
+  display: block;
+  font-family: "Archivo Black", sans-serif;
+  font-size: clamp(90px, 12vw, 184px);
+  line-height: 0.74;
+  letter-spacing: -0.085em;
+  margin: 67px 0 37px;
+  transform: rotate(-3deg);
+  color: #242b20;
+  text-shadow: 2px 1px #f3db43;
+}
+.fg-case-type small {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 8px;
+  letter-spacing: 1.3px;
+  color: #2c3424;
+}
+.fg-case-print {
+  position: absolute;
+  right: 9%;
+  top: 22%;
+  width: 240px;
+  height: 310px;
+  background: #ed7960;
+  color: #29362a;
+  padding: 24px;
+  transform: rotate(9deg);
+  box-shadow: 7px 8px 0 #353c2b66;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+.fg-case-print > span {
+  font-family: "Tahoe", sans-serif;
+  font-size: 23px;
+  letter-spacing: -0.7px;
+}
+.fg-case-print i {
+  font-family: "Archivo Black", sans-serif;
+  font-size: 146px;
+  line-height: 1;
+  margin: auto 0;
+  font-style: normal;
+  letter-spacing: -0.1em;
+  position: relative;
+  left: -10px;
+}
+.fg-case-print small {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 6px;
+  line-height: 1.6;
+  letter-spacing: 0.6px;
+}
+.fg-case-2 {
+  background: #e1e3d9;
+}
+.fg-case-2 > img {
+  width: 65%;
+  filter: none;
+  mix-blend-mode: multiply;
+  opacity: 0.9;
+}
+.fg-case-2 .fg-case-type strong {
+  font-family: "Instrument Serif", serif;
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  font-size: 13vw;
+  line-height: 0.9;
+  transform: none;
+  text-shadow: none;
+  margin-top: 90px;
+  color: #354030;
+}
+.fg-case-type strong i {
+  font-style: italic;
+  font-size: 0.62em;
+  letter-spacing: -0.03em;
+}
+.fg-case-2 .fg-case-print {
+  background: #b8c7a7;
+  width: 210px;
+  height: 270px;
+  right: 11%;
+  top: 39%;
+  transform: rotate(-8deg);
+}
+.fg-case-2 .fg-case-print i {
+  font-family: "Instrument Serif", serif;
+  font-size: 130px;
+  letter-spacing: -0.05em;
+}
