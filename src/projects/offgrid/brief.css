@@ -1,0 +1,107 @@
+.fg-overlay {
+  position: fixed;
+  inset: 0;
+  background: #111641b3;
+  backdrop-filter: blur(6px);
+  z-index: 70;
+  padding: 20px;
+  display: grid;
+  place-items: center;
+}
+.fg-brief {
+  position: relative;
+  background: #f3efdf;
+  color: #26351f;
+  width: min(100%, 600px);
+  max-height: 93vh;
+  overflow: auto;
+  padding: 44px;
+}
+.fg-close {
+  position: absolute;
+  right: 18px;
+  top: 17px;
+  background: none;
+  border: 0;
+  padding: 6px;
+}
+.fg-brief > span {
+  display: block;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 8px;
+  letter-spacing: 1px;
+  color: #8a927a;
+}
+.fg-brief h2 {
+  font-family: "Tahoe", sans-serif;
+  font-size: 39px;
+  line-height: 1.1;
+  font-weight: 400;
+  letter-spacing: -1.3px;
+  margin: 22px 0 28px;
+}
+.fg-brief label {
+  display: block;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 9px;
+  line-height: 1.6;
+  color: #778267;
+}
+.fg-brief input,
+.fg-brief select,
+.fg-brief textarea {
+  display: block;
+  background: #fffdf2;
+  border: 1px solid #d4d7c3;
+  border-radius: 0;
+  width: 100%;
+  padding: 12px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  color: #38492d;
+  outline: none;
+  margin: 8px 0 22px;
+}
+.fg-brief input:focus,
+.fg-brief select:focus,
+.fg-brief textarea:focus {
+  border-color: #1d37dd;
+  box-shadow: 0 0 0 2px #1d37dd22;
+}
+.fg-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.fg-brief form > button,
+.fg-brief-ready > button:first-of-type {
+  width: 100%;
+  background: var(--fg-blue);
+  color: var(--fg-milk);
+  border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  font-size: 12px;
+}
+.fg-brief form > small {
+  display: block;
+  font-size: 8px;
+  line-height: 1.6;
+  color: #929981;
+  margin-top: 12px;
+}
+.fg-brief-ready p {
+  font-size: 14px;
+  line-height: 1.9;
+  color: #78846c;
+  margin-bottom: 28px;
+}
+.fg-brief-ready > button:last-child {
+  background: none;
+  border: 0;
+  margin-top: 18px;
+  font-size: 10px;
+  text-decoration: underline;
+}
