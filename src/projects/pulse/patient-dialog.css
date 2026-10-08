@@ -1,0 +1,43 @@
+.pv-new-dialog > span {
+  font-size: 9px;
+  letter-spacing: 1px;
+  color: #9cac9f;
+}
+.pv-new-dialog h2 {
+  font-family: "Outfit", sans-serif;
+  font-size: 29px;
+  font-weight: 400;
+  margin: 15px 0 30px;
+}
+.pv-new-dialog form > label,
+.pv-new-dialog form > div {
+  margin: 17px 0;
+}
+.pv-new-dialog label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 11px;
+  color: #8ea093;
+}
+.pv-new-dialog input,
+.pv-new-dialog select {
+  border: 1px solid var(--pv-line);
+  background: #fff;
+  border-radius: 5px;
+  padding: 12px;
+  color: var(--pv-ink);
+  font-size: 13px;
+  min-width: 0;
+  width: 100%;
+}
+.pv-new-dialog form > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+.pv-new-dialog form > .pv-new {
+  width: 100%;
+  justify-content: center;
+  margin-top: 28px;
+}
