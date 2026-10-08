@@ -1,5 +1,3 @@
-import { Terminal, Globe2, Activity } from "lucide-react";
-
 export const codeExamples: { [key: string]: string[] } = {
   TypeScript: [
     'import { app } from "@helio/edge";',
@@ -38,24 +36,3 @@ export const codeExamples: { [key: string]: string[] } = {
     "}",
   ],
 };
-
-export const features = [
-  {
-    icon: Globe2,
-    title: "Global by default",
-    text: "Your application, milliseconds from everyone. A network designed to bring your work closer.",
-    label: "35 regions · one deployment",
-  },
-  {
-    icon: Terminal,
-    title: "Your stack. Your rules.",
-    text: "Use the tools you already love. Bring your code, not a migration project.",
-    label: "TypeScript · Python · Go",
-  },
-  {
-    icon: Activity,
-    title: "Every signal, in sight.",
-    text: "Logs, traces, and performance in one place. Understand what happens after you hit deploy.",
-    label: "Observability included",
-  },
-];
