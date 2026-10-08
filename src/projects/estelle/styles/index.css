@@ -1,0 +1,45 @@
+.estelle-piece-index {
+  padding: 0 70px 95px;
+  scroll-margin-top: 30px;
+}
+.estelle-piece-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 65px;
+  padding-top: 33px;
+}
+.estelle-piece-list button {
+  border: 0;
+  border-bottom: 1px solid var(--est-rule);
+  background: transparent;
+  padding: 15px 0 24px;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  gap: 24px;
+}
+.estelle-piece-number {
+  align-self: flex-start;
+  font-size: 9px;
+  padding-top: 7px;
+}
+.estelle-piece-list img {
+  width: 105px;
+  height: 140px;
+  object-fit: cover;
+}
+.estelle-piece-list h3 {
+  font-size: 31px;
+  margin-bottom: 9px;
+}
+.estelle-piece-list button > div > span {
+  font-size: 9px;
+}
+.estelle-piece-list button > span:last-child {
+  margin-left: auto;
+  font-size: 9px;
+  white-space: nowrap;
+}
+.estelle-piece-list button[aria-pressed="true"] {
+  border-color: var(--est-plum);
+}
