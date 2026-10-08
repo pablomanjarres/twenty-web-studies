@@ -1,6 +1,6 @@
 # Twenty Web Studies
 
-Twenty independent website designs, each with its own brand, typography, color system, and logo. The collection spans landing pages, editorial sites, shops, and product dashboards.
+Twenty-four independent website designs, each with its own brand, typography, color system, and logo. The collection spans landing pages, editorial sites, shops, and product dashboards.
 
 [Browse the collection](https://pablomanjarres.github.io/twenty-web-studies/)
 

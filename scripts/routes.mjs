@@ -9,7 +9,7 @@ for (const entry of await readdir("src/projects", { withFileTypes: true })) {
       `<title>${brand.name} | ${brand.tagline}</title>`,
     )
     .replace(
-      "Twenty independent website designs and brand identities.",
+      "Twenty-four independent website designs and brand identities.",
       brand.purpose.replaceAll('"', "&quot;"),
     );
   for (const route of [entry.name, `${entry.name}/brand`]) {
