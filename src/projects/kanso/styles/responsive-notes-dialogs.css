@@ -1,0 +1,109 @@
+@media (max-width: 780px) {
+  .kanso-glaze-study {
+    height: 460px;
+  }
+  .kanso-glaze-study > img {
+    object-position: 35% center;
+  }
+  .kanso-glaze-study > div {
+    background: #f8f4efde;
+    padding: 23px;
+    top: auto;
+    bottom: 22px;
+    right: 5%;
+    width: 260px;
+  }
+  .kanso-glaze-study h2 {
+    font-size: 32px;
+    margin: 17px 0 15px;
+  }
+  .kanso-glaze-study p {
+    font-size: 11px;
+    line-height: 1.6;
+  }
+  .kanso-glaze-study > div > span:last-child {
+    margin-top: 20px;
+    font-size: 9px;
+  }
+  .kanso-batch {
+    grid-template-columns: 1fr;
+    padding: 55px 5%;
+    gap: 35px;
+  }
+  .kanso-batch h2,
+  .kanso-atelier h2 {
+    font-size: 34px;
+  }
+  .kanso-spec-table > div {
+    font-size: 10px;
+    gap: 12px;
+  }
+  .kanso-atelier {
+    grid-template-columns: 1fr;
+    padding: 0 5% 50px;
+    gap: 30px;
+  }
+  .kanso-atelier img {
+    height: 290px;
+  }
+  .kanso-atelier-caption > p {
+    max-width: 320px;
+  }
+  .kanso-footer {
+    padding: 35px 5% 23px;
+  }
+  .kanso-dispatch {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    padding-bottom: 75px;
+  }
+  .kanso-dispatch form {
+    grid-column: 1/-1;
+  }
+  .kanso-dispatch > span {
+    font-size: 24px;
+  }
+  .kanso-dispatch > p {
+    font-size: 10px;
+  }
+  .kanso-footer-bottom {
+    flex-wrap: wrap;
+    gap: 20px;
+    font-size: 9px;
+  }
+  .kanso-footer-bottom > span {
+    display: none;
+  }
+  .kanso-product-dialog[open] {
+    display: block;
+    width: calc(100% - 24px);
+  }
+  .kanso-detail-image {
+    height: 240px;
+    min-height: 0;
+    padding: 15px;
+  }
+  .kanso-detail-image img {
+    height: 220px;
+  }
+  .kanso-detail-copy {
+    padding: 26px 22px;
+  }
+  .kanso-detail-copy h2 {
+    font-size: 34px;
+    margin: 15px 0;
+  }
+  .kanso-detail-copy dl {
+    margin: 22px 0;
+  }
+  .kanso-detail-order {
+    gap: 9px;
+  }
+  .kanso-add {
+    padding: 13px 12px !important;
+    font-size: 11px !important;
+  }
+  .kanso-bag-dialog {
+    padding: 24px;
+  }
+}
