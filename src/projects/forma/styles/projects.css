@@ -1,87 +1,94 @@
-.forma-projects {
-  padding: 90px 5.5% 95px;
+.forma-dossier {
+  padding: 90px 3.5% 85px;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 100px;
+  border-bottom: 1px solid #c5c9ba;
 }
-.forma-section-heading {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 32px;
+.forma-dossier h2 {
+  max-width: 360px;
+  margin: 25px 0;
 }
-.forma h2 {
-  font-size: 44px;
-  line-height: 1.14;
-  margin: 0;
+.forma-dossier p {
+  font-size: 13px;
+  line-height: 1.85;
+  color: #777f6d;
+  max-width: 360px;
 }
-.forma-filters {
-  display: flex;
-  gap: 7px;
-}
-.forma-filters button {
-  background: transparent;
-  color: #74756a;
-  padding: 10px 15px;
+.forma-dossier dl {
+  margin: 35px 0 0;
   font-size: 11px;
-  border: 1px solid transparent;
-  border-radius: 100px;
 }
-.forma-filters button[aria-pressed="true"] {
-  border-color: #9b9d90;
-  color: #282824;
-}
-.forma-project-grid {
+.forma-dossier dl > div {
   display: grid;
-  grid-template-columns: 1.18fr 1fr;
-  gap: 30px;
+  grid-template-columns: 120px 1fr;
+  padding: 11px 0;
+  border-top: 1px solid #c5c9ba;
 }
-.forma-project-card:nth-child(2) {
-  padding-top: 65px;
+.forma-dossier dt {
+  color: #7b836f;
 }
-.forma-project-card > a {
-  position: relative;
-  display: block;
-  overflow: hidden;
+.forma-dossier dd {
+  margin: 0;
 }
-.forma-project-card img {
+.forma-plan {
+  margin: 0;
+  padding: 55px 20px 0;
+  align-self: center;
+}
+.forma-plan svg {
   width: 100%;
-  height: 345px;
-  object-fit: cover;
-  transition: transform 0.4s;
+  color: #747d68;
 }
-.forma-project-card:nth-child(2) img {
-  height: 285px;
-}
-.forma-project-card a:hover img {
-  transform: scale(1.035);
-}
-.forma-project-arrow {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  width: 42px;
-  height: 42px;
-  display: grid;
-  place-items: center;
-  background: #f0eee8;
-  border-radius: 50%;
-}
-.forma-project-card > div {
+.forma-plan figcaption {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin: 18px 0 7px;
+  border-top: 1px solid #b7bfa9;
+  padding: 20px 0;
+  margin-top: 25px;
+  font:
+    8px "IBM Plex Mono",
+    monospace;
+  color: #7e896f;
+  gap: 20px;
 }
-.forma-project-card h3 {
-  font-size: 18px;
-  font-weight: 400;
-  letter-spacing: -0.025em;
+.forma-materials {
+  padding: 80px 3.5%;
+  display: grid;
+  grid-template-columns: 1.4fr 0.7fr;
+  gap: 10%;
+}
+.forma-materials figure {
   margin: 0;
 }
-.forma-project-card > div > span {
-  font-size: 10px;
-  color: #737467;
+.forma-material-wide img {
+  width: 100%;
+  height: 740px;
+  object-fit: cover;
+  object-position: 25% center;
 }
-.forma-project-card > p {
-  font-size: 10px;
-  color: #737467;
-  margin: 0;
+.forma-materials figcaption {
+  font:
+    8px "IBM Plex Mono",
+    monospace;
+  padding: 18px 0;
+  color: #858e78;
+}
+.forma-materials h2 {
+  margin: 25px 0;
+  font-size: 30px;
+}
+.forma-materials p {
+  font-size: 12px;
+  line-height: 1.9;
+  color: #7c856e;
+}
+.forma-material-close {
+  padding-top: 95px;
+}
+.forma-material-close img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: right bottom;
 }
