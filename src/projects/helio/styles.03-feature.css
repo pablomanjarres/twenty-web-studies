@@ -1,0 +1,170 @@
+.helio-feature-grid article {
+  padding: 34px 30px;
+}
+
+.helio-feature-grid article + article {
+  border-left: 1px solid #e6e8ed;
+}
+
+.helio-feature-grid article > svg {
+  color: #234afb;
+}
+
+.helio-feature-grid h3 {
+  font:
+    500 20px "Space Grotesk",
+    sans-serif;
+  letter-spacing: -0.035em;
+  margin: 28px 0 12px;
+}
+
+.helio-feature-grid p {
+  font-size: 12px;
+  line-height: 1.8;
+  color: #7b8089;
+  max-width: 290px;
+}
+
+.helio-feature-grid article > span {
+  font:
+    9px "Caleb Mono",
+    monospace;
+  color: #7b8089;
+  display: block;
+  margin-top: 28px;
+}
+
+.helio-build {
+  background: #f7f8fb;
+  border-top: 1px solid #e6e8ed;
+  border-bottom: 1px solid #e6e8ed;
+  padding: 70px max(60px, calc((100vw - 1330px) / 2)) 80px;
+}
+
+.helio-build-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 35px;
+}
+
+.helio-section-label {
+  font:
+    10px "Caleb Mono",
+    monospace;
+  color: #7b8089;
+}
+
+.helio-build-heading h2 {
+  margin-top: 15px;
+}
+
+.helio-console {
+  display: grid;
+  grid-template-columns: 54px 1.2fr 1fr;
+  background: #fff;
+  border: 1px solid #dfe2e9;
+  border-radius: 9px;
+  box-shadow: 0 15px 30px #17191c08;
+  overflow: hidden;
+}
+
+.helio-console-rail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  background: #fafbfc;
+  border-right: 1px solid #e6e8ed;
+  padding: 20px 0;
+  color: #939aa8;
+}
+
+.helio-console-rail .brand-logo {
+  color: #234afb;
+  margin-bottom: 14px;
+}
+
+.helio-console-rail .brand-logo svg {
+  width: 25px;
+  height: 25px;
+}
+
+.helio-code {
+  border-right: 1px solid #e6e8ed;
+  min-width: 0;
+}
+
+.helio-code-tabs {
+  display: flex;
+  border-bottom: 1px solid #e6e8ed;
+  padding: 0 15px;
+  gap: 12px;
+}
+
+.helio-code-tabs button {
+  border: 0;
+  background: transparent;
+  padding: 15px 12px;
+  font-size: 10px;
+  color: #8a8e97;
+  border-bottom: 2px solid transparent;
+}
+
+.helio-code-tabs button.active {
+  color: #234afb;
+  border-color: #234afb;
+}
+
+.helio-code-tabs button.helio-copy {
+  margin-left: auto;
+  display: grid;
+  place-items: center;
+}
+
+.helio-file-name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font:
+    9px "IBM Plex Mono",
+    monospace;
+  padding: 20px 25px;
+  color: #5e6674;
+}
+
+.helio-file-name > span:last-child {
+  margin-left: auto;
+  color: #a0a5b0;
+}
+
+.helio-file-dot {
+  height: 6px;
+  width: 6px;
+  background: #234afb;
+  border-radius: 50%;
+}
+
+.helio-code pre {
+  font:
+    12px/2 "IBM Plex Mono",
+    monospace;
+  margin: 2px 0 28px;
+  overflow: auto;
+}
+
+.helio-code pre div {
+  display: flex;
+  padding: 0 24px;
+}
+
+.helio-code pre div > span {
+  width: 32px;
+  color: #afb4bf;
+  flex-shrink: 0;
+  font-size: 10px;
+}
+
+.helio-code code {
+  color: #334255;
+}
