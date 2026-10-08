@@ -1,0 +1,102 @@
+.orbit-content-secondary {
+  display: grid;
+  gap: 20px;
+  align-content: start;
+}
+.orbit-calendar,
+.orbit-weekly,
+.orbit-activity {
+  background: white;
+  border: 1px solid #eee9f5;
+  border-radius: 9px;
+  padding: 19px 18px;
+}
+.orbit-calendar .orbit-section-heading h2 {
+  font-size: 11px;
+}
+.orbit-calendar .orbit-section-heading > svg {
+  color: #ac9abb;
+}
+.orbit-calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 7px 4px;
+  text-align: center;
+  margin: 20px -2px 23px;
+}
+.orbit-calendar-grid > span {
+  position: relative;
+  min-height: 24px;
+  display: grid;
+  place-items: center;
+  font-size: 8px;
+  color: #84758f;
+  border-radius: 5px;
+}
+.orbit-calendar-grid .orbit-day-name {
+  color: #b3a4be;
+  font-size: 7px;
+  margin-bottom: 4px;
+}
+.orbit-calendar-grid .muted {
+  color: #d0c6dc;
+}
+.orbit-calendar-grid .selected {
+  background: #9673d5;
+  color: white;
+}
+.orbit-calendar-grid i {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  bottom: 0;
+  background: #bea4dc;
+}
+.orbit-today-meeting {
+  padding: 16px 12px;
+  background: #f3eefb;
+  border-radius: 7px;
+}
+.orbit-today-meeting > span {
+  font-size: 7px;
+  color: #ac93c6;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.orbit-today-meeting > span i {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #ab8cd0;
+}
+.orbit-today-meeting h3 {
+  font-size: 10px;
+  font-weight: 500;
+  margin: 10px 0 8px;
+}
+.orbit-today-meeting p {
+  display: flex;
+  justify-content: space-between;
+  font-size: 8px;
+  color: #ac93c6;
+  margin: 0 0 13px;
+}
+.orbit-today-meeting > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.orbit-today-meeting a {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  color: #ac93c6;
+  font-size: 7px;
+}
+.orbit-today-meeting .orbit-avatar {
+  border-color: #f3eefb;
+  width: 21px;
+  height: 21px;
+}
