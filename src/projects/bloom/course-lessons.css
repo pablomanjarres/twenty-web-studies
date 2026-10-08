@@ -1,0 +1,72 @@
+.bv-course-lessons {
+  border: 1px solid #e8edde;
+  background: white;
+  border-radius: 24px;
+  padding: 24px;
+}
+.bv-course-lessons > .bv-section-heading {
+  margin-bottom: 20px;
+}
+.bv-lesson-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 0;
+  width: 100%;
+  background: transparent;
+  border: 0;
+  border-top: 1px solid #edf1e6;
+  text-align: left;
+}
+.bv-lesson-number {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  background: #f4f5ee;
+  border-radius: 13px;
+  font-size: 11px;
+  color: #97a28b;
+  flex-shrink: 0;
+}
+.bv-lesson-number.is-done {
+  background: #ecf1d8;
+  color: #7d934d;
+}
+.bv-lesson-row > div {
+  margin-right: auto;
+}
+.bv-lesson-row strong {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  margin: 5px 0;
+}
+.bv-lesson-row small {
+  font-size: 7px;
+  color: #a6b198;
+  letter-spacing: 0.5px;
+}
+.bv-lesson-row p {
+  font-size: 9px;
+  color: #a0ac94;
+  margin: 0;
+}
+.bv-row-duration {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 9px;
+  color: #92a080;
+  white-space: nowrap;
+}
+.bv-row-state {
+  font-size: 8px;
+  color: #91a279;
+  width: 75px;
+  text-align: center;
+}
+.bv-lesson-row > svg {
+  color: #8d9b7b;
+  flex-shrink: 0;
+}
