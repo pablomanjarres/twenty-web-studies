@@ -1,73 +1,159 @@
-export const image = (file: string) =>
-  import.meta.env.BASE_URL + "images/salt/" + file + ".jpg";
-
-export const menu: {
-  [key: string]: { name: string; description: string; price: string }[];
-} = {
-  "From the sea": [
+export const image = (name: string) =>
+  `${import.meta.env.BASE_URL}images/salt/${name}.jpg`;
+export const plate = `${import.meta.env.BASE_URL}images/salt/prawns-v2.png`;
+type Dish = { name: string; note: string; price: number };
+type MenuSection = { title: string; dishes: Dish[] };
+export const menus: Record<string, MenuSection[]> = {
+  Dinner: [
     {
-      name: "Oysters on ice",
-      description: "Six rock oysters, shallot vinegar, lemon",
-      price: "18",
+      title: "From the sea",
+      dishes: [
+        {
+          name: "Oysters on ice",
+          note: "Six rock oysters, shallot vinegar, lemon",
+          price: 18,
+        },
+        {
+          name: "Wild garlic prawns",
+          note: "Atlantic prawns, garlic butter, warm sourdough",
+          price: 16,
+        },
+        {
+          name: "The day’s catch",
+          note: "Day-boat fish, sea herbs, new potatoes",
+          price: 26,
+        },
+        {
+          name: "Crab on toast",
+          note: "White crab, brown butter, pickled fennel",
+          price: 17,
+        },
+      ],
     },
     {
-      name: "Wild garlic prawns",
-      description: "Atlantic prawns, warm garlic butter, sourdough",
-      price: "16",
+      title: "From the garden",
+      dishes: [
+        {
+          name: "Late tomatoes & burrata",
+          note: "Basil, cold-pressed olive oil, grilled bread",
+          price: 14,
+        },
+        {
+          name: "Charred summer greens",
+          note: "Toasted almonds, lemon, parsley",
+          price: 12,
+        },
+        {
+          name: "Roast cauliflower",
+          note: "Tahini, golden raisins, green herbs",
+          price: 16,
+        },
+      ],
     },
     {
-      name: "The catch of the day",
-      description: "Market fish, lemon, herbs, a little sea salt",
-      price: "24",
-    },
-    {
-      name: "Crab on toast",
-      description: "White crab, brown butter, pickled fennel",
-      price: "17",
-    },
-    {
-      name: "Salt fish & chips",
-      description: "Day-boat haddock, crisp potatoes, tartare",
-      price: "21",
+      title: "A sweet finish",
+      dishes: [
+        { name: "Lemon posset", note: "Shortbread, lemon zest", price: 8 },
+        {
+          name: "Warm chocolate tart",
+          note: "Flaky sea salt, vanilla cream",
+          price: 9,
+        },
+      ],
     },
   ],
-  "From the garden": [
+  Lunch: [
     {
-      name: "Burrata & late tomatoes",
-      description: "Creamy burrata, basil, olive oil, grilled bread",
-      price: "14",
+      title: "Something from the sea",
+      dishes: [
+        {
+          name: "Salt fish & chips",
+          note: "Day-boat haddock, crisp potatoes, tartare",
+          price: 21,
+        },
+        {
+          name: "The crab sandwich",
+          note: "White crab, lemon mayo, toasted brioche",
+          price: 16,
+        },
+        {
+          name: "Wild garlic prawns",
+          note: "Garlic butter, sourdough, a wedge of lemon",
+          price: 16,
+        },
+      ],
     },
     {
-      name: "Charred summer greens",
-      description: "Tender greens, toasted almonds, lemon dressing",
-      price: "12",
+      title: "Something green",
+      dishes: [
+        {
+          name: "Burrata & tomatoes",
+          note: "Basil, olive oil, grilled bread",
+          price: 14,
+        },
+        {
+          name: "Warm lentil salad",
+          note: "Roasted carrots, herbs, mustard dressing",
+          price: 12,
+        },
+      ],
     },
     {
-      name: "Roasted cauliflower",
-      description: "Tahini, golden raisins, green herbs",
-      price: "16",
-    },
-    {
-      name: "Heirloom beetroot",
-      description: "Whipped goat cheese, walnuts, dill",
-      price: "13",
+      title: "A little extra",
+      dishes: [
+        { name: "Sea salt fries", note: "Rosemary, malt vinegar", price: 5 },
+        { name: "Lemon posset", note: "Shortbread, lemon zest", price: 8 },
+      ],
     },
   ],
-  "Something sweet": [
+  Drinks: [
     {
-      name: "Lemon posset",
-      description: "Shortbread, lemon zest, a spoonful of sunshine",
-      price: "8",
+      title: "At the bar",
+      dishes: [
+        {
+          name: "Salt martini",
+          note: "Gin, dry vermouth, sea lettuce",
+          price: 12,
+        },
+        {
+          name: "Coastal spritz",
+          note: "Blood orange, sparkling wine, soda",
+          price: 11,
+        },
+        {
+          name: "Ginger & the sea",
+          note: "Ginger beer, lime, rosemary · alcohol free",
+          price: 7,
+        },
+        {
+          name: "A cold local beer",
+          note: "Crisp pale ale, brewed around the corner",
+          price: 6,
+        },
+      ],
     },
     {
-      name: "Warm chocolate tart",
-      description: "Dark chocolate, flaky sea salt, vanilla cream",
-      price: "9",
+      title: "By the glass",
+      dishes: [
+        {
+          name: "Picpoul de Pinet",
+          note: "Languedoc, France · white",
+          price: 8,
+        },
+        {
+          name: "Muscadet Sèvre et Maine",
+          note: "Loire, France · white",
+          price: 9,
+        },
+        { name: "Provence rosé", note: "Provence, France · rosé", price: 9 },
+      ],
     },
     {
-      name: "Strawberries & cream",
-      description: "Local berries, whipped cream, fresh mint",
-      price: "8",
+      title: "After dinner",
+      dishes: [
+        { name: "Espresso", note: "A short, strong finish", price: 3 },
+        { name: "Earl Grey tea", note: "Loose leaf, a pot for one", price: 4 },
+      ],
     },
   ],
 };
