@@ -1,0 +1,53 @@
+@media (max-width: 1100px) {
+  .sl-header {
+    padding: 20px 28px;
+  }
+  .sl-menu-stage {
+    padding: 24px 28px 35px;
+    grid-template-columns: 54px minmax(0, 1fr);
+  }
+  .sl-menu-paper {
+    padding: 24px 23px 18px;
+  }
+  .sl-menu-spread {
+    gap: 22px;
+    grid-template-columns: 1fr 0.9fr 1fr;
+  }
+  .sl-plate {
+    margin-left: -28px !important;
+    margin-right: -28px !important;
+  }
+  .sl-plate img {
+    height: 290px;
+  }
+  .sl-dish h3 {
+    font-size: 12px;
+  }
+  .sl-dish p {
+    font-size: 9px;
+  }
+  .sl-menu-masthead h1 {
+    font-size: 34px;
+  }
+  .sl-menu-bottom > span:last-child {
+    display: none;
+  }
+  .sl-kitchen-story h2 {
+    font-size: 36px;
+  }
+  .sl-catch-note {
+    grid-template-columns: 110px 1fr;
+    gap: 20px;
+  }
+  .sl-catch-note img {
+    width: 110px;
+    height: 170px;
+  }
+  .sl-catch-note p {
+    font-size: 23px;
+  }
+  .sl-tables {
+    padding: 65px 8%;
+    gap: 10%;
+  }
+}
