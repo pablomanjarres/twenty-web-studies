@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useDialog } from "../../shared/useDialog";
 import { ArrowRight, Minus, X } from "lucide-react";
 import { image, products } from "./data";
 import type { BagItem } from "./data";
@@ -12,16 +12,12 @@ export function Bag({
   onClose: () => void;
   onRemove: (id: string, size: string) => void;
 }) {
-  useEffect(() => {
-    const handle = (e: KeyboardEvent) => {
-      if (e.key === "Escape") onClose();
-    };
-    document.addEventListener("keydown", handle);
-    return () => document.removeEventListener("keydown", handle);
-  }, [onClose]);
+  const dialog = useDialog<HTMLElement>(onClose);
   return (
     <div className="archive-bag-backdrop" onClick={onClose}>
       <section
+        ref={dialog}
+        tabIndex={-1}
         className="archive-bag-panel"
         role="dialog"
         aria-modal="true"
@@ -30,7 +26,7 @@ export function Bag({
       >
         <header>
           <h2 id="archive-bag-title">Your bag.</h2>
-          <button autoFocus onClick={onClose} aria-label="Close shopping bag">
+          <button onClick={onClose} aria-label="Close shopping bag">
             <X size={24} />
           </button>
         </header>

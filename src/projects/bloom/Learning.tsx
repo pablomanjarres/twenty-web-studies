@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useDialog } from "../../shared/useDialog";
+import { useState } from "react";
 import { ArrowRight, Play, Clock, Check, X, Plus } from "lucide-react";
 import { CourseIllustration } from "./illustrations";
 import { courses } from "./data";
@@ -56,16 +57,12 @@ export function Lesson({
   onComplete: () => void;
 }) {
   const [done, setDone] = useState(false);
-  useEffect(() => {
-    const close = (event: KeyboardEvent) => {
-      if (event.key === "Escape") onClose();
-    };
-    window.addEventListener("keydown", close);
-    return () => window.removeEventListener("keydown", close);
-  }, [onClose]);
+  const dialog = useDialog<HTMLElement>(onClose);
   return (
     <div className="bloom-lesson-backdrop" onClick={onClose}>
       <section
+        ref={dialog}
+        tabIndex={-1}
         className="bloom-lesson"
         role="dialog"
         aria-modal="true"
@@ -74,7 +71,7 @@ export function Lesson({
       >
         <button
           className="bloom-lesson-close"
-          autoFocus
+
           onClick={onClose}
           aria-label="Close lesson"
         >

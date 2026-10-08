@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useDialog } from "../../shared/useDialog";
 import { ArrowRight, Heart, Check, X } from "lucide-react";
 import { image, pieces } from "./data";
 
@@ -13,16 +13,12 @@ export function PieceDetails({
   onSave: () => void;
   saved: boolean;
 }) {
-  useEffect(() => {
-    const close = (event: KeyboardEvent) => {
-      if (event.key === "Escape") onClose();
-    };
-    window.addEventListener("keydown", close);
-    return () => window.removeEventListener("keydown", close);
-  }, [onClose]);
+  const dialog = useDialog<HTMLElement>(onClose);
   return (
     <div className="estelle-detail-backdrop" onClick={onClose}>
       <section
+        ref={dialog}
+        tabIndex={-1}
         className="estelle-detail"
         role="dialog"
         aria-modal="true"
@@ -30,7 +26,6 @@ export function PieceDetails({
         onClick={(e) => e.stopPropagation()}
       >
         <button
-          autoFocus
           className="estelle-detail-close"
           onClick={onClose}
           aria-label="Close piece details"
