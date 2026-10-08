@@ -1,0 +1,116 @@
+@media (max-width: 650px) {
+  .archive-utility {
+    padding: 9px 20px;
+    font-size: 7px;
+  }
+  .archive-utility > span:first-child {
+    display: none;
+  }
+  .archive-utility > span:last-child {
+    margin: auto;
+  }
+  .archive-header {
+    height: 76px;
+    padding: 0 20px;
+    gap: 20px;
+  }
+  .archive-header nav {
+    display: none;
+  }
+  .archive-header .brand-logo {
+    font-size: 30px;
+  }
+  .archive-hero {
+    padding: 0 20px;
+  }
+  .archive-hero-title {
+    display: block;
+    padding-top: 10px;
+  }
+  .archive-hero-title h1 {
+    font-size: 26vw;
+  }
+  .archive-hero-title > div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0 20px;
+    gap: 12px;
+  }
+  .archive-hero-title > div > span {
+    font-size: 8px;
+    width: 100%;
+  }
+  .archive-hero-title p {
+    font-size: 11px;
+    margin: 0;
+  }
+  .archive-hero-title a {
+    font-size: 8px;
+    gap: 8px;
+  }
+  .archive-campaign {
+    grid-template-columns: 1.3fr 1fr;
+    gap: 7px;
+  }
+  .archive-campaign-main {
+    height: 360px;
+  }
+  .archive-campaign-caption {
+    font-size: 24px;
+    left: 12px;
+    right: 12px;
+    bottom: 14px;
+  }
+  .archive-campaign-caption > a {
+    width: 30px;
+    height: 30px;
+  }
+  .archive-campaign-caption > a > svg {
+    width: 20px;
+  }
+  .archive-campaign-caption > span {
+    max-width: 95px;
+  }
+  .archive-campaign-side > div {
+    left: 12px;
+    bottom: 20px;
+  }
+  .archive-campaign-side span {
+    font-size: 34px;
+  }
+  .archive-campaign-side small {
+    font-size: 7px;
+    max-width: 100px;
+    line-height: 1.6;
+  }
+  .archive-hero-bottom {
+    font-size: 7px;
+    gap: 15px;
+  }
+  .archive-hero-bottom > span:nth-child(2) {
+    display: none;
+  }
+  .archive-shop {
+    padding: 45px 20px;
+  }
+  .archive-shop-heading h2 {
+    font-size: 44px;
+  }
+  .archive-shop-heading > span {
+    font-size: 8px;
+    width: 70px;
+    line-height: 1.6;
+    text-align: right;
+  }
+  .archive-filters {
+    gap: 7px;
+    flex-wrap: wrap;
+    margin: 22px 0;
+  }
+  .archive-filters button {
+    font-size: 8px;
+    padding: 8px 10px;
+  }
+}
