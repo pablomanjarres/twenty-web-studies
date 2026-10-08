@@ -1,0 +1,94 @@
+.wf-map-sheet {
+  position: relative;
+  min-height: 525px;
+  overflow: hidden;
+  background: #e8eddd;
+}
+.wf-map {
+  width: 100%;
+  height: 100%;
+  min-height: 525px;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+}
+.wf-map-heading {
+  position: absolute;
+  z-index: 2;
+  left: 24px;
+  top: 22px;
+  right: 24px;
+  display: flex;
+  justify-content: space-between;
+  font:
+    10px "IBM Plex Mono",
+    monospace;
+  letter-spacing: 0.1em;
+}
+.wf-postcard {
+  position: absolute;
+  bottom: 77px;
+  left: 30px;
+  width: 235px;
+  background: #fffdf5;
+  padding: 9px 9px 15px;
+  transform: rotate(-7deg);
+  box-shadow: 3px 7px 15px #162b3a25;
+  z-index: 2;
+}
+.wf-postcard img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+.wf-postcard figcaption {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 17px;
+  padding: 12px 6px 0;
+}
+.wf-postcard span {
+  display: block;
+  font:
+    8px "IBM Plex Mono",
+    monospace;
+  padding-top: 5px;
+}
+.wf-map-scale {
+  position: absolute;
+  bottom: 22px;
+  left: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font:
+    9px "IBM Plex Mono",
+    monospace;
+}
+.wf-map-scale i {
+  width: 70px;
+  height: 5px;
+  border: 1px solid var(--wf-ink);
+  background: linear-gradient(90deg, var(--wf-ink) 50%, transparent 50%);
+}
+.wf-map-scale small {
+  font-size: 8px;
+  margin-left: 8px;
+}
+.wf-route-key {
+  position: absolute;
+  right: 20px;
+  bottom: 22px;
+  display: grid;
+  gap: 8px;
+  font:
+    9px "IBM Plex Mono",
+    monospace;
+  background: #f8f7eed6;
+  padding: 12px;
+}
+.wf-route-key i {
+  display: inline-block;
+  width: 16px;
+  border-top: 2px dashed var(--wf-orange);
+  margin-right: 5px;
+}
