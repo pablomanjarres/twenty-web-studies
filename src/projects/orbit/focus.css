@@ -1,0 +1,114 @@
+.orbit-v3 .ov3-focus {
+  border-radius: 18px;
+  background:
+    radial-gradient(ellipse at 110% 10%, #bd976e 0, transparent 58%),
+    linear-gradient(125deg, #644c89, #8872af 52%, #a28299);
+  color: #faf6ff;
+  padding: 27px 24px 19px;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.orbit-v3 .ov3-focus::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  height: 360px;
+  width: 360px;
+  right: -230px;
+  top: 0;
+  transform: rotate(-22deg);
+  border: 50px solid #ddd5fb25;
+  border-radius: 50%;
+}
+.orbit-v3 .ov3-focus-label {
+  font-size: 8px;
+  letter-spacing: 1.3px;
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  color: #e8dff3;
+}
+.orbit-v3 .ov3-focus-label i {
+  height: 5px;
+  width: 5px;
+  background: #e7cf86;
+  border-radius: 50%;
+}
+.orbit-v3 .ov3-focus h2 {
+  font-size: 30px;
+  line-height: 1.15;
+  letter-spacing: -1px;
+  font-weight: 500;
+  margin-top: 28px;
+}
+.orbit-v3 .ov3-focus > p {
+  margin-top: 15px;
+  font-size: 10px;
+  line-height: 1.6;
+  max-width: 214px;
+  color: #dad0e7;
+}
+.orbit-v3 .ov3-focus-people {
+  display: flex;
+  align-items: center;
+  margin-top: 19px;
+}
+.orbit-v3 .ov3-focus-people img {
+  height: 26px;
+  width: 26px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #ffffff70;
+  margin-right: -5px;
+}
+.orbit-v3 .ov3-focus-people > span:not(.ov3-avatar-group) {
+  font-size: 9px;
+  color: #dbd0e9;
+  margin-left: 13px;
+}
+.orbit-v3 .ov3-focus-time {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #ffffff25;
+  padding-top: 17px;
+  margin-top: 23px;
+}
+.orbit-v3 .ov3-focus-time > span {
+  color: #d7cbe7;
+  font-size: 11px;
+}
+.orbit-v3 .ov3-focus-time strong {
+  font:
+    400 24px "Manrope",
+    sans-serif;
+}
+.orbit-v3 .ov3-focus-time small {
+  font:
+    8px "DM Sans",
+    sans-serif;
+  display: block;
+  color: #cec1e0;
+  text-align: right;
+  margin-top: 3px;
+}
+.orbit-v3 .ov3-focus > button {
+  margin-top: 17px;
+  background: #f4f0f7;
+  color: #6c508c;
+  padding: 11px 13px;
+  border-radius: 8px;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  font-size: 10px;
+}
+.orbit-v3 .ov3-focus-state {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #d8cce6;
+  font-size: 8px;
+  margin-top: 14px;
+}
