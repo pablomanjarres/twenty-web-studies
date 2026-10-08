@@ -1,0 +1,105 @@
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 45px 25px;
+}
+.collection-preview {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  aspect-ratio: 16/11;
+  text-decoration: none;
+  border-radius: 3px;
+}
+.collection-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  transition: transform 0.45s;
+}
+.collection-preview:hover img {
+  transform: scale(1.025);
+}
+.collection-placeholder {
+  padding: 35px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.collection-placeholder .brand-logo {
+  font-size: 25px;
+}
+.collection-placeholder p {
+  font-size: 32px;
+  line-height: 1.12;
+  max-width: 250px;
+  margin: 0;
+}
+.collection-view {
+  position: absolute;
+  bottom: 13px;
+  right: 13px;
+  background: #fff;
+  box-shadow: 0 3px 16px #0001;
+  color: #222;
+  padding: 9px 11px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 10px;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: all 0.2s;
+}
+.collection-preview:hover .collection-view,
+.collection-preview:focus-visible .collection-view {
+  opacity: 1;
+  transform: none;
+}
+.collection-card-meta {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 17px;
+}
+.collection-project-title {
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: -0.03em;
+}
+.collection-card-meta p {
+  font-size: 10px;
+  color: #888;
+  margin: 4px 0 12px;
+}
+.collection-card-meta > span {
+  font-size: 11px;
+  color: #999;
+  padding-top: 4px;
+}
+.collection-card-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  font-size: 10px;
+  color: #73736e;
+  border-top: 1px solid #ddddd7;
+  padding-top: 12px;
+}
+.collection-card-links > span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.collection-card-links a {
+  white-space: nowrap;
+  color: #222;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+}
