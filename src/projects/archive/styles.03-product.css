@@ -115,6 +115,7 @@
   text-transform: uppercase;
   letter-spacing: -0.025em;
   margin: 23px 0 0;
+  overflow-wrap: anywhere;
   text-align: center;
 }
 
