@@ -15,6 +15,16 @@
     font-size: 26px;
   }
 }
+@media (min-width: 761px) and (max-width: 900px) {
+  .cinder-poster-title h1 {
+    font-size: clamp(40px, 5.3vw, 48px);
+  }
+  .cinder-main-package {
+    width: 54vw;
+    height: 54vw;
+    top: 60px;
+  }
+}
 @media (max-width: 760px) {
   .cinder-roast-poster {
     height: auto;
