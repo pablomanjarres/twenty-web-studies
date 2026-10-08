@@ -1,0 +1,93 @@
+@media (min-width: 1700px) {
+  .soundroom-v3 .sr3-content {
+    padding: 0 65px;
+  }
+  .soundroom-v3 .sr3-app {
+    grid-template-columns: minmax(0, 1fr) 340px;
+  }
+  .soundroom-v3 .sr3-featured {
+    height: 280px;
+  }
+  .soundroom-v3 .sr3-track-play {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .soundroom-v3 .sr3-room-art {
+    height: 125px;
+  }
+  .soundroom-v3 .sr3-discovery {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media (max-width: 1350px) {
+  .soundroom-v3 {
+    grid-template-columns: 75px minmax(0, 1fr);
+  }
+  .soundroom-v3 .sr3-app {
+    grid-template-columns: minmax(0, 1fr) 270px;
+  }
+  .soundroom-v3 .sr3-content {
+    padding: 0 30px;
+  }
+  .soundroom-v3 .sr3-header {
+    gap: 14px;
+  }
+  .soundroom-v3 .sr3-header nav {
+    gap: 18px;
+  }
+  .soundroom-v3 .sr3-header input {
+    width: 115px;
+  }
+  .soundroom-v3 .sr3-listener > svg {
+    display: none;
+  }
+  .soundroom-v3 .sr3-discovery {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .soundroom-v3 .sr3-player {
+    grid-template-columns: 190px minmax(0, 1fr) 160px;
+    padding: 18px 25px;
+    gap: 20px;
+  }
+  .soundroom-v3 .sr3-volume > span {
+    display: none;
+  }
+  .soundroom-v3 .sr3-track-mood {
+    width: 60px;
+    font-size: 7px;
+  }
+  .soundroom-v3 .sr3-track-play {
+    gap: 11px;
+  }
+  .soundroom-v3 .sr3-featured-copy {
+    left: 25px;
+  }
+  .soundroom-v3 .sr3-featured-corner {
+    display: none;
+  }
+}
+@media (max-width: 1050px) {
+  .soundroom-v3 .sr3-app {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .soundroom-v3 .sr3-discovery {
+    display: none;
+  }
+  .soundroom-v3 .sr3-content {
+    padding: 0 40px;
+  }
+  .soundroom-v3 .sr3-player {
+    grid-template-columns: 190px minmax(0, 1fr) 140px;
+  }
+  .soundroom-v3 .sr3-track-mood {
+    width: 90px;
+  }
+  .soundroom-v3 .sr3-room-art {
+    height: 120px;
+  }
+  .soundroom-v3 .sr3-featured {
+    height: 255px;
+  }
+}

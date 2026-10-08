@@ -1,0 +1,65 @@
+@media (max-width: 700px) {
+  .soundroom-v3 .sr3-player {
+    padding: 13px 18px 12px;
+    gap: 12px;
+    grid-template-columns: minmax(0, 1fr) auto;
+    background: #1c1e1a;
+  }
+  .soundroom-v3 .sr3-now-playing {
+    gap: 9px;
+  }
+  .soundroom-v3 .sr3-now-playing .sr3-artwork {
+    width: 34px;
+  }
+  .soundroom-v3 .sr3-now-playing strong {
+    font-size: 10px;
+  }
+  .soundroom-v3 .sr3-now-playing small {
+    font-size: 8px;
+  }
+  .soundroom-v3 .sr3-now-playing > button {
+    display: none;
+  }
+  .soundroom-v3 .sr3-player-center {
+    display: contents;
+  }
+  .soundroom-v3 .sr3-player-buttons {
+    gap: 13px;
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .soundroom-v3 .sr3-player-buttons > button {
+    padding: 7px;
+  }
+  .soundroom-v3 .sr3-player-buttons > .sr3-player-play {
+    width: 32px;
+    height: 32px;
+  }
+  .soundroom-v3 .sr3-seek {
+    grid-column: 1/-1;
+    grid-row: 2;
+    margin: 1px 0 0;
+    gap: 8px;
+  }
+  .soundroom-v3 .sr3-seek > span {
+    font-size: 7px;
+    min-width: 21px;
+  }
+  .soundroom-v3 .sr3-volume {
+    grid-column: 1/-1;
+    grid-row: 3;
+    gap: 7px;
+    justify-content: flex-end;
+    padding-top: 2px;
+  }
+  .soundroom-v3 .sr3-volume > input {
+    width: 62px;
+  }
+  .soundroom-v3 .sr3-volume > button {
+    padding: 3px;
+  }
+  .soundroom-v3 .sr3-volume > button > svg {
+    width: 13px;
+    height: 13px;
+  }
+}
