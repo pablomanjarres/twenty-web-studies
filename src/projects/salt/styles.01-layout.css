@@ -1,0 +1,168 @@
+.salt {
+  background: #fffdf7;
+  color: #183445;
+  font-family: "DM Sans", sans-serif;
+  min-height: 100vh;
+}
+
+.salt a {
+  text-decoration: none;
+}
+
+.salt button {
+  color: inherit;
+}
+
+.salt-topline {
+  height: 30px;
+  background: #e64732;
+  color: #fffdf7;
+  display: grid;
+  place-items: center;
+  font-size: 10px;
+  letter-spacing: 0.015em;
+}
+
+.salt-header {
+  max-width: 1450px;
+  margin: auto;
+  padding: 0 66px;
+  height: 106px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.salt-header nav {
+  display: flex;
+  gap: 34px;
+  font-size: 12px;
+}
+
+.salt-header-brand {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.salt-header .brand-logo {
+  color: #e64732;
+  font:
+    34px "Tahoe",
+    serif;
+  text-transform: uppercase;
+  gap: 9px;
+}
+
+.salt-header .brand-logo > span {
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+.salt-header .brand-logo svg {
+  width: 42px;
+  height: 42px;
+}
+
+.salt-reserve {
+  border-bottom: 1px solid #183445;
+  padding-bottom: 7px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 23px;
+}
+
+.salt-hero {
+  max-width: 1450px;
+  margin: auto;
+  padding: 25px 66px 55px;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 45px;
+  align-items: center;
+}
+
+.salt-location {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  font-size: 11px;
+}
+
+.salt-hero h1 {
+  font:
+    400 clamp(48px, 5.35vw, 80px)/1.12 "Tahoe",
+    "Fraunces",
+    serif;
+  letter-spacing: -0.055em;
+  color: #e64732;
+  margin: 33px 0 25px;
+}
+
+.salt-hero-copy > p {
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.salt-button {
+  background: #e64732;
+  color: #fffdf7 !important;
+  padding: 16px 21px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  width: max-content;
+  font-size: 12px;
+  border: 0;
+  border-radius: 3px;
+}
+
+.salt-hero .salt-button {
+  margin: 29px 0 58px;
+}
+
+.salt-hero-bottom {
+  display: flex;
+  align-items: center;
+  gap: 55px;
+  font-size: 10px;
+  color: #677b85;
+}
+
+.salt-hero-bottom > a {
+  color: #183445;
+}
+
+.salt-hero-picture {
+  position: relative;
+  padding: 9px 30px 0 0;
+}
+
+.salt-hero-picture > img {
+  width: 100%;
+  height: 520px;
+  border-radius: 230px 230px 15px 15px;
+  object-fit: cover;
+  object-position: center 58%;
+}
+
+.salt-stamp {
+  position: absolute;
+  bottom: 24px;
+  right: 0;
+  background: #fffdf7;
+  border: 1px solid #e64732;
+  outline: 7px solid #fffdf7;
+  border-radius: 50%;
+  width: 140px;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transform: rotate(10deg);
+  color: #e64732;
+}
