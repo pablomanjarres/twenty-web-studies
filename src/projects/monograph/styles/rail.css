@@ -1,0 +1,96 @@
+.monograph-rail {
+  position: fixed;
+  inset: 0 auto 0 0;
+  width: 186px;
+  padding: 28px 20px 22px;
+  background: var(--mono-blue);
+  color: var(--mono-paper);
+  display: flex;
+  flex-direction: column;
+  z-index: 20;
+}
+.monograph-mark .brand-logo {
+  gap: 7px;
+  align-items: center;
+}
+.monograph-mark .brand-logo svg {
+  width: 25px;
+  height: 25px;
+}
+.monograph-mark .brand-logo span {
+  font-family: "The Foriene", serif;
+  font-size: 28px;
+  letter-spacing: -0.055em;
+}
+.monograph-rail-note {
+  margin-top: 25px !important;
+  font-family: "The Foriene", serif;
+  font-size: 22px;
+  line-height: 1.18;
+}
+.monograph-issue-label {
+  margin-top: 56px;
+  font-size: 10px;
+  display: grid;
+  gap: 13px;
+}
+.monograph-issue-label select {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #ffffff65;
+  background: transparent;
+  color: inherit;
+  border-radius: 0;
+  padding: 9px 0;
+  font-size: 17px;
+}
+.monograph-issue-label option {
+  color: var(--mono-ink);
+  background: var(--mono-paper);
+}
+.monograph-subjects {
+  display: grid;
+  margin-top: 24px;
+}
+.monograph-subjects button {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ffffff25;
+  color: inherit;
+  padding: 15px 0;
+  display: grid;
+  grid-template-columns: 23px 1fr 12px;
+  text-align: left;
+  font-size: 12px;
+}
+.monograph-subjects button span {
+  font-size: 9px;
+  opacity: 0.6;
+}
+.monograph-subjects button[aria-pressed="true"] {
+  font-weight: 700;
+}
+.monograph-subjects button[aria-pressed="true"] span:last-child {
+  opacity: 1;
+}
+.monograph-rail-bottom {
+  margin-top: auto;
+  padding-top: 46px;
+  display: grid;
+  gap: 16px;
+  font-size: 10px;
+  line-height: 1.6;
+}
+.monograph-rail-bottom > span {
+  opacity: 0.8;
+  padding-bottom: 20px;
+}
+.monograph-rail-bottom p {
+  padding-top: 16px;
+  opacity: 0.65;
+}
+.monograph-rail button:focus-visible,
+.monograph-rail a:focus-visible,
+.monograph-rail select:focus-visible {
+  outline-color: var(--mono-paper);
+}
