@@ -1,0 +1,87 @@
+.va-hero {
+  display: grid;
+  grid-template-columns: 44% 56%;
+  min-height: 640px;
+  background: var(--va-mist);
+}
+.va-hero-copy {
+  padding: 75px 7% 45px 11.4%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.va-kicker {
+  font-size: 9px;
+  letter-spacing: 1.9px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.va-hero h1 {
+  font-size: clamp(61px, 6.8vw, 97px);
+  line-height: 1.04;
+  letter-spacing: -3.5px;
+  margin: 49px 0 27px;
+  white-space: nowrap;
+}
+.va-hero h1 i {
+  letter-spacing: -2.9px;
+}
+.va-hero-copy > p {
+  font-size: 12px;
+  margin: 0 0 30px;
+  opacity: 0.8;
+}
+.va-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 38px;
+  border-bottom: 1px solid var(--va-green);
+  padding: 15px 0;
+  font-size: 11px;
+}
+.va-link:hover {
+  gap: 46px;
+}
+.va-hero-foot {
+  margin-top: auto;
+  padding-top: 50px;
+  font-size: 9px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  opacity: 0.7;
+}
+.va-hero-image {
+  position: relative;
+  min-height: 640px;
+}
+.va-hero-image > img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+  object-position: 60% center;
+}
+.va-image-note {
+  position: absolute;
+  bottom: 29px;
+  left: 30px;
+  color: #f8faee;
+  font: italic 19px "Instrument Serif";
+  text-shadow: 0 2px 15px #294b3a50;
+}
+.va-hero-down {
+  position: absolute;
+  right: 30px;
+  bottom: 23px;
+  border: 1px solid #fafaf388;
+  background: #fafaf31a;
+  color: var(--va-paper) !important;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
