@@ -1,0 +1,55 @@
+@media (max-width: 900px) {
+  .md-header-tools > button,
+  .md-sidebar nav > a,
+  .md-search,
+  .md-mode,
+  .md-row-view,
+  .md-schedule-heading > button {
+    min-height: 44px;
+  }
+  .md-sidebar nav > a,
+  .md-row-view,
+  .md-schedule-heading > button {
+    min-width: 44px;
+  }
+  .md-search input {
+    min-height: 24px;
+  }
+}
+@media (max-width: 620px) {
+  .md-main-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .md-main-grid > div,
+  .md-map-panel,
+  .md-map {
+    min-width: 0;
+  }
+  .md-map {
+    overflow: hidden;
+  }
+  .md-map > svg {
+    min-width: 0;
+    width: 100%;
+    height: auto;
+    left: 0;
+  }
+  .md-header {
+    height: 65px;
+  }
+  .md-map-route {
+    position: relative;
+    inset: auto;
+    align-self: start;
+    margin: 0 15px 12px;
+  }
+  .md-map {
+    display: flex;
+    flex-direction: column-reverse;
+    min-height: 225px;
+    padding-top: 18px;
+  }
+  .md-map > svg {
+    flex: none;
+  }
+}
