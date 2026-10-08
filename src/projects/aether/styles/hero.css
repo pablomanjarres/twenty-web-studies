@@ -141,6 +141,11 @@
   color: var(--orange);
   margin-left: auto;
 }
+.aether-flow-arrow {
+  font-size: 44px;
+  color: var(--orange);
+  font-weight: 300;
+}
 .aether-hero-balance strong {
   display: block;
   font-size: 36px;
@@ -152,4 +157,22 @@
   display: block;
   font-size: 10px;
   color: #929888;
+}
+.aether-ledger-link {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 11px;
+  align-self: flex-end;
+  padding-bottom: 7px;
+}
+@keyframes aether-arrive {
+  from {
+    opacity: 0;
+    transform: translateY(24px) rotate(-4deg);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
