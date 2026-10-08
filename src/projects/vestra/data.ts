@@ -1,21 +1,22 @@
-import { Mountain, Leaf, UtensilsCrossed } from "lucide-react";
-
-export const asset = (name: string) =>
+export const image = (name: string) =>
   `${import.meta.env.BASE_URL}images/vestra/${name}.jpg`;
-export const experiences = [
+export const rooms = [
   {
-    icon: Mountain,
-    title: "Follow the quiet paths",
-    copy: "Alpine trails, fresh air, and a new perspective around every bend.",
+    name: "Valley room",
+    rate: 245,
+    area: "32 m²",
+    note: "A sheltered terrace and a view across the valley.",
   },
   {
-    icon: UtensilsCrossed,
-    title: "Taste the season",
-    copy: "Honest local ingredients. A kitchen guided by the land around us.",
+    name: "Ridge suite",
+    rate: 340,
+    area: "48 m²",
+    note: "Two quiet rooms, a deep bath and the morning light.",
   },
   {
-    icon: Leaf,
-    title: "Find your balance",
-    copy: "A forest sauna, warm water, and room to reconnect with yourself.",
+    name: "Forest cabin",
+    rate: 385,
+    area: "54 m²",
+    note: "An independent cabin at the edge of the trees.",
   },
 ];
