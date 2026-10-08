@@ -1,0 +1,40 @@
+@media (max-width: 1000px) {
+  .og-title {
+    min-height: 470px;
+  }
+  .og-hero-collage {
+    height: 355px;
+    right: 5%;
+    width: 34%;
+  }
+  .og-paper-tag {
+    font-size: 17px;
+    right: -14%;
+    padding: 15px;
+  }
+  .og-work-heading h2 {
+    font-size: 52px;
+  }
+  .og-work-image {
+    height: 390px;
+  }
+  .og-frequency .og-work-image {
+    height: 340px;
+  }
+  .og-work-poster {
+    font-size: 48px;
+  }
+  .og-studio h2 {
+    font-size: 50px;
+  }
+  .og-contact h2 {
+    font-size: 58px;
+  }
+  .og-contact {
+    gap: 50px;
+  }
+  .og-studio-symbol .brand-logo svg {
+    width: 180px;
+    height: 180px;
+  }
+}
