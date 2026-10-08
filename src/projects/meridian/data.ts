@@ -1,11 +1,15 @@
 export const ports = [
-  { name: "Los Angeles", code: "USLAX", x: 155, y: 155 },
-  { name: "Newark", code: "USEWR", x: 285, y: 143 },
-  { name: "Rotterdam", code: "NLRTM", x: 463, y: 105 },
-  { name: "Hamburg", code: "DEHAM", x: 490, y: 100 },
-  { name: "Singapore", code: "SGSIN", x: 678, y: 241 },
-  { name: "Shanghai", code: "CNSHA", x: 755, y: 160 },
-];
+  { name: "Los Angeles", code: "USLAX", longitude: -118.25, latitude: 33.74 },
+  { name: "Newark", code: "USEWR", longitude: -74.14, latitude: 40.68 },
+  { name: "Rotterdam", code: "NLRTM", longitude: 4.28, latitude: 51.95 },
+  { name: "Hamburg", code: "DEHAM", longitude: 9.95, latitude: 53.54 },
+  { name: "Singapore", code: "SGSIN", longitude: 103.75, latitude: 1.26 },
+  { name: "Shanghai", code: "CNSHA", longitude: 121.5, latitude: 31.23 },
+].map((port) => ({
+  ...port,
+  x: ((port.longitude + 180) / 360) * 1000,
+  y: ((90 - port.latitude) / 180) * 600,
+}));
 
 export type Shipment = {
   id: string;
@@ -82,8 +86,20 @@ export const modes = ["All modes", "Ocean", "Air", "Road"];
 export const portFor = (name: string) =>
   ports.find((port) => port.name === name) ?? ports[0];
 
-export const pathFor = (shipment: Shipment) => {
-  const a = portFor(shipment.origin);
-  const b = portFor(shipment.destination);
-  return `M${a.x} ${a.y}Q${(a.x + b.x) / 2} ${Math.min(a.y, b.y) - 75} ${b.x} ${b.y}`;
-};
+export const filterShipments = (
+  shipments: Shipment[],
+  query: string,
+  mode: string,
+) =>
+  shipments.filter(
+    (item) =>
+      (mode === "All modes" || item.mode === mode) &&
+      `${item.id} ${item.origin} ${item.destination} ${item.status}`
+        .toLowerCase()
+        .includes(query.toLowerCase()),
+  );
+
+export type NetworkView = "network" | "port" | "manifest" | "study";
+
+export const coordinatesFor = (port: (typeof ports)[number]) =>
+  `${Math.abs(port.latitude).toFixed(2)}° ${port.latitude >= 0 ? "N" : "S"} / ${Math.abs(port.longitude).toFixed(2)}° ${port.longitude >= 0 ? "E" : "W"}`;
