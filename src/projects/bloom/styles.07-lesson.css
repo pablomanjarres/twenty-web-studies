@@ -1,0 +1,172 @@
+.bloom-lesson-task {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #a0aa97;
+  font-size: 9px;
+  margin: 20px 0;
+}
+
+.bloom-complete-button {
+  background: #dce9af;
+  border: 0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 14px;
+  width: 100%;
+  font-size: 10px;
+}
+
+.bloom-complete-button:disabled {
+  cursor: default;
+}
+
+@media (min-width: 1650px) {
+  .bloom-sidebar {
+    width: 240px;
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+  .bloom-main-grid {
+    grid-template-columns: minmax(0, 1fr) 320px;
+    gap: 28px;
+  }
+  .bloom-learning-illustration {
+    right: 55px;
+    width: 305px;
+    height: 230px;
+  }
+  .bloom-growth h2 {
+    font-size: 39px;
+  }
+  .bloom-growth p {
+    font-size: 11px;
+  }
+  .bloom-growth {
+    min-height: 285px;
+    padding: 34px;
+  }
+  .bloom-course-art {
+    height: 150px;
+  }
+  .bloom-course-content h3 {
+    font-size: 12px;
+  }
+  .bloom-course-content p {
+    font-size: 9px;
+  }
+  .bloom-course-content {
+    padding: 18px;
+  }
+  .bloom-calendar,
+  .bloom-learning-chart {
+    padding: 25px;
+  }
+  .bloom-event h3 {
+    font-size: 11px;
+  }
+  .bloom-event p {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 1150px) {
+  .bloom-sidebar {
+    width: 185px;
+    padding: 28px 17px;
+  }
+  .bloom-main {
+    padding: 28px 24px 15px;
+  }
+  .bloom-topbar {
+    padding: 20px 24px;
+    gap: 14px;
+  }
+  .bloom-main-grid {
+    grid-template-columns: minmax(0, 1fr) 240px;
+    gap: 18px;
+  }
+  .bloom-growth {
+    padding: 25px;
+    min-height: 265px;
+  }
+  .bloom-learning-illustration {
+    width: 205px;
+    height: 175px;
+    right: -10px;
+    opacity: 0.9;
+  }
+  .bloom-growth h2 {
+    font-size: 31px;
+  }
+  .bloom-banner-goal {
+    right: 18px;
+    top: 19px;
+  }
+  .bloom-banner-goal > svg {
+    width: 30px;
+    height: 30px;
+  }
+  .bloom-banner-goal > span > b {
+    font-size: 8px;
+  }
+  .bloom-banner-goal > span > small {
+    font-size: 6px;
+  }
+  .bloom-growth p {
+    font-size: 8px;
+  }
+  .bloom-progress-stats article {
+    padding: 13px 11px;
+  }
+  .bloom-progress-stats article > div {
+    font-size: 7px;
+    gap: 5px;
+  }
+  .bloom-progress-stats article > b {
+    font-size: 21px;
+  }
+  .bloom-course-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .bloom-course-art {
+    height: 115px;
+  }
+  .bloom-section-heading h2 {
+    font-size: 12px;
+  }
+  .bloom-section-heading > a {
+    font-size: 7px;
+  }
+  .bloom-greeting h1 {
+    font-size: 24px;
+  }
+  .bloom-streak {
+    padding: 9px;
+  }
+  .bloom-streak b {
+    font-size: 8px;
+  }
+  .bloom-calendar,
+  .bloom-learning-chart {
+    padding: 20px 15px;
+  }
+  .bloom-event {
+    gap: 9px;
+    padding: 14px 10px;
+  }
+  .bloom-community {
+    padding: 20px;
+  }
+  .bloom-path-steps button {
+    font-size: 7px;
+    padding: 7px;
+    gap: 7px;
+  }
+  .bloom-path-steps b {
+    font-size: 8px;
+  }
+}
