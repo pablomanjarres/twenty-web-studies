@@ -1,0 +1,107 @@
+.kanso-object {
+  min-width: 0;
+  align-self: start;
+}
+.kanso-object-image {
+  width: 100%;
+  height: 205px;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  padding: 0;
+  transition: transform 0.3s ease;
+}
+.kanso-object-image:hover {
+  transform: translateY(-5px);
+}
+.kanso-object-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(5px 12px 8px #543c3412);
+}
+.kanso-object-cup .kanso-object-image {
+  height: 218px;
+}
+.kanso-object-bowl {
+  padding-top: 42px;
+}
+.kanso-object-bowl .kanso-object-image {
+  height: 176px;
+}
+.kanso-object-vase .kanso-object-image {
+  height: 240px;
+}
+.kanso-object-plate .kanso-object-image {
+  height: 170px;
+}
+.kanso-object-pitcher {
+  margin-top: -12px;
+}
+.kanso-object-pitcher .kanso-object-image {
+  height: 194px;
+}
+.kanso-object-tumbler {
+  padding-top: 10px;
+}
+.kanso-object-tumbler .kanso-object-image {
+  height: 172px;
+}
+.kanso-object-caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 12px;
+}
+.kanso-object-caption button {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  text-align: left;
+  padding: 0;
+}
+.kanso-object-caption h2 {
+  font-size: 22px;
+  line-height: 1.15;
+}
+.kanso-object-caption > span {
+  font-size: 12px;
+}
+.kanso-object-spec {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 10px;
+  margin-top: 8px;
+  color: var(--kanso-muted);
+}
+.kanso-shelf-foot {
+  padding-top: 18px;
+  border-top: 1px solid var(--kanso-line);
+}
+.kanso-shelf-foot a {
+  border-bottom: 1px solid var(--kanso-line);
+}
+.kanso-shelf-filtered {
+  align-content: start;
+}
+.kanso-shelf-filtered .kanso-object {
+  margin: 0;
+  padding: 0;
+}
+.kanso-empty-shelf {
+  grid-column: 1/-1;
+  align-self: center;
+  text-align: center;
+  padding: 100px 0;
+}
+.kanso-empty-shelf h2 {
+  font-size: 35px;
+}
+.kanso-empty-shelf p {
+  margin: 15px 0;
+}
+.kanso-empty-shelf button {
+  text-decoration: underline;
+}
