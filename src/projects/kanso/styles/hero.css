@@ -1,0 +1,105 @@
+.kanso-hero {
+  background: #e9d6d1;
+  display: grid;
+  grid-template-columns: 1fr 1.06fr;
+  min-height: 650px;
+  position: relative;
+  padding: 0 5%;
+}
+.kanso-hero-copy {
+  padding: 64px 0 55px;
+  position: relative;
+  z-index: 1;
+}
+.kanso-hero-copy > span {
+  font-size: 10px;
+  color: #96776a;
+}
+.kanso h1,
+.kanso h2,
+.kanso h3 {
+  font-family: "Commune", "Instrument Serif", serif;
+  font-weight: 400;
+  letter-spacing: -0.045em;
+}
+.kanso h1 {
+  font-size: clamp(55px, 6.1vw, 88px);
+  line-height: 1.05;
+  margin: 30px 0 25px;
+}
+.kanso h1 em {
+  font-weight: 400;
+  font-style: italic;
+}
+.kanso-hero-copy > p {
+  font-size: 12px;
+  line-height: 1.8;
+  max-width: 320px;
+  color: #876858;
+  margin: 0 0 30px;
+}
+.kanso-shop-link {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 53px;
+  border-bottom: 1px solid #b69b8b;
+  padding: 12px 0;
+  font-size: 11px;
+}
+.kanso-hero-photo {
+  position: relative;
+  align-self: stretch;
+  min-width: 0;
+  overflow: hidden;
+}
+.kanso-hero-photo > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: 29% center;
+  mix-blend-mode: multiply;
+}
+.kanso-hero-product {
+  position: absolute;
+  left: 22px;
+  right: 0;
+  bottom: 26px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  font-size: 8px;
+  color: #856d5c;
+}
+.kanso-hero-product > span:last-child {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.kanso-stamp {
+  position: absolute;
+  left: 47%;
+  top: 45px;
+  width: 78px;
+  height: 78px;
+  border: 1px solid #ad8b7d;
+  border-radius: 50%;
+  color: #98786a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  transform: rotate(14deg);
+  z-index: 1;
+}
+.kanso-stamp span {
+  font-size: 7px;
+  text-align: center;
+  line-height: 1.2;
+  letter-spacing: 1px;
+}
+.kanso-stamp i {
+  font-size: 16px;
+  font-style: normal;
+}
