@@ -1,188 +1,34 @@
 @media (max-width: 1050px) {
-  .ci-hero {
-    gap: 15px;
-    padding-top: 42px;
-    min-height: 580px;
-  }
-  .ci-hero h1 {
-    font-size: 7.5vw;
-    letter-spacing: -3px;
-  }
-  .ci-hero-photo {
-    min-height: 450px;
-    margin-left: 10px;
-    margin-right: 0;
-  }
-  .ci-roast-seal {
-    left: -35px;
-    top: 30px;
-    width: 126px;
-    height: 126px;
-  }
-  .ci-roast-seal > span {
-    inset: 38px 9px;
-    font-size: 16px;
-  }
-  .ci-roast-seal i {
-    font-size: 9px;
-  }
-  .ci-product-controls {
-    flex-direction: column;
-  }
-  .ci-product-controls select,
-  .ci-product-controls button {
-    width: 100%;
-    border-right: 0;
-  }
-  .ci-product-art {
-    height: 280px;
-  }
-  .ci-coffee-bag {
-    height: 250px;
-  }
-  .ci-story-copy {
-    padding: 50px 9%;
-  }
-  .ci-story-copy h2 {
-    font-size: 40px;
-  }
 }
 @media (max-width: 650px) {
-  .ci-header {
-    height: 74px;
-    padding: 0 5%;
-  }
-  .ci-header .brand-logo {
-    font-size: 25px;
-  }
-  .ci-header nav {
-    display: none;
-  }
-  .ci-basket-button {
-    padding: 10px;
-    font-size: 10px;
-  }
-  .ci-hero {
-    padding: 35px 5% 50px;
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-  .ci-hero-heading {
-    padding: 0;
-  }
-  .ci-hero h1 {
-    font-size: 14vw;
-    letter-spacing: -2.5px;
-    margin: 23px 0 5px;
-  }
-  .ci-hero-heading > p {
-    font-size: 14px;
-    margin: 15px 0 22px;
-  }
-  .ci-hero-bottom {
-    display: none;
-  }
-  .ci-hero-photo {
-    height: 390px;
-    min-height: 0;
-    margin: 5px 0 0 12%;
-  }
-  .ci-roast-seal {
-    left: -42px;
-    top: 35px;
-  }
-  .ci-coffee-section {
-    padding: 70px 5% 55px;
-  }
-  .ci-section-intro {
-    display: block;
-    margin-bottom: 28px;
-  }
-  .ci-section-intro h2 {
-    font-size: 43px;
-    letter-spacing: -1.5px;
-  }
-  .ci-section-intro > p {
-    font-size: 12px;
-    margin-top: 22px;
-  }
-  .ci-coffee-grid {
-    grid-template-columns: 1fr;
-    gap: 35px;
-  }
-  .ci-product-art {
-    height: 330px;
-  }
-  .ci-coffee-bag {
-    height: 300px;
-  }
-  .ci-product-controls {
-    flex-direction: row;
-  }
-  .ci-product-controls select {
-    width: 45%;
-    border-right: 1px solid #38271f40;
-  }
-  .ci-product-controls button {
-    width: 55%;
-  }
-  .ci-story {
-    grid-template-columns: 1fr;
-  }
-  .ci-story-photo {
-    min-height: 350px;
-  }
-  .ci-story-copy {
-    padding: 42px 7% 45px;
-  }
-  .ci-story-copy h2 {
-    font-size: 40px;
-  }
-  .ci-footer {
-    padding: 43px 5% 22px;
-  }
-  .ci-footer-top {
-    display: block;
-  }
-  .ci-footer-top h2 {
-    font-size: 36px;
-  }
-  .ci-footer-top > div {
-    margin-top: 32px;
-  }
-  .ci-footer-word {
-    font-size: 24vw;
-    margin-top: 32px;
-    letter-spacing: -1.3vw;
-  }
-  .ci-footer-word > span {
-    font-size: 16px;
-    top: 15px;
-  }
-  .ci-footer-bottom {
-    font-size: 9px;
-  }
-  .ci-basket {
-    padding: 25px;
-  }
-  .ci-basket-top h2 {
-    font-size: 26px;
-  }
 }
 
 @media (max-width: 900px) {
-  .ci-basket-button,
-  .ci-product-controls select,
-  .ci-product-controls button,
-  .ci-basket-top > button,
-  .ci-quantity button {
-    min-height: 44px;
+}@media (max-width: 1100px) {
+  .cinder-order-strip {
+    gap: 18px;
+    grid-template-columns: 1.5fr 0.6fr 1fr;
+    padding: 24px 4%;
   }
-  .ci-basket-top > button,
-  .ci-quantity button {
-    min-width: 44px;
+  .cinder-grind-controls {
+    display: block;
   }
-  .ci-footer-bottom > a {
-    min-height: 44px;
+  .cinder-grind-controls > div {
+    margin-top: 10px;
+  }
+  .cinder-order-quantity {
+    display: block;
+  }
+  .cinder-order-quantity > .cinder-label {
+    margin-bottom: 10px;
+  }
+  .cinder-batch {
+    gap: 5%;
+  }
+  .cinder-batch h2 {
+    font-size: 34px;
+  }
+  .cinder-roast-ledger > div {
+    gap: 12px;
   }
 }
