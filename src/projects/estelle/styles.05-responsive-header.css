@@ -1,0 +1,70 @@
+@media (max-width: 1000px) {
+  .estelle-header {
+    padding: 0 35px;
+  }
+  .estelle-header nav {
+    gap: 20px;
+  }
+  .estelle-hero {
+    height: 620px;
+  }
+  .estelle-hero-copy {
+    left: 45px;
+    top: 140px;
+  }
+  .estelle-hero h1 {
+    font-size: 65px;
+  }
+  .estelle-hero-bottom {
+    left: 35px;
+    right: 35px;
+  }
+  .estelle-campaign {
+    object-position: 59% center;
+  }
+  .estelle-hero:after {
+    background: linear-gradient(90deg, #211419bb, transparent 80%);
+  }
+  .estelle-collection {
+    padding: 70px 35px;
+  }
+  .estelle-pieces {
+    gap: 17px;
+  }
+  .estelle-piece-photo {
+    height: 270px;
+  }
+  .estelle-piece-title {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 18px;
+  }
+  .estelle-piece-title h3 {
+    font-size: 21px;
+  }
+  .estelle-piece > p {
+    font-size: 7px;
+  }
+  .estelle-atelier-photo {
+    height: 580px;
+  }
+  .estelle-atelier-copy {
+    padding: 60px 12%;
+  }
+  .estelle-atelier h2 {
+    font-size: 49px;
+  }
+  .estelle-visit {
+    padding: 70px 7%;
+    gap: 60px;
+  }
+  .estelle-visit h2 {
+    font-size: 47px;
+  }
+  .estelle-footer {
+    padding: 30px 35px;
+  }
+  .estelle-footer > span {
+    display: none;
+  }
+}
