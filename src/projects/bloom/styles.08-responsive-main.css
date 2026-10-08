@@ -1,0 +1,55 @@
+@media (max-width: 900px) {
+  .bloom-main-grid {
+    grid-template-columns: 1fr;
+  }
+  .bloom-right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+  .bloom-community {
+    display: none;
+  }
+  .bloom-learning-illustration {
+    width: 245px;
+    right: 12px;
+    height: 205px;
+    opacity: 1;
+  }
+  .bloom-growth {
+    min-height: 255px;
+  }
+  .bloom-course-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .bloom-course:nth-child(3) {
+    display: block;
+  }
+  .bloom-course-art {
+    height: 113px;
+  }
+  .bloom-course-content h3 {
+    font-size: 9px;
+  }
+  .bloom-greeting h1 {
+    font-size: 24px;
+  }
+  .bloom-greeting p {
+    font-size: 9px;
+  }
+  .bloom-streak {
+    display: none;
+  }
+  .bloom-sidebar-prompt {
+    margin-top: 45px;
+  }
+  .bloom-sidebar-bottom {
+    padding-top: 50px;
+  }
+  .bloom-search > span {
+    display: none;
+  }
+  .bloom-topbar > span:first-child {
+    font-size: 9px;
+  }
+}
