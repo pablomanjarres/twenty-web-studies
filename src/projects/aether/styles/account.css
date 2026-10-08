@@ -94,3 +94,61 @@
   color: #737a65;
   margin-top: 5px;
 }
+.aether-ledger > button > span,
+.aether-ledger strong {
+  font:
+    12px "IBM Plex Mono",
+    monospace;
+}
+.aether-invoice-state {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  color: #657454;
+}
+.aether-allocation {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 0.7fr;
+  gap: 60px;
+  border-top: 1px solid #161614;
+  margin-top: 15px;
+  padding-top: 38px;
+}
+.aether-allocation > div > span {
+  font:
+    10px "IBM Plex Mono",
+    monospace;
+}
+.aether-allocation strong {
+  display: block;
+  font:
+    500 42px "Manrope",
+    sans-serif;
+  letter-spacing: -0.055em;
+  margin: 15px 0;
+}
+.aether-allocation small {
+  font-size: 11px;
+  color: #707866;
+}
+.aether-allocation a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 1px solid #b8bcaa;
+  padding-left: 30px;
+  font-size: 19px;
+  letter-spacing: -0.03em;
+}
+.aether-allocation-track {
+  height: 3px;
+  width: 100%;
+  background: #d3d7c6;
+  margin-top: 20px;
+}
+.aether-allocation-track i {
+  width: 25%;
+  height: 100%;
+  background: #738267;
+  display: block;
+}
