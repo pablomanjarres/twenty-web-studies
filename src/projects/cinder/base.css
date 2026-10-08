@@ -1,65 +1,86 @@
-.cinder-page {
-  --ci-brick: #9f3429;
-  --ci-paper: #f5edd9;
-  --ci-butter: #eec76a;
-  --ci-ink: #38271f;
-  color: var(--ci-ink);
-  background: var(--ci-paper);
+.cinder {
+  --cinder-brick: #9f3429;
+  --cinder-cream: #f5edd9;
+  --cinder-ink: #38271f;
+  --cinder-yellow: #eec76a;
+  --cinder-line: #38271f35;
+  background: var(--cinder-cream);
+  color: var(--cinder-ink);
   font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  line-height: 1.55;
 }
-.cinder-page a {
+.cinder * {
+  box-sizing: border-box;
+}
+.cinder h1,
+.cinder h2,
+.cinder h3,
+.cinder p,
+.cinder figure {
+  margin: 0;
+}
+.cinder h1,
+.cinder h2,
+.cinder h3 {
+  font-family: "Grindela", serif;
+  font-weight: 400;
+}
+.cinder button,
+.cinder input {
+  font: inherit;
+  color: inherit;
+}
+.cinder button {
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+.cinder button:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+.cinder a {
   color: inherit;
   text-decoration: none;
 }
-.cinder-page button,
-.cinder-page select {
-  cursor: pointer;
+.cinder button:focus-visible,
+.cinder a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
 }
-.cinder-page h1,
-.cinder-page h2,
-.cinder-page h3 {
-  font-family: "Grindela", "Fraunces", serif;
-  font-weight: 400;
-  margin: 0;
+.cinder-label {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  display: block;
 }
-.cinder-page p {
-  line-height: 1.65;
-}
-.ci-header {
-  height: 94px;
-  padding: 0 5.5%;
-  background: var(--ci-brick);
-  color: var(--ci-paper);
+.cinder-header {
+  height: 73px;
+  padding: 0 4%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid #f5edd93d;
+  gap: 30px;
+  border-bottom: 1px solid var(--cinder-line);
+  font-size: 11px;
 }
-.ci-header .brand-logo {
+.cinder-header .brand-logo {
   font-family: "Grindela", serif;
-  font-size: 29px;
-  letter-spacing: -1.5px;
+  font-size: 32px;
+  gap: 7px;
 }
-.ci-header .brand-logo svg {
-  width: 30px;
-  height: 35px;
+.cinder-header .brand-logo svg {
+  width: 26px;
+  height: 26px;
 }
-.ci-header nav {
-  display: flex;
-  gap: 34px;
-  font-size: 13px;
-}
-.ci-header nav a:hover {
-  color: var(--ci-butter);
-}
-.ci-basket-button {
+.cinder-header nav {
   display: flex;
   align-items: center;
-  gap: 9px;
-  color: var(--ci-paper);
-  border: 1px solid #f5edd966;
-  border-radius: 3px;
-  background: transparent;
-  padding: 11px 15px;
-  font-size: 12px;
+  gap: 27px;
+}
+.cinder-header button {
+  font-size: 11px;
+  padding: 8px 0;
 }
