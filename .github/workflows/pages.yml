@@ -1,7 +1,7 @@
 name: Publish website collection
 on:
   push:
-    branches: [trunk, collection, redesign-v2]
+    branches: [trunk, collection, redesign-v2, original-studies]
   pull_request:
     branches: [trunk, collection]
   workflow_dispatch:

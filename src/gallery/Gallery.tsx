@@ -14,9 +14,9 @@ export function Gallery() {
   const [group, setGroup] = useState<CollectionGroup>("All projects");
   const [query, setQuery] = useState("");
   const filtered = projects.filter(
-    ({ brand }) =>
+    ({ brand, original }) =>
       (group === "All projects" || groupFor(brand) === group) &&
-      `${brand.name} ${brand.category} ${brand.tagline}`
+      `${brand.name} ${brand.category} ${brand.tagline} ${original ? "original" : ""}`
         .toLowerCase()
         .includes(query.toLowerCase()),
   );
@@ -30,17 +30,17 @@ export function Gallery() {
               Independent identities, considered interfaces.
             </p>
             <h1>
-              Twenty different
+              Twenty-four different
               <br />
               ways to see the web.
             </h1>
           </div>
           <div className="collection-intro-note">
-            <span>20</span>
+            <span>{projects.length}</span>
             <p>
               From a quiet alpine retreat to a bustling product workspace.
-              Twenty complete visual worlds, each with a purpose and a
-              personality of its own.
+              Twenty new visual worlds and four original studies, each with a
+              purpose and a personality of its own.
             </p>
             <a href="#projects">
               Find your perspective <ArrowUpRight size={18} />
@@ -55,10 +55,11 @@ export function Gallery() {
             setQuery={setQuery}
           />
           <div className="collection-grid">
-            {filtered.map(({ brand }) => (
+            {filtered.map(({ brand, original }) => (
               <ProjectCard
                 key={brand.slug}
                 brand={brand}
+                original={original}
                 index={projects.findIndex((p) => p.brand.slug === brand.slug)}
               />
             ))}
