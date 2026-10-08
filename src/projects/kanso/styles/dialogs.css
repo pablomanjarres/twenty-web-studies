@@ -1,0 +1,175 @@
+.kanso-dialog {
+  border: 0;
+  color: var(--kanso-ink);
+  background: var(--kanso-ivory);
+  padding: 0;
+  max-height: 88dvh;
+  box-shadow: 0 30px 100px #31221b25;
+}
+.kanso-dialog::backdrop {
+  background: #36261f60;
+  backdrop-filter: blur(4px);
+}
+.kanso-dialog-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1;
+  padding: 6px;
+}
+.kanso-product-dialog[open] {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  width: min(920px, calc(100% - 40px));
+}
+.kanso-detail-image {
+  background: var(--kanso-paper);
+  min-height: 440px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+}
+.kanso-detail-image img {
+  width: 100%;
+  max-height: 450px;
+  object-fit: contain;
+}
+.kanso-detail-copy {
+  padding: 55px 38px 38px;
+}
+.kanso-detail-copy h2 {
+  font-size: 42px;
+  line-height: 1.05;
+  margin: 19px 0;
+}
+.kanso-detail-copy > p:not(.kanso-detail-note) {
+  font-size: 13px;
+  line-height: 1.8;
+}
+.kanso-detail-copy dl {
+  margin: 28px 0;
+}
+.kanso-detail-copy dl > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  border-bottom: 1px solid var(--kanso-line);
+  padding: 9px 0;
+  font-size: 11px;
+}
+.kanso-detail-copy dd {
+  margin: 0;
+  text-align: right;
+}
+.kanso-detail-copy dt {
+  color: var(--kanso-muted);
+}
+.kanso-detail-order {
+  display: flex;
+  gap: 13px;
+}
+.kanso-quantity {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--kanso-line);
+}
+.kanso-quantity button {
+  height: 43px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.kanso-quantity output {
+  width: 23px;
+  text-align: center;
+  font-size: 12px;
+}
+.kanso-add {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  background: var(--kanso-ink) !important;
+  color: var(--kanso-ivory) !important;
+  padding: 13px 18px !important;
+  font-size: 12px !important;
+  flex: 1;
+}
+.kanso-detail-note {
+  font-size: 10px;
+  line-height: 1.6;
+  margin-top: 18px;
+}
+.kanso-view-bag {
+  font-size: 12px;
+  text-decoration: underline;
+  padding: 0;
+  margin-top: 17px;
+}
+.kanso-bag-dialog {
+  width: min(480px, calc(100% - 30px));
+  padding: 30px;
+}
+.kanso-bag-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.kanso-bag-top h2 {
+  font-size: 34px;
+}
+.kanso-bag-top button {
+  padding: 5px;
+}
+.kanso-bag-items > article {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-bottom: 1px solid var(--kanso-line);
+  padding: 13px 0;
+}
+.kanso-bag-items img {
+  width: 85px;
+  height: 90px;
+  object-fit: contain;
+  background: var(--kanso-paper);
+}
+.kanso-bag-items article > div {
+  flex: 1;
+}
+.kanso-bag-items h3 {
+  font-size: 21px;
+}
+.kanso-bag-items p {
+  font-size: 11px;
+  margin: 6px 0;
+}
+.kanso-bag-items strong {
+  font-size: 12px;
+  font-weight: 500;
+}
+.kanso-bag-total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  font-size: 13px;
+}
+.kanso-bag-dialog > .kanso-add {
+  width: 100%;
+  margin-top: 25px;
+}
+.kanso-empty-bag {
+  padding: 35px 0;
+}
+.kanso-empty-bag > a {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 12px;
+  margin-top: 20px;
+  text-decoration: underline;
+}
