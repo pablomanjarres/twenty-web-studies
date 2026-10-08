@@ -1,0 +1,161 @@
+.orbit-v3 .ov3-navigation {
+  background: #fff;
+  border-right: 1px solid var(--ov3-line);
+  padding: 30px 18px 20px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.orbit-v3 .ov3-navigation > .brand-logo {
+  font:
+    700 25px "Manrope",
+    sans-serif;
+  gap: 7px;
+  padding: 0 12px;
+}
+.orbit-v3 .ov3-navigation > .brand-logo svg {
+  width: 26px;
+  height: 26px;
+}
+.orbit-v3 .ov3-workspace {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  border: 1px solid #e5e5de;
+  border-radius: 9px;
+  margin: 30px 0 27px;
+  padding: 10px 8px;
+  font-size: 11px;
+  font-weight: 600;
+}
+.orbit-v3 .ov3-workspace > svg {
+  margin-left: auto;
+  color: #969a96;
+}
+.orbit-v3 .ov3-workspace small {
+  display: block;
+  font-size: 9px;
+  font-weight: 400;
+  color: #90958e;
+  margin-top: 3px;
+}
+.orbit-v3 .ov3-workspace-icon {
+  height: 27px;
+  width: 27px;
+  display: grid;
+  place-items: center;
+  background: #efede8;
+  border-radius: 7px;
+  font:
+    20px "Instrument Serif",
+    serif;
+}
+.orbit-v3 .ov3-nav-label {
+  font-size: 9px;
+  letter-spacing: 1.4px;
+  color: #9b9f98;
+  padding: 0 10px;
+  margin-bottom: 12px;
+}
+.orbit-v3 .ov3-navigation nav {
+  display: grid;
+  gap: 6px;
+}
+.orbit-v3 .ov3-navigation nav button {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 13px 12px;
+  text-align: left;
+  border-radius: 8px;
+  color: #7f857e;
+  font-size: 12px;
+}
+.orbit-v3 .ov3-navigation nav button[aria-current="page"] {
+  background: #f0ebff;
+  color: #6744dc;
+  font-weight: 600;
+}
+.orbit-v3 .ov3-navigation nav button:hover {
+  background: #f6f5f9;
+}
+.orbit-v3 .ov3-navigation nav button i {
+  font-size: 9px;
+  font-style: normal;
+  background: #e4e5df;
+  border-radius: 4px;
+  padding: 2px 5px;
+  margin-left: auto;
+}
+.orbit-v3 .ov3-project-nav {
+  margin-top: 30px;
+  border-top: 1px solid #f0f0eb;
+  padding-top: 25px;
+}
+.orbit-v3 .ov3-project-nav button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px;
+  font-size: 11px;
+  white-space: nowrap;
+}
+.orbit-v3 .ov3-project-nav button > i {
+  width: 7px;
+  height: 7px;
+  background: #d9ac57;
+  border-radius: 3px;
+}
+.orbit-v3 .ov3-project-nav button > svg {
+  margin-left: auto;
+  color: #a3a79f;
+}
+.orbit-v3 .ov3-project-nav > span {
+  display: block;
+  color: #999e96;
+  padding: 3px 9px;
+  font-size: 9px;
+}
+.orbit-v3 .ov3-nav-foot {
+  margin-top: auto;
+  padding-top: 70px;
+}
+.orbit-v3 .ov3-nav-foot > svg {
+  color: #987cd9;
+  margin: 0 11px 9px;
+}
+.orbit-v3 .ov3-nav-foot > p {
+  color: #999d96;
+  font:
+    15px/1.4 "Instrument Serif",
+    serif;
+  margin: 0 11px 29px;
+}
+.orbit-v3 .ov3-nav-foot > div {
+  border-top: 1px solid #eeefe8;
+  padding: 17px 5px 0;
+  display: flex;
+  gap: 9px;
+  align-items: center;
+}
+.orbit-v3 .ov3-nav-foot img {
+  width: 31px;
+  height: 31px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.orbit-v3 .ov3-nav-foot > div span {
+  font-size: 10px;
+  font-weight: 600;
+}
+.orbit-v3 .ov3-nav-foot small {
+  display: block;
+  color: #92978f;
+  font-size: 9px;
+  font-weight: 400;
+  margin-top: 3px;
+}
+.orbit-v3 .ov3-nav-foot > div svg {
+  margin-left: auto;
+  color: #999f96;
+}
