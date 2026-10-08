@@ -42,8 +42,7 @@ export function LearningWelcome({
         </strong>
         <span>
           Complete both courses.
-          <br />
-          Celebrate a new foundation.
+          <br /> Celebrate a new foundation.
         </span>
         <small>
           {completed.length} / {lessons.length} lessons{" "}
