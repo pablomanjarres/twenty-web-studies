@@ -1,0 +1,103 @@
+.hc-release-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  padding: 5px 0;
+  white-space: normal;
+}
+.hc-release-detail > div {
+  display: grid;
+  gap: 8px;
+}
+.hc-release-detail > div > span {
+  font-size: 8px;
+  color: #a5b0c3;
+  letter-spacing: 0.06em;
+}
+.hc-release-detail strong {
+  font-size: 10px;
+  font-weight: 550;
+  color: #667797;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.hc-release-detail small {
+  font-size: 8px;
+  color: #a3afc1;
+}
+.hc-release-detail p {
+  grid-column: 1/-1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f1f5fd;
+  border: 1px solid #e5ecfa;
+  border-radius: 6px;
+  padding: 10px;
+  margin: 0;
+  font:
+    9px "IBM Plex Mono",
+    monospace;
+  overflow-wrap: anywhere;
+  color: #8397bf;
+}
+.hc-region-view {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 40px;
+  align-items: center;
+  padding: 25px;
+  background: #fff;
+  border: 1px solid #e5e8ef;
+  border-radius: 10px;
+}
+.hc-region-view h2 {
+  font:
+    500 28px/1.2 "Space Grotesk",
+    sans-serif;
+  letter-spacing: -0.04em;
+  margin: 0 0 20px;
+}
+.hc-region-view p {
+  font-size: 13px;
+  line-height: 1.8;
+  color: #929db1;
+  max-width: 270px;
+}
+.hc-region-facts {
+  display: flex;
+  gap: 40px;
+  margin-top: 35px;
+}
+.hc-region-facts strong {
+  font:
+    500 35px "Space Grotesk",
+    sans-serif;
+  color: #3458ee;
+}
+.hc-region-facts span {
+  display: block;
+  font:
+    10px "DM Sans",
+    sans-serif;
+  color: #a0acc0;
+  margin-top: 10px;
+}
+.hc-region-view .helio-topology {
+  background: #192337;
+  color: #dce5f7;
+  border: 1px solid #293851;
+  border-radius: 8px;
+}
+.helio-panel-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #34425a;
+  padding: 20px 25px;
+  font:
+    9px "IBM Plex Mono",
+    monospace;
+  color: #8497b9;
+}
