@@ -7,12 +7,13 @@ export const brand: Brand = {
   purpose:
     "A developer cloud that makes deploying globally distributed applications feel immediate and clear.",
   description:
-    "Helio gives independent developers and growing teams a clear route from a local idea to a global application. The platform brings deployments, edge functions, observability, and storage together in a focused technical workspace. Its identity combines a geometric compute hub with orbital geometry: a stable central system connected to a globally distributed network. Crisp white surfaces, precise black typography, and electric cobalt communicate speed without visual noise. The website pairs a large infrastructure illustration with a working code preview and a compact deployment console. Product details remain concrete and readable, making the platform feel approachable to builders while preserving the confidence of serious infrastructure.",
+    "Helio is a developer workspace built around the life of an application. A pearl sidebar gives projects and environments a clear home; a wide cobalt traffic plot connects request volume, response health, and latency to a selected hour. The deployment ledger opens each commit into its build details, while a focused release dialog traces compilation, distribution, configuration errors, and recovery. A region view reveals the connected compute core, with concise code recipes and visible usage limits below the console. Compact typography, pale surfaces, and precise signal colors keep dense information calm. Its geometric identity expresses one application reaching a distributed network.",
   colors: [
     { name: "Orbit cobalt", hex: "#234AFB" },
     { name: "White", hex: "#FFFFFF" },
-    { name: "Carbon", hex: "#17191C" },
-    { name: "Grid", hex: "#E6E8ED" },
+    { name: "Carbon", hex: "#11151E" },
+    { name: "Grid", hex: "#303747" },
+    { name: "Console pearl", hex: "#F5F6FB" },
     { name: "Signal green", hex: "#38B783" },
   ],
   fonts: { heading: "Space Grotesk", body: "DM Sans" },
@@ -20,7 +21,7 @@ export const brand: Brand = {
   logoMeaning:
     "A geometric compute core branches toward three deployment nodes, expressing one application distributed across a global network.",
   artDirection:
-    "Architectural white space, cobalt orbital geometry, tightly set technical headlines, and a compact black-and-white deploy console.",
+    "A pearl developer console with a workspace sidebar, cobalt request analytics, compact deployment ledger, inline release details, and a focused graphite build dialog. Connected regional topology and quiet code recipes extend the workspace.",
   tags: [
     "Cloud",
     "Developer tools",

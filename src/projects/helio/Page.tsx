@@ -1,21 +1,13 @@
-import {
-  Header,
-  Hero,
-  BuildPreview,
-  Platform,
-  Pricing,
-  Footer,
-} from "./components";
+import { Footer } from "./Navigation";
+import { Console } from "./Console";
+import { Recipes } from "./Recipes";
 import "./styles.css";
 export default function Page() {
   return (
     <div className="helio" id="helio-top">
-      <Header />
       <main>
-        <Hero />
-        <Platform />
-        <BuildPreview />
-        <Pricing />
+        <Console />
+        <Recipes />
       </main>
       <Footer />
     </div>
