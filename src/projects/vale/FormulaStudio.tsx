@@ -17,7 +17,11 @@ function FormulaSelector({
   return (
     <div className="vale-formula-switch" aria-label="Choose your formula">
       {formulas.map((formula, index) => (
-        <button aria-pressed={active === index} onClick={() => onSelect(index)}>
+        <button
+          key={formula.id}
+          aria-pressed={active === index}
+          onClick={() => onSelect(index)}
+        >
           {formula.name}
         </button>
       ))}
