@@ -3,3 +3,6 @@
 @import "./itinerary.css";
 @import "./notes.css";
 @import "./responsive.css";
+@import "./responsive-atlas.css";
+@import "./responsive-itinerary.css";
+@import "./responsive-notes.css";
