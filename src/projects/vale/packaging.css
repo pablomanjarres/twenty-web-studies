@@ -1,0 +1,73 @@
+.vale-packaging {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 9%;
+  max-width: 1540px;
+  padding: 105px 7% 120px;
+  align-items: center;
+  margin: auto;
+}
+.vale-packaging img {
+  width: 100%;
+  height: 570px;
+  object-fit: cover;
+  border-radius: 36px;
+}
+.vale-packaging h2 {
+  font-size: clamp(36px, 3.7vw, 53px);
+  line-height: 1.1;
+  max-width: 470px;
+}
+.vale-packaging-copy > p {
+  color: #b9d0c1;
+  margin-top: 22px;
+  max-width: 410px;
+}
+.vale-questions {
+  margin-top: 33px;
+}
+.vale-questions details {
+  padding: 0 20px;
+  margin-bottom: 9px;
+  border-radius: 19px;
+  background: #a2c2ad0c;
+}
+.vale-questions summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 61px;
+  gap: 20px;
+  font-size: 13px;
+}
+.vale-questions summary > span {
+  font-size: 22px;
+  color: #a8c6b0;
+}
+.vale-questions details[open] summary > span {
+  transform: rotate(45deg);
+}
+.vale-questions details p {
+  color: #b9d0c1;
+  font-size: 13px;
+  padding: 0 0 20px;
+}
+.vale-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  padding: 32px 5%;
+  background: #0d2c21;
+}
+.vale-footer > span {
+  color: #bad1c1;
+  font-size: 14px;
+}
+.vale-footer > a:last-child {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+  font-size: 13px;
+}
