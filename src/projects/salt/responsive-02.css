@@ -14,48 +14,42 @@
     gap: 17px;
     font-size: 10px;
   }
+  .sl-header nav {
+    gap: 12px;
+  }
+  .sl-header nav a:last-child {
+    padding: 0 16px;
+  }
   .sl-menu-stage {
-    display: flex;
-    flex-direction: column;
-    padding: 15px 14px 35px;
+    padding: 4px 14px 35px;
   }
-  .sl-menu-edge {
-    flex-direction: row;
-    padding: 0 15px;
-    height: 53px;
+  .sl-menu-controls {
+    justify-content: center;
+    padding: 0 0 14px;
   }
-  .sl-menu-edge > span {
-    writing-mode: initial;
-    font-size: 7px;
-    max-width: 55px;
-    line-height: 1.7;
-  }
-  .sl-menu-edge > span:last-child {
+  .sl-menu-controls > span {
     display: none;
   }
-  .sl-menu-edge nav {
-    display: flex;
-    gap: 6px;
+  .sl-menu-controls nav {
+    width: 100%;
+    gap: 8px;
   }
-  .sl-menu-edge button {
-    writing-mode: initial;
-    width: 63px;
-    min-height: 44px;
-    font-size: 11px;
-    border: 0;
+  .sl-menu-controls button {
+    flex: 1;
+    padding: 0 12px;
+    min-height: 46px;
+    font-size: 12px;
   }
   .sl-menu-paper {
-    border-left: 1px solid var(--sl-line);
-    border-top: 0;
-    padding: 21px 20px;
-    background: none;
+    padding: 24px 20px;
+    border-radius: 22px;
   }
   .sl-menu-masthead {
     padding-bottom: 18px;
   }
   .sl-menu-masthead > p {
-    font-size: 6px;
-    letter-spacing: 0.02em;
+    font-size: 10px;
+    letter-spacing: 0;
   }
   .sl-menu-masthead h1 {
     font-size: 29px;
@@ -84,7 +78,7 @@
     height: 195px;
   }
   .sl-plate figcaption {
-    font-size: 6px;
+    font-size: 9px;
     margin: 0;
     line-height: 1.7;
   }
