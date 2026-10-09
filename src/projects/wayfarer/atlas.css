@@ -157,25 +157,37 @@
   display: grid;
   gap: 7px;
 }
-.wf-map-scale small {
-  font-size: 8px;
-  margin-left: 8px;
+.wf-map-route-name span {
+  color: var(--wf-terrain);
+  font-size: 10px;
 }
-.wf-route-key {
+.wf-map-route-name strong {
+  font-size: 15px;
+  font-weight: 600;
+}
+.wf-map-caption {
   position: absolute;
+  bottom: 25px;
+  left: 34px;
   right: 20px;
-  bottom: 22px;
-  display: grid;
-  gap: 8px;
-  font:
-    9px "IBM Plex Mono",
-    monospace;
-  background: #f8f7eed6;
-  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  font-size: 9px;
+  color: var(--wf-terrain);
 }
-.wf-route-key i {
-  display: inline-block;
-  width: 16px;
-  border-top: 2px dashed var(--wf-orange);
-  margin-right: 5px;
+.wf-map-caption > span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.wf-map-caption i {
+  width: 15px;
+  height: 4px;
+  background: var(--wf-ink);
+  border-radius: 4px;
+}
+.wf-map-caption small {
+  font-size: 8px;
 }

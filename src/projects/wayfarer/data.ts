@@ -1,5 +1,5 @@
 export const image = (name: string) =>
-  `${import.meta.env.BASE_URL}images/wayfarer/${name}.jpg`;
+  `${import.meta.env.BASE_URL}images/wayfarer/${name}`;
 export const routes = [
   {
     id: "01",
@@ -10,7 +10,10 @@ export const routes = [
     distance: "68 km",
     ascent: "2,840 m",
     price: "€1,480",
-    image: "alpine",
+    image: "dolomites-walking-v3.png",
+    destination: "Dolomites",
+    imageAlt:
+      "Two walkers following a limestone path beneath the Dolomite peaks",
     path: "M180 415 C245 390 310 380 352 316 S422 278 470 232 S555 186 623 132",
     points: [
       { x: 180, y: 415 },
@@ -31,7 +34,10 @@ export const routes = [
     distance: "42 km",
     ascent: "1,260 m",
     price: "€860",
-    image: "camp",
+    image: "lake-district-walking-v3.png",
+    destination: "Lake District",
+    imageAlt:
+      "A walking group on a stone footpath above a green Lake District valley",
     path: "M165 396 C240 315 292 354 362 278 S438 340 503 251 S598 244 654 190",
     points: [
       { x: 165, y: 396 },
@@ -52,7 +58,10 @@ export const routes = [
     distance: "56 km",
     ascent: "2,180 m",
     price: "€1,120",
-    image: "hero",
+    image: "carpathians-walking-v3.png",
+    destination: "Carpathians",
+    imageAlt:
+      "Two hikers following a spruce forest trail toward a Carpathian ridge",
     path: "M225 445 C252 359 380 374 416 291 S470 198 528 230 S630 178 700 113",
     points: [
       { x: 225, y: 445 },
