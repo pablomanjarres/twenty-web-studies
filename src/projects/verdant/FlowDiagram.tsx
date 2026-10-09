@@ -1,4 +1,5 @@
 import { type Scenario } from "./data";
+import { NodeReading } from "./NodeReading";
 import {
   SolarArray,
   WindField,
@@ -64,11 +65,10 @@ export function FlowDiagram({
         onClick={() => onNode("source")}
       >
         <Source />
-        <span>{scenario.source}</span>
-        <strong>
+        <NodeReading label={scenario.source}>
           {scenario.generation.toFixed(1)}
           <small> kW</small>
-        </strong>
+        </NodeReading>
       </button>
       <button
         className="vd-node vd-inverter"
@@ -76,8 +76,10 @@ export function FlowDiagram({
         onClick={() => onNode("conversion")}
       >
         <Inverter />
-        <span>Conversion & distribution</span>
-        <small>CONNECTED SYSTEM</small>
+        <NodeReading
+          label="Conversion & distribution"
+          note="Connected system"
+        />
       </button>
       <button
         className="vd-node vd-home"
@@ -85,11 +87,10 @@ export function FlowDiagram({
         onClick={() => onNode("home")}
       >
         <SiteHouse />
-        <span>Site demand</span>
-        <strong>
+        <NodeReading label="Site demand">
           {scenario.home.toFixed(1)}
           <small> kW</small>
-        </strong>
+        </NodeReading>
       </button>
       <button
         className="vd-node vd-battery"
@@ -97,14 +98,10 @@ export function FlowDiagram({
         onClick={() => onNode("battery")}
       >
         <BatteryBank />
-        <div>
-          <span>Energy reserve</span>
-          <strong>
-            {scenario.battery.toFixed(1)}
-            <small> kW charging</small>
-          </strong>
-          <small>{scenario.stored}% stored</small>
-        </div>
+        <NodeReading label="Energy reserve" note={`${scenario.stored}% stored`}>
+          {scenario.battery.toFixed(1)}
+          <small> kW charging</small>
+        </NodeReading>
       </button>
       <div className="vd-grid-export">
         <span>TO THE GRID</span>

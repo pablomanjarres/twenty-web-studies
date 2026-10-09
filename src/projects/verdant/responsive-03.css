@@ -1,12 +1,12 @@
 @media (max-width: 650px) {
-  .vd-battery > div > strong {
+  .vd-battery .vd-reading > strong {
     font-size: 17px;
   }
   .vd-battery strong small {
     display: inline;
     font-size: 7px;
   }
-  .vd-battery > div > small {
+  .vd-battery .vd-reading > small {
     font-size: 7px;
   }
   .vd-grid-export {
@@ -25,11 +25,11 @@
     display: grid;
     grid-template-columns: 1fr 85px 18px;
     gap: 10px 12px;
-    padding: 17px 3px;
+    padding: 18px;
   }
   .vd-node-caption > span {
     min-width: 0;
-    font-size: 7px;
+    font-size: 11px;
   }
   .vd-node-caption p {
     grid-column: 1/-1;
@@ -42,7 +42,7 @@
     min-width: 0;
   }
   .vd-balance-note small {
-    font-size: 6px;
+    font-size: 9px;
   }
   .vd-balance-note strong {
     font-size: 17px;

@@ -11,7 +11,7 @@ export default function Page() {
           <BrandLogo brand={brand} />
         </a>
         <span>
-          <i /> ILLUSTRATIVE ENERGY SYSTEM
+          <i /> Illustrative energy system
         </span>
         <nav aria-label="Energy navigation">
           <a href="#field">In the field</a>

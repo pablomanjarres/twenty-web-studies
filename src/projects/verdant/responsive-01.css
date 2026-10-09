@@ -17,9 +17,6 @@
   .vd-source-legend {
     right: 28px;
   }
-  .vd-source-legend > span {
-    display: none;
-  }
   .vd-source-legend button {
     padding: 0 13px;
     min-height: 44px;
@@ -49,11 +46,10 @@
   .vd-system-bottom > span:last-child {
     display: none;
   }
-  .vd-node > strong {
+  .vd-reading > strong {
     font-size: 19px;
   }
-  .vd-node > span,
-  .vd-node > div > span {
+  .vd-reading > span {
     font-size: 9px;
   }
   .vd-battery {
@@ -64,7 +60,7 @@
   .vd-battery > svg {
     height: 145px;
   }
-  .vd-battery > div > strong {
+  .vd-battery .vd-reading > strong {
     font-size: 16px;
   }
   .vd-grid-export {

@@ -1,0 +1,167 @@
+@media (max-width: 760px) {
+  .vs-landscape {
+    min-height: 760px;
+    height: calc(100svh - 20px);
+    margin: 10px;
+    border-radius: 22px;
+  }
+  .vs-panorama {
+    object-position: 56% center;
+  }
+  .vs-header {
+    left: 20px;
+    right: 20px;
+    top: 21px;
+    gap: 10px;
+  }
+  .vs-header .vs-home {
+    font-size: 24px;
+  }
+  .vs-header .brand-logo {
+    gap: 7px;
+  }
+  .vs-header .brand-logo svg {
+    width: 24px;
+    height: 24px;
+  }
+  .vs-header nav {
+    display: none;
+  }
+  .vs-nav-book {
+    padding: 12px 15px;
+    font-size: 10px;
+    min-height: 44px;
+  }
+  .vs-invitation {
+    left: 25px;
+    right: 20px;
+    bottom: 175px;
+  }
+  .vs-invitation > p {
+    font-size: 10px;
+    margin-bottom: 14px;
+  }
+  .vs-invitation h1 {
+    font-size: clamp(38px, 8.5vw, 57px);
+    line-height: 1.08;
+  }
+  .vs-setting {
+    left: 25px;
+    right: 25px;
+    width: auto;
+    bottom: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+  }
+  .vs-setting > span {
+    background: transparent;
+    font-size: 9px;
+    padding: 0;
+  }
+  .vs-setting p {
+    display: none;
+  }
+  .vs-setting a {
+    margin: 0;
+    font-size: 10px;
+    gap: 13px;
+  }
+  .vs-arrival {
+    left: 16px;
+    right: 16px;
+    bottom: 20px;
+    grid-template-columns: 1fr;
+    border-radius: 20px;
+  }
+  .vs-arrival-toggle {
+    padding: 17px 20px 8px;
+  }
+  .vs-arrival-toggle > span {
+    display: block;
+    font-size: 20px;
+  }
+  .vs-arrival-toggle small {
+    margin-bottom: 6px;
+    font-size: 9px;
+  }
+  .vs-arrival-summary {
+    padding: 0 20px 17px;
+    font-size: 9px;
+  }
+  .vs-arrival-summary strong {
+    font-size: 15px;
+  }
+  .vs-arrival-summary svg {
+    width: 15px;
+  }
+  .vs-landscape:has(.vs-arrival-open) {
+    min-height: 0;
+    height: auto;
+    padding-top: 540px;
+  }
+  .vs-landscape:has(.vs-arrival-open) .vs-panorama {
+    height: 610px;
+  }
+  .vs-landscape:has(.vs-arrival-open)::after {
+    height: 640px;
+  }
+  .vs-landscape:has(.vs-arrival-open) .vs-invitation {
+    top: 335px;
+    bottom: auto;
+  }
+  .vs-landscape:has(.vs-arrival-open) .vs-invitation h1 {
+    font-size: 40px;
+  }
+  .vs-arrival-open {
+    position: relative;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    margin: 0 16px 20px;
+  }
+  .vs-arrival-open .vs-arrival-toggle {
+    padding: 22px 20px;
+  }
+  .vs-folio {
+    padding: 0 20px 22px;
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .vs-dates {
+    gap: 12px;
+  }
+  .vs-dates label {
+    font-size: 9px;
+  }
+  .vs-dates input,
+  .vs-dates select {
+    min-height: 45px;
+    font-size: 10px;
+    padding: 0 10px;
+  }
+  .vs-room-note,
+  .vs-stay-total,
+  .vs-folio-action,
+  .vs-stay-message {
+    grid-column: 1;
+    grid-row: auto;
+  }
+  .vs-room-note {
+    font-size: 10px;
+  }
+  .vs-stay-total {
+    margin-top: 0;
+    font-size: 10px;
+  }
+  .vs-stay-total strong {
+    font-size: 28px;
+  }
+  .vs-folio-action {
+    font-size: 11px;
+  }
+  .vs-stay-message {
+    font-size: 9px;
+  }
+}

@@ -1,8 +1,8 @@
 import { ArrowDown, ArrowUpRight, Plus, Minus } from "lucide-react";
-import { BrandLogo } from "../../shared/BrandLogo";
-import { brand } from "./brand";
-import { image } from "./data";
+import { RetreatNavigation } from "./RetreatNavigation";
+import { asset } from "./data";
 import { ArrivalFolio } from "./ArrivalFolio";
+
 export function Landscape({
   bookingOpen,
   onBooking,
@@ -14,35 +14,30 @@ export function Landscape({
     <section id="landscape" className="vs-landscape">
       <img
         className="vs-panorama"
-        src={image("mountains")}
-        alt="A wide mountain valley with snow ridges, forest and an open river landscape"
+        src={asset("lodge-blue-hour-v3.png")}
+        alt="The Vestra alpine lodge at blue hour, with warm windows reflected in a quiet pool beneath the Dolomite peaks"
       />
-      <header className="vs-header">
-        <a href="#suite">The retreat</a>
-        <a className="vs-home" href="#landscape" aria-label="Vestra home">
-          <BrandLogo brand={brand} />
-        </a>
-        <a href="#ritual">Life up here</a>
-      </header>
-      <nav className="vs-scene-index" aria-label="Retreat chapters">
-        <a href="#landscape">01 / The valley</a>
-        <a href="#suite">02 / Your room</a>
-        <a href="#ritual">03 / A slower day</a>
-      </nav>
+      <RetreatNavigation bookingOpen={bookingOpen} onBooking={onBooking} />
       <div className="vs-invitation">
-        <p>A mountain retreat, quietly yours.</p>
+        <p>A little further from the everyday.</p>
         <h1>
           Come for the view.
           <br />
           Stay for the stillness.
         </h1>
-        <a href="#suite">
-          Step inside <ArrowDown size={15} />
-        </a>
       </div>
-      <div className="vs-landscape-caption">
-        <span>THE VALLEY / EARLY AUTUMN</span>
-        <span>Nature sets the pace.</span>
+      <div className="vs-setting">
+        <span>Held by the mountains.</span>
+        <p>
+          A quiet alpine retreat.
+          <br />
+          Warm rooms. Open horizons.
+          <br />
+          Nothing to hurry back to.
+        </p>
+        <a href="#suite">
+          Step inside <ArrowDown size={16} />
+        </a>
       </div>
       <div className={"vs-arrival " + (bookingOpen ? "vs-arrival-open" : "")}>
         <button
@@ -52,7 +47,7 @@ export function Landscape({
           onClick={onBooking}
         >
           <span>
-            <small>A FEW DAYS AWAY</small>Plan your stay
+            <small>Your mountain pause</small>Plan your stay
           </span>
           {bookingOpen ? <Minus size={20} /> : <Plus size={20} />}
         </button>
@@ -60,7 +55,9 @@ export function Landscape({
           <ArrivalFolio />
         ) : (
           <div className="vs-arrival-summary">
-            <span>Rooms from €245 / night</span>
+            <span>
+              Rooms from <strong>€245</strong> / night
+            </span>
             <ArrowUpRight size={18} />
           </div>
         )}

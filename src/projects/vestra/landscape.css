@@ -1,10 +1,13 @@
 .vestra {
-  --vs-forest: #203c31;
-  --vs-cream: #f4f0e6;
-  --vs-line: #b7b7a4;
-  color: var(--vs-forest);
-  background: var(--vs-cream);
-  font-family: "DM Sans", sans-serif;
+  --vs-night: #101d2d;
+  --vs-mist: #eaf2f7;
+  --vs-slate: #293f50;
+  --vs-alpine: #759aae;
+  --vs-window: #e4bd89;
+  --focus-color: #e4bd89;
+  color: var(--vs-mist);
+  background: var(--vs-night);
+  font-family: "Manrope", sans-serif;
 }
 .vestra h1,
 .vestra h2,
@@ -15,11 +18,14 @@
 }
 .vs-landscape {
   position: relative;
-  min-height: 850px;
-  height: 100svh;
+  min-height: 800px;
+  height: calc(100svh - 32px);
   max-height: 1150px;
-  color: var(--vs-cream);
+  margin: 16px;
+  border-radius: 28px;
+  color: var(--vs-mist);
   isolation: isolate;
+  overflow: hidden;
 }
 .vs-panorama {
   position: absolute;
@@ -30,111 +36,122 @@
   object-position: center;
   z-index: -2;
 }
-.vs-landscape:after {
+.vs-landscape::after {
   content: "";
   position: absolute;
   inset: 0;
   z-index: -1;
   background: linear-gradient(
     180deg,
-    #0a211d54 0%,
+    #07101d50,
     transparent 35%,
-    #102e2466 65%,
-    #0a211dbf 100%
+    #08172815 52%,
+    #081728b8
   );
+  pointer-events: none;
 }
 .vs-header {
   position: absolute;
-  left: 55px;
-  right: 55px;
-  top: 38px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  left: 38px;
+  right: 38px;
+  top: 27px;
+  display: flex;
   align-items: center;
-}
-.vs-header > a {
-  font-size: 13px;
-  text-decoration: none;
-}
-.vs-header > a:last-child {
-  text-align: right;
+  gap: 30px;
 }
 .vs-header .vs-home {
-  justify-self: center;
-  font-size: 27px;
+  font-size: 29px;
+  text-decoration: none;
+  margin-right: auto;
 }
 .vs-header .brand-logo > span {
-  font-weight: 400;
-  letter-spacing: 0.035em;
+  font-weight: 500;
+  letter-spacing: 0.01em;
 }
 .vs-header .brand-logo svg {
-  width: 27px;
+  width: 28px;
+  height: 28px;
 }
-.vs-scene-index {
-  position: absolute;
-  top: 34%;
-  left: 55px;
-  display: grid;
-  gap: 22px;
-  isolation: isolate;
+.vs-header nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px;
+  border-radius: 30px;
+  background: #101d2d73;
 }
-.vs-scene-index::before {
-  content: "";
-  position: absolute;
-  inset: -12px -40px -12px -12px;
-  z-index: -1;
-  background: linear-gradient(90deg, #102e24a6 75%, transparent);
-  pointer-events: none;
-}
-.vs-scene-index a {
-  font-size: 10px;
-  letter-spacing: 0.05em;
+.vs-header nav a {
   text-decoration: none;
-  opacity: 0.85;
-  text-shadow: 0 1px 3px #071b18;
+  font-size: 11px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 20px;
+  border-radius: 25px;
 }
-.vs-scene-index a:first-child {
-  border-left: 1px solid var(--vs-cream);
-  padding-left: 16px;
+.vs-header nav a:hover {
+  background: #ffffff12;
+}
+.vs-nav-book {
+  border: 1px solid #eaf2f75c;
+  border-radius: 30px;
+  padding: 14px 23px;
+  background: #101d2d73;
+  color: var(--vs-mist);
+  font-size: 11px;
+  min-height: 45px;
+}
+.vs-nav-book:hover {
+  background: var(--vs-slate);
 }
 .vs-invitation {
   position: absolute;
-  left: 11%;
-  bottom: 16%;
-  max-width: 580px;
+  left: 45px;
+  bottom: 206px;
 }
 .vs-invitation > p {
   font-size: 12px;
-  letter-spacing: 0.06em;
-  margin-bottom: 20px;
+  margin-bottom: 19px;
+  color: #d1e1ea;
 }
 .vs-invitation h1 {
   font:
-    400 clamp(44px, 4.4vw, 63px)/1.1 "The Foriene",
+    400 clamp(55px, 5.65vw, 88px)/1.04 "The Foriene",
     "Cormorant Garamond",
     serif;
-  letter-spacing: -0.025em;
+  letter-spacing: -0.035em;
 }
-.vs-invitation > a {
+.vs-setting {
+  position: absolute;
+  right: 45px;
+  bottom: 218px;
+  width: 215px;
+}
+.vs-setting > span {
+  display: inline-block;
+  font-size: 10px;
+  padding: 9px 14px;
+  border-radius: 25px;
+  background: #101d2d99;
+}
+.vs-setting p {
+  font-size: 12px;
+  line-height: 1.8;
+  margin-top: 15px;
+  color: #d1e1ea;
+}
+.vs-setting a {
   display: inline-flex;
   align-items: center;
-  gap: 35px;
-  font-size: 12px;
+  gap: 20px;
   text-decoration: none;
-  border-bottom: 1px solid #f4f0e661;
-  padding: 0 0 10px;
-  margin-top: 30px;
-}
-.vs-landscape-caption {
-  position: absolute;
-  bottom: 34px;
-  left: 55px;
-  display: flex;
-  gap: 45px;
-  font-size: 9px;
-  letter-spacing: 0.1em;
-}
-.vs-landscape-caption > span:last-child {
-  letter-spacing: 0;
   font-size: 11px;
+  margin-top: 17px;
+  min-height: 44px;
+}
+.vs-landscape:has(.vs-arrival-open) .vs-invitation {
+  bottom: 360px;
+}
+.vs-landscape:has(.vs-arrival-open) .vs-setting {
+  bottom: 363px;
 }

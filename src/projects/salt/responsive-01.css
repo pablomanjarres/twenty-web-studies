@@ -3,8 +3,7 @@
     padding: 20px 28px;
   }
   .sl-menu-stage {
-    padding: 24px 28px 35px;
-    grid-template-columns: 54px minmax(0, 1fr);
+    padding: 6px 28px 35px;
   }
   .sl-menu-paper {
     padding: 24px 23px 18px;

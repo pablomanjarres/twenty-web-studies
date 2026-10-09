@@ -14,7 +14,7 @@ export default function Page() {
         <span>Coastal food. A generous table.</span>
         <nav aria-label="Restaurant">
           <a href="#kitchen">Our kitchen</a>
-          <a href="#tables">Find a table ↗</a>
+          <a href="#tables">Find a table</a>
         </nav>
       </header>
       <PrintedMenu />
@@ -28,7 +28,7 @@ export default function Page() {
           Tuesday — Sunday
         </span>
         <span>
-          18 Harbour Lane
+          By the harbour
           <br />
           The coastal quarter
         </span>

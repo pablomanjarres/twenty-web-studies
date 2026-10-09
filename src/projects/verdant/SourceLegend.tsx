@@ -10,7 +10,6 @@ export function SourceLegend({
 }) {
   return (
     <nav className="vd-source-legend" aria-label="Energy source">
-      <span>SOURCE</span>
       {scenarios.map((scenario, index) => {
         const Icon = icons[index];
         return (

@@ -1,175 +1,160 @@
-@media (max-width: 760px) {
+@media (max-width: 1100px) {
+  .vale-studio {
+    min-height: 740px;
+  }
+  .vale-studio-copy {
+    width: 60%;
+    padding-top: 68px;
+  }
+  .vale-studio-copy h1 {
+    font-size: 81px;
+  }
+  .vale-product-stage {
+    --vale-product-size: 740px;
+    right: -7%;
+  }
+  .vale-stage-soft-start {
+    --vale-product-size: 680px;
+    --vale-product-y: 50%;
+  }
+  .vale-stage-still-water {
+    --vale-product-size: 450px;
+    --vale-product-x: 45%;
+  }
+  .vale-ingredient-capsule {
+    right: 18%;
+    bottom: 25%;
+    width: 264px;
+  }
+  .vale-purchase-tray {
+    width: 395px;
+  }
+}
+@media (max-width: 700px) {
   .vale-header {
-    height: 62px;
-    padding: 0 5%;
+    min-height: 78px;
+    padding: 14px 27px;
   }
   .vale-header nav {
-    gap: 19px;
-    font-size: 10px;
-  }
-  .vale-header .brand-logo {
-    font-size: 29px;
-  }
-  .vale-header .brand-logo svg {
     display: none;
   }
-  .vale-header button {
-    font-size: 9px;
+  .vale .brand-logo {
+    font-size: 30px;
   }
-  .vale-formulas {
-    display: block;
-    padding: 25px 5% 36px;
+  .vale-studio {
+    min-height: 0;
+    margin: 0 12px;
+    padding: 30px 22px 20px;
+    border-radius: 30px;
+    background:
+      radial-gradient(ellipse at 58% 48%, #466d5266, transparent 55%),
+      linear-gradient(145deg, #102d23, #254a37 60%, #183a2b);
   }
-  .vale-formula-index {
+  .vale-studio-copy {
+    width: 100%;
     padding: 0;
   }
-  .vale-formula-index > .vale-label,
-  .vale-index-note,
-  .vale-formula-index > p {
-    display: none;
-  }
-  .vale-formula-index h1 {
-    font-size: 26px;
-    margin: 0;
-    line-height: 1.05;
-  }
-  .vale-formula-index h1 br {
-    display: none;
-  }
-  .vale-formula-index nav {
-    flex-direction: row;
-    gap: 16px;
-    margin: 19px 0 25px;
-  }
-  .vale-formula-index nav button {
-    flex: 1;
-    gap: 8px;
-    padding: 8px 0;
-  }
-  .vale-formula-index nav span {
-    font-size: 18px;
-  }
-  .vale-formula-index nav small {
-    font-size: 8px;
-  }
-  .vale-formula-index nav em {
-    font-size: 8px;
-    line-height: 1.5;
-    margin-top: 7px;
-  }
-  .vale-sheet-top {
-    font-size: 7px;
-  }
-  .vale-sheet-top span:last-child {
-    display: none;
-  }
-  .vale-specimen-stage {
-    height: 315px;
-    background-size: 80px 80px;
-  }
-  .vale-pressed-plant {
-    width: 44%;
-    left: 2%;
-    top: 18%;
-    height: 70%;
-  }
-  .vale-formula-bottle {
-    width: 48%;
-    height: 80%;
-    left: 36%;
-    top: 13%;
-  }
-  .vale-bottle-still-water {
-    height: 60%;
-    top: 23%;
-    width: 50%;
-  }
-  .vale-plant-caption {
-    left: 5%;
-    top: 7%;
-  }
-  .vale-plant-caption > span,
-  .vale-bottle-caption > span {
-    font-size: 6px;
-  }
-  .vale-plant-caption strong,
-  .vale-bottle-caption strong {
-    font-size: 9px;
-    margin: 4px 0 0;
-  }
-  .vale-plant-caption small,
-  .vale-bottle-caption small {
-    font-size: 7px;
-  }
-  .vale-plant-caption::after,
-  .vale-bottle-caption::after {
-    display: none;
-  }
-  .vale-bottle-caption {
-    right: 4%;
-    top: 8%;
-  }
-  .vale-ingredient-note {
-    bottom: 4%;
-    right: 4%;
-    width: 50%;
-    padding: 7px 0;
-  }
-  .vale-ingredient-note > span {
-    font-size: 6px;
-  }
-  .vale-ingredient-note strong {
-    font-size: 9px;
-    margin: 4px 0;
-  }
-  .vale-ingredient-note p {
-    display: none;
-  }
-  .vale-ingredient-note.is-open p {
-    display: block;
-    font-size: 8px;
-  }
-  .vale-ingredient-note::before {
-    width: 20px;
-  }
-  .vale-cross {
+  .vale-studio-intro {
     font-size: 12px;
+    margin-bottom: 19px;
   }
-  .vale-cross-one {
-    top: auto;
-    bottom: 13px;
-    right: 13px;
+  .vale-studio-copy h1 {
+    font-size: 63px;
+    line-height: 0.98;
   }
-  .vale-formula-caption {
-    padding-top: 22px;
-    gap: 14px;
-    align-items: start;
+  .vale-studio-copy > p {
+    margin-top: 19px;
+    font-size: 13px;
+    line-height: 1.65;
   }
-  .vale-formula-caption h2 {
-    font-size: 30px;
-    margin: 8px 0;
-  }
-  .vale-formula-caption p {
-    font-size: 10px;
-    max-width: 135px;
-  }
-  .vale-formula-caption .vale-label {
-    font-size: 8px;
-  }
-  .vale-formula-order {
-    width: 155px;
-    max-width: 49%;
-  }
-  .vale-volumes {
+  .vale-formula-switch {
+    margin-top: 22px;
     gap: 5px;
   }
-  .vale-volumes button {
-    padding: 7px 10px;
-    font-size: 8px;
+  .vale-formula-switch button {
+    padding: 9px 13px;
+    font-size: 11px;
   }
-  .vale-add {
-    font-size: 9px !important;
-    padding: 11px 10px !important;
+  .vale-product-stage {
+    --vale-product-size: 350px;
+    --vale-product-y: 50%;
+    position: relative;
+    right: auto;
+    top: auto;
+    width: 100%;
+    height: 320px;
+    margin-top: 12px;
+  }
+  .vale-studio-product {
+    left: 50%;
+  }
+  .vale-stage-soft-start {
+    --vale-product-size: 320px;
+  }
+  .vale-stage-still-water {
+    --vale-product-size: 340px;
+  }
+  .vale-studio-halo {
+    width: 370px;
+    height: 410px;
+  }
+  .vale-studio-plinth {
+    width: 250px;
+    height: 45px;
+    bottom: 9%;
+  }
+  .vale-ingredient-capsule {
+    right: -3px;
+    bottom: 12px;
+    width: 220px;
+    padding: 12px 14px;
+    border-radius: 20px;
+  }
+  .vale-ingredient-capsule summary {
+    font-size: 11px;
+  }
+  .vale-ingredient-capsule small {
+    font-size: 9px;
+  }
+  .vale-ingredient-orb {
+    width: 24px;
+    height: 28px;
+  }
+  .vale-purchase-tray {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    width: 100%;
+    padding: 20px 18px;
+    border-radius: 23px;
+  }
+  .vale-selected-formula h2 {
+    font-size: 28px;
+  }
+  .vale-selected-formula span {
+    font-size: 11px;
+  }
+  .vale-selected-formula > strong {
+    font-size: 25px;
+  }
+  .vale-purchase-actions {
     gap: 8px;
+    margin-top: 15px;
+  }
+  .vale-volumes button {
+    padding: 9px;
+    font-size: 11px;
+  }
+  .vale .vale-add {
+    padding: 12px 14px;
+    gap: 9px;
+    font-size: 12px;
+  }
+  .vale-discover {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    margin-top: 14px;
+    font-size: 12px;
   }
 }

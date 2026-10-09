@@ -5,7 +5,7 @@ export function FieldNotes() {
     <>
       <section id="field-notes" className="wf-notes">
         <div className="wf-note-title">
-          <span>FROM THE FIELD</span>
+          <span>From the field</span>
           <h2>
             Good stories
             <br />
@@ -19,11 +19,11 @@ export function FieldNotes() {
         </div>
         <figure>
           <img
-            src={image("camp")}
-            alt="A quiet campsite surrounded by mountain landscape"
+            src={image("lake-district-walking-v3.png")}
+            alt="A small walking group following a Lake District stone path"
             loading="lazy"
           />
-          <figcaption>FIELD NOTE 012 / THE ART OF ARRIVING SLOWLY</figcaption>
+          <figcaption>Field note 012 · The art of arriving slowly</figcaption>
         </figure>
         <div className="wf-note-index">
           {[
@@ -53,7 +53,7 @@ export function FieldNotes() {
       <section id="guide" className="wf-guide">
         <Footprints size={48} strokeWidth={1} />
         <div>
-          <span>OUR WAY OF WALKING</span>
+          <span>Our way of walking</span>
           <h2>
             Fewer people.
             <br />

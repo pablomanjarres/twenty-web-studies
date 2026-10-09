@@ -3,10 +3,10 @@ import { type Scenario, nodes } from "./data";
 export function OperatingNotes({ scenario }: { scenario: Scenario }) {
   return (
     <div className="vd-operating-notes">
-      <span>CONNECTED ENERGY / FIELD MODEL 01</span>
+      <span>Connected energy</span>
       <h1>See where the energy goes.</h1>
       <p>
-        {scenario.name.toUpperCase()} · {scenario.subtitle.toUpperCase()}
+        {scenario.name} · {scenario.subtitle}
       </p>
     </div>
   );
@@ -21,11 +21,11 @@ export function FocusAnnotation({
   return (
     <div className="vd-node-caption" aria-live="polite">
       <span>
-        <i /> FOCUS / {active.name.toUpperCase()}
+        <i /> {active.name}
       </span>
       <p>{active.detail}</p>
       <div className="vd-balance-note">
-        <small>BALANCED INPUT</small>
+        <small>Balanced input</small>
         <strong>
           {generation.toFixed(1)} <em>kW</em>
         </strong>

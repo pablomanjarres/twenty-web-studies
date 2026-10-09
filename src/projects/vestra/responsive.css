@@ -1,197 +1,81 @@
-@media (max-width: 1050px) {
+@media (max-width: 1100px) {
   .vs-header {
-    left: 30px;
-    right: 30px;
-  }
-  .vs-scene-index {
-    left: 30px;
+    left: 28px;
+    right: 28px;
   }
   .vs-invitation {
-    left: 9%;
-    bottom: 23%;
+    left: 30px;
+    bottom: 215px;
   }
   .vs-invitation h1 {
-    font-size: 48px;
+    font-size: 66px;
+  }
+  .vs-setting {
+    right: 30px;
+    bottom: 207px;
+    width: 180px;
+  }
+  .vs-setting p {
+    font-size: 11px;
   }
   .vs-arrival {
-    bottom: 70px;
-    right: 30px;
-    width: 290px;
-  }
-  .vs-arrival-open {
-    width: 360px;
-  }
-  .vs-landscape-caption {
-    left: 30px;
-  }
-  .vs-suite {
-    padding: 80px 7%;
-    gap: 7%;
-  }
-  .vs-suite-photograph img {
-    height: 570px;
-  }
-  .vs-suite-copy h2,
-  .vs-ritual h2 {
-    font-size: 43px;
-  }
-  .vs-ritual {
-    padding: 65px 7%;
-  }
-  .vs-ritual-notes {
-    grid-template-columns: 1fr;
-  }
-  .vs-ritual figure img {
-    height: 660px;
-  }
-  .vs-landscape:has(.vs-arrival-open) .vs-invitation {
-    bottom: 55%;
-    max-width: 60%;
-  }
-  .vs-landscape:has(.vs-arrival-open) .vs-scene-index {
-    display: none;
-  }
-}
-@media (max-width: 650px) {
-  .vs-landscape {
-    height: 820px;
-    min-height: 820px;
-    max-height: none;
-  }
-  .vs-panorama {
-    object-position: 44% center;
-  }
-  .vs-header {
-    left: 22px;
-    right: 22px;
-    top: 24px;
-    gap: 12px;
-  }
-  .vs-header > a {
-    font-size: 10px;
-  }
-  .vs-header .vs-home {
-    font-size: 23px;
-  }
-  .vs-header .brand-logo {
-    gap: 6px;
-  }
-  .vs-header .brand-logo svg {
-    width: 22px;
-  }
-  .vs-scene-index {
-    left: 22px;
-    top: 26%;
-    gap: 19px;
-  }
-  .vs-scene-index a {
-    font-size: 8px;
-  }
-  .vs-invitation {
     left: 25px;
-    right: 20px;
-    bottom: 245px;
+    right: 25px;
   }
-  .vs-invitation > p {
+  .vs-arrival-toggle > span {
+    gap: 20px;
+  }
+  .vs-arrival-toggle small {
     font-size: 10px;
-    margin-bottom: 17px;
-  }
-  .vs-invitation h1 {
-    font-size: 42px;
-    line-height: 1.12;
-  }
-  .vs-invitation > a {
-    margin-top: 22px;
-  }
-  .vs-arrival {
-    left: 22px;
-    right: 22px;
-    bottom: 60px;
-    width: auto;
-  }
-  .vs-arrival-toggle {
-    padding: 18px 21px;
-  }
-  .vs-arrival-toggle span {
-    font-size: 24px;
-  }
-  .vs-arrival-summary {
-    padding: 11px 0 14px;
-    margin: 0 21px;
-  }
-  .vs-landscape-caption {
-    left: 22px;
-    right: 22px;
-    bottom: 22px;
-    justify-content: space-between;
-    gap: 10px;
-    font-size: 7px;
-  }
-  .vs-landscape-caption > span:last-child {
-    font-size: 9px;
-  }
-  .vs-arrival-open {
-    bottom: 60px;
   }
   .vs-folio {
-    padding: 0 21px 19px;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 20px;
+  }
+  .vs-stay-total {
+    grid-column: 1;
+    grid-row: 3;
+    padding: 0;
+  }
+  .vs-folio-action {
+    grid-column: 2;
+    grid-row: 3;
+  }
+  .vs-stay-message {
+    grid-row: 4;
   }
   .vs-landscape:has(.vs-arrival-open) .vs-invitation {
-    bottom: 520px;
-    max-width: none;
+    bottom: 400px;
   }
-  .vs-landscape:has(.vs-arrival-open) .vs-invitation h1 {
-    font-size: 34px;
-  }
-  .vs-landscape:has(.vs-arrival-open) .vs-scene-index {
+  .vs-landscape:has(.vs-arrival-open) .vs-setting {
     display: none;
   }
   .vs-suite {
-    padding: 65px 25px;
-    grid-template-columns: 1fr;
-    gap: 55px;
+    padding: 65px 6%;
+    gap: 6%;
   }
   .vs-suite-photograph img {
-    height: 490px;
+    height: 540px;
   }
   .vs-suite-copy h2,
   .vs-ritual h2 {
     font-size: 43px;
   }
-  .vs-suite-copy > p {
-    font-size: 13px;
-  }
   .vs-ritual {
-    padding: 55px 25px;
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-  .vs-ritual-title {
-    padding: 0;
-  }
-  .vs-ritual figure {
-    grid-row: auto;
-  }
-  .vs-ritual figure img {
-    height: 460px;
+    min-height: 700px;
+    gap: 5%;
+    padding: 40px 4%;
   }
   .vs-ritual-notes {
-    grid-template-columns: 1fr 1fr;
-    gap: 22px;
+    grid-template-columns: 1fr;
   }
-  .vs-footer {
-    padding: 45px 25px;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
+  .vs-ritual-notes article {
+    padding: 20px;
   }
-  .vs-footer > p {
-    font-size: 27px;
-  }
-  .vs-footer > a {
-    grid-column: 1/-1;
-    justify-self: start;
-  }
-  .vs-footer > small {
-    grid-column: 1/-1;
+}
+
+@media (min-width: 761px) and (max-width: 1050px) {
+  .vs-setting {
+    display: none;
   }
 }

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { formulas, type Selection } from "./data";
 import { Header } from "./Header";
-import { SpecimenSheet } from "./SpecimenSheet";
+import { FormulaStudio } from "./FormulaStudio";
 import { TextureStudy } from "./TextureStudy";
 import { Ritual } from "./Ritual";
 import { Packaging } from "./Packaging";
@@ -20,7 +20,7 @@ export default function Page() {
   return (
     <main className="vale">
       <Header count={selections.length} onBag={() => setBag(true)} />
-      <SpecimenSheet
+      <FormulaStudio
         formula={formulas[active]}
         active={active}
         volume={volume}

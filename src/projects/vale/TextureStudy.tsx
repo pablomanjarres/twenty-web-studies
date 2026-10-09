@@ -1,34 +1,37 @@
+import { Droplets, Sprout } from "lucide-react";
 import { image, type Formula } from "./data";
+
 export function TextureStudy({ formula }: { formula: Formula }) {
   return (
-    <section className="vale-texture-study">
-      <div className="vale-texture-copy">
-        <span className="vale-label">A closer look / {formula.number}</span>
-        <h2>{formula.textureName}</h2>
-        <p>{formula.use}</p>
-        <dl>
-          <div>
-            <dt>When</dt>
-            <dd>{formula.timing}</dd>
-          </div>
-          <div>
-            <dt>Where</dt>
-            <dd>Within your daily ritual</dd>
-          </div>
-          <div>
-            <dt>Finish</dt>
-            <dd>A moment to yourself</dd>
-          </div>
-        </dl>
-      </div>
+    <section id="texture" className="vale-texture-study">
       <figure>
         <img
           src={image(formula.texture)}
-          alt={`${formula.name} material texture study`}
+          alt={`${formula.name} material texture closeup`}
           loading="lazy"
         />
-        <figcaption>Texture study / {formula.name}</figcaption>
+        <figcaption>{formula.name}, up close.</figcaption>
       </figure>
+      <div className="vale-texture-copy">
+        <span className="vale-section-intro">Feel the difference.</span>
+        <h2>{formula.textureName}</h2>
+        <p>{formula.use}</p>
+        <div className="vale-ingredient-pair">
+          <div>
+            <Sprout size={22} />
+            <strong>{formula.ingredient}</strong>
+            <span>A botanical beginning.</span>
+          </div>
+          <div>
+            <Droplets size={22} />
+            <strong>{formula.secondary}</strong>
+            <span>A part of the texture.</span>
+          </div>
+        </div>
+        <p className="vale-texture-timing">
+          A little moment, {formula.timing.toLowerCase()}.
+        </p>
+      </div>
     </section>
   );
 }

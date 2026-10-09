@@ -1,5 +1,5 @@
-export const image = (name: string) =>
-  `${import.meta.env.BASE_URL}images/vestra/${name}.jpg`;
+export const asset = (filename: string) =>
+  `${import.meta.env.BASE_URL}images/vestra/${filename}`;
 export const rooms = [
   {
     name: "Valley room",
