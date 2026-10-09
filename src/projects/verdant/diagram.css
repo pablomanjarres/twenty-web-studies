@@ -18,35 +18,48 @@
   color: var(--vd-ink);
   padding: 0;
   display: block;
-  border-radius: 3px;
+  border-radius: 18px;
 }
 .vd-node:hover,
 .vd-node[aria-pressed="true"] {
-  border-color: #81917450;
-  background: #f9f8ed80;
+  border-color: #b9cbd4;
+  background: #ffffffb8;
+  box-shadow: 0 8px 25px #24383f08;
 }
 .vd-node > svg {
   display: block;
   width: 100%;
   height: 190px;
 }
-.vd-node > span,
-.vd-node > div > span {
-  display: block;
-  font-size: 10px;
+.vd-reading {
+  padding: 10px 13px;
+  border-radius: 12px;
+  background: #e2ebef;
 }
-.vd-node > strong,
-.vd-node > div > strong {
+.vd-reading > span {
+  display: block;
+  font-size: 11px;
+}
+.vd-reading > strong {
   display: block;
   font:
-    400 22px "IBM Plex Mono",
+    500 23px "IBM Plex Mono",
     monospace;
-  letter-spacing: -0.06em;
+  letter-spacing: -0.05em;
   margin-top: 5px;
 }
-.vd-node strong small {
-  font-size: 10px;
+.vd-reading strong small {
+  font-size: 11px;
   letter-spacing: 0;
+}
+.vd-reading > small {
+  display: block;
+  font-size: 9px;
+  margin-top: 7px;
+}
+.vd-node[aria-pressed="true"] .vd-reading {
+  background: var(--vd-ink);
+  color: #f4f8fb;
 }
 .vd-source {
   left: 4%;
@@ -62,13 +75,6 @@
 }
 .vd-inverter > svg {
   height: 155px;
-}
-.vd-inverter > small {
-  display: block;
-  font:
-    7px "IBM Plex Mono",
-    monospace;
-  margin-top: 7px;
 }
 .vd-home {
   right: 4%;
@@ -88,24 +94,17 @@
   height: 160px;
   width: 55%;
 }
-.vd-battery > div {
-  padding: 0 8px;
+.vd-battery .vd-reading {
+  padding: 10px;
   width: 45%;
 }
-.vd-battery > div > strong {
+.vd-battery .vd-reading > strong {
   font-size: 19px;
 }
 .vd-battery strong small {
   display: block;
   font-size: 8px;
   margin-top: 4px;
-}
-.vd-battery > div > small {
-  display: block;
-  font:
-    8px "IBM Plex Mono",
-    monospace;
-  margin-top: 7px;
 }
 .vd-grid-export {
   position: absolute;
@@ -114,12 +113,15 @@
   display: grid;
   gap: 6px;
   min-width: 100px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: #e2ebef;
 }
 .vd-grid-export > span {
   font:
     7px "IBM Plex Mono",
     monospace;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.02em;
 }
 .vd-grid-export strong {
   font:

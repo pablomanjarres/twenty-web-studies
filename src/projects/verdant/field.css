@@ -99,13 +99,12 @@
 }
 .vd-connection select {
   border: 0;
-  border-bottom: 1px solid #f5f4e856;
-  border-radius: 0;
+  border-radius: 14px;
   min-height: 43px;
-  background: transparent;
+  background: #f4f8fb14;
   color: inherit;
   font-size: 13px;
-  padding: 0;
+  padding: 0 14px;
 }
 .vd-connection option {
   color: var(--vd-ink);
@@ -118,9 +117,17 @@
   width: 100%;
   padding: 15px 17px;
   border: 0;
+  border-radius: 999px;
   background: var(--vd-yellow);
   color: var(--vd-ink);
   font-size: 12px;
+}
+.vd-connection button:hover {
+  background: #f0d575;
+}
+.vd-connection select:focus-visible {
+  outline: 3px solid var(--vd-yellow);
+  outline-offset: 4px;
 }
 .vd-connection form > p {
   font-size: 9px;
