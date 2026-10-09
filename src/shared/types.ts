@@ -6,7 +6,7 @@ export interface Brand {
   purpose: string;
   description: string;
   colors: { name: string; hex: string }[];
-  fonts: { heading: string; body: string };
+  fonts: { heading: string; body: string; wordmark?: string };
   logo: string;
   logoMeaning: string;
   tags: string[];
