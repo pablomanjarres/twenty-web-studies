@@ -1,74 +1,161 @@
-.wf-map-sheet {
-  position: relative;
-  min-height: 525px;
-  overflow: hidden;
-  background: #e8eddd;
+.wf-atlas {
+  display: grid;
+  grid-template-columns: minmax(0, 35fr) minmax(0, 40fr) minmax(330px, 25fr);
+  min-height: 730px;
+  height: calc(100svh - 76px);
+  max-height: 960px;
 }
-.wf-map {
+.wf-journey-photo {
+  position: relative;
+  isolation: isolate;
+  color: var(--wf-white);
+}
+.wf-journey-photo > img {
   width: 100%;
   height: 100%;
-  min-height: 525px;
-  object-fit: cover;
   position: absolute;
   inset: 0;
-}
-.wf-map-heading {
-  position: absolute;
-  z-index: 2;
-  left: 24px;
-  top: 22px;
-  right: 24px;
-  display: flex;
-  justify-content: space-between;
-  font:
-    10px "IBM Plex Mono",
-    monospace;
-  letter-spacing: 0.1em;
-}
-.wf-postcard {
-  position: absolute;
-  bottom: 77px;
-  left: 30px;
-  width: 235px;
-  background: #fffdf5;
-  padding: 9px 9px 15px;
-  transform: rotate(-7deg);
-  box-shadow: 3px 7px 15px #162b3a25;
-  z-index: 2;
-}
-.wf-postcard img {
-  width: 100%;
-  height: 150px;
   object-fit: cover;
 }
-.wf-postcard figcaption {
-  font-family: "Bricolage Grotesque", sans-serif;
-  font-size: 17px;
-  padding: 12px 6px 0;
-}
-.wf-postcard span {
-  display: block;
-  font:
-    8px "IBM Plex Mono",
-    monospace;
-  padding-top: 5px;
-}
-.wf-map-scale {
+.wf-journey-photo::after {
+  content: "";
   position: absolute;
-  bottom: 22px;
-  left: 24px;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    #0b2438a8,
+    #0b243814 48%,
+    #0b243833 70%,
+    #0b2438cc
+  );
+}
+.wf-photo-invitation {
+  position: absolute;
+  top: 46px;
+  left: 34px;
+  right: 26px;
+  z-index: 2;
+}
+.wf-photo-invitation > span {
   display: flex;
   align-items: center;
   gap: 10px;
-  font:
-    9px "IBM Plex Mono",
-    monospace;
+  font-size: 11px;
 }
-.wf-map-scale i {
-  width: 70px;
-  height: 5px;
-  border: 1px solid var(--wf-ink);
-  background: linear-gradient(90deg, var(--wf-ink) 50%, transparent 50%);
+.wf-photo-invitation h1 {
+  font:
+    500 clamp(42px, 4vw, 64px)/1.03 "Bricolage Grotesque",
+    sans-serif;
+  letter-spacing: -0.05em;
+  margin-top: 27px;
+}
+.wf-photo-invitation p {
+  font-size: 12px;
+  line-height: 1.8;
+  margin-top: 24px;
+}
+.wf-photo-caption {
+  position: absolute;
+  left: 34px;
+  right: 28px;
+  bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  z-index: 2;
+  font-size: 13px;
+}
+.wf-photo-caption a {
+  width: 45px;
+  height: 45px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 1px solid #ffffff70;
+}
+.wf-map-panel {
+  background: var(--wf-sky);
+  min-width: 0;
+  padding: 36px 26px 0;
+  display: flex;
+  flex-direction: column;
+}
+.wf-map-intro {
+  padding: 0 8px;
+}
+.wf-map-intro > span {
+  font-size: 11px;
+  color: var(--wf-terrain);
+}
+.wf-map-intro h2 {
+  font:
+    500 30px/1.15 "Bricolage Grotesque",
+    sans-serif;
+  letter-spacing: -0.04em;
+  margin-top: 11px;
+}
+.wf-route-tabs {
+  display: flex;
+  gap: 7px;
+  margin-top: 23px;
+}
+.wf-route-tabs button {
+  border: 0;
+  background: #f5fbfd;
+  color: var(--wf-ink);
+  border-radius: 30px;
+  min-height: 44px;
+  padding: 11px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 11px;
+  white-space: nowrap;
+}
+.wf-route-tabs button[aria-pressed="true"] {
+  background: var(--wf-ink);
+  color: var(--wf-white);
+}
+.wf-route-tabs button:hover {
+  box-shadow: 0 0 0 2px #476f8345;
+}
+.wf-map-sheet {
+  position: relative;
+  flex: 1;
+  min-height: 480px;
+  margin: 22px -26px 0;
+  overflow: hidden;
+}
+.wf-map {
+  width: 100%;
+  height: calc(100% - 105px);
+  min-height: 360px;
+  position: absolute;
+  left: 0;
+  top: 36px;
+}
+.wf-map-heading {
+  position: absolute;
+  z-index: 1;
+  left: 34px;
+  right: 34px;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--wf-terrain);
+  font-size: 10px;
+}
+.wf-map-route-name {
+  position: absolute;
+  left: 34px;
+  bottom: 69px;
+  display: grid;
+  gap: 7px;
 }
 .wf-map-scale small {
   font-size: 8px;
