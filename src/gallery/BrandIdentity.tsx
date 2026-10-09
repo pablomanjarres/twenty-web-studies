@@ -15,7 +15,7 @@ function LogoSpecimen({
       style={{
         background: invert ? ink : paper,
         color: invert ? paper : ink,
-        fontFamily: brand.fonts.heading,
+        fontFamily: brand.fonts.wordmark ?? brand.fonts.heading,
       }}
     >
       <BrandLogo brand={brand} />
