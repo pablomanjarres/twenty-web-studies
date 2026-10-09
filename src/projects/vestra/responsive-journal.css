@@ -1,0 +1,66 @@
+@media (max-width: 760px) {
+  .vs-suite {
+    padding: 45px 25px;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .vs-suite-photograph img {
+    height: 360px;
+    border-radius: 22px;
+  }
+  .vs-suite-copy h2 {
+    font-size: 42px;
+    margin: 17px 0;
+  }
+  .vs-room-index {
+    margin-top: 24px;
+  }
+  .vs-ritual {
+    margin: 0 10px;
+    min-height: 820px;
+    border-radius: 22px;
+    grid-template-columns: 1fr;
+    padding: 28px;
+    gap: 20px;
+    align-content: end;
+  }
+  .vs-ritual figure img {
+    object-position: 60% center;
+  }
+  .vs-ritual figcaption {
+    top: 25px;
+    left: 25px;
+    right: 25px;
+    font-size: 9px;
+  }
+  .vs-ritual-title h2 {
+    font-size: 42px;
+    margin-bottom: 0;
+  }
+  .vs-ritual-notes {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .vs-ritual-notes article {
+    padding: 17px;
+    border-radius: 18px;
+  }
+  .vs-ritual-notes h3 {
+    font-size: 16px;
+  }
+  .vs-ritual-notes p {
+    font-size: 10px;
+  }
+  .vs-footer {
+    padding: 40px 25px;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .vs-footer > p {
+    font-size: 25px;
+  }
+  .vs-footer > a {
+    grid-column: 1 / -1;
+    justify-self: start;
+  }
+}
