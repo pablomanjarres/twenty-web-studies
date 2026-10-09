@@ -4,7 +4,15 @@ import { BrandLogo } from "../shared/BrandLogo";
 import { presentationColors } from "../shared/brand-colors";
 import { projectUrl } from "../projects";
 import type { Brand } from "../shared/types";
-export function ProjectCard({ brand, index }: { brand: Brand; index: number }) {
+export function ProjectCard({
+  brand,
+  index,
+  original,
+}: {
+  brand: Brand;
+  index: number;
+  original: boolean;
+}) {
   const { ink, paper } = presentationColors(brand);
   const [hasPreview, setHasPreview] = useState(true);
   return (
@@ -39,6 +47,7 @@ export function ProjectCard({ brand, index }: { brand: Brand; index: number }) {
         <div>
           <a href={projectUrl(brand.slug)} className="collection-project-title">
             {brand.name}
+            {original ? " · Original" : ""}
           </a>
           <p>{brand.category}</p>
         </div>

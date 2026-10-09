@@ -1,0 +1,47 @@
+@media (max-width: 1000px) {
+  .sprinto-original-hero-copy {
+    padding-top: 50px;
+  }
+  .sprinto-original h1 {
+    font-size: 87px;
+  }
+  .sprinto-original-hero-image {
+    min-height: 590px;
+  }
+  .sprinto-original-hero {
+    min-height: 590px;
+  }
+  .sprinto-original-section-title {
+    display: block;
+  }
+  .sprinto-original-area-tabs {
+    margin-top: 20px;
+  }
+  .sprinto-original-court-grid {
+    gap: 14px;
+  }
+  .sprinto-original-court-card {
+    padding: 17px;
+  }
+  .sprinto-original-court-price {
+    display: block;
+  }
+  .sprinto-original-court-price strong {
+    display: block;
+    margin-top: 8px;
+  }
+  .sprinto-original-club h2 {
+    font-size: 51px;
+  }
+  .sprinto-original-club > div {
+    padding: 40px 10%;
+  }
+  .sprinto-original-play h3 {
+    font-size: 27px;
+  }
+}
+@media (min-width: 701px) and (max-width: 950px) {
+  .sprinto-original-court-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

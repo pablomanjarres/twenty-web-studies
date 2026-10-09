@@ -1,0 +1,128 @@
+.archive-original-bag-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1px solid #ddd;
+  padding: 22px 0;
+}
+
+.archive-original-bag-row > img {
+  width: 77px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.archive-original-bag-row > div {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  font-size: 11px;
+}
+
+.archive-original-bag-row small {
+  font-size: 9px;
+  color: #8b8b87;
+}
+
+.archive-original-bag-row > button {
+  margin-left: auto;
+  padding: 9px;
+}
+
+.archive-original-bag-total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  margin: 35px 0;
+}
+
+.archive-original-bag-panel .archive-original-continue {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #080808;
+  color: #fff;
+  width: 100%;
+  font-size: 11px;
+  padding: 18px;
+}
+
+.archive-original-bag-empty {
+  font-size: 14px;
+  line-height: 1.9;
+  padding: 40px 0;
+}
+
+@media (max-width: 1000px) {
+  .archive-original-header {
+    padding: 0 30px;
+    gap: 30px;
+  }
+  .archive-original-header nav {
+    gap: 24px;
+  }
+  .archive-original-utility {
+    padding: 10px 30px;
+  }
+  .archive-original-hero {
+    padding: 0 30px;
+  }
+  .archive-original-hero-title h1 {
+    font-size: 18vw;
+  }
+  .archive-original-hero-title > div {
+    min-width: 205px;
+  }
+  .archive-original-campaign-main {
+    height: 430px;
+  }
+  .archive-original-campaign-caption {
+    font-size: 36px;
+    left: 18px;
+    right: 18px;
+  }
+  .archive-original-campaign-side span {
+    font-size: 43px;
+  }
+  .archive-original-shop {
+    padding: 55px 30px;
+  }
+  .archive-original-product-grid {
+    gap: 12px;
+  }
+  .archive-original-product-image {
+    height: 270px;
+  }
+  .archive-original-product-title {
+    flex-direction: column;
+    gap: 7px;
+  }
+  .archive-original-product-title h3 {
+    font-size: 10px;
+  }
+  .archive-original-product > p {
+    font-size: 8px;
+  }
+  .archive-original-story-photo > img {
+    height: 500px;
+  }
+  .archive-original-story {
+    min-height: 500px;
+  }
+  .archive-original-story-copy {
+    padding: 50px 38px 30px;
+  }
+  .archive-original-story-copy h2 {
+    font-size: 85px;
+  }
+  .archive-original-story-copy p {
+    font-size: 10px;
+  }
+  .archive-original-story-rule {
+    flex-wrap: wrap;
+    margin-top: 32px;
+  }
+  .archive-original-footer {
+    padding: 45px 30px 20px;
+  }
+}

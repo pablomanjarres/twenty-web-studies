@@ -1,0 +1,173 @@
+.archive-original {
+  background: #fff;
+  color: #080808;
+  font-family: "Manrope", sans-serif;
+  min-height: 100vh;
+}
+
+.archive-original a {
+  text-decoration: none;
+}
+
+.archive-original button {
+  color: inherit;
+}
+
+.archive-original-utility {
+  background: #080808;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 48px;
+  font-size: 8px;
+  letter-spacing: 0.02em;
+}
+
+.archive-original-header {
+  height: 89px;
+  display: flex;
+  align-items: center;
+  padding: 0 48px;
+  gap: 65px;
+  max-width: 1600px;
+  margin: auto;
+}
+
+.archive-original-header .brand-logo {
+  font:
+    31px "Sublime",
+    "Bebas Neue",
+    sans-serif;
+  text-transform: uppercase;
+  gap: 9px;
+}
+
+.archive-original-header .brand-logo > span {
+  letter-spacing: 0.025em;
+  font-weight: 400;
+}
+
+.archive-original-header .brand-logo svg {
+  width: 29px;
+  height: 29px;
+}
+
+.archive-original-header nav {
+  display: flex;
+  align-items: center;
+  gap: 37px;
+  font-size: 10px;
+}
+
+.archive-original-bag {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 10px;
+  border: 0;
+  background: none;
+}
+
+.archive-original-bag > span {
+  color: #888;
+}
+
+.archive-original-bag > svg {
+  margin-left: 15px;
+}
+
+.archive-original-hero {
+  padding: 0 48px;
+  max-width: 1600px;
+  margin: auto;
+}
+
+.archive-original-hero-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #080808;
+  padding-top: 15px;
+}
+
+.archive-original-hero-title h1 {
+  font:
+    400 clamp(120px, 16.5vw, 265px)/1.06 "Sublime",
+    "Bebas Neue",
+    sans-serif;
+  text-transform: uppercase;
+  overflow-wrap: anywhere;
+  letter-spacing: -0.035em;
+  margin: 0;
+}
+
+.archive-original-hero-title > div {
+  padding: 25px 0 30px 28px;
+  flex-shrink: 0;
+  min-width: 225px;
+}
+
+.archive-original-hero-title > div > span {
+  font-size: 9px;
+  color: #8b8b87;
+}
+
+.archive-original-hero-title p {
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 20px 0;
+}
+
+.archive-original-hero-title a {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  font-size: 10px;
+  border-bottom: 1px solid #080808;
+  width: max-content;
+  padding-bottom: 9px;
+}
+
+.archive-original-campaign {
+  display: grid;
+  grid-template-columns: 1.55fr 1fr;
+  gap: 12px;
+}
+
+.archive-original-campaign-main {
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+}
+
+.archive-original-campaign-main > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  filter: grayscale(1);
+}
+
+.archive-original-campaign-caption {
+  position: absolute;
+  left: 25px;
+  right: 25px;
+  bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  font:
+    400 43px "Sublime",
+    sans-serif;
+  text-transform: uppercase;
+}
+
+.archive-original-campaign-caption > a {
+  width: 49px;
+  height: 49px;
+  background: #d52236;
+  display: grid;
+  place-items: center;
+}

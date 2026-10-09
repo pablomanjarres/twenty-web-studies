@@ -1,0 +1,40 @@
+@media (max-width: 1000px) {
+  .og-original-title {
+    min-height: 470px;
+  }
+  .og-original-hero-collage {
+    height: 355px;
+    right: 5%;
+    width: 34%;
+  }
+  .og-original-paper-tag {
+    font-size: 17px;
+    right: -14%;
+    padding: 15px;
+  }
+  .og-original-work-heading h2 {
+    font-size: 52px;
+  }
+  .og-original-work-image {
+    height: 390px;
+  }
+  .og-original-frequency .og-original-work-image {
+    height: 340px;
+  }
+  .og-original-work-poster {
+    font-size: 48px;
+  }
+  .og-original-studio h2 {
+    font-size: 50px;
+  }
+  .og-original-contact h2 {
+    font-size: 58px;
+  }
+  .og-original-contact {
+    gap: 50px;
+  }
+  .og-original-studio-symbol .brand-logo svg {
+    width: 180px;
+    height: 180px;
+  }
+}

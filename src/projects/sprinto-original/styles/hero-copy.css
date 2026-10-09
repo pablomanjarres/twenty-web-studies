@@ -1,0 +1,73 @@
+.sprinto-original-hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.06fr 1fr;
+  min-height: 630px;
+  background: #6535f4;
+  color: white;
+}
+.sprinto-original-hero-copy {
+  padding: 60px 8% 58px 9.4%;
+}
+.sprinto-original-online {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+}
+.sprinto-original-online i {
+  width: 7px;
+  height: 7px;
+  background: #ddfc6b;
+  border-radius: 50%;
+}
+.sprinto-original h1,
+.sprinto-original h2,
+.sprinto-original h3 {
+  font-family: "Anton", "Bebas Neue", sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.015em;
+}
+.sprinto-original h1 {
+  font-size: clamp(70px, 8.6vw, 127px);
+  line-height: 0.93;
+  margin: 30px 0 25px;
+}
+.sprinto-original h1 > span {
+  color: #ddfc6b;
+}
+.sprinto-original-hero-copy > p {
+  max-width: 310px;
+  font-size: 13px;
+  line-height: 1.75;
+  color: #e0d6fd;
+  margin: 0 0 26px;
+}
+.sprinto-original-lime-button {
+  background: #ddfc6b;
+  color: #19152d;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 16px 20px;
+  font-size: 12px;
+  font-weight: 600;
+  border: 0;
+  border-radius: 5px;
+}
+.sprinto-original-hero-meta {
+  display: flex;
+  gap: 45px;
+  margin-top: 35px;
+}
+.sprinto-original-hero-meta strong {
+  display: block;
+  font-size: 25px;
+  font-weight: 500;
+  letter-spacing: -0.045em;
+}
+.sprinto-original-hero-meta span {
+  font-size: 9px;
+  color: #c7b4fc;
+}
