@@ -1,60 +1,78 @@
 .vs-arrival {
   position: absolute;
-  bottom: 90px;
-  right: 55px;
-  width: 330px;
-  background: var(--vs-cream);
-  color: var(--vs-forest);
-  box-shadow: 0 8px 35px #051d2b25;
+  bottom: 33px;
+  left: 38px;
+  right: 38px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  border-radius: 24px;
+  background: #101d2df5;
+  color: var(--vs-mist);
+  box-shadow: 0 14px 50px #00000030;
 }
 .vs-arrival-toggle {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 30px;
   width: 100%;
-  padding: 22px 25px;
+  padding: 24px 30px;
   border: 0;
+  border-radius: 24px;
   background: transparent;
   color: inherit;
   text-align: left;
 }
-.vs-arrival-toggle span {
-  font:
-    400 27px "The Foriene",
-    "Cormorant Garamond",
-    serif;
+.vs-arrival-toggle > span {
+  display: flex;
+  align-items: center;
+  gap: 27px;
+  font-size: 24px;
+  font-weight: 400;
 }
 .vs-arrival-toggle small {
   display: block;
-  font:
-    9px "DM Sans",
-    sans-serif;
-  letter-spacing: 0.14em;
-  margin-bottom: 8px;
+  font-size: 11px;
+  color: #a9c0cf;
 }
 .vs-arrival-summary {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  border-top: 1px solid #203c3122;
-  margin: 0 25px;
-  padding: 13px 0 17px;
+  gap: 15px;
+  padding: 0 30px;
   font-size: 11px;
+  color: #a9c0cf;
+}
+.vs-arrival-summary strong {
+  font-size: 19px;
+  font-weight: 500;
+  color: var(--vs-window);
+  padding: 0 3px;
+}
+.vs-arrival-summary svg {
+  color: var(--vs-mist);
 }
 .vs-arrival-open {
-  width: 400px;
+  display: block;
+}
+.vs-arrival-open .vs-arrival-toggle {
+  padding: 21px 30px 18px;
 }
 .vs-folio {
-  padding: 0 25px 22px;
-  border-top: 1px solid #203c3122;
+  padding: 0 30px 25px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) 290px;
+  gap: 15px 22px;
 }
 .vs-dates {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 15px;
-  margin-top: 16px;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 12px;
 }
 .vs-dates label {
   font-size: 10px;
+  color: #b6cdda;
   display: grid;
   gap: 8px;
 }
@@ -62,52 +80,64 @@
 .vs-dates select {
   width: 100%;
   min-width: 0;
-  min-height: 39px;
-  font-size: 12px;
-  color: var(--vs-forest);
+  min-height: 46px;
+  font-size: 11px;
+  color: var(--vs-mist);
   border: 0;
-  border-bottom: 1px solid #203c3145;
-  border-radius: 0;
-  background: transparent;
-  padding: 0;
+  border-radius: 11px;
+  background: var(--vs-slate);
+  padding: 0 12px;
+  color-scheme: dark;
 }
 .vs-room-note {
+  grid-column: 1 / 3;
   font-size: 11px;
   line-height: 1.7;
-  margin-top: 15px !important;
-  color: #596757;
+  align-self: center;
+  color: #a9c0cf;
 }
 .vs-stay-total {
+  grid-column: 3;
+  grid-row: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 0;
-  margin-top: 8px;
-  border-top: 1px solid #203c3122;
+  gap: 15px;
   font-size: 11px;
+  padding-top: 19px;
 }
 .vs-stay-total strong {
-  font:
-    400 27px "The Foriene",
-    serif;
+  font-size: 30px;
+  font-weight: 400;
+  color: var(--vs-window);
 }
 .vs-folio-action {
+  grid-column: 3;
+  grid-row: 2 / 4;
+  align-self: start;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 14px 16px;
+  gap: 15px;
+  min-height: 49px;
+  padding: 14px 20px;
   border: 0;
-  background: var(--vs-forest);
-  color: var(--vs-cream);
-  font-size: 12px;
+  border-radius: 27px;
+  background: var(--vs-window);
+  color: var(--vs-night);
+  font-size: 11px;
+}
+.vs-folio-action:hover {
+  background: #f3d4a9;
 }
 .vs-folio-action:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
 .vs-stay-message {
-  margin-top: 12px !important;
-  font-size: 9px;
+  grid-column: 1 / 3;
+  font-size: 10px;
   line-height: 1.7;
+  color: #a9c0cf;
 }
