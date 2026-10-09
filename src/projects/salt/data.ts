@@ -1,8 +1,32 @@
 export const image = (name: string) =>
   `${import.meta.env.BASE_URL}images/salt/${name}.jpg`;
-export const plate = `${import.meta.env.BASE_URL}images/salt/prawns-v2.png`;
+export type MenuFeature = {
+  image: string;
+  alt: string;
+  label: string;
+  title: string;
+  note: string;
+};
+const kitchenFeature: MenuFeature = {
+  image: `${import.meta.env.BASE_URL}images/salt/prawns-v2.png`,
+  alt: "Grilled Atlantic prawns with wild garlic butter and charred lemon on an ivory plate",
+  label: "The kitchen’s favourite",
+  title: "Wild garlic prawns",
+  note: "Best shared. Extra bread recommended.",
+};
+export const menuFeatures: Record<string, MenuFeature> = {
+  Dinner: kitchenFeature,
+  Lunch: kitchenFeature,
+  Drinks: {
+    image: `${import.meta.env.BASE_URL}images/salt/cocktails-v3.png`,
+    alt: "A sea-lettuce martini and blood-orange spritz on a white ceramic tray",
+    label: "From the bar",
+    title: "A little coastal spirit",
+    note: "Something crisp. Something bright.",
+  },
+};
 type Dish = { name: string; note: string; price: number };
-type MenuSection = { title: string; dishes: Dish[] };
+export type MenuSection = { title: string; dishes: Dish[] };
 export const menus: Record<string, MenuSection[]> = {
   Dinner: [
     {

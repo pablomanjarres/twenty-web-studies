@@ -9,7 +9,7 @@
   font:
     400 25px "Instrument Serif",
     serif;
-  color: var(--sl-red);
+  color: var(--sl-sea);
   margin-bottom: 20px;
 }
 .sl-dish {
@@ -22,8 +22,8 @@
   align-items: baseline;
 }
 .sl-dish h3 {
-  font-size: 13px;
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: 600;
 }
 .sl-dish > div > span {
   font:
@@ -31,9 +31,9 @@
     monospace;
 }
 .sl-dish p {
-  font-size: 10px;
+  font-size: 11px;
   line-height: 1.7;
-  color: #6b7a7e;
+  color: #61727a;
   margin-top: 7px;
   max-width: 230px;
 }
@@ -41,7 +41,6 @@
   display: flex;
   gap: 13px;
   align-items: start;
-  border-top: 1px solid var(--sl-line);
   padding-top: 18px;
   margin-top: 10px;
 }
@@ -68,9 +67,8 @@
 .sl-plate figcaption {
   text-align: center;
   font:
-    8px "IBM Plex Mono",
-    monospace;
-  letter-spacing: 0.06em;
+    11px "DM Sans",
+    sans-serif;
   margin-top: 16px;
 }
 .sl-plate figcaption span {
