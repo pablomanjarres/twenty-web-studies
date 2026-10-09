@@ -8,14 +8,15 @@ export const brand: Brand = {
   purpose:
     "A botanical skincare storefront that helps visitors discover a small, thoughtful daily ritual.",
   description:
-    "Vale presents a small skincare collection as a botanical specimen index. Pressed oat, rose, and calendula sit beside individual frosted-glass vessels on a mineral-green ruled sheet. Fine annotations connect each plant, ingredient, and material, while modest serif titles keep the formulas close at hand. Visitors can switch formulas, open an ingredient note, choose a volume, and collect a personal ritual. Macro texture photographs show the character of a light serum and a richer cream. A compact morning and evening sequence, packaging study, and practical questions extend the experience. The identity brings botanical observation and a considered daily routine into one quiet, useful storefront.",
+    "Vale presents botanical skincare in a luminous forest glass studio. A large frosted vessel floats in soft green light, while rounded formula capsules and a translucent purchase tray bring the daily collection close at hand. Visitors can explore the cleanser, serum, and cream, inspect botanical ingredients, select a volume, and build a personal ritual. Macro texture photographs reveal the character of each formula. Morning and evening sequences show how the products fit together, with clear application notes and practical packaging questions. Confident sans-serif typography, quiet material depth, and the familiar leaf identity make the storefront feel gentle, immediate, and tactile.",
   colors: [
-    { name: "Mineral green", hex: "#E2E8D8" },
-    { name: "Forest", hex: "#344E3D" },
-    { name: "Porcelain", hex: "#F6F6ED" },
-    { name: "Sage gray", hex: "#697368" },
+    { name: "Forest", hex: "#071F19" },
+    { name: "Evergreen", hex: "#153E31" },
+    { name: "Glass sage", hex: "#B9D2BF" },
+    { name: "Cold fog", hex: "#EFF5F0" },
+    { name: "Moss", hex: "#83A38B" },
   ],
-  fonts: { heading: "The Foriene", body: "DM Sans" },
+  fonts: { heading: "Manrope", body: "DM Sans", wordmark: "The Foriene" },
   logo: '<path d="M20 35V18" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 23C7 24 5 12 7 5c11 0 16 7 13 18Z" fill="currentColor"/><path d="M20 23c0-11 5-16 14-15 1 10-4 16-14 15Z" fill="currentColor"/><path d="M15 35h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>',
   logoMeaning:
     "Two leaves meet above a small stem, joining botanical ingredients and the balance of a daily ritual.",
@@ -24,13 +25,13 @@ export const brand: Brand = {
     "Beauty",
     "Botanical",
     "Ecommerce",
-    "Editorial",
-    "Minimal",
+    "Glass",
+    "Product photography",
     "Product design",
     "Green",
     "Typography",
     "Brand identity",
   ],
   artDirection:
-    "A botanical specimen index on mineral-green ruled paper, pressed plant cutouts, individual frosted-glass vessels, fine ingredient annotations, modest The Foriene typography, macro textures, and a compact daily ritual sequence.",
+    "A deep forest glass studio with a luminous selected frosted vessel, soft material reflections, rounded formula and volume capsules, a translucent purchase tray, confident Manrope headings and DM Sans body copy, macro texture closeups, and a cool fog daily ritual. The original leaf symbol and The Foriene wordmark remain unchanged.",
 };

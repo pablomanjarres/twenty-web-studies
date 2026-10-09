@@ -1,17 +1,15 @@
 .vale {
-  --vale-paper: #f6f6ed;
-  --vale-green: #344e3d;
-  --vale-mineral: #e2e8d8;
-  --vale-line: #344e3d35;
-  --vale-muted: #697368;
-  background: var(--vale-paper);
-  color: var(--vale-green);
+  --vale-forest: #071f19;
+  --vale-evergreen: #153e31;
+  --vale-glass: #b9d2bf;
+  --vale-fog: #eff5f0;
+  --vale-moss: #83a38b;
+  --focus-color: #c6e5ca;
+  background: var(--vale-forest);
+  color: var(--vale-fog);
   font-family: "DM Sans", sans-serif;
-  font-size: 14px;
-  line-height: 1.6;
-}
-.vale * {
-  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 1.55;
 }
 .vale h1,
 .vale h2,
@@ -23,18 +21,15 @@
 .vale h1,
 .vale h2,
 .vale h3 {
-  font-family: "The Foriene", serif;
-  font-weight: 400;
-}
-.vale button,
-.vale input {
-  font: inherit;
-  color: inherit;
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.055em;
 }
 .vale button {
   border: 0;
   background: none;
-  cursor: pointer;
+  color: inherit;
+  font: inherit;
 }
 .vale a {
   color: inherit;
@@ -43,104 +38,85 @@
 .vale button:focus-visible,
 .vale a:focus-visible,
 .vale summary:focus-visible {
-  outline: 2px solid var(--vale-green);
-  outline-offset: 4px;
+  outline: 3px solid var(--focus-color);
+  outline-offset: 5px;
 }
-.vale-label {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 10px;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  display: block;
+.vale summary {
+  cursor: pointer;
+  list-style: none;
+}
+.vale summary::-webkit-details-marker {
+  display: none;
 }
 .vale-header {
-  height: 76px;
-  padding: 0 5%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid var(--vale-line);
-  font-size: 12px;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: 96px;
+  max-width: 1700px;
+  margin: auto;
+  padding: 20px 4.8%;
 }
-.vale-header .brand-logo {
+.vale .brand-logo {
   font-family: "The Foriene", serif;
   font-size: 32px;
   gap: 8px;
 }
-.vale-header .brand-logo svg {
-  width: 22px;
-  height: 22px;
+.vale .brand-logo svg {
+  width: 24px;
+  height: 24px;
 }
 .vale-header nav {
   display: flex;
-  gap: 35px;
+  align-items: center;
+  gap: 34px;
+  color: #d2e0d7;
+  font-size: 14px;
 }
-.vale-header button {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 11px;
+.vale-header nav a {
+  padding: 10px 0;
 }
-.vale-formulas {
-  max-width: 1700px;
-  margin: auto;
+.vale .vale-bag-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 8px 15px;
+  background: #ffffff0e;
+  border-radius: 30px;
+  font-size: 14px;
+}
+.vale-bag-button span {
   display: grid;
-  grid-template-columns: 210px minmax(0, 1fr);
-  gap: 6%;
-  padding: 35px 5% 50px;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--vale-glass);
+  color: var(--vale-forest);
+  font-size: 11px;
+  font-weight: 700;
 }
-.vale-formula-index {
-  display: flex;
-  flex-direction: column;
-  padding-top: 18px;
-}
-.vale-formula-index h1 {
-  font-size: 39px;
-  line-height: 1.1;
-  margin: 24px 0 18px;
-}
-.vale-formula-index > p {
-  font-size: 12px;
-  line-height: 1.8;
-}
-.vale-formula-index nav {
-  margin-top: 38px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.vale-formula-index nav button {
-  display: flex;
-  gap: 16px;
-  padding: 14px 0;
-  text-align: left;
-  border-bottom: 1px solid var(--vale-line);
-}
-.vale-formula-index nav button[aria-pressed="true"] {
-  border-bottom-color: var(--vale-green);
-}
-.vale-formula-index nav small {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 10px;
-  padding-top: 3px;
-}
-.vale-formula-index nav span {
-  font-family: "The Foriene", serif;
-  font-size: 23px;
-  line-height: 1.1;
-}
-.vale-formula-index nav em {
+.vale-section-intro {
   display: block;
-  font-family: "DM Sans", sans-serif;
-  font-style: normal;
-  font-size: 10px;
-  margin-top: 9px;
-  color: var(--vale-muted);
+  font-size: 15px;
+  margin-bottom: 20px;
 }
-.vale-index-note {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  margin-top: auto;
-  padding-top: 50px;
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 9px;
+.vale .vale-add {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  min-height: 52px;
+  padding: 14px 23px;
+  border-radius: 30px;
+  background: var(--vale-fog);
+  color: var(--vale-forest);
+  font-size: 14px;
+  font-weight: 700;
+}
+.vale .vale-add:hover {
+  background: #d5e8d7;
 }
