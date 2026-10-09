@@ -67,22 +67,15 @@
     padding: 40px 4%;
   }
   .vs-ritual-notes {
-    grid-template-columns: 1fr 1fr;
-    gap: 22px;
+    grid-template-columns: 1fr;
   }
-  .vs-footer {
-    padding: 45px 25px;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
+  .vs-ritual-notes article {
+    padding: 20px;
   }
-  .vs-footer > p {
-    font-size: 27px;
-  }
-  .vs-footer > a {
-    grid-column: 1/-1;
-    justify-self: start;
-  }
-  .vs-footer > small {
-    grid-column: 1/-1;
+}
+
+@media (min-width: 761px) and (max-width: 1050px) {
+  .vs-setting {
+    display: none;
   }
 }
