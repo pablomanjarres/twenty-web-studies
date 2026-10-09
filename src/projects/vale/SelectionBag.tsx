@@ -64,7 +64,7 @@ export function SelectionBag({
           <p>A little space for the first step.</p>
         )}
         <button className="vale-add" onClick={onClose}>
-          Return to the formulas →
+          Continue exploring
         </button>
       </div>
     </div>

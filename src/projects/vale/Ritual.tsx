@@ -1,5 +1,7 @@
 import { useState } from "react";
+import { ArrowUpRight, Moon, Sun } from "lucide-react";
 import { formulas, image } from "./data";
+
 export function Ritual({ onSelect }: { onSelect: (index: number) => void }) {
   const [time, setTime] = useState("Morning");
   const selected = time === "Morning" ? formulas : [formulas[0], formulas[2]];
@@ -7,8 +9,8 @@ export function Ritual({ onSelect }: { onSelect: (index: number) => void }) {
     <section id="ritual" className="vale-ritual">
       <div className="vale-ritual-top">
         <div>
-          <span className="vale-label">The daily sequence</span>
-          <h2>A few considered moments.</h2>
+          <span className="vale-section-intro">Care that feels like you.</span>
+          <h2>A few good moments.</h2>
         </div>
         <div className="vale-time-tabs" aria-label="Ritual time">
           {["Morning", "Evening"].map((name) => (
@@ -17,6 +19,7 @@ export function Ritual({ onSelect }: { onSelect: (index: number) => void }) {
               aria-pressed={time === name}
               onClick={() => setTime(name)}
             >
+              {name === "Morning" ? <Sun size={16} /> : <Moon size={16} />}
               {name}
             </button>
           ))}
@@ -25,18 +28,22 @@ export function Ritual({ onSelect }: { onSelect: (index: number) => void }) {
       <div className="vale-ritual-sequence">
         {selected.map((formula, index) => (
           <article key={formula.id}>
-            <span className="vale-label">
-              0{index + 1} / {formula.kind}
-            </span>
-            <img src={image(formula.image)} alt={formula.name} loading="lazy" />
-            <div>
+            <div className="vale-ritual-image">
+              <img
+                src={image(formula.image)}
+                alt={formula.name}
+                loading="lazy"
+              />
+              <span>Step {index + 1}</span>
+            </div>
+            <div className="vale-ritual-description">
               <h3>{formula.name}</h3>
               <p>{formula.use}</p>
               <a
                 href="#formulas"
                 onClick={() => onSelect(formulas.indexOf(formula))}
               >
-                View formula ↗
+                Choose {formula.name} <ArrowUpRight size={16} />
               </a>
             </div>
           </article>
