@@ -103,47 +103,58 @@
     height: 45px;
     bottom: 9%;
   }
-  .vale-ingredient-note::before {
-    width: 20px;
+  .vale-ingredient-capsule {
+    right: -3px;
+    bottom: 12px;
+    width: 220px;
+    padding: 12px 14px;
+    border-radius: 20px;
   }
-  .vale-cross {
-    font-size: 12px;
+  .vale-ingredient-capsule summary {
+    font-size: 11px;
   }
-  .vale-cross-one {
-    top: auto;
-    bottom: 13px;
-    right: 13px;
+  .vale-ingredient-capsule small {
+    font-size: 9px;
   }
-  .vale-formula-caption {
-    padding-top: 22px;
-    gap: 14px;
-    align-items: start;
+  .vale-ingredient-orb {
+    width: 24px;
+    height: 28px;
   }
-  .vale-formula-caption h2 {
-    font-size: 30px;
-    margin: 8px 0;
+  .vale-purchase-tray {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    width: 100%;
+    padding: 20px 18px;
+    border-radius: 23px;
   }
-  .vale-formula-caption p {
-    font-size: 10px;
-    max-width: 135px;
+  .vale-selected-formula h2 {
+    font-size: 28px;
   }
-  .vale-formula-caption .vale-label {
-    font-size: 8px;
+  .vale-selected-formula span {
+    font-size: 11px;
   }
-  .vale-formula-order {
-    width: 155px;
-    max-width: 49%;
+  .vale-selected-formula > strong {
+    font-size: 25px;
   }
-  .vale-volumes {
-    gap: 5px;
+  .vale-purchase-actions {
+    gap: 8px;
+    margin-top: 15px;
   }
   .vale-volumes button {
-    padding: 7px 10px;
-    font-size: 8px;
+    padding: 9px;
+    font-size: 11px;
   }
-  .vale-add {
-    font-size: 9px !important;
-    padding: 11px 10px !important;
-    gap: 8px;
+  .vale .vale-add {
+    padding: 12px 14px;
+    gap: 9px;
+    font-size: 12px;
+  }
+  .vale-discover {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    margin-top: 14px;
+    font-size: 12px;
   }
 }
