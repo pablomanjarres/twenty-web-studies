@@ -29,7 +29,7 @@ export function Reservation() {
       >
         <div className="sl-receipt-top">
           <strong>SALT / TABLE NOTES</strong>
-          <span>18 Harbour Lane</span>
+          <span>Coastal kitchen</span>
         </div>
         <label>
           People
