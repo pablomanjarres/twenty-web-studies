@@ -1,0 +1,74 @@
+@media (max-width: 650px) {
+  .wf-itinerary {
+    grid-column: auto;
+    grid-template-columns: 1fr;
+    padding: 23px;
+    gap: 0;
+  }
+  .wf-ticket-top,
+  .wf-itinerary h2,
+  .wf-region,
+  .wf-trip-note,
+  .wf-trip-facts,
+  .wf-stops-heading,
+  .wf-stops,
+  .wf-trip-planning {
+    grid-column: 1;
+    grid-row: auto;
+  }
+  .wf-itinerary h2 {
+    font-size: 30px;
+    margin-top: 14px;
+  }
+  .wf-trip-note {
+    font-size: 11px;
+    margin-top: 14px !important;
+  }
+  .wf-trip-facts {
+    margin: 16px 0;
+    padding: 12px;
+  }
+  .wf-trip-facts dt {
+    font-size: 8px;
+    margin-bottom: 6px;
+  }
+  .wf-trip-facts dd {
+    font-size: 13px;
+  }
+  .wf-stops-heading {
+    font-size: 9px;
+  }
+  .wf-stops {
+    grid-template-columns: 1fr 1fr;
+    gap: 9px 15px;
+    padding-top: 11px;
+    font-size: 10px;
+  }
+  .wf-stops li {
+    gap: 7px;
+  }
+  .wf-stops li::before {
+    width: 21px;
+    height: 21px;
+    font-size: 9px;
+  }
+  .wf-trip-planning {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 21px;
+  }
+  .wf-departure {
+    gap: 8px;
+  }
+  .wf-trip-price {
+    margin: 18px 0 13px;
+  }
+  .wf-trip-price strong {
+    font-size: 23px;
+  }
+  .wf-price {
+    margin-top: 10px !important;
+    min-height: 16px;
+  }
+}
