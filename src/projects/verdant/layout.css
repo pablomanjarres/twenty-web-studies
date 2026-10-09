@@ -1,7 +1,8 @@
 .verdant {
-  --vd-ink: #343d26;
-  --vd-paper: #f5f4e8;
-  --vd-line: #c7ceb6;
+  --vd-ink: #24383f;
+  --vd-paper: #f4f8fb;
+  --vd-line: #d5e0e5;
+  --vd-muted: #61737b;
   --vd-yellow: #e5c24d;
   background: var(--vd-paper);
   color: var(--vd-ink);
@@ -33,9 +34,8 @@
 }
 .vd-header > span {
   font:
-    8px "IBM Plex Mono",
-    monospace;
-  letter-spacing: 0.08em;
+    11px "Manrope",
+    sans-serif;
   display: flex;
   align-items: center;
   gap: 9px;
