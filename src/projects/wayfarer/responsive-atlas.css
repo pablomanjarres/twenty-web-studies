@@ -1,0 +1,114 @@
+@media (max-width: 650px) {
+  .wf-header {
+    height: 62px;
+    padding: 0 20px;
+    gap: 10px;
+  }
+  .wf-header > a {
+    font-size: 23px;
+  }
+  .wf-header .brand-logo svg {
+    width: 26px;
+    height: 26px;
+  }
+  .wf-header nav {
+    font-size: 10px;
+  }
+  .wf-header nav a {
+    padding: 12px;
+  }
+  .wf-header nav a:last-child {
+    display: none;
+  }
+  .wf-atlas {
+    grid-template-columns: 1fr;
+  }
+  .wf-journey-photo {
+    min-height: 240px;
+  }
+  .wf-journey-photo > img {
+    object-position: center 66%;
+  }
+  .wf-photo-invitation {
+    top: 22px;
+    left: 23px;
+  }
+  .wf-photo-invitation > span {
+    font-size: 9px;
+    gap: 7px;
+  }
+  .wf-photo-invitation h1 {
+    font-size: 39px;
+    margin-top: 15px;
+  }
+  .wf-photo-invitation p {
+    display: none;
+  }
+  .wf-photo-caption {
+    left: 23px;
+    bottom: 20px;
+    font-size: 10px;
+  }
+  .wf-photo-caption a {
+    width: 44px;
+    height: 44px;
+  }
+  .wf-map-panel {
+    min-height: 0;
+    padding: 20px 18px 0;
+  }
+  .wf-map-intro > span {
+    display: none;
+  }
+  .wf-map-intro {
+    padding: 0 3px;
+  }
+  .wf-map-intro h2 {
+    font-size: 23px;
+    margin: 0;
+  }
+  .wf-route-tabs {
+    margin-top: 14px;
+    gap: 6px;
+  }
+  .wf-route-tabs button {
+    flex: 1;
+    min-width: 0;
+    padding: 10px;
+    font-size: 10px;
+  }
+  .wf-route-tabs button svg {
+    width: 12px;
+  }
+  .wf-map-sheet {
+    height: auto;
+    min-height: 270px;
+    grid-template-rows: minmax(0, 1fr) auto auto;
+    margin: 18px -18px 0;
+    flex: none;
+  }
+  .wf-map {
+    min-height: 0;
+    height: 200px;
+  }
+  .wf-map-heading {
+    display: none;
+  }
+  .wf-map-route-name {
+    margin: 0 22px 12px;
+    gap: 3px;
+  }
+  .wf-map-route-name span {
+    font-size: 8px;
+  }
+  .wf-map-route-name strong {
+    font-size: 12px;
+  }
+  .wf-map-caption {
+    margin: 0 22px 16px;
+    font-size: 8px;
+  }
+  .wf-map-caption small {
+    font-size: 7px;
+  }
+}
