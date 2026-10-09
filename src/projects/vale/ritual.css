@@ -1,0 +1,101 @@
+.vale-ritual {
+  --focus-color: #316446;
+  max-width: 1660px;
+  margin: 24px;
+  padding: 65px 5.2% 46px;
+  border-radius: 42px;
+  background: var(--vale-fog);
+  color: var(--vale-forest);
+}
+.vale-ritual-top {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 28px;
+}
+.vale-ritual h2 {
+  font-size: clamp(35px, 3.8vw, 54px);
+  line-height: 1.08;
+}
+.vale-time-tabs {
+  display: flex;
+  align-items: center;
+  flex: none;
+  gap: 3px;
+  background: #dbe7de;
+  padding: 5px;
+  border-radius: 28px;
+}
+.vale-time-tabs button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 9px 17px;
+  border-radius: 24px;
+  font-size: 13px;
+}
+.vale-time-tabs button[aria-pressed="true"] {
+  background: white;
+  box-shadow: 0 4px 12px #112b1510;
+}
+.vale-ritual-sequence {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
+  gap: 50px;
+  margin-top: 35px;
+}
+.vale-ritual-image {
+  position: relative;
+  display: grid;
+  place-items: center;
+  height: 290px;
+  border-radius: 48%;
+  background: radial-gradient(ellipse, #a5bfa045, transparent 69%);
+}
+.vale-ritual-image img {
+  height: 350px;
+  width: 350px;
+  max-width: none;
+  object-fit: contain;
+}
+.vale-ritual-image span {
+  position: absolute;
+  top: 9px;
+  left: 0;
+  font-size: 12px;
+  color: #52745f;
+}
+.vale-ritual-description {
+  padding-top: 16px;
+}
+.vale-ritual h3 {
+  font-size: 27px;
+  line-height: 1.2;
+}
+.vale-ritual-description p {
+  margin-top: 12px;
+  max-width: 260px;
+  min-height: 48px;
+  font-size: 14px;
+  color: #526b5a;
+}
+.vale-ritual-description a {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+  margin-top: 15px;
+  font-size: 13px;
+}
+.vale-ritual-note {
+  text-align: center;
+  color: #526b5a;
+  font-size: 14px;
+  margin-top: 47px;
+}
+@media (min-width: 1710px) {
+  .vale-ritual {
+    margin-inline: auto;
+  }
+}
