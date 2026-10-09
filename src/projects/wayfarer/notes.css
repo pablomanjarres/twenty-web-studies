@@ -1,47 +1,47 @@
 .wf-notes {
-  padding: 95px 38px;
+  padding: 64px 4%;
   display: grid;
-  grid-template-columns: 0.9fr 1.05fr 1fr;
-  gap: 42px;
+  grid-template-columns: 0.8fr 0.9fr 1.2fr;
+  gap: 34px;
   align-items: center;
 }
 .wf-note-title > span,
 .wf-guide span {
-  font:
-    10px "IBM Plex Mono",
-    monospace;
-  letter-spacing: 0.12em;
+  font-size: 11px;
+  color: var(--wf-terrain);
 }
 .wf-note-title h2,
 .wf-guide h2 {
   font:
-    400 44px/1.08 "Bricolage Grotesque",
+    500 40px/1.1 "Bricolage Grotesque",
     sans-serif;
   letter-spacing: -0.04em;
-  margin: 22px 0;
+  margin: 18px 0;
 }
 .wf-note-title p {
   font-size: 12px;
-  line-height: 1.9;
+  line-height: 1.8;
 }
 .wf-notes > figure img {
-  height: 340px;
+  height: 320px;
   width: 100%;
   object-fit: cover;
+  object-position: center 65%;
+  border-radius: 26px;
 }
 .wf-notes > figure figcaption {
-  font:
-    8px "IBM Plex Mono",
-    monospace;
-  margin-top: 14px;
-  letter-spacing: 0.05em;
+  font-size: 10px;
+  margin-top: 12px;
+  color: var(--wf-terrain);
+}
+.wf-note-index {
+  display: grid;
+  gap: 10px;
 }
 .wf-note-index details {
-  border-top: 1px solid var(--wf-line);
-  padding: 20px 0;
-}
-.wf-note-index details:last-child {
-  border-bottom: 1px solid var(--wf-line);
+  border-radius: 16px;
+  padding: 18px 20px;
+  background: #e7f1f4;
 }
 .wf-note-index summary {
   list-style: none;
@@ -49,39 +49,40 @@
   align-items: start;
   gap: 13px;
   cursor: pointer;
+  min-height: 44px;
 }
 .wf-note-index summary > span {
-  font:
-    11px "IBM Plex Mono",
-    monospace;
-  margin-top: 3px;
+  font-size: 10px;
+  color: var(--wf-terrain);
+  padding-top: 3px;
 }
 .wf-note-index h3 {
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: 600;
   line-height: 1.5;
 }
 .wf-note-index summary svg {
   flex: none;
+  margin-left: auto;
   margin-top: 3px;
 }
 .wf-note-index details p {
   font-size: 12px;
-  line-height: 1.9;
-  margin: 15px 0 0 30px;
+  line-height: 1.8;
+  margin: 15px 0 0 28px;
 }
 .wf-guide {
   display: grid;
-  grid-template-columns: 80px 1.2fr 1fr;
+  grid-template-columns: 60px 1fr 1.1fr;
   gap: 30px;
   align-items: center;
-  background: #dcecf4;
-  padding: 60px 5%;
+  background: var(--wf-sky);
+  padding: 36px 5%;
 }
 .wf-guide p {
-  font-size: 14px;
-  line-height: 1.9;
-  max-width: 390px;
+  font-size: 12px;
+  line-height: 1.8;
+  max-width: 420px;
 }
 .wf-guide a {
   grid-column: 3;
@@ -89,8 +90,9 @@
   align-items: center;
   gap: 20px;
   text-decoration: none;
-  font-size: 13px;
+  font-size: 12px;
 }
 .wf-guide h2 {
-  margin-bottom: 0;
+  margin: 12px 0 0;
+  font-size: 33px;
 }
