@@ -1,21 +1,20 @@
 import { ArrowUpRight } from "lucide-react";
-import { BrandLogo } from "../../shared/BrandLogo";
-import { brand } from "./brand";
-import { image, rooms } from "./data";
+import { RetreatFooter } from "./RetreatFooter";
+import { asset, rooms } from "./data";
 export function RetreatJournal({ onBooking }: { onBooking: () => void }) {
   return (
     <>
       <section id="suite" className="vs-suite">
         <div className="vs-suite-photograph">
           <img
-            src={image("suite")}
-            alt="A warm retreat suite with natural materials and soft light"
+            src={asset("suite-blue-hour-v3.png")}
+            alt="A limestone and timber suite with linen bedding overlooking the lodge pool and forest at dusk"
             loading="lazy"
           />
-          <span>ROOM JOURNAL / 01</span>
+          <span>A room with a view</span>
         </div>
         <div className="vs-suite-copy">
-          <small>WITH ROOM TO BREATHE</small>
+          <small>With room to breathe</small>
           <h2>
             A window open
             <br />
@@ -46,7 +45,7 @@ export function RetreatJournal({ onBooking }: { onBooking: () => void }) {
       </section>
       <section id="ritual" className="vs-ritual">
         <div className="vs-ritual-title">
-          <span>A DAY, UNHURRIED</span>
+          <span>A day, unhurried</span>
           <h2>
             Follow the light,
             <br />
@@ -55,17 +54,15 @@ export function RetreatJournal({ onBooking }: { onBooking: () => void }) {
         </div>
         <figure>
           <img
-            src={image("forest")}
-            alt="Deep mountain forest and a quiet trail"
+            src={asset("courtyard-v3.png")}
+            alt="The lodge courtyard in afternoon light, with limestone walls, timber screens and a view toward the forest"
             loading="lazy"
           />
-          <figcaption>
-            Walk until the only sound is your own footsteps.
-          </figcaption>
+          <figcaption>A sheltered courtyard. A little time outside.</figcaption>
         </figure>
         <div className="vs-ritual-notes">
           <article>
-            <span>08:00 / THE KITCHEN</span>
+            <span>08:00 · The kitchen</span>
             <h3>
               Something warm
               <br />
@@ -77,7 +74,7 @@ export function RetreatJournal({ onBooking }: { onBooking: () => void }) {
             </p>
           </article>
           <article>
-            <span>16:00 / THE SAUNA</span>
+            <span>16:00 · The sauna</span>
             <h3>
               Heat. Water.
               <br />A deep breath.
@@ -89,18 +86,7 @@ export function RetreatJournal({ onBooking }: { onBooking: () => void }) {
           </article>
         </div>
       </section>
-      <footer className="vs-footer">
-        <BrandLogo brand={brand} />
-        <p>
-          The mountain will be here.
-          <br />
-          Make a little time for it.
-        </p>
-        <a href="#landscape" onClick={onBooking}>
-          Plan a stay <ArrowUpRight size={20} />
-        </a>
-        <small>© 2026 Vestra · Alpine retreat</small>
-      </footer>
+      <RetreatFooter onBooking={onBooking} />
     </>
   );
 }
