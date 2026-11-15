@@ -1,0 +1,112 @@
+.archive-original-shop {
+  max-width: 1600px;
+  padding: 96px var(--ao-gutter);
+  margin: auto;
+  scroll-margin-top: 16px;
+}
+
+.archive-original-shop-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.archive-original-shop-heading h2 {
+  font:
+    400 clamp(56px, 6vw, 96px) / 0.92 "Sublime",
+    sans-serif;
+  text-transform: uppercase;
+  text-wrap: balance;
+  margin: 0;
+  letter-spacing: -0.025em;
+}
+
+.archive-original-shop-heading > span {
+  font:
+    500 15px/1.5 "Manrope",
+    sans-serif;
+  color: var(--ao-ink-2);
+}
+
+.archive-original-filters {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.archive-original-filter-row {
+  display: flex;
+  gap: 8px;
+}
+
+.archive-original-filter-row button {
+  flex: none;
+  height: 40px;
+  padding: 0 16px;
+  border: 1px solid var(--ao-control);
+  background: var(--ao-paper);
+  transition:
+    background-color 200ms var(--ao-ease),
+    border-color 200ms var(--ao-ease),
+    color 200ms var(--ao-ease);
+}
+
+.archive-original-filter-row button:hover {
+  border-color: var(--ao-ink);
+}
+
+.archive-original-filter-row button:active {
+  transform: translateY(1px);
+}
+
+.archive-original-filter-row button.active {
+  background: var(--ao-ink);
+  color: var(--ao-paper);
+  border-color: var(--ao-ink);
+}
+
+.archive-original-filters > p {
+  margin: 0;
+}
+
+@media (max-width: 1000px) {
+  .archive-original-shop {
+    padding-block: 72px;
+  }
+}
+
+@media (max-width: 650px) {
+  .archive-original-shop {
+    padding-block: 56px;
+  }
+  .archive-original-shop-heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+  .archive-original-shop-heading h2 {
+    font-size: 52px;
+  }
+  .archive-original-filters {
+    flex-direction: column-reverse;
+    align-items: stretch;
+    gap: 8px;
+  }
+  .archive-original-filters > p {
+    text-align: right;
+  }
+  .archive-original-filter-row {
+    overflow-x: auto;
+    scrollbar-width: none;
+    margin-inline: calc(var(--ao-gutter) * -1);
+    padding: 4px var(--ao-gutter);
+  }
+  .archive-original-filter-row::-webkit-scrollbar {
+    display: none;
+  }
+}
