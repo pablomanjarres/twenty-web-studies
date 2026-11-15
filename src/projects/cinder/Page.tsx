@@ -30,31 +30,40 @@ export default function Page() {
     );
     setBasket(true);
   };
+  const select = (index: number) => {
+    setActive(index);
+    setQuantity(1);
+  };
   return (
-    <main className="cinder">
+    <div className="cinder">
       <Header
         count={items.reduce((sum, item) => sum + item.quantity, 0)}
         onBasket={() => setBasket(true)}
       />
-      <RoastPoster
-        coffee={coffees[active]}
-        active={active}
-        onSelect={(index) => {
-          setActive(index);
-          setQuantity(1);
-        }}
-      />
-      <OrderStrip
-        coffee={coffees[active]}
-        grind={grind}
-        onGrind={setGrind}
-        quantity={quantity}
-        onQuantity={setQuantity}
-        onAdd={add}
-      />
-      <RoastLedger />
-      <Origin />
-      <BrewingSheet />
+      <main>
+        <RoastPoster
+          coffee={coffees[active]}
+          active={active}
+          onSelect={select}
+        />
+        <OrderStrip
+          coffee={coffees[active]}
+          grind={grind}
+          onGrind={setGrind}
+          quantity={quantity}
+          onQuantity={setQuantity}
+          onAdd={add}
+        />
+        <RoastLedger
+          active={active}
+          onSelect={(index) => {
+            select(index);
+            document.getElementById("coffee")?.scrollIntoView();
+          }}
+        />
+        <Origin />
+        <BrewingSheet />
+      </main>
       <Dispatch key={coffees[active].id} coffee={coffees[active]} />
       {basket && (
         <Basket
@@ -71,6 +80,6 @@ export default function Page() {
           }
         />
       )}
-    </main>
+    </div>
   );
 }
