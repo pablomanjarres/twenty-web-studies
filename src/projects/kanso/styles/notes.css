@@ -80,8 +80,8 @@
   background: var(--kanso-ivory);
   padding: 0 var(--kanso-gutter) 96px;
   display: grid;
-  grid-template-columns: minmax(300px, 34%) 1fr;
-  gap: 6%;
+  grid-template-columns: minmax(300px, 40%) 1fr;
+  gap: 5%;
   align-items: center;
 }
 .kanso-atelier img {
