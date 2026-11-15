@@ -69,9 +69,7 @@
 }
 .sp-board-scroll tbody th {
   text-align: left;
-  font:
-    500 15px/1.25 "DM Sans",
-    sans-serif;
+  font: var(--sp-ui-font);
   border-top: 1px solid var(--sp-rule);
   width: 210px;
   padding: 16px 12px 16px 0;

@@ -76,9 +76,7 @@
 .sp-court-select {
   display: grid;
   gap: 8px;
-  font:
-    500 15px/1.25 "DM Sans",
-    sans-serif;
+  font: var(--sp-ui-font);
 }
 .sp-court-select select {
   width: 100%;
@@ -104,9 +102,7 @@
   gap: 6px;
 }
 .sp-times legend {
-  font:
-    500 15px/1.25 "DM Sans",
-    sans-serif;
+  font: var(--sp-ui-font);
   margin-bottom: 8px;
   width: 100%;
   padding: 0;
@@ -119,9 +115,7 @@
   background: #e9e6dc;
   border: 1px solid transparent;
   color: inherit;
-  font:
-    500 15px/1.25 "DM Sans",
-    sans-serif;
+  font: var(--sp-ui-font);
   font-variant-numeric: tabular-nums;
   padding: 8px 2px;
   min-height: 44px;
@@ -147,9 +141,7 @@
   align-items: center;
   padding-bottom: 16px;
   border-bottom: 1px solid var(--sp-rule);
-  font:
-    500 15px/1.25 "DM Sans",
-    sans-serif;
+  font: var(--sp-ui-font);
 }
 .sp-duration > span {
   display: flex;
@@ -160,9 +152,7 @@
   border: 0;
   background: transparent;
   color: inherit;
-  font:
-    500 15px/1.25 "DM Sans",
-    sans-serif;
+  font: var(--sp-ui-font);
   min-height: 44px;
   padding: 0 4px;
 }

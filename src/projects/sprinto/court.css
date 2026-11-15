@@ -25,9 +25,7 @@
   display: flex;
   gap: 32px;
   margin-left: auto;
-  font:
-    500 15px/1.25 "DM Sans",
-    sans-serif;
+  font: var(--sp-ui-font);
 }
 .sp-header nav a {
   text-decoration: underline 2px transparent;
@@ -109,9 +107,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   color: var(--sp-lime);
-  font:
-    500 15px/1.25 "DM Sans",
-    sans-serif;
+  font: var(--sp-ui-font);
 }
 .sp-club-strip li {
   display: flex;
@@ -139,9 +135,7 @@
   margin-bottom: 48px;
 }
 .sp-section-head h2 {
-  font:
-    400 clamp(40px, 4.4vw, 64px) / 0.95 "Anton",
-    sans-serif;
+  font: var(--sp-h2-font);
   text-transform: uppercase;
   letter-spacing: 0;
   margin-top: 16px;
