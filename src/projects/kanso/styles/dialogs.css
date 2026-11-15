@@ -182,32 +182,29 @@
   margin-top: 8px;
 }
 .kanso-bag-dialog {
-  width: min(480px, calc(100% - 30px));
-  padding: 30px;
+  width: min(480px, calc(100% - 32px));
+  padding: 32px;
 }
 .kanso-bag-top {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
+  gap: 24px;
   align-items: center;
-  margin-bottom: 20px;
+  margin: -8px -12px 16px 0;
 }
 .kanso-bag-top h2 {
   font-size: 34px;
 }
-.kanso-bag-top button {
-  padding: 5px;
-}
 .kanso-bag-items > article {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 16px;
   border-bottom: 1px solid var(--kanso-line);
-  padding: 13px 0;
+  padding: 12px 0;
 }
 .kanso-bag-items img {
-  width: 85px;
-  height: 90px;
+  width: 84px;
+  height: 92px;
   object-fit: contain;
   background: var(--kanso-paper);
 }
@@ -215,34 +212,57 @@
   flex: 1;
 }
 .kanso-bag-items h3 {
-  font-size: 21px;
+  font-size: 22px;
+  line-height: 1.15;
 }
 .kanso-bag-items p {
-  font-size: 11px;
-  margin: 6px 0;
+  margin: 4px 0;
+  color: var(--kanso-muted);
 }
 .kanso-bag-items strong {
-  font-size: 12px;
-  font-weight: 500;
+  font-size: 15px;
+  font-weight: 400;
+}
+.kanso-bag-items article > button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  color: var(--kanso-muted);
+  transition: color var(--kanso-fast) var(--kanso-ease);
+}
+.kanso-bag-items article > button:hover {
+  color: var(--kanso-ink);
 }
 .kanso-bag-total {
   display: flex;
   justify-content: space-between;
-  margin-top: 25px;
-  font-size: 13px;
+  align-items: center;
+  min-height: 56px;
+  border-bottom: 1px solid var(--kanso-ink);
+  font-size: 15px;
+}
+.kanso-bag-total strong {
+  font-family: "Commune", serif;
+  font-size: 24px;
+  font-weight: 400;
 }
 .kanso-bag-dialog > .kanso-add {
   width: 100%;
-  margin-top: 25px;
+  margin-top: 24px;
 }
 .kanso-empty-bag {
-  padding: 35px 0;
+  padding: 32px 0;
+}
+.kanso-empty-bag p {
+  font-size: 15px;
 }
 .kanso-empty-bag > a {
-  display: flex;
-  gap: 10px;
+  display: inline-flex;
+  gap: 8px;
   align-items: center;
-  font-size: 12px;
-  margin-top: 20px;
-  text-decoration: underline;
+  min-height: 44px;
+  margin-top: 12px;
 }
