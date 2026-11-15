@@ -1,5 +1,6 @@
 import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
+import { Ticker } from "./components/Ticker";
 import { Courts } from "./components/Courts";
 import { Play } from "./components/Play";
 import { Club } from "./components/Club";
@@ -11,13 +12,7 @@ export default function Page() {
     <main className="sprinto-original">
       <Header />
       <Hero />
-      <div className="sprinto-original-ticker">
-        <span>PADEL IS FOR EVERYONE</span>
-        <i>✳</i>
-        <span>MORE RALLIES. MORE GOOD DAYS.</span>
-        <i>✳</i>
-        <span>FIND YOUR PEOPLE</span>
-      </div>
+      <Ticker />
       <Courts />
       <Play />
       <Club />

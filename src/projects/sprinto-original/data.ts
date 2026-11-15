@@ -2,6 +2,11 @@ import { Clock3, Users, Zap } from "lucide-react";
 
 export const asset = (name: string) =>
   `${import.meta.env.BASE_URL}images/sprinto-original/${name}.jpg`;
+export const tickerPhrases = [
+  "PADEL IS FOR EVERYONE",
+  "MORE RALLIES. MORE GOOD DAYS.",
+  "FIND YOUR PEOPLE",
+];
 export const courts = [
   {
     name: "The Social Club",
