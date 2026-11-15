@@ -31,9 +31,9 @@ export function PrintedMenu() {
               ? "Raise a glass."
               : "A little sea on your plate."}
           </h1>
-          <span>{selected} menu</span>
+          <span aria-live="polite">{selected} menu</span>
         </div>
-        <div className="sl-menu-spread">
+        <div className="sl-menu-spread" key={selected}>
           <div className="sl-sea-menu">
             <DishGroup section={sections[0]} />
             <div className="sl-menu-note">

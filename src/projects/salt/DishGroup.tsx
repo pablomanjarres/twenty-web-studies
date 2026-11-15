@@ -8,6 +8,7 @@ export function DishGroup({ section }: { section: MenuSection }) {
         <article className="sl-dish" key={dish.name}>
           <div>
             <h3>{dish.name}</h3>
+            <span className="sl-leader" aria-hidden="true" />
             <span>{dish.price}</span>
           </div>
           <p>{dish.note}</p>

@@ -1,94 +1,108 @@
 .sl-menu-spread {
   display: grid;
-  grid-template-columns: 1fr 1.12fr 1fr;
-  gap: 30px;
-  padding: 28px 0 35px;
+  grid-template-columns: 1fr minmax(0, 1.12fr) 1fr;
+  gap: 32px;
+  padding: 32px 0 40px;
   align-items: start;
+  animation: sl-serve 280ms var(--sl-ease) both;
+}
+@keyframes sl-serve {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
 }
 .sl-menu-spread h2 {
-  font:
-    400 25px "Instrument Serif",
-    serif;
+  font: var(--sl-group);
   color: var(--sl-sea);
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
-.sl-dish {
-  margin-bottom: 22px;
+.sl-dish + .sl-dish {
+  margin-top: 20px;
 }
 .sl-dish > div {
   display: flex;
-  justify-content: space-between;
-  gap: 12px;
   align-items: baseline;
 }
 .sl-dish h3 {
-  font-size: 14px;
-  font-weight: 600;
+  font: var(--sl-dish);
 }
-.sl-dish > div > span {
+.sl-leader {
+  flex: 1;
+  min-width: 16px;
+  margin: 0 10px;
+  border-bottom: 2px dotted var(--sl-leader);
+  transform: translateY(-4px);
+}
+.sl-dish > div > span:last-child {
   font:
-    12px "IBM Plex Mono",
+    400 15px "IBM Plex Mono",
     monospace;
+  font-variant-numeric: tabular-nums;
+  min-width: 2ch;
+  text-align: right;
 }
 .sl-dish p {
-  font-size: 11px;
-  line-height: 1.7;
-  color: #61727a;
-  margin-top: 7px;
-  max-width: 230px;
+  font: var(--sl-note);
+  color: var(--sl-ink-2);
+  margin-top: 4px;
+  max-width: 34ch;
 }
 .sl-menu-note {
   display: flex;
-  gap: 13px;
+  gap: 12px;
   align-items: start;
-  padding-top: 18px;
-  margin-top: 10px;
+  padding-top: 24px;
+  margin-top: 28px;
+  border-top: 1px solid var(--sl-line);
 }
 .sl-menu-note svg {
   color: var(--sl-red);
   flex: none;
 }
 .sl-menu-note p {
-  font-size: 10px;
-  line-height: 1.8;
+  font: var(--sl-meta);
 }
 .sl-plate {
-  padding-top: 5px;
-  margin-left: -40px !important;
-  margin-right: -40px !important;
+  padding-top: 4px;
 }
 .sl-plate img {
-  width: 100%;
-  height: 340px;
+  width: calc(100% + 80px);
+  max-width: none;
+  margin-inline: -40px;
+  height: 360px;
   object-fit: contain;
   transform: rotate(-12deg);
   filter: drop-shadow(8px 15px 10px #18344517);
+  animation: sl-plate-turn 520ms var(--sl-ease) both;
+}
+@keyframes sl-plate-turn {
+  from {
+    transform: rotate(-24deg) scale(0.96);
+    opacity: 0.4;
+  }
 }
 .sl-plate figcaption {
   text-align: center;
-  font:
-    11px "DM Sans",
-    sans-serif;
+  font: var(--sl-meta);
+  color: var(--sl-ink-2);
   margin-top: 16px;
 }
 .sl-plate figcaption span {
   display: block;
   font:
-    400 21px "Instrument Serif",
+    400 26px/1.1 "Instrument Serif",
     serif;
-  letter-spacing: 0;
-  margin-top: 8px;
+  color: var(--sl-navy);
+  margin-top: 6px;
 }
 .sl-plate figcaption small {
   display: block;
-  font:
-    9px "DM Sans",
-    sans-serif;
-  letter-spacing: 0;
-  margin-top: 8px;
+  font: var(--sl-meta);
+  margin-top: 6px;
 }
 .sl-menu-section + .sl-menu-section {
   border-top: 1px solid var(--sl-line);
-  padding-top: 21px;
-  margin-top: 23px;
+  padding-top: 28px;
+  margin-top: 28px;
 }
