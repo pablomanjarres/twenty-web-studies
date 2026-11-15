@@ -47,26 +47,6 @@
   flex: none;
   height: 40px;
   padding: 0 16px;
-  border: 1px solid var(--ao-control);
-  background: var(--ao-paper);
-  transition:
-    background-color 200ms var(--ao-ease),
-    border-color 200ms var(--ao-ease),
-    color 200ms var(--ao-ease);
-}
-
-.archive-original-filter-row button:hover {
-  border-color: var(--ao-ink);
-}
-
-.archive-original-filter-row button:active {
-  transform: translateY(1px);
-}
-
-.archive-original-filter-row button.active {
-  background: var(--ao-ink);
-  color: var(--ao-paper);
-  border-color: var(--ao-ink);
 }
 
 .archive-original-filters > p {

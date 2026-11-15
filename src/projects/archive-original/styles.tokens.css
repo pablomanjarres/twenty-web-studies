@@ -35,12 +35,56 @@
   :is(
     .archive-original-utility,
     .archive-original-campaign,
-    .archive-original-dark
+    .archive-original-bar
   )
   :focus-visible,
-.archive-original .archive-original-dark:focus-visible {
+.archive-original .archive-original-bar:focus-visible {
   outline-color: var(--ao-paper);
   box-shadow: 0 0 0 4px var(--ao-ink);
+}
+
+/* Primary retail bar: black fill that turns cherry on hover and press. */
+.archive-original-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border: 0;
+  background: var(--ao-ink);
+  color: var(--ao-paper);
+  transition: background-color 200ms var(--ao-ease);
+}
+
+.archive-original-bar:is(:hover, :active) {
+  background: var(--ao-cherry);
+}
+
+.archive-original-bar:active {
+  transform: translateY(1px);
+}
+
+/* Outlined rectangle that inverts to black when pressed in. */
+.archive-original-control {
+  border: 1px solid var(--ao-control);
+  background: var(--ao-paper);
+  transition:
+    background-color 200ms var(--ao-ease),
+    border-color 200ms var(--ao-ease),
+    color 200ms var(--ao-ease);
+}
+
+.archive-original-control:hover {
+  border-color: var(--ao-ink);
+}
+
+.archive-original-control:active {
+  transform: translateY(1px);
+}
+
+.archive-original-control[aria-pressed="true"] {
+  background: var(--ao-ink);
+  border-color: var(--ao-ink);
+  color: var(--ao-paper);
 }
 
 /* Commerce label: one size for every piece of interface text. */

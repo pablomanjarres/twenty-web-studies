@@ -106,21 +106,8 @@
 }
 
 .archive-original-continue {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   height: 52px;
   padding: 0 20px;
-  border: 0;
-  background: var(--ao-ink);
-  color: var(--ao-paper);
-  width: 100%;
-  transition: background-color 200ms var(--ao-ease);
-}
-
-.archive-original-continue:hover,
-.archive-original-continue:active {
-  background: var(--ao-cherry);
 }
 
 .archive-original-bag-empty {

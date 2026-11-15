@@ -86,53 +86,19 @@
 .archive-original-size-options button,
 .archive-original-size-one {
   height: 36px;
-  border: 1px solid var(--ao-control);
-  background: var(--ao-paper);
   padding: 0;
   display: grid;
   place-items: center;
 }
 
-.archive-original-size-options button {
-  transition:
-    background-color 200ms var(--ao-ease),
-    border-color 200ms var(--ao-ease),
-    color 200ms var(--ao-ease);
-}
-
-.archive-original-size-options button:hover {
-  border-color: var(--ao-ink);
-}
-
-.archive-original-size-options button[aria-pressed="true"] {
-  background: var(--ao-ink);
-  border-color: var(--ao-ink);
-  color: var(--ao-paper);
-}
-
 .archive-original-size-one {
+  border: 1px solid var(--ao-control);
   color: var(--ao-ink-2);
 }
 
 .archive-original-add {
   height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   padding: 0 16px;
-  border: 0;
-  background: var(--ao-ink);
-  color: var(--ao-paper);
-  transition: background-color 200ms var(--ao-ease);
-}
-
-.archive-original-add:hover,
-.archive-original-add:active {
-  background: var(--ao-cherry);
-}
-
-.archive-original-add:active {
-  transform: translateY(1px);
 }
 
 @media (max-width: 1000px) {
