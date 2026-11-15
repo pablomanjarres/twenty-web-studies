@@ -150,8 +150,7 @@
   grid-template-columns: 160px 1fr 140px 44px;
   gap: 24px;
   align-items: center;
-  margin: 0 -16px;
-  padding: 28px 16px;
+  padding: 28px 0;
   transition: background-color var(--sp-fast) var(--sp-ease);
 }
 .sp-fixtures article:last-child {
@@ -160,6 +159,8 @@
 .sp-fixtures article:hover,
 .sp-fixtures article:focus-within {
   background: #f2f0f70d;
+  box-shadow: 0 0 0 16px #f2f0f70d;
+  clip-path: inset(0 -16px);
 }
 .sp-fixture-date {
   color: var(--sp-lime);
@@ -217,5 +218,5 @@
 }
 .sp-fixtures article:has(a:focus-visible) {
   outline: 3px solid var(--sp-lime);
-  outline-offset: 3px;
+  outline-offset: -3px;
 }

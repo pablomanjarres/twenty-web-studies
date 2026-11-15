@@ -17,9 +17,6 @@
   .sp-court-caption {
     max-width: 30ch;
   }
-  .sp-club h2 {
-    font-size: 42px;
-  }
 }
 @media (max-width: 650px) {
   .sp-court-stage {
@@ -97,6 +94,9 @@
   .sp-court-kind {
     display: none;
   }
+  .sp-booking select {
+    font-size: 16px;
+  }
   .sp-confirm {
     width: auto;
     min-height: 52px;
@@ -114,69 +114,83 @@
     margin: 0 0 20px !important;
   }
   .sp-club-strip {
-    padding: 20px 10px;
-    gap: 15px;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    padding: 20px 8px;
   }
-  .sp-club-strip > span:first-child {
-    font-size: 12px;
-  }
-  .sp-club-strip > span:nth-child(2) {
+  .sp-club-strip li:nth-child(2) {
     display: none;
   }
-  .sp-availability {
-    padding: 45px 22px;
+  .sp-availability,
+  .sp-matches {
+    padding: 56px 20px;
   }
   .sp-section-head {
     align-items: start;
-    gap: 15px;
+    gap: 16px;
     flex-direction: column;
-    margin-bottom: 25px;
+    margin-bottom: 32px;
   }
   .sp-section-head h2 {
-    font-size: 32px;
+    font-size: 40px;
   }
-  .sp-section-head > p {
-    font-size: 11px;
+  .sp-section-head > p,
+  .sp-club p {
+    font-size: 16px;
   }
-  .sp-availability .sp-section-head > p > span {
-    justify-content: start;
+  .sp-board-meta {
+    justify-items: start;
   }
-  .sp-matches {
-    padding: 45px 22px;
+  .sp-swipe-hint {
+    display: block;
+  }
+  .sp-board-scroll {
+    mask-image: linear-gradient(90deg, #000 85%, transparent);
+  }
+  .sp-board-scroll table {
+    min-width: 560px;
+  }
+  .sp-board-scroll thead th:first-child,
+  .sp-board-scroll tbody th {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    width: 120px;
+    background: var(--sp-paper);
+  }
+  .sp-board-scroll td button {
+    height: 44px;
   }
   .sp-fixtures article {
-    grid-template-columns: 65px 1fr 25px;
-    gap: 15px;
-    padding: 23px 0;
+    grid-template-columns: 72px 1fr 44px;
+    gap: 8px 16px;
+    padding: 24px 0;
   }
-  .sp-fixtures article > span {
-    display: none;
+  .sp-fixture-date {
+    grid-row: span 2;
+  }
+  .sp-places {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .sp-fixtures article > a {
+    grid-column: 3;
+    grid-row: 1 / span 2;
   }
   .sp-fixtures h3 {
-    font-size: 19px;
-  }
-  .sp-fixtures p {
-    font-size: 10px;
+    font-size: 20px;
   }
   .sp-fixture-date strong {
-    font-size: 25px;
+    font-size: 28px;
   }
   .sp-club {
-    padding: 50px 25px;
+    padding: 56px 20px;
     grid-template-columns: 1fr;
-    gap: 45px;
-  }
-  .sp-court-drawing {
-    width: 72%;
-    height: 250px;
-    margin: 0 auto;
-  }
-  .sp-club h2 {
-    font-size: 42px;
+    gap: 48px;
   }
   .sp-footer {
     flex-wrap: wrap;
-    padding: 28px 25px;
+    padding: 28px 20px;
   }
   .sp-footer p {
     order: 3;
