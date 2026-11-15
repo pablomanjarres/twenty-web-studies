@@ -19,9 +19,9 @@
   align-items: center;
 }
 .md-schedule-heading h2 {
-  font-size: 26px;
+  font: 500 26px/1.15 var(--md-display);
   margin-top: 10px;
-  letter-spacing: -0.8px;
+  letter-spacing: -0.02em;
 }
 .md-schedule-heading > button {
   border: 0;
@@ -30,15 +30,16 @@
   padding: 5px;
 }
 .md-schedule > p {
-  font-size: 11px;
-  line-height: 1.7;
+  font-size: 13px;
+  line-height: 1.55;
   color: var(--md-muted);
   margin: 23px 0 31px;
 }
 .md-schedule > label {
   display: block;
-  font-size: 10px;
-  color: #a7bccb;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--md-text-2);
   margin: 20px 0;
 }
 .md-schedule select,
@@ -50,11 +51,11 @@
   border: 1px solid #adc9de26;
   padding: 13px;
   color: var(--md-text);
-  border-radius: 3px;
-  font-size: 11px;
+  border-radius: 6px;
+  font-size: 13px;
 }
 .md-form-note {
-  font-size: 9px;
+  font-size: 12px;
   display: block;
   color: var(--md-muted);
   margin: 23px 0;
@@ -63,11 +64,18 @@
   background: var(--md-cyan);
   color: var(--md-bg);
   border: 0;
-  border-radius: 3px;
-  padding: 15px 16px;
+  border-radius: 6px;
+  padding: 14px 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  font-size: 11px;
+  font-size: 14px;
+  font-weight: 700;
+}
+.md-create-button:hover {
+  background: #45c3c7;
+}
+.meridian-page .md-create-button:focus-visible {
+  outline-color: var(--md-text);
 }
