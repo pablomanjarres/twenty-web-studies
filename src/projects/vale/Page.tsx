@@ -18,25 +18,27 @@ export default function Page() {
     setVolume(0);
   };
   return (
-    <main className="vale">
+    <div className="vale">
       <Header count={selections.length} onBag={() => setBag(true)} />
-      <FormulaStudio
-        formula={formulas[active]}
-        active={active}
-        volume={volume}
-        onSelect={select}
-        onVolume={setVolume}
-        onAdd={() => {
-          setSelections((current) => [
-            ...current,
-            { formula: formulas[active], volume },
-          ]);
-          setBag(true);
-        }}
-      />
-      <TextureStudy formula={formulas[active]} />
-      <Ritual onSelect={select} />
-      <Packaging />
+      <main>
+        <FormulaStudio
+          formula={formulas[active]}
+          active={active}
+          volume={volume}
+          onSelect={select}
+          onVolume={setVolume}
+          onAdd={() => {
+            setSelections((current) => [
+              ...current,
+              { formula: formulas[active], volume },
+            ]);
+            setBag(true);
+          }}
+        />
+        <TextureStudy formula={formulas[active]} />
+        <Ritual onSelect={select} />
+        <Packaging />
+      </main>
       <Footer />
       {bag && (
         <SelectionBag
@@ -47,6 +49,6 @@ export default function Page() {
           }
         />
       )}
-    </main>
+    </div>
   );
 }
