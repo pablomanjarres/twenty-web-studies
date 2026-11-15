@@ -1,5 +1,13 @@
 import { CheckCircle2, Gauge, Globe2 } from "lucide-react";
 import { requestCount, trafficSummary, type TrafficPoint } from "./trafficData";
+// Scale the last twelve samples between their own low and high so a
+// steady series such as success rate still shows its variation.
+function sparkHeights(series: number[]) {
+  const recent = series.slice(-12);
+  const low = Math.min(...recent),
+    span = Math.max(...recent) - low || 1;
+  return recent.map((sample) => 20 + ((sample - low) / span) * 80);
+}
 export function ConsoleMetrics({ points }: { points: TrafficPoint[] }) {
   const summary = trafficSummary(points);
   const metrics = [
@@ -33,24 +41,21 @@ export function ConsoleMetrics({ points }: { points: TrafficPoint[] }) {
       {metrics.map(({ label, value, unit, detail, icon: Icon, series }) => (
         <article key={label}>
           <div>
-            <Icon size={15} />
+            <Icon size={16} />
             <span>{label}</span>
           </div>
-          <strong>
-            {value}
-            <small>{unit}</small>
-          </strong>
-          <p>{detail}</p>
-          <div className="hc-metric-spark" aria-hidden="true">
-            {series.slice(-12).map((sample, index) => (
-              <i
-                key={index}
-                style={{
-                  height: `${Math.max(12, (sample / Math.max(...series)) * 82)}%`,
-                }}
-              />
-            ))}
+          <div className="hc-metric-value">
+            <strong>
+              {value}
+              {unit && <small>{unit}</small>}
+            </strong>
+            <span className="hc-metric-spark" aria-hidden="true">
+              {sparkHeights(series).map((height, index) => (
+                <i key={index} style={{ height: `${height}%` }} />
+              ))}
+            </span>
           </div>
+          <p>{detail}</p>
         </article>
       ))}
     </section>
