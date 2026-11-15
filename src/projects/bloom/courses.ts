@@ -46,10 +46,10 @@ export const learningWeek = [
   { name: "Fri", date: 9 },
 ];
 export const learningPlan = [
-  { lesson: 1, day: 0, time: "09:00", top: 0 },
-  { lesson: 2, day: 1, time: "10:00", top: 55 },
-  { lesson: 3, day: 2, time: "09:30", top: 28 },
-  { lesson: 4, day: 3, time: "11:00", top: 110 },
-  { lesson: 5, day: 4, time: "09:00", top: 0 },
-  { lesson: 6, day: 4, time: "11:00", top: 110 },
+  { lesson: 1, day: 0, time: "09:00" },
+  { lesson: 2, day: 1, time: "10:00" },
+  { lesson: 3, day: 2, time: "09:30" },
+  { lesson: 4, day: 3, time: "11:00" },
+  { lesson: 5, day: 4, time: "09:00" },
+  { lesson: 6, day: 4, time: "11:00" },
 ];
