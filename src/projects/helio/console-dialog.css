@@ -7,68 +7,83 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 25px;
+  padding: 24px;
 }
 .hc-deploy-dialog {
   width: 640px;
   max-width: 100%;
-  max-height: calc(100svh - 50px);
+  max-height: calc(100svh - 48px);
   overflow: auto;
   background: #fff;
-  border: 1px solid #d8e0ed;
-  border-radius: 13px;
-  box-shadow: 0 25px 100px #0d193950;
+  border: 1px solid var(--hl-line);
+  border-radius: 12px;
+  box-shadow: 0 24px 80px #0d193940;
   scrollbar-width: thin;
 }
 .hc-deploy-dialog > header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 22px 25px;
-  border-bottom: 1px solid #e8ecf3;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--hl-line);
 }
 .hc-deploy-dialog > header > div > span {
-  font-size: 10px;
-  color: #9ca8bf;
+  font:
+    13px/18px var(--hl-mono),
+    monospace;
+  color: var(--hl-text-3);
 }
 .hc-deploy-dialog > header h2 {
   font:
-    500 21px "Space Grotesk",
+    500 22px var(--hl-display),
     sans-serif;
-  letter-spacing: -0.035em;
-  margin: 6px 0 0;
-  color: #465470;
+  letter-spacing: -0.03em;
+  margin: 4px 0 0;
+  color: var(--hl-ink);
 }
 .hc-deploy-dialog > header button {
-  border: 0;
-  background: #f2f5fa;
-  border-radius: 5px;
-  width: 32px;
-  height: 32px;
+  border: 1px solid var(--hl-line);
+  background: #fff;
+  border-radius: 8px;
+  width: 36px;
+  height: 36px;
   display: grid;
   place-items: center;
-  color: #8594ac !important;
+  color: var(--hl-text-2) !important;
+  transition:
+    border-color var(--hl-fast),
+    color var(--hl-fast);
+}
+.hc-deploy-dialog > header button:hover {
+  border-color: var(--hl-line-strong);
+  color: var(--hl-ink) !important;
 }
 .hc-deploy-config {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 18px;
-  padding: 20px 25px;
+  gap: 16px;
+  padding: 20px 24px;
 }
 .hc-deploy-config label {
   display: grid;
-  gap: 7px;
-  font-size: 10px;
-  color: #8a98b0;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--hl-text-2);
 }
 .hc-deploy-config select {
   min-width: 0;
-  padding: 9px 11px;
-  border: 1px solid #dfe5ef;
-  background: #f8fafe;
-  border-radius: 5px;
-  color: #687b9d;
-  font-size: 11px;
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid var(--hl-line);
+  background: #fff;
+  border-radius: 8px;
+  color: var(--hl-ink);
+  font-size: 14px;
+  transition: border-color var(--hl-fast);
+}
+.hc-deploy-config select:hover:not(:disabled) {
+  border-color: var(--hl-line-strong);
 }
 .hc-deploy-dialog .helio-build-trace {
   background: #151e2d;
@@ -76,10 +91,10 @@
 }
 .hc-deploy-dialog .helio-build-trace h3 {
   font:
-    500 22px "Space Grotesk",
+    500 22px var(--hl-display),
     sans-serif;
-  letter-spacing: -0.04em;
-  margin: 12px 0;
+  letter-spacing: -0.03em;
+  margin: 12px 0 8px;
 }
 .hc-deploy-dialog .helio-build-trace > header {
   padding-top: 16px;
@@ -88,8 +103,8 @@
   padding-top: 12px;
 }
 .hc-deploy-dialog .helio-events > div {
-  padding: 11px 0;
-  min-height: 60px;
+  padding: 12px 0;
+  min-height: 64px;
 }
 .hc-deploy-dialog .helio-run-row button {
   color: #fff;
