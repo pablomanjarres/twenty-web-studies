@@ -3,12 +3,31 @@
   --cinder-cream: #f5edd9;
   --cinder-ink: #38271f;
   --cinder-yellow: #eec76a;
+  --cinder-sand: #eadbbf;
+  --cinder-forest: #324629;
+  --cinder-brick-hover: #8b2d23;
+  --cinder-yellow-hover: #e3b955;
+  --cinder-ink-soft: #38271fb8;
+  --cinder-cream-soft: #f5edd9c7;
   --cinder-line: #38271f35;
+  --cinder-control-line: #38271f8c;
+  --cinder-line-dark: #f5edd930;
+  --cinder-control-line-dark: #f5edd980;
+  --cinder-tint: #38271f14;
+  --cinder-focus: var(--cinder-ink);
+  --cinder-gutter: clamp(20px, 6vw, 88px);
+  --cinder-section-y: clamp(64px, 7vw, 112px);
+  --cinder-header-h: 72px;
+  --cinder-ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --cinder-fast: 150ms;
+  --cinder-med: 240ms;
+  --cinder-slow: 420ms;
+  --cinder-h2: clamp(36px, 2.4vw + 18px, 56px);
   background: var(--cinder-cream);
   color: var(--cinder-ink);
   font-family: "DM Sans", sans-serif;
-  font-size: 14px;
-  line-height: 1.55;
+  font-size: 16px;
+  line-height: 1.6;
 }
 .cinder * {
   box-sizing: border-box;
@@ -25,6 +44,12 @@
 .cinder h3 {
   font-family: "Grindela", serif;
   font-weight: 400;
+  text-wrap: balance;
+}
+.cinder h2 {
+  font-size: var(--cinder-h2);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
 }
 .cinder button,
 .cinder input {
@@ -35,36 +60,93 @@
   border: 0;
   background: none;
   cursor: pointer;
+  transition:
+    background-color var(--cinder-fast) linear,
+    color var(--cinder-fast) linear,
+    border-color var(--cinder-fast) linear,
+    opacity var(--cinder-fast) linear;
 }
 .cinder button:disabled {
   opacity: 0.35;
-  cursor: default;
+  cursor: not-allowed;
 }
 .cinder a {
   color: inherit;
   text-decoration: none;
 }
-.cinder button:focus-visible,
-.cinder a:focus-visible {
-  outline: 2px solid currentColor;
-  outline-offset: 4px;
+.cinder :is(button, a, [tabindex]:not([tabindex="-1"])):focus-visible {
+  outline: 2px solid var(--cinder-focus);
+  outline-offset: 3px;
 }
 .cinder-label {
   font-family: "IBM Plex Mono", monospace;
-  font-size: 10px;
-  letter-spacing: 0.04em;
+  font-size: 12px;
+  line-height: 1.35;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   display: block;
 }
+.cinder-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+@media (max-width: 760px) {
+  .cinder {
+    --cinder-header-h: 60px;
+  }
+  .cinder-label {
+    font-size: 13px;
+  }
+  .cinder-sr-only-phone {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+}
+@media (min-width: 761px) {
+  .cinder-sr-only-desktop {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html:has(.cinder) {
+    scroll-behavior: auto;
+  }
+  .cinder *,
+  .cinder *::before,
+  .cinder *::after {
+    animation: none !important;
+    transition-duration: 0.01ms !important;
+  }
+}
 .cinder-header {
-  height: 73px;
-  padding: 0 4%;
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  height: var(--cinder-header-h);
+  padding: 0 var(--cinder-gutter);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 30px;
+  gap: 32px;
+  background: var(--cinder-cream);
   border-bottom: 1px solid var(--cinder-line);
-  font-size: 11px;
+}
+.cinder-header > span {
+  font-size: 14px;
+  color: var(--cinder-ink-soft);
 }
 .cinder-header .brand-logo {
   font-family: "Grindela", serif;
@@ -78,9 +160,23 @@
 .cinder-header nav {
   display: flex;
   align-items: center;
-  gap: 27px;
+  gap: 32px;
 }
-.cinder-header button {
-  font-size: 11px;
-  padding: 8px 0;
+.cinder-header nav > :is(a, button) {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 13px;
+  line-height: 1;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  text-underline-offset: 5px;
+  font-variant-numeric: tabular-nums;
+}
+.cinder-header nav > :is(a, button):hover {
+  text-decoration: underline 1px;
+}
+.cinder :is(#coffee, #batch, #brew) {
+  scroll-margin-top: var(--cinder-header-h);
 }

@@ -28,9 +28,7 @@
 }
 @media (max-width: 760px) {
   .cinder-header {
-    height: 60px;
-    gap: 15px;
-    padding: 0 5%;
+    gap: 16px;
   }
   .cinder-header .brand-logo {
     font-size: 27px;
@@ -45,9 +43,6 @@
   }
   .cinder-header nav {
     gap: 0;
-  }
-  .cinder-header button {
-    font-size: 10px;
   }
   .cinder-order-strip {
     padding: 20px 5%;
