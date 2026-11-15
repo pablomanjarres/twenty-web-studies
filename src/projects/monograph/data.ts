@@ -83,6 +83,7 @@ export const stories: Story[] = [
     ],
   },
 ];
+export const subjects = ["All", "Art", "Spaces", "Studio"];
 export const issues = [
   {
     name: "Issue 04",

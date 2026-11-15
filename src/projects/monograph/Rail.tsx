@@ -1,14 +1,24 @@
 import { BrandLogo } from "../../shared/BrandLogo";
 import { brand } from "./brand";
-import { issues } from "./data";
+import { issues, subjects } from "./data";
 interface Props {
   issue: number;
   onIssue: (index: number) => void;
   category: string;
   onCategory: (name: string) => void;
   saved: number;
+  savedOnly: boolean;
+  onSavedOnly: () => void;
 }
-export function Rail({ issue, onIssue, category, onCategory, saved }: Props) {
+export function Rail({
+  issue,
+  onIssue,
+  category,
+  onCategory,
+  saved,
+  savedOnly,
+  onSavedOnly,
+}: Props) {
   return (
     <aside className="monograph-rail">
       <a
@@ -24,7 +34,7 @@ export function Rail({ issue, onIssue, category, onCategory, saved }: Props) {
         curious eyes.
       </p>
       <label className="monograph-issue-label">
-        On the wall
+        <span className="monograph-small-label">On the wall</span>
         <select
           value={issue}
           onChange={(event) => onIssue(Number(event.target.value))}
@@ -37,22 +47,41 @@ export function Rail({ issue, onIssue, category, onCategory, saved }: Props) {
         </select>
       </label>
       <nav aria-label="Story subjects" className="monograph-subjects">
-        {["All", "Art", "Spaces", "Studio"].map((item, index) => (
+        {subjects.map((item, index) => (
           <button
             key={item}
             aria-pressed={category === item}
             onClick={() => onCategory(item)}
           >
-            <span>0{index + 1}</span>
-            {item}
-            <span>{category === item ? "●" : ""}</span>
+            <span className="monograph-subject-number">0{index + 1}</span>
+            <span className="monograph-underline">{item}</span>
+            <span className="monograph-subject-dot" aria-hidden="true">
+              {category === item ? "●" : ""}
+            </span>
           </button>
         ))}
       </nav>
       <div className="monograph-rail-bottom">
-        <span>Reading list / {saved.toString().padStart(2, "0")}</span>
-        <a href="#monograph-archive">Exhibition archive ↘</a>
-        <a href="#monograph-print">The printed issue ↘</a>
+        <button
+          className="monograph-reading-toggle"
+          aria-pressed={savedOnly}
+          onClick={onSavedOnly}
+        >
+          <span>Reading list</span>
+          <span>{saved.toString().padStart(2, "0")}</span>
+        </button>
+        <a
+          className="monograph-link monograph-rail-link"
+          href="#monograph-archive"
+        >
+          Exhibition archive <span className="monograph-arrow">↘</span>
+        </a>
+        <a
+          className="monograph-link monograph-rail-link"
+          href="#monograph-print"
+        >
+          The printed issue <span className="monograph-arrow">↘</span>
+        </a>
         <p>
           Art. Spaces. Studio.
           <br />
