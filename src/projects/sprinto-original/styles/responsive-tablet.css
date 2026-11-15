@@ -16,6 +16,7 @@
   }
   .sprinto-original-play li > a {
     grid-column: 3;
+    justify-self: start;
   }
   .sprinto-original-club > div {
     padding: 64px 10%;

@@ -83,6 +83,7 @@
   .sprinto-original-play li > p,
   .sprinto-original-play li > a {
     grid-column: 2;
+    justify-self: start;
   }
   .sprinto-original-club {
     grid-template-columns: 1fr;

@@ -5,8 +5,7 @@ export function Play() {
   return (
     <section className="sprinto-original-play" id="sprinto-original-play">
       <h2>
-        THERE’S MORE THAN
-        <br />
+        THERE’S MORE THAN <br />
         ONE WAY TO PLAY.
       </h2>
       <ol>
