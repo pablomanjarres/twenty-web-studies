@@ -35,7 +35,7 @@
     gap: 5px;
     border-radius: 17px;
   }
-  .bv-rail nav button[aria-pressed="true"]:after {
+  .bv-rail nav button[aria-current="page"]:after {
     display: none;
   }
   .bv-rail nav button span {
