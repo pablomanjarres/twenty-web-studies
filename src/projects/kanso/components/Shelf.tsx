@@ -44,7 +44,7 @@ export function Shelf({
         </div>
         <div className="kanso-shelf-wordmark">
           <BrandLogo brand={brand} />
-          <small>Collection 01 / Stoneware</small>
+          <small className="kanso-meta">Collection 01 / Stoneware</small>
         </div>
       </aside>
       <div className="kanso-shelf-wrap">
@@ -69,6 +69,7 @@ export function Shelf({
               <h2>No objects on this shelf.</h2>
               <p>Try another category or finish.</p>
               <button
+                className="kanso-link"
                 onClick={() => {
                   setCategory("All objects");
                   setGlaze("All");
@@ -81,7 +82,9 @@ export function Shelf({
         </div>
         <div className="kanso-shelf-foot">
           <span>Thrown by hand. Each piece a little different.</span>
-          <a href="#batch">Materials & care ↓</a>
+          <a className="kanso-link" href="#batch">
+            Materials & care ↓
+          </a>
         </div>
       </div>
     </section>
