@@ -31,8 +31,7 @@ export function Shelf({
             Daily companions.
           </h1>
           <p>
-            A shelf of six things to use,
-            <br />
+            A shelf of six things to use, <br />
             keep, and make your own.
           </p>
           <Filters
