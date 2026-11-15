@@ -9,15 +9,12 @@
   padding: 38px;
 }
 .bv-practice-dialog h2 {
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: 29px;
-  font-weight: 400;
-  margin: 18px 0 13px;
+  margin: 12px 0;
 }
 .bv-practice-dialog > p {
-  font-size: 12px;
-  line-height: 1.8;
-  color: #889271;
+  font-size: var(--bv-fs-body);
+  line-height: 1.6;
+  color: var(--bv-text-2);
 }
 .bv-invitation {
   position: relative;
@@ -32,8 +29,9 @@
 }
 .bv-invitation > i {
   font-style: normal;
-  font-size: 9px;
-  letter-spacing: 1.8px;
+  font-size: var(--bv-fs-caps);
+  font-weight: 600;
+  letter-spacing: 0.12em;
   display: block;
   margin-bottom: 22px;
 }
@@ -47,7 +45,7 @@
 }
 .bv-invitation > span {
   display: block;
-  font-size: 9px;
+  font-size: var(--bv-fs-meta);
   margin-top: 20px;
   position: relative;
   z-index: 1;
@@ -73,14 +71,21 @@
   justify-content: center;
   gap: 6px;
   flex: 1;
-  font-size: 9px;
-  border: 1px solid #e0e4cf;
+  min-height: 44px;
+  font-size: var(--bv-fs-meta);
+  font-weight: 600;
+  border: 1px solid var(--bv-rule);
   background: transparent;
-  border-radius: 11px;
-  padding: 12px 5px;
+  border-radius: 12px;
+  padding: 8px;
+}
+.bv-color-options button:hover,
+.bv-notice-options button:hover {
+  border-color: var(--bv-rule-strong);
+  background: var(--bv-hover);
 }
 .bv-color-options button[aria-pressed="true"] {
-  border-color: #728950;
+  border-color: var(--bv-ink);
   background: #ecf1db;
 }
 .bv-color-options i {
@@ -103,29 +108,37 @@
   background: #f8f9ed;
   border-radius: 16px;
   text-align: left;
-  font-size: 12px;
+  font-size: var(--bv-fs-ui);
+  font-weight: 600;
 }
 .bv-notice-options button[aria-pressed="true"] {
-  border-color: #728950;
+  border-color: var(--bv-ink);
   background: #e8edcf;
 }
 .bv-feedback {
   min-height: 42px;
+  font-size: var(--bv-fs-body);
+  color: var(--bv-ink);
 }
 .bv-complete {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
-  background: #738b4f;
+  background: var(--bv-ink);
   color: #fff !important;
   border: 0;
   width: 100%;
-  border-radius: 28px;
-  padding: 15px;
-  font-size: 12px !important;
+  min-height: 48px;
+  border-radius: 999px;
+  padding: 0 16px;
+  font-size: var(--bv-fs-ui) !important;
+  font-weight: 600;
+}
+.bv-complete:not(:disabled):hover {
+  background: var(--bv-ink-hover);
 }
 .bv-complete:disabled {
   background: #e5e9d9;
-  color: #a3ac90 !important;
+  color: var(--bv-text-2) !important;
 }
