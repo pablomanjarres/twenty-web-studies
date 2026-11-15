@@ -31,12 +31,7 @@
   white-space: nowrap;
 }
 .md-table-panel th {
-  font: 400 12px var(--md-mono);
   text-align: left;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--md-text-3);
   padding: 16px 15px;
   border-bottom: 1px solid #7598a14a;
 }
