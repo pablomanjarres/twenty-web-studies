@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { ArrowUpRight } from "lucide-react";
 import { image, stories } from "./data";
 export function PrintedIssue() {
   const [saved, setSaved] = useState(false);
@@ -57,12 +58,13 @@ export function PrintedIssue() {
             <input
               id="monograph-email"
               type="email"
+              autoComplete="email"
               required
               placeholder="Your email address"
               onChange={() => setSaved(false)}
             />
             <button type="submit" aria-label="Save issue notification">
-              ↗
+              <ArrowUpRight size={22} aria-hidden="true" />
             </button>
           </div>
           <p role="status">
