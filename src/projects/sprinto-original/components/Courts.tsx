@@ -22,11 +22,14 @@ export function Courts() {
     <section className="sprinto-original-courts" id="sprinto-original-courts">
       <div className="sprinto-original-section-title">
         <div>
-          <span>Tonight looks good on you.</span>
+          <span className="sprinto-original-meta">
+            Tonight looks good on you.
+          </span>
           <h2>YOUR COURT. YOUR CALL.</h2>
         </div>
         <div
           className="sprinto-original-area-tabs"
+          role="group"
           aria-label="Court locations"
         >
           {["All locations", "Downtown", "Riverside"].map((i) => (

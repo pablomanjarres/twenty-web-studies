@@ -1,32 +1,41 @@
 .sprinto-original-courts {
-  padding: 80px 5%;
+  padding: 112px 5%;
 }
 .sprinto-original-section-title {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 32px;
+  gap: 32px;
+  margin-bottom: 48px;
 }
 .sprinto-original-section-title > div > span {
-  font-size: 11px;
-  color: #7c748b;
+  color: #6535f4;
 }
 .sprinto-original h2 {
-  font-size: 58px;
-  line-height: 1.02;
-  margin: 15px 0 0;
+  font-size: clamp(48px, 5.4vw, 80px);
+  line-height: 0.88;
+  margin: 16px 0 0;
+  text-wrap: balance;
 }
 .sprinto-original-area-tabs {
   display: flex;
-  gap: 5px;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 .sprinto-original-area-tabs button {
   border: 1px solid #d6d1df;
   background: transparent;
-  padding: 10px 14px;
-  font-size: 10px;
-  border-radius: 4px;
+  min-height: 44px;
+  padding: 0 16px;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 5px;
   color: #5b526e;
+  cursor: pointer;
+}
+.sprinto-original-area-tabs button:hover {
+  border-color: #6535f4;
+  color: #6535f4;
 }
 .sprinto-original-area-tabs button[aria-pressed="true"] {
   background: #6535f4;
@@ -36,62 +45,54 @@
 .sprinto-original-court-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 22px;
+  gap: 24px;
 }
 .sprinto-original-court-card {
+  display: flex;
+  flex-direction: column;
   background: white;
-  padding: 23px;
+  padding: 24px;
   border-radius: 9px;
   border: 1px solid #e4e0eb;
   min-width: 0;
 }
-.sprinto-original-court-icon {
+.sprinto-original-court-tags {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  gap: 22px;
-  border-bottom: 1px solid #e6e2ef;
-  padding-bottom: 20px;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: var(--so-muted);
+}
+.sprinto-original-court-surface {
+  background: var(--so-tag-bg);
   color: #6535f4;
+  padding: 5px 8px;
+  border-radius: 3px;
 }
-.sprinto-original-court-icon svg {
-  width: 100px;
-  height: 70px;
-}
-.sprinto-original-court-icon > span {
-  font-size: 9px;
-  color: #7b718a;
-  max-width: 66px;
-  text-align: right;
-  line-height: 1.5;
-}
-.sprinto-original-court-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 20px;
-}
-.sprinto-original-court-top h3 {
+.sprinto-original-court-card h3 {
   font-family: "DM Sans", sans-serif;
-  font-size: 17px;
-  font-weight: 500;
-  letter-spacing: -0.03em;
-  margin: 0;
+  font-size: 22px;
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 20px 0 8px;
 }
-.sprinto-original-court-card > p {
+.sprinto-original-court-area {
   display: flex;
   align-items: center;
-  gap: 5px;
-  font-size: 9px;
-  color: #7b718a;
-  margin: 12px 0 20px;
+  gap: 6px;
+  font-size: 14px;
+  color: var(--so-muted);
+  margin: 0 0 20px;
 }
-.sprinto-original-court-card > p > span {
-  margin-left: auto;
+.sprinto-original-court-label {
+  color: #6535f4;
+  margin-bottom: 12px;
 }
 .sprinto-original-court-times {
   display: flex;
-  gap: 7px;
+  gap: 8px;
 }
 .sprinto-original-court-times button {
   border: 1px solid #d8cafd;
@@ -100,12 +101,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 9px;
-  padding: 10px 7px;
-  border-radius: 4px;
-  font-size: 10px;
+  min-height: 48px;
+  padding: 0 8px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
   flex: 1;
   min-width: 0;
+  cursor: pointer;
 }
 .sprinto-original-court-times button:hover {
   background: #ddfc6b;
@@ -115,25 +119,26 @@
 .sprinto-original-court-price {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-top: 22px;
-  padding-top: 15px;
+  align-items: baseline;
+  margin-top: 24px;
+  padding-top: 16px;
   border-top: 1px solid #e6e2ef;
-  gap: 10px;
+  gap: 12px;
 }
 .sprinto-original-court-price > span {
-  font-size: 8px;
-  color: #8b8297;
+  font-size: 14px;
+  color: var(--so-muted);
 }
 .sprinto-original-court-price strong {
   white-space: nowrap;
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 24px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
 }
 .sprinto-original-court-price small {
-  font-size: 9px;
+  font-size: 14px;
   font-weight: 400;
-  color: #8b8297;
+  color: var(--so-muted);
 }
 
 .sprinto-original-saved-session {
@@ -141,18 +146,19 @@
   align-items: center;
   gap: 14px;
   background: #ddfc6b;
-  border-radius: 7px;
-  padding: 18px 20px;
-  margin-top: 22px;
+  border-radius: 9px;
+  padding: 20px 24px;
+  margin-top: 24px;
   color: #19152d;
 }
 .sprinto-original-saved-session span {
-  font-size: 11px;
+  font-size: 15px;
+  font-weight: 500;
 }
 .sprinto-original-saved-session strong {
   display: block;
-  font-size: 10px;
+  font-size: 14px;
   font-weight: 400;
-  margin-top: 5px;
-  color: #605a3a;
+  margin-top: 4px;
+  color: #50563e;
 }
