@@ -2,22 +2,25 @@
   position: relative;
   display: grid;
   grid-template-columns: 1.06fr 1fr;
-  min-height: 630px;
+  min-height: max(640px, calc(100svh - 80px));
   background: #6535f4;
   color: white;
 }
 .sprinto-original-hero-copy {
-  padding: 60px 8% 58px 9.4%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 64px 8% 64px 9.4%;
 }
 .sprinto-original-online {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 11px;
+  gap: 10px;
 }
 .sprinto-original-online i {
-  width: 7px;
-  height: 7px;
+  width: 8px;
+  height: 8px;
   background: #ddfc6b;
   border-radius: 50%;
 }
@@ -26,22 +29,23 @@
 .sprinto-original h3 {
   font-family: "Anton", "Bebas Neue", sans-serif;
   font-weight: 400;
-  letter-spacing: -0.015em;
+  letter-spacing: 0;
 }
 .sprinto-original h1 {
-  font-size: clamp(70px, 8.6vw, 127px);
-  line-height: 0.93;
-  margin: 30px 0 25px;
+  font-size: clamp(72px, 8.6vw, 128px);
+  line-height: 0.86;
+  margin: 28px 0 32px;
 }
 .sprinto-original h1 > span {
   color: #ddfc6b;
 }
 .sprinto-original-hero-copy > p {
-  max-width: 310px;
-  font-size: 13px;
-  line-height: 1.75;
-  color: #e0d6fd;
-  margin: 0 0 26px;
+  max-width: 34ch;
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--so-on-violet);
+  margin: 0 0 32px;
+  text-wrap: pretty;
 }
 .sprinto-original-lime-button {
   background: #ddfc6b;
@@ -49,25 +53,36 @@
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
-  gap: 40px;
-  padding: 16px 20px;
-  font-size: 12px;
-  font-weight: 600;
+  gap: 32px;
+  min-height: 52px;
+  padding: 0 20px;
+  font-size: 15px;
+  font-weight: 700;
   border: 0;
   border-radius: 5px;
+  cursor: pointer;
+}
+.sprinto-original-lime-button:hover {
+  background: #19152d;
+  color: #ddfc6b;
 }
 .sprinto-original-hero-meta {
   display: flex;
-  gap: 45px;
-  margin-top: 35px;
+  gap: 48px;
+  margin: 48px 0 0;
+  padding-top: 24px;
+  border-top: 1px solid #ffffff33;
 }
 .sprinto-original-hero-meta strong {
   display: block;
-  font-size: 25px;
-  font-weight: 500;
-  letter-spacing: -0.045em;
+  font-weight: 400;
+  font-family: "Anton", sans-serif;
+  font-size: 48px;
+  line-height: 0.9;
+  font-variant-numeric: tabular-nums;
 }
 .sprinto-original-hero-meta span {
-  font-size: 9px;
-  color: #c7b4fc;
+  display: block;
+  margin-top: 10px;
+  color: var(--so-on-violet);
 }
