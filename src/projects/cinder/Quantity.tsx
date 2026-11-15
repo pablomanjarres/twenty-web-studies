@@ -19,7 +19,7 @@ export function Quantity({
         disabled={value <= min}
         onClick={() => onChange(value - 1)}
       >
-        <Minus size={14} />
+        <Minus size={16} />
       </button>
       <output aria-label={label}>{value}</output>
       <button
@@ -27,7 +27,7 @@ export function Quantity({
         disabled={value >= max}
         onClick={() => onChange(value + 1)}
       >
-        <Plus size={14} />
+        <Plus size={16} />
       </button>
     </div>
   );

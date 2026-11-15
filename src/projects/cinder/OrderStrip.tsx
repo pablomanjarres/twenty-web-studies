@@ -33,12 +33,15 @@ export function OrderStrip({
         </div>
       </div>
       <div className="cinder-order-quantity">
-        <span className="cinder-label">Bags / 250 g</span>
+        <span className="cinder-label cinder-sr-only-phone">Bags / 250 g</span>
         <Quantity value={quantity} onChange={onQuantity} />
       </div>
       <button className="cinder-order-button" onClick={onAdd}>
-        Add {coffee.name} — {money(coffee.price * quantity)}{" "}
-        <ArrowRight size={18} />
+        <span>Add {coffee.name}</span>
+        <span className="cinder-order-price">
+          {money(coffee.price * quantity)}
+        </span>
+        <ArrowRight size={20} aria-hidden="true" />
       </button>
     </section>
   );
