@@ -10,6 +10,10 @@
   --ov3-text-3: #666b66;
   --ov3-violet-text: #5b3fd0;
   --ov3-violet-tint: #f0ebff;
+  --ov3-chip: #f2f2ed;
+  --ov3-track: #ecebe4;
+  --ov3-green: #158f73;
+  --ov3-amber: #e99b36;
   --ov3-ease: cubic-bezier(0.2, 0.7, 0.2, 1);
   --ov3-fast: 160ms;
   --focus-color: #6d4af1;
@@ -244,7 +248,7 @@
 .orbit-v3 .ov3-page-footer i {
   width: 6px;
   height: 6px;
-  background: #158f73;
+  background: var(--ov3-green);
   border-radius: 50%;
 }
 .orbit-v3 .ov3-empty {
@@ -255,6 +259,18 @@
 
 .orbit-v3 .ov3-avatar-group {
   display: flex;
+}
+.orbit-v3 .ov3-meter {
+  display: block;
+  height: 6px;
+  background: var(--ov3-track);
+  border-radius: 3px;
+  overflow: hidden;
+}
+.orbit-v3 .ov3-meter b {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
 }
 
 @media (prefers-reduced-motion: reduce) {

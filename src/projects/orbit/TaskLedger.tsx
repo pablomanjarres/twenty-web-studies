@@ -12,6 +12,7 @@ import {
   type Task,
   type TaskStatus,
 } from "./data";
+import { Meter } from "./Meter";
 export function Status({ status }: { status: TaskStatus }) {
   const Icon =
     status === "Done"
@@ -83,14 +84,7 @@ export function TaskLedger({
           </span>
           <Status status={task.status} />
           <span className="ov3-task-progress">
-            <i>
-              <b
-                style={{
-                  width: `${progress(task)}%`,
-                  background: stageColors[task.kind],
-                }}
-              />
-            </i>
+            <Meter value={progress(task)} color={stageColors[task.kind]} />
             <small>{progress(task)}%</small>
           </span>
           <span className="ov3-task-due">

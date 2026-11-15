@@ -1,6 +1,7 @@
 import { ArrowUpRight } from "lucide-react";
 import { avatar, people, meetings, stageColors, type Task } from "./data";
 import { AvatarGroup } from "./AvatarGroup";
+import { Meter } from "./Meter";
 export function TeamPanel({
   tasks,
   onSelect,
@@ -35,14 +36,10 @@ export function TeamPanel({
                   {person.role} · {owned.length} tasks
                 </small>
                 <span className="ov3-person-load">
-                  <i>
-                    <b
-                      style={{
-                        width: `${(hours / max) * 100}%`,
-                        background: stageColors[person.role],
-                      }}
-                    />
-                  </i>
+                  <Meter
+                    value={(hours / max) * 100}
+                    color={stageColors[person.role]}
+                  />
                   <em>{hours} h</em>
                 </span>
               </span>
