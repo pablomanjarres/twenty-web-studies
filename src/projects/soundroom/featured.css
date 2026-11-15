@@ -59,13 +59,13 @@
   min-height: 40px;
   padding: 0 18px 0 16px;
   background: var(--sr3-orange);
-  color: #1a130c;
+  color: var(--sr3-on-amber);
   border-radius: 8px;
   font-weight: 600;
   font-size: 14px;
 }
 .soundroom-v3 .sr3-featured-play:hover {
-  background: #ff9d4f;
+  background: var(--sr3-amber-hover);
 }
 .soundroom-v3 .sr3-featured-play:active {
   transform: scale(0.98);
@@ -74,7 +74,7 @@
   outline-color: var(--sr3-text);
 }
 .soundroom-v3 .sr3-featured-save {
-  border: 1px solid rgba(243, 241, 233, 0.28);
+  border: 1px solid var(--sr3-edge-strong);
   height: 40px;
   width: 40px;
   display: grid;

@@ -37,7 +37,7 @@
   background: var(--sr3-hover);
 }
 .soundroom-v3 .sr3-navigation nav button[aria-current="page"] {
-  color: #1a130c;
+  color: var(--sr3-on-amber);
   background: var(--sr3-orange);
 }
 .soundroom-v3 .sr3-navigation nav button[aria-current="page"]:focus-visible {

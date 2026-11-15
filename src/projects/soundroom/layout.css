@@ -1,12 +1,14 @@
 .soundroom-v3 {
   --sr3-surface: #111211;
-  --sr3-ink: #f3f1e9;
   --sr3-text: #f3f1e9;
   --sr3-text-2: #a8a39a;
   --sr3-text-3: #8a857c;
   --sr3-edge: rgba(243, 241, 233, 0.1);
+  --sr3-edge-strong: rgba(243, 241, 233, 0.28);
   --sr3-hover: rgba(243, 241, 233, 0.05);
   --sr3-orange: #ff8a32;
+  --sr3-amber-hover: #ff9d4f;
+  --sr3-on-amber: #1a130c;
   --sr3-amber-tint: rgba(255, 138, 50, 0.1);
   --sr3-graphite: #1b1d20;
   --sr3-plum: #211d2b;
@@ -18,7 +20,7 @@
   display: grid;
   grid-template-columns: 88px minmax(0, 1fr);
   background: var(--sr3-surface);
-  color: var(--sr3-ink);
+  color: var(--sr3-text);
   font:
     13px "DM Sans",
     sans-serif;
@@ -111,7 +113,7 @@
   transition: border-color 150ms var(--sr3-ease);
 }
 .soundroom-v3 .sr3-header label:hover {
-  border-color: rgba(243, 241, 233, 0.22);
+  border-color: var(--sr3-edge-strong);
 }
 .soundroom-v3 .sr3-header label:focus-within {
   border-color: var(--sr3-orange);
