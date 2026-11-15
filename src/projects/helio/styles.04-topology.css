@@ -70,7 +70,7 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: #9db0ff;
+  background: var(--hl-cobalt-on-dark);
 }
 .helio-topology-art.ready .helio-core-status {
   color: #89d8b7;
@@ -99,10 +99,10 @@
 }
 .helio-region-list button[aria-pressed="true"] {
   background: #253350;
-  box-shadow: inset 2px 0 0 #9db0ff;
+  box-shadow: inset 2px 0 0 var(--hl-cobalt-on-dark);
 }
 .helio-region-list button:focus-visible {
-  outline-color: #9db0ff;
+  outline-color: var(--hl-cobalt-on-dark);
   outline-offset: -2px;
 }
 .helio-region-list button > span {

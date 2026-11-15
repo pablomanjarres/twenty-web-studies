@@ -114,7 +114,7 @@
   box-shadow: inset 0 2px 0 var(--hl-cobalt);
 }
 .helio-recipe-code button:focus-visible {
-  outline-color: #9db0ff;
+  outline-color: var(--hl-cobalt-on-dark);
   outline-offset: -2px;
 }
 .helio-recipe-code pre {

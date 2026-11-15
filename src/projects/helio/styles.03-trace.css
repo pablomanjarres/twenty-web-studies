@@ -19,7 +19,7 @@
   background: #0f1622;
 }
 .helio-command span {
-  color: #9db0ff;
+  color: var(--hl-cobalt-on-dark);
 }
 .helio-command code {
   white-space: nowrap;
@@ -30,7 +30,7 @@
   font:
     500 var(--hl-fs-label)/16px var(--hl-mono),
     monospace;
-  color: #9db0ff;
+  color: var(--hl-cobalt-on-dark);
   letter-spacing: 0.04em;
 }
 .helio-build-trace h3 {
@@ -186,7 +186,7 @@
   accent-color: #6d86f7;
 }
 .helio-build-trace :is(button, input):focus-visible {
-  outline-color: #9db0ff;
+  outline-color: var(--hl-cobalt-on-dark);
 }
 .helio-endpoint {
   padding: 24px;
