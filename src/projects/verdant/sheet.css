@@ -22,9 +22,7 @@
   margin: 8px 0;
 }
 .vd-operating-notes p {
-  font:
-    600 14px/1.3 "Manrope",
-    sans-serif;
+  font: var(--vd-font-ui);
   color: var(--vd-muted);
 }
 .vd-node-caption {
@@ -65,16 +63,12 @@
 }
 .vd-balance-note small {
   display: block;
-  font:
-    600 14px/1.3 "Manrope",
-    sans-serif;
+  font: var(--vd-font-ui);
   color: #c9d6dc;
 }
 .vd-balance-note strong {
   display: block;
-  font:
-    400 var(--vd-reading) / 1 "IBM Plex Mono",
-    monospace;
+  font: var(--vd-font-reading);
   letter-spacing: -0.02em;
   margin-top: 6px;
 }
