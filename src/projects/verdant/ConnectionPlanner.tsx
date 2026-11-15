@@ -42,14 +42,10 @@ export function ConnectionPlanner() {
     <section id="connection" className="vd-connection">
       <div>
         <span className="vd-label">From a site to a system</span>
-        <h2>
-          What could your
-          <br />
-          next connection be?
-        </h2>
+        <h2>What could your next connection be?</h2>
         <p>
-          Tell us where you’re starting.
-          <br />A clear project begins with a better question.
+          Tell us where you’re starting. A clear project begins with a better
+          question.
         </p>
       </div>
       <form

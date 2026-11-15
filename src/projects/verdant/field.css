@@ -32,6 +32,7 @@
     sans-serif;
   letter-spacing: -0.03em;
   margin: 16px 0 24px;
+  text-wrap: balance;
 }
 .vd-field-intro > .vd-label {
   color: var(--vd-muted);
