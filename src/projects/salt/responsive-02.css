@@ -1,135 +1,87 @@
 @media (max-width: 720px) {
+  .salt {
+    --sl-label: 400 13px/1.4 "IBM Plex Mono", monospace;
+    --sl-body: 400 17px/1.6 "DM Sans", sans-serif;
+    --sl-group: 400 30px/1.05 "Instrument Serif", serif;
+  }
   .sl-header {
     min-height: 74px;
-    padding: 18px 20px;
-    gap: 16px;
+    padding: 14px 16px;
+    gap: 12px;
   }
   .sl-header > a {
     font-size: 27px;
   }
-  .sl-header > span {
-    display: none;
-  }
   .sl-header nav {
-    gap: 17px;
-    font-size: 10px;
-  }
-  .sl-header nav {
-    gap: 12px;
+    gap: 16px;
   }
   .sl-header nav a:last-child {
-    padding: 0 16px;
+    padding: 0 18px;
   }
   .sl-menu-stage {
-    padding: 4px 14px 35px;
+    padding: 4px 12px 32px;
   }
   .sl-menu-controls {
     justify-content: center;
-    padding: 0 0 14px;
+    padding: 0 0 12px;
   }
   .sl-menu-controls > span {
     display: none;
   }
   .sl-menu-controls nav {
     width: 100%;
-    gap: 8px;
   }
   .sl-menu-controls button {
     flex: 1;
     padding: 0 12px;
     min-height: 46px;
-    font-size: 12px;
   }
   .sl-menu-paper {
     padding: 24px 20px;
     border-radius: 22px;
   }
   .sl-menu-masthead {
-    padding-bottom: 18px;
+    padding-bottom: 16px;
   }
   .sl-menu-masthead > p {
-    font-size: 10px;
-    letter-spacing: 0;
+    font-size: 14px;
   }
   .sl-menu-masthead h1 {
-    font-size: 29px;
-    margin-top: 13px;
-    line-height: 1.2;
+    font-size: 32px;
+    margin-top: 12px;
   }
   .sl-menu-masthead > span {
-    font-size: 15px;
+    font-size: 18px;
     margin-top: 8px;
   }
   .sl-menu-spread {
     grid-template-columns: 1fr;
-    gap: 23px;
-    padding: 18px 0 22px;
+    gap: 28px;
+    padding: 16px 0 28px;
   }
   .sl-plate {
-    grid-row: 1;
-    margin: 0 !important;
+    grid-column: auto;
     display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
+    grid-template-columns: 1.05fr 0.95fr;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     padding: 0;
   }
   .sl-plate img {
-    height: 195px;
+    height: 180px;
   }
   .sl-plate figcaption {
-    font-size: 9px;
     margin: 0;
-    line-height: 1.7;
+    text-align: left;
   }
   .sl-plate figcaption span {
-    font-size: 19px;
-    line-height: 1.1;
-  }
-  .sl-plate figcaption small {
-    font-size: 8px;
-    line-height: 1.6;
-  }
-  .sl-menu-spread h2 {
-    font-size: 26px;
-    margin-bottom: 20px;
-  }
-  .sl-dish h3 {
-    font-size: 14px;
-  }
-  .sl-dish p {
-    font-size: 11px;
-    max-width: 270px;
-  }
-  .sl-dish {
-    margin-bottom: 21px;
+    font-size: 24px;
   }
   .sl-menu-note {
     display: none;
   }
-  .sl-menu-section + .sl-menu-section {
-    padding-top: 18px;
-    margin-top: 24px;
-  }
   .sl-menu-bottom {
     display: grid;
-    gap: 9px;
-    font-size: 8px;
-  }
-  .sl-kitchen {
-    padding: 15px 24px 50px;
-    grid-template-columns: 1fr;
-    gap: 35px;
-  }
-  .sl-kitchen > figure img {
-    height: 280px;
-  }
-  .sl-kitchen > figure figcaption {
-    font-size: 8px;
-    left: 18px;
-    bottom: 18px;
-  }
-  .sl-kitchen-story h2 {
-    font-size: 34px;
+    gap: 8px;
   }
 }
