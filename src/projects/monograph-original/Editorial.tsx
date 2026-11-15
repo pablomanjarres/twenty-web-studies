@@ -1,42 +1,59 @@
-import { useState } from "react";
+import { useId, useState } from "react";
 import { ArrowUpRight, Plus, Minus } from "lucide-react";
 import { BrandLogo } from "../../shared/BrandLogo";
 import { brand } from "./brand";
-import { image, stories } from "./data";
+import { filters, image, stories } from "./data";
 
 export function StoryCard({ story }: { story: (typeof stories)[number] }) {
   const [expanded, setExpanded] = useState(false);
+  const excerptId = useId();
   return (
     <article className="monograph-original-story">
-      <a href="#monograph-original-issue">
-        <img src={image(story.image)} alt={story.title} />
+      <a
+        className="monograph-original-story-image"
+        href="#monograph-original-issue"
+        tabIndex={-1}
+        aria-hidden="true"
+      >
+        <img
+          className={"detail" in story ? "is-detail" : undefined}
+          src={image(story.image)}
+          alt={story.alt}
+          width={600}
+          height={400}
+          loading="lazy"
+        />
       </a>
       <div className="monograph-original-story-meta">
-        <span>{story.subject}</span>
+        <span className="monograph-original-rubric">{story.subject}</span>
         <span>{story.time}</span>
       </div>
-      <h3>{story.title}</h3>
+      <h3>
+        <a href="#monograph-original-issue">{story.title}</a>
+      </h3>
+      <p className="monograph-original-story-deck">{story.by}</p>
       <button
         className="monograph-original-story-more"
         onClick={() => setExpanded(!expanded)}
         aria-expanded={expanded}
+        aria-controls={excerptId}
       >
-        {story.by}
-        {expanded ? <Minus size={17} /> : <Plus size={17} />}
+        {expanded ? <Minus size={16} /> : <Plus size={16} />}
+        {expanded ? "Close the excerpt" : "Read an excerpt"}
       </button>
-      {expanded && (
-        <p className="monograph-original-story-excerpt">
-          A closer look at the materials, spaces, and small decisions that
-          change the way we experience art. Find the full conversation in Volume
-          08.
-        </p>
-      )}
+      <p
+        className="monograph-original-story-excerpt"
+        id={excerptId}
+        hidden={!expanded}
+      >
+        {story.excerpt}
+      </p>
     </article>
   );
 }
 
 export function Stories() {
-  const [filter, setFilter] = useState("All stories");
+  const [filter, setFilter] = useState(filters[0]);
   return (
     <section
       className="monograph-original-stories"
@@ -44,22 +61,28 @@ export function Stories() {
     >
       <div className="monograph-original-section-title">
         <h2>The latest perspectives</h2>
-        <div className="monograph-original-filter" aria-label="Filter stories">
-          {["All stories", "Art", "Spaces"].map((item) => (
-            <button
-              key={item}
-              className={filter === item ? "active" : ""}
-              aria-pressed={filter === item}
-              onClick={() => setFilter(item)}
-            >
-              {item}
-            </button>
+        <div
+          className="monograph-original-filter"
+          role="group"
+          aria-label="Filter stories"
+        >
+          {filters.map((item, index) => (
+            <span key={item}>
+              <button
+                className={filter === item ? "active" : ""}
+                aria-pressed={filter === item}
+                onClick={() => setFilter(item)}
+              >
+                {item}
+              </button>
+              {index < filters.length - 1 && <span aria-hidden="true">,</span>}
+            </span>
           ))}
         </div>
       </div>
       <div className="monograph-original-story-grid">
         {stories
-          .filter((s) => filter === "All stories" || s.subject === filter)
+          .filter((s) => filter === filters[0] || s.subject === filter)
           .map((story) => (
             <StoryCard key={story.title} story={story} />
           ))}
@@ -79,13 +102,16 @@ export function PrintedIssue() {
           <span>monograph</span>
           <img
             src={image("gallery")}
+            width={460}
+            height={520}
+            loading="lazy"
             alt="A classical painting of a woman carrying a vessel"
           />
           <small>Volume 08 — The art of looking</small>
         </div>
       </div>
       <div>
-        <span className="monograph-original-issue-kicker">Made to be kept</span>
+        <span className="monograph-original-rubric">Made to be kept</span>
         <h2>
           More than a screen.
           <br />A slower kind of story.
