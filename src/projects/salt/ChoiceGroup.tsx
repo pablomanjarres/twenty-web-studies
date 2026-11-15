@@ -55,7 +55,9 @@ export function ChoiceGroup({
               type="button"
               role="radio"
               aria-checked={checked}
-              tabIndex={checked ? 0 : -1}
+              tabIndex={
+                checked || (!options.includes(value) && index === 0) ? 0 : -1
+              }
               onClick={() => onChange(option)}
               onKeyDown={(event) => onKeyDown(event, index)}
             >
