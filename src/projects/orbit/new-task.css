@@ -7,8 +7,8 @@
   border-radius: 18px;
 }
 .orbit-v3 .ov3-new-task h2 {
-  font-size: 23px;
-  margin: 24px 0;
+  font-size: 24px;
+  margin: 16px 0 24px;
 }
 .orbit-v3 .ov3-new-task form {
   display: grid;
@@ -17,21 +17,23 @@
 .orbit-v3 .ov3-new-task label {
   display: grid;
   gap: 8px;
-  font-size: 12px;
-  color: #868e79;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ov3-text-2);
 }
 .orbit-v3 .ov3-new-task input,
 .orbit-v3 .ov3-new-task select {
   width: 100%;
-  border: 1px solid #dfe3d5;
+  height: 44px;
+  border: 1px solid var(--ov3-line-strong);
   background: white;
-  padding: 12px;
-  border-radius: 7px;
-  font-size: 13px;
+  padding: 0 12px;
+  border-radius: 10px;
+  font-size: 15px;
 }
 .orbit-v3 .ov3-new-task form > p {
-  color: #a0a98d;
-  font-size: 11px;
+  color: var(--ov3-text-3);
+  font-size: 13px;
   line-height: 1.5;
 }
 .orbit-v3 .ov3-new-task form > button {
@@ -41,6 +43,14 @@
   gap: 8px;
   background: #6d4af1;
   color: white;
-  border-radius: 8px;
-  padding: 13px;
+  height: 44px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.orbit-v3 .ov3-new-task form > button:hover {
+  background: #5b3fd0;
+}
+.orbit-v3 .ov3-new-task form > button:active {
+  transform: scale(0.98);
 }

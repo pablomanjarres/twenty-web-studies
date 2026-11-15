@@ -34,8 +34,8 @@
   display: flex;
   align-items: center;
   gap: 20px;
-  font-size: 9px;
-  color: #93a297;
+  font-size: 12px;
+  color: #5f736a;
   min-height: 64px;
 }
 .pv-footer > span {

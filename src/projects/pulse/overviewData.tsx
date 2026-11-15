@@ -7,8 +7,25 @@ export function dailyVisits(appointments: Visit[], day: number) {
 }
 export const visitMinutes = (visits: Visit[]) =>
   visits.reduce((sum, v) => sum + v.duration, 0);
+function careTimeParts(minutes: number) {
+  return [
+    String(Math.floor(minutes / 60)),
+    String(minutes % 60).padStart(2, "0"),
+  ];
+}
 export function careTime(minutes: number) {
-  return `${Math.floor(minutes / 60)}h ${String(minutes % 60).padStart(2, "0")}m`;
+  const [h, m] = careTimeParts(minutes);
+  return `${h}h ${m}m`;
+}
+export function CareTimeFigure({ minutes }: { minutes: number }) {
+  const [h, m] = careTimeParts(minutes);
+  return (
+    <>
+      {h}
+      <small className="pv-unit">h</small> {m}
+      <small className="pv-unit">m</small>
+    </>
+  );
 }
 const portraits: Record<number, string> = {
   1: "patient.jpg",

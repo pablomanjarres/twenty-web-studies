@@ -1,0 +1,44 @@
+/* The desk carries the mood filter on wide screens; below 1050px it moves above the list. */
+.soundroom-v3 .sr3-inline-moods {
+  display: none;
+  gap: 8px;
+  margin-top: 24px;
+}
+.soundroom-v3 .sr3-inline-moods button {
+  flex: none;
+  min-height: 36px;
+  padding: 0 14px;
+  border-radius: 6px;
+  background: rgba(243, 241, 233, 0.06);
+  color: var(--sr3-text-2);
+  font-size: 13px;
+}
+.soundroom-v3 .sr3-inline-moods button:not([aria-pressed="true"]):hover {
+  background: var(--sr3-edge);
+  color: var(--sr3-text);
+}
+.soundroom-v3 .sr3-inline-moods button[aria-pressed="true"] {
+  background: var(--sr3-text);
+  color: var(--sr3-surface);
+}
+@media (max-width: 1050px) {
+  .soundroom-v3 .sr3-inline-moods {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 700px) {
+  .soundroom-v3 .sr3-inline-moods {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin: 20px -20px 0;
+    padding: 2px 20px;
+    scrollbar-width: none;
+  }
+  .soundroom-v3 .sr3-inline-moods button {
+    min-height: 40px;
+  }
+  .soundroom-v3 .sr3-inline-moods + .sr3-track-list {
+    margin-top: 24px;
+  }
+}

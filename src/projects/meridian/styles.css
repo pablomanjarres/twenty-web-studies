@@ -2,6 +2,7 @@
 @import "./workspace.css";
 @import "./movement-rail.css";
 @import "./movement-card.css";
+@import "./indicators.css";
 @import "./route-map.css";
 @import "./arrival.css";
 @import "./shipments.css";

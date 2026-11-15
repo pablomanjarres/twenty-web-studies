@@ -1,0 +1,64 @@
+.vd-source {
+  left: 4%;
+  top: 6%;
+  width: 23%;
+}
+.vd-inverter {
+  left: 36%;
+  top: 20%;
+  width: 19%;
+}
+.vd-inverter > svg {
+  height: clamp(110px, 18svh, 155px);
+}
+.vd-home {
+  right: 4%;
+  top: 3%;
+  width: 24%;
+}
+.vd-battery {
+  right: 6%;
+  bottom: 8px;
+  width: 34%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.vd-battery > svg {
+  width: 55%;
+  height: clamp(120px, 20svh, 160px);
+}
+.vd-battery .vd-reading {
+  flex: 1;
+}
+.vd-battery strong small {
+  display: block;
+  margin-top: 6px;
+}
+.vd-grid-export {
+  position: absolute;
+  bottom: 30px;
+  left: 18%;
+  display: grid;
+  gap: 8px;
+  min-width: 112px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: var(--vd-plate);
+}
+.vd-grid-export strong {
+  font:
+    400 18px/1 "IBM Plex Mono",
+    monospace;
+}
+.vd-grid-export i {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  border: 1px solid var(--vd-line);
+  left: -47px;
+  top: 8px;
+  background:
+    repeating-linear-gradient(90deg, transparent 0 7px, #a7b396 7px 8px),
+    repeating-linear-gradient(0deg, transparent 0 7px, #a7b396 7px 8px);
+}

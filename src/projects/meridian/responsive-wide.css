@@ -16,7 +16,7 @@
   }
   .md-load-dock,
   .md-event-dock {
-    padding: 13px;
+    padding: 16px;
   }
   .md-port-caption {
     left: 16px;
@@ -26,8 +26,14 @@
     right: 16px;
   }
   .md-plan-focus {
-    right: 72px;
-    width: 218px;
+    left: 16px;
+    width: 260px;
+  }
+  .md-point-label {
+    font-size: 16px;
+  }
+  .md-port-caption > div {
+    min-width: 260px;
   }
   .md-load-identity > .md-vehicle-study {
     width: 104px;
@@ -36,10 +42,10 @@
     gap: 8px;
   }
   .md-load-facts b {
-    font-size: 10px;
+    font-size: 12px;
   }
   .md-event-dock h3 {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 @media (max-width: 1050px) {
@@ -61,14 +67,8 @@
   .md-control-room {
     grid-template-columns: 56px 245px minmax(0, 1fr);
   }
-  .md-plan-focus {
-    top: auto;
-    bottom: 252px;
-    right: 18px;
-    width: 215px;
-  }
   .md-port-caption h2 {
-    font-size: 20px;
+    font-size: 22px;
   }
   .md-map-badge {
     display: none;
@@ -80,14 +80,10 @@
   .md-load-identity > .md-vehicle-study {
     width: 80px;
   }
-  .md-load-facts b {
-    font-size: 11px;
-  }
   .md-map-legend {
-    bottom: 227px;
-    font-size: 8px;
+    bottom: 251px;
   }
-  .md-map-legend > span:last-child {
+  .md-map-legend > span:nth-child(n + 2) {
     display: none;
   }
 }

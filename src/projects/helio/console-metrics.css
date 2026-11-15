@@ -4,67 +4,70 @@
   gap: 16px;
 }
 .hc-metrics article {
-  position: relative;
-  overflow: hidden;
   background: white;
-  border: 1px solid #e5e8ef;
-  border-radius: 9px;
-  padding: 18px 20px;
-  box-shadow: 0 2px 3px #14233b03;
+  border: 1px solid var(--hl-line);
+  border-radius: 10px;
+  padding: 20px 24px;
+  transition: border-color var(--hl-fast);
+}
+.hc-metrics article:hover {
+  border-color: var(--hl-line-strong);
 }
 .hc-metrics article > div:first-child {
   display: flex;
   align-items: center;
   gap: 8px;
-  color: #8d96a8;
-  font-size: 11px;
+  color: var(--hl-text-2);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
 }
-.hc-metrics article > strong {
+.hc-metrics article > div:first-child > .lucide {
+  color: var(--hl-text-3);
+}
+.hc-metric-value {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 16px 0 8px;
+}
+.hc-metric-value strong {
   display: flex;
   align-items: baseline;
   gap: 4px;
   font:
-    550 29px/1 "Space Grotesk",
+    500 32px/1 var(--hl-display),
     sans-serif;
-  letter-spacing: -0.05em;
-  margin: 16px 0 12px;
-  color: #273146;
+  letter-spacing: -0.03em;
+  font-variant-numeric: tabular-nums;
+  color: var(--hl-ink);
 }
-.hc-metrics article > strong small {
+.hc-metric-value strong small {
   font:
-    400 13px "DM Sans",
+    500 14px var(--hl-sans),
     sans-serif;
   letter-spacing: 0;
-  color: #94a0b5;
+  color: var(--hl-text-3);
 }
 .hc-metrics p {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  font-size: 9px;
-  color: #98a1b1;
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--hl-text-3);
   margin: 0;
-}
-.hc-metrics p > .lucide {
-  color: #55af90;
 }
 .hc-metric-spark {
   display: flex;
   align-items: flex-end;
   gap: 3px;
-  position: absolute;
-  right: 20px;
-  bottom: 39px;
-  height: 35px;
-  width: 80px;
-  opacity: 0.75;
+  flex: none;
+  height: 32px;
 }
 .hc-metric-spark i {
-  flex: 1;
-  max-height: 100%;
-  background: #e8edfe;
-  border-radius: 2px 2px 0 0;
+  width: 4px;
+  background: var(--hl-cobalt-soft);
+  border-radius: 1px;
 }
-.hc-metric-spark i:nth-last-child(-n + 2) {
-  background: #7390ed;
+.hc-metric-spark i:last-child {
+  background: var(--hl-cobalt);
 }

@@ -1,10 +1,34 @@
 .helio {
-  --h-blue: #214cf9;
-  --h-ink: #11151e;
-  --focus-color: #214cf9;
-  color: #263448;
+  --hl-cobalt: #234afb;
+  --hl-cobalt-hover: #1a3ad6;
+  --hl-cobalt-tint: #eef1ff;
+  --hl-cobalt-soft: #dfe5fe;
+  --hl-cobalt-on-dark: #9db0ff;
+  --hl-ink: #11151e;
+  --hl-text-2: #4f5868;
+  --hl-text-3: #667085;
+  --hl-line: #e5e8ef;
+  --hl-line-strong: #d0d6e1;
+  --hl-band: #f4f6fa;
+  --hl-row-hover: #f7f9ff;
+  --hl-chip: #f1f3f8;
+  --hl-pearl: #f5f6fb;
+  --hl-green: #38b783;
+  --hl-ready: #16794f;
+  --hl-ready-tint: #e7f6ee;
+  --hl-error: #b4382a;
+  --hl-error-dot: #e5484d;
+  --hl-error-tint: #fdecea;
+  --hl-fs-label: 12px;
+  --hl-sans: "DM Sans", sans-serif;
+  --hl-display: "Space Grotesk", sans-serif;
+  --hl-mono: "IBM Plex Mono", monospace;
+  --hl-ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --hl-fast: 150ms var(--hl-ease);
+  --focus-color: var(--hl-cobalt);
+  color: var(--hl-ink);
   background: #f8fafc;
-  font-family: "DM Sans", sans-serif;
+  font-family: var(--hl-sans);
 }
 .helio a {
   text-decoration: none;
@@ -12,28 +36,65 @@
 .helio button {
   color: inherit;
 }
-.helio-build-state i {
-  width: 5px;
-  height: 5px;
-  background: #71bd9d;
-  border-radius: 50%;
+.helio :is(button, a, input, select, [tabindex]):focus-visible {
+  outline: 2px solid var(--hl-cobalt);
+  outline-offset: 2px;
+}
+.helio .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.helio :is(h1, h2) {
+  text-wrap: balance;
 }
 .helio-footer {
-  padding: 30px 3.2%;
-  color: #1e2734;
+  padding: 32px 3.2%;
+  color: var(--hl-text-2);
   display: flex;
   justify-content: space-between;
-  gap: 25px;
+  gap: 24px;
   align-items: center;
-  font-size: 11px;
-  border-top: 1px solid #e0e6ef;
+  font-size: 14px;
+  border-top: 1px solid var(--hl-line);
 }
 .helio-footer .brand-logo {
   font-size: 23px;
+  color: var(--hl-ink);
 }
 .helio-footer a,
 .helio-footer small {
   font:
-    9px "IBM Plex Mono",
+    var(--hl-fs-label)/16px var(--hl-mono),
     monospace;
+  letter-spacing: 0.04em;
+  color: var(--hl-text-2);
+}
+.helio-footer a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  transition: color 100ms var(--hl-ease);
+}
+.helio-footer a:hover {
+  color: var(--hl-cobalt);
+}
+@media (max-width: 600px) {
+  .helio {
+    --hl-fs-label: 13px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .helio *,
+  .helio *::before,
+  .helio *::after {
+    animation: none !important;
+    transition-duration: 0ms !important;
+  }
+  .helio button:active {
+    transform: none !important;
+  }
 }

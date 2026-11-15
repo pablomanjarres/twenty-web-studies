@@ -1,7 +1,7 @@
 .soundroom-v3 .sr3-featured {
-  height: 244px;
+  height: 264px;
   position: relative;
-  border-radius: 17px;
+  border-radius: 16px;
   overflow: hidden;
   background: #2a231a;
   isolation: isolate;
@@ -25,65 +25,82 @@
 }
 .soundroom-v3 .sr3-featured-copy {
   position: absolute;
-  left: 30px;
-  bottom: 25px;
+  left: 32px;
+  bottom: 28px;
 }
 .soundroom-v3 .sr3-featured-copy > span {
-  font-size: 8px;
-  letter-spacing: 1.6px;
-  color: #c4b596;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: #d8cfbd;
 }
 .soundroom-v3 .sr3-featured-copy > p {
-  margin-top: 14px;
-  color: #c8c9b9;
-  font-size: 12px;
+  margin-top: 12px;
+  color: #dcd8cc;
+  font-size: 14px;
 }
 .soundroom-v3 .sr3-featured h1 {
-  font-size: 38px;
-  letter-spacing: -1.5px;
-  line-height: 1.1;
-  margin-top: 5px;
+  font-size: 44px;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  margin-top: 4px;
+  text-wrap: balance;
 }
 .soundroom-v3 .sr3-featured-copy > div {
   display: flex;
   align-items: center;
-  gap: 11px;
-  margin-top: 19px;
+  gap: 12px;
+  margin-top: 20px;
 }
 .soundroom-v3 .sr3-featured-play {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 10px 15px;
-  background: #f39a45;
-  color: #151c17;
-  border-radius: 7px;
+  min-height: 40px;
+  padding: 0 18px 0 16px;
+  background: var(--sr3-orange);
+  color: var(--sr3-on-amber);
+  border-radius: 8px;
   font-weight: 600;
-  font-size: 11px;
+  font-size: 14px;
+}
+.soundroom-v3 .sr3-featured-play:hover {
+  background: var(--sr3-amber-hover);
+}
+.soundroom-v3 .sr3-featured-play:active {
+  transform: scale(0.98);
+}
+.soundroom-v3 .sr3-featured-play:focus-visible {
+  outline-color: var(--sr3-text);
 }
 .soundroom-v3 .sr3-featured-save {
-  border: 1px solid #d3d0b54a;
-  height: 34px;
-  width: 34px;
+  border: 1px solid var(--sr3-edge-strong);
+  height: 40px;
+  width: 40px;
   display: grid;
   place-items: center;
-  border-radius: 7px;
-  color: #d3ccb5;
+  border-radius: 8px;
+  color: var(--sr3-text);
+}
+.soundroom-v3 .sr3-featured-save:hover {
+  border-color: rgba(243, 241, 233, 0.5);
+}
+.soundroom-v3 .sr3-featured-save[aria-pressed="true"] {
+  color: var(--sr3-orange);
 }
 .soundroom-v3 .sr3-featured-copy small {
-  color: #9fa38a;
-  font-size: 9px;
-  margin-left: 6px;
+  color: #c9c4b8;
+  font-size: 13px;
+  margin-left: 4px;
 }
 .soundroom-v3 .sr3-featured-corner {
   position: absolute;
   right: 24px;
   bottom: 27px;
-  font-size: 8px;
-  line-height: 1.7;
-  letter-spacing: 1px;
-  color: #c3c5ad;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #d8d3c6;
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 12px;
 }

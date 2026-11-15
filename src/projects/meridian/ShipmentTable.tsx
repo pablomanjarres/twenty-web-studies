@@ -1,5 +1,6 @@
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { portFor } from "./data";
+import { StatusChip } from "./StatusChip";
 import { TransportIcon } from "./TransportIcon";
 import type { Shipment } from "./data";
 
@@ -63,11 +64,7 @@ export function ShipmentTable({
                   </td>
                   <td>{shipment.cargo}</td>
                   <td>
-                    <span
-                      className={`md-status ${shipment.status.toLowerCase().replace(/ /g, "-")}`}
-                    >
-                      {shipment.status}
-                    </span>
+                    <StatusChip status={shipment.status} />
                   </td>
                   <td>{shipment.arrival}</td>
                   <td>

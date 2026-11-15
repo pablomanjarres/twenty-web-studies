@@ -6,6 +6,7 @@ import { Featured } from "./Featured";
 import { TrackList } from "./TrackList";
 import { Rooms } from "./Rooms";
 import { Discovery } from "./Discovery";
+import { MoodChips } from "./MoodChips";
 import { Player } from "./Player";
 import { AudioEngine } from "./AudioEngine";
 import { usePlayback } from "./usePlayback";
@@ -57,6 +58,10 @@ export default function Page() {
       (mood === "All" || t.mood.toLowerCase().includes(mood.toLowerCase())) &&
       (!activeRoom || activeRoom.tracks.includes(t.id)),
   );
+  function chooseMood(value: string) {
+    setMood(value);
+    setRoom("All");
+  }
   function chooseRoom(value: string) {
     setRoom(value);
     setMood("All");
@@ -81,6 +86,11 @@ export default function Page() {
             onPlay={() => play(selected)}
             onSave={() => save(selected)}
           />
+          <MoodChips
+            mood={mood}
+            onMood={chooseMood}
+            className="sr3-inline-moods"
+          />
           <TrackList
             tracks={shown}
             view={view}
@@ -102,10 +112,7 @@ export default function Page() {
           playing={playback.playing}
           saved={saved}
           mood={mood}
-          onMood={(value) => {
-            setMood(value);
-            setRoom("All");
-          }}
+          onMood={chooseMood}
           onPlay={play}
           onSave={save}
         />

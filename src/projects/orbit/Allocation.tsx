@@ -21,6 +21,7 @@ export function Allocation({ tasks }: { tasks: Task[] }) {
       </div>
       <div
         className="ov3-allocation-strip"
+        role="img"
         aria-label="Planned time by project stage"
       >
         {kinds

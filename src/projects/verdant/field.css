@@ -1,151 +1,95 @@
 .vd-field {
-  padding: 65px 7% 75px;
   display: grid;
   grid-template-columns: 0.9fr 1.25fr;
-  gap: 45px 8%;
+  gap: 48px 8%;
   align-items: center;
+  padding: 96px var(--vd-inset);
 }
 .vd-field > figure {
-  grid-column: 1/-1;
+  grid-column: 1 / -1;
   position: relative;
 }
 .vd-field > figure img {
-  height: 390px;
+  display: block;
   width: 100%;
+  height: 440px;
   object-fit: cover;
+  border-radius: 12px;
 }
 .vd-field figcaption {
   position: absolute;
   left: 24px;
   bottom: 24px;
-  font:
-    9px "IBM Plex Mono",
-    monospace;
+  padding: 12px 16px;
+  border-radius: 9999px;
   background: var(--vd-yellow);
-  padding: 13px 16px;
-  letter-spacing: 0.06em;
-}
-.vd-field-intro > span,
-.vd-connection > div > span {
-  font:
-    9px "IBM Plex Mono",
-    monospace;
-  letter-spacing: 0.08em;
+  color: var(--vd-ink);
 }
 .vd-field h2,
 .vd-connection h2 {
   font:
-    400 38px/1.2 "Sora",
+    400 var(--vd-h2) / 1.15 "Sora",
     sans-serif;
-  letter-spacing: -0.055em;
-  margin: 20px 0;
+  letter-spacing: -0.03em;
+  margin: 16px 0 24px;
+  text-wrap: balance;
+}
+.vd-field-intro > .vd-label {
+  color: var(--vd-muted);
 }
 .vd-field-intro p,
 .vd-connection > div > p {
-  font-size: 12px;
-  line-height: 1.9;
-  max-width: 370px;
+  font-size: var(--vd-lead);
+  line-height: 1.6;
+  max-width: 42ch;
 }
 .vd-project-ledger details {
   border-top: 1px solid var(--vd-line);
-  padding: 20px 0;
 }
 .vd-project-ledger details:last-child {
   border-bottom: 1px solid var(--vd-line);
 }
 .vd-project-ledger summary {
   display: grid;
-  grid-template-columns: 70px 1fr 70px 20px;
-  gap: 15px;
+  grid-template-columns: 96px 1fr auto 20px;
+  gap: 16px;
   align-items: center;
+  min-height: 72px;
+  margin: 4px 0;
+  padding: 0 12px;
+  border-radius: 12px;
   cursor: pointer;
   list-style: none;
+  transition: background 160ms var(--vd-ease);
 }
-.vd-project-ledger summary > span {
-  font:
-    9px "IBM Plex Mono",
-    monospace;
+.vd-project-ledger summary::-webkit-details-marker {
+  display: none;
+}
+.vd-project-ledger summary:hover {
+  background: var(--vd-row-hover);
+}
+.vd-project-ledger summary > .vd-label {
+  color: var(--vd-muted);
 }
 .vd-project-ledger h3 {
-  font-size: 16px;
-  font-weight: 500;
-  letter-spacing: -0.025em;
+  font:
+    500 var(--vd-project) / 1.25 "Manrope",
+    sans-serif;
+  letter-spacing: -0.02em;
 }
 .vd-project-ledger strong {
-  font:
-    10px "IBM Plex Mono",
-    monospace;
-  font-weight: 400;
+  font: var(--vd-font-label);
+  letter-spacing: 0.02em;
 }
-.vd-project-ledger p {
-  font-size: 11px;
-  line-height: 1.9;
-  margin-top: 17px;
+.vd-project-ledger summary > svg {
+  transition: rotate 200ms var(--vd-ease);
 }
-.vd-connection {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14%;
-  padding: 70px 10%;
-  background: var(--vd-ink);
-  color: var(--vd-paper);
-  align-items: center;
+.vd-project-ledger details[open] summary > svg {
+  rotate: 45deg;
 }
-.vd-connection label {
-  display: grid;
-  gap: 12px;
-  font-size: 11px;
-  margin-bottom: 23px;
-}
-.vd-connection select {
-  border: 0;
-  border-radius: 14px;
-  min-height: 43px;
-  background: #f4f8fb14;
-  color: inherit;
-  font-size: 13px;
-  padding: 0 14px;
-}
-.vd-connection option {
-  color: var(--vd-ink);
-  background: var(--vd-paper);
-}
-.vd-connection button {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  padding: 15px 17px;
-  border: 0;
-  border-radius: 999px;
-  background: var(--vd-yellow);
-  color: var(--vd-ink);
-  font-size: 12px;
-}
-.vd-connection button:hover {
-  background: #f0d575;
-}
-.vd-connection select:focus-visible {
-  outline: 3px solid var(--vd-yellow);
-  outline-offset: 4px;
-}
-.vd-connection form > p {
-  font-size: 9px;
-  line-height: 1.8;
-  margin-top: 13px;
-  opacity: 0.75;
-}
-.vd-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 25px;
-  padding: 35px 40px;
-  font-size: 10px;
-}
-.vd-footer .brand-logo {
-  font-size: 25px;
-}
-.vd-footer a {
-  text-decoration: none;
+.vd-project-ledger details > p {
+  font-size: 16px;
+  line-height: 1.55;
+  max-width: 52ch;
+  padding: 4px 12px 24px 124px;
 }

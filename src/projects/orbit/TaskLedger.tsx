@@ -5,7 +5,14 @@ import {
   Clock3,
   CircleDot,
 } from "lucide-react";
-import { avatar, progress, type Task, type TaskStatus } from "./data";
+import {
+  avatar,
+  progress,
+  stageColors,
+  type Task,
+  type TaskStatus,
+} from "./data";
+import { Meter } from "./Meter";
 export function Status({ status }: { status: TaskStatus }) {
   const Icon =
     status === "Done"
@@ -19,7 +26,7 @@ export function Status({ status }: { status: TaskStatus }) {
     <span
       className={`ov3-status ov3-status-${status.toLowerCase().replaceAll(" ", "-")}`}
     >
-      <Icon size={12} />
+      <Icon size={12} aria-hidden="true" />
       {status}
     </span>
   );
@@ -54,11 +61,11 @@ export function TaskLedger({
           </button>
         ))}
       </div>
-      <div className="ov3-ledger-labels">
-        <span>TASK / OWNER</span>
-        <span>STATUS</span>
-        <span>PROGRESS</span>
-        <span>DUE</span>
+      <div className="ov3-ledger-labels ov3-caps" aria-hidden="true">
+        <span>Task / owner</span>
+        <span>Status</span>
+        <span>Progress</span>
+        <span>Due</span>
       </div>
       {shown.map((task) => (
         <button
@@ -77,14 +84,12 @@ export function TaskLedger({
           </span>
           <Status status={task.status} />
           <span className="ov3-task-progress">
-            <i>
-              <b style={{ width: `${progress(task)}%` }} />
-            </i>
+            <Meter value={progress(task)} color={stageColors[task.kind]} />
             <small>{progress(task)}%</small>
           </span>
           <span className="ov3-task-due">
             {task.due}
-            <ArrowUpRight size={13} />
+            <ArrowUpRight size={14} aria-hidden="true" />
           </span>
         </button>
       ))}

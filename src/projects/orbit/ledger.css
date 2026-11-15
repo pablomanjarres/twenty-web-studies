@@ -6,159 +6,199 @@
 }
 .orbit-v3 .ov3-ledger-filters {
   display: flex;
-  gap: 7px;
-  margin: 19px 0 17px;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0;
 }
 .orbit-v3 .ov3-ledger-filters button {
-  color: #979b95;
-  font-size: 11px;
-  padding: 7px 11px;
-  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 32px;
+  padding: 0 12px;
+  border-radius: 10px;
+  background: var(--ov3-chip);
+  color: var(--ov3-text-2);
+  font-size: 14px;
+  font-weight: 500;
+}
+.orbit-v3 .ov3-ledger-filters button:hover {
+  background: #e8e8e1;
+  color: var(--ov3-ink);
 }
 .orbit-v3 .ov3-ledger-filters button[aria-pressed="true"] {
-  background: #f0ebff;
-  color: #6d4af1;
+  background: var(--ov3-violet-tint);
+  color: var(--ov3-violet-text);
+  font-weight: 600;
 }
 .orbit-v3 .ov3-ledger-filters button > span {
-  font-size: 9px;
-  margin-left: 6px;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  border-radius: 999px;
+  background: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 20px;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
 }
-.orbit-v3 .ov3-ledger-labels {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 92px 82px 88px;
-  gap: 9px;
-  padding: 0 4px 13px;
-  color: #adb1a9;
-  letter-spacing: 0.7px;
-  font-size: 8px;
-  border-bottom: 1px solid #edeee7;
-}
+.orbit-v3 .ov3-ledger-labels,
 .orbit-v3 .ov3-task-row {
   display: grid;
+  grid-template-columns: minmax(0, 1fr) 124px 104px 96px;
+  gap: 12px;
+}
+.orbit-v3 .ov3-ledger-labels {
+  padding: 0 8px 8px;
+  border-bottom: 1px solid var(--ov3-line);
+}
+.orbit-v3 .ov3-task-row {
   width: 100%;
+  min-height: 64px;
   text-align: left;
-  grid-template-columns: minmax(0, 1fr) 92px 82px 88px;
-  gap: 9px;
   align-items: center;
-  padding: 15px 4px;
-  border-bottom: 1px solid #f0f1eb;
+  padding: 10px 8px;
+  border-bottom: 1px solid var(--ov3-line);
 }
 .orbit-v3 .ov3-task-row:last-child {
   border: 0;
 }
 .orbit-v3 .ov3-task-row:hover {
-  background: #fcfbff;
+  background: var(--ov3-hover);
+}
+.orbit-v3 .ov3-task-row:focus-visible {
+  outline-offset: -2px;
 }
 .orbit-v3 .ov3-task-title {
   display: flex;
-  gap: 9px;
+  gap: 12px;
   align-items: center;
   min-width: 0;
 }
 .orbit-v3 .ov3-task-title > img {
-  height: 29px;
-  width: 29px;
+  height: 32px;
+  width: 32px;
   flex: none;
   border-radius: 50%;
   object-fit: cover;
 }
+.orbit-v3 .ov3-task-title > span {
+  min-width: 0;
+}
 .orbit-v3 .ov3-task-title strong {
-  font-size: 11px;
-  font-weight: 550;
   display: block;
-  line-height: 1.45;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 20px;
 }
 .orbit-v3 .ov3-task-title small {
   display: block;
-  font-size: 9px;
-  color: #a3a89f;
-  margin-top: 4px;
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--ov3-text-3);
+  margin-top: 2px;
 }
 .orbit-v3 .ov3-status {
   display: inline-flex;
   align-items: center;
-  gap: 4px;
+  gap: 6px;
   justify-self: start;
-  font-size: 8px;
+  height: 26px;
+  padding: 0 10px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 500;
   white-space: nowrap;
-  border-radius: 5px;
-  padding: 5px 6px;
-  background: #f2f2ed;
-  color: #898e85;
+  background: var(--ov3-chip);
+  color: var(--ov3-text-2);
+}
+.orbit-v3 .ov3-status svg {
+  flex: none;
 }
 .orbit-v3 .ov3-status-done {
-  color: #23846b;
+  color: #1a7a62;
   background: #ebf5ee;
 }
 .orbit-v3 .ov3-status-in-progress {
-  color: #8264b8;
+  color: var(--ov3-violet-text);
   background: #f2edfb;
 }
 .orbit-v3 .ov3-status-review {
-  color: #b98737;
+  color: #8a5a12;
   background: #fbf4e6;
 }
 .orbit-v3 .ov3-task-progress {
   display: flex;
   align-items: center;
-  gap: 7px;
+  gap: 8px;
 }
-.orbit-v3 .ov3-task-progress > i {
-  height: 4px;
-  width: 42px;
-  background: #f0ede7;
-  border-radius: 2px;
-  overflow: hidden;
-}
-.orbit-v3 .ov3-task-progress b {
-  display: block;
-  height: 100%;
-  background: #b29cdf;
-  border-radius: 2px;
+.orbit-v3 .ov3-task-progress .ov3-meter {
+  width: 52px;
 }
 .orbit-v3 .ov3-task-progress small {
-  color: #969d91;
-  font-size: 8px;
+  color: var(--ov3-text-2);
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
 }
 .orbit-v3 .ov3-task-due {
-  font-size: 9px;
-  color: #90988a;
+  font-size: 13px;
+  color: var(--ov3-text-2);
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 4px;
+  white-space: nowrap;
 }
-.orbit-v3 .ov3-task-due svg {
-  color: #abb0a4;
+.orbit-v3 .ov3-task-due svg,
+.orbit-v3 .ov3-meetings > button > svg {
+  flex: none;
+  color: var(--ov3-text-3);
+  transition: color var(--ov3-fast) var(--ov3-ease);
+}
+.orbit-v3 .ov3-task-row:hover .ov3-task-due svg,
+.orbit-v3 .ov3-meetings > button:hover > svg {
+  color: var(--ov3-purple);
 }
 .orbit-v3 .ov3-feed {
   border-radius: 18px;
-  padding: 27px;
+  padding: 24px;
   background: white;
 }
 .orbit-v3 .ov3-feed .ov3-section-heading button {
   display: flex;
-  gap: 7px;
+  gap: 8px;
   align-items: center;
-  color: #8b75bc;
-  font-size: 12px;
+  min-height: 40px;
+  padding: 0 12px;
+  border-radius: 10px;
+  color: var(--ov3-violet-text);
+  font-size: 14px;
+  font-weight: 600;
+}
+.orbit-v3 .ov3-feed .ov3-section-heading button:hover {
+  background: var(--ov3-violet-tint);
 }
 .orbit-v3 .ov3-feed article {
   display: flex;
-  gap: 17px;
-  padding: 25px 0;
-  border-bottom: 1px solid #eeefe7;
+  gap: 16px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--ov3-line);
+}
+.orbit-v3 .ov3-feed article:last-child {
+  border-bottom: 0;
 }
 .orbit-v3 .ov3-feed article > svg {
-  color: #859d7f;
+  color: var(--ov3-green);
   flex: none;
 }
 .orbit-v3 .ov3-feed article p {
-  font-size: 14px;
+  font-size: 15px;
+  font-weight: 500;
 }
 .orbit-v3 .ov3-feed article span {
   display: block;
-  color: #969d8f;
-  font-size: 11px;
-  margin-top: 7px;
+  color: var(--ov3-text-3);
+  font-size: 13px;
+  margin-top: 4px;
 }

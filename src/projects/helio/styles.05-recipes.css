@@ -1,79 +1,88 @@
 .helio-recipes {
-  padding: 50px 3.2% 85px;
-  color: #263142;
+  padding: 56px 3.2% 88px;
+  color: var(--hl-ink);
 }
 .helio-architecture-strip {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  border-top: 1px solid #b9c2ca;
-  border-bottom: 1px solid #b9c2ca;
+  border-top: 1px solid var(--hl-line-strong);
+  border-bottom: 1px solid var(--hl-line-strong);
 }
 .helio-architecture-strip > div {
   display: flex;
-  gap: 22px;
+  gap: 20px;
   align-items: center;
   padding: 28px;
-  border-right: 1px solid #b9c2ca;
+  border-right: 1px solid var(--hl-line-strong);
 }
 .helio-architecture-strip > div:last-child {
   border-right: 0;
 }
 .helio-architecture-strip svg {
-  color: #3b64d3;
+  flex: none;
+  color: var(--hl-cobalt);
 }
-.helio-architecture-strip span {
+.helio-architecture-strip span,
+.helio-eyebrow {
   font:
-    8px "IBM Plex Mono",
+    500 var(--hl-fs-label)/16px var(--hl-mono),
     monospace;
-  color: #8b96a5;
+  letter-spacing: 0.04em;
+  color: var(--hl-text-2);
 }
 .helio-architecture-strip b {
   display: block;
   font:
-    500 15px "Space Grotesk",
+    500 17px/24px var(--hl-display),
     sans-serif;
-  color: #263142;
-  margin-top: 10px;
+  letter-spacing: -0.01em;
+  color: var(--hl-ink);
+  margin-top: 6px;
 }
 .helio-recipe-grid {
   display: grid;
   grid-template-columns: 1fr 1.1fr;
-  gap: 90px;
+  gap: 88px;
   padding: 80px 3%;
-}
-.helio-eyebrow {
-  font:
-    9px "IBM Plex Mono",
-    monospace;
-  color: #6d809b;
 }
 .helio-recipes h2 {
   font:
-    500 43px/1.1 "Space Grotesk",
+    500 43px/1.1 var(--hl-display),
     sans-serif;
   letter-spacing: -0.045em;
-  margin: 25px 0;
+  margin: 24px 0;
 }
 .helio-recipes p {
-  font-size: 13px;
-  line-height: 1.8;
-  color: #748196;
-  max-width: 350px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--hl-text-2);
+  max-width: 380px;
+  margin: 0;
 }
 .helio-recipe-grid a {
-  display: inline-block;
-  border-bottom: 1px solid #5671ac;
-  margin-top: 20px;
-  padding-bottom: 10px;
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  margin-top: 16px;
   font:
-    10px "IBM Plex Mono",
+    500 13px var(--hl-mono),
     monospace;
-  color: #315ac0;
+  letter-spacing: 0.04em;
+  color: var(--hl-cobalt);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  transition: color 100ms var(--hl-ease);
+}
+.helio-recipe-grid a:hover {
+  color: var(--hl-ink);
 }
 .helio-recipe-code {
   background: #151c29;
-  color: #b9c9e5;
+  color: #d3dff4;
   border: 1px solid #34435a;
+  border-radius: 10px;
+  overflow: hidden;
 }
 .helio-recipe-code > div {
   display: flex;
@@ -82,64 +91,97 @@
 .helio-recipe-code button {
   border: 0;
   border-right: 1px solid #34435a;
-  padding: 17px 22px;
+  min-height: 48px;
+  padding: 0 20px;
   background: transparent;
+  box-shadow: inset 0 2px 0 transparent;
   font:
-    9px "IBM Plex Mono",
+    13px var(--hl-mono),
     monospace;
-  color: #7d90b1;
+  color: #a9b8d4;
+  transition:
+    background-color var(--hl-fast),
+    color var(--hl-fast),
+    box-shadow var(--hl-fast);
+}
+.helio-recipe-code button:hover {
+  color: #fff;
+  background: #1c2536;
 }
 .helio-recipe-code button[aria-pressed="true"] {
-  background: #263959;
-  color: #bed0f4;
+  background: #222e44;
+  color: #fff;
+  box-shadow: inset 0 2px 0 var(--hl-cobalt);
+}
+.helio-recipe-code button:focus-visible {
+  outline-color: var(--hl-cobalt-on-dark);
+  outline-offset: -2px;
 }
 .helio-recipe-code pre {
+  margin: 0;
   font:
-    11px/1.9 "IBM Plex Mono",
+    13px/1.8 var(--hl-mono),
     monospace;
-  padding: 20px 25px;
+  padding: 20px 24px;
   overflow: auto;
 }
 .helio-recipe-code > span {
-  display: block;
-  padding: 14px 25px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 24px;
   border-top: 1px solid #34435a;
   font:
-    9px "IBM Plex Mono",
+    500 var(--hl-fs-label)/16px var(--hl-mono),
     monospace;
-  color: #7baf9f;
+  letter-spacing: 0.04em;
+  color: #87d5b4;
+}
+.helio-recipe-code > span::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--hl-green);
 }
 .helio-usage {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 90px;
-  padding: 65px 3% 0;
-  border-top: 1px solid #b9c2ca;
+  gap: 88px;
+  padding: 64px 3% 0;
+  border-top: 1px solid var(--hl-line-strong);
 }
 .helio-usage table {
   width: 100%;
   border-collapse: collapse;
   align-self: center;
-  font-size: 12px;
 }
 .helio-usage caption {
   text-align: left;
   font:
-    500 17px "Space Grotesk",
+    500 18px/24px var(--hl-display),
     sans-serif;
-  padding-bottom: 28px;
+  letter-spacing: -0.02em;
+  padding-bottom: 20px;
 }
 .helio-usage th,
 .helio-usage td {
-  padding: 16px 0;
-  border-top: 1px solid #b9c2ca;
+  height: 52px;
+  padding: 0;
+  border-top: 1px solid var(--hl-line);
   text-align: left;
+  font-size: 15px;
   font-weight: 400;
+  color: var(--hl-ink);
+}
+.helio-usage tr:last-child > * {
+  border-bottom: 1px solid var(--hl-line);
 }
 .helio-usage td {
   text-align: right;
   font:
-    10px "IBM Plex Mono",
+    13px var(--hl-mono),
     monospace;
-  color: #718298;
+  font-variant-numeric: tabular-nums;
+  color: var(--hl-text-2);
 }

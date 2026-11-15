@@ -1,7 +1,7 @@
 .soundroom-v3 .sr3-discovery {
   background: #211d2b;
   border-left: 1px solid #2d273a;
-  padding: 35px 25px 25px;
+  padding: 32px 24px;
 }
 .soundroom-v3 .sr3-discovery-heading {
   display: flex;
@@ -9,68 +9,78 @@
   align-items: center;
 }
 .soundroom-v3 .sr3-discovery-heading > span {
-  font-size: 9px;
-  letter-spacing: 1.4px;
-  color: #78698c;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--sr3-plum-text-2);
 }
 .soundroom-v3 .sr3-discovery-heading > i {
   font-style: normal;
-  color: #b49dd4;
+  color: #c5b5ec;
   font:
-    10px "IBM Plex Mono",
+    12px "IBM Plex Mono",
     monospace;
   border: 1px solid #493e5a;
   border-radius: 50%;
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   display: grid;
   place-items: center;
 }
 .soundroom-v3 .sr3-moods {
-  margin-top: 40px;
+  margin-top: 32px;
 }
-.soundroom-v3 .sr3-moods h2 {
-  font-size: 15px;
-  color: #d0c1e2;
+.soundroom-v3 .sr3-discovery h2 {
+  font-size: 16px;
+  color: var(--sr3-plum-text);
 }
-.soundroom-v3 .sr3-moods > div {
+.soundroom-v3 .sr3-moods .sr3-mood-chips {
   display: flex;
   flex-wrap: wrap;
-  gap: 7px;
-  margin-top: 17px;
+  gap: 8px;
+  margin-top: 16px;
 }
 .soundroom-v3 .sr3-moods button {
   background: #302a3c;
-  padding: 7px 11px;
-  border-radius: 5px;
-  color: #8a7c9d;
-  font-size: 10px;
+  min-height: 32px;
+  padding: 0 12px;
+  border-radius: 6px;
+  color: #c9bedb;
+  font-size: 13px;
+}
+.soundroom-v3 .sr3-moods button:not([aria-pressed="true"]):hover {
+  background: #3a3348;
 }
 .soundroom-v3 .sr3-moods button[aria-pressed="true"] {
   background: #b7a0d8;
   color: #33243f;
 }
 .soundroom-v3 .sr3-makers {
-  margin-top: 31px;
+  margin-top: 32px;
 }
 .soundroom-v3 .sr3-makers header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 14px;
-  color: #756788;
-}
-.soundroom-v3 .sr3-makers h2 {
-  font-size: 15px;
-  color: #d0c1e2;
+  margin-bottom: 8px;
+  color: var(--sr3-plum-text-2);
 }
 .soundroom-v3 .sr3-makers > button {
   display: flex;
-  width: 100%;
+  width: calc(100% + 16px);
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   text-align: left;
-  padding: 10px 0;
+  padding: 8px;
+  margin: 0 -8px;
+  border-radius: 8px;
+}
+.soundroom-v3 .sr3-makers > button:hover {
+  background: var(--sr3-hover);
+}
+.soundroom-v3 .sr3-makers > button:focus-visible,
+.soundroom-v3 .sr3-next .sr3-track-play:focus-visible {
+  outline-offset: -2px;
 }
 .soundroom-v3 .sr3-makers .sr3-artwork {
   width: 36px;
@@ -79,112 +89,120 @@
 }
 .soundroom-v3 .sr3-makers > button > span {
   flex: 1;
-  color: #bdb0cc;
-  font-size: 11px;
+  color: var(--sr3-plum-text);
+  font-size: 14px;
 }
 .soundroom-v3 .sr3-makers small {
   display: block;
-  font-size: 8px;
-  color: #78658c;
-  letter-spacing: 0.5px;
-  margin-top: 4px;
+  font-size: 12px;
+  color: var(--sr3-plum-text-2);
+  margin-top: 2px;
+  text-transform: lowercase;
+}
+.soundroom-v3 .sr3-makers small::first-letter {
+  text-transform: uppercase;
 }
 .soundroom-v3 .sr3-makers > button > svg {
-  color: #726181;
+  color: var(--sr3-plum-text-2);
+}
+.soundroom-v3 .sr3-makers > button:hover > svg {
+  color: var(--sr3-plum-text);
 }
 .soundroom-v3 .sr3-next {
-  margin-top: 27px;
+  margin-top: 24px;
   border-top: 1px solid #362b43;
-  padding-top: 23px;
+  padding-top: 24px;
 }
 .soundroom-v3 .sr3-next header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 13px;
+  margin-bottom: 8px;
 }
 .soundroom-v3 .sr3-next h2 {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 15px;
-  color: #d0c1e2;
 }
 .soundroom-v3 .sr3-next header > span {
-  font-size: 9px;
-  color: #796987;
-}
-.soundroom-v3 .sr3-next .sr3-track-row {
-  border-radius: 7px;
+  font:
+    12px "IBM Plex Mono",
+    monospace;
+  color: var(--sr3-plum-text-2);
 }
 .soundroom-v3 .sr3-next .sr3-track-play {
-  gap: 8px;
-  padding: 9px 3px 9px 8px;
+  gap: 12px;
+  min-height: 52px;
+  padding: 6px 4px 6px 8px;
 }
 .soundroom-v3 .sr3-next .sr3-track-number,
 .soundroom-v3 .sr3-next .sr3-row-play-icon {
   display: none;
 }
 .soundroom-v3 .sr3-next .sr3-artwork {
-  width: 29px;
+  width: 36px;
 }
 .soundroom-v3 .sr3-next .sr3-track-title strong {
-  font-size: 10px;
+  font-size: 13px;
 }
 .soundroom-v3 .sr3-next .sr3-track-title small {
-  font-size: 8px;
-  color: #847390;
+  font-size: 12px;
+  color: var(--sr3-plum-text-2);
 }
 .soundroom-v3 .sr3-next .sr3-track-duration {
-  font-size: 8px;
-  color: #8f7ba0;
-  width: 25px;
+  font-size: 12px;
+  color: var(--sr3-plum-text-2);
+  width: 32px;
 }
 .soundroom-v3 .sr3-next .sr3-save {
-  padding: 7px 9px 7px 3px;
-  color: #89789a;
+  width: 36px;
+  height: 36px;
+  margin-right: 2px;
+  color: var(--sr3-plum-text-2);
 }
-.soundroom-v3 .sr3-next .is-selected .sr3-track-title small,
-.soundroom-v3 .sr3-next .is-selected .sr3-track-duration,
-.soundroom-v3 .sr3-next .is-selected .sr3-save {
-  color: #805432;
+.soundroom-v3 .sr3-next .sr3-save:hover {
+  color: var(--sr3-plum-text);
+}
+.soundroom-v3 .sr3-next .sr3-save[aria-pressed="true"] {
+  color: var(--sr3-orange);
 }
 .soundroom-v3 .sr3-current-note {
-  margin-top: 29px;
-  padding: 17px;
+  margin-top: 24px;
+  padding: 16px;
   background: #292333;
-  border-radius: 9px;
+  border-radius: 8px;
 }
 .soundroom-v3 .sr3-current-note > span {
-  font-size: 7px;
-  letter-spacing: 1px;
-  color: #7f6f8d;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--sr3-plum-text-2);
 }
 .soundroom-v3 .sr3-current-note > div {
   display: flex;
-  gap: 9px;
+  gap: 12px;
   align-items: center;
-  margin-top: 14px;
+  margin-top: 12px;
 }
 .soundroom-v3 .sr3-current-note .sr3-artwork {
-  width: 32px;
+  width: 40px;
   flex: none;
 }
 .soundroom-v3 .sr3-current-note strong {
-  font-size: 10px;
+  font-size: 14px;
   font-weight: 500;
   display: block;
-  color: #bbabcb;
+  color: var(--sr3-plum-text);
 }
 .soundroom-v3 .sr3-current-note small {
-  font-size: 8px;
+  font-size: 13px;
   display: block;
-  color: #7e6e8d;
-  margin-top: 4px;
+  color: var(--sr3-plum-text-2);
+  margin-top: 2px;
 }
 .soundroom-v3 .sr3-current-note > p {
-  font-size: 10px;
-  line-height: 1.7;
-  color: #897799;
-  margin-top: 14px;
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--sr3-plum-text-2);
+  margin-top: 12px;
 }

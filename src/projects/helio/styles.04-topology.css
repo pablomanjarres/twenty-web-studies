@@ -38,7 +38,7 @@
   position: absolute;
   color: #98add4;
   font:
-    15px "IBM Plex Mono",
+    15px var(--hl-mono),
     monospace;
 }
 .helio-topology-cross.top {
@@ -55,20 +55,22 @@
   right: 0;
   bottom: 0;
   display: flex;
-  gap: 6px;
+  gap: 8px;
   align-items: center;
   justify-content: center;
-  padding: 14px 0;
-  color: #7897cb;
-  background: #172035d9;
+  padding: 12px 0;
+  color: #a9b8d4;
+  background: #172035e6;
   font:
-    8px "IBM Plex Mono",
+    500 var(--hl-fs-label)/16px var(--hl-mono),
     monospace;
+  letter-spacing: 0.04em;
 }
 .helio-core-status i {
-  width: 4px;
-  height: 4px;
-  background: #7798d3;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--hl-cobalt-on-dark);
 }
 .helio-topology-art.ready .helio-core-status {
   color: #89d8b7;
@@ -82,68 +84,83 @@
 .helio-region-list button {
   display: flex;
   width: 100%;
-  gap: 13px;
+  gap: 12px;
   align-items: center;
-  padding: 13px 8px;
+  min-height: 56px;
+  padding: 8px 12px;
   background: transparent;
   border: 0;
   border-top: 1px solid #34415b;
   text-align: left;
+  transition: background-color var(--hl-fast);
+}
+.helio-region-list button:hover {
+  background: #1f2b44;
 }
 .helio-region-list button[aria-pressed="true"] {
   background: #253350;
+  box-shadow: inset 2px 0 0 var(--hl-cobalt-on-dark);
+}
+.helio-region-list button:focus-visible {
+  outline-color: var(--hl-cobalt-on-dark);
+  outline-offset: -2px;
 }
 .helio-region-list button > span {
-  color: #87b9ac;
-  font-size: 12px;
+  color: #87d5b4;
+  font-size: 13px;
 }
 .helio-region-list b {
   display: block;
-  font-size: 11px;
+  font-size: 14px;
+  line-height: 20px;
   font-weight: 500;
-  color: #adbedb;
+  color: #e4ebf7;
 }
 .helio-region-list small {
   display: block;
   font:
-    7px "IBM Plex Mono",
+    var(--hl-fs-label)/16px var(--hl-mono),
     monospace;
-  margin-top: 4px;
-  color: #6b80a5;
+  letter-spacing: 0.04em;
+  color: #a9b8d4;
 }
 .helio-region-list strong {
   margin-left: auto;
   font:
-    9px "IBM Plex Mono",
+    13px var(--hl-mono),
     monospace;
-  color: #7f97c0;
+  font-variant-numeric: tabular-nums;
+  color: #b4c3e0;
 }
 .helio-region-detail {
-  padding: 23px 26px;
+  padding: 20px 24px 24px;
 }
 .helio-region-detail span {
   display: block;
   font:
-    7px "IBM Plex Mono",
+    500 var(--hl-fs-label)/16px var(--hl-mono),
     monospace;
-  color: #6c82a7;
+  letter-spacing: 0.04em;
+  color: #a9b8d4;
 }
 .helio-region-detail b {
   display: block;
   font:
-    9px "IBM Plex Mono",
+    13px var(--hl-mono),
     monospace;
-  color: #a8b7d0;
-  margin-top: 8px;
+  color: #e4ebf7;
+  margin-top: 6px;
 }
 .helio-region-detail > div {
   background: #2c3a55;
-  height: 3px;
+  height: 4px;
+  border-radius: 2px;
   margin-top: 16px;
 }
 .helio-region-detail i {
   display: block;
-  background: #547ef5;
-  height: 3px;
-  transition: width 0.6s;
+  background: #6d86f7;
+  height: 4px;
+  border-radius: 2px;
+  transition: width 0.6s var(--hl-ease);
 }

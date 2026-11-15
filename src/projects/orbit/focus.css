@@ -1,10 +1,12 @@
 .orbit-v3 .ov3-focus {
   border-radius: 18px;
   background:
-    radial-gradient(ellipse at 110% 10%, #bd976e 0, transparent 58%),
-    linear-gradient(125deg, #644c89, #8872af 52%, #a28299);
-  color: #faf6ff;
-  padding: 27px 24px 19px;
+    radial-gradient(ellipse at 110% 10%, #bd976e8c 0, transparent 58%),
+    linear-gradient(125deg, #5a4580, #6f5a96 52%, #7a5d78);
+  color: #fff;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
   position: relative;
   overflow: hidden;
   isolation: isolate;
@@ -18,97 +20,110 @@
   right: -230px;
   top: 0;
   transform: rotate(-22deg);
-  border: 50px solid #ddd5fb25;
+  border: 50px solid #ddd5fb1c;
   border-radius: 50%;
 }
-.orbit-v3 .ov3-focus-label {
-  font-size: 8px;
-  letter-spacing: 1.3px;
+.orbit-v3 .ov3-focus .ov3-focus-label {
   display: flex;
-  gap: 7px;
+  gap: 8px;
   align-items: center;
-  color: #e8dff3;
+  color: #f1eaf9;
 }
 .orbit-v3 .ov3-focus-label i {
-  height: 5px;
-  width: 5px;
+  height: 6px;
+  width: 6px;
   background: #e7cf86;
   border-radius: 50%;
 }
 .orbit-v3 .ov3-focus h2 {
   font-size: 30px;
-  line-height: 1.15;
-  letter-spacing: -1px;
-  font-weight: 500;
-  margin-top: 28px;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  font-weight: 600;
+  margin-top: 24px;
 }
 .orbit-v3 .ov3-focus > p {
-  margin-top: 15px;
-  font-size: 10px;
-  line-height: 1.6;
-  max-width: 214px;
-  color: #dad0e7;
+  margin-top: 12px;
+  font-size: 15px;
+  line-height: 1.5;
+  max-width: 32ch;
+  color: #f1eaf9;
 }
 .orbit-v3 .ov3-focus-people {
   display: flex;
   align-items: center;
-  margin-top: 19px;
+  margin-top: 16px;
 }
 .orbit-v3 .ov3-focus-people img {
-  height: 26px;
-  width: 26px;
+  height: 28px;
+  width: 28px;
   object-fit: cover;
   border-radius: 50%;
   border: 2px solid #ffffff70;
-  margin-right: -5px;
+  margin-right: -6px;
 }
 .orbit-v3 .ov3-focus-people > span:not(.ov3-avatar-group) {
-  font-size: 9px;
-  color: #dbd0e9;
-  margin-left: 13px;
+  font-size: 13px;
+  color: #fff;
+  margin-left: 16px;
 }
 .orbit-v3 .ov3-focus-time {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px solid #ffffff25;
-  padding-top: 17px;
-  margin-top: 23px;
+  border-top: 1px solid #ffffff30;
+  padding-top: 16px;
+  margin-top: auto;
 }
 .orbit-v3 .ov3-focus-time > span {
-  color: #d7cbe7;
-  font-size: 11px;
+  color: #f1eaf9;
+  font-size: 14px;
+  font-weight: 500;
 }
 .orbit-v3 .ov3-focus-time strong {
   font:
-    400 24px "Manrope",
+    700 34px/1 "Manrope",
     sans-serif;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
 }
 .orbit-v3 .ov3-focus-time small {
   font:
-    8px "DM Sans",
+    400 13px "DM Sans",
     sans-serif;
+  letter-spacing: 0;
   display: block;
-  color: #cec1e0;
+  color: #f1eaf9;
   text-align: right;
-  margin-top: 3px;
+  margin-top: 4px;
 }
 .orbit-v3 .ov3-focus > button {
-  margin-top: 17px;
-  background: #f4f0f7;
-  color: #6c508c;
-  padding: 11px 13px;
-  border-radius: 8px;
+  margin-top: 16px;
+  height: 44px;
+  background: #fff;
+  color: var(--ov3-ink);
+  padding: 0 16px;
+  border-radius: 12px;
   display: flex;
-  gap: 18px;
+  justify-content: space-between;
   align-items: center;
-  font-size: 10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.orbit-v3 .ov3-focus > button:hover {
+  background: var(--ov3-violet-tint);
+}
+.orbit-v3 .ov3-focus > button:active {
+  transform: scale(0.98);
+}
+.orbit-v3 .ov3-focus :focus-visible {
+  outline-color: #fff;
 }
 .orbit-v3 .ov3-focus-state {
   display: flex;
   align-items: center;
-  gap: 5px;
-  color: #d8cce6;
-  font-size: 8px;
-  margin-top: 14px;
+  gap: 8px;
+  color: #f1eaf9;
+  font-size: 13px;
+  margin-top: 12px;
 }

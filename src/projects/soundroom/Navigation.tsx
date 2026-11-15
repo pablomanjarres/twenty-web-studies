@@ -41,7 +41,7 @@ export function Navigation({
           </button>
         ))}
       </nav>
-      <div className="sr3-nav-bottom">
+      <div className="sr3-nav-bottom" aria-hidden="true">
         <span>
           SR
           <br />—<br />

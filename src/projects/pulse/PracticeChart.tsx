@@ -1,6 +1,12 @@
+import type { CSSProperties } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { days, type Visit } from "./data";
-import { dailyVisits, visitMinutes, careTime } from "./overviewData";
+import {
+  CareTimeFigure,
+  careTime,
+  dailyVisits,
+  visitMinutes,
+} from "./overviewData";
 import { countLabel, countNoun } from "./countLabel";
 
 export function PracticeChart({
@@ -9,12 +15,14 @@ export function PracticeChart({
   metric,
   onMetric,
   onDay,
+  onCalendar,
 }: {
   appointments: Visit[];
   day: number;
   metric: "visits" | "minutes";
   onMetric: (metric: "visits" | "minutes") => void;
   onDay: (day: number) => void;
+  onCalendar: () => void;
 }) {
   const values = days.map((_, i) => {
     const visits = dailyVisits(appointments, i);
@@ -26,12 +34,18 @@ export function PracticeChart({
     <article className="pv-practice-chart pv-white-card">
       <div className="pv-card-title">
         <h2>Practice activity</h2>
-        <ArrowUpRight size={19} />
+        <button aria-label="Open calendar" onClick={onCalendar}>
+          <ArrowUpRight size={19} />
+        </button>
       </div>
       <div className="pv-chart-toolbar">
         <div>
           <strong>
-            {metric === "visits" ? count : careTime(visitMinutes(appointments))}
+            {metric === "visits" ? (
+              count
+            ) : (
+              <CareTimeFigure minutes={visitMinutes(appointments)} />
+            )}
           </strong>
           <span>
             {metric === "visits"
@@ -75,14 +89,18 @@ export function PracticeChart({
               key={d.short}
               aria-label={`${d.name}: ${metric === "visits" ? countLabel(values[i], "visit") : careTime(values[i])}`}
               aria-pressed={day === i}
+              className={values[i] ? undefined : "is-empty"}
+              style={
+                {
+                  "--bar": `${Math.max(4, (values[i] / max) * 100)}%`,
+                } as CSSProperties
+              }
               onClick={() => onDay(i)}
             >
-              <span className="pv-bar-value">
+              <span className="pv-bar-value" aria-hidden="true">
                 {metric === "visits" ? values[i] : careTime(values[i])}
               </span>
-              <i
-                style={{ height: `${Math.max(4, (values[i] / max) * 100)}%` }}
-              />
+              <i />
               <span className="pv-bar-day">{d.short}</span>
             </button>
           ))}

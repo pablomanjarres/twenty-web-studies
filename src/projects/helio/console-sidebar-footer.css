@@ -5,17 +5,20 @@
 .hc-plan {
   display: grid;
   grid-template-columns: 18px 1fr;
-  gap: 7px 5px;
-  background: linear-gradient(120deg, #f6f8ff, #f2f4fb);
-  border: 1px solid #e5e9f3;
-  border-radius: 7px;
-  padding: 14px;
-  color: #64759b;
+  align-items: center;
+  gap: 4px 8px;
+  background: var(--hl-band);
+  border: 1px solid var(--hl-line);
+  border-radius: 10px;
+  padding: 16px;
+  color: var(--hl-cobalt);
 }
 .hc-plan strong {
-  font-size: 10px;
-  color: #556583;
-  font-weight: 550;
+  font:
+    500 15px/20px var(--hl-display),
+    sans-serif;
+  letter-spacing: -0.01em;
+  color: var(--hl-ink);
 }
 .hc-plan > span,
 .hc-plan > small,
@@ -23,50 +26,58 @@
   grid-column: 1/-1;
 }
 .hc-plan > span {
-  font-size: 10px;
-  color: #99a3b9;
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--hl-text-2);
 }
 .hc-plan > i {
-  height: 3px;
-  background: #e2e7f3;
-  border-radius: 2px;
-  margin-top: 8px;
+  height: 6px;
+  background: var(--hl-cobalt-soft);
+  border-radius: 3px;
+  margin-top: 12px;
+  overflow: hidden;
 }
 .hc-plan b {
   display: block;
   width: 8.5%;
   height: 100%;
-  background: #7c97ee;
-  border-radius: 2px;
+  background: var(--hl-cobalt);
+  border-radius: 3px;
 }
 .hc-plan > small {
-  font-size: 8px;
-  color: #9ba6bc;
+  font-size: 13px;
+  line-height: 18px;
+  font-variant-numeric: tabular-nums;
+  color: var(--hl-text-3);
+  margin-top: 4px;
 }
 .hc-profile {
   display: flex;
   align-items: center;
-  gap: 9px;
-  border-top: 1px solid #eceef4;
-  margin-top: 20px;
-  padding: 17px 4px 0;
+  gap: 12px;
+  border-top: 1px solid var(--hl-line);
+  margin-top: 16px;
+  padding: 16px 4px 0;
 }
 .hc-profile > span {
-  width: 26px;
-  height: 26px;
+  width: 32px;
+  height: 32px;
+  flex: none;
   display: grid;
   place-items: center;
   border-radius: 50%;
-  background: #e8edfb;
-  font-size: 8px;
-  color: #7085af;
+  background: var(--hl-cobalt-tint);
+  font-size: var(--hl-fs-label);
+  font-weight: 600;
+  color: var(--hl-cobalt);
 }
 .hc-profile strong {
-  font-size: 10px;
+  font-size: 14px;
+  line-height: 20px;
   font-weight: 500;
-  color: #768398;
+  color: var(--hl-ink);
 }
 .hc-profile > .lucide {
   margin-left: auto;
-  color: #a6afbf;
+  color: var(--hl-text-3);
 }

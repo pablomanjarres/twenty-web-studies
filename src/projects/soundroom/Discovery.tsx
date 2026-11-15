@@ -1,7 +1,8 @@
 import { ArrowUpRight, ListMusic, Play } from "lucide-react";
 import { Artwork } from "./Artwork";
 import { TrackRow } from "./TrackRow";
-import { tracks, moods, type Track } from "./data";
+import { MoodChips } from "./MoodChips";
+import { tracks, type Track } from "./data";
 export function Discovery({
   track,
   selected,
@@ -30,13 +31,7 @@ export function Discovery({
       </div>
       <section className="sr3-moods">
         <h2>Follow a feeling.</h2>
-        <div>
-          {moods.map((m) => (
-            <button key={m} aria-pressed={mood === m} onClick={() => onMood(m)}>
-              {m}
-            </button>
-          ))}
-        </div>
+        <MoodChips mood={mood} onMood={onMood} />
       </section>
       <section className="sr3-makers">
         <header>

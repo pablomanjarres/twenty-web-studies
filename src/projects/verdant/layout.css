@@ -1,9 +1,4 @@
 .verdant {
-  --vd-ink: #24383f;
-  --vd-paper: #f4f8fb;
-  --vd-line: #d5e0e5;
-  --vd-muted: #61737b;
-  --vd-yellow: #e5c24d;
   background: var(--vd-paper);
   color: var(--vd-ink);
   font-family: "Manrope", sans-serif;
@@ -18,13 +13,16 @@
 }
 .vd-header {
   position: absolute;
-  inset: 25px 36px auto;
+  inset: 20px var(--vd-inset) auto;
   z-index: 2;
   display: flex;
   align-items: center;
-  gap: 35px;
+  gap: 32px;
 }
 .vd-header > a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   text-decoration: none;
   font-size: 23px;
 }
@@ -34,24 +32,49 @@
 }
 .vd-header > span {
   font:
-    11px "Manrope",
+    500 14px "Manrope",
     sans-serif;
+  color: var(--vd-muted);
   display: flex;
   align-items: center;
-  gap: 9px;
+  gap: 8px;
 }
 .vd-header > span i {
-  width: 5px;
-  height: 5px;
-  background: #819174;
+  width: 6px;
+  height: 6px;
+  background: var(--vd-path);
   border-radius: 50%;
 }
 .vd-header nav {
   margin-left: auto;
   display: flex;
-  gap: 25px;
-  font-size: 11px;
+  align-items: center;
+  gap: 24px;
+  font: var(--vd-font-ui);
 }
 .vd-header nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   text-decoration: none;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+  white-space: nowrap;
+}
+.vd-header nav a:hover {
+  text-decoration-line: underline;
+}
+.vd-header nav .vd-header-cta {
+  min-height: 40px;
+  padding: 0 16px;
+  border: 1px solid rgba(36, 56, 63, 0.25);
+  border-radius: 9999px;
+  transition:
+    background 160ms var(--vd-ease),
+    color 160ms var(--vd-ease);
+}
+.vd-header nav .vd-header-cta:hover {
+  background: var(--vd-ink);
+  color: var(--vd-paper);
+  text-decoration-line: none;
 }

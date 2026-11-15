@@ -1,75 +1,68 @@
 .orbit-v3 .ov3-allocation {
-  border-radius: 16px;
+  border-radius: 18px;
   background: white;
-  padding: 20px 25px;
-  margin: 20px 0;
+  padding: 24px;
+  margin: 24px 0;
 }
 .orbit-v3 .ov3-allocation > div:first-child {
   display: flex;
-  align-items: center;
-  gap: 14px;
-  margin-bottom: 14px;
-}
-.orbit-v3 .ov3-allocation h2 {
-  font-size: 15px;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 16px;
 }
 .orbit-v3 .ov3-allocation > div > span {
-  color: #93978f;
-  font-size: 10px;
+  color: var(--ov3-text-3);
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
 }
 .orbit-v3 .ov3-allocation strong {
   margin-left: auto;
   font:
-    600 20px "Manrope",
+    700 28px/1 "Manrope",
     sans-serif;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
   display: flex;
   align-items: baseline;
-  gap: 5px;
+  gap: 8px;
 }
 .orbit-v3 .ov3-allocation strong small {
-  color: #a2a59e;
+  color: var(--ov3-text-3);
   font:
-    9px "DM Sans",
+    400 13px "DM Sans",
     sans-serif;
+  letter-spacing: 0;
 }
 .orbit-v3 .ov3-allocation-strip {
   display: flex;
   gap: 3px;
-  height: 15px;
-  border-radius: 3px;
-  overflow: hidden;
-  background: #efefe7;
+  height: 14px;
 }
 .orbit-v3 .ov3-allocation-strip span {
-  position: relative;
   min-width: 4px;
-  background-image: repeating-linear-gradient(
-    90deg,
-    transparent 0,
-    transparent 8px,
-    #ffffff65 8px,
-    #ffffff65 10px
-  ) !important;
+  border-radius: 4px;
 }
 .orbit-v3 .ov3-allocation footer {
   display: flex;
-  gap: 24px;
-  margin-top: 13px;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  margin-top: 16px;
 }
 .orbit-v3 .ov3-allocation footer span {
   display: flex;
   align-items: center;
-  gap: 5px;
-  color: #737a71;
-  font-size: 10px;
+  gap: 8px;
+  color: var(--ov3-ink);
+  font-size: 13px;
+  font-weight: 500;
 }
 .orbit-v3 .ov3-allocation footer i {
-  width: 6px;
-  height: 6px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
 }
 .orbit-v3 .ov3-allocation footer b {
   font-weight: 400;
-  color: #a7aca2;
-  margin-left: 2px;
+  color: var(--ov3-text-2);
+  font-variant-numeric: tabular-nums;
 }

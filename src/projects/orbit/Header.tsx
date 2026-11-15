@@ -1,4 +1,4 @@
-import { Search, Plus, CalendarDays, ChevronDown } from "lucide-react";
+import { Search, Plus, CalendarDays } from "lucide-react";
 import { AvatarGroup } from "./AvatarGroup";
 import type { View } from "./Navigation";
 export function Header({
@@ -16,12 +16,16 @@ export function Header({
     <>
       <header className="ov3-topbar">
         <span>
-          Maison studio <i>/</i>{" "}
-          {view === "overview"
-            ? "Overview"
-            : view === "tasks"
-              ? "My tasks"
-              : "Activity"}
+          <span className="ov3-crumb-root">
+            Maison studio <i>/</i>
+          </span>
+          <b>
+            {view === "overview"
+              ? "Overview"
+              : view === "tasks"
+                ? "My tasks"
+                : "Activity"}
+          </b>
         </span>
         <label>
           <Search size={16} />
@@ -36,7 +40,7 @@ export function Header({
       </header>
       <section className="ov3-page-heading">
         <div>
-          <p>THURSDAY, 8 OCTOBER</p>
+          <p className="ov3-caps">Thursday, 8 October</p>
           <h1>
             {view === "overview"
               ? "Good work, coming together."
@@ -50,12 +54,11 @@ export function Header({
         </div>
         <div>
           <span className="ov3-date">
-            <CalendarDays size={15} />
+            <CalendarDays size={16} aria-hidden="true" />
             5–11 Oct 2026
-            <ChevronDown size={12} />
           </span>
-          <button className="ov3-add" onClick={onAdd}>
-            <Plus size={17} />
+          <button className="ov3-add" onClick={onAdd} aria-label="New task">
+            <Plus size={18} aria-hidden="true" />
             New task
           </button>
         </div>

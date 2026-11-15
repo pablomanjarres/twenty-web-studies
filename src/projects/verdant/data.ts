@@ -1,5 +1,9 @@
 export const image = (name: string) =>
   `${import.meta.env.BASE_URL}images/verdant/${name}.jpg`;
+export const photoAlt: Record<string, string> = {
+  solar: "Rows of ground-mounted solar panels under a cloudy sky",
+  turbines: "Wind turbines in an open field at sunset",
+};
 export const scenarios = [
   {
     name: "Solar",

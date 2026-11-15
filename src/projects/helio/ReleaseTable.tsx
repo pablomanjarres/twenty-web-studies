@@ -27,7 +27,7 @@ export function ReleaseTable({
           <h2>Recent deployments</h2>
           <span>Every commit has a clear path to release.</span>
         </div>
-        <label>
+        <label className="hc-field">
           <Search size={14} />
           <input
             aria-label="Search deployments"
@@ -94,21 +94,20 @@ function ReleaseRow({
 }) {
   return (
     <>
-      <tr className={selected ? "is-selected" : ""}>
+      <tr
+        className={`hc-release-row${selected ? " is-selected" : ""}`}
+        onClick={onSelect}
+      >
         <td>
-          <button
-            className="hc-release-select"
-            onClick={onSelect}
-            aria-expanded={selected}
-          >
+          <button className="hc-release-select" aria-expanded={selected}>
             <strong>
               {release.commit}
-              <ArrowUpRight size={11} />
+              <ArrowUpRight size={14} />
             </strong>
             <span>
-              <GitBranch size={11} />
+              <GitBranch size={13} />
               {release.branch}
-              <b>·</b>
+              <b aria-hidden="true" />
               <code>{release.sha}</code>
             </span>
           </button>
@@ -122,20 +121,19 @@ function ReleaseRow({
         <td>
           <span className="hc-env-tag">{release.environment}</span>
         </td>
-        <td>{release.duration.toFixed(1)}s</td>
+        <td className="hc-release-duration">{release.duration.toFixed(1)}s</td>
         <td>{release.time}</td>
         <td>
           <button
             className="hc-row-toggle"
             aria-label={`${selected ? "Close" : "Inspect"} deployment ${release.id}`}
-            onClick={onSelect}
           >
             {selected ? <ChevronUp size={15} /> : <ChevronDown size={15} />}
           </button>
         </td>
       </tr>
       {selected && (
-        <tr>
+        <tr className="hc-release-detail-row">
           <td colSpan={6}>
             <ReleaseDetail release={release} />
           </td>

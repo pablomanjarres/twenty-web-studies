@@ -5,7 +5,10 @@ import {
   Clock3,
   Package,
 } from "lucide-react";
+import { portFor } from "./data";
 import { handoffFor } from "./PortPlanData";
+import { ProgressRule, toneForStatus } from "./ProgressRule";
+import { StatusChip } from "./StatusChip";
 import { VehicleIllustration } from "./VehicleIllustration";
 import type { Shipment } from "./data";
 
@@ -40,9 +43,15 @@ export function OperationsDock({
           <VehicleIllustration mode={shipment.mode} />
         </div>
         <div className="md-load-route">
-          <span>{shipment.origin}</span>
+          <span>
+            <b>{portFor(shipment.origin).code}</b>
+            <small>{shipment.origin}</small>
+          </span>
           <i />
-          <span>{shipment.destination}</span>
+          <span>
+            <b>{portFor(shipment.destination).code}</b>
+            <small>{shipment.destination}</small>
+          </span>
         </div>
         <div className="md-load-facts">
           <div>
@@ -66,7 +75,7 @@ export function OperationsDock({
       >
         <header>
           <span>Handoff desk</span>
-          <span className="md-operational-state">{shipment.status}</span>
+          <StatusChip status={shipment.status} />
         </header>
         <div>
           {handoff.tone === "complete" ? (
@@ -80,9 +89,10 @@ export function OperationsDock({
         <footer>
           <span>Journey progress</span>
           <b>{shipment.progress}%</b>
-          <div>
-            <i style={{ width: shipment.progress + "%" }} />
-          </div>
+          <ProgressRule
+            value={shipment.progress}
+            tone={toneForStatus(shipment.status)}
+          />
         </footer>
       </section>
     </div>

@@ -1,12 +1,12 @@
 .soundroom-v3 .sr3-player {
   grid-column: 1/-1;
-  background: #181a18;
-  border-top: 1px solid #2a2d27;
+  background: var(--sr3-graphite);
+  border-top: 1px solid var(--sr3-edge);
   display: grid;
-  grid-template-columns: 230px minmax(0, 1fr) 220px;
+  grid-template-columns: 280px minmax(0, 1fr) 220px;
   align-items: center;
-  gap: 30px;
-  padding: 18px 35px;
+  gap: 32px;
+  padding: 12px 32px;
   position: sticky;
   bottom: 0;
   z-index: 20;
@@ -14,12 +14,13 @@
 .soundroom-v3 .sr3-now-playing {
   display: flex;
   align-items: center;
-  gap: 11px;
+  gap: 12px;
   min-width: 0;
 }
 .soundroom-v3 .sr3-now-playing .sr3-artwork {
-  width: 43px;
+  width: 48px;
   flex: none;
+  border-radius: 4px;
 }
 .soundroom-v3 .sr3-now-playing > span {
   min-width: 0;
@@ -28,25 +29,39 @@
 .soundroom-v3 .sr3-now-playing strong {
   display: block;
   font-weight: 500;
-  font-size: 11px;
-  color: #d5dcca;
+  font-size: 14px;
+  color: var(--sr3-text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .soundroom-v3 .sr3-now-playing small {
   display: block;
-  color: #748469;
-  font-size: 9px;
-  margin-top: 5px;
+  color: var(--sr3-text-2);
+  font-size: 13px;
+  margin-top: 2px;
 }
-.soundroom-v3 .sr3-now-playing > button {
-  color: #7c8b71;
-  padding: 7px;
+.soundroom-v3 .sr3-now-playing > button,
+.soundroom-v3 .sr3-volume > button,
+.soundroom-v3 .sr3-player-buttons > button {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  color: var(--sr3-text-2);
+}
+.soundroom-v3 .sr3-now-playing > button:hover,
+.soundroom-v3 .sr3-volume > button:hover,
+.soundroom-v3 .sr3-player-buttons > button:hover {
+  color: var(--sr3-text);
 }
 .soundroom-v3 .sr3-now-playing > button[aria-pressed="true"] {
-  color: #e8a05d;
+  color: var(--sr3-orange);
 }
 .soundroom-v3 .sr3-player-center {
   min-width: 0;
-  max-width: 500px;
+  max-width: 560px;
   width: 100%;
   justify-self: center;
 }
@@ -54,40 +69,80 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 21px;
-}
-.soundroom-v3 .sr3-player-buttons > button {
-  color: #acb89e;
-  padding: 5px;
+  gap: 16px;
 }
 .soundroom-v3 .sr3-player-buttons > .sr3-player-play {
-  background: #f4963d;
-  color: #30271b;
-  width: 32px;
-  height: 32px;
+  background: var(--sr3-orange);
+  color: var(--sr3-on-amber);
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  display: grid;
-  place-items: center;
+}
+.soundroom-v3 .sr3-player-buttons > .sr3-player-play:hover {
+  background: var(--sr3-amber-hover);
+}
+.soundroom-v3 .sr3-player-buttons > .sr3-player-play:active {
+  transform: scale(0.96);
+}
+.soundroom-v3 .sr3-player-buttons > .sr3-player-play:focus-visible {
+  outline-color: var(--sr3-text);
 }
 .soundroom-v3 .sr3-seek {
   display: flex;
   align-items: center;
-  gap: 9px;
-  margin-top: 11px;
+  gap: 12px;
+  margin-top: 6px;
 }
 .soundroom-v3 .sr3-seek > span {
   font:
-    8px "IBM Plex Mono",
+    12px "IBM Plex Mono",
     monospace;
-  color: #6d7d61;
-  min-width: 24px;
+  font-variant-numeric: tabular-nums;
+  color: var(--sr3-text-2);
+  min-width: 32px;
 }
+.soundroom-v3 .sr3-seek > span:last-child {
+  text-align: right;
+}
+/* The input stays tall for easy grabbing; its background paints only the 4px track. */
 .soundroom-v3 .sr3-player input[type="range"] {
-  accent-color: #eba04d;
-  height: 3px;
+  appearance: none;
+  height: 16px;
   min-width: 0;
   margin: 0;
   cursor: pointer;
+  border-radius: 2px;
+  background: linear-gradient(
+      to right,
+      var(--sr3-orange) var(--fill, 0%),
+      rgba(243, 241, 233, 0.16) var(--fill, 0%)
+    )
+    center / 100% 4px no-repeat;
+}
+.soundroom-v3 .sr3-player input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--sr3-text);
+  transition: transform 150ms var(--sr3-ease);
+}
+.soundroom-v3 .sr3-player input[type="range"]::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--sr3-text);
+}
+.soundroom-v3 .sr3-player input[type="range"]::-moz-range-track {
+  background: transparent;
+}
+.soundroom-v3 .sr3-player input[type="range"]:hover::-webkit-slider-thumb {
+  transform: scale(1.15);
+}
+.soundroom-v3 .sr3-player input[type="range"]:hover::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
 }
 .soundroom-v3 .sr3-seek > input {
   width: 100%;
@@ -95,22 +150,9 @@
 .soundroom-v3 .sr3-volume {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   justify-content: flex-end;
-  color: #738966;
-}
-.soundroom-v3 .sr3-volume > button {
-  color: #a5b899;
-  padding: 7px;
 }
 .soundroom-v3 .sr3-volume > input {
-  width: 78px;
-}
-.soundroom-v3 .sr3-volume > span {
-  font:
-    7px "IBM Plex Mono",
-    monospace;
-  color: #5a7050;
-  letter-spacing: 1px;
-  margin-left: 9px;
+  width: 96px;
 }

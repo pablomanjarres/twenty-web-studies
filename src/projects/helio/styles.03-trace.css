@@ -2,23 +2,24 @@
   min-width: 0;
 }
 .helio-build-trace > header {
-  padding: 22px 30px 2px;
+  padding: 24px 24px 0;
 }
 .helio-command {
-  margin: 24px 30px 0;
+  margin: 24px 24px 0;
   display: flex;
   align-items: center;
   gap: 12px;
   font:
-    10px "IBM Plex Mono",
+    13px/18px var(--hl-mono),
     monospace;
-  color: #98aad0;
+  color: #b4c3e0;
   border: 1px solid #343e52;
-  padding: 13px 12px;
-  background: #171e2a;
+  border-radius: 8px;
+  padding: 12px;
+  background: #0f1622;
 }
 .helio-command span {
-  color: #96b2fe;
+  color: var(--hl-cobalt-on-dark);
 }
 .helio-command code {
   white-space: nowrap;
@@ -27,33 +28,34 @@
 }
 .helio-trace-tag {
   font:
-    8px "IBM Plex Mono",
+    500 var(--hl-fs-label)/16px var(--hl-mono),
     monospace;
-  color: #7995de;
-  letter-spacing: 0.12em;
+  color: var(--hl-cobalt-on-dark);
+  letter-spacing: 0.04em;
 }
 .helio-build-trace h3 {
   font:
-    500 32px/1.1 "Space Grotesk",
+    500 32px/1.1 var(--hl-display),
     sans-serif;
-  letter-spacing: -0.045em;
-  margin: 15px 0;
+  letter-spacing: -0.04em;
+  margin: 12px 0;
 }
 .helio-build-trace p {
-  font-size: 12px;
+  font-size: 15px;
   line-height: 1.6;
-  color: #8592a8;
+  color: #a9b8d4;
+  margin: 0;
 }
 .helio-events {
-  padding: 20px 30px 0;
+  padding: 20px 24px 0;
 }
 .helio-events > div {
   display: flex;
   align-items: center;
-  gap: 14px;
-  padding: 17px 0;
+  gap: 16px;
+  padding: 16px 0;
   position: relative;
-  min-height: 70px;
+  min-height: 72px;
 }
 .helio-events > div:not(:last-child)::after {
   content: "";
@@ -61,118 +63,140 @@
   width: 1px;
   background: #343f53;
   position: absolute;
-  left: 11px;
-  top: 47px;
+  left: 13px;
+  top: calc(50% + 14px);
 }
 .helio-event-icon {
   flex: none;
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   display: grid;
   place-items: center;
-  border: 1px solid #3d485e;
+  border: 1px solid #45516a;
   border-radius: 50%;
-  color: #61718d;
+  color: #94a3bd;
   font:
-    8px "IBM Plex Mono",
+    var(--hl-fs-label) var(--hl-mono),
     monospace;
 }
 .helio-events b {
   display: block;
-  font-size: 12px;
+  font-size: 14px;
+  line-height: 20px;
   font-weight: 500;
-  color: #8895aa;
+  color: #94a3bd;
 }
 .helio-events small {
   display: block;
   font:
-    8px/1.7 "IBM Plex Mono",
+    13px/18px var(--hl-mono),
     monospace;
-  color: #5e6d87;
-  margin-top: 5px;
+  color: #8292ad;
+  margin-top: 2px;
 }
 .helio-events time {
   margin-left: auto;
-  color: #596a83;
+  color: #8292ad;
   font:
-    8px "IBM Plex Mono",
+    13px var(--hl-mono),
     monospace;
+  font-variant-numeric: tabular-nums;
   flex: none;
 }
 .helio-events .complete .helio-event-icon {
-  border-color: #56786c;
+  border-color: #3f7a62;
   color: #87d5b4;
   background: #1a302a;
 }
 .helio-events .complete b {
-  color: #cad6e7;
+  color: #e4ebf7;
 }
 .helio-events .complete small {
-  color: #7f91ae;
+  color: #a9b8d4;
 }
 .helio-events .complete time {
-  color: #86b5a6;
+  color: #87d5b4;
 }
 .helio-events .running .helio-event-icon {
-  color: #a5beff;
-  border-color: #7694de;
+  color: #b7c7ff;
+  border-color: #6d86f7;
 }
 .helio-events .running svg {
   animation: helio-spin 1.2s linear infinite;
 }
 .helio-events .running b {
-  color: #a5beff;
+  color: #b7c7ff;
 }
 .helio-events .failed .helio-event-icon {
   border-color: #dc827a;
-  color: #e7a199;
+  color: #f0aaa2;
   background: #3a2426;
 }
 .helio-events .failed b,
 .helio-events .failed small {
-  color: #e7a199;
+  color: #f0aaa2;
 }
 .helio-run-row {
-  margin: 22px 30px 0;
+  margin: 24px 24px 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 16px;
   align-items: center;
 }
 .helio-run-row button {
-  padding: 15px 16px;
+  height: 44px;
+  padding: 0 16px;
   display: flex;
   align-items: center;
-  gap: 12px;
-  border: 1px solid #597efb;
-  background: #214cf9;
+  gap: 10px;
+  border: 1px solid var(--hl-cobalt);
+  border-radius: 8px;
+  background: var(--hl-cobalt);
   font:
-    9px "IBM Plex Mono",
+    500 13px var(--hl-mono),
     monospace;
+  letter-spacing: 0.02em;
+  transition:
+    background-color var(--hl-fast),
+    transform var(--hl-fast);
+}
+.helio-run-row button:hover:not(:disabled) {
+  background: var(--hl-cobalt-hover);
+  border-color: var(--hl-cobalt-hover);
+}
+.helio-run-row button:active:not(:disabled) {
+  transform: scale(0.98);
 }
 .helio-run-row button:disabled {
-  opacity: 0.65;
+  opacity: 0.7;
   cursor: progress;
 }
 .helio-run-row label {
   display: flex;
   align-items: center;
-  gap: 5px;
-  font-size: 9px;
-  color: #7d8da8;
+  gap: 8px;
+  min-height: 40px;
+  font-size: 14px;
+  color: #a9b8d4;
+  cursor: pointer;
 }
 .helio-run-row input {
-  accent-color: #668dff;
+  width: 16px;
+  height: 16px;
+  accent-color: #6d86f7;
+}
+.helio-build-trace :is(button, input):focus-visible {
+  outline-color: var(--hl-cobalt-on-dark);
 }
 .helio-endpoint {
-  padding: 24px 30px;
+  padding: 24px;
   font:
-    8px/1.6 "IBM Plex Mono",
+    13px/1.6 var(--hl-mono),
     monospace;
-  color: #7ea99d;
+  color: #87d5b4;
   overflow-wrap: anywhere;
   display: flex;
-  gap: 9px;
+  gap: 10px;
 }
 @keyframes helio-spin {
   to {
