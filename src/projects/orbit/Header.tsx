@@ -16,7 +16,9 @@ export function Header({
     <>
       <header className="ov3-topbar">
         <span>
-          Maison studio <i>/</i>
+          <span className="ov3-crumb-root">
+            Maison studio <i>/</i>
+          </span>
           <b>
             {view === "overview"
               ? "Overview"

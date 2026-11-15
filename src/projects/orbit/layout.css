@@ -119,6 +119,7 @@
   border: 0;
   background: none;
   outline: none;
+  align-self: stretch;
   width: 190px;
   font-size: 14px;
   color: var(--ov3-ink);
