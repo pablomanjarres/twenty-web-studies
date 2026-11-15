@@ -1,6 +1,3 @@
-import { ArrowUpRight, MapPin } from "lucide-react";
-import { BrandLogo } from "../../shared/BrandLogo";
-import { brand } from "./brand";
 import { rallyImage, type BookingState } from "./data";
 import { BookingPanel } from "./BookingPanel";
 export function HeroCourt({
@@ -16,22 +13,6 @@ export function HeroCourt({
 }) {
   return (
     <section className="sp-court-stage" id="court-book">
-      <header className="sp-header">
-        <a href="#court-book" aria-label="Sprinto home">
-          <BrandLogo brand={brand} />
-        </a>
-        <span>
-          <MapPin size={13} />
-          Riverside courts · London
-        </span>
-        <nav aria-label="Club navigation">
-          <a href="#availability">Find a court</a>
-          <a href="#matches">Find a game</a>
-          <a href="#club">
-            The club <ArrowUpRight size={14} />
-          </a>
-        </nav>
-      </header>
       <div className="sp-environment">
         <img
           src={rallyImage}

@@ -2,6 +2,8 @@ import { useState } from "react";
 import { HeroCourt } from "./HeroCourt";
 import { Availability } from "./Availability";
 import { ClubNotes } from "./ClubNotes";
+import { SiteHeader } from "./SiteHeader";
+import { SiteFooter } from "./SiteFooter";
 import { type BookingState, initialBooking, normalizeBooking } from "./data";
 import "./styles.css";
 export default function Page() {
@@ -12,15 +14,19 @@ export default function Page() {
     setConfirmed(false);
   }
   return (
-    <main className="sprinto">
-      <HeroCourt
-        booking={booking}
-        update={update}
-        confirmed={confirmed}
-        confirm={() => setConfirmed(true)}
-      />
-      <Availability booking={booking} update={update} />
-      <ClubNotes />
-    </main>
+    <div className="sprinto">
+      <SiteHeader />
+      <main>
+        <HeroCourt
+          booking={booking}
+          update={update}
+          confirmed={confirmed}
+          confirm={() => setConfirmed(true)}
+        />
+        <Availability booking={booking} update={update} />
+        <ClubNotes />
+      </main>
+      <SiteFooter />
+    </div>
   );
 }
