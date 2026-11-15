@@ -1,41 +1,52 @@
 .sprinto-original-play {
   background: #19152d;
-  color: white;
-  padding: 70px 5%;
+  color: #ddfc6b;
+  padding: 112px 5%;
 }
 .sprinto-original-play > h2 {
-  font-size: 65px;
-  margin: 0 0 45px;
+  margin: 0 0 48px;
 }
-.sprinto-original-play > div {
+.sprinto-original-play ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-bottom: 1px solid var(--so-rule-dark);
+}
+.sprinto-original-play li {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 50px;
-}
-.sprinto-original-play article {
-  border-top: 1px solid #544964;
-  padding-top: 25px;
-}
-.sprinto-original-play article > svg {
-  color: #ddfc6b;
+  grid-template-columns: 64px minmax(0, 1.1fr) minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 32px;
+  padding: 32px 0;
+  border-top: 1px solid var(--so-rule-dark);
 }
 .sprinto-original-play h3 {
-  font-size: 31px;
-  margin: 22px 0 13px;
+  font-size: clamp(36px, 3.4vw, 52px);
+  line-height: 0.9;
+  margin: 0;
 }
 .sprinto-original-play p {
-  font-size: 12px;
-  line-height: 1.8;
-  color: #a9a1b9;
-  max-width: 270px;
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--so-on-night);
+  max-width: 40ch;
+  margin: 0;
 }
-.sprinto-original-play article > a {
-  display: flex;
+.sprinto-original-play li > a {
+  display: inline-flex;
   align-items: center;
-  gap: 25px;
+  gap: 8px;
+  min-height: 44px;
   color: #ddfc6b;
-  font-size: 11px;
-  margin-top: 25px;
+  font-size: 15px;
+  font-weight: 500;
+  white-space: nowrap;
+  text-decoration: underline 1px #ddfc6b80;
+  text-underline-offset: 5px;
+}
+.sprinto-original-play li > a:hover {
+  text-decoration-thickness: 2px;
+  text-decoration-color: #ddfc6b;
 }
 .sprinto-original-club {
   display: grid;

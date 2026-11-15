@@ -1,5 +1,3 @@
-import { Clock3, Users, Zap } from "lucide-react";
-
 export const asset = (name: string) =>
   `${import.meta.env.BASE_URL}images/sprinto-original/${name}.jpg`;
 export const tickerPhrases = [
@@ -32,18 +30,18 @@ export const courts = [
 ];
 export const ways = [
   {
-    icon: Users,
     title: "FIND YOUR PEOPLE.",
     copy: "Join an open game. Meet your next doubles partner. Everyone’s invited.",
+    cta: "Join an open game",
   },
   {
-    icon: Zap,
     title: "GET A LITTLE BETTER.",
     copy: "A first lesson or a sharper backhand. Our coaches meet you where you are.",
+    cta: "Book a coaching slot",
   },
   {
-    icon: Clock3,
     title: "MAKE IT A HABIT.",
     copy: "A weekly slot, a familiar crew, and something good to look forward to.",
+    cta: "Hold a weekly court",
   },
 ];
