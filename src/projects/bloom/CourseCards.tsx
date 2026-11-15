@@ -83,7 +83,7 @@ function CourseCard({
       </div>
       <div className="bv-course-card-foot">
         <span>
-          {count === list.length ? <Check size={12} /> : <Play size={11} />}{" "}
+          {count === list.length ? <Check size={14} /> : <Play size={13} />}{" "}
           {count} of {list.length} lessons complete
         </span>
         <span>{list.reduce((n, l) => n + parseInt(l.duration), 0)} min</span>
