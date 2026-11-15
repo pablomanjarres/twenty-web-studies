@@ -15,7 +15,7 @@ function FormulaSelector({
   onSelect,
 }: Pick<Props, "active" | "onSelect">) {
   return (
-    <div className="vale-formula-switch" aria-label="Choose your formula">
+    <div className="vale-formula-switch" role="group" aria-label="Formula">
       {formulas.map((formula, index) => (
         <button
           key={formula.id}
@@ -45,7 +45,7 @@ function PurchaseTray({
         <strong>{money(formula.volumes[volume].price)}</strong>
       </div>
       <div className="vale-purchase-actions">
-        <div className="vale-volumes" aria-label="Bottle volume">
+        <div className="vale-volumes" role="group" aria-label="Size">
           {formula.volumes.map((item, index) => (
             <button
               key={item.label}
@@ -75,12 +75,11 @@ export function FormulaStudio(props: Props) {
         <h1>
           Softer
           <br />
-          by nature.
+          by&nbsp;nature.
         </h1>
         <p>
-          A fresh start. A light layer. A soft finish.
-          <br />
-          Find a little care for your every day.
+          <span>A fresh start. A light layer. A soft finish.</span>{" "}
+          <span>Find a little care for your every day.</span>
         </p>
         <FormulaSelector active={active} onSelect={onSelect} />
       </div>
@@ -88,6 +87,7 @@ export function FormulaStudio(props: Props) {
         <div className="vale-studio-halo" aria-hidden="true" />
         <div className="vale-studio-plinth" aria-hidden="true" />
         <img
+          key={formula.id}
           className="vale-studio-product"
           src={image(formula.image)}
           alt={`${formula.name} in frosted green glass with a stone-tone closure`}
@@ -106,7 +106,7 @@ export function FormulaStudio(props: Props) {
         </details>
       </div>
       <PurchaseTray {...props} />
-      <a className="vale-discover" href="#texture">
+      <a className="vale-discover vale-link" href="#texture">
         A closer look <ArrowUpRight size={17} />
       </a>
     </section>
