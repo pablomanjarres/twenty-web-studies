@@ -53,95 +53,56 @@
     flex-wrap: wrap;
   }
   .sprinto-original-courts {
-    padding: 50px 24px;
+    padding: 64px 24px;
   }
   .sprinto-original h2 {
-    font-size: 46px;
+    font-size: 48px;
   }
-  .sprinto-original-section-title > div > span {
-    font-size: 10px;
-  }
-  .sprinto-original-area-tabs button {
-    font-size: 9px;
-    padding: 10px 12px;
+  .sprinto-original-section-title {
+    margin-bottom: 32px;
   }
   .sprinto-original-court-grid {
     grid-template-columns: 1fr;
-    gap: 18px;
-  }
-  .sprinto-original-court-card {
-    padding: 23px;
-  }
-  .sprinto-original-court-icon svg {
-    width: 120px;
-  }
-  .sprinto-original-court-price {
-    display: flex;
-  }
-  .sprinto-original-court-price strong {
-    margin: 0;
-  }
-  .sprinto-original-court-times button {
-    padding: 12px;
+    gap: 16px;
   }
   .sprinto-original-play {
-    padding: 50px 24px;
+    padding: 64px 24px;
   }
   .sprinto-original-play > h2 {
-    font-size: 49px;
-    margin-bottom: 30px;
+    margin-bottom: 32px;
   }
-  .sprinto-original-play > div {
-    grid-template-columns: 1fr;
-    gap: 25px;
+  .sprinto-original-play li {
+    grid-template-columns: 32px minmax(0, 1fr);
+    gap: 12px 16px;
+    padding: 24px 0;
   }
-  .sprinto-original-play h3 {
-    font-size: 32px;
-    margin-top: 18px;
-  }
-  .sprinto-original-play p {
-    max-width: none;
+  .sprinto-original-play li > p,
+  .sprinto-original-play li > a {
+    grid-column: 2;
   }
   .sprinto-original-club {
     grid-template-columns: 1fr;
   }
   .sprinto-original-club > img {
+    min-height: 0;
     height: 360px;
   }
   .sprinto-original-club > div {
-    padding: 45px 24px;
+    padding: 64px 24px;
   }
-  .sprinto-original-club h2 {
-    font-size: 53px;
+  .sprinto-original-club p {
+    font-size: 17px;
   }
   .sprinto-original-footer {
-    padding: 32px 24px;
-    flex-wrap: wrap;
-    gap: 24px;
+    padding: 48px 24px 24px;
   }
-  .sprinto-original-footer > span {
-    margin-left: auto;
-    font-size: 10px;
-  }
-  .sprinto-original-footer > a {
-    font-size: 11px;
-  }
-  .sprinto-original-footer > small {
-    margin-left: auto;
+  .sprinto-original-footer-row {
+    margin-top: 32px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
   }
   .sprinto-original-booking-panel {
-    padding: 35px 25px;
-  }
-}
-
-@media (max-width: 700px) {
-  .sprinto-original-area-tabs button,
-  .sprinto-original-court-times button,
-  .sprinto-original-nav-button {
-    min-height: 44px;
-  }
-  .sprinto-original-close {
-    min-width: 44px;
-    min-height: 44px;
+    padding: 40px 24px 32px;
   }
 }
