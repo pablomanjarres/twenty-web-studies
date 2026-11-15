@@ -18,9 +18,7 @@
   border-radius: 9999px;
   background: transparent;
   color: var(--vd-ink);
-  font:
-    600 14px/1.3 "Manrope",
-    sans-serif;
+  font: var(--vd-font-ui);
   cursor: pointer;
   transition:
     background 160ms var(--vd-ease),

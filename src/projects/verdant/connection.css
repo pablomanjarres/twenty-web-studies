@@ -14,9 +14,7 @@
   display: grid;
   gap: 8px;
   margin-bottom: 24px;
-  font:
-    600 14px/1.3 "Manrope",
-    sans-serif;
+  font: var(--vd-font-ui);
 }
 .vd-connection select {
   min-height: 48px;
@@ -74,9 +72,7 @@
   align-items: center;
   gap: 24px;
   padding: 32px var(--vd-inset);
-  font:
-    600 14px/1.3 "Manrope",
-    sans-serif;
+  font: var(--vd-font-ui);
 }
 .vd-footer .brand-logo {
   font-size: 25px;
