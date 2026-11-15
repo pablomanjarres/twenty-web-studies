@@ -117,10 +117,6 @@
   gap: 6px;
 }
 .md-load-facts small {
-  font: 400 12px var(--md-mono);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--md-text-3);
   display: flex;
   align-items: center;
   gap: 6px;
@@ -137,7 +133,7 @@
   margin-top: 18px;
 }
 .md-event-dock[data-tone="attention"] > div {
-  color: #f2c998;
+  color: var(--md-amber);
 }
 .md-event-dock[data-tone="complete"] > div {
   color: var(--md-text-2);
@@ -160,10 +156,6 @@
   grid-template-columns: 1fr auto;
   gap: 8px;
   align-items: baseline;
-  font: 400 12px var(--md-mono);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--md-text-3);
 }
 .md-event-dock > footer > b {
   font: 400 13px var(--md-mono);

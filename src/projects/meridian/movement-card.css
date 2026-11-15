@@ -79,12 +79,6 @@
 .md-movement-endpoints > div:last-child {
   text-align: right;
 }
-.md-movement-endpoints small {
-  font: 400 12px var(--md-mono);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--md-text-3);
-}
 .md-movement-endpoints strong {
   font: 400 13px var(--md-mono);
   letter-spacing: 0.02em;

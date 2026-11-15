@@ -1,3 +1,14 @@
+/* Mono instrument eyebrows shared by cards, docks, map caption and manifest. */
+.md-port-caption > div > span,
+.md-movement-endpoints small,
+.md-load-facts small,
+.md-event-dock > footer,
+.md-table-panel th {
+  font: 400 12px var(--md-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--md-text-3);
+}
 .md-status-chip {
   display: inline-flex;
   align-items: center;
@@ -19,7 +30,7 @@
 }
 .md-status-chip[data-status="At customs"],
 .md-status-chip[data-status="Scheduled"] {
-  color: #f2c998;
+  color: var(--md-amber);
   background: rgba(242, 201, 152, 0.12);
 }
 .md-status-chip[data-status="Delivered"] {
@@ -41,7 +52,7 @@
   transition: width 300ms ease-out;
 }
 .md-progress-rule[data-tone="review"] > span {
-  background: #f2c998;
+  background: var(--md-amber);
 }
 .md-progress-rule[data-tone="done"] > span {
   background: var(--md-text-3);
