@@ -1,9 +1,14 @@
 import { useEffect, useState } from "react";
 import { ArrowRight, Check } from "lucide-react";
-import { image, catalogFor, categories, products } from "./data";
-
-const sizes = ["XS", "S", "M", "L", "XL"];
-const ONE_SIZE = "One size";
+import {
+  image,
+  catalogFor,
+  categories,
+  isOneSize,
+  ONE_SIZE,
+  sizes,
+} from "./data";
+import type { Product } from "./data";
 
 function SizePicker({
   name,
@@ -38,10 +43,10 @@ export function ProductCard({
   product,
   onAdd,
 }: {
-  product: (typeof products)[number];
+  product: Product;
   onAdd: (id: string, size: string) => void;
 }) {
-  const oneSize = product.category === "Accessories";
+  const oneSize = isOneSize(product);
   const [size, setSize] = useState("M");
   const [added, setAdded] = useState<"idle" | "just" | "again">("idle");
   useEffect(() => {
