@@ -70,7 +70,7 @@ export function ProjectArchive({
               onClick={() => choose(index)}
             >
               <span className="forma-record-meta forma-label">
-                <span>0{index + 1}</span>
+                <span>{String(index + 1).padStart(2, "0")}</span>
                 <span>{current ? "Viewing" : item.year}</span>
                 <ArrowUpRight size={14} aria-hidden="true" />
               </span>
