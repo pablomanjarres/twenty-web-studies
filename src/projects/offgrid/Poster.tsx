@@ -18,8 +18,10 @@ export function Poster({
           <br />
           GOOD IDEAS, OUT IN THE WORLD.
         </span>
-        <button onClick={onBrief}>
-          Have something in mind? <ArrowDownRight size={16} />
+        <button className="fg-cta" onClick={onBrief}>
+          <span className="fg-cta-long">Have something in mind?</span>
+          <span className="fg-cta-short">Start a brief</span>
+          <ArrowDownRight size={16} aria-hidden="true" />
         </button>
       </header>
       <div className="fg-poster-top">
@@ -28,7 +30,7 @@ export function Poster({
           <br />
           with a big appetite for
           <br />
-          <em>the unexpected.</em>
+          the unexpected.
           <small>
             Identity. Websites. Things that matter.
             <br />
@@ -41,11 +43,11 @@ export function Poster({
             <a key={p.id} href="#work" onClick={() => onSelect(p.id)}>
               <sup>0{i + 1}</sup>
               {p.name}
-              <ArrowDownRight size={28} />
+              <ArrowDownRight size={28} aria-hidden="true" />
             </a>
           ))}
           <a href="#studio" className="fg-studio-link">
-            A few words about us ↗
+            A few words about us
           </a>
         </nav>
       </div>
@@ -67,7 +69,7 @@ export function Poster({
           MAKE IT FEEL SOMETHING.
         </span>
         <a href="#work">
-          A closer look <ArrowDownRight size={19} />
+          A closer look <ArrowDownRight size={18} aria-hidden="true" />
         </a>
         <span>
           BASED EVERYWHERE.

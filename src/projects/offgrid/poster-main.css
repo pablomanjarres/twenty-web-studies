@@ -8,11 +8,6 @@
   color: inherit;
   cursor: pointer;
 }
-.offgrid-v2 button:focus-visible,
-.offgrid-v2 a:focus-visible {
-  outline: 3px solid var(--fg-yellow);
-  outline-offset: 6px;
-}
 .fg-poster {
   background: var(--fg-blue);
   color: var(--fg-milk);
@@ -20,16 +15,16 @@
   height: max(800px, 100svh);
   position: relative;
   overflow: hidden;
-  padding: 0 32px;
+  padding: 0 var(--fg-inset);
   display: flex;
   flex-direction: column;
 }
 .fg-nav {
-  height: 100px;
+  height: 96px;
   display: flex;
   align-items: center;
   border-bottom: 1px solid #f2f0e447;
-  gap: 45px;
+  gap: 48px;
   flex-shrink: 0;
 }
 .fg-nav .brand-logo {
@@ -43,63 +38,71 @@
   height: 31px;
 }
 .fg-nav > span:not(.brand-logo) {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 7px;
-  line-height: 1.7;
-  letter-spacing: 0.7px;
   margin-left: auto;
+  color: var(--fg-on-blue-2);
 }
-.fg-nav button {
-  border: 0;
+.fg-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  height: 40px;
+  padding: 0 14px;
+  border: 1px solid var(--fg-on-blue-line);
+  border-radius: 2px;
   background: none;
   color: var(--fg-milk);
-  display: flex;
-  align-items: center;
-  gap: 28px;
-  font-size: 11px;
-  margin-left: 80px;
-  padding: 12px 0;
+  white-space: nowrap;
+  transition:
+    background-color 160ms ease-out,
+    color 160ms ease-out;
+}
+.offgrid-v2 .fg-cta {
+  color: var(--fg-milk);
+}
+.offgrid-v2 .fg-cta:hover,
+.offgrid-v2 .fg-cta:focus-visible {
+  background: var(--fg-milk);
+  color: var(--fg-blue);
+}
+.fg-cta:active {
+  translate: 0 1px;
+}
+.fg-cta-short {
+  display: none;
 }
 .fg-poster-top {
   display: flex;
   align-items: start;
   justify-content: space-between;
-  padding: 37px 0 10px;
+  gap: 48px;
+  padding: 48px 0 12px;
   position: relative;
   z-index: 3;
 }
 .fg-poster-top > p {
-  font-size: 29px;
+  font-size: clamp(26px, 1.4vw + 12px, 36px);
   line-height: 1.12;
   font-weight: 400;
   margin: 0;
-  letter-spacing: -1px;
-}
-.fg-poster-top em {
-  font-family: "Instrument Serif", serif;
-  font-size: 36px;
-  font-weight: 400;
+  letter-spacing: -0.02em;
 }
 .fg-poster-top small {
   display: block;
-  font-size: 10px;
-  line-height: 1.6;
+  font-size: 16px;
+  line-height: 1.5;
   letter-spacing: 0;
-  margin-top: 25px;
-  color: #b7beed;
+  margin-top: 20px;
+  max-width: 32ch;
+  color: var(--fg-on-blue-2);
 }
 .fg-poster-top nav {
   width: 35%;
-  padding: 3px 0 0;
-  min-width: 370px;
+  min-width: 380px;
 }
 .fg-poster-top nav > span {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 7px;
-  letter-spacing: 0.8px;
-  color: #b0b9f6;
+  color: var(--fg-on-blue-2);
   display: block;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 .fg-poster-top nav > a {
   display: flex;
@@ -108,36 +111,45 @@
   color: var(--fg-milk);
   text-decoration: none;
   font-family: "Tahoe", sans-serif;
-  font-size: 27px;
-  letter-spacing: -0.6px;
+  font-size: 30px;
+  letter-spacing: -0.02em;
   padding: 10px 0;
-  gap: 25px;
-  transition:
-    color 0.2s,
-    padding 0.2s;
+  gap: 24px;
+  transition: color 160ms ease-out;
 }
 .fg-poster-top nav > a:hover {
   color: var(--fg-yellow);
-  padding-left: 10px;
+}
+.fg-poster-top nav > a:active {
+  translate: 0 1px;
 }
 .fg-poster-top sup {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 8px;
   align-self: start;
-  margin-top: 7px;
-  color: #a9b1f4;
-  letter-spacing: 0;
+  margin-top: 6px;
+  color: var(--fg-on-blue-2);
 }
 .fg-poster-top nav svg {
   margin-left: auto;
+  transition: translate 200ms var(--fg-ease);
+}
+.fg-poster-top nav > a:hover svg {
+  translate: 4px 4px;
 }
 .fg-poster-top nav > .fg-studio-link {
-  font-family: "DM Sans", sans-serif;
-  font-size: 9px;
-  letter-spacing: 0;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   border: 0;
-  padding: 19px 0;
-  color: #aab5ff;
+  margin-top: 8px;
+  padding: 0;
+  color: var(--fg-milk);
+  text-decoration: underline;
+  text-decoration-color: var(--fg-on-blue-line);
+  text-underline-offset: 4px;
+}
+.fg-poster-top nav > .fg-studio-link:hover {
+  color: var(--fg-milk);
+  text-decoration-color: currentColor;
 }
 .fg-wordmark {
   position: relative;
@@ -163,10 +175,7 @@
 }
 .fg-wordmark > span {
   position: absolute;
-  right: 0;
-  top: 25px;
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 8px;
-  line-height: 1.7;
-  color: #f2f0e4;
+  left: 0;
+  top: 24px;
+  color: var(--fg-on-blue-2);
 }
