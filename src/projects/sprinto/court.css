@@ -1,18 +1,3 @@
-.sprinto {
-  --sp-violet: #6535f4;
-  --sp-lime: #ddfc6b;
-  --sp-ink: #19152d;
-  --sp-paper: #f2f0f7;
-  color: var(--sp-ink);
-  background: var(--sp-paper);
-  font-family: "DM Sans", sans-serif;
-}
-.sprinto h1,
-.sprinto h2,
-.sprinto h3,
-.sprinto p {
-  margin: 0;
-}
 .sp-court-stage {
   padding: 0 28px;
   background: var(--sp-violet);
