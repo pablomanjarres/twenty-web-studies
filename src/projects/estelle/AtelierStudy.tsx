@@ -17,7 +17,7 @@ export function AtelierStudy() {
           <span>Study of tools & unfinished forms</span>
         </figcaption>
       </figure>
-      <div className="estelle-atelier-text">
+      <div className="estelle-atelier-text estelle-prose">
         <h2>
           The quiet work
           <br />

@@ -20,35 +20,40 @@ export function MaterialNotes({
           <br />
           many surfaces.
         </h2>
-        <div>
+        <div className="estelle-prose">
           <p>{piece.description}</p>
           <p>{material.tone}</p>
         </div>
-        <dl>
-          <div>
-            <dt>Material</dt>
-            <dd>{material.purity}</dd>
-          </div>
-          <div>
-            <dt>Dimensions</dt>
-            <dd>{piece.dimensions}</dd>
-          </div>
-          <div>
-            <dt>Weight</dt>
-            <dd>{material.weight}</dd>
-          </div>
-          {piece.details.map((detail, index) => (
-            <div key={detail}>
-              <dt>Detail 0{index + 1}</dt>
-              <dd>{detail}</dd>
+        <div className="estelle-spec">
+          <dl>
+            <div>
+              <dt>Material</dt>
+              <dd>{material.purity}</dd>
             </div>
-          ))}
-        </dl>
+            <div>
+              <dt>Dimensions</dt>
+              <dd>{piece.dimensions}</dd>
+            </div>
+            <div>
+              <dt>Weight</dt>
+              <dd>{material.weight}</dd>
+            </div>
+            {piece.details.map((detail, index) => (
+              <div key={detail}>
+                <dt>Detail 0{index + 1}</dt>
+                <dd>{detail}</dd>
+              </div>
+            ))}
+          </dl>
+          <div className="estelle-care-note">
+            <span className="estelle-micro">Care</span>
+            <p>
+              Keep separately in a soft pouch, avoid abrasive surfaces, and
+              clean gently with a dry jewellery cloth.
+            </p>
+          </div>
+        </div>
       </div>
-      <p className="estelle-care-note">
-        A little care, over time: keep separately in a soft pouch, avoid
-        abrasive surfaces, and clean gently with a dry jewellery cloth.
-      </p>
     </section>
   );
 }
