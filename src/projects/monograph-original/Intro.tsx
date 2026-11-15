@@ -51,17 +51,19 @@ export function CoverStory() {
         <img
           src={image("exhibition")}
           alt="Orange mixed-media artwork beneath a gallery skylight"
+          width={1200}
+          height={800}
         />
         <span className="monograph-original-caption">
           Robert Rauschenberg, in the gallery.
         </span>
-        <div className="monograph-original-image-index">
-          In focus <span>↗</span>
-        </div>
+        <span className="monograph-original-image-index monograph-original-rubric">
+          In focus
+        </span>
       </div>
       <div className="monograph-original-cover-copy">
         <div className="monograph-original-story-meta">
-          <span>The visual essay</span>
+          <span className="monograph-original-rubric">The visual essay</span>
           <span>10 min read</span>
         </div>
         <h2>
@@ -77,14 +79,13 @@ export function CoverStory() {
           href="#monograph-original-stories"
           className="monograph-original-text-link"
         >
-          Read the story <ArrowUpRight size={25} />
+          Read the story <ArrowUpRight size={20} />
         </a>
         <div className="monograph-original-byline">
-          <span>
-            Words by Eleanor Hayes
-            <br />
+          <p>
+            Words by <span>Eleanor Hayes</span>
             <small>Photography from the gallery</small>
-          </span>
+          </p>
           <button
             aria-label={
               saved
@@ -100,15 +101,16 @@ export function CoverStory() {
         <p className="monograph-original-save-status" aria-live="polite">
           {saved ? "Saved to your reading list for this visit." : ""}
         </p>
-        <div className="monograph-original-editor-note">
-          <span>A note from the editor</span>
-          <p>
-            “Art asks us to look again.
-            <br />
-            This issue is an invitation to do just that.”
-          </p>
-          <span>— Hannah, Editor in Chief</span>
-        </div>
+        <figure className="monograph-original-editor-note">
+          <span className="monograph-original-rubric">
+            A note from the editor
+          </span>
+          <blockquote>
+            “Art asks us to look again. This issue is an invitation to do just
+            that.”
+          </blockquote>
+          <figcaption>Hannah, Editor in Chief</figcaption>
+        </figure>
       </div>
     </section>
   );
