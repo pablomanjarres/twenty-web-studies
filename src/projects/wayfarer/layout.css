@@ -38,11 +38,6 @@
 .wayfarer :focus-visible {
   outline-offset: 3px;
 }
-.wayfarer button,
-.wayfarer input,
-.wayfarer select {
-  font: inherit;
-}
 .wayfarer h1,
 .wayfarer h2,
 .wayfarer h3,
