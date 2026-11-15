@@ -8,25 +8,27 @@ export function Story() {
         <img
           src={image("wardrobe")}
           alt="A considered wardrobe with individual style"
+          loading="lazy"
         />
       </div>
       <div className="archive-original-story-copy">
-        <span>The Archive perspective</span>
+        <span className="archive-original-label">The Archive perspective</span>
         <h2>
           Style isn’t
           <br />a season.
         </h2>
         <p>
-          It’s a collection of things that feel like you.
-          <br />
-          The jacket you reach for. The shape you come back to.
-          <br />
-          Pieces with a life beyond their first wear.
+          It’s a collection of things that feel like you. The jacket you reach
+          for. The shape you come back to. Pieces with a life beyond their first
+          wear.
         </p>
-        <a href="#archive-original-shop">
-          Find your next constant <ArrowUpRight size={21} />
+        <a
+          href="#archive-original-shop"
+          className="archive-original-arrow-link archive-original-label"
+        >
+          Find your next constant <ArrowUpRight size={21} aria-hidden="true" />
         </a>
-        <div className="archive-original-story-rule">
+        <div className="archive-original-story-rule archive-original-label">
           <span>Less, but considered.</span>
           <span>Always, but individual.</span>
         </div>
@@ -38,13 +40,15 @@ export function Story() {
 export function Footer() {
   return (
     <footer className="archive-original-footer">
-      <div>
+      <div className="archive-original-label">
         <span>Stay individual.</span>
-        <a href="#archive-original-top">Back to the top ↑</a>
+        <a href="#archive-original-top" className="archive-original-grow-link">
+          Back to the top ↑
+        </a>
         <small>© 2026 Archive Studio</small>
       </div>
       <p>Archive</p>
-      <div>
+      <div className="archive-original-label">
         <span>Selected with intent.</span>
         <span>London / Everywhere</span>
       </div>
