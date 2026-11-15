@@ -19,7 +19,10 @@ export function ProductTile({
       </button>
       <div className="kanso-object-caption">
         <h2>
-          <button onClick={() => onSelect(product)}>
+          <button
+            className="kanso-reveal-line"
+            onClick={() => onSelect(product)}
+          >
             {product.name}
             <ArrowUpRight size={14} aria-hidden="true" />
           </button>

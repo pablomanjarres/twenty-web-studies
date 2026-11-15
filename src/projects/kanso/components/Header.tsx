@@ -27,10 +27,11 @@ export function Header({
       </a>
       <nav aria-label="Atelier navigation">
         <a href="#batch">
-          <span>The batch</span>
+          <span className="kanso-reveal-line">The batch</span>
         </a>
         <a href="#atelier">
-          <span>The atelier</span> <ArrowDown size={13} aria-hidden="true" />
+          <span className="kanso-reveal-line">The atelier</span>{" "}
+          <ArrowDown size={13} aria-hidden="true" />
         </a>
       </nav>
       <div className="kanso-utilities">
@@ -54,7 +55,7 @@ export function Header({
         </button>
         <button className="kanso-bag-trigger" onClick={onCart}>
           <ShoppingBag size={17} />
-          <span>Bag ({count})</span>
+          <span className="kanso-reveal-line">Bag ({count})</span>
         </button>
       </div>
     </header>

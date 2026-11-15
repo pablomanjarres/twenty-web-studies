@@ -19,7 +19,7 @@ export function Filters({
             aria-pressed={category === name}
             onClick={() => onCategory(name)}
           >
-            <span>{name}</span>
+            <span className="kanso-reveal-line">{name}</span>
             <small>0{index + 1}</small>
           </button>
         ))}
