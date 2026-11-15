@@ -1,77 +1,106 @@
 .og-original-work {
-  padding: 90px 5% 95px;
+  --focus-color: var(--oo-ink);
+  padding: var(--oo-band) var(--oo-inset);
   background: var(--og-original-paper);
-  color: #171717;
+  color: var(--oo-ink);
 }
 .og-original-work-heading {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 50px;
-}
-.og-original-work-heading h2 {
-  font-size: 64px;
-  max-width: 570px;
+  gap: 32px;
+  margin-bottom: 48px;
 }
 .og-original-work-heading > div {
   display: flex;
-  gap: 10px;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 .og-original-work-heading button {
-  padding: 9px 17px;
-  font-size: 11px;
-  border: 1px solid #b8b8b1;
-  border-radius: 30px;
-  background: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 18px;
+  border: 1px solid var(--oo-line-paper);
+  border-radius: 9999px;
+  background: transparent;
+  transition:
+    background-color var(--oo-press),
+    border-color var(--oo-press),
+    color var(--oo-press),
+    translate var(--oo-press);
+}
+.og-original-work-heading button:hover {
+  border-color: var(--oo-ink);
+  background: rgba(23, 23, 23, 0.06);
 }
 .og-original-work-heading button[aria-pressed="true"] {
-  background: #171717;
-  color: white;
-  border-color: #171717;
+  background: var(--oo-ink);
+  color: var(--og-original-paper);
+  border-color: var(--oo-ink);
+}
+.og-original-work-heading button:active {
+  translate: 0 1px;
+}
+.og-original-chip-count {
+  opacity: 0.72;
 }
 .og-original-work-grid {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
   gap: 48px 32px;
+  align-items: start;
 }
-.og-original-work-card:nth-child(2) {
-  padding-top: 90px;
-}
-.og-original-work-card:nth-child(3) {
-  grid-column: 1/-1;
-  max-width: 60%;
+.og-original-fashion {
+  grid-row: span 2;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
 }
 .og-original-work-image {
-  height: 490px;
+  height: 400px;
   position: relative;
   overflow: hidden;
   background: var(--og-original-blue);
 }
+.og-original-fashion .og-original-work-image {
+  flex: 1;
+  min-height: 640px;
+  height: auto;
+}
+.og-original-place .og-original-work-image {
+  height: 340px;
+}
 .og-original-work-image > img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-.og-original-fashion .og-original-work-image > img {
-  object-position: center 23%;
-}
-.og-original-frequency .og-original-work-image {
-  height: 420px;
-}
-.og-original-place .og-original-work-image {
-  height: 380px;
+  transition: scale var(--oo-play);
 }
 .og-original-work-image > a {
   position: absolute;
-  bottom: 19px;
-  right: 19px;
-  width: 46px;
-  height: 46px;
+  bottom: 20px;
+  right: 20px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   background: var(--og-original-paper);
-  color: #171717;
+  color: var(--oo-ink);
   display: grid;
   place-items: center;
+  transition:
+    background-color var(--oo-press),
+    rotate var(--oo-play);
+}
+.og-original-work-card:is(:hover, :focus-within) .og-original-work-image > a {
+  background: var(--og-original-yellow);
+}
+.og-original-work-image > a:active {
+  scale: 0.94;
 }
 .og-original-work-poster {
   position: absolute;
@@ -84,21 +113,27 @@
   transform: rotate(-5deg);
   letter-spacing: -0.07em;
 }
-.og-original-project-meta {
-  display: flex;
-  justify-content: space-between;
-  font-size: 10px;
-  margin-top: 18px;
-  color: #6a6a66;
-}
 .og-original-work-card h3 {
-  font-size: 28px;
-  letter-spacing: -0.05em;
+  margin-top: 16px;
+  font-size: var(--oo-title);
   font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+.og-original-project-meta {
+  display: block;
   margin-top: 8px;
+  color: var(--oo-muted);
 }
 .og-original-work-card p {
-  font-size: 12px;
-  margin: 7px 0 0;
-  color: #6a6a66;
+  margin: 8px 0 0;
+  font-size: var(--oo-body);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .og-original-work-card:is(:hover, :focus-within) img {
+    scale: 1.03;
+  }
+  .og-original-work-card:is(:hover, :focus-within) .og-original-work-image > a {
+    rotate: 45deg;
+  }
 }
