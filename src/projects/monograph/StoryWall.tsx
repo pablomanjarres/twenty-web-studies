@@ -56,7 +56,11 @@ export function StoryWall({
               onClick={() => onRead(story)}
             >
               <span className="monograph-underline">{story.title}</span>
-              <ArrowUpRight size={20} aria-hidden="true" />
+              <ArrowUpRight
+                size={20}
+                className="monograph-arrow"
+                aria-hidden="true"
+              />
             </button>
           </h2>
           <p className="monograph-story-deck">{story.deck}</p>
