@@ -59,6 +59,10 @@
     display: none;
   }
   .sprinto-original-ticker li {
-    gap: 32px;
+    display: block;
+    text-align: center;
+  }
+  .sprinto-original-ticker li i {
+    display: none;
   }
 }
