@@ -48,10 +48,6 @@
   transform: rotate(90deg);
 }
 .forma-values p {
-  font: var(--f-body);
-  text-wrap: pretty;
-  color: var(--forma-ink-2);
-  max-width: 40ch;
   margin: 4px 0 12px;
   animation: forma-panel 300ms var(--f-ease) both;
 }

@@ -126,10 +126,6 @@
   border-top: 1px solid var(--forma-rule);
 }
 .forma-index-note p {
-  font:
-    400 28px/1.15 "Manrope",
-    sans-serif;
-  letter-spacing: -0.035em;
   margin: 16px 0 24px;
 }
 .forma-index-note a {

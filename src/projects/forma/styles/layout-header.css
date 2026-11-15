@@ -29,6 +29,19 @@
   text-transform: uppercase;
   color: var(--forma-ink-2);
 }
+.forma-prose {
+  font: var(--f-body);
+  text-wrap: pretty;
+  color: var(--forma-ink-2);
+  max-width: 40ch;
+  margin: 0;
+}
+.forma .forma-statement {
+  font:
+    400 28px/1.15 "Manrope",
+    sans-serif;
+  letter-spacing: -0.035em;
+}
 .forma-link {
   text-decoration: underline 1px transparent;
   text-underline-offset: 4px;

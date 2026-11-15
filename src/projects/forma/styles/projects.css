@@ -9,13 +9,6 @@
   max-width: 420px;
   margin: 24px 0;
 }
-.forma-dossier p {
-  font: var(--f-body);
-  text-wrap: pretty;
-  color: var(--forma-ink-2);
-  max-width: 40ch;
-  margin: 0;
-}
 .forma-dossier dl {
   margin: 32px 0 0;
 }
@@ -95,17 +88,6 @@
 }
 .forma-materials h2 {
   margin: 24px 0;
-  font:
-    400 28px/1.15 "Manrope",
-    sans-serif;
-  letter-spacing: -0.035em;
-}
-.forma-materials p {
-  font: var(--f-body);
-  text-wrap: pretty;
-  color: var(--forma-ink-2);
-  max-width: 40ch;
-  margin: 0;
 }
 .forma-material-close {
   padding-top: 96px;
