@@ -2,7 +2,7 @@ import { ArrowDown, ArrowUpRight } from "lucide-react";
 import { BrandLogo } from "../../shared/BrandLogo";
 import { brand } from "./brand";
 import { image } from "./data";
-import { Studio } from "./Studio";
+import { Spark } from "./Spark";
 
 export function Header() {
   return (
@@ -11,11 +11,15 @@ export function Header() {
         <BrandLogo brand={brand} />
       </a>
       <nav aria-label="Studio navigation">
-        <a href="#og-original-work">The work</a>
-        <a href="#og-original-studio">The studio</a>
+        <a href="#og-original-work" className="og-original-link">
+          The work
+        </a>
+        <a href="#og-original-studio" className="og-original-link">
+          The studio
+        </a>
       </nav>
       <a href="#og-original-contact" className="og-original-start">
-        Let’s talk <ArrowUpRight size={19} />
+        Let’s talk <ArrowUpRight size={18} />
       </a>
     </header>
   );
@@ -48,16 +52,7 @@ export function Hero() {
             <br />
             off centre.
           </div>
-          <svg
-            className="og-original-spark"
-            viewBox="0 0 100 100"
-            aria-hidden="true"
-          >
-            <path
-              d="M45 0h10l6 32 27-19 7 9-27 20 32 3v11l-32 5 22 26-9 7-23-28-3 34H44l-4-32-26 20-7-9 27-21L0 55V44l32-4L12 14l9-7 23 28z"
-              fill="currentColor"
-            />
-          </svg>
+          <Spark className="og-original-spark" />
           <span className="og-original-image-caption">
             Taking up a little more space.
           </span>
@@ -69,7 +64,7 @@ export function Hero() {
           <br />
           brands you can’t scroll past.
         </p>
-        <a href="#og-original-work">
+        <a href="#og-original-work" className="og-original-link">
           Get into the work <ArrowDown size={20} />
         </a>
         <span className="og-original-coordinate">
