@@ -60,6 +60,11 @@
   align-items: center;
   border-bottom: 1px solid #ffffff25;
 }
+.sprinto-original-header > a:first-child {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+}
 .sprinto-original-header .brand-logo {
   font-size: 28px;
   gap: 9px;
