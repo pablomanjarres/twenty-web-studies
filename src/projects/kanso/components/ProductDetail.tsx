@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { X, Check, ArrowRight } from "lucide-react";
+import { X, Check } from "lucide-react";
 import { image, money, type Product } from "../data";
 import { Dialog } from "./Dialog";
 import { Quantity } from "./Quantity";
@@ -35,6 +35,9 @@ export function ProductDetail({
       <div className="kanso-detail-copy">
         <span className="kanso-label">Collection 01 / {product.type}</span>
         <h2 id="kanso-product-title">{product.name}</h2>
+        <span className="kanso-detail-price kanso-num">
+          {money(product.price)}
+        </span>
         <p>{product.description}</p>
         <dl>
           <div>
@@ -70,23 +73,24 @@ export function ProductDetail({
             }}
           >
             {added ? (
-              <>
-                <Check size={16} /> Added to your bag
-              </>
+              <span>
+                <Check size={16} aria-hidden="true" /> Added to your bag
+              </span>
             ) : (
-              <>
-                Add to bag — {money(product.price * quantity)}{" "}
-                <ArrowRight size={16} />
-              </>
+              <span>Add to bag</span>
             )}
+            <span className="kanso-num">{money(product.price * quantity)}</span>
           </button>
         </div>
         {added && (
-          <button className="kanso-view-bag" onClick={onBag}>
+          <button className="kanso-view-bag kanso-link" onClick={onBag}>
             View your bag →
           </button>
         )}
-        <p className="kanso-detail-note" role={added ? "status" : undefined}>
+        <p
+          className="kanso-detail-note kanso-meta"
+          role={added ? "status" : undefined}
+        >
           {added
             ? `${quantity} ${product.name.toLowerCase()}${quantity > 1 ? "s" : ""} added. Your selection is saved for this visit.`
             : "Small variations in form and glaze are part of each piece."}

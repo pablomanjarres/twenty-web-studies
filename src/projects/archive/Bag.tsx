@@ -1,6 +1,6 @@
 import { useDialog } from "../../shared/useDialog";
 import { ArrowRight, Minus, X } from "lucide-react";
-import { image, products } from "./data";
+import { bagSubtotal, image, productById } from "./data";
 import type { BagItem } from "./data";
 
 export function Bag({
@@ -26,21 +26,24 @@ export function Bag({
       >
         <header>
           <h2 id="archive-bag-title">Your bag.</h2>
-          <button onClick={onClose} aria-label="Close shopping bag">
-            <X size={24} />
+          <button
+            type="button"
+            onClick={onClose}
+            aria-label="Close shopping bag"
+          >
+            <X size={24} aria-hidden="true" />
           </button>
         </header>
         {items.length ? (
           items.map((item) => {
-            const p = products.find((p) => p.id === item.id)!;
+            const p = productById(item.id);
             return (
               <div className="archive-bag-row" key={item.id + item.size}>
                 <img src={image(p.image)} alt={p.name} />
                 <div>
                   <b>{p.name}</b>
                   <small>
-                    {p.category === "Accessories" ? "One size" : item.size} /
-                    Quantity {item.quantity}
+                    {item.size} / Quantity {item.quantity}
                   </small>
                   <span>£{p.price * item.quantity}</span>
                 </div>
@@ -48,7 +51,7 @@ export function Bag({
                   onClick={() => onRemove(item.id, item.size)}
                   aria-label={"Remove one " + p.name}
                 >
-                  <Minus size={17} />
+                  <Minus size={17} aria-hidden="true" />
                 </button>
               </div>
             );
@@ -62,18 +65,10 @@ export function Bag({
         )}
         <div className="archive-bag-total">
           <span>Subtotal</span>
-          <b>
-            £
-            {items.reduce(
-              (total, item) =>
-                total +
-                products.find((p) => p.id === item.id)!.price * item.quantity,
-              0,
-            )}
-          </b>
+          <b>£{bagSubtotal(items)}</b>
         </div>
         <button className="archive-continue" onClick={onClose}>
-          Continue exploring <ArrowRight size={18} />
+          Continue exploring <ArrowRight size={18} aria-hidden="true" />
         </button>
       </section>
     </div>

@@ -1,87 +1,61 @@
 @media (max-width: 600px) {
-  .bv-timetable {
-    padding: 21px 17px;
+  .bv-timetable,
+  .bv-course-lessons,
+  .bv-month-card,
+  .bv-study-activity,
+  .bv-guidance {
+    padding: 20px;
+  }
+  .bv-timetable > .bv-section-heading {
+    align-items: start;
+  }
+  .bv-time-view button {
+    min-height: 40px;
   }
   .bv-timetable-scroll {
     overflow-x: auto;
-    margin-top: 3px;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 64px;
+    mask-image: linear-gradient(90deg, #000 82%, transparent);
+    margin: 0 -20px;
+    padding: 0 20px;
   }
   .bv-timetable-grid {
-    min-width: 565px;
-    gap: 8px;
+    grid-template-columns: 52px repeat(5, 148px);
+    min-width: 0;
+    width: max-content;
+    padding-right: 40px;
   }
   .bv-timetable-grid.is-day {
-    min-width: 0;
+    grid-template-columns: 52px minmax(0, 1fr);
+    width: auto;
+    padding-right: 0;
   }
-  .bv-planned-lesson {
-    min-height: 98px;
-    padding: 12px 10px;
+  .bv-time-column {
+    scroll-snap-align: start;
   }
-  .bv-planned-lesson > span i {
-    display: block;
-  }
-  .bv-time-day {
-    min-height: 70px;
-  }
-  .bv-time-view button {
-    min-height: 35px;
-    padding: 8px 10px;
-  }
-  .bv-time-column .bv-planned-lesson > span i {
-    font-size: 5px;
-  }
-  .bv-plan-foot {
-    font-size: 7px;
+  .bv-plan-foot > span {
+    margin-left: 0;
   }
   .bv-learning-side {
     grid-template-columns: minmax(0, 1fr);
-    gap: 15px;
-  }
-  .bv-month-card {
-    padding: 23px;
+    gap: 24px;
   }
   .bv-month-grid button {
-    min-height: 34px;
+    min-height: 40px;
   }
   .bv-day-plan button {
-    min-height: 44px;
-  }
-  .bv-study-activity {
-    min-height: 280px;
-  }
-  .bv-study-bars {
-    height: 122px;
-  }
-  .bv-course-lessons {
-    padding: 21px 17px;
+    min-height: 48px;
   }
   .bv-course-lessons .bv-section-heading > span {
     display: none;
   }
-  .bv-course-lessons .bv-section-heading p {
-    font-size: 9px;
-    line-height: 1.8;
-  }
   .bv-lesson-row {
-    gap: 10px;
+    gap: 12px;
   }
-  .bv-lesson-row p {
-    display: none;
-  }
-  .bv-lesson-row strong {
-    font-size: 11px;
-  }
-  .bv-row-duration {
-    font-size: 8px;
-    gap: 3px;
-  }
+  .bv-lesson-row p,
   .bv-row-duration svg {
     display: none;
-  }
-  .bv-lesson-number {
-    width: 34px;
-    height: 34px;
-    border-radius: 10px;
   }
   .bv-overlay {
     padding: 0;
@@ -89,15 +63,15 @@
   }
   .bv-course-dialog,
   .bv-practice-dialog {
-    padding: 33px 24px;
+    padding: 32px 24px;
     max-height: 92vh;
     border-radius: 24px 24px 0 0;
   }
   .bv-dialog-close {
     width: 44px;
     height: 44px;
-    top: 10px;
-    right: 10px;
+    top: 12px;
+    right: 12px;
   }
   .bv-course-dialog h2,
   .bv-practice-dialog h2 {
@@ -107,11 +81,9 @@
     flex-wrap: wrap;
   }
   .bv-color-options button {
-    min-width: 85px;
-    min-height: 44px;
-    font-size: 9px;
+    min-width: 96px;
   }
   .bv-notice-options button {
-    min-height: 44px;
+    min-height: 48px;
   }
 }

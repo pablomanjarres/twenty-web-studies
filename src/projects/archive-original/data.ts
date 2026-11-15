@@ -19,12 +19,12 @@ export const products = [
     detail: "Washed blue / Cotton denim",
   },
   {
-    id: "bag",
-    name: "Quilted camera bag",
+    id: "scarf",
+    name: "Silk square scarf",
     category: "Accessories",
-    image: "bag",
-    price: 180,
-    detail: "Black / Vintage collection",
+    image: "scarf",
+    price: 120,
+    detail: "Cherry / Silk twill",
   },
   {
     id: "layers",
@@ -35,5 +35,11 @@ export const products = [
     detail: "Natural palette / Cotton blend",
   },
 ];
+
+export type Product = (typeof products)[number];
+
+/* Accessories are sold in a single size. */
+export const isOneSize = (product: Product) =>
+  product.category === "Accessories";
 
 export type BagItem = { id: string; size: string; quantity: number };

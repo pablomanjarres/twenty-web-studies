@@ -1,37 +1,61 @@
 @media (max-width: 720px) {
+  .sl-kitchen {
+    padding: 56px 20px;
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .sl-kitchen > figure img {
+    height: 300px;
+  }
+  .sl-kitchen > figure figcaption {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+  }
+  .sl-kitchen-story h2 {
+    font-size: 34px;
+  }
   .sl-catch-note {
-    grid-template-columns: 115px 1fr;
+    grid-template-columns: 110px 1fr;
   }
   .sl-catch-note img {
-    width: 115px;
-    height: 170px;
+    width: 110px;
+    height: 160px;
   }
   .sl-catch-note p {
-    font-size: 23px;
+    font-size: 26px;
   }
   .sl-tables {
-    padding: 45px 27px 60px;
+    padding: 56px 20px 72px;
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 40px;
+  }
+  .sl-tables > div {
+    justify-self: stretch;
   }
   .sl-tables h2 {
     font-size: 39px;
   }
   .sl-receipt {
     max-width: 360px;
-    justify-self: center;
     width: 100%;
-    padding: 25px 24px 20px;
+    box-sizing: border-box;
+    justify-self: center;
+    padding: 24px 20px 20px;
+    transform: rotate(1.5deg);
   }
   .sl-footer {
-    padding: 35px 25px;
+    padding: 48px 20px;
     grid-template-columns: 1fr 1fr;
-    gap: 25px;
+    gap: 24px;
+  }
+  .sl-footer > .brand-logo {
+    grid-column: 1/-1;
   }
   .sl-footer a {
     justify-self: start;
   }
-  .sl-footer > span {
-    font-size: 10px;
+  .sl-receipt input {
+    font-size: 16px;
   }
 }

@@ -16,8 +16,8 @@
   overflow: auto;
   border-radius: 26px;
   background: #fffdf7;
-  border: 1px solid #e7eddc;
-  padding: 34px;
+  border: 1px solid var(--bv-rule);
+  padding: 32px;
   position: relative;
   box-shadow: 0 20px 80px #28432025;
 }
@@ -26,14 +26,18 @@
   z-index: 1;
   top: 17px;
   right: 17px;
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
   display: grid;
   place-items: center;
   border: 0;
   border-radius: 50%;
   background: #ffffffcc;
-  color: #738762;
+  color: var(--bv-ink);
+}
+.bv-dialog-close:hover {
+  background: white;
+  transform: rotate(90deg);
 }
 .bv-dialog-art {
   height: 180px;
@@ -47,34 +51,32 @@
   height: 140px;
 }
 .bv-detail-kicker {
-  font-size: 8px;
-  letter-spacing: 1.3px;
-  color: #91a279;
+  color: var(--bv-text-2);
 }
 .bv-course-dialog h2 {
-  font-size: 27px;
-  line-height: 1.2;
-  font-weight: 500;
-  letter-spacing: -0.8px;
-  margin: 14px 0;
+  font-size: 30px;
+  line-height: 1.15;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 12px 0;
 }
 .bv-course-dialog > p {
-  color: #8b9d76;
-  font-size: 12px;
-  line-height: 1.9;
+  color: var(--bv-text-2);
+  font-size: var(--bv-fs-body);
+  line-height: 1.6;
 }
 .bv-dialog-task {
-  border-top: 1px solid #e6ecd9;
-  padding-top: 20px;
-  margin-top: 22px;
+  border-top: 1px solid var(--bv-rule);
+  padding-top: 16px;
+  margin-top: 24px;
 }
 .bv-dialog-task strong {
-  font-size: 10px;
+  color: var(--bv-text-2);
 }
 .bv-dialog-task p {
-  font-size: 12px;
-  color: #8b9d76;
-  margin: 8px 0 22px;
+  font-size: var(--bv-fs-ui);
+  font-weight: 600;
+  margin: 8px 0 0;
 }
 .bv-dialog-start {
   display: flex;
@@ -86,29 +88,36 @@
   border: 0;
   background: #344431;
   color: white !important;
-  border-radius: 26px;
-  font-size: 11px;
-  margin-top: 20px;
+  border-radius: 999px;
+  font-size: var(--bv-fs-ui);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  margin-top: 24px;
+}
+.bv-dialog-start:not(:disabled):hover {
+  background: var(--bv-ink-hover);
 }
 .bv-dialog-start:disabled {
   background: #e6ebdc;
-  color: #a3ad90 !important;
+  color: var(--bv-text-2) !important;
+  opacity: 0.55;
 }
 .bv-locked-note {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 11px;
+  padding: 12px;
   border-radius: 12px;
   background: #f0f3e7;
-  font-size: 10px !important;
+  color: var(--bv-ink);
+  font-size: var(--bv-fs-body) !important;
 }
 .bv-milestone-art {
   height: 185px;
   display: grid;
   place-items: center;
   background: #edf3d3;
-  color: #879e55;
+  color: var(--bv-ink);
   border-radius: 18px;
   margin-bottom: 26px;
 }
@@ -127,7 +136,8 @@
 }
 .bv-practice-dialog h2 {
   font-family: "Plus Jakarta Sans", sans-serif;
-  font-weight: 500;
-  font-size: 29px;
-  letter-spacing: -0.8px;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
 }

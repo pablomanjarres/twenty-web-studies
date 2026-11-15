@@ -1,83 +1,97 @@
 @media (max-width: 1100px) {
   .archive-product-grid {
-    gap: 20px;
+    gap: 36px 20px;
   }
   .archive-product-image {
     height: 310px;
-    padding: 24px 15px;
+    padding: 24px 16px;
+  }
+  .archive-size legend {
+    float: none;
+    margin: 0 0 6px;
+    line-height: 1.5;
+  }
+  .archive-size > div {
+    justify-content: flex-start;
+  }
+  .archive-product-size > span {
+    min-height: calc(13px * 1.5 + 6px + 36px);
+    align-items: end;
   }
 }
 @media (max-width: 760px) {
   .archive-shop {
-    padding: 55px 5%;
+    padding: 64px 5%;
   }
   .archive-shop-heading {
     display: block;
   }
   .archive-shop-heading h2 {
-    font-size: 37px;
-    margin: 20px 0;
+    margin: 12px 0 0;
   }
   .archive-shop-heading > span:last-child {
     display: none;
   }
+  .archive-filter-bar {
+    margin: 24px -5%;
+    padding: 6px 0 0;
+  }
+  .archive-filter-bar > span {
+    display: none;
+  }
   .archive-filters {
-    gap: 20px;
-    flex-wrap: wrap;
-    margin: 25px 0;
-    padding-top: 15px;
+    flex: 1;
+    min-width: 0;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    scroll-snap-type: x proximity;
+    padding-inline: 5%;
+    scroll-padding-inline: 5%;
+    mask-image: linear-gradient(90deg, #000 85%, transparent);
+  }
+  .archive-filters::-webkit-scrollbar {
+    display: none;
   }
   .archive-filters button {
-    font-size: 10px;
-  }
-  .archive-filters > span {
-    display: none;
+    scroll-snap-align: start;
   }
   .archive-product-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 35px 16px;
+    gap: 36px 16px;
   }
   .archive-product-image {
-    height: 260px;
+    height: 240px;
     padding: 30px 12px;
   }
   .archive-product-image > span {
-    left: 10px;
-    top: 12px;
-    font-size: 6px;
-  }
-  .archive-product-image > button {
-    right: 10px;
-    bottom: 10px;
-    width: 29px;
-    height: 29px;
+    left: 6px;
+    top: 6px;
   }
   .archive-product-title {
-    flex-wrap: wrap;
-    gap: 7px;
-    margin-top: 15px;
-  }
-  .archive-product-title h3 {
-    font-size: 11px;
-    width: 100%;
-  }
-  .archive-product-title > span {
-    font-size: 9px;
-  }
-  .archive-product p {
-    font-size: 8px;
-    line-height: 1.6;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 12px;
   }
   .archive-product-size {
-    display: block;
-    margin-top: 15px;
+    margin: 12px 0;
   }
-  .archive-product-size label {
-    justify-content: space-between;
+  .archive-size > div {
+    gap: 4px;
   }
-  .archive-product-size button {
-    width: 100%;
-    justify-content: space-between;
-    margin-top: 10px;
+  .archive-size button {
+    max-width: none;
+    min-width: 0;
+    height: 40px;
+    font-size: 13px;
+  }
+  .archive-product-size > span {
+    min-height: calc(13px * 1.5 + 6px + 40px);
+  }
+  button.archive-add {
+    gap: 6px;
+    padding: 0 10px;
+    white-space: nowrap;
+    font-size: 13px;
   }
 }

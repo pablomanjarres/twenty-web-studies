@@ -34,11 +34,13 @@ export function Bag({
                 <img src={image(product.image)} alt={product.name} />
                 <div>
                   <h3>{product.name}</h3>
-                  <p>
+                  <p className="kanso-meta">
                     {product.glaze} / {quantity}{" "}
                     {quantity === 1 ? "piece" : "pieces"}
                   </p>
-                  <strong>{money(product.price * quantity)}</strong>
+                  <strong className="kanso-num">
+                    {money(product.price * quantity)}
+                  </strong>
                 </div>
                 <button
                   aria-label={`Remove ${product.name}`}
@@ -51,21 +53,21 @@ export function Bag({
           </div>
           <div className="kanso-bag-total">
             <span>Subtotal</span>
-            <strong>{money(total)}</strong>
+            <strong className="kanso-num">{money(total)}</strong>
           </div>
-          <p className="kanso-detail-note">
+          <p className="kanso-detail-note kanso-meta">
             Your selection is saved for this visit.
           </p>
         </>
       ) : (
         <div className="kanso-empty-bag">
           <p>A little room for something useful.</p>
-          <a href="#objects" onClick={onClose}>
+          <a className="kanso-link" href="#objects" onClick={onClose}>
             Return to the shelf <ArrowRight size={16} />
           </a>
         </div>
       )}
-      <button className="kanso-add" onClick={onClose}>
+      <button className="kanso-add kanso-add-outline" onClick={onClose}>
         Keep looking <ArrowRight size={16} />
       </button>
     </Dialog>

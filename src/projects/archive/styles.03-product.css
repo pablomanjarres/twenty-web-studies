@@ -1,5 +1,5 @@
 .archive-shop {
-  padding: 80px 3.5% 90px;
+  padding: 96px 3.5%;
 }
 .archive-shop-heading {
   display: flex;
@@ -7,68 +7,93 @@
   justify-content: space-between;
   gap: 30px;
 }
-.archive-shop-heading > span {
-  font:
-    8px "IBM Plex Mono",
-    monospace;
-  color: #857a6b;
+.archive-shop-heading > span,
+.archive-filter-bar > span {
+  font: var(--ar-label);
+  letter-spacing: 0.06em;
+  color: var(--ar-ink-2);
 }
 .archive-shop-heading h2 {
   font:
-    400 43px "Sublime",
+    400 clamp(40px, 3.6vw, 56px) / 1 "Sublime",
     sans-serif;
+  text-wrap: balance;
   margin: 0;
   letter-spacing: -0.015em;
 }
-.archive-filters {
+.archive-filter-bar {
   display: flex;
   align-items: center;
-  gap: 25px;
-  border-top: 1px solid #c0b8aa;
-  margin: 35px 0;
-  padding-top: 20px;
+  gap: 24px;
+  border-top: 1px solid var(--ar-rule);
+  margin: 36px 0;
+  padding-top: 12px;
+}
+.archive-filter-bar > span {
+  margin-left: auto;
+  text-transform: uppercase;
+  font-variant-numeric: tabular-nums;
+}
+.archive-filters {
+  display: flex;
+  gap: 24px;
 }
 .archive-filters button {
+  flex: none;
+  min-height: 44px;
   border: 0;
-  border-bottom: 1px solid transparent;
-  background: transparent;
-  color: #8e8271;
-  padding: 9px 0;
-  font-size: 11px;
+  background: linear-gradient(currentColor, currentColor) left bottom / 0 2px
+    no-repeat;
+  color: var(--ar-ink-2);
+  padding: 0;
+  font: var(--ar-ui);
+  letter-spacing: 0.01em;
+  transition:
+    color 180ms ease-out,
+    background-size 180ms ease-out;
+}
+.archive-filters button:hover {
+  color: var(--ar-ink);
+  background-image: linear-gradient(
+    var(--ar-rule-strong),
+    var(--ar-rule-strong)
+  );
+  background-size: 100% 1px;
 }
 .archive-filters button[aria-pressed="true"] {
-  border-color: #9b273e;
-  color: #161511;
-}
-.archive-filters > span {
-  margin-left: auto;
-  font:
-    8px "IBM Plex Mono",
-    monospace;
-  color: #918575;
+  color: var(--ar-ink);
+  background-image: linear-gradient(var(--ar-cherry), var(--ar-cherry));
+  background-size: 100% 2px;
 }
 .archive-product-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 30px;
+  gap: 48px 30px;
+  animation: archive-fade 220ms ease-out both;
+}
+.archive-product {
+  display: grid;
+  grid-template-rows: auto auto auto 1fr auto;
+  align-content: start;
+  min-width: 0;
 }
 .archive-product-image {
-  background: #ebe9e2;
+  background: var(--ar-stone);
   position: relative;
   min-width: 0;
   height: 380px;
-  padding: 25px 20px;
+  padding: 36px 24px;
   overflow: hidden;
 }
 .archive-product-image img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  transition: transform 0.35s;
+  transition: transform 500ms var(--ar-ease);
   filter: drop-shadow(6px 11px 8px #44382017);
 }
-.archive-product:hover img {
-  transform: scale(1.035);
+.archive-product:is(:hover, :focus-within) img {
+  transform: scale(1.03);
 }
 .archive-product-image.archive-product-photograph {
   padding: 0;
@@ -79,74 +104,123 @@
 }
 .archive-product-image > span {
   position: absolute;
-  top: 15px;
-  left: 15px;
-  font:
-    7px "IBM Plex Mono",
-    monospace;
-  color: #897e6d;
+  top: 12px;
+  left: 12px;
+  font: var(--ar-label);
+  letter-spacing: 0.06em;
+  color: var(--ar-ink-2);
   text-transform: uppercase;
 }
-.archive-product-image > button {
-  position: absolute;
-  right: 15px;
-  bottom: 15px;
-  width: 33px;
-  height: 33px;
-  display: grid;
-  place-items: center;
-  background: #f5f4ef;
-  border: 1px solid #b3aa9a;
+.archive-product-photograph > span {
+  background: var(--ar-stone);
+  padding: 2px 6px;
 }
 .archive-product-title {
   display: flex;
   justify-content: space-between;
-  gap: 15px;
-  margin: 18px 0 8px;
+  align-items: baseline;
+  gap: 12px;
+  margin: 18px 0 6px;
 }
 .archive-product-title h3 {
-  font-size: 12px;
-  font-weight: 500;
+  font: var(--ar-ui);
+  letter-spacing: 0.01em;
   margin: 0;
 }
 .archive-product-title > span {
-  font:
-    10px "IBM Plex Mono",
-    monospace;
+  font: var(--ar-price);
+  font-variant-numeric: tabular-nums;
 }
 .archive-product p {
-  font-size: 10px;
-  color: #918471;
+  font: var(--ar-meta);
+  letter-spacing: 0.01em;
+  color: var(--ar-ink-2);
   margin: 0;
 }
 .archive-product-size {
+  align-self: start;
+  margin: 18px 0;
+  border-block: 1px solid var(--ar-rule);
+  padding: 12px 0;
+}
+.archive-product-size > span,
+.archive-size legend {
+  font: var(--ar-meta);
+  letter-spacing: 0.01em;
+  color: var(--ar-ink-2);
+}
+.archive-product-size > span {
+  display: flex;
+  align-items: center;
+  min-height: 36px;
+}
+.archive-size {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+.archive-size legend {
+  float: left;
+  padding: 0;
+  margin-right: 12px;
+  line-height: 36px;
+}
+.archive-size > div {
+  display: flex;
+  justify-content: flex-end;
+  gap: 6px;
+}
+.archive-size button {
+  flex: 1 1 0;
+  min-width: 28px;
+  max-width: 40px;
+  height: 36px;
+  padding: 0;
+  border: 1px solid var(--ar-rule);
+  background: transparent;
+  font: var(--ar-ui);
+  letter-spacing: 0.01em;
+  transition:
+    border-color 180ms ease-out,
+    background-color 200ms ease-out,
+    color 180ms ease-out;
+}
+.archive-size button:hover {
+  border-color: var(--ar-ink);
+}
+.archive-size button[aria-pressed="true"] {
+  background: var(--ar-carbon);
+  border-color: var(--ar-carbon);
+  color: var(--ar-paper);
+}
+button.archive-add {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 22px;
-  border-top: 1px solid #c2baac;
-  padding-top: 14px;
-  font-size: 9px;
-}
-.archive-product-size label {
-  display: flex;
-  gap: 13px;
-  align-items: center;
-  color: #8a7c66;
-}
-.archive-product-size select {
+  gap: 12px;
+  width: 100%;
+  min-height: 44px;
+  padding: 0 18px;
   border: 0;
-  border-bottom: 1px solid #8e8169;
-  color: #2c281f;
-  background: transparent;
-  padding: 3px 0;
-  font-size: 10px;
+  background: var(--ar-carbon);
+  color: var(--ar-paper);
+  font: var(--ar-ui);
+  letter-spacing: 0.01em;
+  transition: background-color 200ms ease-out;
 }
-.archive-product-size button {
-  border: 0;
-  background: transparent;
-  font-size: 9px;
-  display: flex;
-  gap: 10px;
-  padding: 8px 0;
+.archive-add svg {
+  flex: none;
+  transition: transform 180ms var(--ar-ease);
+}
+.archive-add:hover {
+  background: var(--ar-carbon-hover);
+}
+.archive-add:hover svg {
+  transform: translateX(3px);
+}
+@keyframes archive-fade {
+  from {
+    opacity: 0;
+  }
 }

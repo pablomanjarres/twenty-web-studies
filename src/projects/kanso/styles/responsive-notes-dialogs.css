@@ -1,75 +1,67 @@
+@media (max-width: 1100px) {
+  .kanso-glaze-study {
+    grid-template-columns: minmax(0, 1.4fr) minmax(300px, 1fr);
+  }
+  .kanso-glaze-study > div {
+    padding-left: 40px;
+  }
+  .kanso-batch {
+    gap: 6%;
+  }
+}
 @media (max-width: 780px) {
   .kanso-glaze-study {
-    height: 460px;
+    grid-template-columns: 1fr;
+    min-height: 0;
   }
   .kanso-glaze-study > img {
+    height: 300px;
+    min-height: 0;
     object-position: 35% center;
   }
   .kanso-glaze-study > div {
-    background: #f8f4efde;
-    padding: 23px;
-    top: auto;
-    bottom: 22px;
-    right: 5%;
-    width: 260px;
+    padding: 40px var(--kanso-gutter) 48px;
   }
-  .kanso-glaze-study h2 {
-    font-size: 32px;
-    margin: 17px 0 15px;
-  }
-  .kanso-glaze-study p {
-    font-size: 11px;
-    line-height: 1.6;
-  }
-  .kanso-glaze-study > div > span:last-child {
-    margin-top: 20px;
-    font-size: 9px;
+  .kanso-glaze-study .kanso-meta {
+    margin-top: 24px;
   }
   .kanso-batch {
     grid-template-columns: 1fr;
-    padding: 55px 5%;
-    gap: 35px;
-  }
-  .kanso-batch h2,
-  .kanso-atelier h2 {
-    font-size: 34px;
+    padding: 56px var(--kanso-gutter);
+    gap: 32px;
   }
   .kanso-spec-table > div {
-    font-size: 10px;
+    grid-template-columns: 1.15fr 1fr 0.9fr;
     gap: 12px;
   }
   .kanso-atelier {
     grid-template-columns: 1fr;
-    padding: 0 5% 50px;
-    gap: 30px;
+    padding: 0 var(--kanso-gutter) 56px;
+    gap: 32px;
   }
   .kanso-atelier img {
     height: 290px;
   }
-  .kanso-atelier-caption > p {
-    max-width: 320px;
-  }
   .kanso-footer {
-    padding: 35px 5% 23px;
+    padding: 48px var(--kanso-gutter) 16px;
   }
   .kanso-dispatch {
-    grid-template-columns: 1fr 1fr;
-    gap: 28px;
-    padding-bottom: 75px;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding-bottom: 48px;
   }
   .kanso-dispatch form {
-    grid-column: 1/-1;
+    margin-top: 8px;
+  }
+  .kanso-dispatch input {
+    font-size: 16px;
   }
   .kanso-dispatch > span {
-    font-size: 24px;
-  }
-  .kanso-dispatch > p {
-    font-size: 10px;
+    font-size: 26px;
   }
   .kanso-footer-bottom {
-    flex-wrap: wrap;
-    gap: 20px;
-    font-size: 9px;
+    gap: 16px;
+    padding-top: 16px;
   }
   .kanso-footer-bottom > span {
     display: none;
@@ -81,29 +73,31 @@
   .kanso-detail-image {
     height: 240px;
     min-height: 0;
-    padding: 15px;
+    padding: 16px;
   }
   .kanso-detail-image img {
-    height: 220px;
+    height: 208px;
   }
   .kanso-detail-copy {
-    padding: 26px 22px;
+    padding: 28px 20px 24px;
   }
   .kanso-detail-copy h2 {
     font-size: 34px;
-    margin: 15px 0;
+    margin: 12px 0 4px;
+  }
+  .kanso-detail-price {
+    margin-bottom: 16px;
   }
   .kanso-detail-copy dl {
-    margin: 22px 0;
+    margin: 20px 0 24px;
   }
   .kanso-detail-order {
-    gap: 9px;
+    gap: 8px;
   }
   .kanso-add {
-    padding: 13px 12px !important;
-    font-size: 11px !important;
+    padding: 0 16px;
   }
   .kanso-bag-dialog {
-    padding: 24px;
+    padding: 24px 20px;
   }
 }

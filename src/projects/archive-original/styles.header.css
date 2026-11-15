@@ -1,0 +1,119 @@
+.archive-original-utility {
+  background: var(--ao-ink);
+  color: var(--ao-paper);
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 10px var(--ao-gutter);
+}
+
+.archive-original-header {
+  height: 88px;
+  display: flex;
+  align-items: center;
+  padding: 0 var(--ao-gutter);
+  gap: 64px;
+  max-width: 1600px;
+  margin: auto;
+}
+
+.archive-original-home {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+.archive-original-header .brand-logo {
+  font:
+    31px "Sublime",
+    "Bebas Neue",
+    sans-serif;
+  text-transform: uppercase;
+  gap: 9px;
+}
+
+.archive-original-header .brand-logo > span {
+  letter-spacing: 0.025em;
+  font-weight: 400;
+}
+
+.archive-original-header .brand-logo svg {
+  width: 29px;
+  height: 29px;
+}
+
+.archive-original-header nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.archive-original-bag {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 4px;
+  border: 0;
+  background: none;
+}
+
+.archive-original-bag > span {
+  color: var(--ao-ink-2);
+  transition: color 200ms var(--ao-ease);
+}
+
+.archive-original-bag > svg {
+  margin-left: 12px;
+  transition: transform 160ms var(--ao-ease);
+}
+
+.archive-original-bag:hover > span {
+  color: var(--ao-ink);
+}
+
+.archive-original-bag:hover > svg {
+  transform: rotate(90deg);
+}
+
+@media (max-width: 1000px) {
+  .archive-original-header {
+    gap: 32px;
+  }
+  .archive-original-header nav {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 650px) {
+  .archive-original-utility {
+    justify-content: center;
+  }
+  .archive-original-utility > span:first-child {
+    display: none;
+  }
+  .archive-original-header {
+    height: 72px;
+    gap: 16px;
+  }
+  .archive-original-header .brand-logo {
+    font-size: 28px;
+  }
+  .archive-original-header .brand-logo svg {
+    width: 26px;
+    height: 26px;
+  }
+  .archive-original-header nav {
+    margin-left: auto;
+  }
+  .archive-original-header nav a:not(:nth-child(2)) {
+    display: none;
+  }
+  .archive-original-bag {
+    margin-left: 0;
+  }
+  .archive-original-bag > svg {
+    display: none;
+  }
+}

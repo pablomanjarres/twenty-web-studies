@@ -10,11 +10,15 @@ export function Header({ count, onBag }: { count: number; onBag: () => void }) {
       </a>
       <span>INDEPENDENT BY INSTINCT</span>
       <nav aria-label="Archive navigation">
-        <a href="#archive-shop">Collection</a>
-        <a href="#archive-story">Perspective</a>
+        <a className="archive-link" href="#archive-shop">
+          Collection
+        </a>
+        <a className="archive-link" href="#archive-story">
+          Perspective
+        </a>
       </nav>
       <button onClick={onBag} className="archive-bag">
-        Bag ({count})<Plus size={14} />
+        Bag ({count})<Plus size={14} aria-hidden="true" />
       </button>
     </header>
   );
@@ -49,10 +53,14 @@ export function Hero({
         </p>
       </div>
       <a className="archive-shop-look" href="#archive-shop" onClick={onShop}>
-        Shop this look <ArrowDownRight size={20} />
+        Shop this look <ArrowDownRight size={20} aria-hidden="true" />
       </a>
       <div className="archive-look-strip">
-        <div className="archive-look-picker" aria-label="Campaign looks">
+        <div
+          className="archive-look-picker"
+          role="group"
+          aria-label="Campaign looks"
+        >
           {looks.map((item, index) => (
             <button
               key={item.name}
@@ -64,7 +72,6 @@ export function Hero({
                 <small>LOOK / 0{index + 1}</small>
                 <b>{item.name}</b>
               </div>
-              <span>{index === look ? "●" : "○"}</span>
             </button>
           ))}
         </div>

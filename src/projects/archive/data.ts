@@ -69,4 +69,14 @@ export const catalogFor = (category: string, look: number) =>
         ? looks[look].productIds.includes(p.id)
         : p.category === category),
   );
+export type Product = (typeof products)[number];
 export type BagItem = { id: string; size: string; quantity: number };
+export const sizes = ["XS", "S", "M", "L", "XL"];
+export const ONE_SIZE = "One size";
+export const isOneSize = (p: Product) => p.category === "Accessories";
+export const productById = (id: string) => products.find((p) => p.id === id)!;
+export const bagSubtotal = (items: BagItem[]) =>
+  items.reduce(
+    (total, item) => total + productById(item.id).price * item.quantity,
+    0,
+  );

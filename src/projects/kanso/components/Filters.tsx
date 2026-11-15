@@ -19,7 +19,7 @@ export function Filters({
             aria-pressed={category === name}
             onClick={() => onCategory(name)}
           >
-            <span>{name}</span>
+            <span className="kanso-reveal-line">{name}</span>
             <small>0{index + 1}</small>
           </button>
         ))}
@@ -40,9 +40,16 @@ export function Filters({
             />
           ))}
         </div>
-        <span>{glaze === "All" ? "Every finish" : `${glaze} selected`}</span>
+        <span
+          className={`kanso-glaze-status kanso-meta ${glaze === "All" ? "is-all" : ""}`}
+        >
+          {glaze === "All" ? "Every finish" : `${glaze} selected`}
+        </span>
         {glaze !== "All" && (
-          <button className="kanso-reset-glaze" onClick={() => onGlaze("All")}>
+          <button
+            className="kanso-reset-glaze kanso-link"
+            onClick={() => onGlaze("All")}
+          >
             Clear finish
           </button>
         )}

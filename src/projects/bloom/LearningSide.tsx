@@ -1,6 +1,12 @@
+import type { CSSProperties } from "react";
 import { CalendarDays, ArrowUpRight } from "lucide-react";
 import { lessons, type Lesson } from "./data";
-import { isUnlocked, learningPlan, learningWeek } from "./courses";
+import {
+  learningPlan,
+  learningWeek,
+  lessonStatus,
+  statusLabel,
+} from "./courses";
 export function LearningSide({
   day,
   completed,
@@ -18,7 +24,7 @@ export function LearningSide({
       <section className="bv-month-card">
         <div className="bv-section-heading">
           <h2>October 2026</h2>
-          <CalendarDays size={17} />
+          <CalendarDays size={18} aria-hidden="true" />
         </div>
         <div className="bv-month-grid">
           {["M", "T", "W", "T", "F", "S", "S"].map((d, i) => (
@@ -57,22 +63,18 @@ export function LearningSide({
                   <strong>{l.title}</strong>
                   <small>
                     {p.time} · {l.duration} ·{" "}
-                    {completed.includes(l.id)
-                      ? "Complete"
-                      : isUnlocked(l, completed)
-                        ? "Ready"
-                        : "Locked"}
+                    {statusLabel[lessonStatus(l, completed)]}
                   </small>
                 </div>
-                <ArrowUpRight size={14} />
+                <ArrowUpRight size={16} aria-hidden="true" />
               </button>
             );
           })}
         </div>
       </section>
-      <StudyActivity completed={completed} />
+      <StudyActivity day={day} completed={completed} />
       <div className="bv-guidance">
-        <span>MAKE IT A HABIT</span>
+        <span>Make it a habit</span>
         <h3>
           Small sessions.
           <br />
@@ -86,9 +88,15 @@ export function LearningSide({
     </aside>
   );
 }
-function StudyActivity({ completed }: { completed: number[] }) {
-  const values = learningWeek.map((_, day) => {
-    const ids = learningPlan.filter((p) => p.day === day).map((p) => p.lesson);
+function StudyActivity({
+  day,
+  completed,
+}: {
+  day: number;
+  completed: number[];
+}) {
+  const values = learningWeek.map((_, d) => {
+    const ids = learningPlan.filter((p) => p.day === d).map((p) => p.lesson);
     return {
       planned: lessons
         .filter((l) => ids.includes(l.id))
@@ -100,35 +108,40 @@ function StudyActivity({ completed }: { completed: number[] }) {
   });
   const total = values.reduce((n, v) => n + v.done, 0);
   const plan = values.reduce((n, v) => n + v.planned, 0);
+  const most = Math.max(1, ...values.map((v) => v.planned));
+  const first = learningWeek[0];
+  const last = learningWeek[learningWeek.length - 1];
   return (
     <section className="bv-study-activity">
       <div className="bv-section-heading">
         <h2>Learning activity</h2>
-        <span>This week</span>
+        <span>
+          Oct {first.date} to {last.date}
+        </span>
       </div>
-      <strong>
-        {total}
-        <small> min practiced</small>
-      </strong>
+      <p className="bv-study-total">
+        <strong>{total} min</strong>
+        <span>practiced of {plan} planned</span>
+      </p>
       <div className="bv-study-bars">
         {values.map((v, i) => (
           <div
             key={i}
+            role="img"
+            className={i === day ? "is-current" : undefined}
             aria-label={`${learningWeek[i].name}: ${v.done} of ${v.planned} planned minutes`}
           >
-            <span style={{ height: `${(v.planned / 19) * 100}%` }}>
+            {v.done > 0 && <b>{v.done}</b>}
+            <span style={{ "--share": v.planned / most } as CSSProperties}>
               <i style={{ height: `${(v.done / v.planned) * 100}%` }} />
             </span>
-            <small>{learningWeek[i].name[0]}</small>
+            <small>{learningWeek[i].name}</small>
           </div>
         ))}
       </div>
-      <p>
+      <p className="bv-study-legend">
         <i />
-        Practiced <i className="bv-planned-dot" /> Planned{" "}
-        <span>
-          {total} / {plan} min
-        </span>
+        Practiced <i className="bv-planned-dot" /> Planned
       </p>
     </section>
   );

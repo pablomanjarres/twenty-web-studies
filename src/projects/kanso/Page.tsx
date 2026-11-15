@@ -26,15 +26,17 @@ export default function Page() {
     });
   };
   return (
-    <main className="kanso">
+    <div className="kanso">
       <Header
         count={items.reduce((sum, line) => sum + line.quantity, 0)}
         onCart={() => setBag(true)}
         query={query}
         onQuery={setQuery}
       />
-      <Shelf query={query} onSelect={setSelected} />
-      <StudioNotes />
+      <main id="main">
+        <Shelf query={query} onSelect={setSelected} />
+        <StudioNotes />
+      </main>
       <Footer />
       {selected && (
         <ProductDetail
@@ -59,6 +61,6 @@ export default function Page() {
           }
         />
       )}
-    </main>
+    </div>
   );
 }

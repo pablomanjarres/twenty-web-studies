@@ -34,6 +34,21 @@ export const courseLessons = (course: Course) =>
   lessons.filter((l) => course.lessonIds.includes(l.id));
 export const isUnlocked = (lesson: Lesson, completed: number[]) =>
   lesson.prerequisites.every((id) => completed.includes(id));
+export type LessonStatus = "done" | "ready" | "locked";
+export const lessonStatus = (
+  lesson: Lesson,
+  completed: number[],
+): LessonStatus =>
+  completed.includes(lesson.id)
+    ? "done"
+    : isUnlocked(lesson, completed)
+      ? "ready"
+      : "locked";
+export const statusLabel: Record<LessonStatus, string> = {
+  done: "Complete",
+  ready: "Ready to start",
+  locked: "Locked",
+};
 export const nextLesson = (completed: number[]) =>
   lessons.find((l) => !completed.includes(l.id) && isUnlocked(l, completed));
 export const courseFor = (lesson: Lesson) =>
@@ -46,10 +61,10 @@ export const learningWeek = [
   { name: "Fri", date: 9 },
 ];
 export const learningPlan = [
-  { lesson: 1, day: 0, time: "09:00", top: 0 },
-  { lesson: 2, day: 1, time: "10:00", top: 55 },
-  { lesson: 3, day: 2, time: "09:30", top: 28 },
-  { lesson: 4, day: 3, time: "11:00", top: 110 },
-  { lesson: 5, day: 4, time: "09:00", top: 0 },
-  { lesson: 6, day: 4, time: "11:00", top: 110 },
+  { lesson: 1, day: 0, time: "09:00" },
+  { lesson: 2, day: 1, time: "10:00" },
+  { lesson: 3, day: 2, time: "09:30" },
+  { lesson: 4, day: 3, time: "11:00" },
+  { lesson: 5, day: 4, time: "09:00" },
+  { lesson: 6, day: 4, time: "11:00" },
 ];

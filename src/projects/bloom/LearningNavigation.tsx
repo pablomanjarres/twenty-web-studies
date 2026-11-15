@@ -22,7 +22,7 @@ export function LearningNavigation({
   return (
     <>
       <aside className="bv-rail">
-        <span className="bv-rail-brand" aria-label="Bloom">
+        <span className="bv-rail-brand" role="img" aria-label="Bloom">
           <BrandLogo brand={brand} symbolOnly />
         </span>
         <nav aria-label="Learning workspace">
@@ -35,16 +35,16 @@ export function LearningNavigation({
               key={name}
               aria-label={name}
               title={name}
-              aria-pressed={tab === name}
+              aria-current={tab === name ? "page" : undefined}
               onClick={() => onTab(name)}
             >
-              <Icon size={21} />
+              <Icon size={21} aria-hidden="true" />
               <span>{name}</span>
             </button>
           ))}
         </nav>
         <span className="bv-rail-sprout">
-          <Sprout size={21} />
+          <Sprout size={21} aria-hidden="true" />
           <small>
             KEEP
             <br />

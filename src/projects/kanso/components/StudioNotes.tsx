@@ -19,7 +19,7 @@ export function StudioNotes() {
             Where glaze pools, the colour deepens. Where the clay rises, a
             softer shade appears. No two surfaces settle quite the same.
           </p>
-          <span>Cloud glaze on warm stoneware</span>
+          <span className="kanso-meta">Cloud glaze on warm stoneware</span>
         </div>
       </section>
       <section id="batch" className="kanso-batch">
@@ -36,7 +36,7 @@ export function StudioNotes() {
           </p>
         </div>
         <div className="kanso-spec-table">
-          <div className="kanso-spec-head">
+          <div className="kanso-spec-head kanso-label">
             <span>Object</span>
             <span>Dimensions</span>
             <span>Capacity / use</span>
@@ -72,7 +72,7 @@ export function StudioNotes() {
             alt="Hands shaping wet clay on a pottery wheel"
             loading="lazy"
           />
-          <figcaption>
+          <figcaption className="kanso-meta">
             From a lump of clay to an object for your table.
           </figcaption>
         </figure>

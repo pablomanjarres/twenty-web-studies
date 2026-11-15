@@ -1,8 +1,12 @@
 .sl-kitchen {
-  padding: 45px 7% 75px;
+  max-width: 1160px;
+  margin: 0 auto;
+  box-sizing: content-box;
+  padding: 96px 7%;
+  color: var(--sl-paper);
   display: grid;
-  grid-template-columns: 1.3fr 1fr;
-  gap: 50px 8%;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 64px 6%;
   align-items: center;
 }
 .sl-kitchen > figure {
@@ -10,55 +14,64 @@
   position: relative;
 }
 .sl-kitchen > figure img {
-  height: 370px;
+  display: block;
+  height: 420px;
   width: 100%;
   object-fit: cover;
+  object-position: center 65%;
+}
+.sl-kitchen > figure:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(transparent 50%, rgba(24, 52, 69, 0.6));
+  pointer-events: none;
 }
 .sl-kitchen > figure figcaption {
   position: absolute;
-  left: 25px;
-  bottom: 25px;
-  color: white;
-  font:
-    10px "IBM Plex Mono",
-    monospace;
-  letter-spacing: 0.08em;
-  text-shadow: 0 1px 5px #183445;
+  z-index: 1;
+  left: 24px;
+  bottom: 24px;
+  color: var(--sl-paper);
 }
 .sl-kitchen-story > span {
-  font:
-    9px "IBM Plex Mono",
-    monospace;
-  letter-spacing: 0.09em;
+  color: var(--sl-on-sea-2);
 }
 .sl-kitchen-story h2 {
-  font:
-    400 44px/1.12 "Tahoe",
-    "Fraunces",
-    serif;
-  letter-spacing: -0.04em;
-  margin: 23px 0;
-  color: var(--sl-red);
+  font: 400 clamp(36px, 2.4vw + 10px, 52px) / 1.08 var(--sl-display);
+  letter-spacing: -0.035em;
+  margin: 24px 0;
+  color: var(--sl-butter);
 }
 .sl-kitchen-story p {
-  font-size: 13px;
-  line-height: 1.9;
-  max-width: 465px;
+  font: var(--sl-body);
+  max-width: 46ch;
 }
 .sl-kitchen-story a {
-  font-size: 12px;
+  font: var(--sl-ui);
+  color: var(--sl-paper);
   display: inline-flex;
-  gap: 40px;
-  text-decoration: none;
-  border-bottom: 1px solid var(--sl-line);
-  padding-bottom: 10px;
-  margin-top: 27px;
+  gap: 32px;
   align-items: center;
+  min-height: 44px;
+  text-decoration: none;
+  border-bottom: 2px solid var(--sl-butter);
+  margin-top: 32px;
+  transition: color 250ms ease;
+}
+.sl-kitchen-story a svg {
+  transition: transform 250ms var(--sl-ease);
+}
+.sl-kitchen-story a:hover {
+  color: var(--sl-butter);
+}
+.sl-kitchen-story a:hover svg {
+  transform: translate(2px, -2px);
 }
 .sl-catch-note {
   display: grid;
   grid-template-columns: 130px 1fr;
-  column-gap: 25px;
+  column-gap: 24px;
   align-items: center;
 }
 .sl-catch-note img {
@@ -69,16 +82,14 @@
   transform: rotate(5deg);
 }
 .sl-catch-note > span {
-  font:
-    9px "IBM Plex Mono",
-    monospace;
+  color: var(--sl-butter);
   align-self: end;
-  letter-spacing: 0.06em;
 }
 .sl-catch-note p {
   font:
-    400 26px/1.2 "Instrument Serif",
+    400 30px/1.2 "Instrument Serif",
     serif;
   align-self: start;
-  margin-top: 13px;
+  margin-top: 12px;
+  text-wrap: balance;
 }

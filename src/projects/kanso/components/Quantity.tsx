@@ -15,7 +15,9 @@ export function Quantity({
       >
         <Minus size={15} />
       </button>
-      <output aria-label="Quantity">{quantity}</output>
+      <output className="kanso-num" aria-label="Quantity">
+        {quantity}
+      </output>
       <button
         aria-label="One more"
         disabled={quantity === 8}

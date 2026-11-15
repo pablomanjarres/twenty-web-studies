@@ -32,7 +32,10 @@ export function Story() {
             considered forms. A generous coat, a precise jacket, a familiar
             trouser, and one expressive accent.
           </small>
-          <a href="#archive-shop">Find your next constant ↗</a>
+          <a href="#archive-shop">
+            <span className="archive-link">Find your next constant</span>{" "}
+            <span aria-hidden="true">↗</span>
+          </a>
         </div>
         <figure>
           <img
@@ -50,7 +53,9 @@ export function Footer() {
     <footer className="archive-footer">
       <div>
         <span>SELECTED WITH INTENT</span>
-        <a href="#archive-top">Back to the campaign ↑</a>
+        <a className="archive-link" href="#archive-top">
+          Back to the campaign <span aria-hidden="true">↑</span>
+        </a>
         <small>© 2026 Archive Studio</small>
       </div>
       <p>ARCHIVE / 06</p>

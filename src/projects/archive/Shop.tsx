@@ -1,37 +1,72 @@
-import { useState } from "react";
-import { ArrowRight, Plus, Check } from "lucide-react";
-import { image, catalogFor, categories, products } from "./data";
+import { useEffect, useRef, useState } from "react";
+import { ArrowRight, Check } from "lucide-react";
+import {
+  image,
+  catalogFor,
+  categories,
+  isOneSize,
+  ONE_SIZE,
+  sizes,
+} from "./data";
+import type { Product } from "./data";
+
+function SizePicker({
+  name,
+  value,
+  onChange,
+}: {
+  name: string;
+  value: string;
+  onChange: (size: string) => void;
+}) {
+  return (
+    <fieldset className="archive-size">
+      <legend>Size</legend>
+      <div>
+        {sizes.map((s) => (
+          <button
+            key={s}
+            type="button"
+            aria-pressed={value === s}
+            aria-label={`Size ${s} for ${name}`}
+            onClick={() => onChange(s)}
+          >
+            {s}
+          </button>
+        ))}
+      </div>
+    </fieldset>
+  );
+}
 
 export function ProductCard({
   product,
   onAdd,
 }: {
-  product: (typeof products)[number];
+  product: Product;
   onAdd: (id: string, size: string) => void;
 }) {
+  const oneSize = isOneSize(product);
   const [size, setSize] = useState("M");
-  const [added, setAdded] = useState(false);
+  const [added, setAdded] = useState<"idle" | "just" | "again">("idle");
+  const label =
+    added === "just"
+      ? "Added, add another"
+      : added === "again"
+        ? "Add another"
+        : "Add to bag";
+  useEffect(() => {
+    if (added !== "just") return;
+    const timer = setTimeout(() => setAdded("again"), 1600);
+    return () => clearTimeout(timer);
+  }, [added]);
   return (
     <article className="archive-product">
       <div
         className={`archive-product-image archive-product-${product.imageMode}`}
       >
         <img src={image(product.image)} alt={product.name} />
-        <span>
-          {product.category === "Accessories" ? "Curated" : "New arrival"}
-        </span>
-        <button
-          aria-label={"Add " + product.name + " to bag"}
-          onClick={() => {
-            onAdd(
-              product.id,
-              product.category === "Accessories" ? "One size" : size,
-            );
-            setAdded(true);
-          }}
-        >
-          {added ? <Check size={18} /> : <Plus size={18} />}
-        </button>
+        <span>{oneSize ? "Curated" : "New arrival"}</span>
       </div>
       <div className="archive-product-title">
         <h3>{product.name}</h3>
@@ -39,37 +74,35 @@ export function ProductCard({
       </div>
       <p>{product.detail}</p>
       <div className="archive-product-size">
-        {product.category !== "Accessories" ? (
-          <label>
-            Size
-            <select
-              aria-label={"Size for " + product.name}
-              value={size}
-              onChange={(e) => {
-                setSize(e.target.value);
-                setAdded(false);
-              }}
-            >
-              {["XS", "S", "M", "L", "XL"].map((s) => (
-                <option key={s}>{s}</option>
-              ))}
-            </select>
-          </label>
+        {oneSize ? (
+          <span>{ONE_SIZE}</span>
         ) : (
-          <span>One size</span>
+          <SizePicker
+            name={product.name}
+            value={size}
+            onChange={(s) => {
+              setSize(s);
+              setAdded("idle");
+            }}
+          />
         )}
-        <button
-          onClick={() => {
-            onAdd(
-              product.id,
-              product.category === "Accessories" ? "One size" : size,
-            );
-            setAdded(true);
-          }}
-        >
-          {added ? "Add another" : "Add to bag"} <ArrowRight size={13} />
-        </button>
       </div>
+      <button
+        type="button"
+        className="archive-add"
+        aria-label={`${label}: ${product.name}${oneSize ? "" : ", size " + size}`}
+        onClick={() => {
+          onAdd(product.id, oneSize ? ONE_SIZE : size);
+          setAdded("just");
+        }}
+      >
+        <span aria-live="polite">{label}</span>
+        {added === "just" ? (
+          <Check size={18} aria-hidden="true" />
+        ) : (
+          <ArrowRight size={18} aria-hidden="true" />
+        )}
+      </button>
     </article>
   );
 }
@@ -86,6 +119,17 @@ export function Shop({
   onAdd: (id: string, size: string) => void;
 }) {
   const visible = catalogFor(category, look);
+  const grid = useRef<HTMLDivElement>(null);
+  const filterKey = category + (category === "This look" ? look : "");
+  // Replay the grid's fade on a filter change without remounting the cards,
+  // so each card keeps the size a shopper picked.
+  useEffect(() => {
+    const el = grid.current;
+    if (!el) return;
+    el.style.animation = "none";
+    void el.offsetWidth;
+    el.style.animation = "";
+  }, [filterKey]);
   return (
     <section className="archive-shop" id="archive-shop">
       <div className="archive-shop-heading">
@@ -93,19 +137,26 @@ export function Shop({
         <h2>Pieces worth keeping.</h2>
         <span>FOUR FORMS. YOUR WAY.</span>
       </div>
-      <div className="archive-filters" aria-label="Product categories">
-        {categories.map((item) => (
-          <button
-            key={item}
-            aria-pressed={category === item}
-            onClick={() => onCategory(item)}
-          >
-            {item}
-          </button>
-        ))}
-        <span>{visible.length} pieces</span>
+      <div className="archive-filter-bar">
+        <div
+          className="archive-filters"
+          role="group"
+          aria-label="Product categories"
+        >
+          {categories.map((item) => (
+            <button
+              key={item}
+              type="button"
+              aria-pressed={category === item}
+              onClick={() => onCategory(item)}
+            >
+              {item}
+            </button>
+          ))}
+        </div>
+        <span aria-live="polite">{visible.length} pieces</span>
       </div>
-      <div className="archive-product-grid">
+      <div className="archive-product-grid" ref={grid}>
         {visible.map((product) => (
           <ProductCard key={product.id} product={product} onAdd={onAdd} />
         ))}

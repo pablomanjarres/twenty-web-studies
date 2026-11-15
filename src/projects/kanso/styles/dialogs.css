@@ -1,21 +1,52 @@
 .kanso-dialog {
   border: 0;
+  border-radius: 0;
   color: var(--kanso-ink);
   background: var(--kanso-ivory);
   padding: 0;
   max-height: 88dvh;
   box-shadow: 0 30px 100px #31221b25;
 }
+.kanso-dialog[open] {
+  animation: kanso-dialog-in 220ms var(--kanso-ease);
+}
+.kanso-dialog[open]::backdrop {
+  animation: kanso-fade-in var(--kanso-fast) var(--kanso-ease);
+}
 .kanso-dialog::backdrop {
   background: #36261f60;
   backdrop-filter: blur(4px);
 }
+@keyframes kanso-dialog-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+@keyframes kanso-fade-in {
+  from {
+    opacity: 0;
+  }
+}
+.kanso-dialog-close,
+.kanso-bag-top button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  transition: background-color var(--kanso-fast) var(--kanso-ease);
+}
+.kanso-dialog-close:hover,
+.kanso-bag-top button:hover {
+  background: #543c3412;
+}
 .kanso-dialog-close {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 12px;
+  right: 12px;
   z-index: 1;
-  padding: 6px;
 }
 .kanso-product-dialog[open] {
   display: grid;
@@ -28,7 +59,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 25px;
+  padding: 24px;
 }
 .kanso-detail-image img {
   width: 100%;
@@ -36,105 +67,143 @@
   object-fit: contain;
 }
 .kanso-detail-copy {
-  padding: 55px 38px 38px;
+  padding: 56px 40px 40px;
 }
 .kanso-detail-copy h2 {
   font-size: 42px;
   line-height: 1.05;
-  margin: 19px 0;
+  margin: 16px 0 8px;
+}
+.kanso-detail-price {
+  display: block;
+  font-family: "Commune", serif;
+  font-size: 24px;
+  line-height: 1.2;
+  margin-bottom: 24px;
 }
 .kanso-detail-copy > p:not(.kanso-detail-note) {
-  font-size: 13px;
-  line-height: 1.8;
+  font-size: 15px;
+  line-height: 1.65;
 }
 .kanso-detail-copy dl {
-  margin: 28px 0;
+  margin: 24px 0 32px;
 }
 .kanso-detail-copy dl > div {
   display: flex;
   justify-content: space-between;
-  gap: 15px;
+  gap: 16px;
   border-bottom: 1px solid var(--kanso-line);
-  padding: 9px 0;
-  font-size: 11px;
+  padding: 10px 0;
 }
 .kanso-detail-copy dd {
   margin: 0;
   text-align: right;
+  font-variant-numeric: tabular-nums;
 }
 .kanso-detail-copy dt {
   color: var(--kanso-muted);
 }
 .kanso-detail-order {
   display: flex;
-  gap: 13px;
+  gap: 12px;
 }
 .kanso-quantity {
   display: flex;
   align-items: center;
-  border: 1px solid var(--kanso-line);
+  border: 1px solid var(--kanso-line-strong);
 }
 .kanso-quantity button {
-  height: 43px;
-  width: 30px;
+  width: 44px;
+  height: 54px;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: background-color var(--kanso-fast) var(--kanso-ease);
+}
+.kanso-quantity button:not(:disabled):hover {
+  background: #543c3412;
+}
+.kanso-quantity button:focus-visible {
+  outline-offset: -2px;
 }
 .kanso-quantity output {
-  width: 23px;
+  width: 28px;
   text-align: center;
-  font-size: 12px;
+  font-size: 15px;
 }
 .kanso-add {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 14px;
-  background: var(--kanso-ink) !important;
-  color: var(--kanso-ivory) !important;
-  padding: 13px 18px !important;
-  font-size: 12px !important;
+  gap: 16px;
   flex: 1;
+  min-height: 56px;
+  padding: 0 20px;
+  font-size: 15px;
+  transition:
+    background-color var(--kanso-slow) var(--kanso-ease),
+    color var(--kanso-slow) var(--kanso-ease);
 }
-.kanso-detail-note {
-  font-size: 10px;
-  line-height: 1.6;
-  margin-top: 18px;
+.kanso .kanso-add {
+  background: var(--kanso-ink);
+  color: var(--kanso-ivory);
+}
+.kanso-add span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.kanso .kanso-add:hover {
+  background: var(--kanso-ink-hover);
+}
+.kanso-add:active {
+  transform: translateY(1px);
+}
+.kanso .kanso-add:focus-visible {
+  outline-offset: 3px;
+}
+.kanso .kanso-add-outline {
+  background: transparent;
+  color: var(--kanso-ink);
+  box-shadow: inset 0 0 0 1px var(--kanso-ink);
+}
+.kanso .kanso-add-outline:hover {
+  background: var(--kanso-ink);
+  color: var(--kanso-ivory);
+}
+.kanso .kanso-detail-note {
+  margin-top: 16px;
+  color: var(--kanso-muted);
 }
 .kanso-view-bag {
-  font-size: 12px;
-  text-decoration: underline;
+  min-height: 44px;
   padding: 0;
-  margin-top: 17px;
+  margin-top: 8px;
 }
 .kanso-bag-dialog {
-  width: min(480px, calc(100% - 30px));
-  padding: 30px;
+  width: min(480px, calc(100% - 32px));
+  padding: 32px;
 }
 .kanso-bag-top {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
+  gap: 24px;
   align-items: center;
-  margin-bottom: 20px;
+  margin: -8px -12px 16px 0;
 }
 .kanso-bag-top h2 {
   font-size: 34px;
 }
-.kanso-bag-top button {
-  padding: 5px;
-}
 .kanso-bag-items > article {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 16px;
   border-bottom: 1px solid var(--kanso-line);
-  padding: 13px 0;
+  padding: 12px 0;
 }
 .kanso-bag-items img {
-  width: 85px;
-  height: 90px;
+  width: 84px;
+  height: 92px;
   object-fit: contain;
   background: var(--kanso-paper);
 }
@@ -142,34 +211,57 @@
   flex: 1;
 }
 .kanso-bag-items h3 {
-  font-size: 21px;
+  font-size: 22px;
+  line-height: 1.15;
 }
 .kanso-bag-items p {
-  font-size: 11px;
-  margin: 6px 0;
+  margin: 4px 0;
+  color: var(--kanso-muted);
 }
 .kanso-bag-items strong {
-  font-size: 12px;
-  font-weight: 500;
+  font-size: 15px;
+  font-weight: 400;
+}
+.kanso-bag-items article > button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  color: var(--kanso-muted);
+  transition: color var(--kanso-fast) var(--kanso-ease);
+}
+.kanso-bag-items article > button:hover {
+  color: var(--kanso-ink);
 }
 .kanso-bag-total {
   display: flex;
   justify-content: space-between;
-  margin-top: 25px;
-  font-size: 13px;
+  align-items: center;
+  min-height: 56px;
+  border-bottom: 1px solid var(--kanso-ink);
+  font-size: 15px;
+}
+.kanso-bag-total strong {
+  font-family: "Commune", serif;
+  font-size: 24px;
+  font-weight: 400;
 }
 .kanso-bag-dialog > .kanso-add {
   width: 100%;
-  margin-top: 25px;
+  margin-top: 24px;
 }
 .kanso-empty-bag {
-  padding: 35px 0;
+  padding: 32px 0;
+}
+.kanso-empty-bag p {
+  font-size: 15px;
 }
 .kanso-empty-bag > a {
-  display: flex;
-  gap: 10px;
+  display: inline-flex;
+  gap: 8px;
   align-items: center;
-  font-size: 12px;
-  margin-top: 20px;
-  text-decoration: underline;
+  min-height: 44px;
+  margin-top: 12px;
 }

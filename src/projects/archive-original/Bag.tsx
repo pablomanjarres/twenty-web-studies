@@ -1,6 +1,6 @@
 import { useDialog } from "../../shared/useDialog";
 import { ArrowRight, Minus, X } from "lucide-react";
-import { image, products } from "./data";
+import { image, isOneSize, products } from "./data";
 import type { BagItem } from "./data";
 
 export function Bag({
@@ -27,7 +27,7 @@ export function Bag({
         <header>
           <h2 id="archive-original-bag-title">Your bag.</h2>
           <button onClick={onClose} aria-label="Close shopping bag">
-            <X size={24} />
+            <X size={24} aria-hidden="true" />
           </button>
         </header>
         {items.length ? (
@@ -40,18 +40,20 @@ export function Bag({
               >
                 <img src={image(p.image)} alt={p.name} />
                 <div>
-                  <b>{p.name}</b>
-                  <small>
-                    {p.category === "Accessories" ? "One size" : item.size} /
-                    Quantity {item.quantity}
+                  <b className="archive-original-label">{p.name}</b>
+                  <small className="archive-original-meta">
+                    {isOneSize(p) ? "One size" : item.size} / Quantity{" "}
+                    {item.quantity}
                   </small>
-                  <span>£{p.price * item.quantity}</span>
+                  <span className="archive-original-label archive-original-tabular">
+                    £{p.price * item.quantity}
+                  </span>
                 </div>
                 <button
                   onClick={() => onRemove(item.id, item.size)}
                   aria-label={"Remove one " + p.name}
                 >
-                  <Minus size={17} />
+                  <Minus size={17} aria-hidden="true" />
                 </button>
               </div>
             );
@@ -65,7 +67,7 @@ export function Bag({
         )}
         <div className="archive-original-bag-total">
           <span>Subtotal</span>
-          <b>
+          <b className="archive-original-tabular">
             £
             {items.reduce(
               (total, item) =>
@@ -75,8 +77,11 @@ export function Bag({
             )}
           </b>
         </div>
-        <button className="archive-original-continue" onClick={onClose}>
-          Continue exploring <ArrowRight size={18} />
+        <button
+          className="archive-original-continue archive-original-bar archive-original-label"
+          onClick={onClose}
+        >
+          Continue exploring <ArrowRight size={18} aria-hidden="true" />
         </button>
       </section>
     </div>

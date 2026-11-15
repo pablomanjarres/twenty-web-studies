@@ -1,37 +1,34 @@
 .sl-tables {
-  padding: 70px 12%;
-  background: var(--sl-red);
+  padding: 96px 8%;
+  background: var(--sl-tomato-deep);
   color: var(--sl-paper);
   display: grid;
-  grid-template-columns: 1fr 0.8fr;
-  gap: 15%;
+  grid-template-columns: minmax(0, 1fr) 400px;
+  justify-content: center;
+  gap: 10%;
   align-items: center;
 }
-.sl-tables > div > span {
-  font:
-    9px "IBM Plex Mono",
-    monospace;
-  letter-spacing: 0.1em;
+.sl-tables > div {
+  max-width: 560px;
+  justify-self: end;
 }
 .sl-tables h2 {
-  font:
-    400 49px/1.1 "Tahoe",
-    "Fraunces",
-    serif;
-  letter-spacing: -0.045em;
-  margin: 23px 0;
+  font: 400 clamp(40px, 3.4vw + 8px, 60px) / 1.05 var(--sl-display);
+  letter-spacing: -0.035em;
+  margin: 24px 0;
 }
 .sl-tables > div > p {
-  font-size: 13px;
-  line-height: 1.9;
+  font: var(--sl-body);
 }
 .sl-receipt {
   background: var(--sl-paper);
   color: var(--sl-navy);
-  padding: 28px 30px 20px;
+  padding: 32px 32px 24px;
   box-shadow: 8px 10px 0 #18344516;
   transform: rotate(2deg);
   position: relative;
+  display: grid;
+  gap: 20px;
 }
 .sl-receipt:after {
   content: "";
@@ -47,103 +44,105 @@
 }
 .sl-receipt-top {
   text-align: center;
-  border-bottom: 1px dashed var(--sl-line);
+  border-bottom: 1px dashed var(--sl-leader);
   padding-bottom: 20px;
-  margin-bottom: 8px;
-  font:
-    11px "IBM Plex Mono",
-    monospace;
+}
+.sl-receipt-top > strong {
+  display: block;
+  font-weight: 400;
 }
 .sl-receipt-top > span {
   display: block;
-  font-size: 9px;
-  margin-top: 8px;
+  font: var(--sl-meta);
+  color: var(--sl-ink-2);
+  margin-top: 4px;
 }
-.sl-receipt label {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  border-bottom: 1px solid var(--sl-line);
-  font:
-    11px "IBM Plex Mono",
-    monospace;
-  padding: 10px 0;
+.sl-field {
+  display: grid;
+  gap: 8px;
 }
-.sl-receipt select,
+.sl-choices {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 6px;
+}
+.sl-choices-time {
+  grid-template-columns: repeat(3, 1fr);
+}
+.sl-choices button,
 .sl-receipt input {
-  width: 130px;
-  font:
-    11px "IBM Plex Mono",
-    monospace;
-  border: 0;
-  background: transparent;
+  min-height: 44px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background: var(--sl-field);
   color: var(--sl-navy);
-  min-height: 38px;
-  border-radius: 8px;
-  background: #eef4f6;
-  padding: 0 10px;
+  font: var(--sl-ui);
+  transition:
+    background-color 250ms ease,
+    color 250ms ease,
+    border-color 250ms ease;
 }
-.sl-receipt button {
+.sl-choices button {
+  cursor: pointer;
+  padding: 0;
+  font-variant-numeric: tabular-nums;
+}
+.sl-choices button:hover,
+.sl-receipt input:hover {
+  color: var(--sl-sea);
+  border-color: var(--sl-sea);
+}
+.sl-choices button[aria-checked="true"] {
+  background: var(--sl-navy);
+  border-color: var(--sl-navy);
+  color: var(--sl-paper);
+}
+.sl-receipt input {
+  box-sizing: border-box;
   width: 100%;
+  padding: 0 12px;
+}
+.sl-receipt button[type="submit"] {
+  width: 100%;
+  min-height: 52px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 14px 12px;
+  padding: 0 22px;
   border: 0;
+  border-radius: 999px;
   background: var(--sl-navy);
   color: var(--sl-paper);
-  font-size: 12px;
-  border-radius: 28px;
-  min-height: 48px;
-  padding-inline: 18px;
-  margin-top: 20px;
+  font: var(--sl-ui);
+  cursor: pointer;
+  margin-top: 4px;
+  transition:
+    background-color 250ms ease,
+    transform 120ms ease;
 }
-.sl-receipt button:hover {
+.sl-receipt button[type="submit"]:hover {
   background: var(--sl-sea);
 }
-.sl-receipt > p {
-  font-size: 9px;
-  line-height: 1.7;
+.sl-receipt button[type="submit"]:active {
+  transform: translateY(1px);
+}
+.sl-receipt button[type="submit"]:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.sl-receipt-note {
   text-align: center;
-  margin-top: 12px;
+  font: var(--sl-meta);
+  font-size: 15px;
+  display: grid;
+  gap: 8px;
+}
+.sl-receipt-note .sl-label {
+  font-size: 15px;
+  line-height: 1.6;
 }
 .sl-receipt-bottom {
-  font:
-    7px "IBM Plex Mono",
-    monospace;
   text-align: center;
-  border-top: 1px dashed var(--sl-line);
-  margin-top: 18px;
-  padding-top: 14px;
-}
-.sl-footer {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 30px;
-  align-items: center;
-  padding: 45px 7%;
-  background: var(--sl-paper);
-  font-size: 12px;
-}
-.sl-footer .brand-logo {
-  font-size: 29px;
-  color: var(--sl-red);
-}
-.sl-footer .brand-logo > span {
-  font-family: "Tahoe", "Fraunces", serif;
-  font-weight: 400;
-}
-.sl-footer > span {
-  font-size: 11px;
-  line-height: 1.9;
-}
-.sl-footer a {
-  font-size: 11px;
-  text-decoration: none;
-  justify-self: end;
-}
-.sl-footer small {
-  grid-column: 1/-1;
-  font-size: 8px;
+  border-top: 1px dashed var(--sl-leader);
+  padding-top: 16px;
 }

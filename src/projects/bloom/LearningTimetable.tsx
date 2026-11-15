@@ -1,7 +1,14 @@
-import { useState } from "react";
+import { useState, type CSSProperties } from "react";
 import { Check, Lock, ArrowUpRight, Clock } from "lucide-react";
 import { lessons, type Lesson } from "./data";
-import { courseFor, isUnlocked, learningPlan, learningWeek } from "./courses";
+import { courseFor, learningPlan, learningWeek, lessonStatus } from "./courses";
+const HOUR = 64;
+const FIRST_HOUR = 9;
+const hours = ["09:00", "10:00", "11:00", "12:00"];
+const offset = (time: string) => {
+  const [h, m] = time.split(":").map(Number);
+  return (h - FIRST_HOUR + m / 60) * HOUR;
+};
 export function LearningTimetable({
   completed,
   day,
@@ -37,10 +44,12 @@ export function LearningTimetable({
       <div className="bv-timetable-scroll">
         <div className={`bv-timetable-grid ${view === "Day" ? "is-day" : ""}`}>
           <div className="bv-time-axis">
-            <span>TIME</span>
-            <div>
-              {["09:00", "10:00", "11:00", "12:00"].map((t) => (
-                <i key={t}>{t}</i>
+            <span>Time</span>
+            <div style={{ height: hours.length * HOUR }}>
+              {hours.map((t, i) => (
+                <i key={t} style={{ top: i * HOUR }}>
+                  {t}
+                </i>
               ))}
             </div>
           </div>
@@ -56,27 +65,39 @@ export function LearningTimetable({
                   <strong>{d.date}</strong>
                   <span>{d.name}</span>
                 </button>
-                <div className="bv-time-events">
+                <div
+                  className="bv-time-events"
+                  style={
+                    {
+                      height: hours.length * HOUR,
+                      "--bv-hour": `${HOUR}px`,
+                    } as CSSProperties
+                  }
+                >
                   {learningPlan
                     .filter((p) => p.day === i)
                     .map((p) => {
                       const l = lessons.find((l) => l.id === p.lesson)!;
-                      const done = completed.includes(l.id);
-                      const unlocked = isUnlocked(l, completed);
+                      const status = lessonStatus(l, completed);
                       return (
                         <button
                           key={l.id}
-                          className={`bv-planned-lesson ${done ? "is-done" : ""}`}
-                          style={{ top: p.top, background: courseFor(l).color }}
+                          className={`bv-planned-lesson is-${status}`}
+                          style={
+                            {
+                              top: offset(p.time),
+                              "--lesson-color": courseFor(l).color,
+                            } as CSSProperties
+                          }
                           onClick={() => onSelect(l)}
                         >
                           <span>
-                            {done ? (
-                              <Check size={11} />
-                            ) : unlocked ? (
-                              <ArrowUpRight size={11} />
+                            {status === "done" ? (
+                              <Check size={14} aria-hidden="true" />
+                            ) : status === "ready" ? (
+                              <ArrowUpRight size={14} aria-hidden="true" />
                             ) : (
-                              <Lock size={10} />
+                              <Lock size={13} aria-hidden="true" />
                             )}
                             <i>{l.kind}</i>
                           </span>
@@ -94,7 +115,7 @@ export function LearningTimetable({
         </div>
       </div>
       <p className="bv-plan-foot">
-        <Clock size={12} />
+        <Clock size={14} aria-hidden="true" />
         Your plan makes space for every lesson.
         <span>Locked lessons open as you progress.</span>
       </p>

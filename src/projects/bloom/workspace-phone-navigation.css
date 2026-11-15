@@ -1,18 +1,22 @@
 @media (max-width: 600px) {
   .bloom-v2 {
-    padding: 0 15px 85px;
+    --bv-fs-caps: 13px;
+    --bv-fs-body: 15px;
+    --bv-fs-h1: 26px;
+    --bv-fs-display: 28px;
+    padding: 0 16px 104px;
   }
   .bv-rail {
     width: auto;
-    left: 10px;
-    right: 10px;
+    left: 8px;
+    right: 8px;
     top: auto;
-    bottom: 10px;
-    border: 1px solid #e2e9d7;
-    border-radius: 23px;
-    padding: 7px;
-    height: 65px;
-    box-shadow: 0 5px 24px #3d532418;
+    bottom: 8px;
+    border: 1px solid var(--bv-rule);
+    border-radius: 24px;
+    padding: 6px;
+    height: 68px;
+    box-shadow: 0 8px 24px rgba(52, 68, 49, 0.12);
   }
   .bv-rail-brand,
   .bv-rail-sprout {
@@ -20,69 +24,62 @@
   }
   .bv-rail nav {
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: 0;
-    gap: 0;
+    gap: 4px;
     width: 100%;
   }
   .bv-rail nav button {
-    width: 31%;
-    height: 48px;
+    flex: 1;
+    width: auto;
+    height: 54px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 5px;
-    border-radius: 17px;
+    gap: 4px;
+    border-radius: 18px;
   }
-  .bv-rail nav button[aria-pressed="true"]:after {
+  .bv-rail nav button[aria-current="page"]:after {
     display: none;
   }
   .bv-rail nav button span {
     display: block;
-    font-size: 8px;
+    font-size: 13px;
+    line-height: 1.2;
+    font-weight: 600;
+    white-space: nowrap;
   }
   .bv-rail nav button svg {
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
   }
   .bv-workspace-nav {
-    min-height: 126px;
+    min-height: 0;
     gap: 12px;
-    padding: 22px 3px 17px;
+    padding: 20px 0 16px;
     flex-wrap: wrap;
   }
-  .bv-workspace-title h1 {
-    font-size: 25px;
-  }
-  .bv-workspace-title p {
-    font-size: 8px;
-  }
   .bv-learner {
-    margin-left: auto;
-  }
-  .bv-learner > i {
-    width: 37px;
-    height: 37px;
+    order: 3;
   }
   .bv-nav-calendar {
-    width: 36px;
-    height: 36px;
+    order: 2;
   }
   .bv-course-search {
     order: 4;
     width: 100%;
-    padding: 11px 15px;
+    height: 48px;
   }
   .bv-course-search input {
     width: 100%;
-    font-size: 11px;
-    min-height: 22px;
+    height: 100%;
+    font-size: 16px;
   }
   .bv-main-learning {
-    gap: 21px;
+    gap: 24px;
   }
   .bv-dashboard-layout {
-    gap: 20px;
+    gap: 24px;
   }
 }

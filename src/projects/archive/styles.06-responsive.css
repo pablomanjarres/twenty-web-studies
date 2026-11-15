@@ -4,46 +4,38 @@
   }
   .archive-look-picker {
     width: 100%;
-    justify-content: space-between;
   }
   .archive-look-picker button {
     flex: 1;
   }
-  .archive-look-picker button > span {
-    margin-left: auto;
-  }
 }
 @media (max-width: 760px) {
   .archive-header {
-    top: 17px;
+    top: 8px;
     left: 5%;
     right: 5%;
     gap: 12px;
+    font-size: 13px;
   }
   .archive-header > span {
     display: none;
   }
   .archive-header nav {
-    gap: 21px;
-    font-size: 10px;
+    gap: 20px;
   }
   .archive-header .brand-logo svg {
     width: 22px;
   }
   .archive-bag {
-    margin-left: 12px;
+    margin-left: 8px;
     gap: 8px;
-    font-size: 10px;
   }
   .archive-hero {
-    height: 100svh;
-    min-height: 720px;
-  }
-  .archive-campaign-image {
-    bottom: 135px;
+    --ar-strip: 104px;
+    min-height: 680px;
   }
   .archive-campaign-image img {
-    object-position: 81% top;
+    object-position: 79% top;
   }
   .archive-edge-identity {
     left: 5%;
@@ -52,54 +44,37 @@
   }
   .archive-season-label {
     left: 5%;
-    bottom: 212px;
-  }
-  .archive-season-label > span {
-    font-size: 6px;
-  }
-  .archive-season-label p {
-    font-size: 18px;
-    margin-top: 12px;
+    bottom: calc(var(--ar-strip) + 96px);
   }
   .archive-shop-look {
     right: 5%;
-    bottom: 173px;
-    font-size: 10px;
-    gap: 17px;
-    padding: 14px 13px;
+    bottom: calc(var(--ar-strip) + 24px);
+    min-width: 0;
+    gap: 18px;
+    padding: 14px 18px;
+    font-size: 14px;
   }
   .archive-look-strip {
-    min-height: 135px;
-    padding: 23px 5%;
+    padding: 16px 5%;
   }
   .archive-look-picker {
-    gap: 14px;
-    align-items: start;
+    gap: 12px;
   }
   .archive-look-picker button {
-    display: grid;
-    grid-template-columns: 52px 1fr;
-    gap: 9px;
+    gap: 12px;
     padding: 0 12px 0 0;
     min-width: 0;
   }
   .archive-look-picker img {
+    flex: none;
     width: 52px;
-    height: 73px;
-    grid-row: span 2;
-  }
-  .archive-look-picker small {
-    font-size: 6px;
+    height: 68px;
   }
   .archive-look-picker b {
-    font-size: 10px;
-    line-height: 1.4;
-    margin-top: 5px;
+    font-size: 15px;
+    margin-top: 4px;
   }
-  .archive-look-picker button > span {
-    display: none;
-  }
-  .archive-look-picker button[aria-pressed="true"]::after {
+  .archive-look-picker button::after {
     width: 52px;
     bottom: -8px;
   }
