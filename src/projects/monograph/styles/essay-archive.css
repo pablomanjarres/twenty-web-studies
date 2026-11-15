@@ -4,27 +4,47 @@
 .monograph-essay-intro {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 90px;
-  padding: 42px 0;
+  gap: 80px;
+  padding: 48px 0;
 }
 .monograph-essay-intro h2 {
-  font-size: 62px;
+  font-size: clamp(44px, 4.4vw, 64px);
   line-height: 0.99;
   letter-spacing: -0.04em;
   color: var(--mono-blue);
 }
 .monograph-essay-intro p {
-  font-size: 14px;
-  line-height: 1.9;
+  font-size: 17px;
+  line-height: 1.75;
   margin-bottom: 20px;
-  max-width: 35em;
+  max-width: 34em;
+  text-wrap: pretty;
 }
-.monograph-essay-intro button {
+.monograph-essay-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
   border: 0;
   border-bottom: 1px solid var(--mono-ink);
   background: transparent;
-  padding: 0 0 6px;
-  font-size: 11px;
+  padding: 0;
+  font-size: 14px;
+  transition:
+    color 200ms var(--mono-ease),
+    border-color 200ms var(--mono-ease),
+    box-shadow 200ms var(--mono-ease);
+}
+.monograph-essay-link:hover {
+  color: var(--mono-blue);
+  border-color: var(--mono-blue);
+  box-shadow: 0 1px 0 var(--mono-blue);
+}
+.monograph-essay-link:hover .monograph-arrow {
+  transform: translate(2px, -2px);
+}
+.monograph-essay-link:active {
+  opacity: 0.7;
 }
 .monograph-visual-essay figure img {
   width: 100%;
@@ -34,39 +54,51 @@
 .monograph-visual-essay figcaption {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
-  padding-top: 10px;
-  font-size: 9px;
+  align-items: baseline;
+  gap: 24px;
+  padding-top: 12px;
 }
-.monograph-visual-essay figcaption .monograph-credit {
-  margin: 0;
+.monograph-figure-caption {
+  font-size: 13px;
+  line-height: 1.45;
 }
 .monograph-archive {
-  padding-bottom: 85px;
+  padding-bottom: 80px;
   scroll-margin-top: 20px;
 }
 .monograph-archive h2 {
-  font-size: 43px;
-  margin: 27px 0 32px;
+  font-size: 44px;
+  line-height: 1.04;
+  margin: 24px 0 32px;
 }
 .monograph-archive > div:last-child {
   border-top: 1px solid var(--mono-rule);
 }
 .monograph-archive a {
-  padding: 25px 0;
+  min-height: 88px;
+  padding: 24px 0;
   border-bottom: 1px solid var(--mono-rule);
   display: grid;
-  grid-template-columns: 180px 1fr 170px 15px;
-  gap: 20px;
+  grid-template-columns: 210px 1fr 190px 20px;
+  gap: 24px;
   align-items: center;
 }
 .monograph-archive a > span {
-  font-size: 10px;
-  line-height: 1.7;
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--mono-pencil);
+  font-variant-numeric: tabular-nums;
+}
+.monograph-archive a > .monograph-arrow {
+  color: inherit;
 }
 .monograph-archive h3 {
-  font-size: 25px;
+  font-size: 26px;
+  line-height: 1.15;
 }
-.monograph-archive a:hover h3 {
-  color: var(--mono-blue);
+.monograph-archive a:focus-visible {
+  outline-offset: 2px;
+}
+.monograph-archive a.monograph-link {
+  text-decoration: none;
 }
