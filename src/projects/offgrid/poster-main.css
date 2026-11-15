@@ -41,20 +41,27 @@
   margin-left: auto;
   color: var(--fg-on-blue-2);
 }
-.fg-cta {
+/* Label control shared by the nav CTA and the Next project button. */
+.fg-control {
   display: inline-flex;
   align-items: center;
   gap: 10px;
   height: 40px;
   padding: 0 14px;
-  border: 1px solid var(--fg-on-blue-line);
+  border: 1px solid;
   border-radius: 2px;
   background: none;
-  color: var(--fg-milk);
   white-space: nowrap;
   transition:
     background-color 160ms ease-out,
+    border-color 160ms ease-out,
     color 160ms ease-out;
+}
+.fg-control:active {
+  translate: 0 1px;
+}
+.fg-cta {
+  border-color: var(--fg-on-blue-line);
 }
 .offgrid-v2 .fg-cta {
   color: var(--fg-milk);
@@ -63,9 +70,6 @@
 .offgrid-v2 .fg-cta:focus-visible {
   background: var(--fg-milk);
   color: var(--fg-blue);
-}
-.fg-cta:active {
-  translate: 0 1px;
 }
 .fg-cta-short {
   display: none;

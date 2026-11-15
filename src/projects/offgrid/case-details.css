@@ -51,18 +51,7 @@
   margin: 0 0 16px;
 }
 .fg-next {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  height: 40px;
-  padding: 0 14px;
-  border: 1px solid var(--fg-on-ink-label);
-  border-radius: 2px;
-  background: none;
-  white-space: nowrap;
-  transition:
-    background-color 160ms ease-out,
-    color 160ms ease-out;
+  border-color: var(--fg-on-ink-label);
 }
 .offgrid-v2 .fg-next {
   color: #ecebdf;
@@ -71,9 +60,6 @@
   background: var(--fg-milk);
   border-color: var(--fg-milk);
   color: #20221f;
-}
-.fg-next:active {
-  translate: 0 1px;
 }
 .fg-next svg {
   transition: translate 200ms var(--fg-ease);

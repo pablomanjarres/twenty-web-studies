@@ -90,7 +90,10 @@ export function ProjectStage({
       <div key={`details-${project.id}`} className="fg-case-details">
         <div className="fg-case-head">
           <h2>{project.name}</h2>
-          <button className="fg-next" onClick={() => onSelect(next.id)}>
+          <button
+            className="fg-control fg-next"
+            onClick={() => onSelect(next.id)}
+          >
             Next: {next.name}
             <ArrowRight size={16} aria-hidden="true" />
           </button>

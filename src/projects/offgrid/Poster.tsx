@@ -18,7 +18,7 @@ export function Poster({
           <br />
           GOOD IDEAS, OUT IN THE WORLD.
         </span>
-        <button className="fg-cta" onClick={onBrief}>
+        <button className="fg-control fg-cta" onClick={onBrief}>
           <span className="fg-cta-long">Have something in mind?</span>
           <span className="fg-cta-short">Start a brief</span>
           <ArrowDownRight size={16} aria-hidden="true" />
