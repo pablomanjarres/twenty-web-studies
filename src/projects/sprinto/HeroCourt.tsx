@@ -1,5 +1,10 @@
 import { rallyImage, type BookingState } from "./data";
 import { BookingPanel } from "./BookingPanel";
+const clubFacts = [
+  "Bring your people",
+  "Rackets at the desk",
+  "Open daily 07:00 to 22:00",
+];
 export function HeroCourt({
   booking,
   update,
@@ -19,24 +24,19 @@ export function HeroCourt({
           alt="A golden-hour padel rally on a violet glass-enclosed court"
         />
         <div className="sp-scene-title">
-          <span>YOUR CLUB. YOUR COURT.</span>
+          <span className="sp-eyebrow">Your club. Your court.</span>
           <h1>
             Meet you
             <br />
             at the net.
           </h1>
-          <p>A court, a racket, a reason to get out.</p>
         </div>
         <div className="sp-court-caption">
-          <span>
-            <i />
-            OPEN UNTIL 22:00
+          <span className="sp-eyebrow">
+            <i aria-hidden="true" />
+            Open until 22:00
           </span>
-          <p>
-            Four panoramic courts.
-            <br />
-            One very good way to spend your evening.
-          </p>
+          <p>Four panoramic courts. A court, a racket, a reason to get out.</p>
         </div>
         <BookingPanel
           booking={booking}
@@ -45,11 +45,11 @@ export function HeroCourt({
           confirm={confirm}
         />
       </div>
-      <div className="sp-club-strip">
-        <span>Bring your people.</span>
-        <span>Rackets available at the club.</span>
-        <span>Play more. Scroll less. ↗</span>
-      </div>
+      <ul className="sp-club-strip">
+        {clubFacts.map((fact) => (
+          <li key={fact}>{fact}</li>
+        ))}
+      </ul>
     </section>
   );
 }
