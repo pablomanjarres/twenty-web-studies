@@ -11,6 +11,7 @@
   --sl-field: #eef4f6;
   --sl-line: #18344533;
   --sl-leader: #18344559;
+  --sl-display: "Tahoe", "Fraunces", serif;
   --sl-ease: cubic-bezier(0.2, 0.7, 0.2, 1);
   --sl-label: 400 12px/1.4 "IBM Plex Mono", monospace;
   --sl-meta: 400 14px/1.5 "DM Sans", sans-serif;
@@ -51,8 +52,8 @@
   font-size: 31px;
   color: var(--sl-paper);
 }
-.sl-header .brand-logo > span {
-  font-family: "Tahoe", "Fraunces", serif;
+.salt .brand-logo > span {
+  font-family: var(--sl-display);
   font-weight: 400;
   letter-spacing: -0.025em;
 }
@@ -172,10 +173,7 @@
   color: var(--sl-ink-2);
 }
 .sl-menu-masthead h1 {
-  font:
-    400 clamp(38px, 3vw + 12px, 56px) / 1.05 "Tahoe",
-    "Fraunces",
-    serif;
+  font: 400 clamp(38px, 3vw + 12px, 56px) / 1.05 var(--sl-display);
   letter-spacing: -0.035em;
   color: var(--sl-navy);
   margin-top: 16px;

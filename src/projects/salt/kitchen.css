@@ -38,10 +38,7 @@
   color: var(--sl-on-sea-2);
 }
 .sl-kitchen-story h2 {
-  font:
-    400 clamp(36px, 2.4vw + 10px, 52px) / 1.08 "Tahoe",
-    "Fraunces",
-    serif;
+  font: 400 clamp(36px, 2.4vw + 10px, 52px) / 1.08 var(--sl-display);
   letter-spacing: -0.035em;
   margin: 24px 0;
   color: var(--sl-butter);

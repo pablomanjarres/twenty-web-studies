@@ -10,10 +10,6 @@
   font-size: 29px;
   color: var(--sl-red);
 }
-.sl-footer .brand-logo > span {
-  font-family: "Tahoe", "Fraunces", serif;
-  font-weight: 400;
-}
 .sl-footer > span {
   font: var(--sl-meta);
   font-size: 15px;

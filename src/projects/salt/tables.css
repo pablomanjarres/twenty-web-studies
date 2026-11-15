@@ -13,10 +13,7 @@
   justify-self: end;
 }
 .sl-tables h2 {
-  font:
-    400 clamp(40px, 3.4vw + 8px, 60px) / 1.05 "Tahoe",
-    "Fraunces",
-    serif;
+  font: 400 clamp(40px, 3.4vw + 8px, 60px) / 1.05 var(--sl-display);
   letter-spacing: -0.035em;
   margin: 24px 0;
 }
