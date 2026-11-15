@@ -4,10 +4,10 @@ import { image, type Trail } from "./data";
 export function JourneyPhoto({ trail }: { trail: Trail }) {
   return (
     <div className="wf-journey-photo">
-      <img src={image(trail.image)} alt={trail.imageAlt} />
+      <img key={trail.image} src={image(trail.image)} alt={trail.imageAlt} />
       <div className="wf-photo-invitation">
         <span>
-          <Footprints size={17} /> Small-group walking journeys
+          <Footprints size={16} /> Small-group walking journeys
         </span>
         <h1>
           Take the
@@ -22,7 +22,11 @@ export function JourneyPhoto({ trail }: { trail: Trail }) {
       </div>
       <div className="wf-photo-caption">
         <span>{trail.region}</span>
-        <a href="#field-notes" aria-label="Read walking field notes">
+        <a
+          href="#field-notes"
+          className="wf-round-control is-dark"
+          aria-label="Read walking field notes"
+        >
           <ArrowDown size={20} />
         </a>
       </div>

@@ -3,9 +3,42 @@
   --est-plum: #211419;
   --est-gold: #d5be98;
   --est-rule: #c9bfaf;
+  --est-ink-2: #605555;
+  --est-paper: #f8f4ec;
+  --est-ivory-2: #b4aba4;
+  --est-ease: cubic-bezier(0, 0, 0.2, 1);
+  --est-gutter: 70px;
+  --est-section-end: 96px;
+  --est-label-gap: 48px;
+  --est-h2: clamp(32px, 2.2vw + 12px, 44px);
   background: var(--est-ivory);
   color: var(--est-plum);
   font-family: "DM Sans", sans-serif;
+}
+@media (min-width: 1600px) {
+  .estelle-page {
+    --est-gutter: 110px;
+  }
+}
+@media (max-width: 1100px) {
+  .estelle-page {
+    --est-gutter: 40px;
+  }
+}
+@media (max-width: 760px) {
+  .estelle-page {
+    --est-gutter: 20px;
+    --est-section-end: 64px;
+    --est-label-gap: 32px;
+  }
+}
+@keyframes est-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 .estelle-page * {
   box-sizing: border-box;
@@ -22,11 +55,18 @@
 .estelle-page h3 {
   font-family: "The Foriene", serif;
   font-weight: 400;
+  text-wrap: balance;
+}
+.estelle-page h2 {
+  font-size: var(--est-h2);
+  line-height: 1.12;
+  letter-spacing: -0.01em;
 }
 .estelle-page button,
 .estelle-page input,
 .estelle-page select {
   font: inherit;
+  color: inherit;
 }
 .estelle-page button {
   cursor: pointer;
@@ -38,61 +78,138 @@
 .estelle-page a {
   color: inherit;
   text-decoration: none;
+  transition: opacity 300ms var(--est-ease);
+}
+.estelle-page a:hover {
+  opacity: 0.7;
+}
+.estelle-arrow {
+  display: inline-block;
+  transition: transform 300ms var(--est-ease);
+}
+a:hover > .estelle-arrow {
+  transform: translateY(2px);
+}
+a:hover > .estelle-arrow-up {
+  transform: translateY(-2px);
 }
 .estelle-page button:focus-visible,
 .estelle-page a:focus-visible,
 .estelle-page input:focus-visible,
 .estelle-page select:focus-visible {
-  outline: 1px solid var(--est-plum);
-  outline-offset: 5px;
+  outline: 2px solid var(--est-plum);
+  outline-offset: 3px;
 }
-.estelle-header {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  align-items: center;
-  padding: 26px 42px;
-  font-size: 10px;
-  letter-spacing: 0.02em;
-}
-.estelle-header > span {
-  text-align: center;
-}
-.estelle-header > a:last-child {
-  text-align: right;
-}
-.estelle-section-label {
-  border-top: 1px solid var(--est-rule);
-  padding-top: 18px;
-  display: flex;
-  justify-content: space-between;
-  gap: 25px;
-  font-size: 9px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-.estelle-micro {
-  font-size: 9px;
+
+/* Type roles */
+.estelle-section-label,
+.estelle-micro,
+.estelle-exhibit-line,
+.estelle-piece-number,
+.estelle-page dt,
+.estelle-visit-row label {
+  font-size: 12px;
+  line-height: 1.4;
+  font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
+.estelle-page figcaption {
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+  color: var(--est-ink-2);
+}
+.estelle-header,
+.estelle-page dd,
 .estelle-footer {
-  padding: 30px 42px;
+  font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+}
+.estelle-prose p {
+  font-size: 16px;
+  line-height: 1.65;
+  max-width: 34em;
+  text-wrap: pretty;
+}
+.estelle-prose p + p {
+  margin-top: 16px;
+}
+
+.estelle-header {
+  position: relative;
+  padding: 12px var(--est-gutter);
+}
+.estelle-header nav {
   display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+.estelle-header a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+}
+.estelle-header > span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--est-ink-2);
+  white-space: nowrap;
+}
+.estelle-section-label {
+  border-top: 1px solid var(--est-rule);
+  padding-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px 24px;
+}
+.estelle-footer {
+  padding: 72px var(--est-gutter) 0;
+}
+.estelle-colophon {
+  display: grid;
+  justify-items: center;
+  gap: 16px;
+  text-align: center;
+}
+.estelle-colophon .brand-logo {
+  flex-direction: column;
+  gap: 16px;
+}
+.estelle-colophon .brand-logo svg {
+  width: 32px;
+  height: 32px;
+}
+.estelle-colophon .brand-logo > span {
+  font-family: "The Foriene", serif;
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+.estelle-colophon p {
+  color: var(--est-ink-2);
+}
+.estelle-footer-row {
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 30px;
-  font-size: 9px;
+  gap: 0 24px;
+  margin-top: 48px;
+  padding: 8px 0 24px;
+  border-top: 1px solid var(--est-rule);
 }
-.estelle-footer .brand-logo {
-  display: flex;
+.estelle-footer-row a {
+  display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
+  min-height: 44px;
 }
-.estelle-footer .brand-logo svg {
-  width: 23px;
-  height: 23px;
-}
-.estelle-footer .brand-logo > span {
-  font-family: "The Foriene", serif;
-  font-size: 25px;
+.estelle-footer-row > span {
+  color: var(--est-ink-2);
 }

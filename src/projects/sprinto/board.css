@@ -1,23 +1,55 @@
 .sp-availability {
-  padding: 65px 5% 75px;
+  padding: 96px 5%;
 }
-.sp-availability .sp-section-head > p > span {
+.sp-board-meta {
+  display: grid;
+  justify-items: end;
+  gap: 12px;
+}
+.sp-board-meta > p:first-child {
+  font:
+    500 18px/1.4 "DM Sans",
+    sans-serif;
+}
+.sp-legend {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  color: var(--sp-muted);
+}
+.sp-legend li {
   display: flex;
   align-items: center;
-  justify-content: end;
   gap: 8px;
-  font-size: 9px;
-  margin-top: 12px;
 }
-.sp-availability .sp-section-head i {
-  width: 9px;
-  height: 9px;
+.sp-legend i {
+  display: grid;
+  place-items: center;
+  width: 16px;
+  height: 16px;
+}
+.sp-mark-open {
+  background: var(--sp-open);
+}
+.sp-mark-open:after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
   background: var(--sp-violet);
-  display: inline-block;
 }
-.sp-availability .sp-section-head .sp-occupied {
-  background: #dddae4;
-  margin-left: 12px;
+.sp-mark-booked {
+  border: 1px dashed #19152d59;
+}
+.sp-mark-pick {
+  background: var(--sp-violet);
+}
+.sp-swipe-hint {
+  display: none;
+  color: var(--sp-muted);
 }
 .sp-board-scroll {
   overflow-x: auto;
@@ -28,101 +60,161 @@
   min-width: 650px;
 }
 .sp-board-scroll thead th {
-  font:
-    10px "IBM Plex Mono",
-    monospace;
+  font: var(--sp-eyebrow-font);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   text-align: left;
-  color: #7e788b;
-  font-weight: 400;
+  color: var(--sp-muted);
   padding: 0 0 16px;
 }
 .sp-board-scroll tbody th {
   text-align: left;
-  font-size: 15px;
-  font-weight: 500;
-  border-top: 1px solid #19152d20;
+  font: var(--sp-ui-font);
+  border-top: 1px solid var(--sp-rule);
   width: 210px;
-  padding: 20px 0;
+  padding: 16px 12px 16px 0;
 }
 .sp-board-scroll th small {
   display: block;
-  font-size: 10px;
-  color: #7e788b;
-  margin-top: 5px;
-  font-weight: 400;
+  font:
+    400 14px/1.4 "DM Sans",
+    sans-serif;
+  color: var(--sp-muted);
+  margin-top: 4px;
 }
 .sp-board-scroll td {
-  border-top: 1px solid #19152d20;
-  padding: 8px 7px 8px 0;
+  border-top: 1px solid var(--sp-rule);
+  padding: 8px 8px 8px 0;
 }
 .sp-board-scroll td button {
-  border: 1px solid #6535f440;
-  background: #6535f413;
+  border: 1px solid transparent;
+  background: var(--sp-open);
   color: var(--sp-violet);
   width: 100%;
   height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  place-items: center;
+}
+.sp-board-scroll td button:focus-visible {
+  outline-offset: 2px;
+}
+.sp-board-scroll td button > * {
+  grid-area: 1 / 1;
+}
+.sp-board-scroll td button > i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+}
+.sp-board-scroll td button > svg {
+  opacity: 0;
+}
+.sp-board-scroll td button:not(:disabled):hover,
+.sp-board-scroll td button:not(:disabled):focus-visible {
+  background: var(--sp-violet);
+  color: #fff;
+}
+.sp-board-scroll td button:hover > i,
+.sp-board-scroll td button:focus-visible > i {
+  opacity: 0;
+}
+.sp-board-scroll td button:hover > svg,
+.sp-board-scroll td button:focus-visible > svg,
+.sp-board-scroll td button[aria-pressed="true"] > svg {
+  opacity: 1;
 }
 .sp-board-scroll td button[aria-pressed="true"] {
   background: var(--sp-violet);
   color: var(--sp-lime);
 }
 .sp-board-scroll td button:disabled {
-  border-color: #19152d09;
-  background: #dddae466;
-  color: #aaa4b2;
+  border: 1px dashed #19152d26;
+  background: transparent;
   cursor: not-allowed;
 }
 .sp-matches {
-  padding: 70px 5%;
+  padding: 96px 5%;
   background: var(--sp-ink);
   color: var(--sp-paper);
 }
 .sp-matches .sp-section-head > p {
-  opacity: 0.65;
+  color: var(--sp-muted-dark);
 }
 .sp-fixtures article {
+  position: relative;
   border-top: 1px solid #f2f0f730;
   display: grid;
-  grid-template-columns: 140px 1fr 100px 35px;
-  gap: 25px;
+  grid-template-columns: 160px 1fr 140px 44px;
+  gap: 24px;
   align-items: center;
-  padding: 25px 0;
+  padding: 28px 0;
+  transition: background-color var(--sp-fast) var(--sp-ease);
 }
 .sp-fixtures article:last-child {
   border-bottom: 1px solid #f2f0f730;
 }
+.sp-fixtures article:hover,
+.sp-fixtures article:focus-within {
+  background: #f2f0f70d;
+  box-shadow: 0 0 0 16px #f2f0f70d;
+  clip-path: inset(0 -16px);
+}
 .sp-fixture-date {
-  font:
-    10px "IBM Plex Mono",
-    monospace;
   color: var(--sp-lime);
 }
 .sp-fixture-date strong {
   display: block;
   font:
-    400 27px "Anton",
+    400 36px/1 "Anton",
     sans-serif;
-  margin-top: 5px;
+  margin-top: 8px;
 }
 .sp-fixtures h3 {
-  font-size: 23px;
-  font-weight: 400;
-  letter-spacing: -0.03em;
+  font:
+    500 24px/1.15 "DM Sans",
+    sans-serif;
+  letter-spacing: -0.01em;
+  transition: color var(--sp-fast) var(--sp-ease);
+}
+.sp-fixtures article:hover h3,
+.sp-fixtures article:focus-within h3 {
+  color: var(--sp-lime);
 }
 .sp-fixtures p {
-  font-size: 11px;
-  opacity: 0.6;
-  margin-top: 7px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--sp-muted-dark);
+  margin-top: 8px;
 }
-.sp-fixtures article > span {
-  font-size: 11px;
+.sp-places {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+.sp-places i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--sp-lime);
 }
 .sp-fixtures article > a {
+  position: static;
   color: var(--sp-lime);
   display: grid;
   place-items: center;
   min-height: 44px;
+}
+.sp-fixtures article > a:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+.sp-fixtures article > a:focus-visible {
+  outline: 0;
+}
+.sp-fixtures article:has(a:focus-visible) {
+  outline: 3px solid var(--sp-lime);
+  outline-offset: -3px;
 }

@@ -1,100 +1,91 @@
 @media (max-width: 1100px) {
+  .cinder-poster-title p {
+    font-size: 16px;
+    max-width: 26ch;
+  }
   .cinder-main-package {
     width: 545px;
     height: 545px;
-    top: 15px;
-  }
-  .cinder-poster-title h1 {
-    font-size: 57px;
-  }
-  .cinder-tasting {
-    right: 7%;
-    width: 20%;
+    top: 40px;
   }
   .cinder-tasting > span:not(.cinder-label) {
-    font-size: 26px;
+    font-size: 28px;
+  }
+  .cinder-poster-floor {
+    justify-content: flex-start;
+  }
+  .cinder-poster-floor > span:first-child {
+    display: none;
   }
 }
 @media (min-width: 761px) and (max-width: 900px) {
-  .cinder-poster-title h1 {
-    font-size: clamp(40px, 5.3vw, 48px);
-  }
   .cinder-main-package {
     width: 54vw;
     height: 54vw;
-    top: 60px;
+    top: 120px;
+  }
+  .cinder-variants button {
+    width: 80px;
   }
 }
 @media (max-width: 760px) {
   .cinder-roast-poster {
     height: auto;
-    padding-top: 450px;
+    padding-top: 452px;
   }
   .cinder-poster-title {
-    left: 5%;
+    left: var(--cinder-gutter);
+    right: var(--cinder-gutter);
     top: 24px;
-    width: 47%;
+    width: auto;
   }
   .cinder-poster-title .cinder-label {
-    font-size: 7px;
-    max-width: 125px;
+    max-width: 190px;
   }
   .cinder-poster-title h1 {
-    font-size: 42px;
-    line-height: 1.05;
-    margin: 12px 0;
-    max-width: 170px;
+    font-size: 48px;
+    margin: 40px 0 0;
   }
   .cinder-poster-title p {
     display: none;
   }
   .cinder-main-package {
-    width: 375px;
-    height: 375px;
-    top: 70px;
-    left: 51%;
+    width: 330px;
+    height: 330px;
+    top: 128px;
+    left: 50%;
     transform: translateX(-50%) rotate(-9deg);
   }
   .cinder-variants {
-    top: 23px;
-    right: 5%;
+    top: 20px;
     gap: 4px;
   }
-  .cinder-variants button,
-  .cinder-variants img {
-    width: 32px;
+  .cinder-variants button {
+    width: 44px;
+    min-height: 44px;
   }
   .cinder-variants img {
-    height: 47px;
+    width: 44px;
+    height: 52px;
   }
-  .cinder-variants span {
-    font-size: 6px;
+  .cinder-variants .cinder-label {
+    margin-top: 2px;
+    padding-bottom: 2px;
   }
-  .cinder-origin-label {
-    position: static;
-    width: auto;
-  }
-  .cinder-origin-label .cinder-label {
-    font-size: 7px;
-  }
-  .cinder-origin-label strong {
-    font-size: 20px;
-    margin: 9px 0;
-  }
-  .cinder-origin-label > span:last-child {
-    font-size: 8px;
-  }
+  .cinder-origin-label,
   .cinder-tasting {
     position: static;
     width: auto;
   }
+  .cinder-origin-label strong {
+    font-size: 24px;
+    margin: 8px 0;
+  }
   .cinder-tasting .cinder-label {
-    font-size: 7px;
     margin-bottom: 8px;
   }
   .cinder-tasting > span:not(.cinder-label) {
-    font-size: 19px;
-    line-height: 1.35;
+    font-size: 22px;
   }
   .cinder-poster-floor {
     display: none;
@@ -103,12 +94,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 24px;
-    padding: 20px 5% 27px;
+    padding: 16px var(--cinder-gutter);
     border-top: 1px solid #f4ebda45;
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  .cinder-variants button {
-    transition: none;
   }
 }

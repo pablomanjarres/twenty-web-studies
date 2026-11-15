@@ -20,7 +20,7 @@ export function Appointment({
         <div>
           <span className="estelle-micro">A personal viewing</span>
           <h2>Come closer.</h2>
-          <p>
+          <p className="estelle-visit-intro">
             See the piece in natural light. Feel its weight, try its
             proportions, and talk through the details at your own pace.
           </p>
@@ -72,6 +72,7 @@ export function Appointment({
             <label>
               A quiet hour
               <select
+                className="estelle-time"
                 value={time}
                 onChange={(event) => setTime(event.target.value)}
               >
@@ -82,7 +83,7 @@ export function Appointment({
             </label>
           </div>
           <button type="submit">
-            Keep my viewing notes <span>↗</span>
+            Keep my viewing notes <span aria-hidden="true">→</span>
           </button>
           <p className="estelle-visit-status" role="status">
             {saved

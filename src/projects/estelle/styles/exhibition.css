@@ -1,54 +1,53 @@
 .estelle-exhibition {
-  padding: 17px 70px 62px;
+  --est-object-h: clamp(420px, calc(100svh - 340px), 575px);
+  padding: 16px var(--est-gutter) var(--est-section-end);
 }
 .estelle-exhibit-line {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  font-size: 8px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  padding-bottom: 25px;
+  gap: 8px 16px;
+  padding-bottom: 24px;
 }
 .estelle-apertures {
   display: grid;
   grid-template-columns: 1.2fr 130px 1fr;
   align-items: center;
-  gap: 26px;
+  gap: 24px;
 }
 .estelle-aperture img {
   width: 100%;
   object-fit: cover;
+  animation: est-fade 360ms var(--est-ease) both;
 }
 .estelle-object img {
-  height: 575px;
+  height: var(--est-object-h);
 }
 .estelle-worn {
-  padding-top: 33px;
+  padding-top: 32px;
 }
 .estelle-worn img {
-  height: 480px;
+  height: calc(var(--est-object-h) * 0.84);
   object-position: center 40%;
 }
 .estelle-aperture figcaption {
   display: flex;
   justify-content: space-between;
-  gap: 15px;
-  padding-top: 10px;
-  font-size: 8px;
-  line-height: 1.6;
+  gap: 16px;
+  padding-top: 8px;
 }
 .estelle-centre-mark {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 50px;
-  padding-bottom: 25px;
+  gap: 48px;
+  padding-bottom: 24px;
 }
 .estelle-centre-mark .brand-logo {
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 35px;
+  gap: 32px;
 }
 .estelle-centre-mark .brand-logo svg {
   width: 38px;
@@ -61,62 +60,114 @@
   letter-spacing: 0.025em;
 }
 .estelle-centre-mark > span {
-  font-size: 8px;
+  font-size: 12px;
   text-transform: uppercase;
   text-align: center;
-  line-height: 1.9;
-  letter-spacing: 0.1em;
+  line-height: 1.5;
+  letter-spacing: 0.08em;
+  color: var(--est-ink-2);
 }
+
+/* Purchase strip: name, material, price, one action */
 .estelle-exhibit-footer {
   display: grid;
-  grid-template-columns: 1fr 1fr auto;
-  gap: 40px;
+  grid-template-columns: 1.2fr 1fr auto;
+  grid-template-areas:
+    "title metals price"
+    "title metals actions";
+  column-gap: 24px;
+  row-gap: 8px;
   align-items: end;
-  padding-top: 29px;
+  margin-top: 24px;
+  padding-top: 32px;
+  border-top: 1px solid var(--est-rule);
+}
+.estelle-exhibit-title {
+  grid-area: title;
 }
 .estelle-exhibit-footer h1 {
-  font-size: 35px;
-  line-height: 1.1;
-  margin: 12px 0 7px;
+  font-size: clamp(44px, 3.4vw + 16px, 64px);
+  line-height: 1;
+  letter-spacing: -0.015em;
+  margin: 12px 0 8px;
 }
-.estelle-exhibit-footer p {
-  font-size: 11px;
+.estelle-exhibit-title p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+.estelle-metals {
+  grid-area: metals;
 }
 .estelle-metals > div {
   display: flex;
-  gap: 18px;
-  flex-wrap: wrap;
-  margin-top: 16px;
+  margin-top: 12px;
 }
 .estelle-metal {
   display: flex;
   align-items: center;
-  gap: 7px;
+  gap: 10px;
+  min-height: 44px;
+  padding: 0 16px;
   background: transparent;
-  border: 0;
-  border-bottom: 1px solid transparent;
-  padding: 0 0 6px;
-  font-size: 10px !important;
+  border: 1px solid var(--est-rule);
+  border-radius: 0;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  transition: background-color 300ms var(--est-ease);
+}
+.estelle-metal + .estelle-metal {
+  margin-left: -1px;
+}
+.estelle-metal:hover {
+  background: var(--est-paper);
 }
 .estelle-metal[aria-pressed="true"] {
+  position: relative;
+  z-index: 1;
   border-color: var(--est-plum);
+  background: var(--est-paper);
+  font-weight: 500;
 }
 .estelle-metal > span {
-  width: 9px;
-  height: 9px;
+  flex: none;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
+  border: 1px solid rgba(33, 20, 25, 0.2);
   background: linear-gradient(135deg, #b08445, #ecd8a4, #a06d22);
 }
 .estelle-metal-silver > span {
   background: linear-gradient(135deg, #aaa, #f8f6ee, #999);
 }
 .estelle-exhibit-price {
-  display: grid;
-  text-align: right;
-  gap: 17px;
-  font-size: 10px;
+  grid-area: price;
+  justify-self: end;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  font-variant-numeric: tabular-nums;
 }
-.estelle-exhibit-price a {
-  border-bottom: 1px solid var(--est-plum);
-  padding-bottom: 6px;
+.estelle-exhibit-actions {
+  grid-area: actions;
+  display: flex;
+  justify-content: flex-end;
+  gap: 24px;
+  font-size: 14px;
+  white-space: nowrap;
+}
+.estelle-exhibit-actions a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+}
+.estelle-exhibit-actions a:first-child {
+  color: var(--est-ink-2);
+}
+.estelle-exhibit-actions a:last-child {
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 6px;
 }

@@ -5,10 +5,12 @@ import { brand } from "../brand";
 export function Contact() {
   return (
     <footer className="forma-contact" id="contact">
-      <span>A conversation is a good place to start.</span>
+      <span className="forma-label">
+        A conversation is a good place to start.
+      </span>
       <a className="forma-contact-title" href="mailto:studio@forma.example">
-        Let’s make room.
-        <ArrowUpRight />
+        <span>Let’s make room.</span>
+        <ArrowUpRight aria-hidden="true" />
       </a>
       <div className="forma-contact-bottom">
         <BrandLogo brand={brand} />

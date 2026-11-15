@@ -12,6 +12,10 @@ export function BookingPanel({
   confirm: () => void;
 }) {
   const court = courts[booking.court];
+  const day = days[booking.day];
+  const selection = `${day.day} ${day.date} Oct · ${booking.time} · ${booking.duration} min`;
+  const openCount = (dayIndex: number) =>
+    times.filter((t) => isAvailable(booking.court, t, dayIndex)).length;
   return (
     <form
       className="sp-booking"
@@ -21,22 +25,25 @@ export function BookingPanel({
       }}
     >
       <div className="sp-booking-heading">
-        <span>LET’S PLAY</span>
+        <span className="sp-eyebrow">Let’s play</span>
         <h2>Your next session.</h2>
-        <CalendarDays size={21} />
+        <CalendarDays size={22} aria-hidden="true" />
       </div>
-      <div className="sp-booking-days" aria-label="Select a day">
-        {days.map((d, i) => (
-          <button
-            type="button"
-            key={d.date}
-            aria-pressed={booking.day === i}
-            onClick={() => update({ day: i })}
-          >
-            <span>{d.day}</span>
-            <strong>{d.date}</strong>
-          </button>
-        ))}
+      <div className="sp-booking-days" role="group" aria-label="Select a day">
+        {days.map((d, i) => {
+          return (
+            <button
+              type="button"
+              key={d.date}
+              aria-pressed={booking.day === i}
+              onClick={() => update({ day: i })}
+            >
+              <span>{d.day}</span>
+              <strong>{d.date}</strong>
+              <small>{openCount(i)} open</small>
+            </button>
+          );
+        })}
       </div>
       <label className="sp-court-select">
         Your court
@@ -53,7 +60,7 @@ export function BookingPanel({
       </label>
       <fieldset className="sp-times">
         <legend>
-          Start time <span>October 2026</span>
+          Start time <span className="sp-eyebrow">Oct 2026</span>
         </legend>
         {times.map((time) => (
           <button
@@ -69,7 +76,7 @@ export function BookingPanel({
       </fieldset>
       <label className="sp-duration">
         <span>
-          <Clock size={15} />
+          <Clock size={16} aria-hidden="true" />
           Duration
         </span>
         <select
@@ -81,30 +88,39 @@ export function BookingPanel({
           <option value={120}>120 minutes</option>
         </select>
       </label>
-      <div className="sp-total">
-        <span>
-          {court.kind}
-          <small>Per court · up to 4 players</small>
-        </span>
-        <strong>£{(court.price * booking.duration) / 60}</strong>
+      <div className="sp-checkout">
+        <div className="sp-total">
+          <span>
+            {selection}
+            <small>
+              {court.name}
+              <span className="sp-court-kind"> · {court.kind}</span>
+            </small>
+          </span>
+          <strong>£{(court.price * booking.duration) / 60}</strong>
+        </div>
+        <button className="sp-confirm">
+          {confirmed ? (
+            <>
+              <span>
+                Session held<span className="sp-long"> in your plan</span>
+              </span>
+              <Check size={20} aria-hidden="true" />
+            </>
+          ) : (
+            <>
+              <span>
+                Reserve<span className="sp-long"> this court</span>
+              </span>
+              <ArrowUpRight size={20} aria-hidden="true" className="sp-nudge" />
+            </>
+          )}
+        </button>
       </div>
-      <button className="sp-confirm">
-        {confirmed ? (
-          <>
-            <span>Session held in your plan</span>
-            <Check size={20} />
-          </>
-        ) : (
-          <>
-            <span>Reserve this court</span>
-            <ArrowUpRight size={20} />
-          </>
-        )}
-      </button>
       <p className="sp-confirm-note" aria-live="polite">
         {confirmed
-          ? `${court.name} · ${days[booking.day].day} ${days[booking.day].date} Oct · ${booking.time} · ${booking.duration} min`
-          : "No membership needed. Just bring your game."}
+          ? `Held: ${court.name} · ${selection}`
+          : "Up to 4 players. No membership needed."}
       </p>
     </form>
   );

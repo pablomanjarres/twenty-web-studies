@@ -49,7 +49,7 @@ export function Exhibition({ piece, material, metal, onMetal }: Props) {
         </figure>
       </div>
       <div className="estelle-exhibit-footer">
-        <div>
+        <div className="estelle-exhibit-title">
           <span className="estelle-micro">
             No. {piece.number} / {piece.category}
           </span>
@@ -57,11 +57,14 @@ export function Exhibition({ piece, material, metal, onMetal }: Props) {
           <p>{piece.line}</p>
         </div>
         <div className="estelle-metals">
-          <span className="estelle-micro">The material</span>
-          <div>
+          <span className="estelle-micro" id="estelle-metal-label">
+            Material
+          </span>
+          <div role="group" aria-labelledby="estelle-metal-label">
             {piece.materials.map((item, index) => (
               <button
                 key={item.id}
+                type="button"
                 className={`estelle-metal estelle-metal-${item.id}`}
                 aria-pressed={index === metal}
                 onClick={() => onMetal(index)}
@@ -72,9 +75,17 @@ export function Exhibition({ piece, material, metal, onMetal }: Props) {
             ))}
           </div>
         </div>
-        <div className="estelle-exhibit-price">
-          <span>{price(material.price)}</span>
-          <a href="#estelle-material">A closer look ↓</a>
+        <p className="estelle-exhibit-price">{price(material.price)}</p>
+        <div className="estelle-exhibit-actions">
+          <a href="#estelle-material">
+            Material notes{" "}
+            <span className="estelle-arrow" aria-hidden="true">
+              ↓
+            </span>
+          </a>
+          <a href="#estelle-visit">
+            Arrange a viewing <span aria-hidden="true">→</span>
+          </a>
         </div>
       </div>
     </section>

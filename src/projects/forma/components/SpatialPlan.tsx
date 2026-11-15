@@ -56,7 +56,7 @@ export function SpatialPlan({ project }: { project: Project }) {
         </g>
       </svg>
       <figcaption>
-        <span>01 / A RELATIONSHIP OF ROOMS</span>
+        <span className="forma-label">01 / A relationship of rooms</span>
         <span>Concept diagram</span>
       </figcaption>
     </figure>

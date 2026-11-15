@@ -1,0 +1,76 @@
+.sprinto {
+  --sp-violet: #6535f4;
+  --sp-lime: #ddfc6b;
+  --sp-ink: #19152d;
+  --sp-paper: #f2f0f7;
+  --sp-cream: #f6f3e8;
+  --sp-muted: #5f586e;
+  --sp-muted-dark: #b5b3be;
+  --sp-muted-cream: #575361;
+  --sp-open: #e4ddf7;
+  --sp-hover-slot: #e1ddd0;
+  --sp-disabled: #7a7389;
+  --sp-rule: #19152d24;
+  --sp-ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --sp-fast: 180ms;
+  --sp-move: 240ms;
+  --sp-eyebrow-font: 400 13px/1.2 "IBM Plex Mono", monospace;
+  --sp-ui-font: 500 15px/1.25 "DM Sans", sans-serif;
+  --sp-h2-font: 400 clamp(40px, 4.4vw, 64px) / 0.95 "Anton", sans-serif;
+  --focus-color: var(--sp-ink);
+  color: var(--sp-ink);
+  background: var(--sp-paper);
+  font:
+    400 16px/1.55 "DM Sans",
+    sans-serif;
+}
+.sprinto h1,
+.sprinto h2,
+.sprinto h3,
+.sprinto p {
+  margin: 0;
+}
+.sprinto :focus-visible {
+  outline-offset: 3px;
+}
+.sp-header,
+.sp-court-stage,
+.sp-matches,
+.sp-footer {
+  --focus-color: var(--sp-lime);
+}
+.sp-booking,
+.sp-club {
+  --focus-color: var(--sp-ink);
+}
+.sprinto a,
+.sprinto button,
+.sprinto select {
+  transition:
+    color var(--sp-fast) var(--sp-ease),
+    background-color var(--sp-fast) var(--sp-ease),
+    border-color var(--sp-fast) var(--sp-ease),
+    text-decoration-color var(--sp-fast) var(--sp-ease),
+    transform var(--sp-move) var(--sp-ease);
+}
+.sprinto button:not(:disabled) {
+  cursor: pointer;
+}
+.sprinto button:not(:disabled):active {
+  transform: translateY(1px);
+}
+.sp-eyebrow {
+  font: var(--sp-eyebrow-font);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.sp-nudge {
+  transition: transform var(--sp-move) var(--sp-ease);
+}
+a:hover .sp-nudge,
+a:focus-visible .sp-nudge,
+button:hover .sp-nudge,
+article:hover .sp-nudge,
+article:focus-within .sp-nudge {
+  transform: translate(3px, -3px);
+}

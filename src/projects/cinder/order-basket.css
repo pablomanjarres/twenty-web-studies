@@ -1,25 +1,15 @@
 .cinder-order-strip {
   display: grid;
-  grid-template-columns: 1.5fr 0.6fr 1.05fr;
+  grid-template-columns: auto auto minmax(320px, 1fr);
   align-items: center;
-  gap: 35px;
-  padding: 25px 6%;
+  gap: 48px;
+  padding: 24px var(--cinder-gutter);
   border-bottom: 1px solid var(--cinder-line);
 }
 .cinder-grind-controls {
   display: flex;
   align-items: center;
-  gap: 25px;
-}
-.cinder-grind-controls > div {
-  display: flex;
-  gap: 4px;
-}
-.cinder-grind-controls button {
-  font-size: 11px;
-  padding: 9px 12px;
-  border: 1px solid var(--cinder-line);
-  white-space: nowrap;
+  gap: 24px;
 }
 .cinder-grind-controls button[aria-pressed="true"] {
   background: var(--cinder-ink);
@@ -28,39 +18,58 @@
 }
 .cinder-order-quantity {
   display: flex;
-  gap: 15px;
+  gap: 16px;
   align-items: center;
 }
 .cinder-order-quantity > .cinder-label {
-  font-size: 8px;
   white-space: nowrap;
 }
 .cinder-quantity {
   display: flex;
   align-items: center;
-  border: 1px solid var(--cinder-line);
+  border: 1px solid var(--cinder-control-line);
 }
 .cinder-quantity button {
-  width: 29px;
-  height: 36px;
+  width: 44px;
+  height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.cinder-quantity output {
-  width: 20px;
-  text-align: center;
-  font-size: 11px;
+.cinder-quantity button:not(:disabled):hover {
+  background: var(--cinder-tint);
 }
-.cinder-order-button {
+.cinder-quantity output {
+  width: 40px;
+  text-align: center;
+  font-size: 16px;
+}
+.cinder .cinder-order-button {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 18px;
-  background: var(--cinder-brick) !important;
-  color: var(--cinder-cream) !important;
-  font-size: 11px !important;
-  padding: 14px 18px !important;
+  gap: 16px;
+  min-height: 56px;
+  padding: 0 24px;
+  background: var(--cinder-brick);
+  color: var(--cinder-cream);
+  font-size: 16px;
+  text-align: left;
+}
+.cinder .cinder-order-button:hover {
+  background: var(--cinder-brick-hover);
+}
+.cinder-order-price {
+  margin-left: auto;
+}
+.cinder :is(.cinder-order-button, .cinder-dispatch-save) svg {
+  flex: none;
+  transition: translate var(--cinder-med) var(--cinder-ease);
+}
+.cinder :is(.cinder-order-button, .cinder-dispatch-save):hover svg {
+  translate: 4px 0;
+}
+.cinder :is(.cinder-order-button, .cinder-dispatch-save):active {
+  transform: translateY(1px);
 }
 .cinder-basket-backdrop {
   position: fixed;
@@ -74,25 +83,34 @@
 .cinder-basket {
   width: min(520px, 100%);
   background: var(--cinder-cream);
-  padding: 35px;
+  padding: 32px;
   overflow: auto;
 }
 .cinder-basket-top {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
+  gap: 24px;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 32px;
+}
+.cinder-basket-top button {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+}
+.cinder-basket-top button:hover {
+  background: var(--cinder-tint);
 }
 .cinder-basket h2 {
-  font-size: 34px;
+  font-size: 36px;
 }
 .cinder-basket > article {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 16px;
   border-bottom: 1px solid var(--cinder-line);
-  padding: 15px 0;
+  padding: 16px 0;
 }
 .cinder-basket > article > div:not(.cinder-quantity) {
   flex: 1;
@@ -103,25 +121,32 @@
   object-fit: contain;
 }
 .cinder-basket h3 {
-  font-size: 21px;
+  font-size: 26px;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
 }
 .cinder-basket article p,
-.cinder-basket article strong {
-  font-size: 10px;
+.cinder .cinder-basket-note {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--cinder-ink-soft);
 }
 .cinder-basket article p {
-  margin: 7px 0;
+  margin: 4px 0 8px;
+}
+.cinder-basket .cinder-price {
+  font-size: 16px;
 }
 .cinder-basket-total {
   display: flex;
   justify-content: space-between;
-  margin-top: 25px;
-  font-size: 13px;
+  align-items: baseline;
+  margin-top: 24px;
 }
-.cinder-basket-note {
-  font-size: 10px;
-  margin: 20px 0 25px;
+.cinder .cinder-basket-note {
+  margin: 16px 0 24px;
 }
 .cinder-basket > .cinder-order-button {
   width: 100%;
+  justify-content: space-between;
 }

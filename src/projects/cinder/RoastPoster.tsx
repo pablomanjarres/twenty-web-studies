@@ -18,6 +18,7 @@ export function RoastPoster({
         <p>{coffee.note}</p>
       </div>
       <img
+        key={coffee.id}
         className="cinder-main-package"
         src={image(coffee.image)}
         alt={`${coffee.name} coffee in a tactile printed Cinder paper pouch`}
@@ -31,7 +32,7 @@ export function RoastPoster({
             {coffee.region},<br />
             {coffee.country}.
           </strong>
-          <span>250 g / {coffee.roast} roast</span>
+          <span className="cinder-label">250 g / {coffee.roast} roast</span>
         </div>
         <div className="cinder-tasting">
           <span className="cinder-label">In the cup</span>
@@ -47,23 +48,21 @@ export function RoastPoster({
             aria-pressed={active === index}
             onClick={() => onSelect(index)}
           >
-            <img
-              src={image(item.image)}
-              alt={item.name}
-              width="1254"
-              height="1254"
-            />
-            <span>{item.number}</span>
+            <img src={image(item.image)} alt="" width="1254" height="1254" />
+            <span className="cinder-label">
+              {item.number}
+              <span className="cinder-sr-only-phone"> {item.name}</span>
+            </span>
           </button>
         ))}
       </div>
       <div className="cinder-poster-floor">
-        <span>
+        <span className="cinder-label">
           Fresh roast.
           <br />
           Slow mornings.
         </span>
-        <span>
+        <span className="cinder-label">
           {coffee.batch}
           <br />
           Roastery collection

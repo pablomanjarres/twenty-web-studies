@@ -1,6 +1,6 @@
 .vale-texture-study {
   max-width: 1540px;
-  padding: 130px 7% 100px;
+  padding: 112px 7%;
   display: grid;
   grid-template-columns: 1.05fr 1fr;
   gap: 9%;
@@ -26,44 +26,70 @@
   border-radius: 25px;
   background: #f3f8f0dc;
   color: var(--vale-forest);
-  font-size: 12px;
+  font-size: var(--vale-label);
+  font-weight: 500;
+  letter-spacing: 0.02em;
   white-space: nowrap;
 }
 .vale-texture-copy h2 {
-  font-size: clamp(36px, 3.7vw, 53px);
-  line-height: 1.1;
+  font-size: var(--vale-h2);
+  line-height: 1.06;
   max-width: 470px;
 }
 .vale-texture-copy > p {
-  color: #bbd0c2;
-  max-width: 360px;
-  margin-top: 22px;
+  color: var(--vale-secondary);
+  font-size: var(--vale-lead);
+  line-height: 1.6;
+  max-width: 380px;
+  margin-top: 16px;
+  text-wrap: pretty;
 }
-.vale-ingredient-pair {
+.vale-specimen {
   display: flex;
-  gap: 34px;
-  margin-top: 36px;
+  align-items: center;
+  gap: 20px;
+  margin-top: 32px;
 }
-.vale-ingredient-pair > div {
-  flex: 1;
+.vale-texture-study .vale-specimen img {
+  width: 160px;
+  height: 160px;
+  aspect-ratio: auto;
+  object-fit: contain;
+  border-radius: 0;
 }
-.vale-ingredient-pair svg {
+.vale-specimen strong {
   display: block;
-  margin-bottom: 13px;
-  color: #a9cdb4;
-}
-.vale-ingredient-pair strong {
-  display: block;
-  font-size: 14px;
+  font-size: var(--vale-lead);
   font-weight: 500;
 }
-.vale-ingredient-pair span {
+.vale-specimen span {
   display: block;
-  font-size: 12px;
   margin-top: 4px;
-  color: #9eb8a8;
+  color: var(--vale-label-color);
+  font-size: var(--vale-ui);
 }
-.vale-texture-copy .vale-texture-timing {
-  font-size: 13px;
-  margin-top: 31px;
+.vale-texture-facts {
+  max-width: 420px;
+  margin: 24px 0 0;
+  border-bottom: 1px solid var(--vale-hairline);
+}
+.vale-texture-facts > div {
+  display: grid;
+  grid-template-columns: 5fr 9fr;
+  align-items: baseline;
+  gap: 24px;
+  padding: 14px 0;
+  border-top: 1px solid var(--vale-hairline);
+}
+.vale-texture-facts dt {
+  color: var(--vale-label-color);
+  font-size: var(--vale-label);
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+}
+.vale-texture-facts dd {
+  margin: 0;
+  font-size: var(--vale-body);
+  line-height: 1.5;
 }

@@ -1,80 +1,113 @@
 .cinder-batch {
-  padding: 80px 6%;
+  padding: var(--cinder-section-y) var(--cinder-gutter);
   display: grid;
   grid-template-columns: 1fr 1.8fr;
   gap: 8%;
 }
 .cinder-batch h2 {
-  font-size: 39px;
-  line-height: 1.12;
-  margin: 25px 0 20px;
-  max-width: 300px;
+  margin: 16px 0 24px;
 }
 .cinder-batch-intro > p {
-  font-size: 12px;
-  line-height: 1.8;
-  max-width: 275px;
+  font-size: 18px;
+  line-height: 1.5;
+  max-width: 30ch;
 }
-.cinder-roast-ledger > div {
+.cinder-roast-ledger ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.cinder-ledger-heading,
+.cinder-roast-ledger li {
   display: grid;
   grid-template-columns: 1.6fr 1fr 1fr 1fr;
   gap: 20px;
   align-items: center;
   border-bottom: 1px solid var(--cinder-line);
-  padding: 21px 0;
-  font-size: 10px;
 }
-.cinder-roast-ledger > .cinder-ledger-heading {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 8px;
-  padding: 0 0 15px;
+.cinder-ledger-heading {
+  padding: 0 0 16px;
+  color: var(--cinder-ink-soft);
 }
-.cinder-roast-ledger strong {
-  display: block;
-  font-family: "Grindela", serif;
-  font-weight: 400;
-  font-size: 22px;
-  margin: 4px 0 7px;
+.cinder-roast-ledger li {
+  padding: 24px 0;
 }
-.cinder-roast-ledger small {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 8px;
-}
-.cinder-roast-ledger em {
+.cinder-ledger-name em {
   font-style: normal;
-  font-size: 9px;
+}
+.cinder-ledger-name button {
+  display: block;
+  min-height: 44px;
+  padding: 0;
+  font-family: "Grindela", serif;
+  font-size: 26px;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  text-align: left;
+  white-space: nowrap;
+  text-underline-offset: 5px;
+}
+.cinder-ledger-name button:hover {
+  text-decoration: underline 1px;
+}
+.cinder-ledger-name > span:last-child {
+  display: block;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--cinder-ink-soft);
+}
+.cinder-ledger-facts {
+  display: contents;
+}
+.cinder-ledger-facts dd {
+  margin: 0;
+  font-size: 15px;
+  font-variant-numeric: tabular-nums;
 }
 .cinder-origin-study {
+  --cinder-focus: var(--cinder-yellow);
   position: relative;
-  height: 520px;
-  background: #324629;
+  height: 560px;
+  background: var(--cinder-forest);
   color: var(--cinder-cream);
   overflow: hidden;
+}
+.cinder-origin-study::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    #38271fb3 0%,
+    #38271f8c 32%,
+    #38271f00 62%
+  );
 }
 .cinder-origin-study > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(0.73);
+  filter: brightness(0.95) saturate(1.05);
 }
 .cinder-origin-study > div {
   position: absolute;
-  left: 6%;
-  top: 19%;
-  width: 275px;
+  z-index: 1;
+  left: var(--cinder-gutter);
+  top: 50%;
+  translate: 0 -50%;
+  width: 360px;
 }
 .cinder-origin-study h2 {
-  font-size: 55px;
-  line-height: 1.05;
-  margin: 25px 0;
+  font-size: clamp(44px, 3.4vw + 24px, 72px);
+  line-height: 0.98;
+  margin: 16px 0 24px;
+  white-space: nowrap;
 }
 .cinder-origin-study p {
-  font-size: 12px;
-  line-height: 1.8;
+  font-size: 18px;
+  line-height: 1.5;
 }
-.cinder-origin-study > div > span:last-child {
-  display: block;
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 8px;
-  margin-top: 35px;
+.cinder-origin-study > div > .cinder-label:last-child {
+  margin-top: 32px;
 }

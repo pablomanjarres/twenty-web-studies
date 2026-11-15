@@ -1,4 +1,4 @@
-import { ArrowUpRight, Footprints } from "lucide-react";
+import { ArrowUpRight, Footprints, Plus } from "lucide-react";
 import { image } from "./data";
 export function FieldNotes() {
   return (
@@ -7,8 +7,7 @@ export function FieldNotes() {
         <div className="wf-note-title">
           <span>From the field</span>
           <h2>
-            Good stories
-            <br />
+            Good stories <br />
             start on foot.
           </h2>
           <p>
@@ -35,7 +34,9 @@ export function FieldNotes() {
               <summary>
                 <span>0{i + 1}</span>
                 <h3>{title}</h3>
-                <ArrowUpRight size={19} />
+                <span className="wf-round-control wf-note-toggle">
+                  <Plus size={18} />
+                </span>
               </summary>
               <p>
                 {
@@ -66,7 +67,10 @@ export function FieldNotes() {
           that lets the landscape sink in.
         </p>
         <a href="#atlas">
-          Explore the field atlas <ArrowUpRight size={20} />
+          Explore the field atlas
+          <span className="wf-round-control">
+            <ArrowUpRight size={18} />
+          </span>
         </a>
       </section>
     </>

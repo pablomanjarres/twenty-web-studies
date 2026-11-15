@@ -1,152 +1,125 @@
 @media (min-width: 1600px) {
   .estelle-exhibition {
-    padding-left: 110px;
-    padding-right: 110px;
-  }
-  .estelle-object img {
-    height: 710px;
-  }
-  .estelle-worn img {
-    height: 590px;
+    --est-object-h: clamp(420px, calc(100svh - 340px), 710px);
   }
 }
 @media (max-width: 1100px) {
   .estelle-exhibition {
-    padding-left: 35px;
-    padding-right: 35px;
+    --est-object-h: clamp(360px, calc(100svh - 340px), 480px);
   }
   .estelle-apertures {
     grid-template-columns: 1.2fr 90px 1fr;
-    gap: 20px;
-  }
-  .estelle-object img {
-    height: 480px;
-  }
-  .estelle-worn img {
-    height: 410px;
+    gap: 16px;
   }
   .estelle-centre-mark .brand-logo > span {
     font-size: 40px;
   }
+  .estelle-exhibit-footer {
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "title price"
+      "title actions"
+      "metals metals";
+  }
+  .estelle-metals {
+    padding-top: 16px;
+  }
 }
 @media (max-width: 760px) {
-  .estelle-header {
-    padding: 23px 25px;
-    grid-template-columns: 1fr 1fr;
-  }
   .estelle-header > span {
     display: none;
   }
   .estelle-exhibition {
-    padding: 12px 25px 45px;
+    --est-object-h: 300px;
+    padding-top: 8px;
   }
   .estelle-apertures {
-    grid-template-columns: 1.1fr 58px 1fr;
-    gap: 12px;
-  }
-  .estelle-object img {
-    height: 390px;
-  }
-  .estelle-worn img {
-    height: 325px;
-  }
-  .estelle-centre-mark {
-    gap: 26px;
-  }
-  .estelle-centre-mark .brand-logo {
-    gap: 23px;
-  }
-  .estelle-centre-mark .brand-logo svg {
-    width: 26px;
-    height: 26px;
-  }
-  .estelle-centre-mark .brand-logo > span {
-    font-size: 35px;
-  }
-  .estelle-centre-mark > span {
-    font-size: 6px;
-  }
-  .estelle-aperture figcaption {
-    font-size: 6px;
-    flex-direction: column;
-    gap: 3px;
-  }
-  .estelle-exhibit-footer {
-    gap: 22px;
-    grid-template-columns: 1fr auto;
-    align-items: start;
-  }
-  .estelle-metals {
-    grid-column: 1/-1;
-    grid-row: 2;
-    padding-top: 7px;
-  }
-  .estelle-exhibit-footer h1 {
-    font-size: 31px;
-  }
-  .estelle-exhibit-price {
-    padding-top: 5px;
-  }
-  .estelle-footer {
-    padding: 25px;
-    flex-wrap: wrap;
-    gap: 17px;
-  }
-}
-@media (max-width: 480px) {
-  .estelle-header {
-    font-size: 9px;
-    padding: 23px 18px;
-  }
-  .estelle-exhibition {
-    padding-left: 18px;
-    padding-right: 18px;
-  }
-  .estelle-exhibit-line {
-    font-size: 6px;
-    padding-bottom: 20px;
-  }
-  .estelle-apertures {
-    grid-template-columns: 1.13fr 38px 1fr;
-    gap: 9px;
-  }
-  .estelle-object img {
-    height: 300px;
-  }
-  .estelle-worn img {
-    height: 247px;
-    object-position: 53% center;
+    grid-template-columns: 1.13fr 44px 1fr;
+    gap: 8px;
   }
   .estelle-worn {
-    padding-top: 27px;
-  }
-  .estelle-centre-mark .brand-logo > span {
-    font-size: 29px;
-  }
-  .estelle-centre-mark .brand-logo svg {
-    width: 22px;
-    height: 22px;
-  }
-  .estelle-centre-mark > span {
-    font-size: 5px;
-  }
-  .estelle-exhibit-footer {
     padding-top: 24px;
   }
-  .estelle-exhibit-footer .estelle-micro {
-    font-size: 7px;
+  .estelle-worn img {
+    height: 248px;
+    object-position: 53% center;
   }
-  .estelle-exhibit-footer p {
-    font-size: 9px;
+  .estelle-centre-mark {
+    gap: 24px;
+  }
+  .estelle-centre-mark .brand-logo {
+    gap: 24px;
+  }
+  .estelle-centre-mark .brand-logo svg {
+    width: 24px;
+    height: 24px;
+  }
+  .estelle-centre-mark .brand-logo > span {
+    font-size: 32px;
+  }
+  .estelle-centre-mark > span {
+    display: none;
+  }
+  .estelle-aperture figcaption {
+    flex-direction: column;
+    gap: 0;
+  }
+  .estelle-exhibit-footer {
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "label label"
+      "name price"
+      "line line"
+      "metals metals"
+      "actions actions";
+    align-items: baseline;
+    row-gap: 0;
+    margin-top: 16px;
+    padding-top: 24px;
+  }
+  .estelle-exhibit-title {
+    display: contents;
+  }
+  .estelle-exhibit-title .estelle-micro {
+    grid-area: label;
+  }
+  .estelle-exhibit-footer h1 {
+    grid-area: name;
+    margin: 8px 0 4px;
+  }
+  .estelle-exhibit-title p {
+    grid-area: line;
+    font-size: 16px;
   }
   .estelle-exhibit-price {
-    font-size: 9px;
+    font-size: 22px;
   }
-  .estelle-section-label {
-    font-size: 7px;
-    line-height: 1.7;
+  .estelle-metals {
+    padding-top: 24px;
   }
-  .estelle-footer > span {
-    display: none;
+  .estelle-metals > div {
+    margin-top: 8px;
+  }
+  .estelle-metal {
+    flex: 1 1 0;
+    min-width: 0;
+    min-height: 48px;
+    justify-content: center;
+    padding: 0 8px;
+  }
+  .estelle-exhibit-actions {
+    display: grid;
+    justify-content: stretch;
+    margin-top: 24px;
+    border-top: 1px solid var(--est-rule);
+  }
+  .estelle-exhibit-actions a {
+    justify-content: space-between;
+    min-height: 48px;
+    border-bottom: 1px solid var(--est-rule);
+  }
+  .estelle-exhibit-actions a:last-child {
+    order: -1;
+    text-decoration: none;
   }
 }

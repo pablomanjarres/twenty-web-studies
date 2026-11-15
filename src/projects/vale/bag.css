@@ -7,6 +7,7 @@
   justify-content: end;
   padding: 16px;
   backdrop-filter: blur(8px);
+  animation: vale-fade 200ms ease-in-out both;
 }
 .vale-selection-bag {
   --focus-color: #316446;
@@ -17,6 +18,18 @@
   padding: 32px;
   overflow: auto;
   box-shadow: 0 30px 100px #00140d70;
+  animation: vale-panel 280ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+@keyframes vale-fade {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes vale-panel {
+  from {
+    opacity: 0;
+    translate: 24px 0;
+  }
 }
 .vale-bag-top {
   display: flex;
@@ -25,8 +38,9 @@
   gap: 20px;
   margin-bottom: 32px;
 }
-.vale-bag-top h2 {
-  font-size: 32px;
+.vale .vale-bag-top h2 {
+  font-size: var(--vale-h3);
+  line-height: 1.15;
 }
 .vale-bag-top button,
 .vale-selection-bag article > button {
@@ -38,11 +52,19 @@
   border-radius: 50%;
   background: #dce8df;
 }
+.vale-bag-top button:hover,
+.vale-selection-bag article > button:hover {
+  background: var(--vale-glass);
+}
 .vale-selection-bag > article {
   display: flex;
   align-items: center;
   gap: 16px;
-  padding: 14px 0;
+  padding: 16px 0;
+  border-top: 1px solid rgb(7 31 25 / 0.14);
+}
+.vale-selection-bag > article:last-of-type {
+  border-bottom: 1px solid rgb(7 31 25 / 0.14);
 }
 .vale-selection-bag article > div {
   flex: 1;
@@ -56,18 +78,20 @@
   background: #d9e5db;
 }
 .vale-selection-bag h3 {
-  font-size: 22px;
-  line-height: 1.2;
+  font-size: var(--vale-lead);
+  line-height: 1.3;
+  letter-spacing: -0.01em;
 }
-.vale-selection-bag article p {
-  font-size: 12px;
-  color: #52705d;
-  margin-top: 5px;
+.vale .vale-selection-bag article p {
+  font-size: var(--vale-ui);
+  color: #526b5a;
+  margin-top: 4px;
 }
 .vale-selection-bag article span {
   display: block;
-  font-size: 14px;
-  margin-top: 7px;
+  font-size: var(--vale-body);
+  margin-top: 8px;
+  font-variant-numeric: tabular-nums;
 }
 .vale-bag-total {
   display: flex;
@@ -77,17 +101,28 @@
   margin-top: 24px;
   padding: 19px;
   background: #dce8df;
-  font-size: 14px;
+  font-size: var(--vale-ui);
+  font-variant-numeric: tabular-nums;
 }
-.vale-selection-bag > p {
-  font-size: 13px;
-  color: #52705d;
-  margin: 25px 0;
+.vale .vale-selection-bag > p {
+  font-size: var(--vale-ui);
+  color: #526b5a;
+  margin: 24px 0;
 }
-.vale-selection-bag > .vale-add {
+.vale .vale-selection-bag > .vale-bag-empty {
+  font-size: var(--vale-body);
+}
+.vale .vale-selection-bag > .vale-add {
   width: 100%;
-  margin-top: 25px;
+  margin-top: 24px;
   background: var(--vale-forest);
   color: var(--vale-fog);
   justify-content: center;
+}
+.vale .vale-selection-bag > .vale-add:hover {
+  background: var(--vale-evergreen);
+}
+.vale .vale-selection-bag > .vale-add:active {
+  background: var(--vale-forest);
+  color: var(--vale-glass);
 }

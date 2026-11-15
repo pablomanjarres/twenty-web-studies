@@ -32,7 +32,7 @@ export function SelectionBag({
           <>
             {items.map(({ formula, volume }, index) => (
               <article key={`${formula.id}-${index}`}>
-                <img src={image(formula.image)} alt={formula.name} />
+                <img src={image(formula.image)} alt="" />
                 <div>
                   <h3>{formula.name}</h3>
                   <p>{formula.volumes[volume].label}</p>
@@ -61,7 +61,7 @@ export function SelectionBag({
             <p>Your selection is saved for this visit.</p>
           </>
         ) : (
-          <p>A little space for the first step.</p>
+          <p className="vale-bag-empty">A little space for the first step.</p>
         )}
         <button className="vale-add" onClick={onClose}>
           Continue exploring

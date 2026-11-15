@@ -1,6 +1,4 @@
 import { ArrowUpRight, MoveUpRight } from "lucide-react";
-import { BrandLogo } from "../../shared/BrandLogo";
-import { brand } from "./brand";
 import { fixtures } from "./data";
 export function ClubNotes() {
   return (
@@ -8,7 +6,7 @@ export function ClubNotes() {
       <section id="matches" className="sp-matches">
         <div className="sp-section-head">
           <div>
-            <span>GOOD GAMES. GOOD COMPANY.</span>
+            <span className="sp-eyebrow">Good games. Good company.</span>
             <h2>
               There’s always
               <br />
@@ -25,7 +23,7 @@ export function ClubNotes() {
           {fixtures.map((f) => (
             <article key={f.name}>
               <div className="sp-fixture-date">
-                {f.date}
+                <span className="sp-eyebrow">{f.date}</span>
                 <strong>{f.time}</strong>
               </div>
               <div>
@@ -34,9 +32,19 @@ export function ClubNotes() {
                   {f.format} / {f.level}
                 </p>
               </div>
-              <span>{f.spaces}</span>
-              <a href="#court-book" aria-label={`Choose a court for ${f.name}`}>
-                <ArrowUpRight size={22} />
+              <span className="sp-places">
+                <i aria-hidden="true" />
+                {f.spaces} left
+              </span>
+              <a
+                href="#court-book"
+                aria-label={`${f.name}, ${f.date} at ${f.time}: choose a court`}
+              >
+                <ArrowUpRight
+                  size={24}
+                  aria-hidden="true"
+                  className="sp-nudge"
+                />
               </a>
             </article>
           ))}
@@ -49,7 +57,7 @@ export function ClubNotes() {
           <span />
         </div>
         <div>
-          <span>PADEL IS BETTER TOGETHER</span>
+          <span className="sp-eyebrow">Padel is better together</span>
           <h2>
             Your first game
             <br />
@@ -61,15 +69,11 @@ export function ClubNotes() {
             Four courts, weekly socials and a club that feels like yours.
           </p>
           <a href="#court-book">
-            Start with a session <MoveUpRight size={23} />
+            Start with a session{" "}
+            <MoveUpRight size={24} aria-hidden="true" className="sp-nudge" />
           </a>
         </div>
       </section>
-      <footer className="sp-footer">
-        <BrandLogo brand={brand} />
-        <p>Riverside courts · Open daily 07:00–22:00</p>
-        <span>© 2026 Sprinto</span>
-      </footer>
     </>
   );
 }

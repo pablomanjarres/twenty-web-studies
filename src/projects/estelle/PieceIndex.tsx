@@ -16,6 +16,7 @@ export function PieceIndex({
         {pieces.map((piece, index) => (
           <button
             key={piece.id}
+            type="button"
             aria-pressed={index === active}
             onClick={() => {
               onSelect(index);
@@ -29,11 +30,13 @@ export function PieceIndex({
           >
             <span className="estelle-piece-number">{piece.number}</span>
             <img src={image(piece.materials[0].macro)} alt="" loading="lazy" />
-            <div>
+            <div className="estelle-piece-name">
               <h3>{piece.name}</h3>
               <span>{piece.category}</span>
             </div>
-            <span>{active === index ? "On view" : "View study ↗"}</span>
+            <span className="estelle-piece-status">
+              {active === index ? "On view" : "View study ↑"}
+            </span>
           </button>
         ))}
       </div>

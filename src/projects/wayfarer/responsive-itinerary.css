@@ -1,9 +1,7 @@
 @media (max-width: 650px) {
   .wf-itinerary {
-    grid-column: auto;
-    grid-template-columns: 1fr;
-    padding: 23px;
-    gap: 0;
+    display: flex;
+    padding: 24px 20px;
   }
   .wf-ticket-top,
   .wf-itinerary h2,
@@ -12,63 +10,55 @@
   .wf-trip-facts,
   .wf-stops-heading,
   .wf-stops,
-  .wf-trip-planning {
-    grid-column: 1;
+  .wf-trip-planning,
+  .wf-plan-bar,
+  .wf-price {
+    grid-column: auto;
     grid-row: auto;
+    align-self: stretch;
   }
   .wf-itinerary h2 {
-    font-size: 30px;
-    margin-top: 14px;
+    margin-top: 16px;
   }
   .wf-trip-note {
-    font-size: 11px;
-    margin-top: 14px !important;
+    margin-top: 12px !important;
   }
   .wf-trip-facts {
-    margin: 16px 0;
-    padding: 12px;
-  }
-  .wf-trip-facts dt {
-    font-size: 8px;
-    margin-bottom: 6px;
-  }
-  .wf-trip-facts dd {
-    font-size: 13px;
-  }
-  .wf-stops-heading {
-    font-size: 9px;
+    margin: 20px 0;
   }
   .wf-stops {
-    grid-template-columns: 1fr 1fr;
-    gap: 9px 15px;
-    padding-top: 11px;
-    font-size: 10px;
+    padding-top: 0;
   }
-  .wf-stops li {
-    gap: 7px;
-  }
-  .wf-stops li::before {
-    width: 21px;
-    height: 21px;
-    font-size: 9px;
-  }
-  .wf-trip-planning {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    margin-top: 21px;
-  }
-  .wf-departure {
-    gap: 8px;
+  .wf-plan-bar {
+    position: sticky;
+    bottom: 0;
+    z-index: 3;
+    margin: 16px -20px 0;
+    padding: 12px 20px calc(12px + env(safe-area-inset-bottom));
+    background: var(--wf-ink);
+    border-top: 1px solid var(--wf-rule-dark);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 16px;
+    align-items: center;
   }
   .wf-trip-price {
-    margin: 18px 0 13px;
+    display: grid;
+    gap: 0;
+    margin: 0;
   }
   .wf-trip-price strong {
-    font-size: 23px;
+    font-size: var(--wf-fs-h4);
+  }
+  .wf-trip-price small {
+    display: none;
+  }
+  .wf-plan {
+    min-height: 48px;
+    padding: 0 16px 0 20px;
   }
   .wf-price {
-    margin-top: 10px !important;
-    min-height: 16px;
+    margin-top: 12px !important;
+    min-height: 0;
   }
 }

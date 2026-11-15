@@ -1,4 +1,3 @@
-import { Droplets, Sprout } from "lucide-react";
 import { image, type Formula } from "./data";
 
 export function TextureStudy({ formula }: { formula: Formula }) {
@@ -16,21 +15,33 @@ export function TextureStudy({ formula }: { formula: Formula }) {
         <span className="vale-section-intro">Feel the difference.</span>
         <h2>{formula.textureName}</h2>
         <p>{formula.use}</p>
-        <div className="vale-ingredient-pair">
+        <div className="vale-specimen">
+          <img
+            src={image(formula.specimen)}
+            alt=""
+            width="160"
+            height="160"
+            loading="lazy"
+          />
           <div>
-            <Sprout size={22} />
-            <strong>{formula.ingredient}</strong>
-            <span>A botanical beginning.</span>
-          </div>
-          <div>
-            <Droplets size={22} />
-            <strong>{formula.secondary}</strong>
-            <span>A part of the texture.</span>
+            <strong>{formula.plant}</strong>
+            <span>{formula.latin}</span>
           </div>
         </div>
-        <p className="vale-texture-timing">
-          A little moment, {formula.timing.toLowerCase()}.
-        </p>
+        <dl className="vale-texture-facts">
+          <div>
+            <dt>Key ingredient</dt>
+            <dd>{formula.ingredient}</dd>
+          </div>
+          <div>
+            <dt>Alongside</dt>
+            <dd>{formula.secondary}</dd>
+          </div>
+          <div>
+            <dt>When</dt>
+            <dd>{formula.timing}</dd>
+          </div>
+        </dl>
       </div>
     </section>
   );

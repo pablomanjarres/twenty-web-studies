@@ -1,8 +1,9 @@
+import { Plus } from "lucide-react";
 import { image, questions } from "./data";
 
 export function Packaging() {
   return (
-    <section className="vale-packaging">
+    <section className="vale-packaging" aria-labelledby="vale-packaging-title">
       <figure>
         <img
           src={image("campaign.jpg")}
@@ -12,7 +13,7 @@ export function Packaging() {
       </figure>
       <div className="vale-packaging-copy">
         <span className="vale-section-intro">Made for the everyday.</span>
-        <h2>A vessel worth holding on to.</h2>
+        <h2 id="vale-packaging-title">A vessel worth holding on to.</h2>
         <p>
           Soft mineral tones. Frosted glass. Closures shaped to sit comfortably
           in the hand. The packaging is part of the daily moment, too.
@@ -22,7 +23,9 @@ export function Packaging() {
             <details key={item.question}>
               <summary>
                 {item.question}
-                <span aria-hidden="true">+</span>
+                <span className="vale-question-icon" aria-hidden="true">
+                  <Plus size={16} />
+                </span>
               </summary>
               <p>{item.answer}</p>
             </details>

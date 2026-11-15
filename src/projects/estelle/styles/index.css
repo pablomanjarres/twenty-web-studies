@@ -1,45 +1,70 @@
 .estelle-piece-index {
-  padding: 0 70px 95px;
-  scroll-margin-top: 30px;
+  padding: 0 var(--est-gutter) var(--est-section-end);
+  scroll-margin-top: 24px;
 }
 .estelle-piece-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 65px;
-  padding-top: 33px;
+  margin-top: var(--est-label-gap);
+  border-top: 1px solid var(--est-rule);
+  border-bottom: 1px solid var(--est-rule);
 }
 .estelle-piece-list button {
-  border: 0;
-  border-bottom: 1px solid var(--est-rule);
-  background: transparent;
-  padding: 15px 0 24px;
+  position: relative;
   display: flex;
   align-items: center;
-  text-align: left;
   gap: 24px;
+  padding: 24px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  text-align: left;
+  transition: background-color 300ms var(--est-ease);
+}
+.estelle-piece-list button + button {
+  border-left: 1px solid var(--est-rule);
+}
+.estelle-piece-list button:hover,
+.estelle-piece-list button[aria-pressed="true"] {
+  background: var(--est-paper);
+}
+/* The active cell carries a plum frame so it reads without color alone. */
+.estelle-piece-list button[aria-pressed="true"]::after {
+  content: "";
+  position: absolute;
+  inset: -1px 0;
+  border: 1px solid var(--est-plum);
+  pointer-events: none;
+}
+.estelle-piece-list button:focus-visible {
+  outline-offset: -6px;
 }
 .estelle-piece-number {
   align-self: flex-start;
-  font-size: 9px;
-  padding-top: 7px;
 }
 .estelle-piece-list img {
-  width: 105px;
-  height: 140px;
+  flex: none;
+  width: 120px;
+  height: 160px;
   object-fit: cover;
 }
 .estelle-piece-list h3 {
-  font-size: 31px;
-  margin-bottom: 9px;
+  font-size: 32px;
+  line-height: 1.05;
+  margin-bottom: 8px;
 }
-.estelle-piece-list button > div > span {
-  font-size: 9px;
+.estelle-piece-name > span,
+.estelle-piece-status {
+  font-size: 14px;
+  line-height: 1.4;
 }
-.estelle-piece-list button > span:last-child {
+.estelle-piece-name > span {
+  color: var(--est-ink-2);
+}
+.estelle-piece-status {
   margin-left: auto;
-  font-size: 9px;
   white-space: nowrap;
 }
-.estelle-piece-list button[aria-pressed="true"] {
-  border-color: var(--est-plum);
+[aria-pressed="true"] > .estelle-piece-status {
+  font-weight: 500;
 }

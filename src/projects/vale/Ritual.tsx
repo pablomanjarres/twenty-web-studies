@@ -1,19 +1,33 @@
 import { useState } from "react";
 import { ArrowUpRight, Moon, Sun } from "lucide-react";
-import { formulas, image } from "./data";
+import { formulas, image, type Formula } from "./data";
+
+const times = ["Morning", "Evening"] as const;
+type Time = (typeof times)[number];
+
+const notes: Record<Time, string> = {
+  Morning: "Begin slowly. A fresh start, a light layer, a soft finish.",
+  Evening: "Let the day settle. Cleanse, then take a little time to finish.",
+};
+
+const skippedAt = (time: Time, formula: Formula) =>
+  time === "Evening" && "morningOnly" in formula;
 
 export function Ritual({ onSelect }: { onSelect: (index: number) => void }) {
-  const [time, setTime] = useState("Morning");
-  const selected = time === "Morning" ? formulas : [formulas[0], formulas[2]];
+  const [time, setTime] = useState<Time>("Morning");
+  let step = 0;
   return (
     <section id="ritual" className="vale-ritual">
       <div className="vale-ritual-top">
         <div>
           <span className="vale-section-intro">Care that feels like you.</span>
           <h2>A few good moments.</h2>
+          <p className="vale-ritual-lead" aria-live="polite">
+            {notes[time]}
+          </p>
         </div>
-        <div className="vale-time-tabs" aria-label="Ritual time">
-          {["Morning", "Evening"].map((name) => (
+        <div className="vale-time-tabs" role="group" aria-label="Ritual time">
+          {times.map((name) => (
             <button
               key={name}
               aria-pressed={time === name}
@@ -26,34 +40,32 @@ export function Ritual({ onSelect }: { onSelect: (index: number) => void }) {
         </div>
       </div>
       <div className="vale-ritual-sequence">
-        {selected.map((formula, index) => (
-          <article key={formula.id}>
-            <div className="vale-ritual-image">
-              <img
-                src={image(formula.image)}
-                alt={formula.name}
-                loading="lazy"
-              />
-              <span>Step {index + 1}</span>
-            </div>
-            <div className="vale-ritual-description">
-              <h3>{formula.name}</h3>
-              <p>{formula.use}</p>
-              <a
-                href="#formulas"
-                onClick={() => onSelect(formulas.indexOf(formula))}
-              >
-                Choose {formula.name} <ArrowUpRight size={16} />
-              </a>
-            </div>
-          </article>
-        ))}
+        {formulas.map((formula, index) => {
+          const skipped = skippedAt(time, formula);
+          if (!skipped) step += 1;
+          return (
+            <article key={formula.id} data-skipped={skipped || undefined}>
+              <span className="vale-ritual-step">
+                {skipped ? "Morning only" : `Step ${step}`}
+              </span>
+              <div className="vale-ritual-image">
+                <img src={image(formula.image)} alt="" loading="lazy" />
+              </div>
+              <div className="vale-ritual-description">
+                <h3>{formula.name}</h3>
+                <p>{formula.use}</p>
+                <a
+                  className="vale-link"
+                  href="#formulas"
+                  onClick={() => onSelect(index)}
+                >
+                  Choose {formula.name} <ArrowUpRight size={16} />
+                </a>
+              </div>
+            </article>
+          );
+        })}
       </div>
-      <p className="vale-ritual-note">
-        {time === "Morning"
-          ? "Begin slowly. A fresh start, a light layer, a soft finish."
-          : "Let the day settle. Cleanse, then take a little time to finish."}
-      </p>
     </section>
   );
 }

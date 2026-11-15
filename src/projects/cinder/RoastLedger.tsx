@@ -1,5 +1,12 @@
 import { coffees } from "./data";
-export function RoastLedger() {
+const facts = ["process", "altitude", "roast"] as const;
+export function RoastLedger({
+  active,
+  onSelect,
+}: {
+  active: number;
+  onSelect: (index: number) => void;
+}) {
   return (
     <section id="batch" className="cinder-batch">
       <div className="cinder-batch-intro">
@@ -15,26 +22,42 @@ export function RoastLedger() {
         </p>
       </div>
       <div className="cinder-roast-ledger">
-        <div className="cinder-ledger-heading">
-          <span>Coffee / origin</span>
-          <span>Process</span>
-          <span>Altitude</span>
-          <span>Roast</span>
-        </div>
-        {coffees.map((coffee) => (
-          <div key={coffee.id}>
-            <span>
-              <small>{coffee.number}</small>
-              <strong>{coffee.name}</strong>
-              <em>
-                {coffee.region}, {coffee.country}
-              </em>
+        <div className="cinder-ledger-heading" aria-hidden="true">
+          {["Coffee / origin", "Process", "Altitude", "Roast"].map((name) => (
+            <span key={name} className="cinder-label">
+              {name}
             </span>
-            <span>{coffee.process}</span>
-            <span>{coffee.altitude}</span>
-            <span>{coffee.roast}</span>
-          </div>
-        ))}
+          ))}
+        </div>
+        <ol>
+          {coffees.map((coffee, index) => (
+            <li
+              key={coffee.id}
+              aria-current={active === index ? "true" : undefined}
+            >
+              <div className="cinder-ledger-name">
+                <span className="cinder-label">
+                  {coffee.number}
+                  {active === index && <em> / On the poster</em>}
+                </span>
+                <button onClick={() => onSelect(index)}>{coffee.name}</button>
+                <span>
+                  {coffee.region}, {coffee.country}
+                </span>
+              </div>
+              <dl className="cinder-ledger-facts">
+                {facts.map((fact) => (
+                  <div key={fact}>
+                    <dt className="cinder-label cinder-sr-only-desktop">
+                      {fact}
+                    </dt>
+                    <dd>{coffee[fact]}</dd>
+                  </div>
+                ))}
+              </dl>
+            </li>
+          ))}
+        </ol>
       </div>
     </section>
   );

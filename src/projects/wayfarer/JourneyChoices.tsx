@@ -9,7 +9,7 @@ export function JourneyChoices({
   onSelect: (index: number) => void;
 }) {
   return (
-    <div className="wf-route-tabs" aria-label="Choose a journey">
+    <div className="wf-route-tabs" role="group" aria-label="Choose a journey">
       {routes.map((route, index) => (
         <button
           key={route.id}

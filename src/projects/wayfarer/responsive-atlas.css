@@ -1,114 +1,84 @@
 @media (max-width: 650px) {
+  .wayfarer {
+    --wf-fs-meta: 13px;
+    --wf-fs-lead: 16px;
+    --wf-fs-h4: 22px;
+    --wf-fs-h3: 28px;
+    --wf-fs-h2: 34px;
+  }
   .wf-header {
     height: 62px;
-    padding: 0 20px;
-    gap: 10px;
-  }
-  .wf-header > a {
-    font-size: 23px;
+    padding: 0 12px 0 20px;
+    gap: 8px;
   }
   .wf-header .brand-logo svg {
     width: 26px;
     height: 26px;
   }
-  .wf-header nav {
-    font-size: 10px;
-  }
   .wf-header nav a {
-    padding: 12px;
+    padding: 0 12px;
   }
-  .wf-header nav a:last-child {
+  .wf-header nav a:last-child,
+  .wf-header .wf-edition {
     display: none;
   }
   .wf-atlas {
     grid-template-columns: 1fr;
   }
   .wf-journey-photo {
-    min-height: 240px;
+    min-height: 212px;
   }
   .wf-journey-photo > img {
     object-position: center 66%;
   }
   .wf-photo-invitation {
-    top: 22px;
-    left: 23px;
-  }
-  .wf-photo-invitation > span {
-    font-size: 9px;
-    gap: 7px;
+    top: 20px;
+    left: 20px;
   }
   .wf-photo-invitation h1 {
-    font-size: 39px;
-    margin-top: 15px;
+    margin-top: 12px;
   }
   .wf-photo-invitation p {
     display: none;
   }
   .wf-photo-caption {
-    left: 23px;
-    bottom: 20px;
-    font-size: 10px;
-  }
-  .wf-photo-caption a {
-    width: 44px;
-    height: 44px;
+    left: 20px;
+    right: 20px;
+    bottom: 16px;
   }
   .wf-map-panel {
     min-height: 0;
-    padding: 20px 18px 0;
+    padding: 24px 20px 0;
   }
-  .wf-map-intro > span {
+  .wf-map-intro > span,
+  .wf-map-label,
+  .wf-map-footer span:has(i) {
     display: none;
   }
-  .wf-map-intro {
-    padding: 0 3px;
-  }
   .wf-map-intro h2 {
-    font-size: 23px;
     margin: 0;
   }
   .wf-route-tabs {
-    margin-top: 14px;
+    flex-wrap: nowrap;
+    margin-top: 16px;
     gap: 6px;
   }
   .wf-route-tabs button {
     flex: 1;
     min-width: 0;
-    padding: 10px;
-    font-size: 10px;
-  }
-  .wf-route-tabs button svg {
-    width: 12px;
+    padding: 0 8px;
+    gap: 4px;
   }
   .wf-map-sheet {
-    height: auto;
-    min-height: 270px;
-    grid-template-rows: minmax(0, 1fr) auto auto;
-    margin: 18px -18px 0;
     flex: none;
+    min-height: 0;
+    margin: 12px -20px 0;
   }
   .wf-map {
-    min-height: 0;
-    height: 200px;
+    height: 260px;
   }
-  .wf-map-heading {
-    display: none;
-  }
-  .wf-map-route-name {
-    margin: 0 22px 12px;
-    gap: 3px;
-  }
-  .wf-map-route-name span {
-    font-size: 8px;
-  }
-  .wf-map-route-name strong {
-    font-size: 12px;
-  }
-  .wf-map-caption {
-    margin: 0 22px 16px;
-    font-size: 8px;
-  }
-  .wf-map-caption small {
-    font-size: 7px;
+  .wf-map-footer {
+    padding: 12px 20px 16px;
+    gap: 4px 16px;
   }
 }

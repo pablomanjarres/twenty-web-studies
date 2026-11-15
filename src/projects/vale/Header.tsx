@@ -9,12 +9,20 @@ export function Header({ count, onBag }: { count: number; onBag: () => void }) {
         <BrandLogo brand={brand} />
       </a>
       <nav aria-label="Vale navigation">
-        <a href="#formulas">The collection</a>
-        <a href="#ritual">Your daily ritual</a>
+        <a href="#formulas" className="vale-link">
+          The collection
+        </a>
+        <a href="#ritual" className="vale-link">
+          Your daily ritual
+        </a>
       </nav>
-      <button className="vale-bag-button" onClick={onBag}>
+      <button
+        className="vale-bag-button"
+        aria-label={`Bag, ${count} items`}
+        onClick={onBag}
+      >
         <ShoppingBag size={17} />
-        Bag <span aria-label={`${count} items`}>{count}</span>
+        Bag <span aria-hidden="true">{count}</span>
       </button>
     </header>
   );

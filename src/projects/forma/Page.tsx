@@ -11,13 +11,15 @@ export default function Page() {
   const [selected, setSelected] = useState(0);
   const project = projects[selected];
   return (
-    <main className="forma">
+    <div className="forma">
       <Header />
-      <ProjectArchive selected={selected} onSelect={setSelected} />
-      <ProjectDossier project={project} />
-      <MaterialStory project={project} />
-      <Practice />
+      <main>
+        <ProjectArchive selected={selected} onSelect={setSelected} />
+        <ProjectDossier project={project} />
+        <MaterialStory project={project} />
+        <Practice />
+      </main>
       <Contact />
-    </main>
+    </div>
   );
 }

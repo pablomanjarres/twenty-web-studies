@@ -9,6 +9,18 @@ export const projects = [
     image: "hero",
     area: "315 m²",
     materials: "Oak / limestone / steel",
+    details: {
+      wide: {
+        focus: "86% 60%",
+        zoom: 1.6,
+        alt: "Timber slat screen and steel-framed glazing",
+      },
+      close: {
+        focus: "39% 37%",
+        zoom: 2,
+        alt: "Steel stair with oak treads against pale stone panels",
+      },
+    },
     short: "A home between light and shadow.",
     description:
       "An open sequence of rooms gives daily life a generous rhythm. A continuous oak floor, pale stone surfaces, and slender steel details connect the spaces without dissolving their individual character.",
@@ -21,9 +33,22 @@ export const projects = [
     image: "project",
     area: "186 m²",
     materials: "Ash / plaster / linen",
+    details: {
+      wide: {
+        focus: "40% 33%",
+        zoom: 1.5,
+        alt: "Gallery wall above a pale console",
+      },
+      close: {
+        focus: "50% 70%",
+        zoom: 2,
+        alt: "Ash coffee table on a linen-toned rug in afternoon light",
+      },
+    },
     short: "A softer way of inhabiting the city.",
     description:
       "A sunlit apartment becomes a sequence of small rituals. Natural plaster and pale timber bring warmth to the generous windows, while considered furniture and quiet thresholds leave room for the people who live here.",
   },
 ];
 export type Project = (typeof projects)[number];
+export type DetailCrop = Project["details"]["wide"];

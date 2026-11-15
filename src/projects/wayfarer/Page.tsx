@@ -5,11 +5,13 @@ import { FieldNotes } from "./FieldNotes";
 import "./styles.css";
 export default function Page() {
   return (
-    <main className="wayfarer">
+    <div className="wayfarer">
       <JourneyNavigation />
-      <Atlas />
-      <FieldNotes />
+      <main>
+        <Atlas />
+        <FieldNotes />
+      </main>
       <JourneyFooter />
-    </main>
+    </div>
   );
 }

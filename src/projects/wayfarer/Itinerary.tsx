@@ -46,7 +46,7 @@ export function Itinerary({
       <div className="wf-trip-planning">
         <label className="wf-departure">
           <span>
-            <CalendarDays size={15} /> Departure
+            <CalendarDays size={16} /> Departure
           </span>
           <select
             value={departure}
@@ -58,22 +58,23 @@ export function Itinerary({
           </select>
           <ChevronDown size={16} />
         </label>
+      </div>
+      <div className="wf-plan-bar">
         <div className="wf-trip-price">
-          <span>
-            From <strong>{trail.price}</strong>
-          </span>
+          <span>From</span>
+          <strong>{trail.price}</strong>
           <small>per person · groups of 8</small>
         </div>
         <button className="wf-plan" onClick={onPlan}>
           {reserved ? "Added to your journey plan" : "Plan this journey"}
-          {reserved ? <Check size={18} /> : <ArrowUpRight size={18} />}
+          {reserved ? <Check size={20} /> : <ArrowUpRight size={20} />}
         </button>
-        <p className="wf-price" aria-live="polite">
-          {reserved
-            ? `${trail.region} · ${departure} · ${trail.days}`
-            : "A good walk starts with a small plan."}
-        </p>
       </div>
+      <p className="wf-price" aria-live="polite">
+        {reserved
+          ? `${trail.region} · ${departure} · ${trail.days}`
+          : "A good walk starts with a small plan."}
+      </p>
     </aside>
   );
 }

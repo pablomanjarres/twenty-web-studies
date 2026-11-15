@@ -1,13 +1,13 @@
 @media (max-width: 1100px) {
+  .vale {
+    --vale-display: 81px;
+  }
   .vale-studio {
     min-height: 740px;
   }
   .vale-studio-copy {
     width: 60%;
     padding-top: 68px;
-  }
-  .vale-studio-copy h1 {
-    font-size: 81px;
   }
   .vale-product-stage {
     --vale-product-size: 740px;
@@ -31,9 +31,15 @@
   }
 }
 @media (max-width: 700px) {
+  .vale {
+    --vale-display: 58px;
+    --vale-h2: 36px;
+    --vale-h3: 26px;
+    --vale-lead: 15px;
+  }
   .vale-header {
-    min-height: 78px;
-    padding: 14px 27px;
+    min-height: 68px;
+    padding: 12px 20px;
   }
   .vale-header nav {
     display: none;
@@ -44,7 +50,7 @@
   .vale-studio {
     min-height: 0;
     margin: 0 12px;
-    padding: 30px 22px 20px;
+    padding: 24px 18px 20px;
     border-radius: 30px;
     background:
       radial-gradient(ellipse at 58% 48%, #466d5266, transparent 55%),
@@ -55,66 +61,59 @@
     padding: 0;
   }
   .vale-studio-intro {
-    font-size: 12px;
-    margin-bottom: 19px;
-  }
-  .vale-studio-copy h1 {
-    font-size: 63px;
-    line-height: 0.98;
+    margin-bottom: 14px;
   }
   .vale-studio-copy > p {
-    margin-top: 19px;
-    font-size: 13px;
-    line-height: 1.65;
+    margin-top: 16px;
+    line-height: 1.55;
+  }
+  .vale-studio-copy > p > span {
+    display: inline;
   }
   .vale-formula-switch {
-    margin-top: 22px;
-    gap: 5px;
+    flex-wrap: nowrap;
+    margin-top: 20px;
+    gap: 6px;
   }
   .vale-formula-switch button {
-    padding: 9px 13px;
-    font-size: 11px;
+    padding: 0 14px;
+    white-space: nowrap;
   }
   .vale-product-stage {
-    --vale-product-size: 350px;
-    --vale-product-y: 50%;
+    --vale-product-size: 300px;
+    --vale-product-x: 36%;
+    --vale-product-y: 47%;
     position: relative;
     right: auto;
     top: auto;
     width: 100%;
-    height: 320px;
-    margin-top: 12px;
-  }
-  .vale-studio-product {
-    left: 50%;
+    height: 260px;
+    margin-top: 8px;
   }
   .vale-stage-soft-start {
-    --vale-product-size: 320px;
+    --vale-product-size: 280px;
   }
   .vale-stage-still-water {
-    --vale-product-size: 340px;
+    --vale-product-size: 250px;
+    --vale-product-x: 34%;
   }
   .vale-studio-halo {
-    width: 370px;
-    height: 410px;
+    width: 340px;
+    height: 360px;
+    left: 36%;
   }
   .vale-studio-plinth {
-    width: 250px;
-    height: 45px;
-    bottom: 9%;
+    width: 230px;
+    height: 42px;
+    bottom: 8%;
+    left: 36%;
   }
   .vale-ingredient-capsule {
-    right: -3px;
-    bottom: 12px;
-    width: 220px;
+    right: 0;
+    bottom: 4px;
+    width: min(214px, 60%);
     padding: 12px 14px;
     border-radius: 20px;
-  }
-  .vale-ingredient-capsule summary {
-    font-size: 11px;
-  }
-  .vale-ingredient-capsule small {
-    font-size: 9px;
   }
   .vale-ingredient-orb {
     width: 24px;
@@ -125,36 +124,26 @@
     left: auto;
     bottom: auto;
     width: 100%;
-    padding: 20px 18px;
+    padding: 18px 16px;
     border-radius: 23px;
-  }
-  .vale-selected-formula h2 {
-    font-size: 28px;
-  }
-  .vale-selected-formula span {
-    font-size: 11px;
-  }
-  .vale-selected-formula > strong {
-    font-size: 25px;
   }
   .vale-purchase-actions {
     gap: 8px;
-    margin-top: 15px;
+    margin-top: 14px;
   }
   .vale-volumes button {
-    padding: 9px;
-    font-size: 11px;
+    padding: 0 12px;
   }
   .vale .vale-add {
-    padding: 12px 14px;
-    gap: 9px;
-    font-size: 12px;
+    min-height: 48px;
+    padding: 0 18px;
+    gap: 8px;
+    white-space: nowrap;
   }
   .vale-discover {
     position: relative;
     left: auto;
     bottom: auto;
-    margin-top: 14px;
-    font-size: 12px;
+    margin-top: 12px;
   }
 }
