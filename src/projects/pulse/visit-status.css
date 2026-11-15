@@ -1,0 +1,20 @@
+.pv-ledger-status,
+.pv-upcoming-visit {
+  --pv-tone-bg: #eef5c4;
+  --pv-tone-fg: #5a5a12;
+}
+.pv-ledger-status.is-ready,
+.pv-upcoming-visit.is-ready {
+  --pv-tone-bg: #ddefe8;
+  --pv-tone-fg: #2f6146;
+}
+.pv-ledger-status.is-new,
+.pv-upcoming-visit.is-new {
+  --pv-tone-bg: #f8e3d5;
+  --pv-tone-fg: #7a4a2a;
+}
+.pv-ledger-status.is-complete,
+.pv-upcoming-visit.is-complete {
+  --pv-tone-bg: #eef1ee;
+  --pv-tone-fg: #556860;
+}

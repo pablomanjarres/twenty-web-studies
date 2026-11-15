@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ArrowUpRight, Search } from "lucide-react";
 import { clinicians, timeLabel, type Visit } from "./data";
 import { PatientPortrait } from "./overviewData";
+import { statusTone } from "./visitStatus";
 
 export function AppointmentLedger({
   visits,
@@ -60,12 +61,12 @@ export function AppointmentLedger({
                 </td>
                 <td>{clinicians.find((c) => c.id === v.doctor)?.name}</td>
                 <td>
-                  {timeLabel(v.time)}
+                  <span className="pv-ledger-time">{timeLabel(v.time)}</span>
                   <small>{v.duration} min</small>
                 </td>
                 <td>
                   <span
-                    className={`pv-ledger-status ${v.status === "Checked in" || v.status === "Ready" ? "is-ready" : ""}`}
+                    className={`pv-ledger-status is-${statusTone(v.status)}`}
                   >
                     <i />
                     {v.status}
