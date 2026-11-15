@@ -1,0 +1,52 @@
+/* Text roles. Component files set layout and color only; size lives here. */
+.fg-nav > span:not(.brand-logo),
+.fg-poster-top nav > span,
+.fg-poster-top sup,
+.fg-wordmark > span,
+.fg-poster-bottom > span,
+.fg-work > header,
+.fg-work-index small,
+.fg-case-type > span,
+.fg-case-type small,
+.fg-case-print small,
+.fg-services > span,
+.fg-studio > span,
+.fg-principles span,
+.fg-brief > span,
+.fg-footer > span:not(.brand-logo),
+.fg-footer > a {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 400;
+  font-size: var(--fg-label-size);
+  line-height: 1.4;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.fg-cta,
+.fg-poster-bottom a,
+.fg-poster-top nav > .fg-studio-link,
+.fg-services,
+.fg-next,
+.fg-brief label,
+.fg-brief form > small,
+.fg-brief-ready > button:last-child {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+}
+.fg-case-details p,
+.fg-studio p,
+.fg-principles p,
+.fg-brief-ready p,
+.fg-brief :is(input, select, textarea) {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+}
+.fg-case-details p,
+.fg-studio p {
+  max-width: 60ch;
+}
