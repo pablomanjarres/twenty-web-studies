@@ -11,7 +11,7 @@ const notes: Record<Time, string> = {
 };
 
 const skippedAt = (time: Time, formula: Formula) =>
-  time === "Evening" && formula.id === "dew-drop";
+  time === "Evening" && "morningOnly" in formula;
 
 export function Ritual({ onSelect }: { onSelect: (index: number) => void }) {
   const [time, setTime] = useState<Time>("Morning");

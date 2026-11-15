@@ -27,6 +27,7 @@ export const formulas = [
   },
   {
     id: "dew-drop",
+    morningOnly: true,
     number: "02",
     name: "Dew Drop",
     kind: "An everyday serum",
