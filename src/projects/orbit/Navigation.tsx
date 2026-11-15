@@ -2,7 +2,6 @@ import {
   LayoutDashboard,
   ListTodo,
   Activity,
-  ChevronDown,
   ArrowUpRight,
   Sparkles,
 } from "lucide-react";
@@ -32,9 +31,8 @@ export function Navigation({
         <span>
           Maison studio<small>Creative workspace</small>
         </span>
-        <ChevronDown size={15} />
       </div>
-      <p className="ov3-nav-label">WORKSPACE</p>
+      <p className="ov3-nav-label ov3-caps">Workspace</p>
       <nav>
         {links.map(({ id, name, icon: Icon }) => (
           <button
@@ -43,34 +41,30 @@ export function Navigation({
             aria-pressed={view === id}
             onClick={() => onView(id)}
           >
-            <Icon size={18} />
+            <Icon size={18} aria-hidden="true" />
             {name}
             {id === "activity" && <i>{activityCount}</i>}
           </button>
         ))}
       </nav>
       <div className="ov3-project-nav">
-        <p className="ov3-nav-label">YOUR PROJECT</p>
+        <p className="ov3-nav-label ov3-caps">Your project</p>
         <button onClick={() => onView("overview")}>
           <i />
           Maison storefront
-          <ArrowUpRight size={13} />
+          <ArrowUpRight size={14} aria-hidden="true" />
         </button>
         <span>Round 02 · Collection launch</span>
       </div>
       <div className="ov3-nav-foot">
-        <Sparkles size={20} />
         <p>
-          A little room for
-          <br />
-          good work.
+          <Sparkles size={16} aria-hidden="true" />A little room for good work.
         </p>
         <div>
           <img src={avatar(1)} alt="Sam Rivera" />
           <span>
             Sam Rivera<small>Studio member</small>
           </span>
-          <ChevronDown size={14} />
         </div>
       </div>
     </aside>
