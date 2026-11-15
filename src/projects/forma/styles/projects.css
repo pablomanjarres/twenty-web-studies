@@ -1,94 +1,115 @@
 .forma-dossier {
-  padding: 90px 3.5% 85px;
+  padding: var(--forma-section) var(--forma-gutter);
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
-  gap: 100px;
-  border-bottom: 1px solid #c5c9ba;
+  gap: var(--forma-gap);
+  border-bottom: 1px solid var(--forma-rule);
 }
 .forma-dossier h2 {
-  max-width: 360px;
-  margin: 25px 0;
+  max-width: 420px;
+  margin: 24px 0;
 }
 .forma-dossier p {
-  font-size: 13px;
-  line-height: 1.85;
-  color: #777f6d;
-  max-width: 360px;
+  font: var(--f-body);
+  text-wrap: pretty;
+  color: var(--forma-ink-2);
+  max-width: 40ch;
+  margin: 0;
 }
 .forma-dossier dl {
-  margin: 35px 0 0;
-  font-size: 11px;
+  margin: 32px 0 0;
 }
 .forma-dossier dl > div {
   display: grid;
-  grid-template-columns: 120px 1fr;
-  padding: 11px 0;
-  border-top: 1px solid #c5c9ba;
+  grid-template-columns: 128px 1fr;
+  gap: 16px;
+  align-items: baseline;
+  padding: 14px 0;
+  border-top: 1px solid var(--forma-rule);
+}
+.forma-dossier dl > div:last-child {
+  border-bottom: 1px solid var(--forma-rule);
 }
 .forma-dossier dt {
-  color: #7b836f;
+  font: var(--f-ui);
+  color: var(--forma-ink-2);
 }
 .forma-dossier dd {
   margin: 0;
+  font-size: 15px;
+  font-variant-numeric: tabular-nums;
 }
 .forma-plan {
   margin: 0;
-  padding: 55px 20px 0;
   align-self: center;
 }
 .forma-plan svg {
+  display: block;
   width: 100%;
-  color: #747d68;
+  color: var(--forma-ink-2);
+}
+.forma-plan text {
+  font:
+    400 10px "IBM Plex Mono",
+    monospace;
+  letter-spacing: 0.06em;
 }
 .forma-plan figcaption {
   display: flex;
   justify-content: space-between;
-  border-top: 1px solid #b7bfa9;
-  padding: 20px 0;
-  margin-top: 25px;
-  font:
-    8px "IBM Plex Mono",
-    monospace;
-  color: #7e896f;
-  gap: 20px;
+  gap: 24px;
+  border-top: 1px solid var(--forma-rule);
+  padding-top: 16px;
+  margin-top: 24px;
+  font: var(--f-meta);
+  color: var(--forma-ink-2);
 }
 .forma-materials {
-  padding: 80px 3.5%;
+  padding: var(--forma-section) var(--forma-gutter);
   display: grid;
   grid-template-columns: 1.4fr 0.7fr;
-  gap: 10%;
+  gap: var(--forma-gap);
 }
-.forma-materials figure {
+.forma-detail {
   margin: 0;
 }
-.forma-material-wide img {
-  width: 100%;
-  height: 740px;
-  object-fit: cover;
-  object-position: 25% center;
+.forma-detail > div {
+  overflow: hidden;
 }
-.forma-materials figcaption {
-  font:
-    8px "IBM Plex Mono",
-    monospace;
-  padding: 18px 0;
-  color: #858e78;
+.forma-detail img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  object-position: var(--focus);
+  transform: scale(var(--zoom));
+  transform-origin: var(--focus);
+  animation: forma-reveal 500ms var(--f-ease) both;
+}
+.forma-detail figcaption {
+  padding-top: 16px;
+  font: var(--f-meta);
+  color: var(--forma-ink-2);
+}
+.forma-material-wide img {
+  height: 640px;
 }
 .forma-materials h2 {
-  margin: 25px 0;
-  font-size: 30px;
+  margin: 24px 0;
+  font:
+    400 28px/1.15 "Manrope",
+    sans-serif;
+  letter-spacing: -0.035em;
 }
 .forma-materials p {
-  font-size: 12px;
-  line-height: 1.9;
-  color: #7c856e;
+  font: var(--f-body);
+  text-wrap: pretty;
+  color: var(--forma-ink-2);
+  max-width: 40ch;
+  margin: 0;
 }
 .forma-material-close {
-  padding-top: 95px;
+  padding-top: 96px;
 }
 .forma-material-close img {
-  width: 100%;
   height: 300px;
-  object-fit: cover;
-  object-position: right bottom;
 }

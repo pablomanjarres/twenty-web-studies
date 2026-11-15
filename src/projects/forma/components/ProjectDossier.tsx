@@ -4,7 +4,7 @@ export function ProjectDossier({ project }: { project: Project }) {
   return (
     <section className="forma-dossier" id="dossier">
       <div>
-        <span className="forma-kicker">PROJECT DOSSIER</span>
+        <span className="forma-label">Project dossier</span>
         <h2>{project.short}</h2>
         <p>{project.description}</p>
         <dl>
