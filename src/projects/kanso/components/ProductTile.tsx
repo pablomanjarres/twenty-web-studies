@@ -12,24 +12,22 @@ export function ProductTile({
       <button
         className="kanso-object-image"
         onClick={() => onSelect(product)}
-        aria-label={`View ${product.name}`}
+        tabIndex={-1}
+        aria-hidden="true"
       >
-        <img
-          src={image(product.image)}
-          alt={product.name}
-          width="1254"
-          height="1254"
-        />
+        <img src={image(product.image)} alt="" width="1254" height="1254" />
       </button>
       <div className="kanso-object-caption">
-        <button onClick={() => onSelect(product)}>
-          <h2>{product.name}</h2>
-          <ArrowUpRight size={14} />
-        </button>
-        <span>{money(product.price)}</span>
+        <h2>
+          <button onClick={() => onSelect(product)}>
+            {product.name}
+            <ArrowUpRight size={14} aria-hidden="true" />
+          </button>
+        </h2>
+        <span className="kanso-num">{money(product.price)}</span>
       </div>
-      <div className="kanso-object-spec">
-        <span>{product.size}</span>
+      <div className="kanso-object-spec kanso-meta">
+        <span className="kanso-num">{product.size}</span>
         <span>{product.glaze}</span>
       </div>
     </article>
