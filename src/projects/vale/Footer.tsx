@@ -9,7 +9,7 @@ export function Footer() {
         <BrandLogo brand={brand} />
       </a>
       <span>A little care. Every day.</span>
-      <a href="#formulas">
+      <a className="vale-link" href="#formulas">
         Back to the collection <ArrowUp size={16} />
       </a>
     </footer>

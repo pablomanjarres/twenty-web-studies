@@ -3,7 +3,7 @@
   grid-template-columns: 1.1fr 1fr;
   gap: 9%;
   max-width: 1540px;
-  padding: 105px 7% 120px;
+  padding: 112px 7%;
   align-items: center;
   margin: auto;
 }
@@ -14,60 +14,87 @@
   border-radius: 36px;
 }
 .vale-packaging h2 {
-  font-size: clamp(36px, 3.7vw, 53px);
-  line-height: 1.1;
+  font-size: var(--vale-h2);
+  line-height: 1.06;
   max-width: 470px;
 }
 .vale-packaging-copy > p {
   color: #b9d0c1;
-  margin-top: 22px;
+  font-size: var(--vale-lead);
+  line-height: 1.6;
+  margin-top: 16px;
   max-width: 410px;
+  text-wrap: pretty;
 }
 .vale-questions {
-  margin-top: 33px;
+  margin-top: 32px;
+  border-bottom: 1px solid var(--vale-hairline);
 }
 .vale-questions details {
-  padding: 0 20px;
-  margin-bottom: 9px;
-  border-radius: 19px;
-  background: #a2c2ad0c;
+  border-top: 1px solid var(--vale-hairline);
 }
 .vale-questions summary {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 61px;
-  gap: 20px;
-  font-size: 13px;
+  min-height: 64px;
+  padding: 18px 0;
+  gap: 24px;
+  color: #dfeae2;
+  font-size: var(--vale-body);
+  font-weight: 500;
+  line-height: 1.4;
+  transition: color var(--vale-state);
 }
-.vale-questions summary > span {
-  font-size: 22px;
+.vale-questions summary:hover {
+  color: var(--vale-fog);
+}
+.vale-question-icon {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 32px;
+  height: 32px;
+  border: 1px solid rgb(185 210 191 / 0.3);
+  border-radius: 50%;
   color: #a8c6b0;
+  transition:
+    background-color var(--vale-state),
+    transform 200ms cubic-bezier(0.2, 0.8, 0.2, 1);
 }
-.vale-questions details[open] summary > span {
+.vale-questions summary:hover .vale-question-icon {
+  background: #ffffff12;
+}
+.vale-questions details[open] .vale-question-icon {
   transform: rotate(45deg);
 }
 .vale-questions details p {
+  max-width: 46ch;
+  padding: 0 0 24px;
   color: #b9d0c1;
-  font-size: 13px;
-  padding: 0 0 20px;
+  font-size: var(--vale-body);
+  line-height: 1.6;
+  text-wrap: pretty;
 }
 .vale-footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 25px;
+  gap: 24px;
   padding: 32px 5%;
+  border-top: 1px solid var(--vale-hairline);
   background: #0d2c21;
 }
 .vale-footer > span {
   color: #bad1c1;
-  font-size: 14px;
+  font-size: var(--vale-ui);
 }
 .vale-footer > a:last-child {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   min-height: 44px;
-  font-size: 13px;
+  font-size: var(--vale-ui);
+  font-weight: 500;
+  letter-spacing: 0.01em;
 }

@@ -98,23 +98,33 @@
   }
   .vale-packaging {
     grid-template-columns: 1fr;
-    gap: 34px;
-    padding: 70px 32px;
+    gap: 40px;
+    padding: 72px 24px;
   }
   .vale-packaging img {
     height: 360px;
     border-radius: 28px;
   }
   .vale-footer {
-    flex-wrap: wrap;
-    padding: 25px 28px;
-    gap: 15px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-areas:
+      "logo link"
+      "tag tag";
+    justify-content: space-between;
+    padding: 24px;
+    gap: 8px 16px;
   }
-  .vale-footer > span {
-    font-size: 12px;
+  .vale-footer > a:first-child {
+    grid-area: logo;
+    align-self: center;
   }
   .vale-footer > a:last-child {
-    width: 100%;
+    grid-area: link;
+  }
+  .vale-footer > span {
+    grid-area: tag;
+    font-size: var(--vale-label);
   }
   .vale-bag-backdrop {
     padding: 9px;
