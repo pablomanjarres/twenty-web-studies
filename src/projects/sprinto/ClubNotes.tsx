@@ -1,6 +1,4 @@
 import { ArrowUpRight, MoveUpRight } from "lucide-react";
-import { BrandLogo } from "../../shared/BrandLogo";
-import { brand } from "./brand";
 import { fixtures } from "./data";
 export function ClubNotes() {
   return (
@@ -65,11 +63,6 @@ export function ClubNotes() {
           </a>
         </div>
       </section>
-      <footer className="sp-footer">
-        <BrandLogo brand={brand} />
-        <p>Riverside courts · Open daily 07:00–22:00</p>
-        <span>© 2026 Sprinto</span>
-      </footer>
     </>
   );
 }

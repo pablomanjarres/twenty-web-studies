@@ -18,6 +18,8 @@
   background: var(--sp-violet);
 }
 .sp-header {
+  padding: 0 28px;
+  background: var(--sp-violet);
   min-height: 87px;
   display: flex;
   align-items: center;
