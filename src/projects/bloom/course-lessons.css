@@ -57,11 +57,7 @@
   min-width: 0;
 }
 .bv-lesson-row small {
-  font-size: var(--bv-fs-caps);
-  line-height: 1.3;
-  font-weight: 600;
   color: var(--bv-text-2);
-  letter-spacing: 0.08em;
 }
 .bv-lesson-row strong {
   display: block;
