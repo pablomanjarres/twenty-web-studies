@@ -20,14 +20,8 @@ export function Practice() {
   return (
     <section className="forma-practice" id="practice">
       <div>
-        <span>The practice</span>
-        <h2>
-          Good spaces
-          <br />
-          make room
-          <br />
-          for life.
-        </h2>
+        <span className="forma-label">The practice</span>
+        <h2>Good spaces make room for life.</h2>
       </div>
       <div>
         <p className="forma-practice-intro">
@@ -36,18 +30,29 @@ export function Practice() {
           to come back to.
         </p>
         <div className="forma-values">
-          {values.map((i) => (
-            <article key={i.name}>
-              <button
-                aria-expanded={open === i.name}
-                onClick={() => setOpen(open === i.name ? "" : i.name)}
-              >
-                {i.name}
-                {open === i.name ? <Minus size={18} /> : <Plus size={18} />}
-              </button>
-              {open === i.name && <p>{i.text}</p>}
-            </article>
-          ))}
+          {values.map((i, index) => {
+            const expanded = open === i.name;
+            const panel = `forma-value-${index}`;
+            return (
+              <article key={i.name}>
+                <button
+                  aria-expanded={expanded}
+                  aria-controls={panel}
+                  onClick={() => setOpen(expanded ? "" : i.name)}
+                >
+                  {i.name}
+                  {expanded ? (
+                    <Minus size={18} aria-hidden="true" />
+                  ) : (
+                    <Plus size={18} aria-hidden="true" />
+                  )}
+                </button>
+                <p id={panel} hidden={!expanded}>
+                  {i.text}
+                </p>
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>
