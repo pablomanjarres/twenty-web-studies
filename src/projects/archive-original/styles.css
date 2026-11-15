@@ -1,6 +1,8 @@
-@import "./styles.01-layout.css";
-@import "./styles.02-campaign.css";
-@import "./styles.03-product.css";
-@import "./styles.04-bag.css";
-@import "./styles.05-responsive-utility.css";
-@import "./styles.06-responsive-filters.css";
+@import "./styles.tokens.css";
+@import "./styles.header.css";
+@import "./styles.hero.css";
+@import "./styles.campaign.css";
+@import "./styles.shop.css";
+@import "./styles.product.css";
+@import "./styles.story.css";
+@import "./styles.bag.css";
