@@ -85,6 +85,12 @@
 .kanso-link:hover {
   text-decoration-color: currentColor;
 }
+/* Underline that appears when its parent control is hovered or focused. */
+.kanso-reveal-line {
+  text-decoration: underline 1px transparent;
+  text-underline-offset: 4px;
+  transition: text-decoration-color var(--kanso-fast) var(--kanso-ease);
+}
 .kanso-sr-only {
   position: absolute;
   width: 1px;
@@ -125,12 +131,8 @@
   gap: 6px;
   min-height: 44px;
 }
-.kanso-header nav a span {
-  text-decoration: underline 1px transparent;
-  text-underline-offset: 4px;
-  transition: text-decoration-color var(--kanso-fast) var(--kanso-ease);
-}
-.kanso-header nav a:hover span {
+.kanso-header nav a:hover span,
+.kanso-bag-trigger:hover span {
   text-decoration-color: currentColor;
 }
 .kanso-utilities {
@@ -159,8 +161,4 @@
 .kanso-bag-trigger span {
   white-space: nowrap;
   font-variant-numeric: tabular-nums;
-}
-.kanso-bag-trigger:hover span {
-  text-decoration: underline;
-  text-underline-offset: 4px;
 }

@@ -37,11 +37,6 @@
   padding: 0;
   text-align: left;
 }
-.kanso-categories span {
-  text-decoration: underline 1px transparent;
-  text-underline-offset: 4px;
-  transition: text-decoration-color var(--kanso-fast) var(--kanso-ease);
-}
 .kanso-categories button:hover span,
 .kanso-categories button[aria-pressed="true"] span {
   text-decoration-color: currentColor;

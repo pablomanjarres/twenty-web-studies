@@ -74,9 +74,6 @@
   padding: 0;
   font-family: inherit;
   text-align: left;
-  text-decoration: underline 1px transparent;
-  text-underline-offset: 4px;
-  transition: text-decoration-color var(--kanso-fast) var(--kanso-ease);
 }
 .kanso-object-caption svg {
   flex: none;
