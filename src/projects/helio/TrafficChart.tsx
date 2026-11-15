@@ -37,7 +37,6 @@ export function TrafficChart({
           </span>
         </div>
         <label>
-          Range
           <select
             aria-label="Traffic range"
             value={hours}
@@ -75,8 +74,8 @@ export function TrafficChart({
         >
           <defs>
             <linearGradient id="hc-request-fill" x1="0" x2="0" y1="0" y2="1">
-              <stop offset="0" stopColor="#3458ee" stopOpacity=".13" />
-              <stop offset="1" stopColor="#3458ee" stopOpacity="0" />
+              <stop offset="0" stopColor="#234afb" stopOpacity=".13" />
+              <stop offset="1" stopColor="#234afb" stopOpacity="0" />
             </linearGradient>
           </defs>
           {[0, 55, 110, 165, 220].map((y) => (
@@ -86,7 +85,7 @@ export function TrafficChart({
               x2="1000"
               y1={y}
               y2={y}
-              stroke="#e9ecf1"
+              stroke="#eef1f6"
               strokeDasharray="3 5"
               vectorEffect="non-scaling-stroke"
             />
@@ -94,7 +93,7 @@ export function TrafficChart({
           <path d={`${line} L1000,220 L0,220 Z`} fill="url(#hc-request-fill)" />
           <path
             d={line}
-            stroke="#3458ee"
+            stroke="#234afb"
             strokeWidth="2.4"
             fill="none"
             vectorEffect="non-scaling-stroke"
@@ -104,7 +103,7 @@ export function TrafficChart({
             x2={active.x}
             y1="0"
             y2="220"
-            stroke="#91a3e8"
+            stroke="#9aabf9"
             strokeDasharray="3 4"
             vectorEffect="non-scaling-stroke"
           />
@@ -149,7 +148,7 @@ export function TrafficChart({
                 cy={coordinates[i].y}
                 r={i === index ? 5 : 0}
                 fill="#fff"
-                stroke="#3458ee"
+                stroke="#234afb"
                 strokeWidth="2"
                 vectorEffect="non-scaling-stroke"
               />
