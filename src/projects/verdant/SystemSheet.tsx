@@ -1,17 +1,24 @@
 import { useState } from "react";
-import { scenarios, nodes } from "./data";
+import { type Scenario, nodes } from "./data";
 import { FlowDiagram } from "./FlowDiagram";
+import { FlowLegend } from "./FlowLegend";
 import { SourceLegend } from "./SourceLegend";
 import { OperatingNotes, FocusAnnotation } from "./SystemAnnotations";
-export function SystemSheet() {
-  const [selected, setSelected] = useState(0);
+export function SystemSheet({
+  scenario,
+  selected,
+  onSelect,
+}: {
+  scenario: Scenario;
+  selected: number;
+  onSelect: (index: number) => void;
+}) {
   const [node, setNode] = useState("conversion");
-  const scenario = scenarios[selected];
   const active = nodes.find((n) => n.id === node)!;
   return (
     <section id="system" className="vd-system">
       <OperatingNotes scenario={scenario} />
-      <SourceLegend selected={selected} onSelect={setSelected} />
+      <SourceLegend selected={selected} onSelect={onSelect} />
       <FlowDiagram
         scenario={scenario}
         selected={selected}
@@ -20,11 +27,9 @@ export function SystemSheet() {
       />
       <FocusAnnotation active={active} generation={scenario.generation} />
       <div className="vd-system-bottom">
-        <span>
-          <i /> Power flow
-        </span>
+        <FlowLegend />
         <p>{scenario.description}</p>
-        <span>EXAMPLE SITE · VALUES IN kW</span>
+        <span className="vd-label">Example site · values in kW</span>
       </div>
     </section>
   );

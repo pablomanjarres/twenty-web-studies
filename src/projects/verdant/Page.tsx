@@ -1,9 +1,14 @@
+import { useState } from "react";
 import { BrandLogo } from "../../shared/BrandLogo";
 import { brand } from "./brand";
+import { scenarios } from "./data";
 import { SystemSheet } from "./SystemSheet";
 import { FieldProjects } from "./FieldProjects";
+import { ConnectionPlanner } from "./ConnectionPlanner";
 import "./styles.css";
 export default function Page() {
+  const [selected, setSelected] = useState(0);
+  const scenario = scenarios[selected];
   return (
     <main className="verdant">
       <header className="vd-header">
@@ -14,12 +19,21 @@ export default function Page() {
           <i /> Illustrative energy system
         </span>
         <nav aria-label="Energy navigation">
-          <a href="#field">In the field</a>
-          <a href="#connection">Plan a connection ↗</a>
+          <a href="#field" className="vd-header-field">
+            In the field
+          </a>
+          <a href="#connection" className="vd-header-cta">
+            Plan a connection
+          </a>
         </nav>
       </header>
-      <SystemSheet />
-      <FieldProjects />
+      <SystemSheet
+        scenario={scenario}
+        selected={selected}
+        onSelect={setSelected}
+      />
+      <FieldProjects scenario={scenario} />
+      <ConnectionPlanner />
       <footer className="vd-footer">
         <BrandLogo brand={brand} />
         <p>A better current, from the ground up.</p>
