@@ -25,7 +25,11 @@ export function ReadingPanel({ story, onClose, saved, onSave }: Props) {
           <span className="monograph-small-label">
             Monograph / {story.category}
           </span>
-          <button onClick={onClose} aria-label="Close article">
+          <button
+            className="monograph-icon-button"
+            onClick={onClose}
+            aria-label="Close article"
+          >
             <X size={22} aria-hidden="true" />
           </button>
         </header>

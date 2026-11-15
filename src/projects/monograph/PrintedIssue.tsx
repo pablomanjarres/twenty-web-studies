@@ -63,8 +63,16 @@ export function PrintedIssue() {
               placeholder="Your email address"
               onChange={() => setSaved(false)}
             />
-            <button type="submit" aria-label="Save issue notification">
-              <ArrowUpRight size={22} aria-hidden="true" />
+            <button
+              type="submit"
+              className="monograph-icon-button"
+              aria-label="Save issue notification"
+            >
+              <ArrowUpRight
+                size={22}
+                className="monograph-arrow"
+                aria-hidden="true"
+              />
             </button>
           </div>
           <p role="status">

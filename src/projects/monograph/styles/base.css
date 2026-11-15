@@ -91,15 +91,37 @@
   color: var(--mono-blue);
   text-decoration-color: currentColor;
 }
-.monograph-link:active {
+.monograph-link:active,
+.monograph-icon-button:active,
+.monograph-essay-link:active,
+.monograph-save-story:active {
   opacity: 0.7;
+}
+/* Square 44px control for a single icon, blue on hover. */
+.monograph-icon-button {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  transition: color 200ms var(--mono-ease);
+}
+.monograph-icon-button:hover {
+  color: var(--mono-blue);
 }
 .monograph-arrow {
   display: inline-block;
   transition: transform 200ms var(--mono-ease);
 }
 .monograph-link:hover .monograph-arrow,
-.monograph-link:focus-visible .monograph-arrow {
+.monograph-link:focus-visible .monograph-arrow,
+.monograph-icon-button:hover .monograph-arrow,
+.monograph-essay-link:hover .monograph-arrow,
+.monograph-story:hover .monograph-arrow,
+.monograph-story:focus-within .monograph-arrow {
   transform: translate(2px, -2px);
 }
 

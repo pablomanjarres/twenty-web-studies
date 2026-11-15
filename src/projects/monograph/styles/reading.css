@@ -39,22 +39,6 @@
   background: var(--mono-paper);
   border-bottom: 1px solid var(--mono-rule);
 }
-.monograph-reading > header button {
-  width: 44px;
-  height: 44px;
-  display: grid;
-  place-items: center;
-  padding: 0;
-  border: 0;
-  background: transparent;
-  transition: color 200ms var(--mono-ease);
-}
-.monograph-reading > header button:hover {
-  color: var(--mono-blue);
-}
-.monograph-reading > header button:active {
-  opacity: 0.7;
-}
 .monograph-reading > img {
   width: 100%;
   height: 380px;
@@ -108,7 +92,4 @@
 }
 .monograph-save-story:hover .monograph-underline {
   text-decoration-color: currentColor;
-}
-.monograph-save-story:active {
-  opacity: 0.7;
 }
