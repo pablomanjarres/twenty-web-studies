@@ -2,6 +2,7 @@ import { ArrowUpRight, Plus, Clock } from "lucide-react";
 import { days, timeLabel, type Visit } from "./data";
 import { PatientPortrait } from "./overviewData";
 import { countLabel } from "./countLabel";
+import { statusTone } from "./visitStatus";
 
 export function UpcomingAppointments({
   visits,
@@ -19,10 +20,7 @@ export function UpcomingAppointments({
   return (
     <aside className="pv-upcoming pv-white-card">
       <div className="pv-card-title">
-        <h2>
-          Daily
-          <br /> appointments
-        </h2>
+        <h2>Daily appointments</h2>
         <button aria-label="Open full calendar" onClick={onCalendar}>
           <ArrowUpRight size={19} />
         </button>
@@ -41,7 +39,7 @@ export function UpcomingAppointments({
         ))}
       </div>
       <div className="pv-upcoming-list">
-        {visits.slice(0, 3).map((v, i) => (
+        {visits.slice(0, 3).map((v) => (
           <div className="pv-upcoming-row" key={v.id}>
             <span>
               {timeLabel(v.time)}
@@ -49,14 +47,16 @@ export function UpcomingAppointments({
             </span>
             <button
               onClick={() => onSelect(v.id)}
-              className={`pv-upcoming-visit pv-upcoming-tone-${i % 3}`}
+              className={`pv-upcoming-visit is-${statusTone(v.status)}`}
             >
               <PatientPortrait visit={v} />
               <strong>
                 {v.patient}
-                <small>{v.purpose}</small>
+                <small>
+                  {v.purpose} · {v.status}
+                </small>
               </strong>
-              <ArrowUpRight size={13} />
+              <ArrowUpRight size={16} />
             </button>
           </div>
         ))}
