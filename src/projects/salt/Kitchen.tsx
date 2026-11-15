@@ -9,10 +9,12 @@ export function Kitchen() {
           alt="A coastal landscape beside the water"
           loading="lazy"
         />
-        <figcaption>FROM THE COAST, INTO THE KITCHEN.</figcaption>
+        <figcaption className="sl-label">
+          FROM THE COAST, INTO THE KITCHEN.
+        </figcaption>
       </figure>
       <div className="sl-kitchen-story">
-        <span>GOOD FOOD STARTS NEARBY.</span>
+        <span className="sl-label">GOOD FOOD STARTS NEARBY.</span>
         <h2>
           We know the people.
           <br />
@@ -34,7 +36,7 @@ export function Kitchen() {
           alt="Fresh whole fish on a plate ready for the coastal kitchen"
           loading="lazy"
         />
-        <span>THE MORNING’S CATCH</span>
+        <span className="sl-label">THE MORNING’S CATCH</span>
         <p>
           Ask what’s fresh.
           <br />
