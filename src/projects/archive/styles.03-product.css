@@ -1,5 +1,5 @@
 .archive-shop {
-  padding: 80px 3.5% 90px;
+  padding: 96px 3.5%;
 }
 .archive-shop-heading {
   display: flex;
@@ -7,45 +7,63 @@
   justify-content: space-between;
   gap: 30px;
 }
-.archive-shop-heading > span {
-  font:
-    8px "IBM Plex Mono",
-    monospace;
-  color: #857a6b;
+.archive-shop-heading > span,
+.archive-filter-bar > span {
+  font: var(--ar-label);
+  letter-spacing: 0.06em;
+  color: var(--ar-ink-2);
 }
 .archive-shop-heading h2 {
   font:
-    400 43px "Sublime",
+    400 clamp(40px, 3.6vw, 56px) / 1 "Sublime",
     sans-serif;
+  text-wrap: balance;
   margin: 0;
   letter-spacing: -0.015em;
 }
-.archive-filters {
+.archive-filter-bar {
   display: flex;
   align-items: center;
-  gap: 25px;
-  border-top: 1px solid #c0b8aa;
-  margin: 35px 0;
-  padding-top: 20px;
+  gap: 24px;
+  border-top: 1px solid var(--ar-rule);
+  margin: 36px 0;
+  padding-top: 12px;
+}
+.archive-filter-bar > span {
+  margin-left: auto;
+  text-transform: uppercase;
+  font-variant-numeric: tabular-nums;
+}
+.archive-filters {
+  display: flex;
+  gap: 24px;
 }
 .archive-filters button {
+  flex: none;
+  min-height: 44px;
   border: 0;
-  border-bottom: 1px solid transparent;
-  background: transparent;
-  color: #8e8271;
-  padding: 9px 0;
-  font-size: 11px;
+  background: linear-gradient(currentColor, currentColor) left bottom / 0 2px
+    no-repeat;
+  color: var(--ar-ink-2);
+  padding: 0;
+  font: var(--ar-ui);
+  letter-spacing: 0.01em;
+  transition:
+    color 180ms ease-out,
+    background-size 180ms ease-out;
+}
+.archive-filters button:hover {
+  color: var(--ar-ink);
+  background-image: linear-gradient(
+    var(--ar-rule-strong),
+    var(--ar-rule-strong)
+  );
+  background-size: 100% 1px;
 }
 .archive-filters button[aria-pressed="true"] {
-  border-color: #9b273e;
-  color: #161511;
-}
-.archive-filters > span {
-  margin-left: auto;
-  font:
-    8px "IBM Plex Mono",
-    monospace;
-  color: #918575;
+  color: var(--ar-ink);
+  background-image: linear-gradient(var(--ar-cherry), var(--ar-cherry));
+  background-size: 100% 2px;
 }
 .archive-product-grid {
   display: grid;
