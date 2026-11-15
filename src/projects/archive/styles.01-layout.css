@@ -126,10 +126,13 @@
   justify-items: end;
 }
 .archive-footer a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   font: var(--ar-ui);
   letter-spacing: 0.01em;
   color: var(--ar-ink);
-  padding: 6px 0;
+  background-position: left calc(50% + 0.85em);
 }
 .archive-footer small {
   font: inherit;
