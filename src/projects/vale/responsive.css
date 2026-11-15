@@ -1,13 +1,13 @@
 @media (max-width: 1100px) {
+  .vale {
+    --vale-display: 81px;
+  }
   .vale-studio {
     min-height: 740px;
   }
   .vale-studio-copy {
     width: 60%;
     padding-top: 68px;
-  }
-  .vale-studio-copy h1 {
-    font-size: 81px;
   }
   .vale-product-stage {
     --vale-product-size: 740px;
@@ -81,8 +81,8 @@
   }
   .vale-product-stage {
     --vale-product-size: 300px;
-    --vale-product-x: 42%;
-    --vale-product-y: 50%;
+    --vale-product-x: 36%;
+    --vale-product-y: 47%;
     position: relative;
     right: auto;
     top: auto;
@@ -94,22 +94,23 @@
     --vale-product-size: 280px;
   }
   .vale-stage-still-water {
-    --vale-product-size: 290px;
+    --vale-product-size: 250px;
+    --vale-product-x: 34%;
   }
   .vale-studio-halo {
     width: 340px;
     height: 360px;
-    left: 42%;
+    left: 36%;
   }
   .vale-studio-plinth {
     width: 230px;
     height: 42px;
     bottom: 8%;
-    left: 42%;
+    left: 36%;
   }
   .vale-ingredient-capsule {
     right: 0;
-    bottom: 12px;
+    bottom: 4px;
     width: min(214px, 60%);
     padding: 12px 14px;
     border-radius: 20px;

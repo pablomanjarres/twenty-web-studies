@@ -20,7 +20,7 @@
   font-size: var(--vale-h2);
   line-height: 1.06;
 }
-.vale-ritual-lead {
+.vale .vale-ritual-lead {
   max-width: 40ch;
   margin-top: 16px;
   color: #526b5a;
