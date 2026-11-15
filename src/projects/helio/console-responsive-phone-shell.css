@@ -5,15 +5,16 @@
   .hc-sidebar {
     padding: 0;
     flex-direction: row;
-    height: 58px;
+    height: 56px;
     align-items: center;
     border-right: 0;
-    border-bottom: 1px solid #e5e9f1;
+    border-bottom: 1px solid var(--hl-line);
     gap: 12px;
   }
   .hc-logo {
-    height: auto;
-    margin: 0 auto 0 18px;
+    height: 44px;
+    margin: 0 auto 0 12px;
+    padding: 0 8px;
   }
   .hc-logo .brand-logo > span {
     display: inline;
@@ -31,12 +32,11 @@
     display: none;
   }
   .hc-topbar {
-    height: 44px;
-    padding: 0 18px;
-    font-size: 10px;
+    height: 52px;
+    padding: 0 12px 0 20px;
   }
   .hc-topbar a {
-    font-size: 9px;
+    min-height: 44px;
   }
   .hc-notice {
     display: none;
@@ -44,63 +44,49 @@
   .hc-topbar > div {
     gap: 8px;
   }
-  .hc-avatar {
-    width: 23px;
-    height: 23px;
-  }
-  .hc-sandbox {
-    font-size: 8px;
-  }
   .hc-heading {
-    padding: 22px 18px;
-    align-items: flex-start;
+    padding: 24px 20px 20px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
   }
   .hc-breadcrumb {
-    font-size: 9px;
+    font-size: 13px;
+    margin-bottom: 4px;
   }
   .hc-heading h1 {
-    font-size: 26px;
-  }
-  .hc-heading p {
-    max-width: 190px;
-    font-size: 10px;
-    line-height: 1.6;
+    font-size: 28px;
   }
   .hc-primary {
-    font-size: 9px;
-    padding: 10px;
-    gap: 5px;
-    white-space: nowrap;
-    margin-top: 21px;
-  }
-  .hc-primary > .lucide {
-    width: 12px;
+    height: 44px;
+    width: 100%;
   }
   .hc-toolbar {
-    margin: 0 18px;
-    gap: 10px;
+    margin: 0 20px;
+    flex-wrap: wrap;
+    gap: 4px 12px;
   }
   .hc-toolbar nav {
     gap: 16px;
   }
   .hc-toolbar nav button {
-    font-size: 10px;
-    padding-bottom: 12px;
-  }
-  .hc-toolbar select {
-    font-size: 9px;
-    max-width: 90px;
+    padding: 12px 0;
   }
   .hc-toolbar > label {
-    gap: 3px;
-    margin-bottom: 10px;
+    order: -1;
+    width: 100%;
+    height: 44px;
+    margin-bottom: 8px;
+    font-size: 13px;
+  }
+  .hc-toolbar select,
+  .hc-traffic select {
+    flex: 1;
+    font-size: 16px;
   }
   .hc-content {
-    padding: 18px;
+    padding: 20px;
     gap: 16px;
-  }
-  .hc-content-footer {
-    font-size: 8px;
   }
   .hc-content-footer > span:last-child {
     display: none;
