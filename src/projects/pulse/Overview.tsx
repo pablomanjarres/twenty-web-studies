@@ -116,6 +116,7 @@ export function Overview({
           metric={metric}
           onMetric={setMetric}
           onDay={onDay}
+          onCalendar={onCalendar}
         />
         <AppointmentLedger visits={current} onSelect={onSelect} />
       </div>

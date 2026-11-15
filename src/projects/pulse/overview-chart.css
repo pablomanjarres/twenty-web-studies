@@ -1,84 +1,99 @@
 .pv-practice-chart {
-  height: 444px;
+  height: auto;
 }
 .pv-chart-toolbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 22px;
+  margin-top: 16px;
   gap: 12px;
 }
 .pv-chart-toolbar > div:first-child {
   display: flex;
   align-items: baseline;
-  gap: 9px;
+  gap: 8px;
 }
 .pv-chart-toolbar strong {
-  font-size: 31px;
+  font-family: "Outfit", sans-serif;
+  font-size: 32px;
   line-height: 1;
   font-weight: 500;
-  letter-spacing: -1px;
+  letter-spacing: -0.01em;
+  font-variant-numeric: tabular-nums;
+}
+.pv-chart-toolbar strong small {
+  font-size: 16px;
+  color: var(--pv-text-2);
+  margin-left: 1px;
 }
 .pv-chart-toolbar span {
-  font-size: 10px;
-  color: #8b9d92;
+  font-size: 13px;
+  color: var(--pv-text-2);
 }
 .pv-metric-toggle {
   display: flex;
-  padding: 3px;
-  background: #f5f7f4;
-  border-radius: 20px;
+  padding: 4px;
+  background: var(--pv-wash);
+  border-radius: 999px;
 }
 .pv-metric-toggle button {
-  font-size: 9px;
-  padding: 7px 10px;
-  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  min-height: 32px;
+  padding: 6px 12px;
+  border-radius: 999px;
   border: 0;
   background: transparent;
-  color: #90a097;
+  color: var(--pv-text-2);
   white-space: nowrap;
+}
+.pv-metric-toggle button:not([aria-pressed="true"]):hover {
+  background: var(--pv-wash);
+  color: var(--pv-text);
 }
 .pv-metric-toggle button[aria-pressed="true"] {
   background: white;
-  color: #315147;
-  box-shadow: 0 1px 3px #23412c10;
+  color: var(--pv-text);
+  box-shadow: 0 1px 3px rgba(16, 40, 36, 0.1);
 }
 .pv-bar-chart {
   position: relative;
   height: 276px;
-  margin-top: 30px;
-  padding-left: 29px;
+  margin-top: 40px;
+  padding-left: 32px;
 }
 .pv-chart-axis {
   position: absolute;
   left: 0;
   top: 0;
-  bottom: 25px;
+  bottom: 28px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  font-size: 8px;
-  color: #9ba89f;
+  font-size: 12px;
+  line-height: 0;
+  color: var(--pv-text-3);
+  font-variant-numeric: tabular-nums;
 }
 .pv-chart-lines {
   position: absolute;
-  left: 29px;
+  left: 32px;
   right: 0;
   top: 0;
-  bottom: 25px;
+  bottom: 28px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 .pv-chart-lines i {
-  border-top: 1px dashed #eef1ed;
+  border-top: 1px dashed var(--pv-hair);
 }
 .pv-chart-bars {
   position: relative;
   display: flex;
-  gap: 19px;
+  gap: 20px;
   justify-content: space-around;
-  height: calc(100% - 25px);
+  height: calc(100% - 28px);
 }
 .pv-chart-bars button {
   display: flex;
@@ -89,62 +104,84 @@
   min-width: 0;
   height: 100%;
   border: 0;
+  border-radius: 16px;
   background: transparent;
   padding: 0;
   position: relative;
 }
+.pulse-v2 .pv-chart-bars button:active {
+  transform: none;
+}
 .pv-chart-bars button > i {
   background: #d9ece1;
   width: 100%;
-  max-width: 73px;
+  max-width: 72px;
+  height: var(--bar);
   border-radius: 32px;
   min-height: 8px;
   transition:
-    height 0.35s ease,
-    background 0.2s;
+    height 350ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    background-color 150ms var(--pv-ease);
+}
+.pv-chart-bars button:not([aria-pressed="true"]):hover > i {
+  background: #c4e2d2;
+}
+.pv-chart-bars button.is-empty > i {
+  background: transparent;
+  border: 1px dashed var(--pv-text-3);
+  opacity: 0.45;
 }
 .pv-chart-bars button[aria-pressed="true"] > i {
   background: #277970;
 }
 .pv-bar-value {
   position: absolute;
-  top: -18px;
-  background: var(--pv-lemon);
-  color: #315143 !important;
-  border-radius: 11px;
-  padding: 5px 8px;
-  font-size: 9px !important;
-  opacity: 0;
+  bottom: calc(var(--bar) + 6px);
+  font-size: 12px;
+  line-height: 1;
+  color: var(--pv-text-2);
+  font-variant-numeric: tabular-nums;
   white-space: nowrap;
+  transition: bottom 350ms cubic-bezier(0.2, 0.8, 0.2, 1);
 }
-.pv-chart-bars button[aria-pressed="true"] .pv-bar-value,
-.pv-chart-bars button:hover .pv-bar-value {
-  opacity: 1;
+.pv-chart-bars button[aria-pressed="true"] .pv-bar-value {
+  bottom: calc(var(--bar) + 8px);
+  background: var(--pv-lemon);
+  color: var(--pv-text);
+  font-weight: 500;
+  border-radius: 999px;
+  padding: 6px 10px;
 }
 .pv-bar-day {
   position: absolute;
-  bottom: -23px;
-  font-size: 10px;
-  color: #96a69b;
+  bottom: -26px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--pv-text-2);
 }
 .pv-chart-bars button[aria-pressed="true"] .pv-bar-day {
-  color: #1d5144;
+  color: var(--pv-text);
 }
 .pv-chart-caption {
   display: flex;
   align-items: center;
-  gap: 7px;
-  margin-top: 18px;
-  font-size: 8px;
-  color: #8d9d93;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 24px 0 0;
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--pv-text-2);
 }
 .pv-chart-caption > i {
-  width: 5px;
-  height: 5px;
+  width: 6px;
+  height: 6px;
   background: #277970;
   border-radius: 50%;
 }
 .pv-chart-caption > span {
   margin-left: auto;
-  font-size: 7px;
+  font-size: 12px;
+  color: var(--pv-text-3);
 }
