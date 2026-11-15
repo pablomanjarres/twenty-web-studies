@@ -26,9 +26,6 @@
   font-variant-numeric: tabular-nums;
 }
 .bv-month-grid > span {
-  font-size: var(--bv-fs-caps);
-  font-weight: 600;
-  line-height: 1.3;
   color: var(--bv-text-2);
   padding-bottom: 8px;
 }

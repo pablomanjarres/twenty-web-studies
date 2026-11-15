@@ -91,10 +91,6 @@
   display: flex;
   align-items: center;
   height: 80px;
-  font-size: var(--bv-fs-caps);
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
 }
 .bv-time-axis > div {
   position: relative;
@@ -139,11 +135,7 @@
   flex-shrink: 0;
 }
 .bv-planned-lesson > span i {
-  font-size: var(--bv-fs-caps);
-  line-height: 1.3;
-  font-weight: 600;
   font-style: normal;
-  letter-spacing: 0.08em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

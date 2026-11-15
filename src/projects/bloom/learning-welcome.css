@@ -26,10 +26,6 @@
   transform: rotate(-6deg);
 }
 .bv-learning-invitation div > span {
-  font-size: var(--bv-fs-caps);
-  line-height: 1.3;
-  font-weight: 600;
-  letter-spacing: 0.08em;
   color: var(--bv-text-on-rose);
 }
 .bv-learning-invitation h2 {
