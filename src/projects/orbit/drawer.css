@@ -21,9 +21,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: #a2a797;
-  font-size: 9px;
-  letter-spacing: 1px;
+  color: var(--ov3-text-3);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
 }
 .orbit-v3 .ov3-drawer header button,
 .orbit-v3 .ov3-new-task header button {
@@ -31,13 +32,20 @@
   min-height: 40px;
   display: grid;
   place-items: center;
-  color: #777f6c;
+  border-radius: 10px;
+  color: var(--ov3-text-2);
+}
+.orbit-v3 .ov3-drawer header button:hover,
+.orbit-v3 .ov3-new-task header button:hover {
+  background: #ebebe5;
+  color: var(--ov3-ink);
 }
 .orbit-v3 .ov3-task-kind {
   display: inline-block;
   margin-top: 26px;
-  font-size: 11px;
-  color: #9670b3;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ov3-violet-text);
 }
 .orbit-v3 .ov3-drawer h2 {
   font-size: 29px;
@@ -47,15 +55,15 @@
   letter-spacing: -1px;
 }
 .orbit-v3 .ov3-drawer > p {
-  font-size: 13px;
-  line-height: 1.8;
-  color: #8d9383;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--ov3-text-2);
 }
 .orbit-v3 .ov3-drawer dl {
   margin: 30px 0;
   padding: 18px 0;
-  border-top: 1px solid #e4e6dc;
-  border-bottom: 1px solid #e4e6dc;
+  border-top: 1px solid var(--ov3-line-strong);
+  border-bottom: 1px solid var(--ov3-line-strong);
   display: grid;
   gap: 17px;
 }
@@ -68,15 +76,16 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  color: #9fa792;
-  font-size: 12px;
+  color: var(--ov3-text-3);
+  font-size: 14px;
 }
 .orbit-v3 .ov3-drawer dd {
   margin: 0;
   display: flex;
   align-items: center;
-  gap: 7px;
-  font-size: 12px;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
 }
 .orbit-v3 .ov3-drawer dd img {
   width: 24px;
@@ -85,12 +94,15 @@
   object-fit: cover;
 }
 .orbit-v3 .ov3-drawer select {
-  border: 1px solid #e2dbef;
-  background: #f2ecf8;
-  border-radius: 6px;
-  padding: 7px 9px;
-  font-size: 11px;
-  color: #8766a8;
+  height: 36px;
+  border: 1px solid #ddd3fb;
+  background: var(--ov3-violet-tint);
+  border-radius: 10px;
+  padding: 0 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ov3-violet-text);
+  cursor: pointer;
 }
 .orbit-v3 .ov3-drawer-checks > div {
   display: flex;
@@ -99,11 +111,13 @@
   margin-bottom: 13px;
 }
 .orbit-v3 .ov3-drawer-checks h3 {
-  font-size: 14px;
+  font-size: 17px;
 }
 .orbit-v3 .ov3-drawer-checks > div > span {
-  font-size: 11px;
-  color: #9b83b7;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ov3-violet-text);
+  font-variant-numeric: tabular-nums;
 }
 .orbit-v3 .ov3-drawer-checks > button {
   display: flex;
@@ -111,9 +125,19 @@
   align-items: center;
   width: 100%;
   text-align: left;
-  padding: 11px 0;
-  color: #8b9380;
-  font-size: 12px;
+  min-height: 44px;
+  padding: 8px;
+  margin: 0 -8px;
+  width: calc(100% + 16px);
+  border-radius: 10px;
+  color: var(--ov3-ink);
+  font-size: 15px;
+}
+.orbit-v3 .ov3-drawer-checks > button:hover {
+  background: #efefe9;
+}
+.orbit-v3 .ov3-drawer-checks > button[aria-pressed="true"] {
+  color: var(--ov3-text-2);
 }
 .orbit-v3 .ov3-drawer-checks > button i {
   height: 18px;
@@ -121,12 +145,12 @@
   flex: none;
   display: grid;
   place-items: center;
-  border: 1px solid #c7cdbf;
+  border: 1.5px solid #9a9f97;
   border-radius: 4px;
 }
 .orbit-v3 .ov3-drawer-checks > button[aria-pressed="true"] i {
-  background: #9172b5;
-  border-color: #9172b5;
+  background: var(--ov3-purple);
+  border-color: var(--ov3-purple);
   color: white;
 }
 .orbit-v3 .ov3-task-note {
@@ -138,17 +162,17 @@
   gap: 8px;
   align-items: center;
   font-weight: 600;
-  font-size: 13px;
+  font-size: 15px;
   margin-bottom: 12px;
 }
 .orbit-v3 .ov3-task-note textarea {
   width: 100%;
   min-height: 140px;
   background: white;
-  border: 1px solid #e1e4d9;
-  border-radius: 8px;
-  padding: 13px;
-  font-size: 12px;
+  border: 1px solid var(--ov3-line-strong);
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 15px;
   line-height: 1.6;
   resize: vertical;
 }
@@ -156,9 +180,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 10px;
-  color: #a5ad98;
-  border-top: 1px solid #e4e6dc;
+  font-size: 13px;
+  color: var(--ov3-text-3);
+  border-top: 1px solid var(--ov3-line-strong);
   padding-top: 19px;
   margin-top: 28px;
 }
