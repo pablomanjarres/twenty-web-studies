@@ -24,17 +24,20 @@
   display: flex;
   gap: 14px;
   align-items: center;
-  color: #c1d0de;
+  color: var(--md-text-2);
   font-size: 13px;
+  font-weight: 500;
 }
 .md-command-title {
-  font-size: 12px;
-  color: #8399ac;
+  font-size: 13px;
+  color: var(--md-text-3);
 }
 .md-command-date {
   margin-left: auto;
-  font-size: 12px;
-  color: #a4b6c6;
+  font: 400 12px var(--md-mono);
+  letter-spacing: 0.02em;
+  font-variant-numeric: tabular-nums;
+  color: var(--md-text-2);
   display: flex;
   gap: 8px;
   align-items: center;
@@ -52,16 +55,22 @@
   align-items: center;
   min-height: 36px;
   padding: 8px 13px;
-  border: 1px solid #93edf138;
-  background: #66d9de;
+  border: 0;
+  background: var(--md-cyan);
   border-radius: 6px;
-  color: #132b3d;
-  font-size: 12px;
-  font-weight: 600;
+  color: #10202f;
+  font-size: 14px;
+  font-weight: 700;
   white-space: nowrap;
 }
 .md-new-movement:hover {
-  background: #9aebee;
+  background: #45c3c7;
+}
+.md-new-movement:active {
+  transform: scale(0.97);
+}
+.meridian-page .md-new-movement:focus-visible {
+  outline-color: var(--md-text);
 }
 .md-side-navigation {
   display: flex;
@@ -84,17 +93,20 @@
   border: 0;
   border-radius: 8px;
   background: transparent;
-  color: #7e98ad;
+  color: var(--md-text-3);
   position: relative;
 }
 .md-side-navigation button:hover {
   background: #203146;
-  color: #d7e5ec;
+  color: var(--md-text);
+}
+.md-side-navigation button:active {
+  transform: scale(0.94);
 }
 .md-side-navigation button[aria-pressed="true"] {
-  background: #244257;
-  color: #7ae6e8;
-  box-shadow: inset 0 0 0 1px #77dee726;
+  background: var(--md-card-selected);
+  color: var(--md-cyan);
+  box-shadow: var(--md-edge-active);
 }
 .md-side-navigation button > span {
   position: absolute;
@@ -111,6 +123,6 @@
   border-radius: 50%;
   background: #374158;
   border: 2px solid #596379;
-  font-size: 10px;
-  color: #e1e9f0;
+  font: 400 12px var(--md-mono);
+  color: var(--md-text);
 }
