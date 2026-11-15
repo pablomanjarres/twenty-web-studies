@@ -1,0 +1,49 @@
+.verdant {
+  --vd-ink: #24383f;
+  --vd-paper: #f4f8fb;
+  --vd-line: #d5e0e5;
+  --vd-muted: #61737b;
+  --vd-yellow: #e5c24d;
+  --vd-path: #819174;
+  --vd-store: #e5c24d;
+  --vd-plate: #e2ebef;
+  --vd-selected: #77858a;
+  --vd-hover-line: #b9cbd4;
+  --vd-row-hover: #e9f0f3;
+  --vd-inset: 40px;
+  --vd-h1: clamp(30px, 2vw + 16px, 44px);
+  --vd-h2: clamp(30px, 1.8vw + 14px, 42px);
+  --vd-lead: 18px;
+  --vd-reading: 28px;
+  --vd-label: 12px;
+  --vd-project: 20px;
+  --vd-ease: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media (max-width: 1050px) {
+  .verdant {
+    --vd-inset: 24px;
+  }
+}
+@media (max-width: 650px) {
+  .verdant {
+    --vd-inset: 16px;
+    --vd-lead: 16px;
+    --vd-reading: 24px;
+    --vd-label: 13px;
+    --vd-project: 17px;
+  }
+}
+.verdant .vd-label {
+  font:
+    400 var(--vd-label) / 1.3 "IBM Plex Mono",
+    monospace;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.verdant :is(button, a, summary, select):focus-visible {
+  outline: 3px solid var(--vd-ink);
+  outline-offset: 3px;
+}
+.verdant .vd-connection :is(button, a, select):focus-visible {
+  outline-color: var(--vd-yellow);
+}
