@@ -1,5 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
-import { avatar, people, meetings, type Task } from "./data";
+import { avatar, people, meetings, stageColors, type Task } from "./data";
 import { AvatarGroup } from "./AvatarGroup";
 export function TeamPanel({
   tasks,
@@ -21,7 +21,7 @@ export function TeamPanel({
       <section className="ov3-team-load">
         <div className="ov3-section-heading">
           <h2>Team workload</h2>
-          <span>THIS WEEK</span>
+          <span className="ov3-caps">This week</span>
         </div>
         {people.map((person) => {
           const owned = tasks.filter((t) => t.owner === person.name);
@@ -32,11 +32,19 @@ export function TeamPanel({
               <span>
                 <strong>{person.name}</strong>
                 <small>
-                  {owned.length} tasks · {hours} planned hours
+                  {person.role} · {owned.length} tasks
                 </small>
-                <i>
-                  <b style={{ width: `${(hours / max) * 100}%` }} />
-                </i>
+                <span className="ov3-person-load">
+                  <i>
+                    <b
+                      style={{
+                        width: `${(hours / max) * 100}%`,
+                        background: stageColors[person.role],
+                      }}
+                    />
+                  </i>
+                  <em>{hours} h</em>
+                </span>
               </span>
             </div>
           );
@@ -45,7 +53,7 @@ export function TeamPanel({
       <section className="ov3-meetings">
         <div className="ov3-section-heading">
           <h2>Today, together</h2>
-          <span>08 OCT</span>
+          <span className="ov3-caps">8 Oct</span>
         </div>
         {meetings.map((m) => (
           <button key={m.time} onClick={() => onSelect(m.task)}>
@@ -57,7 +65,7 @@ export function TeamPanel({
                 <AvatarGroup ids={m.people} />
               </small>
             </span>
-            <ArrowUpRight size={14} />
+            <ArrowUpRight size={16} aria-hidden="true" />
           </button>
         ))}
       </section>
