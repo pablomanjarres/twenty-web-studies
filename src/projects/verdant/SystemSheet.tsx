@@ -29,7 +29,7 @@ export function SystemSheet({
       <div className="vd-system-bottom">
         <FlowLegend />
         <p>{scenario.description}</p>
-        <span className="vd-label">Example site · values in kW</span>
+        <span className="vd-label">EXAMPLE SITE · VALUES IN kW</span>
       </div>
     </section>
   );

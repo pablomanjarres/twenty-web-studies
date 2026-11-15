@@ -94,6 +94,7 @@
 }
 .vd-system-bottom > .vd-label {
   margin-left: auto;
+  text-transform: none;
   white-space: nowrap;
 }
 .vd-flow-legend {
