@@ -7,13 +7,11 @@ export function WorkCard({ work }: { work: (typeof works)[number] }) {
     <article className={`og-original-work-card ${work.className}`}>
       <div className="og-original-work-image">
         <img src={image(work.image)} alt={work.alt} />
-        {work.name === "A different frequency" && (
+        {work.poster && (
           <span className="og-original-work-poster">
-            MAKE
-            <br />
-            SOME
-            <br />
-            NOISE.
+            {work.poster.map((line) => (
+              <span key={line}>{line}</span>
+            ))}
           </span>
         )}
         <a

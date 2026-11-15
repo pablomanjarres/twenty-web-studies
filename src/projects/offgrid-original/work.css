@@ -106,12 +106,15 @@
   position: absolute;
   left: 7%;
   top: 10%;
-  font-family: Tahoe, "Archivo Black", sans-serif;
+  font-family: var(--oo-font-display);
   font-size: 65px;
   line-height: 1;
   color: var(--og-original-yellow);
   transform: rotate(-5deg);
   letter-spacing: -0.07em;
+}
+.og-original-work-poster > span {
+  display: block;
 }
 .og-original-work-card h3 {
   margin-top: 16px;

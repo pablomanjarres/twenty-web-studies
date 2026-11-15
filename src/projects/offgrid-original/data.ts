@@ -17,6 +17,7 @@ export const works = [
     detail: "A digital home for a new music culture.",
     image: "glass",
     alt: "Abstract light moving through ribbed glass",
+    poster: ["MAKE", "SOME", "NOISE."],
     className: "og-original-frequency",
     year: "2026",
   },
