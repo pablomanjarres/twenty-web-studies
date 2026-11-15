@@ -105,6 +105,7 @@
   border-top: 1px solid var(--kanso-line);
 }
 .kanso-shelf-foot a {
+  flex: none;
   display: inline-flex;
   align-items: center;
   min-height: 40px;

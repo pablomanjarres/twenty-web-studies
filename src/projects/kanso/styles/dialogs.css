@@ -139,14 +139,13 @@
   flex: 1;
   min-height: 56px;
   padding: 0 20px;
-  background: var(--kanso-ink);
-  color: var(--kanso-ivory);
   font-size: 15px;
   transition:
     background-color var(--kanso-slow) var(--kanso-ease),
     color var(--kanso-slow) var(--kanso-ease);
 }
 .kanso .kanso-add {
+  background: var(--kanso-ink);
   color: var(--kanso-ivory);
 }
 .kanso-add span {
@@ -154,7 +153,7 @@
   align-items: center;
   gap: 8px;
 }
-.kanso-add:hover {
+.kanso .kanso-add:hover {
   background: var(--kanso-ink-hover);
 }
 .kanso-add:active {
@@ -172,7 +171,7 @@
   background: var(--kanso-ink);
   color: var(--kanso-ivory);
 }
-.kanso-detail-note {
+.kanso .kanso-detail-note {
   margin-top: 16px;
   color: var(--kanso-muted);
 }
