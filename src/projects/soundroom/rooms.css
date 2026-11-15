@@ -1,31 +1,38 @@
 .soundroom-v3 .sr3-rooms {
-  margin-top: 27px;
+  margin-top: 48px;
 }
 .soundroom-v3 .sr3-rooms > header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 17px;
-}
-.soundroom-v3 .sr3-rooms > header h2 {
-  font-size: 17px;
+  margin-bottom: 16px;
 }
 .soundroom-v3 .sr3-rooms > header button {
   display: flex;
-  gap: 7px;
+  gap: 6px;
   align-items: center;
-  color: #707d65;
-  font-size: 10px;
+  min-height: 40px;
+  color: var(--sr3-text-2);
+  font-size: 13px;
+  text-underline-offset: 4px;
+}
+.soundroom-v3 .sr3-rooms > header button:hover {
+  color: var(--sr3-text);
+  text-decoration: underline;
 }
 .soundroom-v3 .sr3-rooms > div {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 17px;
+  gap: 16px;
 }
 .soundroom-v3 .sr3-rooms > div > button {
   min-width: 0;
   text-align: left;
   padding: 0;
+  border-radius: 8px;
+}
+.soundroom-v3 .sr3-rooms > div > button:focus-visible {
+  outline-offset: 4px;
 }
 .soundroom-v3 .sr3-room-art {
   height: 102px;
@@ -34,6 +41,10 @@
   overflow: hidden;
   background: #252922;
   isolation: isolate;
+  transition: transform 200ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.soundroom-v3 .sr3-rooms > div > button:hover .sr3-room-art {
+  transform: scale(1.02);
 }
 .soundroom-v3 .sr3-room-art > .sr3-artwork {
   height: 220px;
@@ -63,11 +74,11 @@
   bottom: 13px;
   left: 13px;
   z-index: 1;
-  color: #deddbe;
+  color: #f0ecdf;
   font:
-    9px/1.4 "IBM Plex Mono",
+    12px/1.4 "IBM Plex Mono",
     monospace;
-  max-width: 90px;
+  max-width: 120px;
 }
 .soundroom-v3 .sr3-room-art > svg {
   position: absolute;
@@ -77,19 +88,21 @@
   color: #e2dcbe;
 }
 .soundroom-v3 .sr3-rooms > div > button > strong {
-  font-size: 11px;
-  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
   display: block;
-  margin-top: 11px;
-  color: #c5ceb5;
+  margin-top: 8px;
+  color: var(--sr3-text);
 }
 .soundroom-v3 .sr3-rooms > div > button > small {
   display: block;
-  font-size: 9px;
-  color: #65735b;
-  margin-top: 4px;
+  font-size: 13px;
+  line-height: 20px;
+  color: var(--sr3-text-2);
 }
 .soundroom-v3 .sr3-rooms > div > button.is-selected .sr3-room-art {
-  outline: 2px solid #e39c55;
-  outline-offset: 3px;
+  box-shadow:
+    0 0 0 2px var(--sr3-surface),
+    0 0 0 4px var(--sr3-orange);
 }
