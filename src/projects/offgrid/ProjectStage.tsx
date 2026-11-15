@@ -7,7 +7,8 @@ export function ProjectStage({
   project: Project;
   onSelect: (id: number) => void;
 }) {
-  const next = projects[project.id % projects.length];
+  const index = projects.findIndex((item) => item.id === project.id);
+  const next = projects[(index + 1) % projects.length];
   return (
     <section className="fg-work" id="work">
       <header>
