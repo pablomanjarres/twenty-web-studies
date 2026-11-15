@@ -1,4 +1,4 @@
-import { ArrowUpRight, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { projects, asset, type Project } from "./data";
 export function ProjectStage({
   project,
@@ -7,6 +7,7 @@ export function ProjectStage({
   project: Project;
   onSelect: (id: number) => void;
 }) {
+  const next = projects[project.id % projects.length];
   return (
     <section className="fg-work" id="work">
       <header>
@@ -22,11 +23,13 @@ export function ProjectStage({
           >
             {p.name}
             <small>{p.discipline}</small>
-            <ArrowUpRight size={24} />
           </button>
         ))}
       </div>
-      <div className={`fg-case-stage fg-case-${project.id}`}>
+      <div
+        key={`stage-${project.id}`}
+        className={`fg-case-stage fg-case-${project.id}`}
+      >
         <img
           src={asset(project.image)}
           alt={
@@ -84,13 +87,16 @@ export function ProjectStage({
           </small>
         </div>
       </div>
-      <div className="fg-case-details">
-        <h2>
-          {project.name}
-          <ArrowRight size={31} />
-        </h2>
+      <div key={`details-${project.id}`} className="fg-case-details">
+        <div className="fg-case-head">
+          <h2>{project.name}</h2>
+          <button className="fg-next" onClick={() => onSelect(next.id)}>
+            Next: {next.name}
+            <ArrowRight size={16} aria-hidden="true" />
+          </button>
+        </div>
         <p>{project.summary}</p>
-        <div>
+        <div className="fg-services">
           <span>WHAT WE DID</span>
           {project.services.map((s) => (
             <i key={s}>{s}</i>
