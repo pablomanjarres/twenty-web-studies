@@ -1,0 +1,101 @@
+.vd-connection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12%;
+  align-items: center;
+  padding: 96px max(var(--vd-inset), 8%);
+  background: var(--vd-ink);
+  color: var(--vd-paper);
+}
+.vd-connection > div > .vd-label {
+  color: rgba(244, 248, 251, 0.7);
+}
+.vd-connection label {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 24px;
+  font:
+    600 14px/1.3 "Manrope",
+    sans-serif;
+}
+.vd-connection select {
+  min-height: 48px;
+  padding: 0 14px;
+  border: 1px solid rgba(244, 248, 251, 0.5);
+  border-radius: 12px;
+  background: rgba(244, 248, 251, 0.06);
+  color: inherit;
+  font:
+    400 16px "Manrope",
+    sans-serif;
+  cursor: pointer;
+  transition: border-color 160ms var(--vd-ease);
+}
+.vd-connection select:hover {
+  border-color: rgba(244, 248, 251, 0.8);
+}
+.vd-connection option {
+  color: var(--vd-ink);
+  background: var(--vd-paper);
+}
+.vd-connection button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 52px;
+  margin-top: 8px;
+  padding: 0 20px;
+  border: 0;
+  border-radius: 9999px;
+  background: var(--vd-yellow);
+  color: var(--vd-ink);
+  font:
+    600 16px "Manrope",
+    sans-serif;
+  cursor: pointer;
+  transition: background 160ms var(--vd-ease);
+}
+.vd-connection button:hover {
+  background: #f0d575;
+}
+.vd-connection button:active {
+  translate: 0 1px;
+}
+.vd-connection form > p {
+  margin-top: 16px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(244, 248, 251, 0.7);
+}
+.vd-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 32px var(--vd-inset);
+  font:
+    600 14px/1.3 "Manrope",
+    sans-serif;
+}
+.vd-footer .brand-logo {
+  font-size: 25px;
+}
+.vd-footer p {
+  font-weight: 500;
+  color: var(--vd-muted);
+}
+.vd-footer a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  text-decoration: none;
+  text-underline-offset: 4px;
+}
+.vd-footer a:hover {
+  text-decoration-line: underline;
+}
+.vd-footer > span {
+  font-weight: 500;
+  color: var(--vd-muted);
+}
