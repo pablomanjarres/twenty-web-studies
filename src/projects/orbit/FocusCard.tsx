@@ -10,9 +10,9 @@ export function FocusCard({
 }) {
   return (
     <section className="ov3-focus">
-      <span className="ov3-focus-label">
+      <span className="ov3-focus-label ov3-caps">
         <i />
-        THE NEXT CONVERSATION
+        The next conversation
       </span>
       <h2>
         Make room for
@@ -31,10 +31,10 @@ export function FocusCard({
       </div>
       <button onClick={() => onSelect(task.id)}>
         Open review task
-        <ArrowUpRight size={16} />
+        <ArrowUpRight size={16} aria-hidden="true" />
       </button>
       <small className="ov3-focus-state">
-        <Check size={12} />
+        <Check size={14} aria-hidden="true" />
         Notes and checklist in one place.
       </small>
     </section>
