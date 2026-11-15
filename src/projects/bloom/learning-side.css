@@ -2,63 +2,77 @@
 .bv-learning-side {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 24px;
 }
 .bv-month-card {
-  padding: 23px;
+  padding: 24px;
   background: white;
-  border: 1px solid #e8edde;
+  border: 1px solid var(--bv-rule);
   border-radius: 24px;
 }
 .bv-month-card .bv-section-heading h2 {
-  font-size: 14px;
+  font-size: var(--bv-fs-title);
+  letter-spacing: -0.01em;
 }
 .bv-month-card .bv-section-heading svg {
-  color: #97a786;
+  color: var(--bv-text-2);
 }
 .bv-month-grid {
   display: grid;
   grid-template-columns: repeat(7, minmax(0, 1fr));
-  gap: 4px;
-  margin-top: 23px;
+  gap: 2px;
+  margin-top: 16px;
   text-align: center;
+  font-variant-numeric: tabular-nums;
 }
 .bv-month-grid > span {
-  font-size: 7px;
-  color: #a0ae91;
+  font-size: var(--bv-fs-caps);
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--bv-text-2);
   padding-bottom: 8px;
 }
 .bv-month-grid button {
   border: 0;
   border-radius: 50%;
   background: transparent;
-  font-size: 9px;
-  min-height: 27px;
-  color: #6c8057;
+  font-size: var(--bv-fs-meta);
+  aspect-ratio: 1;
+  min-height: 30px;
+  color: var(--bv-ink);
+  font-weight: 600;
   padding: 0;
+}
+.bv-month-grid button:not(:disabled):hover {
+  background: var(--bv-hover);
 }
 .bv-month-grid button:disabled {
   color: #c3cbb8;
+  font-weight: 400;
+  cursor: default;
 }
-.bv-month-grid button[aria-pressed="true"] {
+.bv-month-grid button[aria-pressed="true"],
+.bv-month-grid button[aria-pressed="true"]:hover {
   background: var(--bv-lime);
-  color: #4a6333;
+  color: var(--bv-ink);
 }
 .bv-day-plan {
-  border-top: 1px solid #eef2e6;
-  margin-top: 21px;
+  border-top: 1px solid var(--bv-rule);
+  margin-top: 16px;
   padding-top: 16px;
 }
 .bv-day-plan > p {
-  font-size: 10px;
-  margin: 0 0 15px;
-  color: #6c8057;
+  font-size: var(--bv-fs-ui);
+  font-weight: 600;
+  margin: 0 0 8px;
   display: flex;
+  align-items: baseline;
   justify-content: space-between;
 }
 .bv-day-plan > p span {
-  font-size: 8px;
-  color: #a4b192;
+  font-size: var(--bv-fs-meta);
+  font-weight: 400;
+  color: var(--bv-text-2);
 }
 .bv-day-plan > button {
   display: flex;
@@ -67,28 +81,40 @@
   border: 0;
   background: transparent;
   text-align: left;
-  width: 100%;
-  padding: 5px 0;
+  width: calc(100% + 16px);
+  margin: 0 -8px;
+  padding: 8px;
+  border-radius: 12px;
+}
+.bv-day-plan > button:hover {
+  background: var(--bv-hover);
+}
+.bv-day-plan > button:hover > svg {
+  transform: translate(2px, -2px);
+  color: var(--bv-ink);
 }
 .bv-day-plan button > i {
-  height: 30px;
+  align-self: stretch;
+  flex-shrink: 0;
   width: 3px;
   border-radius: 3px;
   background: var(--bv-pink);
 }
 .bv-day-plan button strong {
-  font-size: 10px;
-  font-weight: 500;
+  font-size: var(--bv-fs-ui);
+  font-weight: 600;
 }
 .bv-day-plan button small {
   display: block;
-  margin-top: 5px;
-  font-size: 8px;
-  color: #a2ad94;
+  margin-top: 2px;
+  font-size: var(--bv-fs-meta);
+  color: var(--bv-text-2);
+  font-variant-numeric: tabular-nums;
 }
 .bv-day-plan button > svg {
   margin-left: auto;
-  color: #91a078;
+  flex-shrink: 0;
+  color: var(--bv-text-2);
 }
 .bv-study-activity {
   border-radius: 24px;
