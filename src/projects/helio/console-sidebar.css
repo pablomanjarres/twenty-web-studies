@@ -66,6 +66,7 @@
 .hc-team small {
   font-size: 13px;
   line-height: 18px;
+  font-weight: 400;
   color: var(--hl-text-3);
 }
 .hc-team > .lucide,
