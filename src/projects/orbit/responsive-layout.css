@@ -13,7 +13,7 @@
 }
 @media (max-width: 1250px) {
   .orbit-v3 {
-    grid-template-columns: 204px minmax(0, 1fr);
+    grid-template-columns: 212px minmax(0, 1fr);
   }
   .orbit-v3 .ov3-navigation {
     padding-left: 12px;
@@ -24,7 +24,7 @@
   }
   .orbit-v3 .ov3-overview-top,
   .orbit-v3 .ov3-overview-bottom {
-    grid-template-columns: minmax(0, 1fr) 264px;
+    grid-template-columns: minmax(0, 1fr) 280px;
     gap: 20px;
   }
   .orbit-v3 .ov3-page-heading h1 {
@@ -46,8 +46,14 @@
   .orbit-v3 .ov3-roadmap-row button > svg {
     display: none;
   }
-  .orbit-v3 .ov3-roadmap-row button.is-short img {
+  .orbit-v3 .ov3-roadmap-row button.is-short img,
+  .orbit-v3 .ov3-roadmap-row small {
     display: none;
+  }
+  .orbit-v3 .ov3-team-load,
+  .orbit-v3 .ov3-meetings {
+    padding-left: 20px;
+    padding-right: 20px;
   }
   .orbit-v3 .ov3-roadmap .ov3-section-note {
     display: none;
@@ -113,6 +119,9 @@
   }
   .orbit-v3 .ov3-team-column {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .orbit-v3 .ov3-roadmap-row small {
+    display: inline;
   }
   .orbit-v3 .ov3-roadmap-row button.is-short img,
   .orbit-v3 .ov3-roadmap-row button > svg {
