@@ -48,7 +48,9 @@ export function PortSchematic({ shipment }: { shipment: Shipment }) {
             <small>{portFor(shipment.destination).code}</small>
           </h2>
         </div>
-        <span className="md-map-badge">Port schematic</span>
+        <span className="md-map-badge">
+          <Route size={13} /> Original schematic · destination planning
+        </span>
       </header>
       <svg
         ref={cartography}
@@ -65,7 +67,14 @@ export function PortSchematic({ shipment }: { shipment: Shipment }) {
             width="1000"
             height="700"
           />
-          <text x="125" y="300" fill="#597c91" fontSize="18" letterSpacing="4">
+          <text
+            className="md-water-label"
+            x="180"
+            y="300"
+            fill="#597c91"
+            fontSize="18"
+            letterSpacing="4"
+          >
             {plan.water.toUpperCase()}
           </text>
           <path
@@ -120,7 +129,12 @@ export function PortSchematic({ shipment }: { shipment: Shipment }) {
                   r="4"
                   fill={focus === point.id ? "#78e4e6" : "#a4b5c5"}
                 />
-                <text y="32" textAnchor="middle" fill="#c2d4de" fontSize="11">
+                <text
+                  className="md-point-label"
+                  y="34"
+                  textAnchor="middle"
+                  fill="#c2d4de"
+                >
                   {point.label}
                 </text>
               </g>
@@ -139,9 +153,6 @@ export function PortSchematic({ shipment }: { shipment: Shipment }) {
       <footer className="md-map-legend">
         <span>
           <i /> {handoffLabelFor(shipment)}
-        </span>
-        <span>
-          <Route size={12} /> Original schematic · destination planning
         </span>
       </footer>
     </section>
