@@ -1,6 +1,6 @@
 import { useDialog } from "../../shared/useDialog";
 import { ArrowRight, Minus, X } from "lucide-react";
-import { image, products } from "./data";
+import { image, isOneSize, products } from "./data";
 import type { BagItem } from "./data";
 
 export function Bag({
@@ -42,8 +42,8 @@ export function Bag({
                 <div>
                   <b className="archive-original-label">{p.name}</b>
                   <small className="archive-original-meta">
-                    {p.category === "Accessories" ? "One size" : item.size} /
-                    Quantity {item.quantity}
+                    {isOneSize(p) ? "One size" : item.size} / Quantity{" "}
+                    {item.quantity}
                   </small>
                   <span className="archive-original-label archive-original-tabular">
                     £{p.price * item.quantity}
@@ -78,7 +78,7 @@ export function Bag({
           </b>
         </div>
         <button
-          className="archive-original-continue archive-original-dark archive-original-label"
+          className="archive-original-continue archive-original-bar archive-original-label"
           onClick={onClose}
         >
           Continue exploring <ArrowRight size={18} aria-hidden="true" />

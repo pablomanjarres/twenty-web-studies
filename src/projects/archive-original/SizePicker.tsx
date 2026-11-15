@@ -27,7 +27,7 @@ export function SizePicker({
           <button
             key={size}
             type="button"
-            className="archive-original-label"
+            className="archive-original-control archive-original-label"
             aria-pressed={value === size}
             onClick={() => onChange(size)}
           >

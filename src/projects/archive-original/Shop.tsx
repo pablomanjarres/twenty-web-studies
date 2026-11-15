@@ -25,9 +25,7 @@ export function Shop({ onAdd }: { onAdd: (id: string, size: string) => void }) {
             <button
               key={item}
               type="button"
-              className={
-                "archive-original-label" + (category === item ? " active" : "")
-              }
+              className="archive-original-control archive-original-label"
               aria-pressed={category === item}
               onClick={() => setCategory(item)}
             >

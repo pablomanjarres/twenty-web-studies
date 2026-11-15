@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { ArrowRight, Check } from "lucide-react";
-import { image, products } from "./data";
+import { image, isOneSize, type Product } from "./data";
 import { SizePicker } from "./SizePicker";
 
 type AddState = "idle" | "added" | "again";
@@ -15,12 +15,12 @@ export function ProductCard({
   product,
   onAdd,
 }: {
-  product: (typeof products)[number];
+  product: Product;
   onAdd: (id: string, size: string) => void;
 }) {
   const [size, setSize] = useState("M");
   const [addState, setAddState] = useState<AddState>("idle");
-  const oneSize = product.category === "Accessories";
+  const oneSize = isOneSize(product);
 
   useEffect(() => {
     if (addState !== "added") return;
@@ -55,7 +55,7 @@ export function ProductCard({
         />
         <button
           type="button"
-          className="archive-original-add archive-original-dark archive-original-label"
+          className="archive-original-add archive-original-bar archive-original-label"
           aria-label={`${label}: ${product.name}${oneSize ? "" : ", size " + size}`}
           onClick={() => {
             onAdd(product.id, size);
