@@ -136,53 +136,86 @@
   cursor: not-allowed;
 }
 .sp-matches {
-  padding: 70px 5%;
+  padding: 96px 5%;
   background: var(--sp-ink);
   color: var(--sp-paper);
 }
 .sp-matches .sp-section-head > p {
-  opacity: 0.65;
+  color: var(--sp-muted-dark);
 }
 .sp-fixtures article {
+  position: relative;
   border-top: 1px solid #f2f0f730;
   display: grid;
-  grid-template-columns: 140px 1fr 100px 35px;
-  gap: 25px;
+  grid-template-columns: 160px 1fr 140px 44px;
+  gap: 24px;
   align-items: center;
-  padding: 25px 0;
+  margin: 0 -16px;
+  padding: 28px 16px;
+  transition: background-color var(--sp-fast) var(--sp-ease);
 }
 .sp-fixtures article:last-child {
   border-bottom: 1px solid #f2f0f730;
 }
+.sp-fixtures article:hover,
+.sp-fixtures article:focus-within {
+  background: #f2f0f70d;
+}
 .sp-fixture-date {
-  font:
-    10px "IBM Plex Mono",
-    monospace;
   color: var(--sp-lime);
 }
 .sp-fixture-date strong {
   display: block;
   font:
-    400 27px "Anton",
+    400 36px/1 "Anton",
     sans-serif;
-  margin-top: 5px;
+  margin-top: 8px;
 }
 .sp-fixtures h3 {
-  font-size: 23px;
-  font-weight: 400;
-  letter-spacing: -0.03em;
+  font:
+    500 24px/1.15 "DM Sans",
+    sans-serif;
+  letter-spacing: -0.01em;
+  transition: color var(--sp-fast) var(--sp-ease);
+}
+.sp-fixtures article:hover h3,
+.sp-fixtures article:focus-within h3 {
+  color: var(--sp-lime);
 }
 .sp-fixtures p {
-  font-size: 11px;
-  opacity: 0.6;
-  margin-top: 7px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--sp-muted-dark);
+  margin-top: 8px;
 }
-.sp-fixtures article > span {
-  font-size: 11px;
+.sp-places {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+.sp-places i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--sp-lime);
 }
 .sp-fixtures article > a {
+  position: static;
   color: var(--sp-lime);
   display: grid;
   place-items: center;
   min-height: 44px;
+}
+.sp-fixtures article > a:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+.sp-fixtures article > a:focus-visible {
+  outline: 0;
+}
+.sp-fixtures article:has(a:focus-visible) {
+  outline: 3px solid var(--sp-lime);
+  outline-offset: 3px;
 }
