@@ -4,43 +4,21 @@
   }
   .wf-atlas {
     grid-template-columns: minmax(0, 42fr) minmax(0, 58fr);
-    height: auto;
     min-height: 0;
-    max-height: none;
   }
-  .wf-journey-photo {
-    min-height: 640px;
-  }
+  .wf-journey-photo,
   .wf-map-panel {
     min-height: 640px;
   }
-  .wf-map-sheet {
-    display: grid;
-    grid-template-rows: 24px minmax(0, 1fr) auto auto;
-  }
-  .wf-map-heading {
-    position: static;
-    padding: 0 34px;
-  }
-  .wf-map {
-    position: static;
-    min-height: 0;
-    height: 100%;
-  }
-  .wf-map-route-name {
-    position: static;
-    margin: 0 34px 16px;
-  }
-  .wf-map-caption {
-    position: static;
-    margin: 0 34px 25px;
+  .wf-map-stop-name {
+    display: none;
   }
   .wf-itinerary {
     grid-column: 1 / -1;
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    gap: 0 40px;
-    padding: 28px 34px;
+    gap: 0 48px;
+    padding: 32px;
   }
   .wf-ticket-top,
   .wf-itinerary h2,
@@ -51,13 +29,9 @@
   }
   .wf-itinerary h2 {
     margin-top: 16px;
-    font-size: 34px;
-  }
-  .wf-trip-note {
-    margin-top: 16px !important;
   }
   .wf-trip-facts {
-    margin: 18px 0 0;
+    margin: 24px 0 0;
   }
   .wf-stops-heading {
     grid-column: 2;
@@ -68,40 +42,29 @@
   .wf-stops {
     grid-column: 2;
     grid-row: 2 / 6;
-    gap: 12px;
+    align-content: start;
     padding-top: 16px;
-    margin-bottom: 0;
   }
   .wf-trip-planning {
-    grid-column: 1 / -1;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px 30px;
-    margin-top: 24px;
+    grid-column: 1;
+    grid-row: 6;
+    align-self: end;
   }
-  .wf-trip-price {
-    margin: 0;
-    align-self: center;
+  .wf-plan-bar {
+    grid-column: 2;
+    grid-row: 6;
+    align-self: end;
   }
   .wf-price {
-    margin: 0 !important;
-    align-self: center;
+    grid-column: 1 / -1;
+    margin-top: 16px !important;
+    min-height: 0;
   }
   .wf-notes {
     grid-template-columns: 1fr 1fr;
-    gap: 28px;
+    gap: 48px 32px;
   }
   .wf-note-index {
     grid-column: 1 / -1;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-  .wf-note-index details {
-    padding: 16px;
-  }
-  .wf-note-index summary > span {
-    display: none;
-  }
-  .wf-note-index details p {
-    margin-left: 0;
   }
 }
