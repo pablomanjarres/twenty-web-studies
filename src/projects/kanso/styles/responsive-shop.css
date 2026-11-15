@@ -42,6 +42,7 @@
   }
   .kanso-utilities input {
     width: 130px;
+    font-size: 16px;
   }
   .kanso-utilities .kanso-bag-trigger {
     padding: 0 8px;
@@ -85,16 +86,15 @@
     margin-top: 4px;
   }
   .kanso-glazes > div {
-    gap: 16px;
-    margin: 0;
-    min-height: 44px;
-    align-items: center;
-  }
-  .kanso-glazes > div button::before {
-    inset: -10px -8px;
+    --hit: 44px;
+    gap: 0;
+    margin: 0 -10px;
   }
   .kanso-glaze-status {
     margin-left: auto;
+  }
+  .kanso-glaze-status.is-all {
+    display: none;
   }
   .kanso-reset-glaze {
     min-height: 44px;

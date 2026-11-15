@@ -40,7 +40,9 @@ export function Filters({
             />
           ))}
         </div>
-        <span className="kanso-glaze-status kanso-meta">
+        <span
+          className={`kanso-glaze-status kanso-meta ${glaze === "All" ? "is-all" : ""}`}
+        >
           {glaze === "All" ? "Every finish" : `${glaze} selected`}
         </span>
         {glaze !== "All" && (
