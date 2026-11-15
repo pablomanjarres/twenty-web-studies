@@ -66,6 +66,33 @@
     border-color var(--cinder-fast) linear,
     opacity var(--cinder-fast) linear;
 }
+.cinder .cinder-ui {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.01em;
+}
+.cinder .cinder-price {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+}
+.cinder-segmented {
+  display: flex;
+}
+.cinder-segmented > button {
+  min-height: 44px;
+  padding: 0 18px;
+  border: 1px solid var(--cinder-segment-line, var(--cinder-control-line));
+  white-space: nowrap;
+}
+.cinder-segmented > button + button {
+  margin-left: -1px;
+}
+.cinder-segmented > button:hover {
+  background: var(--cinder-segment-hover, var(--cinder-tint));
+}
 .cinder button:disabled {
   opacity: 0.35;
   cursor: not-allowed;

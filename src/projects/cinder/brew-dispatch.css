@@ -21,10 +21,6 @@
 .cinder-brew-top button {
   min-height: 44px;
   padding: 0;
-  font-size: 15px;
-  font-weight: 500;
-  line-height: 1;
-  letter-spacing: 0.01em;
   border-bottom: 2px solid transparent;
 }
 .cinder-brew-top button:hover {
@@ -90,26 +86,12 @@
 .cinder-dispatch h2 {
   margin-top: 16px;
 }
-.cinder-dispatch-control > div {
-  display: flex;
+.cinder-dispatch-control > .cinder-segmented {
+  --cinder-segment-line: var(--cinder-control-line-dark);
+  --cinder-segment-hover: #f5edd91a;
   margin: 24px 0;
 }
-.cinder-dispatch-control > div button {
-  min-height: 44px;
-  padding: 0 18px;
-  font-size: 15px;
-  font-weight: 500;
-  line-height: 1;
-  letter-spacing: 0.01em;
-  border: 1px solid var(--cinder-control-line-dark);
-}
-.cinder-dispatch-control > div button + button {
-  margin-left: -1px;
-}
-.cinder-dispatch-control > div button:hover {
-  background: #f5edd91a;
-}
-.cinder-dispatch-control > div button[aria-pressed="true"] {
+.cinder-dispatch-control button[aria-pressed="true"] {
   background: var(--cinder-cream);
   color: var(--cinder-ink);
   border-color: var(--cinder-cream);
@@ -125,9 +107,6 @@
   background: var(--cinder-yellow);
   color: var(--cinder-ink);
   font-size: 16px;
-  font-weight: 500;
-  line-height: 1;
-  letter-spacing: 0.01em;
   text-align: left;
 }
 .cinder .cinder-dispatch-save:hover {

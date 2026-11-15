@@ -11,27 +11,7 @@
   align-items: center;
   gap: 24px;
 }
-.cinder-grind-controls > div {
-  display: flex;
-}
-.cinder-grind-controls button {
-  min-height: 44px;
-  padding: 0 18px;
-  font-size: 15px;
-  font-weight: 500;
-  line-height: 1;
-  letter-spacing: 0.01em;
-  border: 1px solid var(--cinder-control-line);
-  white-space: nowrap;
-}
-.cinder-grind-controls button + button {
-  margin-left: -1px;
-}
-.cinder-grind-controls button:hover {
-  background: var(--cinder-tint);
-}
 .cinder-grind-controls button[aria-pressed="true"] {
-  position: relative;
   background: var(--cinder-ink);
   color: var(--cinder-cream);
   border-color: var(--cinder-ink);
@@ -62,9 +42,7 @@
 .cinder-quantity output {
   width: 40px;
   text-align: center;
-  font-family: "IBM Plex Mono", monospace;
   font-size: 16px;
-  font-variant-numeric: tabular-nums;
 }
 .cinder .cinder-order-button {
   display: flex;
@@ -75,9 +53,6 @@
   background: var(--cinder-brick);
   color: var(--cinder-cream);
   font-size: 16px;
-  font-weight: 500;
-  line-height: 1;
-  letter-spacing: 0.01em;
   text-align: left;
 }
 .cinder .cinder-order-button:hover {
@@ -85,10 +60,6 @@
 }
 .cinder-order-price {
   margin-left: auto;
-  font-family: "IBM Plex Mono", monospace;
-  font-weight: 400;
-  letter-spacing: -0.02em;
-  font-variant-numeric: tabular-nums;
 }
 .cinder :is(.cinder-order-button, .cinder-dispatch-save) svg {
   flex: none;
@@ -163,13 +134,8 @@
 .cinder-basket article p {
   margin: 4px 0 8px;
 }
-.cinder-basket article strong,
-.cinder-basket-total strong {
-  font-family: "IBM Plex Mono", monospace;
-  font-weight: 400;
+.cinder-basket .cinder-price {
   font-size: 16px;
-  letter-spacing: -0.02em;
-  font-variant-numeric: tabular-nums;
 }
 .cinder-basket-total {
   display: flex;
