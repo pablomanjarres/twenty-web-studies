@@ -1,14 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
-import { avatar, progress, stageColors, type Task } from "./data";
-
-// Roadmap bars carry 14px labels, so each stage gets a label color that
-// clears 4.5:1; green uses a deeper fill reserved for these bars.
-const barTheme: Record<string, { background: string; color: string }> = {
-  Design: { background: stageColors.Design, color: "#fff" },
-  Research: { background: "#127a63", color: "#fff" },
-  Content: { background: stageColors.Content, color: "#242629" },
-  Review: { background: stageColors.Review, color: "#242629" },
-};
+import { avatar, progress, stageBars, type Task } from "./data";
 export function Roadmap({
   tasks,
   onSelect,
@@ -54,7 +45,7 @@ export function Roadmap({
                 style={{
                   left: `${(task.start / 7) * 100}%`,
                   width: `${(task.days / 7) * 100}%`,
-                  ...barTheme[task.kind],
+                  ...stageBars[task.kind],
                 }}
                 onClick={() => onSelect(task.id)}
                 aria-label={`Open ${task.title}, ${progress(task)}% complete, ${task.owner}`}

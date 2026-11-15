@@ -34,6 +34,15 @@ export const stageColors: Record<string, string> = {
   Content: "#E99B36",
   Review: "#D97769",
 };
+// Roadmap bars carry 14px labels, so each stage has a label colour that clears
+// 4.5:1; Research uses a deeper green fill reserved for these labelled bars.
+export const stageBars: Record<string, { background: string; color: string }> =
+  {
+    Design: { background: stageColors.Design, color: "#fff" },
+    Research: { background: "#127a63", color: "#fff" },
+    Content: { background: stageColors.Content, color: "#242629" },
+    Review: { background: stageColors.Review, color: "#242629" },
+  };
 export const isCheckComplete = (task: Task, index: number) =>
   task.checked.includes(index);
 export const progress = (task: Task) =>
