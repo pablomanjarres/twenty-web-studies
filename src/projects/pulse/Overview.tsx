@@ -7,7 +7,7 @@ import {
   Stethoscope,
 } from "lucide-react";
 import { asset, type Visit } from "./data";
-import { careTime, dailyVisits, visitMinutes } from "./overviewData";
+import { CareTimeFigure, dailyVisits, visitMinutes } from "./overviewData";
 import { PracticeChart } from "./PracticeChart";
 import { UpcomingAppointments } from "./UpcomingAppointments";
 import { AppointmentLedger } from "./AppointmentLedger";
@@ -31,21 +31,18 @@ export function Overview({
   const minutes = visitMinutes(current);
   const stats = [
     {
-      name: "Appointments",
+      name: "Appointments today",
       value: current.length,
-      sub: "Scheduled today",
       icon: CalendarDays,
     },
     {
-      name: "Active clinicians",
+      name: "Clinicians on shift",
       value: new Set(current.map((v) => v.doctor)).size,
-      sub: "Your care team",
       icon: Stethoscope,
     },
     {
       name: "Patients expected",
       value: new Set(current.map((v) => v.patient)).size,
-      sub: "Individual visits",
       icon: Users,
     },
   ];
@@ -58,7 +55,10 @@ export function Overview({
               <Activity size={20} />
             </span>
             <span>
-              Scheduled care time<strong>{careTime(minutes)}</strong>
+              Scheduled care time
+              <strong>
+                <CareTimeFigure minutes={minutes} />
+              </strong>
             </span>
             <small>Today</small>
           </div>
@@ -84,18 +84,19 @@ export function Overview({
             <span>16:00</span>
           </div>
         </article>
-        {stats.map(({ name, value, sub, icon: Icon }) => (
-          <article className="pv-compact-stat" key={name}>
-            <span className="pv-stat-icon">
-              <Icon size={19} />
-            </span>
-            <div>
-              <p>{name}</p>
-              <strong>{value}</strong>
-            </div>
-            <small>{sub}</small>
-          </article>
-        ))}
+        <article className="pv-metric-panel" aria-label="Day at a glance">
+          <dl>
+            {stats.map(({ name, value, icon: Icon }) => (
+              <div key={name}>
+                <span className="pv-stat-icon" aria-hidden="true">
+                  <Icon size={18} />
+                </span>
+                <dt>{name}</dt>
+                <dd>{value}</dd>
+              </div>
+            ))}
+          </dl>
+        </article>
         <button className="pv-care-feature" onClick={onCalendar}>
           <img src={asset("doctor.jpg")} alt="Dr. Maya Allen" />
           <span className="pv-feature-label">A little preparation.</span>
