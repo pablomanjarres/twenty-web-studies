@@ -1,15 +1,59 @@
 .sprinto-original {
+  --so-violet: #6535f4;
+  --so-lime: #ddfc6b;
+  --so-ink: #19152d;
+  --so-muted: #5f586e;
+  --so-on-violet: #e8e1fd;
+  --so-on-night: #b8b2c6;
+  --so-lilac: #baa1f8;
+  --so-on-lilac: #3a3052;
+  --so-rule-dark: #ddfc6b40;
+  --so-tag-bg: #f5f1fe;
+  --so-ease: 150ms ease-out;
+  --focus-color: #19152d;
   background: #f2f0f7;
   color: #19152d;
   font-family: "DM Sans", sans-serif;
 }
+.sprinto-original :focus-visible {
+  outline-offset: 3px;
+}
+.sprinto-original-header,
+.sprinto-original-hero,
+.sprinto-original-play,
+.sprinto-original-footer {
+  --focus-color: #ddfc6b;
+}
 .sprinto-original a {
   text-decoration: none;
+}
+.sprinto-original a,
+.sprinto-original button {
+  transition:
+    color var(--so-ease),
+    background-color var(--so-ease),
+    border-color var(--so-ease),
+    box-shadow var(--so-ease);
+}
+.sprinto-original a:active,
+.sprinto-original button:active {
+  transform: translateY(1px);
+}
+.sprinto-original a svg,
+.sprinto-original button svg {
+  transition: transform 200ms ease-out;
+}
+.sprinto-original-meta {
+  font-size: 13px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 .sprinto-original-header {
   background: #6535f4;
   color: white;
-  height: 91px;
+  height: 80px;
   padding: 0 5%;
   display: flex;
   justify-content: space-between;
@@ -21,20 +65,45 @@
   gap: 9px;
 }
 .sprinto-original-header .brand-logo > span {
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: -0.06em;
 }
 .sprinto-original-header nav {
   display: flex;
   gap: 36px;
-  font-size: 12px;
+  font-size: 15px;
+  font-weight: 500;
+}
+.sprinto-original-header nav a {
+  padding: 10px 0;
+  text-decoration: underline 2px transparent;
+  text-underline-offset: 6px;
+  transition: text-decoration-color var(--so-ease);
+}
+.sprinto-original-header nav a:hover {
+  text-decoration-color: #ddfc6b;
 }
 .sprinto-original-nav-button {
   border: 1px solid #ffffff60;
-  padding: 12px 18px;
+  min-height: 44px;
+  padding: 0 18px;
   border-radius: 5px;
-  font-size: 12px;
+  font-size: 15px;
+  font-weight: 500;
   display: flex;
-  gap: 25px;
+  gap: 20px;
   align-items: center;
+}
+.sprinto-original-nav-button:hover {
+  background: #ddfc6b;
+  border-color: #ddfc6b;
+  color: #19152d;
+}
+.sprinto-original a:hover svg.lucide-arrow-up-right,
+.sprinto-original button:hover svg.lucide-arrow-up-right {
+  transform: translate(2px, -2px);
+}
+.sprinto-original a:hover svg.lucide-arrow-right,
+.sprinto-original button:hover svg.lucide-arrow-right {
+  transform: translateX(2px);
 }
