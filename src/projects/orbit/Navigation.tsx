@@ -42,7 +42,7 @@ export function Navigation({
             onClick={() => onView(id)}
           >
             <Icon size={18} aria-hidden="true" />
-            {name}
+            <span className="ov3-nav-text">{name}</span>
             {id === "activity" && <i>{activityCount}</i>}
           </button>
         ))}
