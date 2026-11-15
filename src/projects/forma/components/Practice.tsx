@@ -47,7 +47,7 @@ export function Practice() {
                     <Plus size={18} aria-hidden="true" />
                   )}
                 </button>
-                <p id={panel} hidden={!expanded}>
+                <p className="forma-prose" id={panel} hidden={!expanded}>
                   {i.text}
                 </p>
               </article>

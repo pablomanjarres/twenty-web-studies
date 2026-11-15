@@ -6,7 +6,7 @@ export function ProjectDossier({ project }: { project: Project }) {
       <div>
         <span className="forma-label">Project dossier</span>
         <h2>{project.short}</h2>
-        <p>{project.description}</p>
+        <p className="forma-prose">{project.description}</p>
         <dl>
           {[
             ["Location", project.location],

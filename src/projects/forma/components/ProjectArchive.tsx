@@ -82,7 +82,7 @@ export function ProjectArchive({
         })}
         <div className="forma-index-note">
           <span className="forma-label">Our point of view</span>
-          <p>
+          <p className="forma-statement">
             Space, shaped
             <br />
             by living.

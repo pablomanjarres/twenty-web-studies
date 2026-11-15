@@ -35,11 +35,11 @@ export function MaterialStory({ project }: { project: Project }) {
       </DetailFigure>
       <div>
         <span className="forma-label">The details that endure</span>
-        <h2>
+        <h2 className="forma-statement">
           Honest materials.
           <br />A measured touch.
         </h2>
-        <p>
+        <p className="forma-prose">
           We look for the quiet relationships: a grain against a shadow, the
           edge of a threshold, the way a room holds the afternoon.
         </p>
