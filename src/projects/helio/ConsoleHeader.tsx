@@ -48,7 +48,7 @@ export function ConsoleHeader({
           releaseCount={deployment.releases.length}
           variant="tabs"
         />
-        <label>
+        <label className="hc-field">
           <span className="hc-env-dot" />
           Environment
           <select

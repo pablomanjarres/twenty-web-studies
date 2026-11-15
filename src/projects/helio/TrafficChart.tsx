@@ -36,7 +36,7 @@ export function TrafficChart({
             Sample activity · edge network
           </span>
         </div>
-        <label>
+        <label className="hc-field">
           <select
             aria-label="Traffic range"
             value={hours}

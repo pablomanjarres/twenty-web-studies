@@ -27,7 +27,7 @@ export function ReleaseTable({
           <h2>Recent deployments</h2>
           <span>Every commit has a clear path to release.</span>
         </div>
-        <label>
+        <label className="hc-field">
           <Search size={14} />
           <input
             aria-label="Search deployments"

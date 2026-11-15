@@ -178,7 +178,8 @@
   color: var(--hl-ink);
   font-weight: 600;
 }
-.hc-toolbar > label {
+/* Bordered wrapper around a select or search input: environment, range, search. */
+.hc-field {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -187,20 +188,20 @@
   border: 1px solid var(--hl-line);
   border-radius: 8px;
   background: #fff;
-  font-size: 13px;
   color: var(--hl-text-3);
-  margin-bottom: 8px;
   cursor: pointer;
   transition: border-color var(--hl-fast);
 }
-.hc-toolbar > label:hover {
+.hc-field:hover {
   border-color: var(--hl-line-strong);
 }
-.hc-toolbar > label:focus-within,
-.hc-traffic > header > label:focus-within,
-.hc-releases > header > label:focus-within {
+.hc-field:focus-within {
   outline: 2px solid var(--hl-cobalt);
   outline-offset: 2px;
+}
+.hc-toolbar > label {
+  font-size: 13px;
+  margin-bottom: 8px;
 }
 .hc-toolbar > label > .lucide {
   color: var(--hl-text-3);
