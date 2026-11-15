@@ -26,17 +26,19 @@ export function Footer() {
           <label className="kanso-sr-only" htmlFor="kanso-email">
             Email for atelier notes
           </label>
-          <input
-            id="kanso-email"
-            type="email"
-            required
-            placeholder="Your email address"
-            onChange={() => setSaved(false)}
-          />
-          <button aria-label="Save email for atelier notes">
-            <ArrowRight size={18} />
-          </button>
-          <span role="status">
+          <div className="kanso-dispatch-field">
+            <input
+              id="kanso-email"
+              type="email"
+              required
+              placeholder="Your email address"
+              onChange={() => setSaved(false)}
+            />
+            <button aria-label="Save email for atelier notes">
+              <ArrowRight size={18} />
+            </button>
+          </div>
+          <span className="kanso-meta" role="status">
             {saved ? "Email saved for this visit." : "Notes, now and then."}
           </span>
         </form>
@@ -45,8 +47,12 @@ export function Footer() {
         <a href="#objects">
           <BrandLogo brand={brand} />
         </a>
-        <span>Useful. Beautiful. A little imperfect.</span>
-        <a href="#objects">Back to the shelf ↑</a>
+        <span className="kanso-meta">
+          Useful. Beautiful. A little imperfect.
+        </span>
+        <a className="kanso-meta" href="#objects">
+          Back to the shelf ↑
+        </a>
       </div>
     </footer>
   );
