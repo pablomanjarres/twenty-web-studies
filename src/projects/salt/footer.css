@@ -1,0 +1,42 @@
+.sl-footer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  align-items: center;
+  padding: 56px 7%;
+  background: var(--sl-paper);
+}
+.sl-footer .brand-logo {
+  font-size: 29px;
+  color: var(--sl-red);
+}
+.sl-footer .brand-logo > span {
+  font-family: "Tahoe", "Fraunces", serif;
+  font-weight: 400;
+}
+.sl-footer > span {
+  font: var(--sl-meta);
+  font-size: 15px;
+}
+.sl-footer a {
+  font: var(--sl-ui);
+  color: var(--sl-navy);
+  justify-self: end;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: underline 1px transparent;
+  text-underline-offset: 5px;
+  transition:
+    text-decoration-color 200ms ease,
+    color 200ms ease;
+}
+.sl-footer a:hover {
+  color: var(--sl-sea);
+  text-decoration-color: currentColor;
+}
+.sl-footer small {
+  grid-column: 1/-1;
+  font: var(--sl-meta);
+  color: var(--sl-ink-2);
+}
