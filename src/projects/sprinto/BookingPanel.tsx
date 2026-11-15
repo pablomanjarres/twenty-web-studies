@@ -31,18 +31,16 @@ export function BookingPanel({
       </div>
       <div className="sp-booking-days" role="group" aria-label="Select a day">
         {days.map((d, i) => {
-          const open = openCount(i);
           return (
             <button
               type="button"
               key={d.date}
               aria-pressed={booking.day === i}
-              disabled={open === 0}
               onClick={() => update({ day: i })}
             >
               <span>{d.day}</span>
               <strong>{d.date}</strong>
-              <small>{open ? `${open} open` : "Full"}</small>
+              <small>{openCount(i)} open</small>
             </button>
           );
         })}
