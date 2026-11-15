@@ -73,14 +73,13 @@
 }
 .soundroom-v3 .sr3-player-buttons > .sr3-player-play {
   background: var(--sr3-orange);
-  color: #1a130c;
+  color: var(--sr3-on-amber);
   width: 40px;
   height: 40px;
   border-radius: 50%;
 }
 .soundroom-v3 .sr3-player-buttons > .sr3-player-play:hover {
-  background: #ff9d4f;
-  color: #1a130c;
+  background: var(--sr3-amber-hover);
 }
 .soundroom-v3 .sr3-player-buttons > .sr3-player-play:active {
   transform: scale(0.96);

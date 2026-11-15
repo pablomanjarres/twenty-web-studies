@@ -14,7 +14,7 @@
   font-size: 13px;
 }
 .soundroom-v3 .sr3-inline-moods button:not([aria-pressed="true"]):hover {
-  background: rgba(243, 241, 233, 0.1);
+  background: var(--sr3-edge);
   color: var(--sr3-text);
 }
 .soundroom-v3 .sr3-inline-moods button[aria-pressed="true"] {
