@@ -1,8 +1,68 @@
+.monograph-original-printed {
+  --focus-color: var(--mo-paper);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  background: var(--mo-blue);
+  color: var(--mo-paper);
+  margin: 0 -54px;
+  padding: 72px 100px;
+  align-items: center;
+}
+
+.monograph-original-printed .monograph-original-rubric {
+  color: var(--mo-band-text);
+}
+
+.monograph-original-book {
+  display: flex;
+  justify-content: center;
+  perspective: 1000px;
+}
+
+.monograph-original-book-cover {
+  width: 260px;
+  background: var(--mo-paper);
+  color: var(--mo-blue);
+  padding: 15px 17px 23px;
+  box-shadow: 15px 18px 0 #0e1c47;
+  transform: rotate(-7deg);
+}
+
+.monograph-original-book-cover > span {
+  font:
+    39px "Commune",
+    serif;
+  letter-spacing: -0.055em;
+}
+
+.monograph-original-book-cover img {
+  display: block;
+  height: 263px;
+  width: 100%;
+  object-fit: cover;
+  margin: 12px 0;
+}
+
+.monograph-original-book-cover small {
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+}
+
+.monograph-original-printed h2 {
+  font:
+    400 44px/1.05 "Commune",
+    serif;
+  letter-spacing: -0.04em;
+  text-wrap: balance;
+  margin: 24px 0;
+}
+
 .monograph-original-printed p {
-  font-size: 13px;
-  line-height: 1.7;
-  max-width: 350px;
-  color: #ccd1e0;
+  font-size: 16px;
+  line-height: 1.55;
+  max-width: 38ch;
+  color: var(--mo-band-text);
 }
 
 .monograph-original-paper-button {
@@ -10,43 +70,47 @@
   align-items: center;
   gap: 42px;
   width: max-content;
-  background: #f7f5ef;
-  color: #182a63;
-  padding: 15px 19px;
-  margin: 28px 0 20px;
-  font-size: 12px;
+  min-height: 48px;
+  background: var(--mo-paper);
+  color: var(--mo-blue);
+  border: 1px solid var(--mo-paper);
+  padding: 12px 19px;
+  margin: 32px 0 20px;
+  font-size: 14px;
 }
 
 .monograph-original-printed > div > small {
   display: block;
-  font-size: 10px;
-  color: #ccd1e0;
+  color: var(--mo-band-text);
 }
 
 .monograph-original-footer {
   display: flex;
-  gap: 35px;
+  gap: 32px;
   align-items: center;
-  padding: 38px 0;
-  font-size: 11px;
+  padding: 32px 0;
+  font-size: 14px;
 }
 
 .monograph-original-footer .brand-logo {
-  color: #182a63;
+  color: var(--mo-blue);
   font-size: 20px;
 }
 
 .monograph-original-footer > p {
-  color: #777a74;
+  color: var(--mo-pencil);
 }
 
 .monograph-original-footer > a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
   margin-left: auto;
 }
 
 .monograph-original-footer > small {
-  font-size: 9px;
-  color: #777a74;
+  font-size: 13px;
+  color: var(--mo-pencil);
 }
 
 @media (min-width: 1500px) {
@@ -79,13 +143,16 @@
     font-size: 54px;
   }
   .monograph-original-masthead nav {
-    gap: 25px;
+    gap: 24px;
   }
   .monograph-original-masthead nav > span {
     display: none;
   }
-  .monograph-original-editor-note p {
-    font-size: 20px;
+  .monograph-original-editor-note blockquote {
+    font-size: 21px;
+  }
+  .monograph-original-story-grid {
+    gap: 24px;
   }
   .monograph-original-story img {
     height: 230px;

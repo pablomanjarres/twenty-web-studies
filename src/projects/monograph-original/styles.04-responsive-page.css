@@ -9,44 +9,50 @@
     font-size: 17px;
   }
   .monograph-original-issue-link {
-    font-size: 10px;
+    font-size: 14px;
     gap: 8px;
   }
   .monograph-original-dateline {
-    font-size: 9px;
-    padding-top: 20px;
+    padding-top: 16px;
   }
   .monograph-original-masthead h1 {
     font-size: 18vw;
     margin: 5px 0 8px;
   }
   .monograph-original-masthead nav {
-    gap: 0;
-    justify-content: space-between;
-    font-size: 9px;
-    padding: 14px 0;
+    gap: 24px;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+    margin: 0 -20px;
+    padding: 0 20px;
   }
-  .monograph-original-masthead nav a:last-of-type {
+  .monograph-original-masthead nav > a:focus-visible {
+    outline-offset: -6px;
+  }
+  .monograph-original-masthead nav::-webkit-scrollbar {
     display: none;
+  }
+  .monograph-original-rubric {
+    font-size: 13px;
+    letter-spacing: 0.06em;
   }
   .monograph-original-cover {
     display: flex;
     flex-direction: column;
-    padding-top: 24px;
-    gap: 28px;
+    padding: 20px 0 56px;
+    gap: 20px;
   }
   .monograph-original-cover-image > img {
-    height: 430px;
+    height: 260px;
   }
   .monograph-original-cover-copy h2 {
-    font-size: 65px;
-    margin: 24px 0;
+    font-size: 56px;
+    margin: 20px 0;
   }
   .monograph-original-cover-copy > p {
-    max-width: none;
-  }
-  .monograph-original-editor-note {
-    margin-top: 18px;
+    font-size: 16px;
+    line-height: 1.65;
   }
   .monograph-original-section-title {
     align-items: flex-start;
@@ -56,37 +62,43 @@
   .monograph-original-section-title h2 {
     font-size: 30px;
   }
+  .monograph-original-filter {
+    font-size: 20px;
+  }
+  .monograph-original-filter button {
+    min-height: 44px;
+  }
+  .monograph-original-stories {
+    padding: 56px 0;
+  }
   .monograph-original-story-grid {
     grid-template-columns: 1fr;
-    gap: 36px;
+    gap: 48px;
   }
   .monograph-original-story img {
-    height: 300px;
-  }
-  .monograph-original-story h3 {
-    font-size: 34px;
+    height: 260px;
   }
   .monograph-original-printed {
     margin: 0 -20px;
-    padding: 50px 28px;
+    padding: 56px 28px;
     grid-template-columns: 1fr;
-    gap: 50px;
+    gap: 56px;
   }
   .monograph-original-printed h2 {
-    font-size: 40px;
+    font-size: 38px;
   }
   .monograph-original-footer {
     flex-wrap: wrap;
-    gap: 18px;
-  }
-  .monograph-original-footer > a {
-    font-size: 10px;
+    gap: 16px;
   }
   .monograph-original-footer > small {
     width: 100%;
   }
   .monograph-original-book-cover {
     width: 230px;
+  }
+  .monograph-original-book-cover small {
+    font-size: 13px;
   }
   .monograph-original-book-cover img {
     height: 245px;

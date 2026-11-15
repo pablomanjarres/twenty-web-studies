@@ -3,6 +3,9 @@
   --mono-paper: #f7f5ef;
   --mono-ink: #202321;
   --mono-rule: #d5d5cc;
+  --mono-pencil: #676961;
+  --mono-rail-dim: rgba(247, 245, 239, 0.72);
+  --mono-ease: cubic-bezier(0.25, 1, 0.5, 1);
   color: var(--mono-ink);
   background: var(--mono-paper);
   font-family: "DM Sans", sans-serif;
@@ -18,6 +21,7 @@
 }
 .monograph-page button {
   cursor: pointer;
+  color: inherit;
 }
 .monograph-page a {
   color: inherit;
@@ -39,54 +43,113 @@
 .monograph-page h3 {
   font-family: "The Foriene", serif;
   font-weight: 400;
+  text-wrap: balance;
 }
 .monograph-page button:focus-visible,
 .monograph-page a:focus-visible,
 .monograph-page input:focus-visible,
 .monograph-page select:focus-visible {
   outline: 2px solid var(--mono-blue);
-  outline-offset: 5px;
+  outline-offset: 4px;
 }
 .monograph-main {
   margin-left: 186px;
   padding: 0 32px;
 }
+
+/* Context label: the one uppercase voice for kickers, section lines and labels. */
+.monograph-small-label {
+  font-size: 12px;
+  line-height: 1.3;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+/* Credit voice: sentence case, pencil, always quieter than the label. */
+.monograph-credit,
+.monograph-byline {
+  display: block;
+  font-size: 12px;
+  line-height: 1.45;
+  color: var(--mono-pencil);
+}
+
+/* Quiet text link: underline arrives on hover, blue on paper.
+   .monograph-underline is the same underline for text inside a larger control. */
+.monograph-link,
+.monograph-underline {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 5px;
+  text-decoration-color: transparent;
+  transition:
+    color 200ms var(--mono-ease),
+    text-decoration-color 200ms var(--mono-ease);
+}
+.monograph-link:hover,
+.monograph-link:focus-visible {
+  color: var(--mono-blue);
+  text-decoration-color: currentColor;
+}
+.monograph-link:active,
+.monograph-icon-button:active,
+.monograph-essay-link:active,
+.monograph-save-story:active {
+  opacity: 0.7;
+}
+/* Square 44px control for a single icon, blue on hover. */
+.monograph-icon-button {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  transition: color 200ms var(--mono-ease);
+}
+.monograph-icon-button:hover {
+  color: var(--mono-blue);
+}
+.monograph-arrow {
+  display: inline-block;
+  transition: transform 200ms var(--mono-ease);
+}
+.monograph-link:hover .monograph-arrow,
+.monograph-link:focus-visible .monograph-arrow,
+.monograph-icon-button:hover .monograph-arrow,
+.monograph-essay-link:hover .monograph-arrow,
+.monograph-story:hover .monograph-arrow,
+.monograph-story:focus-within .monograph-arrow {
+  transform: translate(2px, -2px);
+}
+
 .monograph-edition-line {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
+  align-items: baseline;
+  gap: 24px;
   border-bottom: 1px solid var(--mono-rule);
-  padding: 23px 0;
-  font-size: 10px;
-  text-transform: uppercase;
-  letter-spacing: 0.055em;
+  padding: 22px 0 20px;
+}
+.monograph-edition-line h1 {
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+.monograph-edition-line .monograph-small-label {
+  color: var(--mono-pencil);
+  text-align: right;
 }
 .monograph-section-line {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
+  gap: 24px;
   border-top: 1px solid var(--mono-ink);
-  padding: 17px 0;
-  font-size: 10px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  padding: 16px 0;
 }
-.monograph-small-label {
-  font-size: 10px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-.monograph-footer {
-  border-top: 1px solid var(--mono-rule);
-  padding: 28px 0;
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  font-size: 11px;
-}
-
-.monograph-edition-line h1 {
-  font-family: inherit;
-  font-size: inherit;
-  font-weight: 400;
+.monograph-section-line > span + span {
+  color: var(--mono-pencil);
+  text-align: right;
 }

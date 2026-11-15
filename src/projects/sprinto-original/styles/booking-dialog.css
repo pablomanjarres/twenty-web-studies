@@ -24,10 +24,20 @@
 }
 .sprinto-original-close {
   position: absolute;
-  right: 15px;
-  top: 15px;
+  right: 12px;
+  top: 12px;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
   background: transparent;
+  color: #19152d;
   border: 0;
+  cursor: pointer;
+}
+.sprinto-original-close:hover {
+  background: #19152d14;
 }
 .sprinto-original-booking-icon {
   display: grid;
@@ -40,22 +50,25 @@
   color: #6535f4;
 }
 .sprinto-original-booking-panel h3 {
-  font-size: 42px;
-  line-height: 1.04;
-  margin: 24px 0 12px;
+  font-size: 48px;
+  line-height: 0.9;
+  margin: 24px 0 16px;
 }
 .sprinto-original-booking-panel p {
-  font-size: 12px;
-  line-height: 1.7;
-  color: #7b718a;
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--so-muted);
+  margin: 0;
 }
 .sprinto-original-booking-panel .sprinto-original-lime-button {
-  margin-top: 15px;
+  margin-top: 24px;
   width: 100%;
 }
-.sprinto-original-booking-confirmed {
+.sprinto-original-booking-panel .sprinto-original-booking-confirmed {
   border-top: 1px solid #d6d1df;
-  padding-top: 18px;
+  margin-top: 20px;
+  padding-top: 20px;
+  font-size: 15px;
 }
 .sprinto-original-modal-backdrop::backdrop {
   background: transparent;

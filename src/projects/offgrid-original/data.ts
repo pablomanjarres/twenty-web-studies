@@ -6,7 +6,8 @@ export const works = [
     name: "STILL / MOVING",
     type: "Brand",
     detail: "Identity for a label that keeps changing.",
-    image: "portrait",
+    image: "city",
+    alt: "City street with traffic between tall towers at dusk",
     className: "og-original-fashion",
     year: "2026",
   },
@@ -15,6 +16,8 @@ export const works = [
     type: "Digital",
     detail: "A digital home for a new music culture.",
     image: "glass",
+    alt: "Abstract light moving through ribbed glass",
+    poster: ["MAKE", "SOME", "NOISE."],
     className: "og-original-frequency",
     year: "2026",
   },
@@ -23,7 +26,13 @@ export const works = [
     type: "Brand",
     detail: "A place for the city to come together.",
     image: "space",
+    alt: "A large event space filled with people and light",
     className: "og-original-place",
     year: "2025",
   },
 ];
+
+export const filters = ["All", "Brand", "Digital"];
+
+export const worksFor = (filter: string) =>
+  works.filter((work) => filter === "All" || work.type === filter);

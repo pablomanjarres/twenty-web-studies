@@ -1,52 +1,76 @@
 .fg-studio {
   display: grid;
   grid-template-columns: 0.6fr 1.6fr 0.8fr;
-  gap: 60px;
-  padding: 70px 32px 90px;
+  gap: 48px;
+  padding: 96px var(--fg-inset) 112px;
   background: #eee9d8;
   scroll-margin-top: 30px;
 }
 .fg-studio > span {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 9px;
-  line-height: 1.7;
-  color: #6b7263;
-  letter-spacing: 0.7px;
+  color: var(--fg-on-paper-2);
 }
 .fg-studio h2 {
   font-family: "Tahoe", sans-serif;
-  font-size: 47px;
+  font-size: clamp(34px, 3.3vw, 56px);
   line-height: 1.05;
   font-weight: 400;
-  letter-spacing: -1.8px;
-  margin: 0 0 28px;
+  letter-spacing: -0.03em;
+  margin: 0 0 32px;
 }
 .fg-studio p {
-  font-size: 13px;
-  line-height: 1.9;
-  max-width: 480px;
-  color: #747969;
+  color: var(--fg-on-paper-2);
+  margin: 0 0 16px;
 }
 .fg-studio button {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 22px;
-  padding: 20px 0 7px;
+  gap: 16px;
+  margin-top: 24px;
+  padding: 8px 0;
+  box-shadow:
+    -8px 0 0 transparent,
+    8px 0 0 transparent;
   border: 0;
-  border-bottom: 1px solid #282e23;
+  border-bottom: 2px solid var(--fg-ink);
   background: none;
-  font-family: "Instrument Serif", serif;
-  font-size: 26px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  letter-spacing: -0.01em;
+  transition:
+    background-color 160ms ease-out,
+    box-shadow 160ms ease-out,
+    color 160ms ease-out;
+}
+.offgrid-v2 .fg-studio button:hover {
+  background: var(--fg-ink);
+  box-shadow:
+    -8px 0 0 var(--fg-ink),
+    8px 0 0 var(--fg-ink);
+  color: var(--fg-milk);
+}
+.fg-studio button:active {
+  translate: 0 1px;
 }
 .fg-principles {
-  padding-top: 5px;
-}
-.fg-principles p {
-  border-top: 1px solid #c5c5b5;
-  padding: 15px 0;
+  list-style: none;
   margin: 0;
-  font-size: 10px;
-  line-height: 1.5;
+  padding: 0;
+  border-bottom: 1px solid #c5c5b5;
+}
+.fg-principles li {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  border-top: 1px solid #c5c5b5;
+  padding: 14px 0;
+}
+.fg-principles span {
+  color: var(--fg-on-paper-2);
+}
+.offgrid-v2 .fg-principles p {
+  margin: 0;
+  color: var(--fg-ink);
 }
 .fg-footer {
   display: flex;
@@ -54,8 +78,8 @@
   justify-content: space-between;
   background: var(--fg-blue);
   color: var(--fg-milk);
-  padding: 33px 32px;
-  gap: 20px;
+  padding: 32px var(--fg-inset);
+  gap: 24px;
 }
 .fg-footer .brand-logo {
   font-family: "Tahoe", sans-serif;
@@ -66,13 +90,17 @@
   width: 29px;
   height: 29px;
 }
-.fg-footer > span,
-.fg-footer > a {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 7px;
-  letter-spacing: 0.9px;
+.fg-footer > span:not(.brand-logo) {
+  color: var(--fg-on-blue-2);
 }
 .fg-footer a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   color: var(--fg-milk);
   text-decoration: none;
+}
+.fg-footer a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }

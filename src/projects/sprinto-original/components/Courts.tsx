@@ -1,10 +1,10 @@
 import { useState, useEffect, useRef } from "react";
 import { ArrowRight, Clock3, Check, X } from "lucide-react";
 import { CourtCard } from "./CourtCard";
-import { courts } from "../data";
+import { allAreas, areas, courts, session } from "../data";
 
 export function Courts() {
-  const [area, setArea] = useState("All locations");
+  const [area, setArea] = useState(allAreas);
   const [booking, setBooking] = useState<{ name: string; time: string } | null>(
     null,
   );
@@ -22,14 +22,17 @@ export function Courts() {
     <section className="sprinto-original-courts" id="sprinto-original-courts">
       <div className="sprinto-original-section-title">
         <div>
-          <span>Tonight looks good on you.</span>
+          <span className="sprinto-original-meta">
+            Tonight looks good on you.
+          </span>
           <h2>YOUR COURT. YOUR CALL.</h2>
         </div>
         <div
           className="sprinto-original-area-tabs"
+          role="group"
           aria-label="Court locations"
         >
-          {["All locations", "Downtown", "Riverside"].map((i) => (
+          {areas.map((i) => (
             <button
               key={i}
               aria-pressed={area === i}
@@ -42,7 +45,7 @@ export function Courts() {
       </div>
       <div className="sprinto-original-court-grid">
         {courts
-          .filter((i) => area === "All locations" || i.area === area)
+          .filter((i) => area === allAreas || i.area === area)
           .map((i) => (
             <CourtCard
               key={i.name}
@@ -60,7 +63,8 @@ export function Courts() {
           <span>
             Your next game is saved.
             <strong>
-              {savedSession.name} · {savedSession.time} · 90 minutes
+              {savedSession.name} · {savedSession.time} · {session.minutes}{" "}
+              minutes
             </strong>
           </span>
         </div>
@@ -92,7 +96,8 @@ export function Courts() {
             <p>
               {booking.name}
               <br />
-              {booking.time} · 90 minutes · €28 per court
+              {booking.time} · {session.minutes} minutes · {session.price} per
+              court
             </p>
             {confirmed ? (
               <p className="sprinto-original-booking-confirmed">

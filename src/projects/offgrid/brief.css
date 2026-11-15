@@ -15,22 +15,28 @@
   width: min(100%, 600px);
   max-height: 93vh;
   overflow: auto;
-  padding: 44px;
+  padding: 48px;
 }
 .fg-close {
   position: absolute;
-  right: 18px;
-  top: 17px;
+  right: 12px;
+  top: 12px;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
   background: none;
   border: 0;
-  padding: 6px;
+  border-radius: 2px;
+  transition: background-color 160ms ease-out;
+}
+.fg-close:hover {
+  background: #e3ddc8;
 }
 .fg-brief > span {
   display: block;
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 8px;
-  letter-spacing: 1px;
-  color: #8a927a;
+  color: var(--fg-on-paper-2);
+  padding-right: 48px;
 }
 .fg-brief h2 {
   font-family: "Tahoe", sans-serif;
@@ -38,70 +44,89 @@
   line-height: 1.1;
   font-weight: 400;
   letter-spacing: -1.3px;
-  margin: 22px 0 28px;
+  margin: 16px 0 32px;
 }
 .fg-brief label {
   display: block;
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 9px;
-  line-height: 1.6;
-  color: #778267;
+  color: var(--fg-brief-label);
 }
 .fg-brief input,
 .fg-brief select,
 .fg-brief textarea {
   display: block;
   background: #fffdf2;
-  border: 1px solid #d4d7c3;
+  border: 1px solid var(--fg-field-line);
   border-radius: 0;
   width: 100%;
-  padding: 12px;
-  font-family: "DM Sans", sans-serif;
-  font-size: 12px;
-  color: #38492d;
-  outline: none;
-  margin: 8px 0 22px;
+  min-height: 48px;
+  padding: 11px 12px;
+  color: #26351f;
+  margin: 8px 0 24px;
 }
-.fg-brief input:focus,
-.fg-brief select:focus,
-.fg-brief textarea:focus {
-  border-color: #1d37dd;
-  box-shadow: 0 0 0 2px #1d37dd22;
+.fg-brief textarea {
+  resize: vertical;
+}
+.fg-brief :is(input, textarea)::placeholder {
+  color: #6f7563;
+}
+.fg-brief :is(input, select, textarea):hover {
+  border-color: #26351f;
 }
 .fg-form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  gap: 16px;
 }
 .fg-brief form > button,
 .fg-brief-ready > button:first-of-type {
   width: 100%;
+  min-height: 52px;
   background: var(--fg-blue);
-  color: var(--fg-milk);
   border: 0;
+  border-radius: 2px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px;
-  font-size: 12px;
+  gap: 12px;
+  padding: 0 16px;
+  font-weight: 500;
+  font-size: 16px;
+  transition: background-color 160ms ease-out;
+}
+.offgrid-v2 .fg-brief form > button,
+.offgrid-v2 .fg-brief-ready > button:first-of-type {
+  color: var(--fg-milk);
+}
+.fg-brief form > button:hover,
+.fg-brief-ready > button:first-of-type:hover {
+  background: var(--fg-ink);
+}
+.fg-brief form > button:active,
+.fg-brief-ready > button:active {
+  translate: 0 1px;
+}
+.fg-brief-ready > button:first-of-type {
+  justify-content: flex-start;
 }
 .fg-brief form > small {
   display: block;
-  font-size: 8px;
-  line-height: 1.6;
-  color: #929981;
+  font-weight: 400;
+  color: var(--fg-on-paper-2);
   margin-top: 12px;
 }
 .fg-brief-ready p {
-  font-size: 14px;
-  line-height: 1.9;
-  color: #78846c;
-  margin-bottom: 28px;
+  color: var(--fg-on-paper-2);
+  margin: 0 0 32px;
 }
 .fg-brief-ready > button:last-child {
   background: none;
   border: 0;
-  margin-top: 18px;
-  font-size: 10px;
+  min-height: 44px;
+  margin-top: 8px;
+  padding: 0;
   text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.fg-brief-ready > button:last-child:hover {
+  text-decoration-thickness: 2px;
 }

@@ -5,8 +5,8 @@ export function VisualEssay({ onRead }: { onRead: () => void }) {
   return (
     <section className="monograph-visual-essay" id="monograph-essay">
       <div className="monograph-section-line">
-        <span>Long look / 001</span>
-        <span>The spaces between</span>
+        <span className="monograph-small-label">Long look / 001</span>
+        <span className="monograph-small-label">The spaces between</span>
       </div>
       <div className="monograph-essay-intro">
         <h2>
@@ -23,13 +23,15 @@ export function VisualEssay({ onRead }: { onRead: () => void }) {
             pages of an exhibition.
           </p>
           <p>{story.paragraphs[0]}</p>
-          <button onClick={onRead}>Continue the visual essay ↗</button>
+          <button className="monograph-essay-link" onClick={onRead}>
+            Continue the visual essay <span className="monograph-arrow">↗</span>
+          </button>
         </div>
       </div>
       <figure>
         <img src={image(story.file)} alt={story.alt} loading="lazy" />
         <figcaption>
-          <span>{story.caption}</span>
+          <span className="monograph-figure-caption">{story.caption}</span>
           <PhotoCredit story={story} />
         </figcaption>
       </figure>

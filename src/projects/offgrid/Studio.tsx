@@ -1,4 +1,10 @@
-import { ArrowUpRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+const principles = [
+  { index: "01", text: "Start with a better question." },
+  { index: "02", text: "Keep the idea in the work." },
+  { index: "03", text: "Make room for the unexpected." },
+  { index: "04", text: "Finish what matters." },
+];
 export function Studio({ onBrief }: { onBrief: () => void }) {
   return (
     <section className="fg-studio" id="studio">
@@ -23,19 +29,18 @@ export function Studio({ onBrief }: { onBrief: () => void }) {
           that leaves room for the unexpected.
         </p>
         <button onClick={onBrief}>
-          Let’s make something stick. <ArrowUpRight size={25} />
+          Let’s make something stick.{" "}
+          <ArrowRight size={22} aria-hidden="true" />
         </button>
       </div>
-      <div className="fg-principles">
-        {[
-          "01 / Start with a better question.",
-          "02 / Keep the idea in the work.",
-          "03 / Make room for the unexpected.",
-          "04 / Finish what matters.",
-        ].map((s) => (
-          <p key={s}>{s}</p>
+      <ol className="fg-principles" aria-label="How we work">
+        {principles.map((p) => (
+          <li key={p.index}>
+            <span>{p.index}</span>
+            <p>{p.text}</p>
+          </li>
         ))}
-      </div>
+      </ol>
     </section>
   );
 }

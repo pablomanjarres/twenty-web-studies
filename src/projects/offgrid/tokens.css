@@ -1,0 +1,38 @@
+.offgrid-v2 {
+  --fg-ease: cubic-bezier(0.2, 0, 0, 1);
+  --fg-label-size: 12px;
+  --fg-inset: 32px;
+  --fg-on-blue-2: #d3d7f7;
+  --fg-on-blue-line: rgba(242, 240, 228, 0.6);
+  --fg-on-ink-body: #a5ad97;
+  --fg-on-ink-label: #8f9682;
+  --fg-on-ink-muted: #9aa08e;
+  --fg-on-paper-2: #5b6052;
+  --fg-brief-label: #3f4a33;
+  --fg-field-line: #7d8370;
+  --focus-color: var(--fg-blue);
+}
+.fg-poster,
+.fg-work,
+.fg-footer {
+  --focus-color: var(--fg-yellow);
+}
+.offgrid-v2 :is(button, a, summary):focus-visible {
+  outline: 3px solid var(--focus-color);
+  outline-offset: 4px;
+}
+.offgrid-v2 :is(input, select, textarea):focus-visible {
+  outline: 3px solid var(--focus-color);
+  outline-offset: 2px;
+}
+@media (max-width: 1000px) {
+  .offgrid-v2 {
+    --fg-inset: 24px;
+  }
+}
+@media (max-width: 650px) {
+  .offgrid-v2 {
+    --fg-label-size: 13px;
+    --fg-inset: 20px;
+  }
+}

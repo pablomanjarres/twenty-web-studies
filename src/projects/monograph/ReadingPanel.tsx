@@ -22,9 +22,15 @@ export function ReadingPanel({ story, onClose, saved, onSave }: Props) {
         onClick={(event) => event.stopPropagation()}
       >
         <header>
-          <span>Monograph / {story.category}</span>
-          <button onClick={onClose} aria-label="Close article">
-            <X size={20} />
+          <span className="monograph-small-label">
+            Monograph / {story.category}
+          </span>
+          <button
+            className="monograph-icon-button"
+            onClick={onClose}
+            aria-label="Close article"
+          >
+            <X size={22} aria-hidden="true" />
           </button>
         </header>
         <img src={image(story.file)} alt={story.alt} />
@@ -38,8 +44,14 @@ export function ReadingPanel({ story, onClose, saved, onSave }: Props) {
           ))}
           <p className="monograph-reading-caption">{story.caption}</p>
           <button className="monograph-save-story" onClick={onSave}>
-            <Bookmark size={16} fill={saved ? "currentColor" : "none"} />
-            {saved ? "In your reading list" : "Save for a slower moment"}
+            <Bookmark
+              size={16}
+              aria-hidden="true"
+              fill={saved ? "currentColor" : "none"}
+            />
+            <span className="monograph-underline">
+              {saved ? "In your reading list" : "Save for a slower moment"}
+            </span>
           </button>
         </div>
       </div>

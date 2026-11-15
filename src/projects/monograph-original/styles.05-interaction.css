@@ -1,0 +1,122 @@
+.monograph-original-masthead nav > a,
+.monograph-original-issue-link,
+.monograph-original-story h3 a,
+.monograph-original-story-more,
+.monograph-original-footer > a {
+  text-decoration: underline 1px transparent;
+  text-underline-offset: 6px;
+  transition:
+    text-decoration-color 200ms ease-in-out,
+    color 200ms ease-in-out;
+}
+
+.monograph-original-masthead nav > a:hover,
+.monograph-original-issue-link:hover,
+.monograph-original-story-more:hover,
+.monograph-original-footer > a:hover,
+.monograph-original-story:hover h3 a,
+.monograph-original-story h3 a:focus-visible {
+  text-decoration-color: currentColor;
+}
+
+.monograph-original-story h3 a {
+  text-underline-offset: 5px;
+}
+
+.monograph-original a:focus-visible,
+.monograph-original button:focus-visible {
+  outline-offset: 4px;
+}
+
+.monograph-original-story-image:focus-visible {
+  outline-offset: 3px;
+}
+
+.monograph-original-filter button {
+  transition:
+    color 200ms ease-in-out,
+    text-decoration-color 200ms ease-in-out;
+}
+
+.monograph-original-filter button:not(.active):hover {
+  color: var(--mo-ink);
+  text-decoration-color: var(--mo-ink);
+}
+
+.monograph-original-text-link svg,
+.monograph-original-issue-link svg {
+  transition: transform 200ms ease-in-out;
+}
+
+.monograph-original-text-link {
+  transition: border-color 200ms ease-in-out;
+}
+
+.monograph-original-text-link:hover {
+  border-bottom-width: 2px;
+  padding-bottom: 8px;
+  color: var(--mo-blue);
+}
+
+.monograph-original-text-link:hover svg,
+.monograph-original-issue-link:hover svg {
+  transform: translate(3px, -3px);
+}
+
+.monograph-original-byline button {
+  color: var(--mo-ink);
+  transition: color 200ms ease-in-out;
+}
+
+.monograph-original-byline button:hover,
+.monograph-original-byline button[aria-pressed="true"] {
+  color: var(--mo-blue);
+}
+
+.monograph-original-story img {
+  transition: transform 400ms var(--mo-ease);
+}
+
+.monograph-original-story:hover img,
+.monograph-original-story:focus-within img {
+  transform: scale(1.025);
+}
+
+.monograph-original-story-excerpt:not([hidden]) {
+  animation: monograph-original-reveal 240ms var(--mo-ease);
+}
+
+@keyframes monograph-original-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
+
+.monograph-original-paper-button {
+  transition:
+    background-color 300ms var(--mo-ease),
+    color 300ms var(--mo-ease);
+}
+
+.monograph-original-paper-button:hover {
+  background: transparent;
+  color: var(--mo-paper);
+}
+
+.monograph-original-paper-button:active {
+  transform: translateY(1px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .monograph-original *,
+  .monograph-original *::before,
+  .monograph-original *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+  .monograph-original-story:hover img,
+  .monograph-original-story:focus-within img {
+    transform: none;
+  }
+}

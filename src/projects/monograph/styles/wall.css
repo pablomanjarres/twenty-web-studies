@@ -1,19 +1,26 @@
 .monograph-wall {
   display: grid;
   grid-template-columns: 1.34fr 1fr 0.88fr 0.83fr;
-  gap: 23px;
+  gap: 24px;
   align-items: start;
-  min-height: 760px;
-  padding: 28px 0 62px;
+  padding: 32px 0 64px;
+}
+.monograph-wall-empty {
+  grid-column: 1 / -1;
+  padding: 48px 0 32px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--mono-pencil);
 }
 .monograph-story {
+  position: relative;
   min-width: 0;
 }
 .monograph-story-2 {
-  padding-top: 89px;
+  padding-top: 88px;
 }
 .monograph-story-3 {
-  padding-top: 17px;
+  padding-top: 16px;
 }
 .monograph-story-4 {
   padding-top: 144px;
@@ -22,94 +29,117 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 14px;
-  font-size: 9px;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
+  margin-bottom: 8px;
 }
 .monograph-story-kicker button {
+  width: 36px;
+  height: 36px;
+  margin-right: -10px;
   border: 0;
-  padding: 4px;
+  padding: 0;
   background: transparent;
   color: var(--mono-blue);
   display: grid;
   place-items: center;
+  opacity: 0.7;
+  transition: opacity 200ms var(--mono-ease);
 }
-.monograph-photo-button {
-  display: block;
-  width: 100%;
-  border: 0;
-  padding: 0;
+.monograph-story-kicker button:hover,
+.monograph-story-kicker button[aria-pressed="true"] {
+  opacity: 1;
+}
+.monograph-story-kicker button:active svg {
+  transform: scale(0.9);
+}
+.monograph-photo {
   background: var(--mono-rule);
   overflow: hidden;
+  cursor: pointer;
 }
-.monograph-photo-button img {
+.monograph-photo img {
   width: 100%;
   height: 330px;
   object-fit: cover;
-  transition: transform 0.4s;
+  transition: transform 500ms var(--mono-ease);
 }
-.monograph-story-1 .monograph-photo-button img {
+.monograph-story-1 .monograph-photo img {
   height: 415px;
   object-position: 38% center;
 }
-.monograph-story-2 .monograph-photo-button img {
+.monograph-story-2 .monograph-photo img {
   height: 241px;
 }
-.monograph-story-3 .monograph-photo-button img {
+.monograph-story-3 .monograph-photo img {
   height: 352px;
   object-position: 70% center;
 }
-.monograph-story-4 .monograph-photo-button img {
+.monograph-story-4 .monograph-photo img {
   height: 236px;
   object-position: 65% center;
 }
-.monograph-photo-button:hover img {
-  transform: scale(1.035);
+.monograph-photo + .monograph-credit {
+  margin-top: 12px;
 }
 .monograph-credit {
-  display: block;
-  margin-top: 8px;
-  font-size: 8px;
-  color: #676961 !important;
-  line-height: 1.5;
+  width: fit-content;
 }
 .monograph-credit:hover {
+  color: var(--mono-ink);
   text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.monograph-story .monograph-story-heading {
+  margin-top: 16px;
 }
 .monograph-story-title {
   border: 0;
-  padding: 18px 0 12px;
+  padding: 0;
   display: flex;
   justify-content: space-between;
-  gap: 5px;
-  color: inherit;
+  gap: 12px;
   text-align: left;
   background: transparent;
   width: 100%;
   align-items: start;
-}
-.monograph-story-title h2 {
   font-size: 28px;
-  line-height: 1.04;
-  letter-spacing: -0.035em;
+  line-height: 1.06;
+  letter-spacing: -0.03em;
+  transition: color 200ms var(--mono-ease);
 }
-.monograph-story-1 .monograph-story-title h2 {
-  font-size: 43px;
+.monograph-story-title > span {
+  text-underline-offset: 6px;
+}
+.monograph-story-1 .monograph-story-title {
+  font-size: 44px;
+  line-height: 1.02;
+  letter-spacing: -0.035em;
 }
 .monograph-story-title svg {
   flex-shrink: 0;
   margin-top: 4px;
 }
-.monograph-story > p {
-  font-size: 12px;
-  line-height: 1.7;
-  max-width: 29em;
+.monograph-story:hover .monograph-photo img,
+.monograph-story:focus-within .monograph-photo img {
+  transform: scale(1.03);
 }
-.monograph-byline {
-  display: block;
-  margin-top: 18px;
-  font-size: 9px;
-  line-height: 1.65;
-  color: #676961;
+.monograph-story:hover .monograph-story-title,
+.monograph-story:focus-within .monograph-story-title {
+  color: var(--mono-blue);
+}
+.monograph-story:hover .monograph-story-title > span,
+.monograph-story:focus-within .monograph-story-title > span {
+  text-decoration-color: currentColor;
+}
+.monograph-story-title:active {
+  opacity: 0.75;
+}
+.monograph-story .monograph-story-deck {
+  margin-top: 12px;
+  font-size: 15px;
+  line-height: 1.6;
+  max-width: 32em;
+  text-wrap: pretty;
+}
+.monograph-story .monograph-byline {
+  margin-top: 16px;
 }

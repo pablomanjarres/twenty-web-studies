@@ -1,9 +1,10 @@
 .sprinto-original-hero-image {
   position: relative;
-  min-height: 630px;
-  overflow: hidden;
+  min-height: 560px;
 }
 .sprinto-original-hero-image > img {
+  position: absolute;
+  inset: 0;
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -13,50 +14,30 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(#18152d11, #18152d00 60%, #18152d80);
-}
-.sprinto-original-image-label {
-  position: absolute;
-  right: 25px;
-  top: 25px;
-  padding: 15px;
-  border: 1px solid #ffffff85;
-  display: flex;
-  gap: 40px;
-  align-items: flex-start;
-  color: white;
-  z-index: 1;
-}
-.sprinto-original-image-label > span {
-  font-family: "Anton", sans-serif;
-  font-size: 20px;
-  line-height: 1.05;
-}
-.sprinto-original-image-label .brand-logo {
-  color: #ddfc6b;
+  background: linear-gradient(#18152d11, #18152d00 55%, #18152d99);
 }
 .sprinto-original-image-location {
   position: absolute;
-  bottom: 30px;
-  left: 30px;
-  right: 30px;
+  bottom: 32px;
+  left: 32px;
+  right: 32px;
   display: flex;
-  gap: 7px;
+  gap: 8px;
   align-items: center;
-  font-size: 10px;
+  font-size: 14px;
+  line-height: 1.4;
   z-index: 1;
 }
 .sprinto-original-image-location > span {
   margin-left: auto;
-  font-size: 9px;
 }
 .sprinto-original-hero-sticker {
   position: absolute;
   z-index: 2;
-  bottom: 74px;
-  left: calc(51.5% - 43px);
-  width: 88px;
-  height: 88px;
+  bottom: 96px;
+  left: -48px;
+  width: 96px;
+  height: 96px;
   border-radius: 50%;
   transform: rotate(-14deg);
   background: #ddfc6b;
@@ -67,8 +48,12 @@
   justify-content: center;
   font-family: "Anton", sans-serif;
   line-height: 1.05;
-  font-size: 18px;
+  font-size: 19px;
   box-shadow: 0 0 0 7px #6535f4;
+  transition: transform 300ms ease-out;
+}
+.sprinto-original-hero:hover .sprinto-original-hero-sticker {
+  transform: rotate(-8deg);
 }
 .sprinto-original-hero-sticker svg {
   margin-bottom: 4px;

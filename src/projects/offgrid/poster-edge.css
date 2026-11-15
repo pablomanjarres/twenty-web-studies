@@ -1,26 +1,32 @@
 .fg-poster-bottom {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: end;
+  gap: 24px;
   border-top: 1px solid #f2f0e457;
   margin-top: 24px;
-  padding: 21px 0 27px;
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 7px;
-  line-height: 1.5;
-  letter-spacing: 0.8px;
+  padding: 16px 0 24px;
+  color: var(--fg-on-blue-2);
   flex-shrink: 0;
 }
 .fg-poster-bottom > span:last-child {
   text-align: right;
 }
 .fg-poster-bottom a {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 13px;
+  gap: 10px;
+  min-height: 40px;
   color: var(--fg-milk);
-  font-family: "DM Sans", sans-serif;
-  font-size: 12px;
   text-decoration: none;
-  letter-spacing: 0;
+}
+.fg-poster-bottom a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.fg-poster-bottom a svg {
+  transition: translate 200ms var(--fg-ease);
+}
+.fg-poster-bottom a:hover svg {
+  translate: 2px 2px;
 }

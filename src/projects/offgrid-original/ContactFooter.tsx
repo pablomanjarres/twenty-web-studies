@@ -1,10 +1,17 @@
 import { useState } from "react";
-import { ArrowUpRight, Check } from "lucide-react";
-import { brand } from "./brand";
+import { ArrowUp, ArrowUpRight, Check } from "lucide-react";
+import { ChoiceGroup } from "./ChoiceGroup";
+
+const disciplines = ["Brand identity", "A new website", "The whole picture"];
+const stages = [
+  "Starting something new",
+  "Rethinking an existing brand",
+  "Ready to grow",
+];
 
 export function BriefBuilder() {
-  const [discipline, setDiscipline] = useState("Brand identity");
-  const [stage, setStage] = useState("Starting something new");
+  const [discipline, setDiscipline] = useState(disciplines[0]);
+  const [stage, setStage] = useState(stages[0]);
   const [ready, setReady] = useState(false);
   return (
     <section className="og-original-contact" id="og-original-contact">
@@ -22,46 +29,32 @@ export function BriefBuilder() {
           setReady(true);
         }}
       >
-        <label>
-          We’re interested in
-          <select
-            value={discipline}
-            onChange={(event) => {
-              setDiscipline(event.target.value);
-              setReady(false);
-            }}
-          >
-            {["Brand identity", "A new website", "The whole picture"].map(
-              (item) => (
-                <option key={item}>{item}</option>
-              ),
-            )}
-          </select>
-        </label>
-        <label>
-          And right now we’re
-          <select
-            value={stage}
-            onChange={(event) => {
-              setStage(event.target.value);
-              setReady(false);
-            }}
-          >
-            {[
-              "Starting something new",
-              "Rethinking an existing brand",
-              "Ready to grow",
-            ].map((item) => (
-              <option key={item}>{item}</option>
-            ))}
-          </select>
-        </label>
+        <ChoiceGroup
+          legend="We’re interested in"
+          name="og-original-discipline"
+          options={disciplines}
+          value={discipline}
+          onChange={(value) => {
+            setDiscipline(value);
+            setReady(false);
+          }}
+        />
+        <ChoiceGroup
+          legend="And right now we’re"
+          name="og-original-stage"
+          options={stages}
+          value={stage}
+          onChange={(value) => {
+            setStage(value);
+            setReady(false);
+          }}
+        />
         <button type="submit">
           Put the idea together <ArrowUpRight size={22} />
         </button>
         {ready && (
           <p className="og-original-brief-result" role="status">
-            <Check size={18} /> Your starting point: {discipline.toLowerCase()},{" "}
+            <Check size={20} /> Your starting point: {discipline.toLowerCase()},{" "}
             {stage.toLowerCase()}. A clear direction for the first conversation.
           </p>
         )}
@@ -76,7 +69,9 @@ export function Footer() {
       <span className="og-original-footer-word">offgrid</span>
       <div>
         <span>Good ideas go off script.</span>
-        <a href="#og-original-top">Back up ↑</a>
+        <a href="#og-original-top" className="og-original-link">
+          Back up <ArrowUp size={16} />
+        </a>
         <span>Independent since always.</span>
       </div>
     </footer>

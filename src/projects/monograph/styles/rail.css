@@ -2,12 +2,16 @@
   position: fixed;
   inset: 0 auto 0 0;
   width: 186px;
-  padding: 28px 20px 22px;
+  padding: 28px 20px 24px;
   background: var(--mono-blue);
   color: var(--mono-paper);
   display: flex;
   flex-direction: column;
+  overflow-y: auto;
   z-index: 20;
+}
+.monograph-mark {
+  width: fit-content;
 }
 .monograph-mark .brand-logo {
   gap: 7px;
@@ -23,26 +27,31 @@
   letter-spacing: -0.055em;
 }
 .monograph-rail-note {
-  margin-top: 25px !important;
+  margin-top: 24px !important;
   font-family: "The Foriene", serif;
   font-size: 22px;
   line-height: 1.18;
 }
 .monograph-issue-label {
-  margin-top: 56px;
-  font-size: 10px;
+  margin-top: 48px;
   display: grid;
-  gap: 13px;
+  gap: 8px;
+  color: var(--mono-rail-dim);
 }
 .monograph-issue-label select {
   width: 100%;
+  min-height: 44px;
   border: 0;
-  border-bottom: 1px solid #ffffff65;
+  border-bottom: 1px solid rgba(247, 245, 239, 0.4);
   background: transparent;
-  color: inherit;
+  color: var(--mono-paper);
   border-radius: 0;
-  padding: 9px 0;
+  padding: 8px 0;
   font-size: 17px;
+  cursor: pointer;
+}
+.monograph-issue-label select:hover {
+  border-bottom-color: var(--mono-paper);
 }
 .monograph-issue-label option {
   color: var(--mono-ink);
@@ -55,39 +64,91 @@
 .monograph-subjects button {
   background: transparent;
   border: 0;
-  border-bottom: 1px solid #ffffff25;
-  color: inherit;
-  padding: 15px 0;
+  border-bottom: 1px solid rgba(247, 245, 239, 0.16);
+  min-height: 44px;
+  padding: 10px 0;
   display: grid;
-  grid-template-columns: 23px 1fr 12px;
+  grid-template-columns: 28px 1fr 12px;
+  align-items: center;
   text-align: left;
+  font-size: 14px;
+  line-height: 1.35;
+  color: var(--mono-rail-dim);
+  transition: color 200ms var(--mono-ease);
+}
+.monograph-subject-number {
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+}
+.monograph-subject-dot {
   font-size: 12px;
 }
-.monograph-subjects button span {
-  font-size: 9px;
-  opacity: 0.6;
-}
+.monograph-subjects button:hover,
 .monograph-subjects button[aria-pressed="true"] {
-  font-weight: 700;
+  color: var(--mono-paper);
 }
-.monograph-subjects button[aria-pressed="true"] span:last-child {
-  opacity: 1;
+.monograph-subjects button:hover .monograph-underline,
+.monograph-subjects button[aria-pressed="true"] .monograph-underline {
+  text-decoration-color: currentColor;
+}
+.monograph-subjects button:active {
+  opacity: 0.75;
 }
 .monograph-rail-bottom {
   margin-top: auto;
-  padding-top: 46px;
+  padding-top: 48px;
   display: grid;
-  gap: 16px;
-  font-size: 10px;
-  line-height: 1.6;
+  gap: 4px;
+  font-size: 14px;
+  line-height: 1.35;
 }
-.monograph-rail-bottom > span {
-  opacity: 0.8;
-  padding-bottom: 20px;
+.monograph-reading-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 44px;
+  margin-bottom: 12px;
+  padding: 0 0 0 12px;
+  border: 1px solid rgba(247, 245, 239, 0.28);
+  background: transparent;
+  font-size: 14px;
+  text-align: left;
+  transition:
+    background-color 200ms var(--mono-ease),
+    color 200ms var(--mono-ease);
+}
+.monograph-reading-toggle span:last-child {
+  min-width: 40px;
+  font-variant-numeric: tabular-nums;
+  text-align: center;
+}
+.monograph-reading-toggle:hover {
+  border-color: var(--mono-paper);
+}
+.monograph-reading-toggle[aria-pressed="true"] {
+  background: var(--mono-paper);
+  color: var(--mono-blue);
+}
+.monograph-rail-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 40px;
+  width: fit-content;
+}
+.monograph-rail .monograph-link:hover,
+.monograph-rail .monograph-link:focus-visible {
+  color: var(--mono-paper);
+}
+.monograph-rail .monograph-link:hover .monograph-arrow,
+.monograph-rail .monograph-link:focus-visible .monograph-arrow {
+  transform: translate(2px, 2px);
 }
 .monograph-rail-bottom p {
   padding-top: 16px;
-  opacity: 0.65;
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--mono-rail-dim);
 }
 .monograph-rail button:focus-visible,
 .monograph-rail a:focus-visible,

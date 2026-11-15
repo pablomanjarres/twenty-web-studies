@@ -1,8 +1,8 @@
 .monograph-print {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 105px;
-  padding: 65px 45px 85px;
+  gap: 104px;
+  padding: 80px 48px;
   background: #ebe8de;
   margin: 0 -32px;
   scroll-margin-top: 20px;
@@ -39,59 +39,76 @@
   font-size: 52px;
 }
 .monograph-paper-cover > div span:last-child {
-  font-size: 10px;
-  line-height: 1.5;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.06em;
 }
 .monograph-print-copy h2 {
-  font-size: 49px;
+  font-size: 44px;
   line-height: 1.04;
   letter-spacing: -0.035em;
-  margin: 21px 0;
+  margin: 16px 0 24px;
 }
 .monograph-print-copy > p {
-  font-size: 13px;
-  line-height: 1.9;
+  font-size: 16px;
+  line-height: 1.7;
   max-width: 32em;
+  text-wrap: pretty;
 }
 .monograph-print dl {
-  margin: 27px 0;
+  margin: 32px 0;
 }
 .monograph-print dl div {
   display: grid;
-  grid-template-columns: 80px 1fr;
-  gap: 15px;
-  padding: 9px 0;
+  grid-template-columns: 88px 1fr;
+  gap: 16px;
+  align-items: baseline;
+  padding: 10px 0;
   border-bottom: 1px solid var(--mono-rule);
-  font-size: 10px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+.monograph-print dt {
+  font-size: 12px;
+  color: var(--mono-pencil);
 }
 .monograph-print dd {
   margin: 0;
 }
 .monograph-print form label {
   display: block;
-  font-size: 11px;
-  margin-bottom: 14px;
+  font-size: 14px;
+  margin-bottom: 8px;
 }
 .monograph-print form > div {
   display: flex;
+  align-items: center;
   border-bottom: 1px solid var(--mono-ink);
+  transition: border-color 200ms var(--mono-ease);
+}
+.monograph-print form > div:focus-within {
+  border-color: var(--mono-blue);
 }
 .monograph-print input {
   background: transparent;
   border: 0;
   padding: 12px 0;
+  min-height: 44px;
   min-width: 0;
   flex: 1;
-  font-size: 12px;
+  font-size: 16px;
 }
-.monograph-print form button {
-  border: 0;
-  background: transparent;
-  padding: 8px 14px;
-  font-size: 25px;
+.monograph-print input::placeholder {
+  color: var(--mono-pencil);
+}
+.monograph-print input:focus-visible {
+  outline-offset: 2px;
 }
 .monograph-print form p {
-  font-size: 9px;
-  padding-top: 11px;
-  min-height: 25px;
+  font-size: 13px;
+  line-height: 1.45;
+  padding-top: 12px;
+  min-height: 32px;
+  color: var(--mono-pencil);
 }

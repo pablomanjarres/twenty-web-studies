@@ -1,6 +1,12 @@
-import { Plus } from "lucide-react";
 import { BrandLogo } from "../../shared/BrandLogo";
 import { brand } from "./brand";
+import { Spark } from "./Spark";
+
+const services = [
+  "A clear position",
+  "An identity with character",
+  "A website that feels like you",
+];
 
 export function Studio() {
   return (
@@ -20,18 +26,14 @@ export function Studio() {
           questions, pull ideas apart and make the pieces into something worth
           noticing.
         </p>
-        <div className="og-original-services">
-          {[
-            "A clear position",
-            "An identity with character",
-            "A website that feels like you",
-          ].map((item) => (
-            <div key={item}>
-              <Plus size={18} />
+        <ul className="og-original-services">
+          {services.map((item) => (
+            <li key={item}>
+              <Spark size={16} />
               {item}
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   );
