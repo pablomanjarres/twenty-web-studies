@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ArrowRight, Check } from "lucide-react";
 import {
   image,
@@ -49,6 +49,12 @@ export function ProductCard({
   const oneSize = isOneSize(product);
   const [size, setSize] = useState("M");
   const [added, setAdded] = useState<"idle" | "just" | "again">("idle");
+  const label =
+    added === "just"
+      ? "Added, add another"
+      : added === "again"
+        ? "Add another"
+        : "Add to bag";
   useEffect(() => {
     if (added !== "just") return;
     const timer = setTimeout(() => setAdded("again"), 1600);
@@ -84,19 +90,13 @@ export function ProductCard({
       <button
         type="button"
         className="archive-add"
-        aria-label={`Add ${product.name}${oneSize ? "" : ", size " + size}, to bag`}
+        aria-label={`${label}: ${product.name}${oneSize ? "" : ", size " + size}`}
         onClick={() => {
           onAdd(product.id, oneSize ? ONE_SIZE : size);
           setAdded("just");
         }}
       >
-        <span aria-live="polite">
-          {added === "just"
-            ? "Added, add another"
-            : added === "again"
-              ? "Add another"
-              : "Add to bag"}
-        </span>
+        <span aria-live="polite">{label}</span>
         {added === "just" ? (
           <Check size={18} aria-hidden="true" />
         ) : (
@@ -119,6 +119,17 @@ export function Shop({
   onAdd: (id: string, size: string) => void;
 }) {
   const visible = catalogFor(category, look);
+  const grid = useRef<HTMLDivElement>(null);
+  const filterKey = category + (category === "This look" ? look : "");
+  // Replay the grid's fade on a filter change without remounting the cards,
+  // so each card keeps the size a shopper picked.
+  useEffect(() => {
+    const el = grid.current;
+    if (!el) return;
+    el.style.animation = "none";
+    void el.offsetWidth;
+    el.style.animation = "";
+  }, [filterKey]);
   return (
     <section className="archive-shop" id="archive-shop">
       <div className="archive-shop-heading">
@@ -145,10 +156,7 @@ export function Shop({
         </div>
         <span aria-live="polite">{visible.length} pieces</span>
       </div>
-      <div
-        className="archive-product-grid"
-        key={category + (category === "This look" ? look : "")}
-      >
+      <div className="archive-product-grid" ref={grid}>
         {visible.map((product) => (
           <ProductCard key={product.id} product={product} onAdd={onAdd} />
         ))}
