@@ -1,42 +1,48 @@
 @media (max-width: 760px) {
   .cinder-batch {
     grid-template-columns: 1fr;
-    gap: 33px;
-    padding: 50px 5%;
+    gap: 32px;
   }
-  .cinder-batch h2 {
-    font-size: 35px;
-    margin: 20px 0;
+  .cinder-ledger-heading {
+    display: none;
   }
-  .cinder-roast-ledger > div {
-    grid-template-columns: 1.4fr 0.9fr 1fr 0.8fr;
-    gap: 8px;
-    font-size: 8px;
-    padding: 18px 0;
+  .cinder-roast-ledger li {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px 12px;
+    align-items: start;
+    padding: 20px 0;
   }
-  .cinder-roast-ledger > .cinder-ledger-heading {
-    font-size: 6px;
+  .cinder-roast-ledger li:first-child {
+    border-top: 1px solid var(--cinder-line);
   }
-  .cinder-roast-ledger strong {
-    font-size: 18px;
-    margin: 4px 0 5px;
+  .cinder-ledger-name {
+    grid-column: 1 / -1;
   }
-  .cinder-roast-ledger em {
-    font-size: 7px;
+  .cinder-ledger-name button {
+    font-size: 22px;
+  }
+  .cinder-ledger-facts dt {
+    margin-bottom: 4px;
+    color: var(--cinder-ink-soft);
+  }
+  .cinder-ledger-facts dd {
+    font-size: 14px;
   }
   .cinder-origin-study {
-    height: 420px;
+    height: 480px;
+  }
+  .cinder-origin-study::after {
+    background: linear-gradient(180deg, #38271f1f 30%, #38271fcc 100%);
   }
   .cinder-origin-study > div {
-    left: 5%;
-    top: 18%;
-    width: 225px;
-  }
-  .cinder-origin-study h2 {
-    font-size: 44px;
+    top: auto;
+    bottom: 32px;
+    right: var(--cinder-gutter);
+    translate: none;
+    width: auto;
   }
   .cinder-origin-study p {
-    font-size: 11px;
+    font-size: 16px;
   }
   .cinder-brew-sheet {
     padding: 45px 5%;
