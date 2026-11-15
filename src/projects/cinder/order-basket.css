@@ -155,7 +155,7 @@
   letter-spacing: -0.01em;
 }
 .cinder-basket article p,
-.cinder-basket-note {
+.cinder .cinder-basket-note {
   font-size: 14px;
   line-height: 1.5;
   color: var(--cinder-ink-soft);
@@ -177,7 +177,7 @@
   align-items: baseline;
   margin-top: 24px;
 }
-.cinder-basket-note {
+.cinder .cinder-basket-note {
   margin: 16px 0 24px;
 }
 .cinder-basket > .cinder-order-button {
