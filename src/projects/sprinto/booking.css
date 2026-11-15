@@ -224,3 +224,7 @@
   text-align: center;
   margin-top: -4px !important;
 }
+.sp-booking-days button:focus-visible,
+.sp-times button:focus-visible {
+  outline-offset: 2px;
+}
