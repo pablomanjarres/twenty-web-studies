@@ -26,8 +26,12 @@ export function Bag({
       >
         <header>
           <h2 id="archive-bag-title">Your bag.</h2>
-          <button onClick={onClose} aria-label="Close shopping bag">
-            <X size={24} />
+          <button
+            type="button"
+            onClick={onClose}
+            aria-label="Close shopping bag"
+          >
+            <X size={24} aria-hidden="true" />
           </button>
         </header>
         {items.length ? (
@@ -48,7 +52,7 @@ export function Bag({
                   onClick={() => onRemove(item.id, item.size)}
                   aria-label={"Remove one " + p.name}
                 >
-                  <Minus size={17} />
+                  <Minus size={17} aria-hidden="true" />
                 </button>
               </div>
             );
@@ -73,7 +77,7 @@ export function Bag({
           </b>
         </div>
         <button className="archive-continue" onClick={onClose}>
-          Continue exploring <ArrowRight size={18} />
+          Continue exploring <ArrowRight size={18} aria-hidden="true" />
         </button>
       </section>
     </div>
