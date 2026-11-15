@@ -46,11 +46,11 @@
 }
 .og-original-footer {
   padding: 24px var(--oo-inset) 32px;
-  border-top: 1px solid rgba(247, 244, 235, 0.35);
+  border-top: 1px solid var(--oo-rule-cobalt);
 }
 .og-original-footer-word {
   display: block;
-  font-family: Tahoe, "Archivo Black", sans-serif;
+  font-family: var(--oo-font-display);
   font-size: clamp(95px, 18vw, 260px);
   letter-spacing: -0.09em;
   line-height: 1.2;

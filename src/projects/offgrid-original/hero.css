@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  border-bottom: 1px solid rgba(247, 244, 235, 0.35);
+  border-bottom: 1px solid var(--oo-rule-cobalt);
 }
 .og-original-header .brand-logo > span {
   font-size: 29px;
