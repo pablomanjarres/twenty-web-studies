@@ -1,5 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { portFor } from "./data";
+import { ProgressRule, toneForStatus } from "./ProgressRule";
+import { StatusChip } from "./StatusChip";
 import { VehicleIllustration } from "./VehicleIllustration";
 import type { Shipment } from "./data";
 export function MovementCard({
@@ -19,10 +21,7 @@ export function MovementCard({
     >
       <div className="md-movement-card-heading">
         <b>{shipment.id}</b>
-        <span data-status={shipment.status}>
-          <i />
-          {shipment.status}
-        </span>
+        <StatusChip status={shipment.status} />
       </div>
       <div className="md-movement-carrier">
         <div>
@@ -48,6 +47,10 @@ export function MovementCard({
         <span>Arrival {shipment.arrival}</span>
         <b>{shipment.progress}%</b>
       </footer>
+      <ProgressRule
+        value={shipment.progress}
+        tone={toneForStatus(shipment.status)}
+      />
     </button>
   );
 }
