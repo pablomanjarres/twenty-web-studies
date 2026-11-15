@@ -95,6 +95,9 @@
   color: var(--wf-white);
 }
 .wf-header > a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   text-decoration: none;
   font-size: var(--wf-fs-h4);
   border-radius: 8px;
