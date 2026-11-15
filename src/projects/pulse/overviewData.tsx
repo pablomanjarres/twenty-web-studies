@@ -22,8 +22,8 @@ export function CareTimeFigure({ minutes }: { minutes: number }) {
   return (
     <>
       {h}
-      <small>h</small> {m}
-      <small>m</small>
+      <small className="pv-unit">h</small> {m}
+      <small className="pv-unit">m</small>
     </>
   );
 }

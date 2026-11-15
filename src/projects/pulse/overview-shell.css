@@ -214,6 +214,11 @@
 .pv-card-title > button:hover svg {
   transform: translate(2px, -2px);
 }
+.pv-unit {
+  font-size: 16px;
+  color: var(--pv-text-2);
+  margin-left: 1px;
+}
 .pv-overview-empty {
   color: var(--pv-text-2);
   font-size: 14px;
