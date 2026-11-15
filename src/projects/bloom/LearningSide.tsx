@@ -108,7 +108,7 @@ function StudyActivity({
   });
   const total = values.reduce((n, v) => n + v.done, 0);
   const plan = values.reduce((n, v) => n + v.planned, 0);
-  const most = Math.max(...values.map((v) => v.planned));
+  const most = Math.max(1, ...values.map((v) => v.planned));
   const first = learningWeek[0];
   const last = learningWeek[learningWeek.length - 1];
   return (
