@@ -29,21 +29,6 @@
   line-height: 18px;
   color: var(--hl-text-3);
 }
-.hc-traffic > header > label {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  height: 36px;
-  border: 1px solid var(--hl-line);
-  border-radius: 8px;
-  padding: 0 10px 0 12px;
-  color: var(--hl-text-3);
-  cursor: pointer;
-  transition: border-color var(--hl-fast);
-}
-.hc-traffic > header > label:hover {
-  border-color: var(--hl-line-strong);
-}
 .hc-chart-key {
   display: flex;
   align-items: center;

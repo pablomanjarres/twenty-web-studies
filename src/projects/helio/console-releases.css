@@ -12,19 +12,7 @@
   padding: 24px;
 }
 .hc-releases > header > label {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  height: 36px;
-  border: 1px solid var(--hl-line);
-  padding: 0 12px;
-  border-radius: 8px;
-  color: var(--hl-text-3);
   cursor: text;
-  transition: border-color var(--hl-fast);
-}
-.hc-releases > header > label:hover {
-  border-color: var(--hl-line-strong);
 }
 .hc-releases input {
   width: 200px;
