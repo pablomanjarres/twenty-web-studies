@@ -1,13 +1,11 @@
 import { ArrowUpRight, MapPin, Zap } from "lucide-react";
-import { BrandLogo } from "../../../shared/BrandLogo";
-import { brand } from "../brand";
 import { asset } from "../data";
 
 export function Hero() {
   return (
     <section className="sprinto-original-hero" id="sprinto-original-home">
       <div className="sprinto-original-hero-copy">
-        <span className="sprinto-original-online">
+        <span className="sprinto-original-online sprinto-original-meta">
           <i /> Your next game starts here
         </span>
         <h1>
@@ -23,16 +21,16 @@ export function Hero() {
           className="sprinto-original-lime-button"
           href="#sprinto-original-courts"
         >
-          Find your court <ArrowUpRight size={21} />
+          Find your court <ArrowUpRight size={20} />
         </a>
         <div className="sprinto-original-hero-meta">
           <div>
             <strong>12</strong>
-            <span>courts, zero excuses</span>
+            <span className="sprinto-original-meta">courts, zero excuses</span>
           </div>
           <div>
             <strong>All in.</strong>
-            <span>all levels welcome</span>
+            <span className="sprinto-original-meta">all levels welcome</span>
           </div>
         </div>
       </div>
@@ -41,26 +39,17 @@ export function Hero() {
           src={asset("court")}
           alt="A bright blue padel court enclosed by glass walls and dark metal fencing"
         />
-        <div className="sprinto-original-image-label">
-          <span>
-            GOOD DAYS
-            <br />
-            START WITH
-            <br />A GOOD GAME.
-          </span>
-          <BrandLogo brand={brand} symbolOnly />
-        </div>
+        <span className="sprinto-original-hero-sticker" aria-hidden="true">
+          <Zap size={20} />
+          PLAY
+          <br />
+          YOUR WAY.
+        </span>
         <div className="sprinto-original-image-location">
-          <MapPin size={13} /> The Social Club, Downtown{" "}
-          <span>Open until 23:00</span>
+          <MapPin size={16} /> The Social Club, Downtown
+          <span className="sprinto-original-meta">Open until 23:00</span>
         </div>
       </div>
-      <span className="sprinto-original-hero-sticker">
-        <Zap size={20} />
-        PLAY
-        <br />
-        YOUR WAY.
-      </span>
     </section>
   );
 }

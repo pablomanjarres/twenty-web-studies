@@ -1,6 +1,5 @@
 @media (max-width: 700px) {
   .sprinto-original-header {
-    height: 80px;
     padding: 0 24px;
   }
   .sprinto-original-header nav {
@@ -10,49 +9,48 @@
     font-size: 25px;
   }
   .sprinto-original-nav-button {
-    font-size: 10px;
-    padding: 10px 13px;
-    gap: 18px;
+    padding: 0 14px;
+    gap: 14px;
   }
   .sprinto-original-hero {
     grid-template-columns: 1fr;
+    min-height: 0;
   }
   .sprinto-original-hero-copy {
-    padding: 43px 24px 38px;
+    padding: 40px 24px 64px;
   }
   .sprinto-original h1 {
-    font-size: 91px;
+    font-size: clamp(64px, 22vw, 92px);
+    margin: 20px 0 24px;
   }
   .sprinto-original-hero-copy > p {
-    max-width: 330px;
+    font-size: 17px;
+    margin-bottom: 24px;
   }
   .sprinto-original-hero-meta {
-    gap: 60px;
+    gap: 40px;
+    margin-top: 32px;
+  }
+  .sprinto-original-hero-meta strong {
+    font-size: 44px;
   }
   .sprinto-original-hero-image {
     min-height: 420px;
-    height: 420px;
   }
   .sprinto-original-hero-sticker {
     left: auto;
-    right: 26px;
-    bottom: 370px;
-    width: 80px;
-    height: 80px;
-  }
-  .sprinto-original-image-label {
-    top: 22px;
-    right: 22px;
-    gap: 30px;
+    right: 24px;
+    bottom: auto;
+    top: -48px;
+    width: 88px;
+    height: 88px;
+    font-size: 17px;
   }
   .sprinto-original-image-location {
-    left: 22px;
-    right: 22px;
-    bottom: 25px;
-    font-size: 9px;
-  }
-  .sprinto-original-image-location > span {
-    font-size: 8px;
+    left: 24px;
+    right: 24px;
+    bottom: 24px;
+    flex-wrap: wrap;
   }
   .sprinto-original-ticker {
     justify-content: flex-start;
