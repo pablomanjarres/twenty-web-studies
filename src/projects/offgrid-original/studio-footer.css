@@ -1,0 +1,69 @@
+.og-original-studio {
+  --focus-color: var(--oo-ink);
+  background: var(--og-original-yellow);
+  color: var(--oo-ink);
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 64px;
+  padding: var(--oo-band) var(--oo-inset);
+  align-items: center;
+}
+.og-original-studio-symbol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+.og-original-studio-symbol .brand-logo svg {
+  width: 230px;
+  height: 230px;
+  transform: rotate(-8deg);
+}
+.og-original-studio-symbol > span {
+  font-size: 16px;
+  font-weight: 500;
+}
+.og-original-studio p {
+  max-width: 470px;
+  margin: 32px 0;
+}
+.og-original-services {
+  max-width: 470px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.og-original-services li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 56px;
+  border-top: 1px solid rgba(23, 23, 23, 0.35);
+  font-size: 18px;
+}
+.og-original-services svg {
+  color: var(--oo-cherry);
+}
+.og-original-footer {
+  padding: 24px var(--oo-inset) 32px;
+  border-top: 1px solid rgba(247, 244, 235, 0.35);
+}
+.og-original-footer-word {
+  display: block;
+  font-family: Tahoe, "Archivo Black", sans-serif;
+  font-size: clamp(95px, 18vw, 260px);
+  letter-spacing: -0.09em;
+  line-height: 1.2;
+  color: var(--og-original-yellow);
+}
+.og-original-footer > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .og-original-footer a:hover svg {
+    translate: 0 -3px;
+  }
+}
