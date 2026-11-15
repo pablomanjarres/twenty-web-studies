@@ -37,10 +37,12 @@ export function CourseLessons({
               <p>{l.task}</p>
             </div>
             <span className="bv-row-duration">
-              <Clock size={12} />
+              <Clock size={14} />
               {l.duration}
             </span>
-            <span className="bv-row-state">
+            <span
+              className={`bv-row-state ${done ? "is-done" : unlocked ? "is-ready" : ""}`}
+            >
               {done ? "Complete" : unlocked ? "Ready to start" : "Locked"}
             </span>
             {!unlocked && !done ? (
