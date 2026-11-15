@@ -89,7 +89,9 @@
     min-height: calc(13px * 1.5 + 6px + 40px);
   }
   button.archive-add {
-    padding: 0 12px;
+    gap: 6px;
+    padding: 0 10px;
+    white-space: nowrap;
     font-size: 13px;
   }
 }
