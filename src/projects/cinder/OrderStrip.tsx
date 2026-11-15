@@ -20,10 +20,11 @@ export function OrderStrip({
     <section className="cinder-order-strip" aria-label="Coffee order">
       <div className="cinder-grind-controls">
         <span className="cinder-label">Your grind</span>
-        <div>
+        <div className="cinder-segmented">
           {grinds.map((name) => (
             <button
               key={name}
+              className="cinder-ui"
               aria-pressed={grind === name}
               onClick={() => onGrind(name)}
             >
@@ -36,9 +37,9 @@ export function OrderStrip({
         <span className="cinder-label cinder-sr-only-phone">Bags / 250 g</span>
         <Quantity value={quantity} onChange={onQuantity} />
       </div>
-      <button className="cinder-order-button" onClick={onAdd}>
+      <button className="cinder-order-button cinder-ui" onClick={onAdd}>
         <span>Add {coffee.name}</span>
-        <span className="cinder-order-price">
+        <span className="cinder-order-price cinder-price">
           {money(coffee.price * quantity)}
         </span>
         <ArrowRight size={20} aria-hidden="true" />

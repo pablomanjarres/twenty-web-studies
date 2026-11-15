@@ -36,7 +36,9 @@ export function Basket({
               <div>
                 <h3>{item.coffee.name}</h3>
                 <p>{item.grind} / 250 g</p>
-                <strong>{money(item.coffee.price * item.quantity)}</strong>
+                <strong className="cinder-price">
+                  {money(item.coffee.price * item.quantity)}
+                </strong>
               </div>
               <Quantity
                 value={item.quantity}
@@ -52,7 +54,7 @@ export function Basket({
         )}
         <div className="cinder-basket-total">
           <span>Basket total</span>
-          <strong>
+          <strong className="cinder-price">
             {money(
               items.reduce(
                 (sum, item) => sum + item.coffee.price * item.quantity,
@@ -64,7 +66,7 @@ export function Basket({
         <p className="cinder-basket-note">
           Your coffee selection is saved for this visit.
         </p>
-        <button className="cinder-order-button" onClick={onClose}>
+        <button className="cinder-order-button cinder-ui" onClick={onClose}>
           Keep browsing <ArrowRight size={16} />
         </button>
       </section>

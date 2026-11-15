@@ -12,6 +12,7 @@ export function BrewingSheet() {
           {(Object.keys(brews) as Brew[]).map((name) => (
             <button
               key={name}
+              className="cinder-ui"
               aria-pressed={method === name}
               onClick={() => setMethod(name)}
             >

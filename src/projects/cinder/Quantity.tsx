@@ -21,7 +21,9 @@ export function Quantity({
       >
         <Minus size={16} />
       </button>
-      <output aria-label={label}>{value}</output>
+      <output className="cinder-price" aria-label={label}>
+        {value}
+      </output>
       <button
         aria-label={`One more ${label.toLowerCase()}`}
         disabled={value >= max}
