@@ -95,7 +95,8 @@ export function BookingPanel({
           <span>
             {selection}
             <small>
-              {court.name} · {court.kind}
+              {court.name}
+              <span className="sp-court-kind"> · {court.kind}</span>
             </small>
           </span>
           <strong>£{(court.price * booking.duration) / 60}</strong>
@@ -121,7 +122,7 @@ export function BookingPanel({
       <p className="sp-confirm-note" aria-live="polite">
         {confirmed
           ? `Held: ${court.name} · ${selection}`
-          : "Per court, up to 4 players. No membership needed."}
+          : "Up to 4 players. No membership needed."}
       </p>
     </form>
   );
