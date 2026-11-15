@@ -8,10 +8,6 @@
   .soundroom-v3 .sr3-featured {
     height: 280px;
   }
-  .soundroom-v3 .sr3-track-play {
-    padding-top: 12px;
-    padding-bottom: 12px;
-  }
   .soundroom-v3 .sr3-room-art {
     height: 125px;
   }
@@ -37,7 +33,7 @@
     gap: 18px;
   }
   .soundroom-v3 .sr3-header input {
-    width: 115px;
+    width: 150px;
   }
   .soundroom-v3 .sr3-listener > svg {
     display: none;
@@ -47,22 +43,21 @@
     padding-right: 20px;
   }
   .soundroom-v3 .sr3-player {
-    grid-template-columns: 190px minmax(0, 1fr) 160px;
-    padding: 18px 25px;
-    gap: 20px;
+    grid-template-columns: 230px minmax(0, 1fr) 160px;
+    padding: 12px 24px;
+    gap: 24px;
   }
-  .soundroom-v3 .sr3-volume > span {
-    display: none;
+  .soundroom-v3 .sr3-volume > input {
+    width: 72px;
   }
   .soundroom-v3 .sr3-track-mood {
-    width: 60px;
-    font-size: 7px;
+    width: 88px;
   }
   .soundroom-v3 .sr3-track-play {
-    gap: 11px;
+    gap: 12px;
   }
   .soundroom-v3 .sr3-featured-copy {
-    left: 25px;
+    left: 24px;
   }
   .soundroom-v3 .sr3-featured-corner {
     display: none;
@@ -79,10 +74,10 @@
     padding: 0 40px;
   }
   .soundroom-v3 .sr3-player {
-    grid-template-columns: 190px minmax(0, 1fr) 140px;
+    grid-template-columns: 220px minmax(0, 1fr) 150px;
   }
   .soundroom-v3 .sr3-track-mood {
-    width: 90px;
+    width: 110px;
   }
   .soundroom-v3 .sr3-room-art {
     height: 120px;
