@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { ArrowRight } from "lucide-react";
 import { BrandLogo } from "../../shared/BrandLogo";
 import { brand } from "./brand";
 import { type Coffee } from "./data";
@@ -17,7 +18,7 @@ export function Dispatch({ coffee }: { coffee: Coffee }) {
       </div>
       <div className="cinder-dispatch-control">
         <p>{coffee.name} / 250 g / whole bean</p>
-        <div aria-label="Coffee delivery frequency">
+        <div role="group" aria-label="Coffee delivery frequency">
           {["Two weeks", "Four weeks"].map((name) => (
             <button
               key={name}
@@ -32,7 +33,8 @@ export function Dispatch({ coffee }: { coffee: Coffee }) {
           ))}
         </div>
         <button className="cinder-dispatch-save" onClick={() => setSaved(true)}>
-          {saved ? "Preference saved" : "Save a delivery rhythm"} →
+          {saved ? "Preference saved" : "Save a delivery rhythm"}
+          <ArrowRight size={18} aria-hidden="true" />
         </button>
         <span role="status">
           {saved
@@ -42,8 +44,10 @@ export function Dispatch({ coffee }: { coffee: Coffee }) {
       </div>
       <div className="cinder-footer-line">
         <BrandLogo brand={brand} />
-        <span>Roast, brew, repeat.</span>
-        <a href="#coffee">Back to the coffee ↑</a>
+        <span className="cinder-label">Roast, brew, repeat.</span>
+        <a className="cinder-label" href="#coffee">
+          Back to the coffee ↑
+        </a>
       </div>
     </footer>
   );

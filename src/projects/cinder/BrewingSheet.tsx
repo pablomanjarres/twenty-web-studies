@@ -8,7 +8,7 @@ export function BrewingSheet() {
       <div className="cinder-brew-top">
         <span className="cinder-label">Kitchen counter notes / 01</span>
         <h2>A better everyday cup.</h2>
-        <nav aria-label="Brewing method">
+        <div role="group" aria-label="Brewing method">
           {(Object.keys(brews) as Brew[]).map((name) => (
             <button
               key={name}
@@ -18,31 +18,31 @@ export function BrewingSheet() {
               {name}
             </button>
           ))}
-        </nav>
+        </div>
       </div>
       <div className="cinder-brew-body">
         <dl>
           <div>
-            <dt>Coffee</dt>
+            <dt className="cinder-label">Coffee</dt>
             <dd>{recipe.dose}</dd>
           </div>
           <div>
-            <dt>Water</dt>
+            <dt className="cinder-label">Water</dt>
             <dd>{recipe.water}</dd>
           </div>
           <div>
-            <dt>Grind</dt>
+            <dt className="cinder-label">Grind</dt>
             <dd>{recipe.grind}</dd>
           </div>
           <div>
-            <dt>Time</dt>
+            <dt className="cinder-label">Time</dt>
             <dd>{recipe.time}</dd>
           </div>
         </dl>
         <ol>
           {recipe.steps.map((step, index) => (
             <li key={step}>
-              <span>0{index + 1}</span>
+              <span className="cinder-label">0{index + 1}</span>
               <p>{step}</p>
             </li>
           ))}
