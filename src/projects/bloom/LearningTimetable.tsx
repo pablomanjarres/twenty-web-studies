@@ -1,7 +1,7 @@
 import { useState, type CSSProperties } from "react";
 import { Check, Lock, ArrowUpRight, Clock } from "lucide-react";
 import { lessons, type Lesson } from "./data";
-import { courseFor, isUnlocked, learningPlan, learningWeek } from "./courses";
+import { courseFor, learningPlan, learningWeek, lessonStatus } from "./courses";
 const HOUR = 64;
 const FIRST_HOUR = 9;
 const hours = ["09:00", "10:00", "11:00", "12:00"];
@@ -78,12 +78,11 @@ export function LearningTimetable({
                     .filter((p) => p.day === i)
                     .map((p) => {
                       const l = lessons.find((l) => l.id === p.lesson)!;
-                      const done = completed.includes(l.id);
-                      const unlocked = isUnlocked(l, completed);
+                      const status = lessonStatus(l, completed);
                       return (
                         <button
                           key={l.id}
-                          className={`bv-planned-lesson ${done ? "is-done" : ""}`}
+                          className={`bv-planned-lesson is-${status}`}
                           style={
                             {
                               top: offset(p.time),
@@ -93,9 +92,9 @@ export function LearningTimetable({
                           onClick={() => onSelect(l)}
                         >
                           <span>
-                            {done ? (
+                            {status === "done" ? (
                               <Check size={14} aria-hidden="true" />
-                            ) : unlocked ? (
+                            ) : status === "ready" ? (
                               <ArrowUpRight size={14} aria-hidden="true" />
                             ) : (
                               <Lock size={13} aria-hidden="true" />

@@ -3,7 +3,7 @@ import { X, Lock, ArrowRight, Award, Check } from "lucide-react";
 import { useDialog } from "../../shared/useDialog";
 import { Illustration } from "./Illustration";
 import { lessons, type Lesson } from "./data";
-import { isUnlocked } from "./courses";
+import { lessonStatus } from "./courses";
 function Dialog({
   title,
   onClose,
@@ -47,8 +47,8 @@ export function LessonDialog({
   onStart: () => void;
   onClose: () => void;
 }) {
-  const done = completed.includes(lesson.id);
-  const unlocked = isUnlocked(lesson, completed);
+  const status = lessonStatus(lesson, completed);
+  const done = status === "done";
   return (
     <Dialog title={lesson.title} onClose={onClose}>
       <div className="bv-dialog-art" style={{ background: lesson.color }}>
@@ -63,7 +63,7 @@ export function LessonDialog({
         <strong>What you'll practice</strong>
         <p>{lesson.task}</p>
       </div>
-      {!unlocked && !done && (
+      {status === "locked" && (
         <p className="bv-locked-note">
           <Lock size={15} />
           First complete{" "}
@@ -75,7 +75,7 @@ export function LessonDialog({
       )}
       <button
         className="bv-dialog-start"
-        disabled={!unlocked && !done}
+        disabled={status === "locked"}
         onClick={onStart}
       >
         {done ? <Check size={16} /> : <ArrowRight size={16} />}{" "}
