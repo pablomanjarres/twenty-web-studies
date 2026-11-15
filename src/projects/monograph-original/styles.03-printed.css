@@ -81,9 +81,6 @@
 
 .monograph-original-printed > div > small {
   display: block;
-  font-size: 13px;
-  letter-spacing: 0.01em;
-  font-variant-numeric: tabular-nums;
   color: var(--mo-band-text);
 }
 

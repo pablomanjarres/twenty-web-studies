@@ -20,9 +20,6 @@
 }
 
 .monograph-original-cover-copy .monograph-original-save-status {
-  font-size: 13px;
-  line-height: 1.45;
-  color: var(--mo-pencil);
   min-height: 19px;
   margin: 4px 0;
 }
@@ -40,13 +37,6 @@
   text-wrap: balance;
   color: var(--mo-blue);
   margin: 14px 0;
-}
-
-.monograph-original-editor-note figcaption {
-  font-size: 13px;
-  line-height: 1.45;
-  letter-spacing: 0.01em;
-  color: var(--mo-pencil);
 }
 
 .monograph-original-stories {
