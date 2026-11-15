@@ -9,13 +9,32 @@
     right: 14px;
   }
   .md-port-caption > div {
-    padding: 11px 13px;
+    min-width: 0;
+    padding: 12px 14px;
   }
   .md-port-caption h2 {
-    font-size: 20px;
+    font-size: 22px;
   }
-  .md-port-caption > div > span {
-    font-size: 8px;
+  .md-point-label {
+    font-size: 22px;
+  }
+  .md-water-label {
+    font-size: 22px;
+    letter-spacing: 2px;
+  }
+  .md-planning-point > circle:first-child {
+    r: 50px;
+  }
+  .md-port-caption > div > span,
+  .md-load-facts small,
+  .md-event-dock > footer,
+  .md-status-chip,
+  .md-operator {
+    font-size: 13px;
+  }
+  .md-load-dock > header > button {
+    width: 40px;
+    height: 40px;
   }
   .md-port-cartography {
     inset: 0;
@@ -29,8 +48,7 @@
   }
   .md-map-coordinate {
     top: 108px;
-    left: 15px;
-    font-size: 8px;
+    left: 14px;
   }
   .md-map-tools {
     right: 14px;
@@ -42,17 +60,17 @@
   }
   .md-plan-focus {
     left: 14px;
-    right: auto;
+    right: 14px;
     top: auto;
-    bottom: 44px;
-    width: 260px;
-    padding: 10px 12px;
+    bottom: 14px;
+    width: auto;
+    padding: 12px 14px;
   }
   .md-map-legend {
     left: 14px;
     right: 14px;
-    bottom: 18px;
-    font-size: 8px;
+    bottom: 119px;
+    font-size: 13px;
   }
   .md-operations-docks {
     position: static;
@@ -72,17 +90,23 @@
   .md-load-identity > .md-vehicle-study {
     width: 150px;
   }
-  .md-load-facts b {
-    font-size: 12px;
+  .md-load-identity strong {
+    font-size: 20px;
   }
-  .md-load-facts small {
-    font-size: 10px;
+  .md-load-facts b,
+  .md-movement-carrier strong,
+  .md-load-dock > header,
+  .md-event-dock > header {
+    font-size: 14px;
   }
-  .md-event-dock h3 {
-    font-size: 17px;
+  .md-event-dock p,
+  .md-plan-focus p {
+    font-size: 14px;
   }
-  .md-event-dock p {
-    font-size: 12px;
+  .md-movement-card > footer,
+  .md-load-identity span,
+  .md-load-route small {
+    font-size: 13px;
   }
   .md-port-study {
     min-height: 470px;
@@ -103,7 +127,7 @@
   .md-port-study > footer {
     left: 20px;
     right: 20px;
-    font-size: 8px;
+    font-size: 12px;
     flex-wrap: wrap;
     gap: 12px;
   }

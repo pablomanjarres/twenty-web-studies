@@ -6,14 +6,17 @@
   }
   .md-command-bar > a {
     width: auto;
+    display: flex;
+    align-items: center;
+    min-height: 40px;
   }
   .md-command-title {
     display: none;
   }
   .md-new-movement {
     min-height: 40px;
-    padding: 8px 11px;
-    font-size: 11px;
+    padding: 8px 12px;
+    font-size: 14px;
   }
   .md-control-room {
     display: grid;
@@ -36,8 +39,8 @@
     height: 44px;
   }
   .md-operator {
-    width: 28px;
-    height: 28px;
+    width: 32px;
+    height: 32px;
   }
   .md-movement-rail {
     border-right: 0;
@@ -63,6 +66,14 @@
   .md-rail-mode > svg {
     display: none;
   }
+  .md-rail-controls > label {
+    min-height: 44px;
+  }
+  .md-rail-controls input,
+  .md-rail-controls select {
+    min-height: 42px;
+    font-size: 16px;
+  }
   .md-movement-list {
     display: flex;
     gap: 8px;
@@ -70,9 +81,9 @@
     padding: 0 14px 10px;
   }
   .md-movement-card {
-    flex: 0 0 236px;
+    flex: 0 0 248px;
     margin: 0;
-    padding: 10px 12px;
+    padding: 12px;
   }
   .md-movement-card .md-movement-carrier {
     min-height: 45px;
