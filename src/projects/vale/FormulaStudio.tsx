@@ -75,7 +75,7 @@ export function FormulaStudio(props: Props) {
         <h1>
           Softer
           <br />
-          by&nbsp;nature.
+          by nature.
         </h1>
         <p>
           <span>A fresh start. A light layer. A soft finish.</span>{" "}
