@@ -1,4 +1,4 @@
-import { Search, ShoppingBag, X, ArrowUpRight } from "lucide-react";
+import { Search, ShoppingBag, X, ArrowDown } from "lucide-react";
 import { useState } from "react";
 import { BrandLogo } from "../../../shared/BrandLogo";
 import { brand } from "../brand";
@@ -26,9 +26,11 @@ export function Header({
         <span>Objects, made slowly.</span>
       </a>
       <nav aria-label="Atelier navigation">
-        <a href="#batch">The batch</a>
+        <a href="#batch">
+          <span>The batch</span>
+        </a>
         <a href="#atelier">
-          The atelier <ArrowUpRight size={12} />
+          <span>The atelier</span> <ArrowDown size={13} aria-hidden="true" />
         </a>
       </nav>
       <div className="kanso-utilities">

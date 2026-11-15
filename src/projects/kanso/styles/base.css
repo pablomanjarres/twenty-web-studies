@@ -2,13 +2,20 @@
   --kanso-paper: #ead9d2;
   --kanso-ivory: #f8f4ef;
   --kanso-ink: #543c34;
+  --kanso-ink-hover: #47332c;
   --kanso-line: #543c3430;
+  --kanso-line-strong: #543c3466;
   --kanso-muted: #79635a;
+  --kanso-muted-strong: #6b554c;
+  --kanso-gutter: clamp(20px, 4.5vw, 64px);
+  --kanso-ease: cubic-bezier(0.33, 1, 0.68, 1);
+  --kanso-fast: 200ms;
+  --kanso-slow: 280ms;
   background: var(--kanso-paper);
   color: var(--kanso-ink);
   font-family: "DM Sans", sans-serif;
   font-size: 14px;
-  line-height: 1.55;
+  line-height: 1.4;
 }
 .kanso * {
   box-sizing: border-box;
@@ -17,6 +24,7 @@
 .kanso input {
   font: inherit;
   color: inherit;
+  border-radius: 0;
 }
 .kanso button {
   border: 0;
@@ -43,18 +51,39 @@
 .kanso h3 {
   font-family: "Commune", serif;
   font-weight: 400;
+  text-wrap: balance;
 }
 .kanso button:focus-visible,
 .kanso a:focus-visible,
 .kanso input:focus-visible {
-  outline: 2px solid var(--kanso-ink);
-  outline-offset: 5px;
+  outline: 2px solid var(--kanso-focus, var(--kanso-ink));
+  outline-offset: 4px;
 }
 .kanso-label {
   display: block;
-  font-size: 11px;
-  letter-spacing: 0.09em;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
+}
+.kanso-meta {
+  font-size: 12px;
+  line-height: 1.45;
+  letter-spacing: 0.01em;
+}
+.kanso-num {
+  font-variant-numeric: tabular-nums;
+}
+.kanso-link {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: var(--kanso-line-strong);
+  text-underline-offset: 4px;
+  transition: text-decoration-color var(--kanso-fast) var(--kanso-ease);
+}
+.kanso-link:hover {
+  text-decoration-color: currentColor;
 }
 .kanso-sr-only {
   position: absolute;
@@ -71,14 +100,14 @@
   justify-content: space-between;
   gap: 24px;
   height: 76px;
-  padding: 0 4.5%;
+  padding: 0 var(--kanso-gutter);
   border-bottom: 1px solid var(--kanso-line);
-  font-size: 12px;
 }
 .kanso-header-mark {
   display: flex;
   align-items: center;
   gap: 12px;
+  min-height: 44px;
 }
 .kanso-header-mark .brand-logo svg {
   width: 23px;
@@ -88,29 +117,50 @@
 .kanso-utilities {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 32px;
 }
 .kanso-header nav a {
   display: flex;
   align-items: center;
-  gap: 7px;
+  gap: 6px;
+  min-height: 44px;
+}
+.kanso-header nav a span {
+  text-decoration: underline 1px transparent;
+  text-underline-offset: 4px;
+  transition: text-decoration-color var(--kanso-fast) var(--kanso-ease);
+}
+.kanso-header nav a:hover span {
+  text-decoration-color: currentColor;
 }
 .kanso-utilities {
-  gap: 20px;
+  gap: 16px;
 }
 .kanso-utilities button {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
-  padding: 6px 0;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0;
 }
 .kanso-utilities input {
-  width: 155px;
+  width: 170px;
   border: 0;
   border-bottom: 1px solid var(--kanso-ink);
   background: transparent;
-  padding: 5px 0;
+  padding: 6px 0;
+  font-size: 15px;
+}
+.kanso-utilities input::placeholder {
+  color: var(--kanso-muted-strong);
 }
 .kanso-bag-trigger span {
   white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.kanso-bag-trigger:hover span {
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
