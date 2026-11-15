@@ -45,17 +45,8 @@
   gap: 12px;
   margin-top: 8px;
 }
-.orbit-v3 .ov3-person-load i {
+.orbit-v3 .ov3-person-load .ov3-meter {
   flex: 1;
-  height: 6px;
-  background: #ecebe4;
-  border-radius: 3px;
-  overflow: hidden;
-}
-.orbit-v3 .ov3-person-load b {
-  display: block;
-  height: 100%;
-  border-radius: 3px;
 }
 .orbit-v3 .ov3-person-load em {
   min-width: 36px;

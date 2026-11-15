@@ -17,7 +17,7 @@
   height: 32px;
   padding: 0 12px;
   border-radius: 10px;
-  background: #f2f2ed;
+  background: var(--ov3-chip);
   color: var(--ov3-text-2);
   font-size: 14px;
   font-weight: 500;
@@ -110,7 +110,7 @@
   font-size: 13px;
   font-weight: 500;
   white-space: nowrap;
-  background: #f2f2ed;
+  background: var(--ov3-chip);
   color: var(--ov3-text-2);
 }
 .orbit-v3 .ov3-status svg {
@@ -133,17 +133,8 @@
   align-items: center;
   gap: 8px;
 }
-.orbit-v3 .ov3-task-progress > i {
-  height: 6px;
+.orbit-v3 .ov3-task-progress .ov3-meter {
   width: 52px;
-  background: #ecebe4;
-  border-radius: 3px;
-  overflow: hidden;
-}
-.orbit-v3 .ov3-task-progress b {
-  display: block;
-  height: 100%;
-  border-radius: 3px;
 }
 .orbit-v3 .ov3-task-progress small {
   color: var(--ov3-text-2);
@@ -198,7 +189,7 @@
   border-bottom: 0;
 }
 .orbit-v3 .ov3-feed article > svg {
-  color: #158f73;
+  color: var(--ov3-green);
   flex: none;
 }
 .orbit-v3 .ov3-feed article p {

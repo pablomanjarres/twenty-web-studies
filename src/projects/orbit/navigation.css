@@ -114,7 +114,7 @@
 .orbit-v3 .ov3-project-nav button > i {
   width: 8px;
   height: 8px;
-  background: #e99b36;
+  background: var(--ov3-amber);
   border-radius: 50%;
 }
 .orbit-v3 .ov3-project-nav button > svg {
