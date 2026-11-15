@@ -5,8 +5,8 @@
   padding: 96px 7%;
   color: var(--sl-paper);
   display: grid;
-  grid-template-columns: 1.3fr 1fr;
-  gap: 64px 8%;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 64px 6%;
   align-items: center;
 }
 .sl-kitchen > figure {
@@ -39,7 +39,7 @@
 }
 .sl-kitchen-story h2 {
   font:
-    400 clamp(36px, 3vw + 8px, 54px) / 1.08 "Tahoe",
+    400 clamp(36px, 2.4vw + 10px, 52px) / 1.08 "Tahoe",
     "Fraunces",
     serif;
   letter-spacing: -0.035em;
@@ -94,4 +94,5 @@
     serif;
   align-self: start;
   margin-top: 12px;
+  text-wrap: balance;
 }

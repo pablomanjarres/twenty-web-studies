@@ -2,37 +2,26 @@
   .sl-header {
     padding: 20px 28px;
   }
+  .sl-header > span {
+    display: none;
+  }
   .sl-menu-stage {
     padding: 6px 28px 35px;
   }
   .sl-menu-paper {
-    padding: 24px 23px 18px;
+    padding: 32px 32px 24px;
   }
   .sl-menu-spread {
-    gap: 22px;
-    grid-template-columns: 1fr 0.9fr 1fr;
-  }
-  .sl-plate {
-    margin-left: -28px !important;
-    margin-right: -28px !important;
+    gap: 24px;
+    grid-template-columns: 1fr minmax(0, 0.9fr) 1fr;
   }
   .sl-plate img {
-    height: 290px;
-  }
-  .sl-dish h3 {
-    font-size: 12px;
-  }
-  .sl-dish p {
-    font-size: 9px;
-  }
-  .sl-menu-masthead h1 {
-    font-size: 34px;
+    width: calc(100% + 56px);
+    margin-inline: -28px;
+    height: 300px;
   }
   .sl-menu-bottom > span:last-child {
     display: none;
-  }
-  .sl-kitchen-story h2 {
-    font-size: 36px;
   }
   .sl-catch-note {
     grid-template-columns: 110px 1fr;
@@ -43,10 +32,23 @@
     height: 170px;
   }
   .sl-catch-note p {
-    font-size: 23px;
+    font-size: 26px;
   }
   .sl-tables {
-    padding: 65px 8%;
-    gap: 10%;
+    grid-template-columns: minmax(0, 1fr) 360px;
+    gap: 6%;
+  }
+}
+@media (max-width: 900px) {
+  .sl-menu-spread {
+    grid-template-columns: 1fr 1fr;
+  }
+  .sl-plate {
+    grid-column: 1/-1;
+    grid-row: 1;
+  }
+  .sl-plate img {
+    width: 100%;
+    margin-inline: 0;
   }
 }
