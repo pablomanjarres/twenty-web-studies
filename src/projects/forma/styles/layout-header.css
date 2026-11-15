@@ -1,19 +1,56 @@
 .forma {
+  --forma-plaster: #f5f4ef;
+  --forma-band: #e9eadf;
+  --forma-ink: #282824;
+  --forma-ink-2: #606354;
+  --forma-rule: #c5c9ba;
+  --forma-rule-strong: #9a9a90;
+  --forma-gutter: 3.5%;
+  --forma-section: 96px;
+  --forma-gap: 96px;
+  --f-ease: cubic-bezier(0.23, 1, 0.32, 1);
+  --f-label: 400 12px/1.4 "IBM Plex Mono", monospace;
+  --f-meta: 400 13px/1.5 "IBM Plex Mono", monospace;
+  --f-ui: 400 14px/1.4 "DM Sans", sans-serif;
+  --f-body: 400 16px/1.65 "DM Sans", sans-serif;
+  --f-lead: 400 20px/1.55 "DM Sans", sans-serif;
   --focus-color: #626c56;
-  background: #f5f4ef;
-  color: #282824;
+  background: var(--forma-plaster);
+  color: var(--forma-ink);
   font-family: "DM Sans", sans-serif;
 }
 .forma a {
+  color: inherit;
   text-decoration: none;
 }
+.forma-label {
+  font: var(--f-label);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--forma-ink-2);
+}
+.forma-link {
+  text-decoration: underline 1px transparent;
+  text-underline-offset: 4px;
+  transition:
+    text-decoration-color 500ms var(--f-ease),
+    color 500ms var(--f-ease);
+}
+.forma-link:hover {
+  text-decoration-color: currentColor;
+}
 .forma-header {
-  height: 83px;
-  padding: 0 3.5%;
+  height: 72px;
+  padding: 0 var(--forma-gutter);
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #cecec6;
-  gap: 35px;
+  border-bottom: 1px solid var(--forma-rule);
+  gap: 32px;
+}
+.forma-header > a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
 }
 .forma-header .brand-logo {
   font:
@@ -26,30 +63,25 @@
 .forma-header .brand-logo svg {
   width: 24px;
 }
-.forma-header > span {
-  font:
-    8px/1.7 "IBM Plex Mono",
-    monospace;
-  color: #777c6b;
-  margin-left: 5%;
+.forma-header > p {
+  margin: 0 0 0 48px;
 }
 .forma-header nav {
   margin-left: auto;
   display: flex;
-  gap: 35px;
-  font-size: 11px;
+  gap: 32px;
+  font: var(--f-ui);
 }
-.forma-kicker {
-  font:
-    9px "IBM Plex Mono",
-    monospace;
-  letter-spacing: 0.035em;
-  color: #777e68;
+.forma-header nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
 }
 .forma h2 {
   font:
-    500 38px/1.18 "Manrope",
+    500 clamp(32px, 2.4vw + 12px, 44px) / 1.1 "Manrope",
     sans-serif;
   letter-spacing: -0.045em;
+  text-wrap: balance;
   margin: 0;
 }

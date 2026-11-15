@@ -6,14 +6,18 @@ export function Header() {
       <a href="#home" aria-label="Forma home">
         <BrandLogo brand={brand} />
       </a>
-      <span>
-        ARCHITECTURE / INTERIORS
+      <p className="forma-label">
+        Architecture / Interiors
         <br />
-        COPENHAGEN · WORKING EVERYWHERE
-      </span>
+        Copenhagen · Working everywhere
+      </p>
       <nav aria-label="Studio navigation">
-        <a href="#practice">The practice ↗</a>
-        <a href="#contact">Contact ↗</a>
+        <a className="forma-link" href="#practice">
+          The practice ↓
+        </a>
+        <a className="forma-link" href="#contact">
+          Contact ↓
+        </a>
       </nav>
     </header>
   );
