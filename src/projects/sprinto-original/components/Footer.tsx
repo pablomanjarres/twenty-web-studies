@@ -6,11 +6,13 @@ export function Footer() {
   return (
     <footer className="sprinto-original-footer">
       <BrandLogo brand={brand} />
-      <span>Play a little. Live a lot.</span>
-      <a href="#sprinto-original-courts">
-        Your next move <ArrowUpRight size={18} />
-      </a>
-      <small>© 2026 sprinto</small>
+      <div className="sprinto-original-footer-row">
+        <span>Play a little. Live a lot.</span>
+        <a href="#sprinto-original-courts">
+          Your next move <ArrowUpRight size={18} />
+        </a>
+        <small>© 2026 sprinto</small>
+      </div>
     </footer>
   );
 }

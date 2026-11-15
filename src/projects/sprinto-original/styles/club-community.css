@@ -51,54 +51,75 @@
 .sprinto-original-club {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background: #d9d0f0;
+  background: var(--so-lilac);
 }
 .sprinto-original-club > img {
-  height: 540px;
+  min-height: 620px;
+  height: 100%;
   width: 100%;
   object-fit: cover;
+  object-position: 0% 50%;
 }
 .sprinto-original-club > div {
   align-self: center;
-  padding: 65px 12%;
+  padding: 112px 12%;
 }
 .sprinto-original-club > div > span {
-  font-size: 10px;
-  color: #6f618a;
+  color: var(--so-on-lilac);
 }
 .sprinto-original-club h2 {
-  font-size: 65px;
-  margin: 23px 0;
+  margin: 16px 0 32px;
 }
 .sprinto-original-club p {
-  font-size: 12px;
-  line-height: 1.8;
-  color: #716386;
-  margin-bottom: 25px;
-  max-width: 320px;
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--so-on-lilac);
+  margin: 0 0 32px;
+  max-width: 36ch;
 }
 .sprinto-original-footer {
   background: #6535f4;
   color: white;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 25px;
-  padding: 36px 5%;
+  padding: 64px 5% 32px;
 }
 .sprinto-original-footer .brand-logo {
-  font-size: 30px;
+  font-size: clamp(56px, 10vw, 144px);
+  gap: 0.12em;
+  line-height: 1;
 }
-.sprinto-original-footer > span {
-  font-size: 12px;
+.sprinto-original-footer .brand-logo svg {
+  width: 0.9em;
+  height: 0.9em;
 }
-.sprinto-original-footer > a {
+.sprinto-original-footer .brand-logo > span {
+  font-weight: 700;
+  letter-spacing: -0.06em;
+}
+.sprinto-original-footer-row {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 20px;
-  font-size: 12px;
+  justify-content: space-between;
+  gap: 16px 32px;
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid #ffffff33;
+  font-size: 16px;
 }
-.sprinto-original-footer > small {
-  font-size: 9px;
-  color: #c7b4fc;
+.sprinto-original-footer-row > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: underline 2px transparent;
+  text-underline-offset: 6px;
+}
+.sprinto-original-footer-row > a:hover {
+  text-decoration-color: #ddfc6b;
+}
+.sprinto-original-footer-row > small {
+  font-size: 13px;
+  color: var(--so-on-violet);
 }

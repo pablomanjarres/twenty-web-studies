@@ -6,10 +6,12 @@ export function Club() {
     <section className="sprinto-original-club" id="sprinto-original-club">
       <img
         src={asset("player")}
-        alt="Players enjoying a game on a bright blue racket-sport court"
+        alt="A player in an orange shirt reaching for a shot on an outdoor court"
       />
       <div>
-        <span>A club. A crew. A reason to get out.</span>
+        <span className="sprinto-original-meta">
+          A club. A crew. A reason to get out.
+        </span>
         <h2>
           GOOD GAME.
           <br />
