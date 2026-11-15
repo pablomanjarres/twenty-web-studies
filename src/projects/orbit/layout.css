@@ -1,22 +1,43 @@
 .orbit-v3 {
   --ov3-ink: #242629;
   --ov3-purple: #6d4af1;
-  --ov3-muted: #7b7f82;
+  --ov3-muted: #666b66;
   --ov3-paper: #f4f4f0;
-  --ov3-line: #e1e2db;
+  --ov3-line: #ebebe5;
+  --ov3-line-strong: #d6d6ce;
+  --ov3-hover: #f6f5f1;
+  --ov3-text-2: #5c625e;
+  --ov3-text-3: #666b66;
+  --ov3-violet-text: #5b3fd0;
+  --ov3-violet-tint: #f0ebff;
+  --ov3-ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --ov3-fast: 160ms;
   --focus-color: #6d4af1;
   min-height: 100vh;
   display: grid;
-  grid-template-columns: 198px minmax(0, 1fr);
+  grid-template-columns: 216px minmax(0, 1fr);
   background: var(--ov3-paper);
   color: var(--ov3-ink);
   font-family: "DM Sans", sans-serif;
-  font-size: 13px;
+  font-size: 14px;
+  line-height: 1.43;
 }
 .orbit-v3 button {
   border: 0;
   background: none;
   color: inherit;
+  cursor: pointer;
+  transition:
+    background-color var(--ov3-fast) var(--ov3-ease),
+    color var(--ov3-fast) var(--ov3-ease),
+    border-color var(--ov3-fast) var(--ov3-ease),
+    box-shadow var(--ov3-fast) var(--ov3-ease),
+    transform var(--ov3-fast) var(--ov3-ease);
+}
+.orbit-v3 :focus-visible {
+  outline: 2px solid var(--ov3-purple);
+  outline-offset: 2px;
+  border-radius: 4px;
 }
 .orbit-v3 input,
 .orbit-v3 textarea,
@@ -33,57 +54,89 @@
 .orbit-v3 h2,
 .orbit-v3 h3 {
   font-family: "Manrope", sans-serif;
+  text-wrap: balance;
 }
 .orbit-v3 h2 {
-  font-size: 17px;
-  letter-spacing: -0.5px;
-  font-weight: 650;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+.orbit-v3 .ov3-caps {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ov3-text-3);
 }
 .orbit-v3 .ov3-main {
-  padding: 0 30px;
+  padding: 0 32px;
   min-width: 0;
 }
 .orbit-v3 .ov3-topbar {
-  height: 76px;
+  height: 72px;
   border-bottom: 1px solid var(--ov3-line);
   display: flex;
   align-items: center;
-  gap: 22px;
+  gap: 24px;
 }
 .orbit-v3 .ov3-topbar > span {
-  font-size: 12px;
-  color: #5f6569;
+  font-size: 14px;
+  color: var(--ov3-text-2);
+  white-space: nowrap;
 }
 .orbit-v3 .ov3-topbar > span i {
-  margin: 0 12px;
-  color: #b3b7b5;
+  margin: 0 10px;
+  color: #a5aaa4;
   font-style: normal;
+}
+.orbit-v3 .ov3-topbar > span b {
+  color: var(--ov3-ink);
+  font-weight: 500;
 }
 .orbit-v3 .ov3-topbar label {
   margin-left: auto;
   display: flex;
   align-items: center;
-  gap: 9px;
-  color: #949997;
+  gap: 8px;
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid var(--ov3-line);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--ov3-text-3);
+  transition: border-color var(--ov3-fast) var(--ov3-ease);
+}
+.orbit-v3 .ov3-topbar label:hover {
+  border-color: var(--ov3-line-strong);
+}
+.orbit-v3 .ov3-topbar label:focus-within {
+  outline: 2px solid var(--ov3-purple);
+  outline-offset: 2px;
 }
 .orbit-v3 .ov3-topbar input {
   border: 0;
   background: none;
-  outline-offset: 3px;
-  width: 169px;
-  font-size: 12px;
+  outline: none;
+  width: 190px;
+  font-size: 14px;
+  color: var(--ov3-ink);
+}
+.orbit-v3 .ov3-topbar input::placeholder {
+  color: var(--ov3-text-3);
 }
 .orbit-v3 .ov3-avatars {
   display: flex;
-  padding-right: 3px;
+  padding-right: 4px;
 }
 .orbit-v3 .ov3-avatars img {
-  height: 29px;
-  width: 29px;
+  height: 32px;
+  width: 32px;
   object-fit: cover;
   border-radius: 50%;
   border: 2px solid var(--ov3-paper);
-  margin-right: -5px;
+  margin-right: -6px;
 }
 .orbit-v3 .ov3-page-heading {
   display: flex;
