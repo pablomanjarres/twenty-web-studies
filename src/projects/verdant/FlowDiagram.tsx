@@ -1,5 +1,6 @@
 import { type Scenario } from "./data";
 import { NodeReading } from "./NodeReading";
+import { FlowLines } from "./FlowLines";
 import {
   SolarArray,
   WindField,
@@ -21,44 +22,8 @@ export function FlowDiagram({
   const Source =
     selected === 0 ? SolarArray : selected === 1 ? WindField : BatteryBank;
   return (
-    <div className="vd-flow-diagram">
-      <svg
-        className="vd-flow-lines"
-        viewBox="0 0 960 440"
-        preserveAspectRatio="none"
-        aria-hidden="true"
-      >
-        <g fill="none" stroke="#d6dbc4" strokeWidth="2">
-          <path d="M175 165H340Q380 165 380 215V242H475" />
-          <path d="M475 242H590Q615 242 615 160H760" />
-          <path d="M475 242H548Q570 242 570 348H720" />
-          <path d="M475 242V397H290" />
-        </g>
-        <g fill="none" stroke="#8b9a71" strokeWidth="5">
-          <path d="M175 165H340Q380 165 380 215V242H475" />
-          <path d="M475 242H590Q615 242 615 160H760" />
-        </g>
-        <path
-          d="M475 242H548Q570 242 570 348H720"
-          fill="none"
-          stroke="#e5c24d"
-          strokeWidth={scenario.battery === 0 ? 2 : 5}
-          strokeDasharray={scenario.battery === 0 ? "5 5" : undefined}
-        />
-        <path
-          d="M475 242V397H290"
-          fill="none"
-          stroke="#819174"
-          strokeWidth="2"
-          strokeDasharray="5 6"
-        />
-        <g fill="#343d26">
-          <circle cx="475" cy="242" r="5" />
-          <path d="m304 165-10-5v10Z" />
-          <path d="m682 160-10-5v10Z" />
-          <path d="m650 348-10-5v10Z" />
-        </g>
-      </svg>
+    <div className="vd-flow-diagram" data-node={node}>
+      <FlowLines charging={scenario.battery > 0} />
       <button
         className="vd-node vd-source"
         aria-pressed={node === "source"}
@@ -104,7 +69,7 @@ export function FlowDiagram({
         </NodeReading>
       </button>
       <div className="vd-grid-export">
-        <span>TO THE GRID</span>
+        <span className="vd-label">To the grid</span>
         <strong>{scenario.grid.toFixed(1)} kW</strong>
         <i />
       </div>
