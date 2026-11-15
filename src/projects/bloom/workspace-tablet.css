@@ -52,7 +52,13 @@
     grid-row: 1 / 3;
     margin: 0;
   }
+  .bv-certificate > strong {
+    grid-column: 2;
+    grid-row: 1;
+  }
   .bv-certificate > span {
+    grid-column: 2;
+    grid-row: 2;
     margin: 0;
   }
   .bv-certificate > span br {
@@ -67,6 +73,10 @@
   }
   .bv-timetable-scroll {
     overflow-x: auto;
+    scroll-snap-type: x proximity;
+  }
+  .bv-time-column {
+    scroll-snap-align: start;
   }
   .bv-timetable-grid {
     min-width: 700px;
@@ -97,5 +107,10 @@
     width: 34%;
     height: auto;
     right: -12px;
+  }
+}
+@media (min-width: 1001px) and (max-width: 1200px) {
+  .bv-timetable-scroll:has(.bv-timetable-grid:not(.is-day)) {
+    mask-image: linear-gradient(90deg, #000 90%, transparent);
   }
 }
