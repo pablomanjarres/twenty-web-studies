@@ -34,7 +34,7 @@
   font-size: 16px;
   color: var(--sr3-plum-text);
 }
-.soundroom-v3 .sr3-moods > div {
+.soundroom-v3 .sr3-moods .sr3-mood-chips {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
