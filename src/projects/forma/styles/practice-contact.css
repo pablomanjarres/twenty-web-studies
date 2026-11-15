@@ -67,6 +67,7 @@
   color: var(--forma-plaster);
 }
 .forma-contact .forma-label {
+  display: block;
   color: var(--forma-rule-strong);
 }
 .forma-contact-title {
@@ -113,7 +114,4 @@
   margin: 0;
   color: var(--forma-rule-strong);
   font: var(--f-meta);
-}
-.forma-contact-bottom a {
-  color: var(--forma-plaster);
 }

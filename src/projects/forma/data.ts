@@ -11,7 +11,7 @@ export const projects = [
     materials: "Oak / limestone / steel",
     details: {
       wide: {
-        focus: "77% 54%",
+        focus: "86% 60%",
         zoom: 1.6,
         alt: "Timber slat screen and steel-framed glazing",
       },

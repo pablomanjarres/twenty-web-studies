@@ -17,9 +17,7 @@ export function Contact() {
         <p>
           Copenhagen, Denmark
           <br />
-          <a className="forma-link" href="mailto:studio@forma.example">
-            studio@forma.example
-          </a>
+          studio@forma.example
         </p>
         <span>© 2026 FORMA</span>
       </div>
