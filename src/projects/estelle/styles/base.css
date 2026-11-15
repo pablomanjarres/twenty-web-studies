@@ -169,22 +169,47 @@ a:hover > .estelle-arrow-up {
   gap: 8px 24px;
 }
 .estelle-footer {
-  padding: 30px 42px;
+  padding: 72px var(--est-gutter) 0;
+}
+.estelle-colophon {
+  display: grid;
+  justify-items: center;
+  gap: 16px;
+  text-align: center;
+}
+.estelle-colophon .brand-logo {
+  flex-direction: column;
+  gap: 16px;
+}
+.estelle-colophon .brand-logo svg {
+  width: 32px;
+  height: 32px;
+}
+.estelle-colophon .brand-logo > span {
+  font-family: "The Foriene", serif;
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+.estelle-colophon p {
+  color: var(--est-ink-2);
+}
+.estelle-footer-row {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 30px;
+  gap: 0 24px;
+  margin-top: 48px;
+  padding: 8px 0 24px;
+  border-top: 1px solid var(--est-rule);
 }
-.estelle-footer .brand-logo {
-  display: flex;
+.estelle-footer-row a {
+  display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
+  min-height: 44px;
 }
-.estelle-footer .brand-logo svg {
-  width: 23px;
-  height: 23px;
-}
-.estelle-footer .brand-logo > span {
-  font-family: "The Foriene", serif;
-  font-size: 25px;
+.estelle-footer-row > span {
+  color: var(--est-ink-2);
 }
