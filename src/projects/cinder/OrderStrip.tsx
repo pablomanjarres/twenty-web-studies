@@ -19,8 +19,14 @@ export function OrderStrip({
   return (
     <section className="cinder-order-strip" aria-label="Coffee order">
       <div className="cinder-grind-controls">
-        <span className="cinder-label">Your grind</span>
-        <div className="cinder-segmented">
+        <span className="cinder-label" id="cinder-grind-label">
+          Your grind
+        </span>
+        <div
+          className="cinder-segmented"
+          role="group"
+          aria-labelledby="cinder-grind-label"
+        >
           {grinds.map((name) => (
             <button
               key={name}
