@@ -18,7 +18,7 @@ export function Origin() {
           Fruit, seed, soil, and time. Roasting is one chapter in a much longer
           story.
         </p>
-        <span>Arabica / Fruit study 01</span>
+        <span className="cinder-label">Arabica / Fruit study 01</span>
       </div>
     </section>
   );
