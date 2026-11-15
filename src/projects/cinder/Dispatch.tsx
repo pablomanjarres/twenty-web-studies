@@ -18,10 +18,15 @@ export function Dispatch({ coffee }: { coffee: Coffee }) {
       </div>
       <div className="cinder-dispatch-control">
         <p>{coffee.name} / 250 g / whole bean</p>
-        <div role="group" aria-label="Coffee delivery frequency">
+        <div
+          className="cinder-segmented"
+          role="group"
+          aria-label="Coffee delivery frequency"
+        >
           {["Two weeks", "Four weeks"].map((name) => (
             <button
               key={name}
+              className="cinder-ui"
               aria-pressed={frequency === name}
               onClick={() => {
                 setFrequency(name);
@@ -32,7 +37,10 @@ export function Dispatch({ coffee }: { coffee: Coffee }) {
             </button>
           ))}
         </div>
-        <button className="cinder-dispatch-save" onClick={() => setSaved(true)}>
+        <button
+          className="cinder-dispatch-save cinder-ui"
+          onClick={() => setSaved(true)}
+        >
           {saved ? "Preference saved" : "Save a delivery rhythm"}
           <ArrowRight size={18} aria-hidden="true" />
         </button>
