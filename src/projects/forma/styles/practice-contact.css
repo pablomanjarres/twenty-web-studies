@@ -110,7 +110,7 @@
   font-size: 21px;
 }
 .forma-contact-bottom p,
-.forma-contact-bottom > span {
+.forma-contact-bottom > span:last-child {
   margin: 0;
   color: var(--forma-rule-strong);
   font: var(--f-meta);
