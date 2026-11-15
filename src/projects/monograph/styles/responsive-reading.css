@@ -2,89 +2,172 @@
   .monograph-main {
     padding: 0 18px;
   }
-  .monograph-wall {
-    gap: 34px 15px;
+  .monograph-small-label {
+    font-size: 13px;
+    letter-spacing: 0.06em;
   }
-  .monograph-story-kicker {
-    font-size: 8px;
+  .monograph-credit,
+  .monograph-byline {
+    font-size: 13px;
   }
-  .monograph-story-1 .monograph-photo-button img {
-    height: 260px;
+  .monograph-rail {
+    padding: 20px 18px 16px;
   }
-  .monograph-story-2 .monograph-photo-button img {
-    height: 170px;
-  }
-  .monograph-story-3 .monograph-photo-button img {
-    height: 220px;
-  }
-  .monograph-story-4 .monograph-photo-button img {
-    height: 180px;
-  }
-  .monograph-story-1 .monograph-story-title h2 {
+  .monograph-mark .brand-logo span {
     font-size: 30px;
   }
-  .monograph-story-title h2 {
-    font-size: 24px;
+  .monograph-issue-label {
+    margin-top: 4px;
   }
-  .monograph-story-title svg {
-    width: 15px;
+  .monograph-edition-line .monograph-small-label {
+    text-wrap: balance;
   }
-  .monograph-story > p {
-    font-size: 11px;
+  .monograph-story-kicker button {
+    width: 44px;
+    height: 44px;
+    margin-right: -14px;
   }
-  .monograph-credit {
-    font-size: 7px;
+  .monograph-page .monograph-credit {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
   }
+  .monograph-photo + .monograph-credit {
+    margin-top: 0;
+  }
+  .monograph-story .monograph-story-heading {
+    margin-top: 4px;
+  }
+  .monograph-story-title {
+    padding: 7px 0;
+  }
+  .monograph-paper-cover > div span:last-child {
+    font-size: 13px;
+  }
+  .monograph-edition-line h1 {
+    font-size: 20px;
+  }
+
+  /* One column that still feels hung: alternate full and 84% widths. */
+  .monograph-wall {
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
+  .monograph-wall > .monograph-story {
+    padding-top: 0;
+    margin: 0;
+    grid-column: auto;
+  }
+  .monograph-wall > .monograph-story-2,
+  .monograph-wall > .monograph-story-4 {
+    width: 84%;
+  }
+  .monograph-wall > .monograph-story-2 {
+    margin-left: auto;
+  }
+  .monograph-story-1 .monograph-photo img {
+    height: 300px;
+  }
+  .monograph-story-2 .monograph-photo img,
+  .monograph-story-4 .monograph-photo img {
+    height: 220px;
+  }
+  .monograph-story-3 .monograph-photo img {
+    height: 340px;
+    object-position: 70% center;
+  }
+  .monograph-story-1 .monograph-story-title {
+    font-size: 36px;
+  }
+  .monograph-story-title {
+    font-size: 28px;
+  }
+  .monograph-story .monograph-story-deck {
+    font-size: 16px;
+    line-height: 1.55;
+  }
+
   .monograph-essay-intro {
     grid-template-columns: 1fr;
-    gap: 26px;
-    padding: 30px 0;
+    gap: 24px;
+    padding: 32px 0;
   }
   .monograph-essay-intro h2 {
-    font-size: 47px;
+    font-size: 44px;
   }
-  .monograph-section-line {
-    font-size: 8px;
+  .monograph-essay-intro p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+  .monograph-visual-essay figure img {
+    height: 300px;
   }
   .monograph-visual-essay figcaption {
     flex-direction: column;
-    gap: 5px;
-    line-height: 1.6;
+    gap: 4px;
+  }
+  .monograph-section-line {
+    flex-direction: column;
+    gap: 4px;
+  }
+  .monograph-section-line > span + span {
+    text-align: left;
   }
   .monograph-archive {
-    padding-bottom: 55px;
+    padding-bottom: 64px;
   }
-  .monograph-archive h2 {
+  .monograph-archive h2,
+  .monograph-print-copy h2 {
     font-size: 36px;
   }
   .monograph-print {
     grid-template-columns: 1fr;
     margin: 0 -18px;
-    padding: 55px 28px;
-    gap: 50px;
+    padding: 56px 24px;
+    gap: 48px;
   }
   .monograph-paper-cover {
     max-width: 230px;
   }
-  .monograph-print-copy h2 {
-    font-size: 46px;
+  .monograph-print dt {
+    font-size: 13px;
   }
-  .monograph-reading-copy {
-    padding: 25px;
+  .monograph-index {
+    gap: 32px 16px;
+    padding-bottom: 48px;
   }
-  .monograph-reading-copy h2 {
-    font-size: 43px;
+  .monograph-footer-line {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+
+  .monograph-reading > header {
+    padding: 8px 12px 8px 20px;
   }
   .monograph-reading > img {
     height: 280px;
   }
-  .monograph-footer {
-    font-size: 9px;
+  .monograph-reading-copy {
+    padding: 8px 20px 64px;
+  }
+  .monograph-reading-copy h2 {
+    font-size: 40px;
+    margin-top: 24px;
+  }
+  .monograph-reading-copy .monograph-reading-deck {
+    font-size: 21px;
+  }
+  .monograph-reading-copy > p {
+    font-size: 17px;
     line-height: 1.7;
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  .monograph-photo-button img {
+  .monograph-photo img,
+  .monograph-reading,
+  .monograph-reading-backdrop {
     transition: none;
+    animation: none;
   }
 }
