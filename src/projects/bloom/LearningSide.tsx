@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import { CalendarDays, ArrowUpRight } from "lucide-react";
 import { lessons, type Lesson } from "./data";
 import { isUnlocked, learningPlan, learningWeek } from "./courses";
@@ -130,7 +131,7 @@ function StudyActivity({
             aria-label={`${learningWeek[i].name}: ${v.done} of ${v.planned} planned minutes`}
           >
             {v.done > 0 && <b>{v.done}</b>}
-            <span style={{ height: `${(v.planned / most) * 100}%` }}>
+            <span style={{ "--share": v.planned / most } as CSSProperties}>
               <i style={{ height: `${(v.done / v.planned) * 100}%` }} />
             </span>
             <small>{learningWeek[i].name}</small>
