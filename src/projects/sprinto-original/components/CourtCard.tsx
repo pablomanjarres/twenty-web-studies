@@ -1,5 +1,5 @@
 import { MapPin } from "lucide-react";
-import { courts } from "../data";
+import { courts, session } from "../data";
 
 export function CourtCard({
   court,
@@ -36,9 +36,9 @@ export function CourtCard({
         ))}
       </div>
       <div className="sprinto-original-court-price">
-        <span>90 min · racket rental</span>
+        <span>{session.minutes} min · racket rental</span>
         <strong>
-          €28 <small>/ court</small>
+          {session.price} <small>/ court</small>
         </strong>
       </div>
     </article>

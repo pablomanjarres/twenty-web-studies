@@ -5,6 +5,8 @@ export const tickerPhrases = [
   "MORE RALLIES. MORE GOOD DAYS.",
   "FIND YOUR PEOPLE",
 ];
+export const session = { minutes: 90, price: "€28" };
+export const allAreas = "All locations";
 export const courts = [
   {
     name: "The Social Club",
@@ -45,3 +47,4 @@ export const ways = [
     cta: "Hold a weekly court",
   },
 ];
+export const areas = [allAreas, ...new Set(courts.map((court) => court.area))];
