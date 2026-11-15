@@ -52,12 +52,6 @@
     bottom: 24px;
     flex-wrap: wrap;
   }
-  .sprinto-original-ticker {
-    justify-content: flex-start;
-    font-size: 22px;
-    padding: 17px 24px;
-    gap: 22px;
-  }
   .sprinto-original-courts {
     padding: 50px 24px;
   }
