@@ -64,7 +64,7 @@
   white-space: nowrap;
 }
 .md-new-movement:hover {
-  background: #45c3c7;
+  background: var(--md-cyan-hover);
 }
 .md-new-movement:active {
   transform: scale(0.97);

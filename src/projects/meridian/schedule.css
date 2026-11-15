@@ -74,7 +74,7 @@
   font-weight: 700;
 }
 .md-create-button:hover {
-  background: #45c3c7;
+  background: var(--md-cyan-hover);
 }
 .meridian-page .md-create-button:focus-visible {
   outline-color: var(--md-text);
