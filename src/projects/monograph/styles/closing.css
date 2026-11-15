@@ -1,0 +1,52 @@
+.monograph-footer {
+  padding-top: 80px;
+}
+.monograph-index {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 32px 24px;
+  border-top: 1px solid var(--mono-ink);
+  padding: 24px 0 64px;
+}
+.monograph-index-group h2 {
+  font-family: inherit;
+  color: var(--mono-pencil);
+}
+.monograph-index ul {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+}
+.monograph-index li a,
+.monograph-index li button {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 7px 0;
+  border: 0;
+  background: transparent;
+  font-family: "The Foriene", serif;
+  font-size: 18px;
+  line-height: 1.25;
+  text-align: left;
+}
+.monograph-footer-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  border-top: 1px solid var(--mono-rule);
+  padding: 12px 0;
+  font-size: 14px;
+  color: var(--mono-pencil);
+}
+.monograph-footer-line a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  color: var(--mono-ink);
+}
+.monograph-footer-line a:hover .monograph-arrow {
+  transform: translateY(-2px);
+}
