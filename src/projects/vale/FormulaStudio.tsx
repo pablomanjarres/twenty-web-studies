@@ -87,7 +87,7 @@ export function FormulaStudio(props: Props) {
         <div className="vale-studio-halo" aria-hidden="true" />
         <div className="vale-studio-plinth" aria-hidden="true" />
         <img
-          key={formula.id}
+          key={`${formula.id}-product`}
           className="vale-studio-product"
           src={image(formula.image)}
           alt={`${formula.name} in frosted green glass with a stone-tone closure`}
