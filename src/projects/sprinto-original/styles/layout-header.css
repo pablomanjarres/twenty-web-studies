@@ -1,7 +1,4 @@
 .sprinto-original {
-  --so-violet: #6535f4;
-  --so-lime: #ddfc6b;
-  --so-ink: #19152d;
   --so-muted: #5f586e;
   --so-on-violet: #e8e1fd;
   --so-on-night: #b8b2c6;
@@ -81,11 +78,15 @@
 }
 .sprinto-original-header nav a {
   padding: 10px 0;
+}
+.sprinto-original-header nav a,
+.sprinto-original-footer-row > a {
   text-decoration: underline 2px transparent;
   text-underline-offset: 6px;
   transition: text-decoration-color var(--so-ease);
 }
-.sprinto-original-header nav a:hover {
+.sprinto-original-header nav a:hover,
+.sprinto-original-footer-row > a:hover {
   text-decoration-color: #ddfc6b;
 }
 .sprinto-original-nav-button {
