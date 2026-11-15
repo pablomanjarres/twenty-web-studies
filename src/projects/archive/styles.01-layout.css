@@ -14,6 +14,7 @@
   --ar-label: 400 12px/1.4 "IBM Plex Mono", monospace;
   --ar-meta: 400 13px/1.5 "DM Sans", sans-serif;
   --ar-ui: 500 14px/1.3 "DM Sans", sans-serif;
+  --ar-price: 400 14px/1.3 "IBM Plex Mono", monospace;
   --ar-body: 400 16px/1.65 "DM Sans", sans-serif;
   --ar-lead: 400 clamp(20px, 1.2vw + 6px, 24px) / 1.35 "DM Sans", sans-serif;
   --ar-hero-line:

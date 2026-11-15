@@ -128,9 +128,7 @@
   margin: 0;
 }
 .archive-product-title > span {
-  font:
-    400 14px/1.3 "IBM Plex Mono",
-    monospace;
+  font: var(--ar-price);
   font-variant-numeric: tabular-nums;
 }
 .archive-product p {
