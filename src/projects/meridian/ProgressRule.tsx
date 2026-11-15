@@ -15,7 +15,7 @@ export function ProgressRule({
 }) {
   return (
     <span className="md-progress-rule" data-tone={tone} aria-hidden="true">
-      <span style={{ width: `${value}%` }} />
+      <span style={{ width: `${Math.min(100, Math.max(0, value))}%` }} />
     </span>
   );
 }
