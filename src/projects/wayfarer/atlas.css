@@ -1,13 +1,12 @@
 .wf-atlas {
   display: grid;
   grid-template-columns: minmax(0, 35fr) minmax(0, 40fr) minmax(330px, 25fr);
-  min-height: 730px;
-  height: calc(100svh - 76px);
-  max-height: 960px;
+  min-height: max(730px, calc(100svh - 76px));
 }
 .wf-journey-photo {
   position: relative;
   isolation: isolate;
+  background: var(--wf-ink);
   color: var(--wf-white);
 }
 .wf-journey-photo > img {
@@ -16,6 +15,12 @@
   position: absolute;
   inset: 0;
   object-fit: cover;
+  animation: wf-fade 400ms var(--wf-ease-out) both;
+}
+@keyframes wf-fade {
+  from {
+    opacity: 0;
+  }
 }
 .wf-journey-photo::after {
   content: "";
@@ -33,48 +38,43 @@
 }
 .wf-photo-invitation {
   position: absolute;
-  top: 46px;
-  left: 34px;
-  right: 26px;
+  top: 48px;
+  left: 32px;
+  right: 24px;
   z-index: 2;
 }
 .wf-photo-invitation > span {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-size: 11px;
+  gap: 8px;
+  font-size: var(--wf-fs-meta);
+  font-weight: 500;
+  letter-spacing: 0.01em;
 }
 .wf-photo-invitation h1 {
-  font:
-    500 clamp(42px, 4vw, 64px)/1.03 "Bricolage Grotesque",
-    sans-serif;
-  letter-spacing: -0.05em;
-  margin-top: 27px;
+  font-size: var(--wf-fs-hero);
+  line-height: 0.96;
+  letter-spacing: -0.04em;
+  margin-top: 24px;
 }
 .wf-photo-invitation p {
-  font-size: 12px;
-  line-height: 1.8;
+  font-size: var(--wf-fs-lead);
+  line-height: 1.55;
+  max-width: 30ch;
   margin-top: 24px;
 }
 .wf-photo-caption {
   position: absolute;
-  left: 34px;
-  right: 28px;
-  bottom: 30px;
+  left: 32px;
+  right: 32px;
+  bottom: 32px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 15px;
+  gap: 16px;
   z-index: 2;
-  font-size: 13px;
-}
-.wf-photo-caption a {
-  width: 45px;
-  height: 45px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  border: 1px solid #ffffff70;
+  font-size: var(--wf-fs-ui);
+  font-weight: 500;
 }
 .wf-map-panel {
   background: var(--wf-sky);
