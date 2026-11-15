@@ -33,6 +33,7 @@
   font-size: clamp(48px, 7.5vw - 25px, 84px);
   line-height: 0.95;
   letter-spacing: -0.03em;
+  max-width: 6em;
   margin: 16px 0 24px;
 }
 .cinder-poster-title p {

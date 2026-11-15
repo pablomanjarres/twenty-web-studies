@@ -1,4 +1,8 @@
 @media (max-width: 1100px) {
+  .cinder-poster-title p {
+    font-size: 16px;
+    max-width: 26ch;
+  }
   .cinder-main-package {
     width: 545px;
     height: 545px;
