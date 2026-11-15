@@ -36,4 +36,10 @@ export const products = [
   },
 ];
 
+export type Product = (typeof products)[number];
+
+/* Accessories are sold in a single size. */
+export const isOneSize = (product: Product) =>
+  product.category === "Accessories";
+
 export type BagItem = { id: string; size: string; quantity: number };
