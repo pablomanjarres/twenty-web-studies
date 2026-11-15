@@ -5,7 +5,7 @@ export const stories = [
   {
     title: "The quiet life of a painting",
     subject: "Art",
-    image: "abstract",
+    image: "painting",
     alt: "Figures in robes gathered around a mother and child in a richly coloured classical painting",
     by: "A conversation with the canvas",
     time: "8 min read",
@@ -26,7 +26,7 @@ export const stories = [
   {
     title: "Colour, without restraint",
     subject: "Art",
-    image: "painting",
+    image: "abstract",
     alt: "Yellow, black and white paint pooling in a fluid abstract pour",
     by: "Notes on gesture and feeling",
     time: "5 min read",
