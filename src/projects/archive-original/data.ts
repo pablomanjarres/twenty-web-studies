@@ -19,12 +19,12 @@ export const products = [
     detail: "Washed blue / Cotton denim",
   },
   {
-    id: "bag",
-    name: "Quilted camera bag",
+    id: "scarf",
+    name: "Silk square scarf",
     category: "Accessories",
-    image: "bag",
-    price: 180,
-    detail: "Black / Vintage collection",
+    image: "scarf",
+    price: 120,
+    detail: "Cherry / Silk twill",
   },
   {
     id: "layers",
