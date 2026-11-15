@@ -1,5 +1,14 @@
 import { ArrowUpRight } from "lucide-react";
 import { avatar, progress, stageColors, type Task } from "./data";
+
+// Roadmap bars carry 14px labels, so each stage gets a label color that
+// clears 4.5:1; green uses a deeper fill reserved for these bars.
+const barTheme: Record<string, { background: string; color: string }> = {
+  Design: { background: stageColors.Design, color: "#fff" },
+  Research: { background: "#127a63", color: "#fff" },
+  Content: { background: stageColors.Content, color: "#242629" },
+  Review: { background: stageColors.Review, color: "#242629" },
+};
 export function Roadmap({
   tasks,
   onSelect,
@@ -14,7 +23,7 @@ export function Roadmap({
           <h2>The week ahead</h2>
           <span>A shared rhythm for the collection launch.</span>
         </div>
-        <span className="ov3-section-note">5 OCT — 11 OCT</span>
+        <span className="ov3-section-note ov3-caps">5–11 Oct</span>
       </div>
       <div className="ov3-roadmap-days">
         {[
@@ -26,8 +35,8 @@ export function Roadmap({
           "Sat 10",
           "Sun 11",
         ].map((day, i) => (
-          <span className={i === 3 ? "is-today" : ""} key={day}>
-            {day}
+          <span key={day}>
+            {i === 3 ? <b className="is-today">{day}</b> : day}
           </span>
         ))}
       </div>
@@ -44,7 +53,7 @@ export function Roadmap({
               style={{
                 left: `${(task.start / 7) * 100}%`,
                 width: `${(task.days / 7) * 100}%`,
-                background: stageColors[task.kind],
+                ...barTheme[task.kind],
               }}
               onClick={() => onSelect(task.id)}
               aria-label={`Open ${task.title}, ${progress(task)}% complete, ${task.owner}`}
@@ -53,12 +62,11 @@ export function Roadmap({
                 {task.kind}
                 <small>{progress(task)}%</small>
               </span>
-              <i
-                className="ov3-bar-progress"
-                style={{ width: `${progress(task)}%` }}
-              />
-              <img src={avatar(task.avatar)} alt={task.owner} />
-              <ArrowUpRight size={13} />
+              <i className="ov3-bar-rail" aria-hidden="true">
+                <b style={{ width: `${progress(task)}%` }} />
+              </i>
+              <img src={avatar(task.avatar)} alt="" />
+              <ArrowUpRight size={14} aria-hidden="true" />
             </button>
           </div>
         ))}

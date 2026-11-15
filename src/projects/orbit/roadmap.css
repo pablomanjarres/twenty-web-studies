@@ -1,35 +1,45 @@
 .orbit-v3 .ov3-roadmap {
   background: white;
   border-radius: 18px;
-  padding: 25px 24px 15px;
+  padding: 24px 24px 16px;
   min-width: 0;
+}
+.orbit-v3 .ov3-roadmap .ov3-section-heading {
+  align-items: flex-start;
 }
 .orbit-v3 .ov3-roadmap .ov3-section-heading > div span {
   display: block;
-  font-size: 11px;
-  margin-top: 6px;
-  color: #91958f;
+  font-size: 15px;
+  margin-top: 4px;
+  color: var(--ov3-text-2);
 }
 .orbit-v3 .ov3-roadmap .ov3-section-note {
-  font-size: 9px;
-  letter-spacing: 0.8px;
   white-space: nowrap;
+  margin-top: 4px;
 }
 .orbit-v3 .ov3-roadmap-days {
   display: grid;
   grid-template-columns: repeat(7, minmax(0, 1fr));
-  margin: 25px 0 13px;
-  color: #9da099;
-  font-size: 10px;
+  align-items: center;
+  margin: 24px 0 8px;
+  color: var(--ov3-text-3);
+  font-size: 13px;
+  line-height: 24px;
   text-align: center;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
 }
 .orbit-v3 .ov3-roadmap-days .is-today {
-  color: #6d4af1;
+  display: inline-block;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: var(--ov3-violet-tint);
+  color: var(--ov3-violet-text);
   font-weight: 600;
 }
 .orbit-v3 .ov3-roadmap-track {
   position: relative;
-  padding: 6px 0 9px;
+  padding: 8px 0;
 }
 .orbit-v3 .ov3-day-lines {
   position: absolute;
@@ -39,95 +49,125 @@
   pointer-events: none;
 }
 .orbit-v3 .ov3-day-lines i {
+  position: relative;
   border-left: 1px solid #f0f0eb;
 }
 .orbit-v3 .ov3-day-lines i.is-today {
-  background: #f4f0ff;
-  border-left: 1px dashed #b09ae9;
+  background: #f6f3ff;
+}
+.orbit-v3 .ov3-day-lines i.is-today::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  border-left: 1.5px dashed var(--ov3-purple);
 }
 .orbit-v3 .ov3-roadmap-row {
-  height: 47px;
+  height: 52px;
   position: relative;
 }
 .orbit-v3 .ov3-roadmap-row button {
   position: absolute;
-  top: 4px;
-  height: 35px;
-  border-radius: 22px;
-  color: white;
+  top: 6px;
+  height: 40px;
+  border-radius: 999px;
   text-align: left;
   display: flex;
-  gap: 6px;
+  gap: 8px;
   align-items: center;
-  padding: 0 12px;
-  min-width: 86px;
-  isolation: isolate;
-  overflow: hidden;
-  box-shadow: 0 3px 8px #35342b0c;
-  transition: transform 0.2s;
+  padding: 0 6px 0 14px;
+  min-width: 88px;
+  box-shadow: 0 1px 2px rgba(36, 38, 41, 0.08);
+  transition:
+    transform 180ms var(--ov3-ease),
+    box-shadow var(--ov3-fast) var(--ov3-ease);
 }
 .orbit-v3 .ov3-roadmap-row button:hover {
   transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(36, 38, 41, 0.14);
+}
+.orbit-v3 .ov3-roadmap-row button:active {
+  transform: translateY(0);
+}
+.orbit-v3 .ov3-roadmap-row button:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 2px #fff,
+    0 0 0 4px var(--ov3-purple);
 }
 .orbit-v3 .ov3-roadmap-row button > span {
-  font-weight: 550;
-  font-size: 11px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
 }
 .orbit-v3 .ov3-roadmap-row small {
-  font-weight: 400;
-  margin-left: 6px;
-  opacity: 0.8;
-  font-size: 9px;
+  font-weight: 500;
+  margin-left: 8px;
+  opacity: 0.85;
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
 }
 .orbit-v3 .ov3-roadmap-row img {
-  height: 26px;
-  width: 26px;
+  height: 28px;
+  width: 28px;
+  flex: none;
   object-fit: cover;
-  border: 2px solid #ffffff90;
+  border: 2px solid rgba(255, 255, 255, 0.75);
   border-radius: 50%;
   margin-left: auto;
 }
 .orbit-v3 .ov3-roadmap-row svg {
   flex: none;
+  margin-right: 6px;
 }
 .orbit-v3 .ov3-roadmap-row button.is-short {
-  padding: 0 8px;
-  gap: 4px;
+  padding: 0 6px 0 12px;
+  gap: 6px;
 }
 .orbit-v3 .ov3-roadmap-row button.is-short small,
 .orbit-v3 .ov3-roadmap-row button.is-short > svg {
   display: none;
 }
-.orbit-v3 .ov3-roadmap-row button.is-short img {
-  flex: none;
-}
-.orbit-v3 .ov3-bar-progress {
+.orbit-v3 .ov3-bar-rail {
   position: absolute;
-  z-index: -1;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  background: #ffffff13;
+  left: 14px;
+  right: 44px;
+  bottom: 5px;
+  height: 3px;
+  border-radius: 2px;
+  background: color-mix(in srgb, currentColor 28%, transparent);
+  pointer-events: none;
+}
+.orbit-v3 .ov3-bar-rail b {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: currentColor;
 }
 .orbit-v3 .ov3-roadmap footer {
-  border-top: 1px solid #f0f0eb;
+  border-top: 1px solid var(--ov3-line);
   display: flex;
   justify-content: space-between;
+  gap: 12px;
   padding-top: 12px;
   margin-top: 4px;
-  color: #a1a49d;
-  font-size: 9px;
+  color: var(--ov3-text-3);
+  font-size: 13px;
 }
 .orbit-v3 .ov3-roadmap footer > span:first-child {
   display: flex;
   align-items: center;
-  gap: 6px;
-  color: #8d78b9;
+  gap: 8px;
+  color: var(--ov3-violet-text);
+  font-weight: 600;
 }
 .orbit-v3 .ov3-roadmap footer i {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: #9c7bdc;
+  width: 12px;
+  height: 0;
+  border-top: 1.5px dashed var(--ov3-purple);
 }
