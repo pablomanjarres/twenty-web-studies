@@ -34,6 +34,21 @@ export const courseLessons = (course: Course) =>
   lessons.filter((l) => course.lessonIds.includes(l.id));
 export const isUnlocked = (lesson: Lesson, completed: number[]) =>
   lesson.prerequisites.every((id) => completed.includes(id));
+export type LessonStatus = "done" | "ready" | "locked";
+export const lessonStatus = (
+  lesson: Lesson,
+  completed: number[],
+): LessonStatus =>
+  completed.includes(lesson.id)
+    ? "done"
+    : isUnlocked(lesson, completed)
+      ? "ready"
+      : "locked";
+export const statusLabel: Record<LessonStatus, string> = {
+  done: "Complete",
+  ready: "Ready to start",
+  locked: "Locked",
+};
 export const nextLesson = (completed: number[]) =>
   lessons.find((l) => !completed.includes(l.id) && isUnlocked(l, completed));
 export const courseFor = (lesson: Lesson) =>

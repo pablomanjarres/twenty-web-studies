@@ -1,6 +1,11 @@
 import { Check, Lock, ArrowUpRight, Clock } from "lucide-react";
 import type { Lesson } from "./data";
-import { courseLessons, isUnlocked, type Course } from "./courses";
+import {
+  courseLessons,
+  lessonStatus,
+  statusLabel,
+  type Course,
+} from "./courses";
 export function CourseLessons({
   course,
   completed,
@@ -20,8 +25,8 @@ export function CourseLessons({
         <span>{course.lessonIds.length} lessons</span>
       </div>
       {courseLessons(course).map((l, i) => {
-        const done = completed.includes(l.id);
-        const unlocked = isUnlocked(l, completed);
+        const status = lessonStatus(l, completed);
+        const done = status === "done";
         return (
           <button
             className="bv-lesson-row"
@@ -40,12 +45,10 @@ export function CourseLessons({
               <Clock size={14} />
               {l.duration}
             </span>
-            <span
-              className={`bv-row-state ${done ? "is-done" : unlocked ? "is-ready" : ""}`}
-            >
-              {done ? "Complete" : unlocked ? "Ready to start" : "Locked"}
+            <span className={`bv-row-state is-${status}`}>
+              {statusLabel[status]}
             </span>
-            {!unlocked && !done ? (
+            {status === "locked" ? (
               <Lock size={15} />
             ) : (
               <ArrowUpRight size={17} />

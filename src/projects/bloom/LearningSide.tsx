@@ -1,7 +1,12 @@
 import type { CSSProperties } from "react";
 import { CalendarDays, ArrowUpRight } from "lucide-react";
 import { lessons, type Lesson } from "./data";
-import { isUnlocked, learningPlan, learningWeek } from "./courses";
+import {
+  learningPlan,
+  learningWeek,
+  lessonStatus,
+  statusLabel,
+} from "./courses";
 export function LearningSide({
   day,
   completed,
@@ -58,11 +63,7 @@ export function LearningSide({
                   <strong>{l.title}</strong>
                   <small>
                     {p.time} · {l.duration} ·{" "}
-                    {completed.includes(l.id)
-                      ? "Complete"
-                      : isUnlocked(l, completed)
-                        ? "Ready"
-                        : "Locked"}
+                    {statusLabel[lessonStatus(l, completed)]}
                   </small>
                 </div>
                 <ArrowUpRight size={16} aria-hidden="true" />
