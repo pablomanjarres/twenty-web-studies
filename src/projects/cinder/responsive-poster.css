@@ -24,13 +24,13 @@
 }
 @media (min-width: 761px) and (max-width: 1280px) {
   .cinder-poster-title p {
-    max-width: 21ch;
+    max-width: 19ch;
   }
   .cinder-main-package {
-    --cinder-bag-size: min(44vw, 500px);
+    --cinder-bag-size: min(40vw, 500px);
     width: var(--cinder-bag-size);
     height: var(--cinder-bag-size);
-    top: calc(330px - var(--cinder-bag-size) / 2);
+    top: calc(340px - var(--cinder-bag-size) / 2);
   }
 }
 @media (min-width: 761px) and (max-width: 900px) {
