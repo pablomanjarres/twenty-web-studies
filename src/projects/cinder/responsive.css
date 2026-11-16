@@ -19,6 +19,14 @@
     gap: 12px;
   }
 }
+@media (min-width: 761px) and (max-width: 900px) {
+  .cinder-header > span {
+    display: none;
+  }
+  .cinder-header nav {
+    gap: 24px;
+  }
+}
 @media (max-width: 760px) {
   .cinder-header {
     gap: 16px;

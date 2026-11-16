@@ -200,6 +200,7 @@
   align-items: center;
   text-underline-offset: 5px;
   font-variant-numeric: tabular-nums;
+  white-space: nowrap;
 }
 .cinder-header nav > :is(a, button):hover {
   text-decoration: underline 1px;
