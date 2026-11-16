@@ -1,5 +1,5 @@
 .vd-flow-diagram {
-  height: clamp(500px, calc(100svh - 330px), 680px);
+  height: clamp(500px, calc(100svh - 366px), 680px);
   position: relative;
 }
 .vd-flow-lines {
