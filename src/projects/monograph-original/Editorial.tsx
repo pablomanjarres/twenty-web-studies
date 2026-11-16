@@ -113,8 +113,8 @@ export function PrintedIssue() {
       <div>
         <span className="monograph-original-rubric">Made to be kept</span>
         <h2>
-          More than a screen.
-          <br />A slower kind of story.
+          <span>More than a screen.</span>
+          <span>A slower kind of story.</span>
         </h2>
         <p>
           160 pages of ideas worth sitting with. Artist conversations, visual

@@ -136,6 +136,7 @@
     serif;
   letter-spacing: -0.035em;
   margin: 4px 0 0;
+  text-wrap: balance;
 }
 
 .monograph-original-story h3 a {
