@@ -89,7 +89,7 @@ export function Reservation() {
           )}
         </div>
         <div className="sl-receipt-bottom sl-label">
-          GOOD FOOD. GOOD COMPANY. SEE YOU SOON.
+          GOOD&nbsp;FOOD. GOOD&nbsp;COMPANY. SEE&nbsp;YOU&nbsp;SOON.
         </div>
       </form>
     </section>

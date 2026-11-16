@@ -136,6 +136,7 @@
   font-size: 15px;
   display: grid;
   gap: 8px;
+  text-wrap: balance;
 }
 .sl-receipt-note .sl-label {
   font-size: 15px;
@@ -145,4 +146,5 @@
   text-align: center;
   border-top: 1px dashed var(--sl-leader);
   padding-top: 16px;
+  text-wrap: balance;
 }
