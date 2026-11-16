@@ -13,7 +13,7 @@
 }
 .sprinto-original h2 {
   font-size: clamp(48px, 5.4vw, 80px);
-  line-height: 0.88;
+  line-height: 0.94;
   margin: 16px 0 0;
   text-wrap: balance;
 }
