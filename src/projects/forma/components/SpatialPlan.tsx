@@ -44,7 +44,7 @@ export function SpatialPlan({ project }: { project: Project }) {
           <text x="205" y="137">
             LIVING
           </text>
-          <text x="345" y="154">
+          <text x="356" y="157">
             PRIVATE
           </text>
           <text x="45" y="275">
