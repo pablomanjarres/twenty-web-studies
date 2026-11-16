@@ -11,6 +11,10 @@
   .cinder-tasting > span:not(.cinder-label) {
     font-size: 28px;
   }
+  .cinder-tasting,
+  .cinder-poster-floor {
+    width: 22%;
+  }
   .cinder-poster-floor {
     justify-content: flex-start;
   }
@@ -18,12 +22,18 @@
     display: none;
   }
 }
-@media (min-width: 761px) and (max-width: 900px) {
-  .cinder-main-package {
-    width: 54vw;
-    height: 54vw;
-    top: 120px;
+@media (min-width: 761px) and (max-width: 1280px) {
+  .cinder-poster-title p {
+    max-width: 21ch;
   }
+  .cinder-main-package {
+    --cinder-bag-size: min(44vw, 500px);
+    width: var(--cinder-bag-size);
+    height: var(--cinder-bag-size);
+    top: calc(330px - var(--cinder-bag-size) / 2);
+  }
+}
+@media (min-width: 761px) and (max-width: 900px) {
   .cinder-variants button {
     width: 80px;
   }
