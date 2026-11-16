@@ -129,6 +129,7 @@
 .archive-footer a {
   display: inline-flex;
   align-items: center;
+  gap: 0.35em;
   min-height: 44px;
   font: var(--ar-ui);
   letter-spacing: 0.01em;
