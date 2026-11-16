@@ -68,10 +68,6 @@
   .orbit-v3 .ov3-roadmap-row button > svg {
     display: none;
   }
-  /* A one-day bar is too narrow on the 600px track for a label and an avatar. */
-  .orbit-v3 .ov3-roadmap-row button.is-short img {
-    display: none;
-  }
   .orbit-v3 .ov3-ledger-labels {
     display: none;
   }
