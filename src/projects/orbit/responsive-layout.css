@@ -123,7 +123,7 @@
   .orbit-v3 .ov3-roadmap-row small {
     display: inline;
   }
-  .orbit-v3 .ov3-roadmap-row button.is-short img,
+  /* One-day bars keep the avatar hidden below 1250px: a day is too narrow for a label and an avatar. */
   .orbit-v3 .ov3-roadmap-row button > svg {
     display: block;
   }

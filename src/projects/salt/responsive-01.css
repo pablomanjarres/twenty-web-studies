@@ -23,6 +23,10 @@
   .sl-menu-bottom > span:last-child {
     display: none;
   }
+  /* A wider note column keeps the catch note to a few words per line on tablets. */
+  .sl-kitchen {
+    grid-template-columns: 1.2fr 1fr;
+  }
   .sl-catch-note {
     grid-template-columns: 110px 1fr;
     gap: 20px;

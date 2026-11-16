@@ -57,6 +57,10 @@
   text-wrap: balance;
   margin: 24px 0;
 }
+/* Each sentence balances on its own, so a narrow column never strands "story." */
+.monograph-original-printed h2 > span {
+  display: block;
+}
 
 .monograph-original-printed p {
   font-size: 16px;

@@ -65,7 +65,7 @@ export function StoryWall({
           </h2>
           <p className="monograph-story-deck">{story.deck}</p>
           <span className="monograph-byline">
-            From the Monograph desk · {story.paragraphs.length + 1} min read
+            From the Monograph desk · {story.paragraphs.length + 1}&nbsp;min read
           </span>
         </article>
       ))}

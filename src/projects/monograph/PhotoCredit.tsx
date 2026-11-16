@@ -7,7 +7,7 @@ export function PhotoCredit({ story }: { story: Story }) {
       target="_blank"
       rel="noreferrer"
     >
-      Photo: {story.credit} ↗
+      Photo: {story.credit}&nbsp;↗
     </a>
   );
 }

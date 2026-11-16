@@ -16,11 +16,7 @@ export function Studio() {
         <span>Different by design.</span>
       </div>
       <div>
-        <h2>
-          A good fit for
-          <br />
-          the misfits.
-        </h2>
+        <h2>A good fit for the misfits.</h2>
         <p>
           For the people building something with a point of view. We ask better
           questions, pull ideas apart and make the pieces into something worth

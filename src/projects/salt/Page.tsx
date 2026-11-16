@@ -23,7 +23,7 @@ export default function Page() {
       <footer className="sl-footer">
         <BrandLogo brand={brand} />
         <span>
-          Lunch 12–3 · Dinner 5–10
+          Lunch&nbsp;12–3 · Dinner&nbsp;5–10
           <br />
           Tuesday — Sunday
         </span>

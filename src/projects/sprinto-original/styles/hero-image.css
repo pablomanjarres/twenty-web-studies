@@ -22,9 +22,11 @@
   left: 32px;
   right: 32px;
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   align-items: center;
   font-size: 14px;
+  white-space: nowrap;
   line-height: 1.4;
   z-index: 1;
 }

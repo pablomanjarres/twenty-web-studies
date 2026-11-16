@@ -13,7 +13,8 @@ export function BookingPanel({
 }) {
   const court = courts[booking.court];
   const day = days[booking.day];
-  const selection = `${day.day} ${day.date} Oct · ${booking.time} · ${booking.duration} min`;
+  // Non-breaking spaces keep the date and the time · duration pair whole when the summary wraps.
+  const selection = `${day.day}\u00a0${day.date}\u00a0Oct · ${booking.time}\u00a0·\u00a0${booking.duration}\u00a0min`;
   const openCount = (dayIndex: number) =>
     times.filter((t) => isAvailable(booking.court, t, dayIndex)).length;
   return (

@@ -57,5 +57,6 @@
   .archive-bag-panel {
     width: 100%;
     padding: 24px 20px;
+    border-left: 0;
   }
 }

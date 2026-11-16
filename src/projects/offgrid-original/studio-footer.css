@@ -3,7 +3,7 @@
   background: var(--og-original-yellow);
   color: var(--oo-ink);
   display: grid;
-  grid-template-columns: 1fr 1.25fr;
+  grid-template-columns: 1fr 1.45fr;
   gap: 64px;
   padding: var(--oo-band) var(--oo-inset);
   align-items: center;
@@ -22,6 +22,9 @@
 .og-original-studio-symbol > span {
   font-size: 16px;
   font-weight: 500;
+}
+.og-original-studio h2 {
+  text-wrap: balance;
 }
 .og-original-studio p {
   max-width: 470px;
