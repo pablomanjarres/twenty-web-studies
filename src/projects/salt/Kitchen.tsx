@@ -16,9 +16,8 @@ export function Kitchen() {
       <div className="sl-kitchen-story">
         <span className="sl-label">GOOD FOOD STARTS NEARBY.</span>
         <h2>
-          We know the people.
-          <br />
-          They know the sea.
+          <span>We know the people.</span>
+          <span>They know the sea.</span>
         </h2>
         <p>
           Our menu starts with the boats that come in each morning, the growers
@@ -38,9 +37,8 @@ export function Kitchen() {
         />
         <span className="sl-label">THE MORNING’S CATCH</span>
         <p>
-          Ask what’s fresh.
-          <br />
-          We’ll tell you where it came from.
+          <span>Ask what’s fresh.</span>
+          <span>We’ll tell you where it came from.</span>
         </p>
       </div>
     </section>

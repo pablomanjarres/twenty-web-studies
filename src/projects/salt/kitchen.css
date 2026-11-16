@@ -43,6 +43,12 @@
   margin: 24px 0;
   color: var(--sl-butter);
 }
+/* Each sentence is its own balanced block, so a long line never leaves one word behind. */
+.sl-kitchen-story h2 > span,
+.sl-catch-note p > span {
+  display: block;
+  text-wrap: balance;
+}
 .sl-kitchen-story p {
   font: var(--sl-body);
   max-width: 46ch;
