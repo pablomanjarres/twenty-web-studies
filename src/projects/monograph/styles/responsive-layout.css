@@ -22,10 +22,14 @@
     gap: 16px;
     grid-template-columns: 1.3fr 1fr 1fr;
   }
+  /* Stories 1 and 2 span both rows, so story 4 hangs under story 3 however its text wraps. */
+  .monograph-story-1,
+  .monograph-story-2 {
+    grid-row: span 2;
+  }
   .monograph-story-4 {
     grid-column: 3;
-    margin-top: -80px;
-    padding: 0;
+    padding: 40px 0 0;
   }
   .monograph-story-1 .monograph-story-title {
     font-size: 38px;
@@ -122,6 +126,10 @@
   }
   .monograph-story-3 {
     padding-top: 0;
+  }
+  .monograph-story-1,
+  .monograph-story-2 {
+    grid-row: auto;
   }
   .monograph-story-4 {
     grid-column: auto;
