@@ -85,6 +85,9 @@
   display: grid;
   place-items: center;
 }
+.archive-bag-row:has(+ .archive-bag-total) {
+  border-bottom: 0;
+}
 .archive-bag-total {
   display: flex;
   justify-content: space-between;
