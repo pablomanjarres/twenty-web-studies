@@ -149,8 +149,9 @@
 }
 .wf-trip-price {
   display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
-  gap: 8px;
+  gap: 0 8px;
   margin: 16px 0 12px;
 }
 .wf-trip-price strong {
@@ -161,6 +162,7 @@
 .wf-trip-price small {
   font-size: inherit;
   margin-left: auto;
+  white-space: nowrap;
 }
 .wf-plan {
   width: 100%;
